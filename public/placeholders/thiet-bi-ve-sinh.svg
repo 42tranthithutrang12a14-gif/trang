@@ -1,0 +1,10 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F1E9DD"/>
+  <g fill="none" stroke="#B5651D" stroke-width="6" opacity="0.6">
+    <rect x="260" y="220" width="280" height="120" rx="60"/>
+    <line x1="400" y1="150" x2="400" y2="220"/>
+    <circle cx="400" cy="140" r="14" fill="#B5651D" stroke="none"/>
+    <path d="M300 340 Q400 420 500 340" />
+  </g>
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#262421">Thiết bị vệ sinh</text>
+</svg>
