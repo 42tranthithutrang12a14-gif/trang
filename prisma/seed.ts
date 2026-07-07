@@ -18,6 +18,7 @@ async function main() {
         name: "Gạch lát",
         slug: "gach-lat",
         order: 0,
+        image: "/placeholders/gach-lat.svg",
       },
     }),
     prisma.category.create({
@@ -25,6 +26,7 @@ async function main() {
         name: "Vật liệu xây dựng",
         slug: "vat-lieu-xay-dung",
         order: 1,
+        image: "/placeholders/vat-lieu-xay-dung.svg",
       },
     }),
     prisma.category.create({
@@ -32,6 +34,7 @@ async function main() {
         name: "Thiết bị vệ sinh",
         slug: "thiet-bi-ve-sinh",
         order: 2,
+        image: "/placeholders/thiet-bi-ve-sinh.svg",
       },
     }),
     prisma.category.create({
@@ -39,6 +42,7 @@ async function main() {
         name: "Thiết bị ống nước",
         slug: "thiet-bi-ong-nuoc",
         order: 3,
+        image: "/placeholders/thiet-bi-ong-nuoc.svg",
       },
     }),
   ]);
