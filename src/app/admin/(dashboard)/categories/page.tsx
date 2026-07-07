@@ -26,8 +26,8 @@ export default async function CategoriesPage({
         </p>
       )}
 
-      <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-surface">
-        <table className="w-full text-sm">
+      <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-surface">
+        <table className="w-full min-w-[520px] text-sm">
           <thead className="border-b border-border bg-background text-left text-muted">
             <tr>
               <th className="px-4 py-3 font-medium">Ảnh</th>

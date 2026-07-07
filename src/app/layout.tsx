@@ -9,12 +9,25 @@ const beVietnamPro = Be_Vietnam_Pro({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const title = `${siteConfig.shortName} — ${siteConfig.slogan}`;
+const description = `${siteConfig.companyName}: ${siteConfig.slogan}. ${siteConfig.address}.`;
+
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.shortName} — ${siteConfig.slogan}`,
+    default: title,
     template: `%s — ${siteConfig.shortName}`,
   },
-  description: `${siteConfig.companyName}: ${siteConfig.slogan}. ${siteConfig.address}.`,
+  description,
+  openGraph: {
+    title,
+    description,
+    locale: "vi_VN",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
