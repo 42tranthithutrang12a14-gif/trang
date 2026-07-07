@@ -2,6 +2,9 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { logoutAction } from "../logout-action";
 
+// Trang quản trị luôn cần dữ liệu mới nhất, không cache tĩnh.
+export const dynamic = "force-dynamic";
+
 const adminNav = [
   { label: "Sản phẩm", href: "/admin" },
   { label: "Danh mục", href: "/admin/categories" },
