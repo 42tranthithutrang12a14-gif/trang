@@ -10,7 +10,13 @@ const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
 
-const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL! });
+// Tích hợp Neon trên Vercel có thể đặt tiền tố cho tên biến (VD: DAILOANGIA_DATABASE_URL)
+// tuỳ vào tên bạn gõ lúc kết nối Storage — dò cả biến không tiền tố lẫn có tiền tố.
+const connectionString =
+  process.env.DATABASE_URL ??
+  Object.entries(process.env).find(([key]) => key.endsWith("_DATABASE_URL"))?.[1];
+
+const adapter = new PrismaNeon({ connectionString: connectionString! });
 
 export const prisma = globalForPrisma.prisma ?? new PrismaClient({ adapter });
 

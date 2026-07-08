@@ -5,7 +5,13 @@ import ws from "ws";
 import { PrismaClient } from "../src/generated/prisma/client";
 
 neonConfig.webSocketConstructor = ws;
-const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL! });
+
+// Tích hợp Neon trên Vercel có thể đặt tiền tố cho tên biến (VD: DAILOANGIA_DATABASE_URL).
+const connectionString =
+  process.env.DATABASE_URL ??
+  Object.entries(process.env).find(([key]) => key.endsWith("_DATABASE_URL"))?.[1];
+
+const adapter = new PrismaNeon({ connectionString: connectionString! });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {

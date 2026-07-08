@@ -3,6 +3,15 @@
 import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
+// Tích hợp Neon trên Vercel có thể đặt tiền tố cho tên biến (VD: DAILOANGIA_DATABASE_URL_UNPOOLED)
+// tuỳ vào tên gõ lúc kết nối Storage — dò cả biến không tiền tố lẫn có tiền tố.
+function findConnectionString(suffix: string): string | undefined {
+  return (
+    process.env[suffix] ??
+    Object.entries(process.env).find(([key]) => key.endsWith(`_${suffix}`))?.[1]
+  );
+}
+
 export default defineConfig({
   schema: "prisma/schema.prisma",
   migrations: {
@@ -11,6 +20,6 @@ export default defineConfig({
   },
   datasource: {
     // Migrations cần kết nối trực tiếp (không qua PgBouncer/connection pooler).
-    url: process.env["DATABASE_URL_UNPOOLED"] ?? process.env["DATABASE_URL"],
+    url: findConnectionString("DATABASE_URL_UNPOOLED") ?? findConnectionString("DATABASE_URL"),
   },
 });
