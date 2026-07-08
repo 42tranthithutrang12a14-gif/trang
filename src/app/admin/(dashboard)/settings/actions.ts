@@ -17,18 +17,29 @@ export async function updateSettings(formData: FormData) {
   const businessLines = String(formData.get("businessLines") ?? "").trim();
   const removeLogo = formData.get("removeLogo") === "on";
   const logoFile = formData.get("logo") as File | null;
+  const removeHeroImage = formData.get("removeHeroImage") === "on";
+  const heroImageFile = formData.get("heroImage") as File | null;
 
   if (!companyName || !shortName) {
     throw new Error("Thiếu tên công ty");
   }
 
   const current = await prisma.settings.findUnique({ where: { id: 1 } });
+
   let logoUrl = current?.logoUrl ?? null;
   if (removeLogo) {
     logoUrl = null;
   } else if (logoFile && logoFile.size > 0) {
     const [uploaded] = await saveUploadedImages([logoFile]);
     if (uploaded) logoUrl = uploaded;
+  }
+
+  let heroImage = current?.heroImage ?? null;
+  if (removeHeroImage) {
+    heroImage = null;
+  } else if (heroImageFile && heroImageFile.size > 0) {
+    const [uploaded] = await saveUploadedImages([heroImageFile]);
+    if (uploaded) heroImage = uploaded;
   }
 
   const data = {
@@ -42,6 +53,7 @@ export async function updateSettings(formData: FormData) {
     email,
     businessLines,
     logoUrl,
+    heroImage,
   };
 
   await prisma.settings.upsert({

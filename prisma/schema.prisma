@@ -22,6 +22,7 @@ model Settings {
   email          String
   businessLines  String
   logoUrl        String?
+  heroImage      String?
 }
 
 model Service {

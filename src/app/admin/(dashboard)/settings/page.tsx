@@ -88,6 +88,36 @@ export default async function AdminSettingsPage({
           />
         </div>
 
+        <div>
+          <span className="text-sm font-medium text-foreground">Ảnh banner trang chủ</span>
+          {settings.heroImage ? (
+            <div className="mt-2 flex items-center gap-4">
+              <div className="relative h-20 w-28 overflow-hidden rounded-xl border border-border bg-background">
+                <Image src={settings.heroImage} alt="Banner trang chủ" fill className="object-cover" />
+              </div>
+              <label className="flex items-center gap-2 text-sm text-muted">
+                <input
+                  type="checkbox"
+                  name="removeHeroImage"
+                  className="h-4 w-4 rounded border-border"
+                />
+                Xoá ảnh (dùng lại ảnh mặc định)
+              </label>
+            </div>
+          ) : (
+            <p className="mt-1 text-sm text-muted">
+              Chưa có ảnh riêng — trang chủ đang hiển thị ảnh mặc định.
+            </p>
+          )}
+          <input
+            id="heroImage"
+            name="heroImage"
+            type="file"
+            accept="image/*"
+            className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none file:mr-3 file:rounded-full file:border-0 file:bg-accent file:px-4 file:py-1.5 file:text-sm file:text-white"
+          />
+        </div>
+
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="phone" className="text-sm font-medium text-foreground">

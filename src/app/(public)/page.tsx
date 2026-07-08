@@ -49,7 +49,7 @@ export default async function Home() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
             <Image
-              src="/placeholders/gach-lat.svg"
+              src={settings.heroImage ?? "/placeholders/gach-lat.svg"}
               alt={settings.slogan}
               fill
               className="object-cover"
