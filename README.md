@@ -4,12 +4,18 @@ Website giới thiệu công ty + sản phẩm (gạch lát, vật liệu xây d
 ống nước) và dịch vụ xây dựng/sửa chữa, có trang quản trị riêng để tự thêm/sửa/xoá sản phẩm,
 danh mục và ảnh mà không cần đụng vào code.
 
-Xây bằng Next.js 16 (App Router) + TypeScript + Tailwind CSS + Prisma/SQLite.
+Xây bằng Next.js 16 (App Router) + TypeScript + Tailwind CSS + Prisma/Postgres (Neon), ảnh lưu
+trên Vercel Blob khi chạy production, deploy trên Vercel.
 
 ## Chạy thử ở máy local
 
+Cần một database Postgres để chạy local (xem mục Triển khai bên dưới để lấy connection string
+miễn phí từ Neon/Vercel), điền vào `DATABASE_URL` trong `.env`, sau đó:
+
 ```bash
 npm install
+npx prisma migrate dev
+npx prisma db seed
 npm run dev
 ```
 
@@ -53,7 +59,8 @@ Sau khi đăng nhập `/admin`:
 - **Dịch vụ**: xem danh sách, thêm mới, sửa, xoá (hiển thị ở trang "Dịch vụ").
 - **Cài đặt**: sửa toàn bộ thông tin công ty (xem mục trên).
 - Bỏ trống ô "Giá" nếu muốn sản phẩm hiển thị chữ "Liên hệ" thay vì giá cụ thể.
-- Ảnh sản phẩm/danh mục được lưu trong thư mục `public/uploads/`.
+- Ảnh sản phẩm/danh mục: lưu trong `public/uploads/` khi chạy local, lưu trên Vercel Blob khi
+  chạy trên production (tự động, không cần chỉnh gì).
 
 ## Dữ liệu mẫu
 
@@ -73,25 +80,29 @@ npm run build
 npm run start
 ```
 
-## Triển khai (deploy)
+## Triển khai (deploy) — miễn phí trên Vercel
 
-Trang web dùng SQLite (file `dev.db`) và lưu ảnh trực tiếp vào thư mục `public/uploads/` trên ổ
-đĩa server. Vì vậy nên chọn nơi host có **ổ đĩa cố định (persistent disk)**, ví dụ:
+1. Push code lên GitHub.
+2. Tạo tài khoản [Vercel](https://vercel.com) (đăng nhập bằng GitHub), bấm **Add New → Project**,
+   chọn repo này.
+3. Trong project → tab **Storage**: thêm **Postgres** (Neon) và **Blob** — Vercel tự điền các
+   biến `DATABASE_URL`, `DATABASE_URL_UNPOOLED`, `BLOB_READ_WRITE_TOKEN`, không cần tự nhập.
+4. Vào **Settings → Environment Variables**, thêm 3 biến còn lại (tự tạo, xem mục "Đổi mật khẩu
+   admin" ở trên để tạo `ADMIN_PASSWORD_HASH`):
+   - `ADMIN_USERNAME`
+   - `ADMIN_PASSWORD_HASH`
+   - `SESSION_SECRET` (chuỗi ngẫu nhiên khác, không dùng chung với local)
+5. Bấm **Deploy**.
+6. Sau lần deploy đầu tiên, chạy migrate + seed cho database production (từ máy local, trỏ vào
+   connection string production):
+   ```bash
+   npx prisma migrate deploy
+   npx prisma db seed
+   ```
+7. Vào `/admin` → **Cài đặt** để điền thông tin công ty thật.
 
-- Một VPS chạy Node.js (DigitalOcean, Vultr, AWS Lightsail...)
-- Render.com hoặc Railway.app (dùng persistent disk/volume)
-
-**Không nên deploy lên Vercel** ở dạng hiện tại — Vercel chạy serverless, ổ đĩa không được giữ
-lại giữa các lần chạy, nên dữ liệu SQLite và ảnh upload sẽ bị mất. Nếu sau này muốn deploy lên
-Vercel, cần đổi sang database hosted (ví dụ Postgres của Neon/Supabase) và nơi lưu ảnh riêng (ví
-dụ Vercel Blob hoặc Cloudinary) — Prisma giúp việc đổi database chỉ là đổi connection string,
-không cần viết lại code.
-
-Trước khi deploy, nhớ:
-
-1. Đổi mật khẩu admin (xem mục ở trên).
-2. Đổi `SESSION_SECRET` trong `.env` thành một chuỗi ngẫu nhiên khác (không dùng chung với local).
-3. Vào `/admin` → **Cài đặt** để điền thông tin công ty thật.
+Muốn gắn tên miền riêng (vd `dailoangia.vn`): vào project → **Settings → Domains** → thêm tên
+miền, Vercel sẽ hướng dẫn cập nhật DNS ở nơi bạn mua domain.
 
 ## Cấu trúc thư mục chính
 
