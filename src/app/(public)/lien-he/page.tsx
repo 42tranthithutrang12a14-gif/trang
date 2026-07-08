@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 
 export const metadata: Metadata = {
   title: "Liên hệ",
 };
 
-export default function LienHePage() {
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(siteConfig.address)}&output=embed`;
+export default async function LienHePage() {
+  const settings = await getSettings();
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(settings.address)}&output=embed`;
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
@@ -24,21 +25,21 @@ export default function LienHePage() {
             <dl className="mt-4 space-y-3 text-sm text-foreground">
               <div>
                 <dt className="text-muted">Địa chỉ</dt>
-                <dd>{siteConfig.address}</dd>
+                <dd>{settings.address}</dd>
               </div>
               <div>
                 <dt className="text-muted">Điện thoại</dt>
                 <dd>
-                  <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="hover:text-accent">
-                    {siteConfig.phone}
+                  <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="hover:text-accent">
+                    {settings.phone}
                   </a>
                 </dd>
               </div>
               <div>
                 <dt className="text-muted">Email</dt>
                 <dd>
-                  <a href={`mailto:${siteConfig.email}`} className="hover:text-accent">
-                    {siteConfig.email}
+                  <a href={`mailto:${settings.email}`} className="hover:text-accent">
+                    {settings.email}
                   </a>
                 </dd>
               </div>
@@ -46,10 +47,10 @@ export default function LienHePage() {
           </div>
 
           <a
-            href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+            href={`tel:${settings.phone.replace(/\s/g, "")}`}
             className="block rounded-2xl bg-accent px-6 py-4 text-center text-base font-medium text-white hover:bg-accent-dark"
           >
-            Gọi ngay: {siteConfig.phone}
+            Gọi ngay: {settings.phone}
           </a>
         </div>
 

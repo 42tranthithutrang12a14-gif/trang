@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 
 export const metadata: Metadata = {
   title: "Giới thiệu",
 };
 
-export default function GioiThieuPage() {
+export default async function GioiThieuPage() {
+  const settings = await getSettings();
   return (
     <div className="mx-auto max-w-4xl px-6 py-16">
       <h1 className="text-3xl font-semibold text-foreground">Giới thiệu</h1>
       <p className="mt-4 leading-relaxed text-muted">
-        {siteConfig.companyName} chuyên cung cấp gạch lát, vật liệu xây dựng, thiết bị vệ sinh,
+        {settings.companyName} chuyên cung cấp gạch lát, vật liệu xây dựng, thiết bị vệ sinh,
         thiết bị ống nước và nhận thi công xây dựng, sửa chữa nhà ở. Chúng tôi hướng tới sự tinh
         gọn, minh bạch về giá và chất lượng vật tư ổn định cho từng công trình.
       </p>
@@ -27,15 +28,15 @@ export default function GioiThieuPage() {
             </div>
             <div className="flex justify-between gap-4">
               <dt className="text-muted">Mã số thuế</dt>
-              <dd className="text-right">{siteConfig.taxId}</dd>
+              <dd className="text-right">{settings.taxId}</dd>
             </div>
             <div className="flex justify-between gap-4">
               <dt className="text-muted">Người đại diện</dt>
-              <dd className="text-right">{siteConfig.representative}</dd>
+              <dd className="text-right">{settings.representative}</dd>
             </div>
             <div className="flex justify-between gap-4">
               <dt className="text-muted">Địa chỉ</dt>
-              <dd className="text-right">{siteConfig.address}</dd>
+              <dd className="text-right">{settings.address}</dd>
             </div>
           </dl>
         </div>
@@ -45,7 +46,7 @@ export default function GioiThieuPage() {
             Ngành nghề kinh doanh
           </h2>
           <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted">
-            {siteConfig.businessLines.map((line) => (
+            {settings.businessLines.map((line) => (
               <li key={line} className="flex gap-2">
                 <span className="text-accent">•</span>
                 <span>{line}</span>

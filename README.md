@@ -23,9 +23,10 @@ Tài khoản admin mặc định (chỉ dùng để chạy thử ở local, **đ
 
 ## Đổi thông tin công ty
 
-Mở file [`src/lib/site-config.ts`](src/lib/site-config.ts) và sửa các giá trị: tên công ty, địa
-chỉ, số điện thoại, email... Toàn bộ trang web (trang chủ, giới thiệu, liên hệ, footer) đều lấy
-thông tin từ file này nên chỉ cần sửa một chỗ.
+Đăng nhập `/admin`, vào mục **Cài đặt** để tự điền: tên công ty, tên hiển thị, khẩu hiệu, địa chỉ,
+số điện thoại, email, mã số thuế, người đại diện, ngành nghề kinh doanh. Lưu lại là toàn bộ trang
+web (trang chủ, giới thiệu, liên hệ, đầu trang, chân trang) cập nhật ngay lập tức — không cần sửa
+code.
 
 ## Đổi mật khẩu admin
 
@@ -42,21 +43,24 @@ thông tin từ file này nên chỉ cần sửa một chỗ.
 > Lưu ý: các dấu `$` trong chuỗi hash phải được escape thành `\$` trong file `.env`, script
 > `hash-password` đã tự làm việc này giúp bạn — chỉ cần copy nguyên dòng in ra, không tự gõ lại.
 
-## Quản lý sản phẩm / danh mục
+## Quản lý nội dung
 
 Sau khi đăng nhập `/admin`:
 
 - **Sản phẩm**: xem danh sách, thêm mới, sửa (tên, danh mục, mô tả, giá, ảnh), xoá.
 - **Danh mục**: xem danh sách, thêm mới, sửa tên/ảnh đại diện, xoá (không xoá được danh mục còn
   sản phẩm bên trong — phải chuyển hoặc xoá hết sản phẩm trước).
+- **Dịch vụ**: xem danh sách, thêm mới, sửa, xoá (hiển thị ở trang "Dịch vụ").
+- **Cài đặt**: sửa toàn bộ thông tin công ty (xem mục trên).
 - Bỏ trống ô "Giá" nếu muốn sản phẩm hiển thị chữ "Liên hệ" thay vì giá cụ thể.
 - Ảnh sản phẩm/danh mục được lưu trong thư mục `public/uploads/`.
 
 ## Dữ liệu mẫu
 
-Dự án có sẵn 4 danh mục và một số sản phẩm mẫu (dùng ảnh placeholder) để bạn hình dung giao diện.
-Xoá/sửa dần qua trang quản trị, hoặc chạy lại lệnh sau để nạp lại dữ liệu mẫu ban đầu (**sẽ xoá
-hết dữ liệu hiện có**):
+Dự án có sẵn thông tin công ty (placeholder), 4 danh mục, một số sản phẩm mẫu (dùng ảnh
+placeholder) và 6 dịch vụ mẫu để bạn hình dung giao diện. Xoá/sửa dần qua trang quản trị, hoặc
+chạy lại lệnh sau để nạp lại dữ liệu mẫu ban đầu (**sẽ xoá hết dữ liệu và cài đặt hiện có, kể cả
+thông tin công ty đã tự điền**):
 
 ```bash
 npx prisma db seed
@@ -87,16 +91,16 @@ Trước khi deploy, nhớ:
 
 1. Đổi mật khẩu admin (xem mục ở trên).
 2. Đổi `SESSION_SECRET` trong `.env` thành một chuỗi ngẫu nhiên khác (không dùng chung với local).
-3. Cập nhật thông tin công ty thật trong `src/lib/site-config.ts`.
+3. Vào `/admin` → **Cài đặt** để điền thông tin công ty thật.
 
 ## Cấu trúc thư mục chính
 
 ```
-prisma/schema.prisma        Định nghĩa dữ liệu (Category, Product, ProductImage)
+prisma/schema.prisma        Định nghĩa dữ liệu (Settings, Service, Category, Product, ProductImage)
 prisma/seed.ts               Dữ liệu mẫu
 src/app/(public)/            Các trang công khai: trang chủ, sản phẩm, dịch vụ, giới thiệu, liên hệ
-src/app/admin/                Trang quản trị (đăng nhập, dashboard, CRUD sản phẩm/danh mục)
-src/lib/site-config.ts       Thông tin công ty — sửa ở đây
+src/app/admin/                Trang quản trị (đăng nhập, dashboard, CRUD sản phẩm/danh mục/dịch vụ/cài đặt)
+src/lib/settings.ts          Đọc thông tin công ty từ database (sửa qua /admin/settings, không sửa file này)
 src/lib/auth.ts                Đăng nhập/phiên đăng nhập admin
 src/proxy.ts                    Chặn truy cập /admin khi chưa đăng nhập
 public/uploads/                Ảnh sản phẩm/danh mục do admin tải lên

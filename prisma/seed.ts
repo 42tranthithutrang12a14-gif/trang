@@ -11,6 +11,63 @@ async function main() {
   await prisma.productImage.deleteMany();
   await prisma.product.deleteMany();
   await prisma.category.deleteMany();
+  await prisma.service.deleteMany();
+
+  const defaultSettings = {
+    companyName: "CÔNG TY TNHH [TÊN CÔNG TY]",
+    shortName: "[TÊN CÔNG TY]",
+    slogan: "Vật liệu xây dựng chất lượng — Gạch lát tinh tế",
+    taxId: "3604042449",
+    representative: "Trần Thị Thu Trang",
+    address: "340/5, Tổ 8, Khu phố 9, Phường Long Bình, Đồng Nai",
+    phone: "0000 000 000",
+    email: "lienhe@example.com",
+    businessLines: [
+      "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng (ngành nghề chính)",
+      "Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt khác trong xây dựng",
+      "Lắp đặt hệ thống cấp, thoát nước, hệ thống sưởi và điều hoà không khí",
+      "Lắp đặt hệ thống điện",
+      "Hoàn thiện công trình xây dựng",
+      "Xây dựng nhà để ở và nhà không để ở",
+      "Hoạt động xây dựng chuyên dụng khác",
+    ].join("\n"),
+  };
+
+  await prisma.settings.upsert({
+    where: { id: 1 },
+    update: defaultSettings,
+    create: { id: 1, ...defaultSettings },
+  });
+
+  const services = [
+    {
+      title: "Xây dựng nhà để ở",
+      description: "Thi công nhà phố, nhà cấp 4, nhà ống trọn gói từ móng đến hoàn thiện.",
+    },
+    {
+      title: "Xây dựng công trình không để ở",
+      description: "Thi công nhà xưởng, kho bãi, công trình thương mại theo yêu cầu.",
+    },
+    {
+      title: "Hoàn thiện công trình",
+      description: "Ốp lát gạch, sơn nước, trần thạch cao, hoàn thiện nội ngoại thất.",
+    },
+    {
+      title: "Lắp đặt hệ thống cấp thoát nước",
+      description: "Thi công đường ống nước, hệ thống thoát nước, thiết bị vệ sinh.",
+    },
+    {
+      title: "Lắp đặt hệ thống điện",
+      description: "Đi dây, lắp đặt tủ điện, thiết bị chiếu sáng cho công trình dân dụng.",
+    },
+    {
+      title: "Sửa chữa, cải tạo nhà",
+      description: "Sửa chữa, cải tạo, nâng cấp nhà ở, khắc phục thấm dột, xuống cấp.",
+    },
+  ];
+  for (const [index, service] of services.entries()) {
+    await prisma.service.create({ data: { ...service, order: index } });
+  }
 
   const categories = await Promise.all([
     prisma.category.create({
@@ -189,7 +246,9 @@ async function main() {
     });
   }
 
-  console.log(`Seeded ${categories.length} categories and ${products.length} products.`);
+  console.log(
+    `Seeded settings, ${services.length} services, ${categories.length} categories and ${products.length} products.`
+  );
 }
 
 main()

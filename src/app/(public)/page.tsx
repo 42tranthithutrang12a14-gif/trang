@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 import { ProductCard } from "@/components/product-card";
 
 export default async function Home() {
+  const settings = await getSettings();
   const [categories, featuredProducts] = await Promise.all([
     prisma.category.findMany({ orderBy: { order: "asc" } }),
     prisma.product.findMany({
@@ -22,14 +23,14 @@ export default async function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
           <div>
             <p className="text-sm font-medium uppercase tracking-widest text-accent">
-              {siteConfig.shortName}
+              {settings.shortName}
             </p>
             <h1 className="mt-3 text-4xl font-semibold leading-tight text-foreground md:text-5xl">
-              {siteConfig.slogan}
+              {settings.slogan}
             </h1>
             <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
               Chuyên cung cấp gạch lát, vật liệu xây dựng, thiết bị vệ sinh, thiết bị ống nước
-              và nhận thi công xây dựng, sửa chữa nhà ở tại {siteConfig.address}.
+              và nhận thi công xây dựng, sửa chữa nhà ở tại {settings.address}.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -49,7 +50,7 @@ export default async function Home() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
             <Image
               src="/placeholders/gach-lat.svg"
-              alt={siteConfig.slogan}
+              alt={settings.slogan}
               fill
               className="object-cover"
               priority
@@ -128,7 +129,7 @@ export default async function Home() {
             Cần tư vấn vật liệu hoặc báo giá công trình?
           </h2>
           <p className="max-w-xl text-sm text-white/90">
-            Liên hệ ngay {siteConfig.phone} hoặc ghé trực tiếp {siteConfig.address} để được hỗ trợ.
+            Liên hệ ngay {settings.phone} hoặc ghé trực tiếp {settings.address} để được hỗ trợ.
           </p>
           <Link
             href="/lien-he"

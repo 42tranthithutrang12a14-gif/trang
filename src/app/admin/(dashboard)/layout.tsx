@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 import { logoutAction } from "../logout-action";
 
 // Trang quản trị luôn cần dữ liệu mới nhất, không cache tĩnh.
@@ -8,20 +8,24 @@ export const dynamic = "force-dynamic";
 const adminNav = [
   { label: "Sản phẩm", href: "/admin" },
   { label: "Danh mục", href: "/admin/categories" },
+  { label: "Dịch vụ", href: "/admin/services" },
+  { label: "Cài đặt", href: "/admin/settings" },
 ];
 
-export default function AdminDashboardLayout({
+export default async function AdminDashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const settings = await getSettings();
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-surface">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <div className="flex items-center gap-8">
             <span className="text-sm font-semibold text-foreground">
-              {siteConfig.shortName} · Quản trị
+              {settings.shortName} · Quản trị
             </span>
             <nav className="flex items-center gap-5">
               {adminNav.map((item) => (

@@ -10,6 +10,26 @@ datasource db {
   provider = "sqlite"
 }
 
+model Settings {
+  id             Int    @id @default(1)
+  companyName    String
+  shortName      String
+  slogan         String
+  taxId          String
+  representative String
+  address        String
+  phone          String
+  email          String
+  businessLines  String
+}
+
+model Service {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  order       Int    @default(0)
+}
+
 model Category {
   id       Int       @id @default(autoincrement())
   name     String

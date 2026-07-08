@@ -1,14 +1,16 @@
 import Link from "next/link";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings, nav } from "@/lib/settings";
 
-export function SiteFooter() {
+export async function SiteFooter() {
+  const settings = await getSettings();
+
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <p className="text-lg font-semibold text-foreground">{siteConfig.shortName}</p>
-          <p className="mt-2 text-sm leading-relaxed text-muted">{siteConfig.slogan}</p>
-          <p className="mt-4 text-sm text-muted">MST: {siteConfig.taxId}</p>
+          <p className="text-lg font-semibold text-foreground">{settings.shortName}</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{settings.slogan}</p>
+          <p className="mt-4 text-sm text-muted">MST: {settings.taxId}</p>
         </div>
 
         <div>
@@ -16,7 +18,7 @@ export function SiteFooter() {
             Liên kết
           </p>
           <ul className="mt-3 space-y-2">
-            {siteConfig.nav.map((item) => (
+            {nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -34,15 +36,15 @@ export function SiteFooter() {
             Liên hệ
           </p>
           <ul className="mt-3 space-y-2 text-sm text-muted">
-            <li>{siteConfig.address}</li>
+            <li>{settings.address}</li>
             <li>
-              <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="hover:text-accent">
-                {siteConfig.phone}
+              <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="hover:text-accent">
+                {settings.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-accent">
-                {siteConfig.email}
+              <a href={`mailto:${settings.email}`} className="hover:text-accent">
+                {settings.email}
               </a>
             </li>
           </ul>
@@ -50,7 +52,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-border py-6 text-center text-xs text-muted">
-        © {new Date().getFullYear()} {siteConfig.companyName}. Đã đăng ký kinh doanh.
+        © {new Date().getFullYear()} {settings.companyName}. Đã đăng ký kinh doanh.
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -9,26 +9,29 @@ const beVietnamPro = Be_Vietnam_Pro({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const title = `${siteConfig.shortName} — ${siteConfig.slogan}`;
-const description = `${siteConfig.companyName}: ${siteConfig.slogan}. ${siteConfig.address}.`;
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSettings();
+  const title = `${settings.shortName} — ${settings.slogan}`;
+  const description = `${settings.companyName}: ${settings.slogan}. ${settings.address}.`;
 
-export const metadata: Metadata = {
-  title: {
-    default: title,
-    template: `%s — ${siteConfig.shortName}`,
-  },
-  description,
-  openGraph: {
-    title,
+  return {
+    title: {
+      default: title,
+      template: `%s — ${settings.shortName}`,
+    },
     description,
-    locale: "vi_VN",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+    openGraph: {
+      title,
+      description,
+      locale: "vi_VN",
+      type: "website",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function RootLayout({
   children,

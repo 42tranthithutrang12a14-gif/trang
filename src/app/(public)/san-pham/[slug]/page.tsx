@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/db";
 import { formatPrice } from "@/lib/format";
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 import { ProductCard } from "@/components/product-card";
 
 async function getProduct(slug: string) {
@@ -34,7 +34,7 @@ export default async function ProductDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = await getProduct(slug);
+  const [product, settings] = await Promise.all([getProduct(slug), getSettings()]);
   if (!product) notFound();
 
   const related = await prisma.product.findMany({
@@ -90,10 +90,10 @@ export default async function ProductDetailPage({
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+              href={`tel:${settings.phone.replace(/\s/g, "")}`}
               className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
             >
-              Gọi đặt hàng: {siteConfig.phone}
+              Gọi đặt hàng: {settings.phone}
             </a>
             <Link
               href="/lien-he"

@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site-config";
+import { getSettings } from "@/lib/settings";
 import { loginAction } from "./actions";
 
 export default async function AdminLoginPage({
@@ -6,13 +6,13 @@ export default async function AdminLoginPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  const { error } = await searchParams;
+  const [{ error }, settings] = await Promise.all([searchParams, getSettings()]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6">
       <div className="w-full max-w-sm rounded-2xl border border-border bg-surface p-8">
         <p className="text-sm font-medium uppercase tracking-wide text-accent">
-          {siteConfig.shortName}
+          {settings.shortName}
         </p>
         <h1 className="mt-1 text-2xl font-semibold text-foreground">Đăng nhập quản trị</h1>
 
