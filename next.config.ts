@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  experimental: {
+    serverActions: {
+      // Mặc định 1MB quá nhỏ cho form có nhiều ảnh (sản phẩm, logo, banner).
+      bodySizeLimit: "20mb",
+    },
+  },
 };
 
 export default nextConfig;
