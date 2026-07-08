@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getSettings, nav } from "@/lib/settings";
+import { telHref } from "@/lib/format";
 
 export async function SiteFooter() {
   const settings = await getSettings();
@@ -38,7 +39,7 @@ export async function SiteFooter() {
           <ul className="mt-3 space-y-2 text-sm text-muted">
             <li>{settings.address}</li>
             <li>
-              <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="hover:text-accent">
+              <a href={telHref(settings.phone)} className="hover:text-accent">
                 {settings.phone}
               </a>
             </li>

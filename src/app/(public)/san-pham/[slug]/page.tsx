@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/db";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, telHref } from "@/lib/format";
 import { getSettings } from "@/lib/settings";
 import { ProductCard } from "@/components/product-card";
 
@@ -90,10 +90,10 @@ export default async function ProductDetailPage({
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href={`tel:${settings.phone.replace(/\s/g, "")}`}
+              href={telHref(settings.phone)}
               className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
             >
-              Gọi đặt hàng: {settings.phone}
+              Gọi đặt hàng
             </a>
             <Link
               href="/lien-he"

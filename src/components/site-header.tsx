@@ -1,24 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getSettings, nav } from "@/lib/settings";
+import { telHref } from "@/lib/format";
+
+function PhoneIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="shrink-0">
+      <path
+        d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1L6.6 10.8Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export async function SiteHeader() {
   const settings = await getSettings();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-6">
+        <Link href="/" className="flex min-w-0 items-center gap-3">
           {settings.logoUrl && (
-            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg">
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
               <Image src={settings.logoUrl} alt={settings.shortName} fill className="object-contain" />
             </div>
           )}
-          <span className="flex flex-col leading-tight">
-            <span className="text-lg font-semibold tracking-wide text-foreground">
-              {settings.shortName}
-            </span>
-            <span className="text-xs text-muted">{settings.slogan}</span>
+          <span className="truncate text-lg font-semibold tracking-wide text-foreground">
+            {settings.shortName}
           </span>
         </Link>
 
@@ -34,12 +45,13 @@ export async function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <a
-            href={`tel:${settings.phone.replace(/\s/g, "")}`}
-            className="hidden rounded-full bg-accent px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-dark sm:inline-block"
+            href={telHref(settings.phone)}
+            className="hidden items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-dark sm:inline-flex"
           >
-            {settings.phone}
+            <PhoneIcon />
+            Gọi ngay
           </a>
 
           <details className="relative md:hidden">
@@ -60,10 +72,11 @@ export async function SiteHeader() {
                 </Link>
               ))}
               <a
-                href={`tel:${settings.phone.replace(/\s/g, "")}`}
-                className="mt-1 rounded-lg bg-accent px-3 py-2 text-center text-sm font-medium text-white"
+                href={telHref(settings.phone)}
+                className="mt-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-accent px-3 py-2 text-center text-sm font-medium text-white"
               >
-                {settings.phone}
+                <PhoneIcon />
+                Gọi ngay
               </a>
             </nav>
           </details>

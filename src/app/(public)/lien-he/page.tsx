@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getSettings } from "@/lib/settings";
+import { telHref } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Liên hệ",
@@ -30,7 +31,7 @@ export default async function LienHePage() {
               <div>
                 <dt className="text-muted">Điện thoại</dt>
                 <dd>
-                  <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="hover:text-accent">
+                  <a href={telHref(settings.phone)} className="hover:text-accent">
                     {settings.phone}
                   </a>
                 </dd>
@@ -47,10 +48,10 @@ export default async function LienHePage() {
           </div>
 
           <a
-            href={`tel:${settings.phone.replace(/\s/g, "")}`}
+            href={telHref(settings.phone)}
             className="block rounded-2xl bg-accent px-6 py-4 text-center text-base font-medium text-white hover:bg-accent-dark"
           >
-            Gọi ngay: {settings.phone}
+            Gọi ngay
           </a>
         </div>
 
