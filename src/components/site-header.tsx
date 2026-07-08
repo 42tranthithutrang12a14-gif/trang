@@ -22,13 +22,17 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-6">
-        <Link href="/" className="flex min-w-0 items-center gap-3">
+        <Link href="/" className="group flex min-w-0 items-center gap-4">
           {settings.logoUrl && (
             <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
               <Image src={settings.logoUrl} alt={settings.shortName} fill className="object-contain" />
             </div>
           )}
-          <span className="truncate text-lg font-semibold tracking-wide text-foreground">
+          <span
+            className={`truncate text-xl font-semibold text-foreground transition-colors group-hover:text-accent ${
+              settings.logoUrl ? "border-l border-border pl-4" : ""
+            }`}
+          >
             {settings.shortName}
           </span>
         </Link>
