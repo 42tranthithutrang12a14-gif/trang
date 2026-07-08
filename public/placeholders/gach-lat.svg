@@ -1,6 +1,6 @@
 <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
   <rect width="800" height="600" fill="#F1E9DD"/>
-  <g stroke="#B5651D" stroke-width="3" opacity="0.55">
+  <g stroke="#1e4c74" stroke-width="3" opacity="0.55">
     <line x1="0" y1="150" x2="800" y2="150"/>
     <line x1="0" y1="300" x2="800" y2="300"/>
     <line x1="0" y1="450" x2="800" y2="450"/>
