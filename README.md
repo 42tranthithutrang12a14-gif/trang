@@ -23,10 +23,10 @@ Tài khoản admin mặc định (chỉ dùng để chạy thử ở local, **đ
 
 ## Đổi thông tin công ty
 
-Đăng nhập `/admin`, vào mục **Cài đặt** để tự điền: tên công ty, tên hiển thị, khẩu hiệu, địa chỉ,
-số điện thoại, email, mã số thuế, người đại diện, ngành nghề kinh doanh. Lưu lại là toàn bộ trang
-web (trang chủ, giới thiệu, liên hệ, đầu trang, chân trang) cập nhật ngay lập tức — không cần sửa
-code.
+Đăng nhập `/admin`, vào mục **Cài đặt** để tự điền: logo, tên công ty, tên hiển thị, khẩu hiệu,
+địa chỉ, số điện thoại, email, mã số thuế, người đại diện, ngành nghề kinh doanh. Lưu lại là toàn
+bộ trang web (trang chủ, giới thiệu, liên hệ, đầu trang, chân trang) cập nhật ngay lập tức — không
+cần sửa code.
 
 ## Đổi mật khẩu admin
 

@@ -11,6 +11,7 @@ const DEFAULTS = {
   phone: "",
   email: "",
   businessLines: [] as string[],
+  logoUrl: null as string | null,
 };
 
 export const nav = [
@@ -35,5 +36,6 @@ export const getSettings = cache(async () => {
     phone: row.phone,
     email: row.email,
     businessLines: row.businessLines.split("\n").filter(Boolean),
+    logoUrl: row.logoUrl,
   };
 });

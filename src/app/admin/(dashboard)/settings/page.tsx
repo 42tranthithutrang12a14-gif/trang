@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getSettings } from "@/lib/settings";
 import { updateSettings } from "./actions";
 
@@ -60,6 +61,30 @@ export default async function AdminSettingsPage({
             name="slogan"
             defaultValue={settings.slogan}
             className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
+          />
+        </div>
+
+        <div>
+          <span className="text-sm font-medium text-foreground">Logo</span>
+          {settings.logoUrl ? (
+            <div className="mt-2 flex items-center gap-4">
+              <div className="relative h-16 w-16 overflow-hidden rounded-xl border border-border bg-background">
+                <Image src={settings.logoUrl} alt="Logo" fill className="object-contain p-1" />
+              </div>
+              <label className="flex items-center gap-2 text-sm text-muted">
+                <input type="checkbox" name="removeLogo" className="h-4 w-4 rounded border-border" />
+                Xoá logo (dùng lại tên chữ)
+              </label>
+            </div>
+          ) : (
+            <p className="mt-1 text-sm text-muted">Chưa có logo — đầu trang đang hiển thị bằng chữ.</p>
+          )}
+          <input
+            id="logo"
+            name="logo"
+            type="file"
+            accept="image/*"
+            className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none file:mr-3 file:rounded-full file:border-0 file:bg-accent file:px-4 file:py-1.5 file:text-sm file:text-white"
           />
         </div>
 

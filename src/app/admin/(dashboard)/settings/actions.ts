@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db";
+import { saveUploadedImages } from "@/lib/upload";
 
 export async function updateSettings(formData: FormData) {
   const companyName = String(formData.get("companyName") ?? "").trim();
@@ -14,36 +15,39 @@ export async function updateSettings(formData: FormData) {
   const phone = String(formData.get("phone") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const businessLines = String(formData.get("businessLines") ?? "").trim();
+  const removeLogo = formData.get("removeLogo") === "on";
+  const logoFile = formData.get("logo") as File | null;
 
   if (!companyName || !shortName) {
     throw new Error("Thiếu tên công ty");
   }
 
+  const current = await prisma.settings.findUnique({ where: { id: 1 } });
+  let logoUrl = current?.logoUrl ?? null;
+  if (removeLogo) {
+    logoUrl = null;
+  } else if (logoFile && logoFile.size > 0) {
+    const [uploaded] = await saveUploadedImages([logoFile]);
+    if (uploaded) logoUrl = uploaded;
+  }
+
+  const data = {
+    companyName,
+    shortName,
+    slogan,
+    taxId,
+    representative,
+    address,
+    phone,
+    email,
+    businessLines,
+    logoUrl,
+  };
+
   await prisma.settings.upsert({
     where: { id: 1 },
-    update: {
-      companyName,
-      shortName,
-      slogan,
-      taxId,
-      representative,
-      address,
-      phone,
-      email,
-      businessLines,
-    },
-    create: {
-      id: 1,
-      companyName,
-      shortName,
-      slogan,
-      taxId,
-      representative,
-      address,
-      phone,
-      email,
-      businessLines,
-    },
+    update: data,
+    create: { id: 1, ...data },
   });
 
   revalidatePath("/", "layout");

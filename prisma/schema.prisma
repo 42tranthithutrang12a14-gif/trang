@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Settings {
-  id             Int    @id @default(1)
+  id             Int     @id @default(1)
   companyName    String
   shortName      String
   slogan         String
@@ -21,6 +21,7 @@ model Settings {
   phone          String
   email          String
   businessLines  String
+  logoUrl        String?
 }
 
 model Service {

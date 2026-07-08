@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getSettings, nav } from "@/lib/settings";
 
@@ -7,11 +8,18 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="text-lg font-semibold tracking-wide text-foreground">
-            {settings.shortName}
+        <Link href="/" className="flex items-center gap-3">
+          {settings.logoUrl && (
+            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg">
+              <Image src={settings.logoUrl} alt={settings.shortName} fill className="object-contain" />
+            </div>
+          )}
+          <span className="flex flex-col leading-tight">
+            <span className="text-lg font-semibold tracking-wide text-foreground">
+              {settings.shortName}
+            </span>
+            <span className="text-xs text-muted">{settings.slogan}</span>
           </span>
-          <span className="text-xs text-muted">{settings.slogan}</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
