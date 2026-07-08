@@ -15,6 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const description = `${settings.companyName}: ${settings.slogan}. ${settings.address}.`;
 
   return {
+    metadataBase: new URL("https://dailoangia.vercel.app"),
     title: {
       default: title,
       template: `%s — ${settings.shortName}`,
