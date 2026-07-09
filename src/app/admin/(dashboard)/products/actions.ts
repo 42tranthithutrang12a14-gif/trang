@@ -28,11 +28,18 @@ function parsePrice(value: FormDataEntryValue | null) {
   return Number.isFinite(num) ? num : null;
 }
 
+function parseStock(value: FormDataEntryValue | null) {
+  const num = Number(String(value ?? "0").replace(/[^\d]/g, ""));
+  return Number.isFinite(num) ? num : 0;
+}
+
 export async function createProduct(formData: FormData) {
   const name = String(formData.get("name") ?? "").trim();
   const categoryId = Number(formData.get("categoryId"));
   const description = String(formData.get("description") ?? "").trim();
   const price = parsePrice(formData.get("price"));
+  const stock = parseStock(formData.get("stock"));
+  const showStock = formData.get("showStock") === "on";
   const featured = formData.get("featured") === "on";
   const images = formData.getAll("images") as File[];
 
@@ -49,6 +56,8 @@ export async function createProduct(formData: FormData) {
       slug,
       description,
       price,
+      stock,
+      showStock,
       featured,
       categoryId,
       images: { create: imageUrls.map((url) => ({ url })) },
@@ -66,6 +75,8 @@ export async function updateProduct(productId: number, formData: FormData) {
   const categoryId = Number(formData.get("categoryId"));
   const description = String(formData.get("description") ?? "").trim();
   const price = parsePrice(formData.get("price"));
+  const stock = parseStock(formData.get("stock"));
+  const showStock = formData.get("showStock") === "on";
   const featured = formData.get("featured") === "on";
   const newImages = formData.getAll("images") as File[];
   const removeImageIds = formData.getAll("removeImages").map(Number);
@@ -93,6 +104,8 @@ export async function updateProduct(productId: number, formData: FormData) {
       slug,
       description,
       price,
+      stock,
+      showStock,
       featured,
       categoryId,
       images: { create: imageUrls.map((url) => ({ url })) },

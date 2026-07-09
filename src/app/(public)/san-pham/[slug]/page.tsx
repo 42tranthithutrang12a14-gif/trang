@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/db";
-import { formatPrice, telHref } from "@/lib/format";
+import { formatPrice, stockLabel, telHref } from "@/lib/format";
 import { getSettings } from "@/lib/settings";
 import { ProductCard } from "@/components/product-card";
 
@@ -44,6 +44,7 @@ export default async function ProductDetailPage({
   });
 
   const images = product.images.length > 0 ? product.images : [{ id: 0, url: "/placeholders/vat-lieu-xay-dung.svg", productId: 0 }];
+  const stock = stockLabel(product);
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
@@ -84,6 +85,15 @@ export default async function ProductDetailPage({
           <p className="mt-4 text-2xl font-semibold text-foreground">
             {formatPrice(product.price)}
           </p>
+          {stock && (
+            <p
+              className={`mt-1 text-sm font-medium ${
+                stock === "Hết hàng" ? "text-red-600" : "text-muted"
+              }`}
+            >
+              {stock}
+            </p>
+          )}
           <p className="mt-6 whitespace-pre-line leading-relaxed text-muted">
             {product.description}
           </p>

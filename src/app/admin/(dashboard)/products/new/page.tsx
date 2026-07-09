@@ -69,6 +69,26 @@ export default async function NewProductPage() {
           />
         </div>
 
+        <div>
+          <label htmlFor="stock" className="text-sm font-medium text-foreground">
+            Số lượng tồn kho
+          </label>
+          <input
+            id="stock"
+            name="stock"
+            type="number"
+            min={0}
+            defaultValue={0}
+            className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
+          />
+        </div>
+
+        <label className="flex items-center gap-2 text-sm text-foreground">
+          <input type="checkbox" name="showStock" className="h-4 w-4 rounded border-border" />
+          Hiển thị số lượng tồn kho công khai cho khách xem (không tick thì khách không thấy gì
+          về tồn kho)
+        </label>
+
         <label className="flex items-center gap-2 text-sm text-foreground">
           <input type="checkbox" name="featured" className="h-4 w-4 rounded border-border" />
           Hiển thị ở mục &quot;Sản phẩm nổi bật&quot; trên trang chủ

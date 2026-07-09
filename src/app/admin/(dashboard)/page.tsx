@@ -29,6 +29,7 @@ export default async function AdminProductsPage() {
               <th className="px-4 py-3 font-medium">Tên sản phẩm</th>
               <th className="px-4 py-3 font-medium">Danh mục</th>
               <th className="px-4 py-3 font-medium">Giá</th>
+              <th className="px-4 py-3 font-medium">Tồn kho</th>
               <th className="px-4 py-3 font-medium">Nổi bật</th>
               <th className="px-4 py-3 font-medium text-right">Thao tác</th>
             </tr>
@@ -49,6 +50,12 @@ export default async function AdminProductsPage() {
                 <td className="px-4 py-3 font-medium text-foreground">{product.name}</td>
                 <td className="px-4 py-3 text-muted">{product.category.name}</td>
                 <td className="px-4 py-3 text-foreground">{formatPrice(product.price)}</td>
+                <td className="px-4 py-3">
+                  <span className={product.stock === 0 ? "text-red-600" : "text-foreground"}>
+                    {product.stock}
+                  </span>
+                  {product.showStock && <span className="ml-1 text-xs text-muted">(công khai)</span>}
+                </td>
                 <td className="px-4 py-3">{product.featured ? "Có" : ""}</td>
                 <td className="px-4 py-3 text-right">
                   <Link
@@ -62,7 +69,7 @@ export default async function AdminProductsPage() {
             ))}
             {products.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-10 text-center text-muted">
+                <td colSpan={7} className="px-4 py-10 text-center text-muted">
                   Chưa có sản phẩm nào.
                 </td>
               </tr>

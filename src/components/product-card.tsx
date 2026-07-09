@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Prisma } from "@/generated/prisma/client";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, stockLabel } from "@/lib/format";
 
 export type ProductCardData = Prisma.ProductGetPayload<{
   include: { images: true; category: true };
@@ -9,6 +9,7 @@ export type ProductCardData = Prisma.ProductGetPayload<{
 
 export function ProductCard({ product }: { product: ProductCardData }) {
   const image = product.images[0]?.url ?? "/placeholders/vat-lieu-xay-dung.svg";
+  const stock = stockLabel(product);
 
   return (
     <Link
@@ -28,6 +29,11 @@ export function ProductCard({ product }: { product: ProductCardData }) {
           {product.category.name}
         </span>
         <h3 className="text-base font-medium text-foreground">{product.name}</h3>
+        {stock && (
+          <p className={`text-xs ${stock === "Hết hàng" ? "text-red-600" : "text-muted"}`}>
+            {stock}
+          </p>
+        )}
         <p className="mt-auto pt-2 text-sm font-semibold text-foreground">
           {formatPrice(product.price)}
         </p>
