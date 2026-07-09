@@ -1,8 +1,10 @@
 import { prisma } from "@/lib/db";
 import { createProduct } from "../actions";
+import { buildCategoryTree, flattenWithDepth } from "@/lib/categories";
 
 export default async function NewProductPage() {
   const categories = await prisma.category.findMany({ orderBy: { order: "asc" } });
+  const flatCategories = flattenWithDepth(buildCategoryTree(categories));
 
   return (
     <div className="max-w-2xl">
@@ -31,8 +33,9 @@ export default async function NewProductPage() {
             required
             className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
           >
-            {categories.map((category) => (
+            {flatCategories.map(({ category, depth }) => (
               <option key={category.id} value={category.id}>
+                {"— ".repeat(depth)}
                 {category.name}
               </option>
             ))}

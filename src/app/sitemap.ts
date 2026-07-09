@@ -3,6 +3,9 @@ import { prisma } from "@/lib/db";
 
 const SITE_URL = "https://dailoangia.vercel.app";
 
+// Tránh mở kết nối database lúc build (sitemap mặc định được cache/tạo lúc build).
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await prisma.product.findMany({ select: { slug: true, updatedAt: true } });
 

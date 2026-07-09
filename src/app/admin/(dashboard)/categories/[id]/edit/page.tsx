@@ -2,6 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";
 import { updateCategory } from "../../actions";
+import { buildCategoryTree, flattenWithDepth, getSelfAndDescendantIds } from "@/lib/categories";
 
 export default async function EditCategoryPage({
   params,
@@ -11,8 +12,16 @@ export default async function EditCategoryPage({
   const { id } = await params;
   const categoryId = Number(id);
 
-  const category = await prisma.category.findUnique({ where: { id: categoryId } });
+  const [category, allCategories] = await Promise.all([
+    prisma.category.findUnique({ where: { id: categoryId } }),
+    prisma.category.findMany({ orderBy: { order: "asc" } }),
+  ]);
   if (!category) notFound();
+
+  const forbidden = getSelfAndDescendantIds(categoryId, allCategories);
+  const selectableFlat = flattenWithDepth(buildCategoryTree(allCategories)).filter(
+    ({ category: c }) => !forbidden.has(c.id)
+  );
 
   const updateWithId = updateCategory.bind(null, categoryId);
 
@@ -32,6 +41,26 @@ export default async function EditCategoryPage({
             defaultValue={category.name}
             className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
           />
+        </div>
+
+        <div>
+          <label htmlFor="parentId" className="text-sm font-medium text-foreground">
+            Danh mục cha (để trống nếu là danh mục gốc)
+          </label>
+          <select
+            id="parentId"
+            name="parentId"
+            defaultValue={category.parentId ?? ""}
+            className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
+          >
+            <option value="">— Không có (danh mục gốc) —</option>
+            {selectableFlat.map(({ category: c, depth }) => (
+              <option key={c.id} value={c.id}>
+                {"— ".repeat(depth)}
+                {c.name}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div>

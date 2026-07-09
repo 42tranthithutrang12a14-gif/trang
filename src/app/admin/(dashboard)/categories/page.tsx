@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { createCategory, deleteCategory } from "./actions";
 import { ConfirmSubmitButton } from "@/components/confirm-submit-button";
+import { buildCategoryTree, flattenWithDepth } from "@/lib/categories";
 
 export default async function CategoriesPage({
   searchParams,
@@ -15,9 +16,14 @@ export default async function CategoriesPage({
     include: { _count: { select: { products: true } } },
   });
 
+  const flat = flattenWithDepth(buildCategoryTree(categories));
+
   return (
     <div>
       <h1 className="text-2xl font-semibold text-foreground">Danh mục</h1>
+      <p className="mt-1 text-sm text-muted">
+        Có thể tạo danh mục con bên trong danh mục khác, giống thư mục con trong máy tính.
+      </p>
 
       {error === "has-products" && (
         <p className="mt-4 rounded-lg bg-red-50 px-4 py-2 text-sm text-red-700">
@@ -27,7 +33,7 @@ export default async function CategoriesPage({
       )}
 
       <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-surface">
-        <table className="w-full min-w-[520px] text-sm">
+        <table className="w-full min-w-[560px] text-sm">
           <thead className="border-b border-border bg-background text-left text-muted">
             <tr>
               <th className="px-4 py-3 font-medium">Ảnh</th>
@@ -37,7 +43,7 @@ export default async function CategoriesPage({
             </tr>
           </thead>
           <tbody>
-            {categories.map((category) => {
+            {flat.map(({ category, depth }) => {
               const deleteWithId = deleteCategory.bind(null, category.id);
               return (
                 <tr key={category.id} className="border-b border-border last:border-0">
@@ -51,7 +57,12 @@ export default async function CategoriesPage({
                       />
                     </div>
                   </td>
-                  <td className="px-4 py-3 font-medium text-foreground">{category.name}</td>
+                  <td className="px-4 py-3 font-medium text-foreground">
+                    <span style={{ paddingLeft: `${depth * 20}px` }} className="inline-flex items-center gap-1.5">
+                      {depth > 0 && <span className="text-muted">↳</span>}
+                      {category.name}
+                    </span>
+                  </td>
                   <td className="px-4 py-3 text-muted">{category._count.products}</td>
                   <td className="px-4 py-3">
                     <div className="flex justify-end gap-4">
@@ -91,6 +102,25 @@ export default async function CategoriesPage({
               required
               className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
             />
+          </div>
+          <div>
+            <label htmlFor="parentId" className="text-sm font-medium text-foreground">
+              Danh mục cha (để trống nếu là danh mục gốc)
+            </label>
+            <select
+              id="parentId"
+              name="parentId"
+              defaultValue=""
+              className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
+            >
+              <option value="">— Không có (danh mục gốc) —</option>
+              {flat.map(({ category, depth }) => (
+                <option key={category.id} value={category.id}>
+                  {"— ".repeat(depth)}
+                  {category.name}
+                </option>
+              ))}
+            </select>
           </div>
           <div>
             <label htmlFor="image" className="text-sm font-medium text-foreground">

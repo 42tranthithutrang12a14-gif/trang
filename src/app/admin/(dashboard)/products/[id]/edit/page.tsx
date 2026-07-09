@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db";
 import { ConfirmSubmitButton } from "@/components/confirm-submit-button";
 import { updateProduct, deleteProduct } from "../../actions";
+import { buildCategoryTree, flattenWithDepth } from "@/lib/categories";
 
 export default async function EditProductPage({
   params,
@@ -19,6 +20,7 @@ export default async function EditProductPage({
 
   if (!product) notFound();
 
+  const flatCategories = flattenWithDepth(buildCategoryTree(categories));
   const updateWithId = updateProduct.bind(null, productId);
   const deleteWithId = deleteProduct.bind(null, productId);
 
@@ -51,8 +53,9 @@ export default async function EditProductPage({
             defaultValue={product.categoryId}
             className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
           >
-            {categories.map((category) => (
+            {flatCategories.map(({ category, depth }) => (
               <option key={category.id} value={category.id}>
+                {"— ".repeat(depth)}
                 {category.name}
               </option>
             ))}

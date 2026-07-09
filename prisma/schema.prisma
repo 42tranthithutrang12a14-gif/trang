@@ -33,11 +33,14 @@ model Service {
 }
 
 model Category {
-  id       Int       @id @default(autoincrement())
+  id       Int        @id @default(autoincrement())
   name     String
-  slug     String    @unique
-  order    Int       @default(0)
+  slug     String     @unique
+  order    Int        @default(0)
   image    String?
+  parentId Int?
+  parent   Category?  @relation("CategoryTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children Category[] @relation("CategoryTree")
   products Product[]
 }
 

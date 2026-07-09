@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/product-card";
 export default async function Home() {
   const settings = await getSettings();
   const [categories, featuredProducts] = await Promise.all([
-    prisma.category.findMany({ orderBy: { order: "asc" } }),
+    prisma.category.findMany({ where: { parentId: null }, orderBy: { order: "asc" } }),
     prisma.product.findMany({
       where: { featured: true },
       include: { images: true, category: true },
