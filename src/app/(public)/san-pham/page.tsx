@@ -4,6 +4,7 @@ import type { Prisma } from "@/generated/prisma/client";
 import { prisma } from "@/lib/db";
 import { ProductCard } from "@/components/product-card";
 import { buildCategoryTree, getDescendantIds } from "@/lib/categories";
+import { normalizeForSearch } from "@/lib/slug";
 
 export const metadata: Metadata = {
   title: "Sản phẩm",
@@ -24,18 +25,24 @@ export default async function ProductsPage({
   if (activeCategory) {
     where.categoryId = { in: getDescendantIds(activeCategory.id, categories) };
   }
-  if (query) {
-    where.OR = [
-      { name: { contains: query, mode: "insensitive" } },
-      { description: { contains: query, mode: "insensitive" } },
-    ];
-  }
 
-  const products = await prisma.product.findMany({
+  const allProducts = await prisma.product.findMany({
     where,
     include: { images: true, category: true },
     orderBy: { createdAt: "desc" },
   });
+
+  // Lọc theo từ khoá không phân biệt dấu (VD: "gach" khớp "Gạch") — làm ở tầng ứng
+  // dụng vì Postgres so khớp chuỗi có phân biệt dấu, còn danh mục sản phẩm không lớn
+  // nên lọc trong bộ nhớ vẫn nhanh.
+  const normalizedQuery = query ? normalizeForSearch(query) : "";
+  const products = normalizedQuery
+    ? allProducts.filter(
+        (p) =>
+          normalizeForSearch(p.name).includes(normalizedQuery) ||
+          normalizeForSearch(p.description).includes(normalizedQuery)
+      )
+    : allProducts;
 
   const topLevelCategories = buildCategoryTree(categories);
   const subCategories = activeCategory
