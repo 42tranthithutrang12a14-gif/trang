@@ -50,3 +50,4 @@ next-env.d.ts
 # uploaded product images
 /public/uploads/*
 !/public/uploads/.gitkeep
+.claude

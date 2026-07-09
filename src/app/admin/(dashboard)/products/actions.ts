@@ -119,6 +119,22 @@ export async function updateProduct(productId: number, formData: FormData) {
   redirect("/admin");
 }
 
+export async function adjustStock(productId: number, delta: number) {
+  const product = await prisma.product.findUnique({
+    where: { id: productId },
+    select: { stock: true, slug: true },
+  });
+  if (!product) return;
+
+  const stock = Math.max(0, product.stock + delta);
+  await prisma.product.update({ where: { id: productId }, data: { stock } });
+
+  revalidatePath("/admin");
+  revalidatePath("/san-pham");
+  revalidatePath(`/san-pham/${product.slug}`);
+  return stock;
+}
+
 export async function deleteProduct(productId: number) {
   await prisma.product.delete({ where: { id: productId } });
   revalidatePath("/admin");
