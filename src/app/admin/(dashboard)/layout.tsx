@@ -9,7 +9,6 @@ const adminNav = [
   { label: "Sản phẩm", href: "/admin" },
   { label: "Danh mục", href: "/admin/categories" },
   { label: "Dịch vụ", href: "/admin/services" },
-  { label: "Báo giá", href: "/admin/bao-gia" },
   { label: "Cài đặt", href: "/admin/settings" },
 ];
 
@@ -22,7 +21,7 @@ export default async function AdminDashboardLayout({
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="no-print border-b border-border bg-surface">
+      <header className="border-b border-border bg-surface">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <div className="flex items-center gap-8">
             <span className="text-sm font-semibold text-foreground">
