@@ -42,7 +42,7 @@ export function QuoteBuilder({ settings }: { settings: Settings }) {
   const [items, setItems] = useState<QuoteItem[]>(
     INITIAL_ITEMS.map((item, i) => ({ ...item, id: i }))
   );
-  const [customer, setCustomer] = useState({ name: "Anh Nghĩa", address: "Quận 8", phone: "" });
+  const [customer, setCustomer] = useState({ name: "", address: "", phone: "" });
   const [quoteNo, setQuoteNo] = useState("");
   const [note, setNote] = useState("Báo giá có hiệu lực trong 15 ngày kể từ ngày phát hành.");
   const date = todayVn();
