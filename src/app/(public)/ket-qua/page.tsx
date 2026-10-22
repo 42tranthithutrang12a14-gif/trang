@@ -269,7 +269,21 @@ export default function KetQuaPage() {
           <>
             <p className="text-sm font-semibold text-foreground mb-1">Lưu kết quả</p>
             <p className="text-xs text-muted mb-4">Lưu vào tài khoản để xem lại và theo dõi thay đổi.</p>
-            {saveError && <p className="mb-3 text-xs text-danger">{saveError}</p>}
+            {saveError && (
+              saveError.includes("Nâng cấp") ? (
+                <div className="mb-3">
+                  <p className="text-xs text-danger mb-2">{saveError}</p>
+                  <Link
+                    href="/nang-cap"
+                    className="inline-block rounded-xl bg-accent px-5 py-2 text-xs font-semibold text-white hover:bg-accent-dark transition-colors"
+                  >
+                    Nâng cấp Pro →
+                  </Link>
+                </div>
+              ) : (
+                <p className="mb-3 text-xs text-danger">{saveError}</p>
+              )
+            )}
             <button
               onClick={async () => {
                 setSaving(true);

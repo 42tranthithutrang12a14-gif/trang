@@ -11,6 +11,7 @@ import { isStripeConfigured, PLANS } from "@/lib/stripe";
 import { isPro, canSaveMore } from "@/lib/subscription";
 import { EmailPrefsForm } from "./EmailPrefsForm";
 import { SubscriptionSection } from "./SubscriptionSection";
+import { RestoreResultButton } from "./RestoreResultButton";
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("vi-VN", {
@@ -22,7 +23,14 @@ function formatDate(iso: string): string {
   });
 }
 
-export default async function TaiKhoanPage() {
+export default async function TaiKhoanPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ upgraded?: string }>;
+}) {
+  const params = await searchParams;
+  const justUpgraded = params.upgraded === "1";
+
   if (!isSupabaseConfigured()) {
     redirect("/dang-nhap");
   }
@@ -45,6 +53,17 @@ export default async function TaiKhoanPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
+      {/* Upgrade success banner */}
+      {justUpgraded && (
+        <div className="mb-6 rounded-2xl border-2 border-success/40 bg-success-bg px-5 py-4 flex items-center gap-3">
+          <span className="text-xl">🎉</span>
+          <div>
+            <p className="text-sm font-semibold text-foreground">Nâng cấp thành công!</p>
+            <p className="text-xs text-muted mt-0.5">Tài khoản của bạn đã được nâng lên gói Pro. Tận hưởng lưu không giới hạn và nhắc lịch email.</p>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="mb-8 flex items-start justify-between gap-4">
         <div>
@@ -88,7 +107,7 @@ export default async function TaiKhoanPage() {
           <h2 className="text-base font-semibold text-foreground">
             Lịch sử khám sức khỏe pháp lý
           </h2>
-          {!pro && saveLimit !== Infinity && (
+          {!pro && saveLimit !== Infinity && saveLimit > 0 && (
             <span className="text-xs text-muted">
               {results.length}/{saveLimit} lần lưu
             </span>
@@ -129,6 +148,7 @@ export default async function TaiKhoanPage() {
                     )}
                   </div>
                 </div>
+                <RestoreResultButton answers={r.answers} />
               </div>
             ))}
           </div>

@@ -66,6 +66,7 @@ export type SavedResult = {
   redCount: number;
   yellowCount: number;
   greenCount: number;
+  answers: Record<string, string>;
 };
 
 export async function listResults(): Promise<SavedResult[]> {
@@ -73,7 +74,7 @@ export async function listResults(): Promise<SavedResult[]> {
 
   const { data, error } = await supabase
     .from("saved_results")
-    .select("id, created_at, red_count, yellow_count, green_count")
+    .select("id, created_at, red_count, yellow_count, green_count, answers")
     .order("created_at", { ascending: false })
     .limit(20);
 
@@ -85,5 +86,6 @@ export async function listResults(): Promise<SavedResult[]> {
     redCount: r.red_count as number,
     yellowCount: r.yellow_count as number,
     greenCount: r.green_count as number,
+    answers: (r.answers ?? {}) as Record<string, string>,
   }));
 }
