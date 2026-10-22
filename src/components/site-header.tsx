@@ -15,6 +15,9 @@ export function SiteHeader() {
           <Link href="/thu-vien" className="hover:text-foreground transition-colors">
             Thư viện
           </Link>
+          <Link href="/nang-cap" className="hover:text-foreground transition-colors">
+            Bảng giá
+          </Link>
           <Link href="/tai-khoan" className="hover:text-foreground transition-colors">
             Tài khoản
           </Link>

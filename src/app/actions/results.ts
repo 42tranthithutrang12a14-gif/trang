@@ -1,6 +1,8 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { getUserPlan } from "./subscription";
+import { isPro } from "@/lib/subscription";
 import type { Answers } from "@/lib/engine/types";
 
 export type SaveResultPayload = {
@@ -14,6 +16,8 @@ export type SaveResultResponse =
   | { ok: true; id: string }
   | { ok: false; error: string };
 
+const FREE_SAVE_LIMIT = 3;
+
 export async function saveResult(payload: SaveResultPayload): Promise<SaveResultResponse> {
   const supabase = await createClient();
 
@@ -23,6 +27,18 @@ export async function saveResult(payload: SaveResultPayload): Promise<SaveResult
 
   if (!user) {
     return { ok: false, error: "Chưa đăng nhập." };
+  }
+
+  // Enforce save limit for free users
+  const plan = await getUserPlan();
+  if (!isPro(plan)) {
+    const { count } = await supabase
+      .from("saved_results")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", user.id);
+    if ((count ?? 0) >= FREE_SAVE_LIMIT) {
+      return { ok: false, error: `Gói miễn phí chỉ cho phép lưu ${FREE_SAVE_LIMIT} kết quả. Nâng cấp Pro để lưu không giới hạn.` };
+    }
   }
 
   const { data, error } = await supabase
