@@ -269,21 +269,7 @@ export default function KetQuaPage() {
           <>
             <p className="text-sm font-semibold text-foreground mb-1">Lưu kết quả</p>
             <p className="text-xs text-muted mb-4">Lưu vào tài khoản để xem lại và theo dõi thay đổi.</p>
-            {saveError && (
-              saveError.includes("Nâng cấp") ? (
-                <div className="mb-3">
-                  <p className="text-xs text-danger mb-2">{saveError}</p>
-                  <Link
-                    href="/nang-cap"
-                    className="inline-block rounded-xl bg-accent px-5 py-2 text-xs font-semibold text-white hover:bg-accent-dark transition-colors"
-                  >
-                    Nâng cấp Pro →
-                  </Link>
-                </div>
-              ) : (
-                <p className="mb-3 text-xs text-danger">{saveError}</p>
-              )
-            )}
+            {saveError && <p className="mb-3 text-xs text-danger">{saveError}</p>}
             <button
               onClick={async () => {
                 setSaving(true);
@@ -314,6 +300,22 @@ export default function KetQuaPage() {
           </>
         )}
       </div>
+
+      {/* CTA: Help request */}
+      {totalIssues > 0 && (
+        <div className="mb-6 rounded-2xl border border-border bg-surface p-5 text-center">
+          <p className="text-sm font-semibold text-foreground mb-1">Cần người làm giúp?</p>
+          <p className="text-xs text-muted mb-3">
+            Chúng tôi kết nối bạn với kế toán/pháp lý uy tín để xử lý các việc trên.
+          </p>
+          <Link
+            href="/can-giup"
+            className="inline-block rounded-xl border-2 border-accent px-5 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-white transition-colors"
+          >
+            Tìm người làm giúp →
+          </Link>
+        </div>
+      )}
 
       {/* Actions */}
       <div className="flex flex-col gap-3 sm:flex-row">

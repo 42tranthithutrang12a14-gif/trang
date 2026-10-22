@@ -1,59 +1,41 @@
 import { createClient as createServiceClient } from "@supabase/supabase-js";
 import { AddPartnerForm } from "./AddPartnerForm";
 
-function getServiceClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) return null;
-  return createServiceClient(url, key);
-}
-
-type ReferralCode = {
-  code: string;
-  partner_name: string;
-  partner_email: string;
-  discount_pct: number;
+type Partner = {
+  id: string;
+  name: string;
+  email: string | null;
+  phone: string | null;
+  notes: string | null;
   is_active: boolean;
   created_at: string;
-  uses: number;
 };
 
-async function getReferralCodes(): Promise<ReferralCode[]> {
-  const supabase = getServiceClient();
-  if (!supabase) return [];
+async function getPartners(): Promise<Partner[]> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) return [];
 
-  const { data: codes } = await supabase
-    .from("referral_codes")
+  const supabase = createServiceClient(url, key);
+  const { data } = await supabase
+    .from("partners")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("name");
 
-  if (!codes) return [];
-
-  const { data: uses } = await supabase
-    .from("referral_uses")
-    .select("code");
-
-  const useCounts = (uses ?? []).reduce<Record<string, number>>((acc, u) => {
-    acc[u.code] = (acc[u.code] ?? 0) + 1;
-    return acc;
-  }, {});
-
-  return codes.map((c) => ({ ...c, uses: useCounts[c.code] ?? 0 }));
+  return (data ?? []) as Partner[];
 }
 
 export default async function DoiTacPage() {
-  const codes = await getReferralCodes();
+  const partners = await getPartners();
   const supabaseReady = !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
 
   return (
     <div>
-      <div className="mb-6 flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Đối tác & Referral</h1>
-          <p className="text-sm text-muted mt-1">
-            Quản lý mã giảm giá cho đối tác và theo dõi số lượng người dùng được giới thiệu.
-          </p>
-        </div>
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-foreground">Đối tác</h1>
+        <p className="text-sm text-muted mt-1">
+          Danh sách kế toán và tư vấn pháp lý nhận yêu cầu hỗ trợ từ khách hàng.
+        </p>
       </div>
 
       {!supabaseReady ? (
@@ -62,50 +44,46 @@ export default async function DoiTacPage() {
         </div>
       ) : (
         <>
-          <div className="mb-6 grid grid-cols-3 gap-4">
+          <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
             <div className="rounded-2xl border border-border bg-surface p-4 text-center">
-              <p className="text-2xl font-bold text-foreground">{codes.length}</p>
-              <p className="text-xs text-muted mt-1">Đối tác</p>
-            </div>
-            <div className="rounded-2xl border border-border bg-surface p-4 text-center">
-              <p className="text-2xl font-bold text-foreground">
-                {codes.reduce((s, c) => s + c.uses, 0)}
-              </p>
-              <p className="text-xs text-muted mt-1">Lượt dùng</p>
+              <p className="text-2xl font-bold text-foreground">{partners.length}</p>
+              <p className="text-xs text-muted mt-1">Tổng số</p>
             </div>
             <div className="rounded-2xl border border-border bg-surface p-4 text-center">
               <p className="text-2xl font-bold text-success">
-                {codes.filter((c) => c.is_active).length}
+                {partners.filter((p) => p.is_active).length}
               </p>
               <p className="text-xs text-muted mt-1">Đang hoạt động</p>
             </div>
           </div>
 
-          {codes.length > 0 && (
+          {partners.length > 0 && (
             <div className="mb-6 rounded-2xl border border-border bg-surface overflow-hidden">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-border bg-surface/50">
-                    <th className="text-left px-4 py-3 font-medium text-muted">Mã</th>
-                    <th className="text-left px-4 py-3 font-medium text-muted">Đối tác</th>
-                    <th className="text-left px-4 py-3 font-medium text-muted">Giảm giá</th>
-                    <th className="text-left px-4 py-3 font-medium text-muted">Lượt dùng</th>
+                    <th className="text-left px-4 py-3 font-medium text-muted">Tên</th>
+                    <th className="text-left px-4 py-3 font-medium text-muted hidden sm:table-cell">Liên hệ</th>
+                    <th className="text-left px-4 py-3 font-medium text-muted hidden md:table-cell">Ghi chú</th>
                     <th className="text-left px-4 py-3 font-medium text-muted">Trạng thái</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {codes.map((c) => (
-                    <tr key={c.code} className="border-b border-border last:border-0">
-                      <td className="px-4 py-3 font-mono text-sm text-accent">{c.code}</td>
+                  {partners.map((p) => (
+                    <tr key={p.id} className="border-b border-border last:border-0">
                       <td className="px-4 py-3">
-                        <p className="text-sm text-foreground">{c.partner_name}</p>
-                        <p className="text-xs text-muted">{c.partner_email}</p>
+                        <p className="text-sm font-medium text-foreground">{p.name}</p>
                       </td>
-                      <td className="px-4 py-3 text-sm text-foreground">{c.discount_pct}%</td>
-                      <td className="px-4 py-3 text-sm font-semibold text-foreground">{c.uses}</td>
+                      <td className="px-4 py-3 hidden sm:table-cell">
+                        {p.phone && <p className="text-xs text-muted">{p.phone}</p>}
+                        {p.email && <p className="text-xs text-muted">{p.email}</p>}
+                      </td>
+                      <td className="px-4 py-3 hidden md:table-cell">
+                        <p className="text-xs text-muted">{p.notes ?? "—"}</p>
+                      </td>
                       <td className="px-4 py-3">
-                        <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${c.is_active ? "bg-success/20 text-success" : "bg-muted/20 text-muted"}`}>
-                          {c.is_active ? "Hoạt động" : "Đã tắt"}
+                        <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${p.is_active ? "bg-success/20 text-success" : "bg-muted/20 text-muted"}`}>
+                          {p.is_active ? "Hoạt động" : "Đã tắt"}
                         </span>
                       </td>
                     </tr>

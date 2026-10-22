@@ -7,8 +7,7 @@ import { getEmailPrefs } from "@/app/actions/email-prefs";
 import { getUserPlan } from "@/app/actions/subscription";
 import { isSupabaseConfigured } from "@/lib/supabase/check";
 import { isEmailConfigured } from "@/lib/email";
-import { isStripeConfigured, PLANS } from "@/lib/stripe";
-import { isPro, canSaveMore } from "@/lib/subscription";
+import { isPro } from "@/lib/subscription";
 import { EmailPrefsForm } from "./EmailPrefsForm";
 import { SubscriptionSection } from "./SubscriptionSection";
 import { RestoreResultButton } from "./RestoreResultButton";
@@ -46,10 +45,7 @@ export default async function TaiKhoanPage({
   ]);
 
   const emailEnabled = isEmailConfigured();
-  const stripeEnabled = isStripeConfigured();
   const pro = isPro(userPlan);
-  const saveLimit = PLANS[userPlan?.plan ?? "free"].saveLimit;
-  const canSave = canSaveMore(userPlan, results.length);
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
@@ -58,8 +54,8 @@ export default async function TaiKhoanPage({
         <div className="mb-6 rounded-2xl border-2 border-success/40 bg-success-bg px-5 py-4 flex items-center gap-3">
           <span className="text-xl">🎉</span>
           <div>
-            <p className="text-sm font-semibold text-foreground">Nâng cấp thành công!</p>
-            <p className="text-xs text-muted mt-0.5">Tài khoản của bạn đã được nâng lên gói Pro. Tận hưởng lưu không giới hạn và nhắc lịch email.</p>
+            <p className="text-sm font-semibold text-foreground">Yêu cầu nâng cấp đã gửi!</p>
+            <p className="text-xs text-muted mt-0.5">Admin sẽ xác nhận trong 1–2 ngày làm việc. Bạn sẽ nhận email thông báo.</p>
           </div>
         </div>
       )}
@@ -84,12 +80,12 @@ export default async function TaiKhoanPage({
       </div>
 
       {/* Upgrade CTA (free users only) */}
-      {!pro && stripeEnabled && (
+      {!pro && (
         <div className="mb-8 rounded-2xl border-2 border-accent/20 bg-accent/5 p-5 flex items-center justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-foreground">Nâng cấp lên Pro</p>
             <p className="text-xs text-muted mt-0.5">
-              Lưu không giới hạn · Nhắc lịch email · {(PLANS.pro.price / 1000).toFixed(0)}k₫/tháng
+              Nhắc hạn nộp qua email · 990.000 ₫/năm
             </p>
           </div>
           <Link
@@ -107,11 +103,6 @@ export default async function TaiKhoanPage({
           <h2 className="text-base font-semibold text-foreground">
             Lịch sử khám sức khỏe pháp lý
           </h2>
-          {!pro && saveLimit !== Infinity && saveLimit > 0 && (
-            <span className="text-xs text-muted">
-              {results.length}/{saveLimit} lần lưu
-            </span>
-          )}
         </div>
 
         {results.length === 0 ? (
@@ -153,13 +144,6 @@ export default async function TaiKhoanPage({
             ))}
           </div>
         )}
-
-        {!canSave && !pro && (
-          <div className="mt-3 rounded-xl border border-warning/30 bg-warning-bg px-4 py-3 text-xs text-warning">
-            Bạn đã dùng hết {saveLimit} lần lưu miễn phí.{" "}
-            <Link href="/nang-cap" className="underline font-semibold">Nâng cấp Pro</Link> để lưu không giới hạn.
-          </div>
-        )}
       </section>
 
       {/* Email reminders */}
@@ -185,12 +169,10 @@ export default async function TaiKhoanPage({
       </section>
 
       {/* Subscription management */}
-      {stripeEnabled && (
-        <section className="mb-8">
-          <h2 className="mb-4 text-base font-semibold text-foreground">Gói dịch vụ</h2>
-          <SubscriptionSection plan={userPlan} />
-        </section>
-      )}
+      <section className="mb-8">
+        <h2 className="mb-4 text-base font-semibold text-foreground">Gói dịch vụ</h2>
+        <SubscriptionSection plan={userPlan} />
+      </section>
 
       <div className="mt-2">
         <Link href="/kham" className="text-sm text-accent hover:text-accent-dark transition-colors">

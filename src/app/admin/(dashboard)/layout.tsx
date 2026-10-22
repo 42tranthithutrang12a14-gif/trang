@@ -9,6 +9,8 @@ const adminNav = [
   { label: "Rủi ro", href: "/admin/rui-ro" },
   { label: "Câu hỏi", href: "/admin/cau-hoi" },
   { label: "Tài liệu", href: "/admin/tai-lieu" },
+  { label: "Thanh toán", href: "/admin/thanh-toan" },
+  { label: "Yêu cầu hỗ trợ", href: "/admin/yeu-cau" },
   { label: "Đối tác", href: "/admin/doi-tac" },
 ];
 

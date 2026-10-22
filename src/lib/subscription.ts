@@ -1,13 +1,5 @@
 import "server-only";
-import type { Plan } from "./stripe";
-
-export type SubscriptionRecord = {
-  plan: Plan;
-  status: string;
-  currentPeriodEnd: string | null;
-  cancelAtPeriodEnd: boolean;
-  stripeCustomerId: string | null;
-};
+import type { Plan } from "./plans";
 
 export type UserPlan = {
   plan: Plan;
@@ -17,10 +9,12 @@ export type UserPlan = {
 };
 
 export function isPro(sub: UserPlan | null): boolean {
-  return sub?.plan === "pro" && sub.isActive;
-}
-
-export function canSaveMore(sub: UserPlan | null, savedCount: number): boolean {
-  if (isPro(sub)) return true;
-  return savedCount < 3;
+  if (!sub) return false;
+  if (sub.plan !== "pro") return false;
+  if (!sub.isActive) return false;
+  // Check expiry
+  if (sub.currentPeriodEnd) {
+    return new Date(sub.currentPeriodEnd) > new Date();
+  }
+  return true;
 }

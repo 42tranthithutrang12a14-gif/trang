@@ -2,6 +2,7 @@
 
 import { createClient as createServiceClient } from "@supabase/supabase-js";
 import { getSession } from "@/lib/auth";
+import { revalidatePath } from "next/cache";
 
 function getServiceSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -10,34 +11,34 @@ function getServiceSupabase() {
   return createServiceClient(url, key);
 }
 
-export async function addReferralCode(
-  code: string,
-  partnerName: string,
-  partnerEmail: string,
-  discountPct: number
+export async function addPartner(
+  name: string,
+  email: string,
+  phone: string,
+  notes: string
 ): Promise<{ ok: true } | { ok: false; error: string }> {
   const session = await getSession();
   if (!session) return { ok: false, error: "Chưa đăng nhập" };
 
-  if (!/^[A-Z0-9]{3,20}$/.test(code)) {
-    return { ok: false, error: "Mã chỉ gồm chữ hoa và số, 3–20 ký tự." };
-  }
+  if (!name.trim()) return { ok: false, error: "Tên đối tác không được để trống." };
 
   const supabase = getServiceSupabase();
-  const { error } = await supabase.from("referral_codes").insert({
-    code,
-    partner_name: partnerName,
-    partner_email: partnerEmail,
-    discount_pct: discountPct,
+  const { error } = await supabase.from("partners").insert({
+    name: name.trim(),
+    email: email.trim() || null,
+    phone: phone.trim() || null,
+    notes: notes.trim() || null,
     is_active: true,
   });
 
   if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/admin/doi-tac");
   return { ok: true };
 }
 
-export async function toggleReferralCode(
-  code: string,
+export async function togglePartner(
+  id: string,
   isActive: boolean
 ): Promise<{ ok: true } | { ok: false; error: string }> {
   const session = await getSession();
@@ -45,10 +46,12 @@ export async function toggleReferralCode(
 
   const supabase = getServiceSupabase();
   const { error } = await supabase
-    .from("referral_codes")
+    .from("partners")
     .update({ is_active: isActive })
-    .eq("code", code);
+    .eq("id", id);
 
   if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/admin/doi-tac");
   return { ok: true };
 }
