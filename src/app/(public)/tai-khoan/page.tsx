@@ -3,7 +3,10 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { listResults } from "@/app/actions/results";
 import { signOut } from "@/app/actions/auth";
+import { getEmailPrefs } from "@/app/actions/email-prefs";
 import { isSupabaseConfigured } from "@/lib/supabase/check";
+import { isEmailConfigured } from "@/lib/email";
+import { EmailPrefsForm } from "./EmailPrefsForm";
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("vi-VN", {
@@ -29,7 +32,12 @@ export default async function TaiKhoanPage() {
     redirect("/dang-nhap");
   }
 
-  const results = await listResults();
+  const [results, emailPrefs] = await Promise.all([
+    listResults(),
+    getEmailPrefs(),
+  ]);
+
+  const emailEnabled = isEmailConfigured();
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
@@ -48,7 +56,8 @@ export default async function TaiKhoanPage() {
         </form>
       </div>
 
-      <section>
+      {/* Results history */}
+      <section className="mb-8">
         <h2 className="mb-4 text-base font-semibold text-foreground">
           Lịch sử khám sức khỏe pháp lý
         </h2>
@@ -99,11 +108,23 @@ export default async function TaiKhoanPage() {
         )}
       </section>
 
-      <div className="mt-8">
-        <Link
-          href="/kham"
-          className="text-sm text-accent hover:text-accent-dark transition-colors"
-        >
+      {/* Email reminders */}
+      <section className="mb-8">
+        <h2 className="mb-4 text-base font-semibold text-foreground">Nhắc hạn nộp qua email</h2>
+        {!emailEnabled ? (
+          <div className="rounded-xl border border-border bg-surface p-5">
+            <p className="text-sm text-muted">Tính năng nhắc lịch qua email sắp ra mắt.</p>
+          </div>
+        ) : (
+          <EmailPrefsForm
+            initialRemindersOn={emailPrefs?.remindersOn ?? true}
+            initialRemindDays={emailPrefs?.remindDays ?? 7}
+          />
+        )}
+      </section>
+
+      <div className="mt-2">
+        <Link href="/kham" className="text-sm text-accent hover:text-accent-dark transition-colors">
           ← Khám lại từ đầu
         </Link>
       </div>

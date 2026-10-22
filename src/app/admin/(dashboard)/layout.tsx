@@ -8,6 +8,7 @@ const adminNav = [
   { label: "Nghĩa vụ", href: "/admin/nghia-vu" },
   { label: "Rủi ro", href: "/admin/rui-ro" },
   { label: "Câu hỏi", href: "/admin/cau-hoi" },
+  { label: "Tài liệu", href: "/admin/tai-lieu" },
 ];
 
 export default function AdminDashboardLayout({

@@ -1,0 +1,30 @@
+{
+  "slug": "dang-ky-thay-doi-doanh-nghiep",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Đăng ký thay đổi thông tin doanh nghiệp",
+  "category": "phap-ly",
+  "summary": "Khi có thay đổi về địa chỉ, người đại diện, vốn điều lệ... phải đăng ký với Phòng Đăng ký kinh doanh trong thời hạn quy định.",
+  "related_rules": ["RISK_CHANGES_NOT_REGISTERED"],
+  "body_sections": [
+    {
+      "heading": "Các loại thay đổi cần đăng ký",
+      "content": "Thay đổi địa chỉ trụ sở, người đại diện theo pháp luật, vốn điều lệ, ngành nghề kinh doanh, tên công ty đều phải đăng ký trong thời hạn 10 ngày kể từ ngày có quyết định thay đổi."
+    },
+    {
+      "heading": "Thủ tục đăng ký",
+      "content": "1. Chuẩn bị hồ sơ: Thông báo thay đổi + tài liệu minh chứng\n2. Nộp trực tuyến tại Cổng đăng ký kinh doanh quốc gia\n3. Hoặc nộp trực tiếp tại Phòng Đăng ký kinh doanh cấp tỉnh/thành phố\n4. Nhận Giấy chứng nhận đăng ký doanh nghiệp mới"
+    },
+    {
+      "heading": "Mức phạt nếu không đăng ký",
+      "content": "Mức phạt đang được cập nhật."
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận thời hạn 10 ngày và các loại thay đổi bắt buộc đăng ký",
+    "Điền mức phạt chính xác",
+    "Thêm link Cổng đăng ký kinh doanh",
+    "Thêm căn cứ pháp lý (Luật Doanh nghiệp, điều khoản cụ thể)"
+  ],
+  "updated_at": "2026-10-22"
+}

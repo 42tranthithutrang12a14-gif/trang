@@ -95,9 +95,10 @@ export default function ThuVienPage() {
       ) : (
         <div className="space-y-3">
           {guides.map((g) => (
-            <div
+            <Link
               key={g.slug}
-              className="rounded-xl border border-border bg-surface p-5 hover:border-accent/40 transition-colors"
+              href={`/huong-dan/${g.slug}`}
+              className="block rounded-xl border border-border bg-surface p-5 hover:border-accent/40 transition-colors"
             >
               {g.isDraft && (
                 <span className="inline-block mb-2 rounded-full bg-warning/10 px-2 py-0.5 text-xs font-semibold text-warning">
@@ -114,8 +115,9 @@ export default function ThuVienPage() {
                     <p className="mt-1 text-xs leading-relaxed text-muted line-clamp-2">{g.summary}</p>
                   )}
                 </div>
+                <span className="flex-shrink-0 text-muted text-xs">→</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

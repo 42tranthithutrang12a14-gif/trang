@@ -1,0 +1,34 @@
+{
+  "slug": "khai-thue-gtgt-theo-quy",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Nộp tờ khai thuế GTGT theo quý",
+  "category": "thue",
+  "summary": "Mỗi quý, công ty kê khai thuế GTGT phát sinh trong quý và nộp qua mạng.",
+  "related_rules": ["VAT_QUARTERLY_RETURN"],
+  "body_sections": [
+    {
+      "heading": "Tổng quan",
+      "content": "Công ty tính thuế GTGT theo phương pháp khấu trừ và khai theo quý phải nộp tờ khai thuế GTGT (mẫu 01/GTGT) cho từng quý trong năm. Hạn nộp là ngày cuối tháng đầu của quý tiếp theo."
+    },
+    {
+      "heading": "Các bước thực hiện",
+      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử (eTax) tại https://thuedientu.gdt.gov.vn\n2. Chọn Khai thuế → Tờ khai thuế GTGT → Mẫu 01/GTGT\n3. Điền dữ liệu từ sổ sách kế toán của quý vừa qua\n4. Kiểm tra lại số liệu và nộp trực tuyến\n5. Lưu xác nhận nộp tờ khai"
+    },
+    {
+      "heading": "Mức phạt nếu chậm nộp",
+      "content": "Chậm nộp tờ khai có thể bị phạt từ 2.000.000 đến 5.000.000 đồng tùy mức độ."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Thông tin căn cứ pháp lý đang được cập nhật."
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận hạn nộp chính xác (ngày cuối tháng tiếp theo hay ngày cụ thể)",
+    "Điền mức phạt chính xác theo Nghị định đang có hiệu lực",
+    "Thêm link eTax chính thức",
+    "Thêm căn cứ pháp lý có link"
+  ],
+  "updated_at": "2026-10-22"
+}
