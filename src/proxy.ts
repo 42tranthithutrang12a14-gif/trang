@@ -1,39 +1,55 @@
-import { NextRequest, NextResponse } from "next/server";
-import { jwtVerify } from "jose";
-import { SESSION_COOKIE } from "@/lib/auth";
+import { createServerClient } from "@supabase/ssr";
+import { NextResponse, type NextRequest } from "next/server";
 
-function getSecretKey() {
-  return new TextEncoder().encode(process.env.SESSION_SECRET ?? "");
-}
-
-async function hasValidSession(request: NextRequest) {
-  const token = request.cookies.get(SESSION_COOKIE)?.value;
-  if (!token) return false;
-  try {
-    await jwtVerify(token, getSecretKey());
-    return true;
-  } catch {
-    return false;
-  }
-}
+const PROTECTED = ["/tai-khoan"];
 
 export async function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  const isLoginPage = pathname === "/admin/login";
-  const authed = await hasValidSession(request);
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  if (!authed && !isLoginPage) {
-    const loginUrl = new URL("/admin/login", request.url);
+  // Skip auth check when Supabase is not configured
+  if (!supabaseUrl || !supabaseKey) {
+    return NextResponse.next();
+  }
+
+  const pathname = request.nextUrl.pathname;
+  const isProtected = PROTECTED.some((p) => pathname.startsWith(p));
+
+  if (!isProtected) return NextResponse.next();
+
+  let response = NextResponse.next({ request });
+
+  const supabase = createServerClient(supabaseUrl, supabaseKey, {
+    cookies: {
+      getAll() {
+        return request.cookies.getAll();
+      },
+      setAll(cookiesToSet) {
+        cookiesToSet.forEach(({ name, value }) =>
+          request.cookies.set(name, value)
+        );
+        response = NextResponse.next({ request });
+        cookiesToSet.forEach(({ name, value, options }) =>
+          response.cookies.set(name, value, options)
+        );
+      },
+    },
+  });
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/dang-nhap";
+    loginUrl.searchParams.set("next", pathname);
     return NextResponse.redirect(loginUrl);
   }
 
-  if (authed && isLoginPage) {
-    return NextResponse.redirect(new URL("/admin", request.url));
-  }
-
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/tai-khoan/:path*"],
 };

@@ -7,6 +7,9 @@ import obligationRules from "@/content/rules/obligation_rules.json";
 import riskRules from "@/content/rules/risk_rules.json";
 import { evaluate } from "@/lib/engine/evaluate";
 import { getTodayInVN } from "@/lib/engine/schedule";
+import { isSupabaseConfigured } from "@/lib/supabase/check";
+import { createClient } from "@/lib/supabase/client";
+import { saveResult } from "@/app/actions/results";
 import type { EngineResult, ObligationInstance } from "@/lib/engine/types";
 import type { Answers } from "@/lib/engine/types";
 
@@ -34,29 +37,43 @@ function urgencyLabel(days: number): { label: string; className: string } {
 export default function KetQuaPage() {
   const router = useRouter();
   const [result, setResult] = useState<EngineResult | null>(null);
+  const [answers, setAnswers] = useState<Answers>({});
   const [upcomingDeadlines, setUpcomingDeadlines] = useState<ObligationInstance[]>([]);
   const [today, setToday] = useState("");
   const [loaded, setLoaded] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [saveError, setSaveError] = useState("");
 
   useEffect(() => {
-    let answers: Answers = {};
+    let loadedAnswers: Answers = {};
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) answers = JSON.parse(saved) as Answers;
+      if (saved) loadedAnswers = JSON.parse(saved) as Answers;
     } catch {
       // ignore
     }
 
-    if (Object.keys(answers).length === 0) {
+    if (Object.keys(loadedAnswers).length === 0) {
       router.replace("/kham");
       return;
+    }
+
+    setAnswers(loadedAnswers);
+
+    if (isSupabaseConfigured()) {
+      const supabase = createClient();
+      supabase.auth.getUser().then(({ data: { user } }) => {
+        setIsLoggedIn(!!user);
+      });
     }
 
     const todayStr = getTodayInVN();
     setToday(todayStr);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const evalResult = evaluate(answers, obligationRules as any, riskRules as any, todayStr, [], {
+    const evalResult = evaluate(loadedAnswers, obligationRules as any, riskRules as any, todayStr, [], {
       includeDraft: CONTENT_PREVIEW,
     });
 
@@ -232,18 +249,56 @@ export default function KetQuaPage() {
 
       {/* CTA: Save results */}
       <div className="mb-6 rounded-2xl border-2 border-accent/20 bg-accent/5 p-5 text-center">
-        <p className="text-sm font-semibold text-foreground mb-1">
-          Lưu kết quả và nhận nhắc lịch
-        </p>
-        <p className="text-xs text-muted mb-4">
-          Tính năng này sắp ra mắt — đăng ký để nhận thông báo khi có.
-        </p>
-        <button
-          disabled
-          className="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white opacity-40 cursor-not-allowed"
-        >
-          Sắp có → Lưu & nhận nhắc
-        </button>
+        {!isSupabaseConfigured() ? (
+          <>
+            <p className="text-sm font-semibold text-foreground mb-1">Lưu kết quả & nhận nhắc lịch</p>
+            <p className="text-xs text-muted mb-4">Tính năng này sắp ra mắt.</p>
+            <button disabled className="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white opacity-40 cursor-not-allowed">
+              Sắp có
+            </button>
+          </>
+        ) : saved ? (
+          <>
+            <p className="text-base font-semibold text-foreground mb-1">✅ Đã lưu kết quả</p>
+            <p className="text-xs text-muted mb-3">Xem lại bất cứ lúc nào trong tài khoản.</p>
+            <Link href="/tai-khoan" className="inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-dark transition-colors">
+              Xem tài khoản →
+            </Link>
+          </>
+        ) : isLoggedIn ? (
+          <>
+            <p className="text-sm font-semibold text-foreground mb-1">Lưu kết quả</p>
+            <p className="text-xs text-muted mb-4">Lưu vào tài khoản để xem lại và theo dõi thay đổi.</p>
+            {saveError && <p className="mb-3 text-xs text-danger">{saveError}</p>}
+            <button
+              onClick={async () => {
+                setSaving(true);
+                setSaveError("");
+                const r = await saveResult({
+                  answers,
+                  redCount: result?.red.length ?? 0,
+                  yellowCount: result?.yellow.length ?? 0,
+                  greenCount: result?.green.length ?? 0,
+                });
+                setSaving(false);
+                if (r.ok) { setSaved(true); }
+                else { setSaveError(r.error); }
+              }}
+              disabled={saving}
+              className="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-dark transition-colors disabled:opacity-50"
+            >
+              {saving ? "Đang lưu..." : "Lưu kết quả →"}
+            </button>
+          </>
+        ) : (
+          <>
+            <p className="text-sm font-semibold text-foreground mb-1">Lưu kết quả & nhận nhắc lịch</p>
+            <p className="text-xs text-muted mb-4">Đăng nhập để lưu kết quả và nhận nhắc hạn nộp tự động.</p>
+            <Link href={`/dang-nhap?next=/ket-qua`} className="inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-dark transition-colors">
+              Đăng nhập miễn phí →
+            </Link>
+          </>
+        )}
       </div>
 
       {/* Actions */}
