@@ -1,0 +1,99 @@
+[
+  {
+    "code": "VAT_QUARTERLY_RETURN",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Nộp tờ khai thuế GTGT theo quý",
+    "summary_plain": "Mỗi quý, công ty kê khai thuế GTGT phát sinh trong quý và nộp qua mạng.",
+    "why_plain": "Vì công ty bạn tính thuế GTGT theo phương pháp khấu trừ và khai theo quý.",
+    "applies_if": {
+      "all": [
+        { "field": "vat_method", "op": "eq", "value": "khau_tru" },
+        { "field": "vat_period", "op": "eq", "value": "quy" }
+      ]
+    },
+    "schedule": {
+      "type": "quarterly",
+      "offset_months": 1,
+      "due_day": "last",
+      "shift_rule": "next_working_day",
+      "first_period": "containing_founding"
+    },
+    "how_to_steps": [],
+    "penalty_plain": "",
+    "legal_basis": [],
+    "guide_slug": "khai-thue-gtgt-theo-quy",
+    "severity": "high",
+    "effective_from": "2026-01-01",
+    "effective_to": null,
+    "version": 1,
+    "todo_for_reviewer": [
+      "Xác nhận hạn nộp theo Luật Quản lý thuế đang có hiệu lực",
+      "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
+      "Viết các bước làm và mức phạt, điền căn cứ pháp lý có link"
+    ]
+  },
+  {
+    "code": "VAT_MONTHLY_RETURN",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Nộp tờ khai thuế GTGT theo tháng",
+    "summary_plain": "Mỗi tháng, công ty kê khai thuế GTGT phát sinh trong tháng và nộp qua mạng.",
+    "why_plain": "Vì công ty bạn tính thuế GTGT theo phương pháp khấu trừ và khai theo tháng.",
+    "applies_if": {
+      "all": [
+        { "field": "vat_method", "op": "eq", "value": "khau_tru" },
+        { "field": "vat_period", "op": "eq", "value": "thang" }
+      ]
+    },
+    "schedule": {
+      "type": "monthly",
+      "offset_months": 1,
+      "due_day": 20,
+      "shift_rule": "next_working_day",
+      "first_period": "containing_founding"
+    },
+    "how_to_steps": [],
+    "penalty_plain": "",
+    "legal_basis": [],
+    "guide_slug": "khai-thue-gtgt-theo-thang",
+    "severity": "high",
+    "effective_from": "2026-01-01",
+    "effective_to": null,
+    "version": 1,
+    "todo_for_reviewer": [
+      "Xác nhận hạn nộp theo Luật Quản lý thuế đang có hiệu lực",
+      "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
+      "Viết các bước làm và mức phạt, điền căn cứ pháp lý có link"
+    ]
+  },
+  {
+    "code": "CIT_PROVISIONAL",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Tạm nộp thuế thu nhập doanh nghiệp theo quý",
+    "summary_plain": "Mỗi quý, công ty tạm nộp thuế TNDN ước tính của quý đó.",
+    "why_plain": "Doanh nghiệp phải tạm nộp thuế TNDN hằng quý dựa trên ước tính thu nhập.",
+    "applies_if": { "field": "company_type", "op": "is_set" },
+    "schedule": {
+      "type": "quarterly",
+      "offset_months": 1,
+      "due_day": 30,
+      "shift_rule": "next_working_day",
+      "first_period": "containing_founding"
+    },
+    "how_to_steps": [],
+    "penalty_plain": "",
+    "legal_basis": [],
+    "guide_slug": "tam-nop-thue-tndn",
+    "severity": "high",
+    "effective_from": "2026-01-01",
+    "effective_to": null,
+    "version": 1,
+    "todo_for_reviewer": [
+      "Xác nhận hạn tạm nộp và cách tính theo Luật Thuế TNDN",
+      "Xác nhận trường hợp nào được miễn/giảm",
+      "Viết các bước và mức phạt khi tạm nộp thiếu"
+    ]
+  }
+]

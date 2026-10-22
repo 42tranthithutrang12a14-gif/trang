@@ -1,0 +1,92 @@
+[
+  {
+    "code": "RISK_CHANGES_NOT_REGISTERED",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": {
+      "all": [
+        { "field": "recent_changes", "op": "eq", "value": "co" },
+        { "field": "changes_registered", "op": "eq", "value": "chua" }
+      ]
+    },
+    "title": "Có thay đổi nhưng chưa đăng ký với Phòng Đăng ký kinh doanh",
+    "ok_title": "Các thay đổi gần đây đã được đăng ký",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "dang-ky-thay-doi-doanh-nghiep",
+    "todo_for_reviewer": [
+      "Viết giải thích, cách khắc phục, căn cứ và thời hạn đăng ký thay đổi"
+    ]
+  },
+  {
+    "code": "RISK_NO_DIGITAL_SIGNATURE",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": { "field": "digital_signature", "op": "eq", "value": "khong" },
+    "title": "Chưa có chữ ký số hoặc chữ ký số đã hết hạn",
+    "ok_title": "Chữ ký số còn hạn",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "chu-ky-so",
+    "todo_for_reviewer": [
+      "Viết giải thích tại sao cần chữ ký số, cách đăng ký và gia hạn"
+    ]
+  },
+  {
+    "code": "RISK_NO_E_INVOICE",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": { "field": "e_invoice", "op": "eq", "value": "khong" },
+    "title": "Chưa đăng ký và sử dụng hóa đơn điện tử",
+    "ok_title": "Đã sử dụng hóa đơn điện tử",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "hoa-don-dien-tu",
+    "todo_for_reviewer": [
+      "Xác nhận thời hạn bắt buộc chuyển sang hóa đơn điện tử và mức phạt"
+    ]
+  },
+  {
+    "code": "RISK_CAPITAL_NOT_PAID",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "yellow",
+    "trigger": { "field": "capital_paid", "op": "eq", "value": "chua_du" },
+    "title": "Chưa góp đủ vốn điều lệ đã đăng ký",
+    "ok_title": "Đã góp đủ vốn điều lệ",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "gop-von-dieu-le",
+    "todo_for_reviewer": [
+      "Xác nhận thời hạn góp vốn và hậu quả pháp lý khi chưa góp đủ"
+    ]
+  },
+  {
+    "code": "RISK_NO_BOOKKEEPING",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": {
+      "any": [
+        { "field": "bookkeeper", "op": "eq", "value": "chua_co_ai" },
+        { "field": "books_medium", "op": "eq", "value": "khong_co" }
+      ]
+    },
+    "title": "Chưa có người ghi sổ kế toán hoặc chưa có sổ sách",
+    "ok_title": "Đã có sổ sách kế toán",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "so-sach-ke-toan",
+    "todo_for_reviewer": [
+      "Giải thích nghĩa vụ ghi sổ kế toán và mức phạt khi không ghi sổ"
+    ]
+  }
+]

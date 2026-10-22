@@ -1,144 +1,137 @@
-import Image from "next/image";
 import Link from "next/link";
-import { prisma } from "@/lib/db";
-import { getSettings } from "@/lib/settings";
-import { ProductCard } from "@/components/product-card";
+import type { Metadata } from "next";
 
-export default async function Home() {
-  const settings = await getSettings();
-  const [categories, featuredProducts] = await Promise.all([
-    prisma.category.findMany({ where: { parentId: null }, orderBy: { order: "asc" } }),
-    prisma.product.findMany({
-      where: { featured: true },
-      include: { images: true, category: true },
-      orderBy: { createdAt: "desc" },
-      take: 6,
-    }),
-  ]);
+export const metadata: Metadata = {
+  title: "Biết ngay công ty bạn đang thiếu gì về thuế và pháp lý",
+};
 
+const BENEFITS = [
+  {
+    icon: "🩺",
+    title: "Khám sức khỏe pháp lý",
+    desc: "23 câu hỏi nhanh, nhận ngay danh sách việc cần làm, việc cần kiểm tra và việc đang ổn.",
+  },
+  {
+    icon: "📅",
+    title: "Lịch nghĩa vụ của riêng bạn",
+    desc: "Hạn nộp từng loại tờ khai, báo cáo, sổ sách — tính theo đúng hồ sơ công ty bạn.",
+  },
+  {
+    icon: "📰",
+    title: "Tin pháp lý đã lọc",
+    desc: "Mỗi thay đổi luật được ghi rõ ai bị ảnh hưởng. App chỉ báo cho đúng người.",
+  },
+];
+
+const FAQS = [
+  {
+    q: "App này có phải dịch vụ kế toán không?",
+    a: "Không. Sổ tay DN Siêu nhỏ cung cấp thông tin tham khảo đã được kế toán viên có chứng chỉ hành nghề rà soát, không phải dịch vụ kế toán hay tư vấn pháp lý. Với trường hợp cụ thể, hãy đối chiếu văn bản gốc hoặc hỏi người có chứng chỉ.",
+  },
+  {
+    q: "Tôi có cần tạo tài khoản không?",
+    a: "Không cần tài khoản để làm bảng hỏi và xem kết quả. Kết quả được lưu tạm trên trình duyệt của bạn.",
+  },
+  {
+    q: "Thông tin tôi cung cấp có được bảo mật không?",
+    a: "Ở bước khám sức khỏe, câu trả lời chỉ lưu trên thiết bị của bạn. App không thu thập mật khẩu ngân hàng, số CCCD hay thông tin thẻ.",
+  },
+  {
+    q: "Doanh nghiệp siêu nhỏ là loại nào?",
+    a: "Theo quy định hiện hành, doanh nghiệp siêu nhỏ trong lĩnh vực thương mại, dịch vụ có doanh thu không quá 10 tỷ đồng/năm và không quá 10 lao động. Tiêu chí đầy đủ do kế toán xác nhận từ văn bản gốc.",
+  },
+];
+
+export default function HomePage() {
   return (
     <div>
       {/* Hero */}
       <section className="border-b border-border bg-surface">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-widest text-accent">
-              {settings.shortName}
-            </p>
-            <h1 className="mt-3 text-4xl font-semibold leading-tight text-foreground md:text-5xl">
-              {settings.slogan}
-            </h1>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
-              Chuyên cung cấp gạch lát, vật liệu xây dựng, thiết bị vệ sinh, thiết bị ống nước
-              và nhận thi công xây dựng, sửa chữa nhà ở tại {settings.address}.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/san-pham"
-                className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
-              >
-                Xem sản phẩm
-              </Link>
-              <Link
-                href="/lien-he"
-                className="rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
-              >
-                Liên hệ tư vấn
-              </Link>
-            </div>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image
-              src={settings.heroImage ?? "/placeholders/gach-lat.svg"}
-              alt={settings.slogan}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Danh mục nổi bật */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-2xl font-semibold text-foreground">Danh mục sản phẩm</h2>
-        <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-4">
-          {categories.map((category) => (
+        <div className="mx-auto max-w-4xl px-4 py-16 text-center md:py-24">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+            Miễn phí · Không cần tài khoản
+          </p>
+          <h1 className="mt-4 text-3xl font-bold leading-tight text-foreground md:text-5xl">
+            Biết ngay công ty bạn<br className="hidden md:block" /> đang thiếu gì về thuế và pháp lý
+          </h1>
+          <p className="mt-5 mx-auto max-w-xl text-base leading-relaxed text-muted">
+            Trả lời 23 câu hỏi trong 5 phút. Nhận danh sách việc cần làm và lịch hạn nộp của
+            riêng công ty bạn. Miễn phí.
+          </p>
+          <div className="mt-8 flex justify-center">
             <Link
-              key={category.id}
-              href={`/san-pham?danh-muc=${category.slug}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-shadow hover:shadow-lg"
+              href="/kham"
+              className="rounded-xl bg-accent px-8 py-4 text-base font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark"
             >
-              <div className="relative aspect-square w-full overflow-hidden bg-background">
-                <Image
-                  src={category.image ?? "/placeholders/vat-lieu-xay-dung.svg"}
-                  alt={category.name}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-sm font-medium text-foreground">{category.name}</h3>
-              </div>
+              Khám miễn phí 5 phút →
             </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Sản phẩm nổi bật */}
-      {featuredProducts.length > 0 && (
-        <section className="border-t border-border bg-surface">
-          <div className="mx-auto max-w-6xl px-6 py-20">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-foreground">Sản phẩm nổi bật</h2>
-              <Link href="/san-pham" className="text-sm font-medium text-accent hover:underline">
-                Xem tất cả →
-              </Link>
-            </div>
-            <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-3">
-              {featuredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
           </div>
-        </section>
-      )}
+          <p className="mt-3 text-xs text-muted">
+            Kết quả lưu trên trình duyệt của bạn, không cần tạo tài khoản
+          </p>
+        </div>
+      </section>
 
-      {/* Lý do chọn chúng tôi */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-2xl font-semibold text-foreground">Vì sao chọn chúng tôi</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
-          {[
-            { title: "Giá cạnh tranh", desc: "Nhập hàng trực tiếp, giá tốt cho công trình lớn nhỏ." },
-            { title: "Giao hàng tận nơi", desc: "Giao vật tư đến tận công trình, đúng tiến độ." },
-            { title: "Tư vấn kỹ thuật", desc: "Đội ngũ tư vấn miễn phí về vật liệu, thi công." },
-            { title: "Bảo hành rõ ràng", desc: "Sản phẩm, dịch vụ có bảo hành, hỗ trợ sau bán hàng." },
-          ].map((item) => (
-            <div key={item.title} className="rounded-2xl border border-border bg-surface p-6">
-              <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
+      {/* 3 lợi ích */}
+      <section className="mx-auto max-w-5xl px-4 py-16">
+        <h2 className="text-center text-2xl font-bold text-foreground">
+          Ba điều app giúp bạn
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {BENEFITS.map((b) => (
+            <div
+              key={b.title}
+              className="rounded-2xl border border-border bg-surface p-6"
+            >
+              <span className="text-3xl">{b.icon}</span>
+              <h3 className="mt-3 text-base font-semibold text-foreground">{b.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{b.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA liên hệ */}
+      {/* CTA */}
       <section className="border-t border-border bg-accent">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-16 text-center">
-          <h2 className="text-2xl font-semibold text-white md:text-3xl">
-            Cần tư vấn vật liệu hoặc báo giá công trình?
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-14 text-center">
+          <h2 className="text-2xl font-bold text-white md:text-3xl">
+            Công ty bạn có 3 việc cần làm ngay và 5 việc cần kiểm tra lại.
           </h2>
-          <p className="max-w-xl text-sm text-white/90">
-            Liên hệ ngay {settings.phone} hoặc ghé trực tiếp {settings.address} để được hỗ trợ.
+          <p className="text-sm text-white/80">
+            Chỉ 5 phút để biết công ty bạn đang ở đâu.
           </p>
           <Link
-            href="/lien-he"
-            className="mt-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-accent hover:bg-white/90"
+            href="/kham"
+            className="mt-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-accent transition-colors hover:bg-white/90"
           >
-            Liên hệ ngay
+            Bắt đầu khám miễn phí →
           </Link>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-3xl px-4 py-16">
+        <h2 className="text-2xl font-bold text-foreground">Câu hỏi thường gặp</h2>
+        <div className="mt-8 space-y-5">
+          {FAQS.map((faq) => (
+            <div key={faq.q} className="rounded-xl border border-border bg-surface p-5">
+              <p className="font-semibold text-foreground">{faq.q}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <div className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-5xl px-4 py-6">
+          <p className="text-xs leading-relaxed text-muted/80">
+            Sổ tay DN Siêu nhỏ cung cấp thông tin tham khảo đã được kế toán viên rà soát. Đây không
+            phải dịch vụ kế toán, dịch vụ làm thủ tục về thuế hay tư vấn pháp lý. Với trường hợp cụ
+            thể, hãy đối chiếu văn bản gốc hoặc hỏi người có chứng chỉ hành nghề.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
