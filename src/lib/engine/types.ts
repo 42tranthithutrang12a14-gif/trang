@@ -123,6 +123,12 @@ export type ObligationInstance = {
   shiftedFrom?: string;
 };
 
+export type LegalRef = {
+  label: string;
+  article: string;
+  url: string;
+};
+
 export type ResultItem = {
   type: "risk" | "obligation";
   code: string;
@@ -131,6 +137,7 @@ export type ResultItem = {
   guideSlug: string;
   isDraft: boolean;
   dueDate?: string;
+  legalRefs: LegalRef[];
 };
 
 export type EngineResult = {

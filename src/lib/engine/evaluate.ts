@@ -7,12 +7,23 @@ import type {
   ObligationInstance,
   EngineResult,
   ResultItem,
+  LegalBasis,
 } from "./types";
 
 export type EvaluateOptions = {
   /** When true, include draft/non-published rules. Defaults to false. */
   includeDraft?: boolean;
 };
+
+function toLegalRefs(basis: LegalBasis[]) {
+  return basis
+    .filter((b) => b.article && b.url)
+    .map((b) => ({
+      label: `${b.doc_type} ${b.doc_number}`,
+      article: b.article,
+      url: b.url,
+    }));
+}
 
 export function evaluate(
   answers: Answers,
@@ -44,6 +55,7 @@ export function evaluate(
       explain: rule.explain_plain,
       guideSlug: rule.guide_slug,
       isDraft,
+      legalRefs: toLegalRefs(rule.legal_basis),
     };
 
     if (result === true) {
@@ -88,6 +100,7 @@ export function evaluate(
         explain: rule.summary_plain,
         guideSlug: rule.guide_slug,
         isDraft,
+        legalRefs: toLegalRefs(rule.legal_basis),
       });
     }
   }

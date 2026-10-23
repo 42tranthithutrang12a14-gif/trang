@@ -17,7 +17,8 @@
     "legal_basis": [],
     "guide_slug": "dang-ky-thay-doi-doanh-nghiep",
     "todo_for_reviewer": [
-      "Viết giải thích, cách khắc phục, căn cứ và thời hạn đăng ký thay đổi"
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis với thời hạn đăng ký thay đổi — ví dụ: Luật Doanh nghiệp 2020, Điều 30; Nghị định 01/2021/NĐ-CP; link thuvienphapluat.vn chính thức"
     ]
   },
   {
@@ -33,7 +34,8 @@
     "legal_basis": [],
     "guide_slug": "chu-ky-so",
     "todo_for_reviewer": [
-      "Viết giải thích tại sao cần chữ ký số, cách đăng ký và gia hạn"
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về bắt buộc dùng chữ ký số khi nộp thuế — ví dụ: Nghị định 123/2020/NĐ-CP; Thông tư 19/2021/TT-BTC; link thuvienphapluat.vn chính thức"
     ]
   },
   {
@@ -49,7 +51,8 @@
     "legal_basis": [],
     "guide_slug": "hoa-don-dien-tu",
     "todo_for_reviewer": [
-      "Xác nhận thời hạn bắt buộc chuyển sang hóa đơn điện tử và mức phạt"
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về bắt buộc sử dụng hóa đơn điện tử — ví dụ: Nghị định 123/2020/NĐ-CP, Điều 4; Thông tư 78/2021/TT-BTC; link thuvienphapluat.vn chính thức"
     ]
   },
   {
@@ -65,7 +68,8 @@
     "legal_basis": [],
     "guide_slug": "gop-von-dieu-le",
     "todo_for_reviewer": [
-      "Xác nhận thời hạn góp vốn và hậu quả pháp lý khi chưa góp đủ"
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về thời hạn góp vốn — ví dụ: Luật Doanh nghiệp 2020, Điều 47 (TNHH) hoặc Điều 113 (Cổ phần); link thuvienphapluat.vn chính thức"
     ]
   },
   {
@@ -86,7 +90,8 @@
     "legal_basis": [],
     "guide_slug": "so-sach-ke-toan",
     "todo_for_reviewer": [
-      "Giải thích nghĩa vụ ghi sổ kế toán và mức phạt khi không ghi sổ"
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về nghĩa vụ ghi sổ kế toán — ví dụ: Luật Kế toán 2015, Điều 8; Thông tư 133/2016/TT-BTC (DNSN); link thuvienphapluat.vn chính thức"
     ]
   }
 ]

@@ -10,8 +10,37 @@ import { getTodayInVN } from "@/lib/engine/schedule";
 import { isSupabaseConfigured } from "@/lib/supabase/check";
 import { createClient } from "@/lib/supabase/client";
 import { saveResult } from "@/app/actions/results";
-import type { EngineResult, ObligationInstance, ObligationRule } from "@/lib/engine/types";
+import type { EngineResult, ObligationInstance, ObligationRule, ResultItem, LegalRef } from "@/lib/engine/types";
 import type { Answers } from "@/lib/engine/types";
+
+function LegalCitations({ item }: { item: ResultItem }) {
+  if (item.legalRefs.length > 0) {
+    return (
+      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+        {item.legalRefs.map((ref: LegalRef, i: number) => (
+          <a
+            key={i}
+            href={ref.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs text-muted hover:text-accent hover:underline"
+          >
+            <span>📄</span>
+            <span>{ref.label} – {ref.article}</span>
+          </a>
+        ))}
+      </div>
+    );
+  }
+  if (item.isDraft) {
+    return (
+      <p className="mt-2 text-xs text-muted/60 italic">
+        Căn cứ pháp lý: đang được kế toán viên xác minh
+      </p>
+    );
+  }
+  return null;
+}
 
 const STORAGE_KEY = "sotay_answers_v1";
 const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
@@ -166,6 +195,7 @@ export default function KetQuaPage() {
                     Xem hướng dẫn xử lý →
                   </Link>
                 )}
+                <LegalCitations item={item} />
               </div>
             ))}
           </div>
@@ -200,6 +230,7 @@ export default function KetQuaPage() {
                     Xem hướng dẫn →
                   </Link>
                 )}
+                <LegalCitations item={item} />
               </div>
             ))}
           </div>
@@ -365,6 +396,23 @@ export default function KetQuaPage() {
           className="flex-1 rounded-xl border-2 border-border px-4 py-3 text-sm font-medium text-muted hover:border-accent hover:text-accent transition-colors"
         >
           In kết quả
+        </button>
+      </div>
+
+      {/* Delete survey data */}
+      <div className="mt-6 text-center">
+        <button
+          onClick={() => {
+            if (!window.confirm("Xóa toàn bộ câu trả lời khỏi trình duyệt này? Thao tác không thể hoàn tác.")) return;
+            try {
+              localStorage.removeItem(STORAGE_KEY);
+              localStorage.removeItem("sotay_progress_v1");
+            } catch { /* ignore */ }
+            router.replace("/kham");
+          }}
+          className="text-xs text-muted/60 hover:text-danger underline"
+        >
+          Xóa dữ liệu khám
         </button>
       </div>
 
