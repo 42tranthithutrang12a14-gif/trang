@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { LogoIcon } from "@/components/logo-icon";
 
 const NAV_LINKS = [
   { href: "/thu-vien", label: "Thư viện" },
@@ -16,8 +17,9 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-surface/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <LogoIcon size={36} />
           <span className="text-lg font-bold text-accent leading-tight">
-            Sổ tay DN<br className="hidden" />
+            Sổ tay DN
             <span className="text-sm font-medium text-muted ml-1">Siêu nhỏ</span>
           </span>
         </Link>
