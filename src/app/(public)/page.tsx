@@ -8,37 +8,41 @@ export const metadata: Metadata = {
 const BENEFITS = [
   {
     icon: "🩺",
-    title: "Khám sức khỏe pháp lý",
-    desc: "23 câu hỏi nhanh, nhận ngay danh sách việc cần làm, việc cần kiểm tra và việc đang ổn.",
+    title: "Biết ngay mình đang thiếu gì",
+    desc: "Trả lời câu hỏi về loại hình, ngành, quy mô và cách làm kế toán — nhận danh sách cụ thể: việc cần làm ngay, việc cần kiểm tra, và việc đang ổn.",
   },
   {
     icon: "📅",
-    title: "Lịch nghĩa vụ của riêng bạn",
-    desc: "Hạn nộp từng loại tờ khai, báo cáo, sổ sách — tính theo đúng hồ sơ công ty bạn.",
+    title: "Lịch hạn nộp của riêng công ty bạn",
+    desc: "Hạn nộp tờ khai thuế GTGT, thuế TNDN, báo cáo tài chính — tính đúng theo kỳ kế toán và ngày thành lập của công ty bạn.",
   },
   {
-    icon: "📰",
-    title: "Tin pháp lý đã lọc",
-    desc: "Mỗi thay đổi luật được ghi rõ ai bị ảnh hưởng. App chỉ báo cho đúng người.",
+    icon: "📋",
+    title: "Hướng dẫn từng bước xử lý",
+    desc: "Mỗi vấn đề được phát hiện kèm hướng dẫn cụ thể: làm gì, làm ở đâu, căn cứ pháp lý nào — không phải lý thuyết chung chung.",
   },
 ];
 
 const FAQS = [
   {
     q: "App này có phải dịch vụ kế toán không?",
-    a: "Không. Sổ tay DN Siêu nhỏ cung cấp thông tin tham khảo đã được kế toán viên có chứng chỉ hành nghề rà soát, không phải dịch vụ kế toán hay tư vấn pháp lý. Với trường hợp cụ thể, hãy đối chiếu văn bản gốc hoặc hỏi người có chứng chỉ.",
+    a: "Không. Sổ tay DN Siêu nhỏ cung cấp thông tin tham khảo đã được kế toán viên có chứng chỉ hành nghề rà soát. Với trường hợp cụ thể của từng công ty, bạn cần đối chiếu văn bản gốc hoặc hỏi người có chứng chỉ hành nghề.",
+  },
+  {
+    q: "Kết quả có chính xác không?",
+    a: "Kết quả dựa hoàn toàn vào câu trả lời bạn cung cấp và bộ quy tắc do kế toán viên xây dựng. Nếu trả lời đúng thực tế, kết quả phản ánh đúng nghĩa vụ của công ty bạn. Vì vậy hãy trả lời thật — không có câu nào là \"sai\".",
   },
   {
     q: "Tôi có cần tạo tài khoản không?",
-    a: "Không cần tài khoản để làm bảng hỏi và xem kết quả. Kết quả được lưu tạm trên trình duyệt của bạn.",
+    a: "Không cần tài khoản để khám và xem kết quả. Kết quả lưu tạm trên trình duyệt của bạn. Tạo tài khoản (miễn phí) để lưu kết quả lâu dài và xem lại sau.",
   },
   {
     q: "Thông tin tôi cung cấp có được bảo mật không?",
-    a: "Ở bước khám sức khỏe, câu trả lời chỉ lưu trên thiết bị của bạn. App không thu thập mật khẩu ngân hàng, số CCCD hay thông tin thẻ.",
+    a: "Câu trả lời ở bước khám chỉ lưu trên thiết bị của bạn — không gửi lên server. App không thu thập mật khẩu ngân hàng, số CCCD hay thông tin thẻ.",
   },
   {
     q: "Doanh nghiệp siêu nhỏ là loại nào?",
-    a: "Theo quy định hiện hành, doanh nghiệp siêu nhỏ trong lĩnh vực thương mại, dịch vụ có doanh thu không quá 10 tỷ đồng/năm và không quá 10 lao động. Tiêu chí đầy đủ do kế toán xác nhận từ văn bản gốc.",
+    a: "Theo quy định hiện hành, doanh nghiệp siêu nhỏ trong lĩnh vực thương mại, dịch vụ có doanh thu không quá 10 tỷ đồng/năm và không quá 10 lao động. App phù hợp cho cả những DN lớn hơn — bộ quy tắc áp dụng theo đặc điểm thực tế của công ty bạn.",
   },
 ];
 
@@ -91,14 +95,50 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-4xl px-4 py-16">
+          <h2 className="text-center text-2xl font-bold text-foreground mb-10">
+            Cách hoạt động
+          </h2>
+          <div className="grid gap-0 md:grid-cols-3 relative">
+            {[
+              {
+                step: "1",
+                title: "Trả lời câu hỏi",
+                desc: "Trả lời các câu hỏi về loại hình công ty, ngành nghề, cách nộp thuế và tình trạng hiện tại. Khoảng 5 phút.",
+              },
+              {
+                step: "2",
+                title: "Nhận danh sách cụ thể",
+                desc: "App phân tích câu trả lời và trả về: việc cần làm ngay (màu đỏ), việc cần kiểm tra (màu vàng), và lịch hạn nộp.",
+              },
+              {
+                step: "3",
+                title: "Xử lý từng việc",
+                desc: "Mỗi mục kèm hướng dẫn từng bước. Cần người làm giúp? Kết nối với kế toán uy tín ngay trên app.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="relative flex flex-col items-center text-center px-6 py-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white text-base font-bold mb-4">
+                  {item.step}
+                </div>
+                <h3 className="text-base font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="border-t border-border bg-accent">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-14 text-center">
           <h2 className="text-2xl font-bold text-white md:text-3xl">
-            Công ty bạn có 3 việc cần làm ngay và 5 việc cần kiểm tra lại.
+            Đừng để vi phạm xảy ra vì không biết mình đang thiếu gì.
           </h2>
           <p className="text-sm text-white/80">
-            Chỉ 5 phút để biết công ty bạn đang ở đâu.
+            5 phút khám — biết ngay danh sách việc cần làm và lịch hạn nộp của riêng công ty bạn.
           </p>
           <Link
             href="/kham"

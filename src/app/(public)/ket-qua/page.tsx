@@ -10,11 +10,15 @@ import { getTodayInVN } from "@/lib/engine/schedule";
 import { isSupabaseConfigured } from "@/lib/supabase/check";
 import { createClient } from "@/lib/supabase/client";
 import { saveResult } from "@/app/actions/results";
-import type { EngineResult, ObligationInstance } from "@/lib/engine/types";
+import type { EngineResult, ObligationInstance, ObligationRule } from "@/lib/engine/types";
 import type { Answers } from "@/lib/engine/types";
 
 const STORAGE_KEY = "sotay_answers_v1";
 const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
+
+const obligationTitleMap: Record<string, string> = Object.fromEntries(
+  (obligationRules as ObligationRule[]).map((r) => [r.code, r.title])
+);
 
 function formatDate(dateStr: string): string {
   const [year, month, day] = dateStr.split("-");
@@ -154,6 +158,14 @@ export default function KetQuaPage() {
                 {item.explain && (
                   <p className="mt-1 text-sm leading-relaxed text-muted">{item.explain}</p>
                 )}
+                {item.guideSlug && (
+                  <Link
+                    href={`/huong-dan/${item.guideSlug}`}
+                    className="mt-2 inline-block text-xs font-medium text-accent hover:underline"
+                  >
+                    Xem hướng dẫn xử lý →
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -179,6 +191,14 @@ export default function KetQuaPage() {
                 <p className="font-semibold text-foreground">{item.title}</p>
                 {item.explain && (
                   <p className="mt-1 text-sm leading-relaxed text-muted">{item.explain}</p>
+                )}
+                {item.guideSlug && (
+                  <Link
+                    href={`/huong-dan/${item.guideSlug}`}
+                    className="mt-2 inline-block text-xs font-medium text-accent hover:underline"
+                  >
+                    Xem hướng dẫn →
+                  </Link>
                 )}
               </div>
             ))}
@@ -219,7 +239,9 @@ export default function KetQuaPage() {
               return (
                 <div key={`${d.ruleCode}-${d.dueDate}`} className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-sm font-medium text-foreground">{d.ruleCode}</p>
+                    <p className="text-sm font-medium text-foreground">
+                      {obligationTitleMap[d.ruleCode] ?? d.ruleCode}
+                    </p>
                     <p className="text-xs text-muted">{d.periodLabel}</p>
                     {d.shiftedFrom && (
                       <p className="text-xs text-muted">
@@ -241,9 +263,20 @@ export default function KetQuaPage() {
       {/* Empty state */}
       {result.red.length === 0 && result.yellow.length === 0 && result.green.length === 0 && upcomingDeadlines.length === 0 && (
         <div className="mb-6 rounded-2xl border border-border bg-surface p-8 text-center">
-          <p className="text-muted text-sm">
-            Chưa có dữ liệu kiểm tra. Thêm nội dung pháp lý để xem kết quả chi tiết.
+          <p className="text-3xl mb-3">🔍</p>
+          <p className="font-semibold text-foreground mb-2">Nội dung đang được xác minh</p>
+          <p className="text-sm text-muted max-w-sm mx-auto">
+            Cơ sở dữ liệu pháp lý đang được kế toán viên có chứng chỉ rà soát.
+            Kết quả đầy đủ sẽ hiển thị sau khi nội dung được xác nhận.
           </p>
+          <div className="mt-5">
+            <Link
+              href="/thu-vien"
+              className="text-sm font-medium text-accent hover:underline"
+            >
+              Xem thư viện hướng dẫn →
+            </Link>
+          </div>
         </div>
       )}
 
