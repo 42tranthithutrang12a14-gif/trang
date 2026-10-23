@@ -2,9 +2,11 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { getProPriceVND, getVietQRUrl, getBankInfo, isPaymentConfigured } from "@/lib/plans";
+import { isSupabaseConfigured } from "@/lib/supabase/check";
 import type { UserPlan } from "@/lib/subscription";
 
 export async function getUserPlan(): Promise<UserPlan | null> {
+  if (!isSupabaseConfigured()) return null;
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
@@ -37,6 +39,7 @@ export type PaymentInfo = {
 };
 
 export async function getPaymentInfo(): Promise<PaymentInfo | null> {
+  if (!isSupabaseConfigured()) return null;
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
@@ -61,6 +64,7 @@ export async function getPaymentInfo(): Promise<PaymentInfo | null> {
 export async function createPaymentRequest(): Promise<
   { ok: true; message: string } | { ok: false; error: string }
 > {
+  if (!isSupabaseConfigured()) return { ok: false, error: "Chưa cấu hình Supabase." };
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { ok: false, error: "Chưa đăng nhập." };
