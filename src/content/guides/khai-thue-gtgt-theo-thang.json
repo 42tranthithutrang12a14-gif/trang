@@ -1,0 +1,42 @@
+{
+  "slug": "khai-thue-gtgt-theo-thang",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Nộp tờ khai thuế GTGT theo tháng",
+  "category": "thue",
+  "summary": "Doanh nghiệp có doanh thu từ 50 tỷ đồng/năm trở lên tính thuế GTGT theo phương pháp khấu trừ phải nộp tờ khai thuế GTGT hàng tháng, hạn nộp là ngày 20 của tháng tiếp theo.",
+  "related_rules": ["VAT_MONTHLY_RETURN"],
+  "body_sections": [
+    {
+      "heading": "Ai phải khai theo tháng?",
+      "content": "Doanh nghiệp phải khai thuế GTGT theo tháng nếu:\n• Tính thuế GTGT theo phương pháp khấu trừ, VÀ\n• Doanh thu năm trước từ 50 tỷ đồng trở lên\n\nDoanh nghiệp mới thành lập hoặc có doanh thu dưới 50 tỷ được chọn khai theo quý."
+    },
+    {
+      "heading": "Hạn nộp",
+      "content": "Hạn nộp tờ khai và tiền thuế GTGT hàng tháng: ngày 20 của tháng tiếp theo.\n\nVí dụ:\n• Tháng 9/2026 → hạn nộp 20/10/2026\n• Tháng 10/2026 → hạn nộp 20/11/2026\n\nNếu ngày 20 trùng ngày nghỉ/lễ, hạn được dời sang ngày làm việc tiếp theo."
+    },
+    {
+      "heading": "Các bước thực hiện",
+      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử eTax:\n   → https://thuedientu.gdt.gov.vn\n\n2. Vào mục Khai thuế → Khai thuế GTGT → Chọn mẫu 01/GTGT\n\n3. Chọn kỳ khai báo (ví dụ: Tháng 9/2026)\n\n4. Điền số liệu từ sổ sách kế toán trong tháng:\n   - Thuế GTGT đầu ra (từ hóa đơn xuất)\n   - Thuế GTGT đầu vào được khấu trừ (từ hóa đơn nhận)\n   - Số thuế phải nộp thêm hoặc được hoàn\n\n5. Ký điện tử bằng chữ ký số và gửi\n\n6. Nộp tiền thuế (nếu có phát sinh) qua ngân hàng hoặc kho bạc\n\n7. Lưu xác nhận nộp tờ khai"
+    },
+    {
+      "heading": "Mức phạt nếu chậm nộp",
+      "content": "• Chậm nộp tờ khai (không có thuế): phạt 2.000.000 – 5.000.000 đồng\n• Chậm nộp tiền thuế: phạt 0,03%/ngày tính trên số tiền chậm nộp\n• Khai sai làm giảm số thuế phải nộp: phạt 20% số thuế thiếu\n\n⚠️ Mức phạt trên cần kế toán viên xác minh theo Nghị định đang có hiệu lực."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Quản lý thuế số 38/2019/QH14 — Điều 44 (thời hạn khai thuế)\n• Thông tư 80/2021/TT-BTC hướng dẫn Luật Quản lý thuế\n• Luật Thuế GTGT và các sửa đổi\n\nTra cứu văn bản:\n→ https://thuvienphapluat.vn\n→ https://vbpl.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Khai và nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Tổng cục Thuế (hỗ trợ): https://gdt.gov.vn\n• Hỗ trợ kỹ thuật eTax: 1900 3584"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận ngưỡng doanh thu 50 tỷ để khai tháng theo văn bản hiện hành",
+    "Xác nhận hạn nộp ngày 20 là đúng theo Luật Quản lý thuế hiện hành",
+    "Xác nhận mức phạt theo Nghị định xử phạt hành chính thuế đang có hiệu lực",
+    "Điền legal_basis với số điều khoản cụ thể và link thuvienphapluat.vn"
+  ],
+  "updated_at": "2026-10-23"
+}

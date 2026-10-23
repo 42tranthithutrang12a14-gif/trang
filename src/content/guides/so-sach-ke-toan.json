@@ -1,0 +1,55 @@
+{
+  "slug": "so-sach-ke-toan",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Mở và ghi sổ kế toán",
+  "category": "ke-toan",
+  "summary": "Mọi doanh nghiệp phải thực hiện công việc kế toán và mở sổ kế toán ngay từ khi thành lập. Doanh nghiệp siêu nhỏ có thể áp dụng chế độ kế toán đơn giản hóa theo Thông tư 132/2018/TT-BTC.",
+  "related_rules": ["RISK_NO_BOOKKEEPING"],
+  "body_sections": [
+    {
+      "heading": "Tại sao phải ghi sổ kế toán?",
+      "content": "Theo Luật Kế toán 2015, mọi doanh nghiệp có trách nhiệm:\n• Ghi chép, phản ánh đầy đủ nghiệp vụ kinh tế phát sinh\n• Lập và nộp báo cáo tài chính hàng năm\n• Lưu trữ chứng từ, sổ sách tối thiểu 10 năm\n\nSổ sách kế toán còn là cơ sở để:\n• Tính số thuế GTGT, thuế TNDN phải nộp\n• Đối chiếu khi cơ quan thuế kiểm tra\n• Xác định lợi nhuận, chia cổ tức"
+    },
+    {
+      "heading": "Chế độ kế toán cho doanh nghiệp siêu nhỏ",
+      "content": "Doanh nghiệp siêu nhỏ (doanh thu ≤ 10 tỷ/năm, ≤ 10 lao động trong thương mại/dịch vụ) được áp dụng:\n\nThông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ:\n• Hệ thống tài khoản đơn giản hơn (ít tài khoản hơn)\n• Báo cáo tài chính đơn giản (Bảng cân đối kế toán + Báo cáo kết quả kinh doanh)\n• Không bắt buộc thuyết minh báo cáo tài chính chi tiết\n\nCó thể ghi sổ bằng Excel (đơn giản) hoặc phần mềm kế toán."
+    },
+    {
+      "heading": "Ai làm kế toán?",
+      "content": "Doanh nghiệp có 3 lựa chọn:\n\n1. Kế toán nội bộ (thuê nhân viên kế toán):\n   → Phù hợp khi có nhiều nghiệp vụ phát sinh\n   → Chi phí: lương nhân viên + BHXH\n\n2. Thuê dịch vụ kế toán ngoài:\n   → Phù hợp cho doanh nghiệp siêu nhỏ ít giao dịch\n   → Công ty dịch vụ kế toán làm báo cáo tháng/quý/năm\n   → Chi phí: 1–5 triệu đồng/tháng tùy phức tạp\n\n3. Chủ doanh nghiệp tự làm (nếu đủ kiến thức):\n   → Có thể dùng phần mềm kế toán đơn giản\n   → Nên học qua khóa đào tạo hoặc thuê tư vấn hỗ trợ ban đầu\n\n⚠️ Người phụ trách kế toán bắt buộc phải có chứng chỉ hành nghề hoặc bằng kế toán theo quy định."
+    },
+    {
+      "heading": "Các sổ kế toán cần mở",
+      "content": "Theo Thông tư 132/2018/TT-BTC (doanh nghiệp siêu nhỏ), các sổ tối thiểu:\n\n• Sổ nhật ký chung: ghi tất cả nghiệp vụ theo thứ tự thời gian\n• Sổ cái tài khoản: theo dõi từng tài khoản (tiền mặt, ngân hàng, hàng hóa, công nợ...)\n• Sổ quỹ tiền mặt: theo dõi thu chi tiền mặt hàng ngày\n• Sổ tiền gửi ngân hàng: đối chiếu với sao kê ngân hàng\n\nHoặc có thể gộp vào phần mềm kế toán — phần mềm tự động lập các sổ này."
+    },
+    {
+      "heading": "Phần mềm kế toán phổ biến",
+      "content": "Phần mềm kế toán phù hợp doanh nghiệp siêu nhỏ:\n\n• MISA SME: https://www.misa.vn (phổ biến nhất tại VN)\n• Fast Accounting: https://fast.com.vn\n• Bravo: https://bravo.com.vn\n• KiotViet (bán lẻ): https://kiotviet.vn\n• Sổ Đỏ (đơn giản nhất): https://sodo.vn\n\nNếu chỉ vài giao dịch/tháng, Excel + mẫu sổ sách từ Bộ Tài chính cũng đủ."
+    },
+    {
+      "heading": "Báo cáo tài chính hàng năm",
+      "content": "Mỗi năm, doanh nghiệp phải lập và nộp Báo cáo tài chính (BCTC):\n\n• Hạn nộp: 31/3 năm tiếp theo (kèm tờ khai quyết toán thuế TNDN)\n• Nộp cho cơ quan thuế qua eTax: https://thuedientu.gdt.gov.vn\n• Nộp cho cơ quan đăng ký kinh doanh (tùy quy định từng địa phương)\n\nDoanh nghiệp siêu nhỏ lập BCTC gồm:\n1. Bảng cân đối kế toán\n2. Báo cáo kết quả hoạt động kinh doanh\n3. Bản thuyết minh báo cáo tài chính (đơn giản hóa)"
+    },
+    {
+      "heading": "Mức phạt nếu không ghi sổ kế toán",
+      "content": "• Không mở sổ kế toán: phạt 10.000.000 – 20.000.000 đồng\n• Không lập BCTC đúng hạn: phạt 5.000.000 – 10.000.000 đồng\n• Ghi sổ sai, không đúng thực tế: phạt theo mức độ vi phạm\n• Không lưu trữ chứng từ đủ 10 năm: phạt hành chính\n\n⚠️ Mức phạt cần kế toán viên xác minh theo Nghị định hiện hành."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Luật Kế toán số 88/2015/QH13\n• Thông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ\n• Thông tư 133/2016/TT-BTC — Chế độ kế toán doanh nghiệp nhỏ và vừa\n• Nghị định 41/2018/NĐ-CP về xử phạt vi phạm kế toán\n\nTra cứu văn bản:\n→ https://thuvienphapluat.vn\n→ https://vbpl.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Nộp BCTC và quyết toán thuế: https://thuedientu.gdt.gov.vn\n• Mẫu sổ sách kế toán (Bộ Tài chính): https://mof.gov.vn\n• Tra cứu văn bản kế toán: https://thuvienphapluat.vn\n• Cục Quản lý, giám sát Kế toán, Kiểm toán: https://mof.gov.vn/webcenter/portal/vclvckt"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận Thông tư 132/2018 còn hiệu lực hay đã có văn bản thay thế",
+    "Xác nhận tiêu chí doanh nghiệp siêu nhỏ theo quy định hiện hành",
+    "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế",
+    "Xác nhận người phụ trách kế toán có cần chứng chỉ hay không theo quy định mới nhất",
+    "Điền legal_basis với số điều khoản cụ thể và link chính thức"
+  ],
+  "updated_at": "2026-10-23"
+}

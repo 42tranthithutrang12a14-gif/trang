@@ -3,13 +3,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { Guide } from "@/lib/guides";
 import guideVatQuarterly from "@/content/guides/khai-thue-gtgt-theo-quy.json";
+import guideVatMonthly from "@/content/guides/khai-thue-gtgt-theo-thang.json";
+import guideCIT from "@/content/guides/tam-nop-thue-tndn.json";
 import guideChanges from "@/content/guides/dang-ky-thay-doi-doanh-nghiep.json";
+import guideDigitalSig from "@/content/guides/chu-ky-so.json";
+import guideEInvoice from "@/content/guides/hoa-don-dien-tu.json";
+import guideCapital from "@/content/guides/gop-von-dieu-le.json";
+import guideBookkeeping from "@/content/guides/so-sach-ke-toan.json";
 
 const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 const GUIDES: Guide[] = [
   guideVatQuarterly as Guide,
+  guideVatMonthly as Guide,
+  guideCIT as Guide,
   guideChanges as Guide,
+  guideDigitalSig as Guide,
+  guideEInvoice as Guide,
+  guideCapital as Guide,
+  guideBookkeeping as Guide,
 ];
 
 function findGuide(slug: string): Guide | undefined {

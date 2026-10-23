@@ -4,31 +4,40 @@
   "sample_notice": "MẪU – CHƯA XÁC MINH",
   "title": "Nộp tờ khai thuế GTGT theo quý",
   "category": "thue",
-  "summary": "Mỗi quý, công ty kê khai thuế GTGT phát sinh trong quý và nộp qua mạng.",
+  "summary": "Mỗi quý, công ty tính thuế GTGT theo phương pháp khấu trừ và khai theo quý phải lập và nộp tờ khai thuế GTGT (mẫu 01/GTGT) qua mạng trước ngày cuối tháng đầu của quý tiếp theo.",
   "related_rules": ["VAT_QUARTERLY_RETURN"],
   "body_sections": [
     {
-      "heading": "Tổng quan",
-      "content": "Công ty tính thuế GTGT theo phương pháp khấu trừ và khai theo quý phải nộp tờ khai thuế GTGT (mẫu 01/GTGT) cho từng quý trong năm. Hạn nộp là ngày cuối tháng đầu của quý tiếp theo."
+      "heading": "Ai phải nộp tờ khai quý?",
+      "content": "Doanh nghiệp tính thuế GTGT theo phương pháp khấu trừ VÀ có doanh thu năm trước dưới 50 tỷ đồng (hoặc mới thành lập) được khai theo quý thay vì khai hàng tháng.\n\nNếu doanh thu vượt 50 tỷ đồng thì phải chuyển sang khai tháng từ năm sau."
+    },
+    {
+      "heading": "Hạn nộp",
+      "content": "Hạn nộp tờ khai và tiền thuế:\n• Quý I (tháng 1–3): nộp trước ngày 30/4\n• Quý II (tháng 4–6): nộp trước ngày 31/7\n• Quý III (tháng 7–9): nộp trước ngày 31/10\n• Quý IV (tháng 10–12): nộp trước ngày 31/01 năm sau\n\nNếu ngày hạn trùng ngày nghỉ/lễ, hạn được dời sang ngày làm việc tiếp theo."
     },
     {
       "heading": "Các bước thực hiện",
-      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử (eTax) tại https://thuedientu.gdt.gov.vn\n2. Chọn Khai thuế → Tờ khai thuế GTGT → Mẫu 01/GTGT\n3. Điền dữ liệu từ sổ sách kế toán của quý vừa qua\n4. Kiểm tra lại số liệu và nộp trực tuyến\n5. Lưu xác nhận nộp tờ khai"
+      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử eTax:\n   → https://thuedientu.gdt.gov.vn\n\n2. Vào mục Khai thuế → Khai thuế GTGT → Chọn mẫu 01/GTGT\n\n3. Chọn kỳ khai báo (ví dụ: Quý III/2026)\n\n4. Điền số liệu từ sổ sách kế toán:\n   - Doanh thu chịu thuế trong quý\n   - Thuế GTGT đầu ra (từ hóa đơn bán hàng)\n   - Thuế GTGT đầu vào được khấu trừ (từ hóa đơn mua hàng)\n   - Số thuế phải nộp = Đầu ra − Đầu vào\n\n5. Ký điện tử bằng chữ ký số và gửi\n\n6. Tải xác nhận nộp tờ khai và lưu lại\n\n7. Nếu có số thuế phải nộp, nộp tiền qua tài khoản ngân hàng liên kết hoặc nộp tại kho bạc"
     },
     {
-      "heading": "Mức phạt nếu chậm nộp",
-      "content": "Chậm nộp tờ khai có thể bị phạt từ 2.000.000 đến 5.000.000 đồng tùy mức độ."
+      "heading": "Mức phạt nếu chậm nộp hoặc không nộp",
+      "content": "• Chậm nộp tờ khai (không có thuế phát sinh): phạt 2.000.000 – 5.000.000 đồng\n• Chậm nộp tờ khai (có thuế phát sinh): phạt theo % số tiền thuế chậm nộp\n• Chậm nộp tiền thuế: phạt 0,03%/ngày tính trên số tiền chậm nộp\n• Không nộp tờ khai: có thể bị cưỡng chế và phong tỏa tài khoản\n\n⚠️ Mức phạt trên cần kế toán viên xác minh theo Nghị định đang có hiệu lực."
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Thông tin căn cứ pháp lý đang được cập nhật."
+      "content": "Các văn bản pháp lý liên quan (cần kế toán viên xác minh link chính thức):\n• Luật Quản lý thuế số 38/2019/QH14\n• Thông tư 80/2021/TT-BTC hướng dẫn Luật Quản lý thuế\n• Luật Thuế GTGT số 13/2008/QH12 và các sửa đổi\n\nTra cứu văn bản pháp luật chính thức:\n→ https://thuvienphapluat.vn\n→ https://vbpl.vn (Cơ sở dữ liệu quốc gia về pháp luật)"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Khai và nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Tổng cục Thuế (hỗ trợ): https://gdt.gov.vn\n• Hỗ trợ kỹ thuật eTax: 1900 3584"
     }
   ],
   "todo_for_reviewer": [
-    "Xác nhận hạn nộp chính xác (ngày cuối tháng tiếp theo hay ngày cụ thể)",
-    "Điền mức phạt chính xác theo Nghị định đang có hiệu lực",
-    "Thêm link eTax chính thức",
-    "Thêm căn cứ pháp lý có link"
+    "Xác nhận ngưỡng doanh thu 50 tỷ để khai quý theo văn bản hiện hành",
+    "Xác nhận hạn nộp chính xác cho từng quý (ngày cuối tháng hay ngày cụ thể)",
+    "Xác nhận mức phạt chậm nộp theo Nghị định hiện hành",
+    "Điền legal_basis với số điều khoản cụ thể và link thuvienphapluat.vn",
+    "Kiểm tra link eTax còn hoạt động không"
   ],
-  "updated_at": "2026-10-22"
+  "updated_at": "2026-10-23"
 }

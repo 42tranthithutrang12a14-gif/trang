@@ -139,18 +139,51 @@ export default function KhamPage() {
       )}
 
       {/* Progress */}
-      <div className="mb-8">
+      <div className="mb-6">
         <div className="flex items-center justify-between text-sm text-muted mb-2">
           <span>
             Câu {displayNumber}/{mainQuestions.length}
           </span>
           <span>{progressPct}%</span>
         </div>
-        <div className="h-2 w-full rounded-full bg-border overflow-hidden">
+        <div className="h-2 w-full rounded-full bg-border overflow-hidden mb-4">
           <div
             className="h-full rounded-full bg-accent transition-all duration-300"
             style={{ width: `${progressPct}%` }}
           />
+        </div>
+        {/* Question number navigation */}
+        <div className="flex flex-wrap gap-1.5">
+          {mainQuestions.map((q, idx) => {
+            const num = idx + 1;
+            const isCurrent = q.id === currentQuestion.id;
+            const isAnswered = q.id in answers;
+            const isReachable = isAnswered || num <= displayNumber + 1;
+            return (
+              <button
+                key={q.id}
+                disabled={!isReachable}
+                onClick={() => {
+                  if (!isReachable) return;
+                  setCurrentId(q.id);
+                  saveToStorage(answers, q.id);
+                }}
+                className={[
+                  "flex h-7 w-7 items-center justify-center rounded-full text-xs font-semibold transition-all",
+                  isCurrent
+                    ? "bg-accent text-white ring-2 ring-accent ring-offset-1"
+                    : isAnswered
+                    ? "bg-accent/20 text-accent hover:bg-accent/30 cursor-pointer"
+                    : isReachable
+                    ? "bg-border text-muted hover:bg-border/70 cursor-pointer"
+                    : "bg-border/40 text-muted/40 cursor-not-allowed",
+                ].join(" ")}
+                title={q.text}
+              >
+                {num}
+              </button>
+            );
+          })}
         </div>
       </div>
 
