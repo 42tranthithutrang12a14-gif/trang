@@ -31,7 +31,7 @@
       "Xác nhận hạn nộp theo Luật Quản lý thuế đang có hiệu lực",
       "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
       "Viết các bước làm và mức phạt",
-      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link thuvienphapluat.vn chính thức"
+      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
     ]
   },
   {
@@ -66,7 +66,7 @@
       "Xác nhận hạn nộp theo Luật Quản lý thuế đang có hiệu lực",
       "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
       "Viết các bước làm và mức phạt",
-      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link thuvienphapluat.vn chính thức"
+      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
     ]
   },
   {
@@ -96,7 +96,7 @@
       "Xác nhận hạn tạm nộp và cách tính theo Luật Thuế TNDN",
       "Xác nhận trường hợp nào được miễn/giảm",
       "Viết các bước và mức phạt khi tạm nộp thiếu",
-      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Thuế TNDN số 14/2008/QH12 (sửa đổi), Điều 17; Thông tư 96/2015/TT-BTC; link thuvienphapluat.vn chính thức"
+      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Thuế TNDN số 14/2008/QH12 (sửa đổi), Điều 17; Thông tư 96/2015/TT-BTC; link vbpl.moj.gov.vn chính thức"
     ]
   }
 ]

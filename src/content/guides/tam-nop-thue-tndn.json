@@ -33,7 +33,7 @@
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Thuế TNDN số 14/2008/QH12 và các sửa đổi, bổ sung\n• Luật Quản lý thuế số 38/2019/QH14\n• Thông tư 96/2015/TT-BTC hướng dẫn thuế TNDN\n\nTra cứu văn bản:\n→ https://thuvienphapluat.vn\n→ https://vbpl.vn"
+      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Thuế TNDN số 14/2008/QH12 và các sửa đổi, bổ sung\n• Luật Quản lý thuế số 38/2019/QH14\n• Thông tư 96/2015/TT-BTC hướng dẫn thuế TNDN\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
@@ -45,7 +45,7 @@
     "Xác nhận hạn tạm nộp từng quý (ngày 30 hay ngày khác)",
     "Xác nhận thuế suất TNDN cho doanh nghiệp siêu nhỏ hiện hành",
     "Xác nhận hạn nộp tờ khai quyết toán năm",
-    "Điền legal_basis với số điều khoản cụ thể và link thuvienphapluat.vn"
+    "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn"
   ],
   "updated_at": "2026-10-23"
 }

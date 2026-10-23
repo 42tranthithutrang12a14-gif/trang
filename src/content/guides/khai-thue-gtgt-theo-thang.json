@@ -25,7 +25,7 @@
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Quản lý thuế số 38/2019/QH14 — Điều 44 (thời hạn khai thuế)\n• Thông tư 80/2021/TT-BTC hướng dẫn Luật Quản lý thuế\n• Luật Thuế GTGT và các sửa đổi\n\nTra cứu văn bản:\n→ https://thuvienphapluat.vn\n→ https://vbpl.vn"
+      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Quản lý thuế số 38/2019/QH14 — Điều 44 (thời hạn khai thuế)\n• Thông tư 80/2021/TT-BTC hướng dẫn Luật Quản lý thuế\n• Luật Thuế GTGT và các sửa đổi\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
@@ -36,7 +36,7 @@
     "Xác nhận ngưỡng doanh thu 50 tỷ để khai tháng theo văn bản hiện hành",
     "Xác nhận hạn nộp ngày 20 là đúng theo Luật Quản lý thuế hiện hành",
     "Xác nhận mức phạt theo Nghị định xử phạt hành chính thuế đang có hiệu lực",
-    "Điền legal_basis với số điều khoản cụ thể và link thuvienphapluat.vn"
+    "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn"
   ],
   "updated_at": "2026-10-23"
 }

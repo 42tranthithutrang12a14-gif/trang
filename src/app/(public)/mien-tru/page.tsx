@@ -54,7 +54,7 @@ export default function MienTruPage() {
             Mọi thông tin pháp lý trong App đều trích dẫn nguồn từ văn bản quy phạm pháp luật
             chính thức do cơ quan nhà nước ban hành. Bạn có thể và nên đối chiếu trực tiếp với
             văn bản gốc tại các cổng thông tin chính phủ như{" "}
-            <span className="font-medium">vbpl.vn</span>,{" "}
+            <span className="font-medium">vbpl.moj.gov.vn</span>,{" "}
             <span className="font-medium">gdt.gov.vn</span>, và{" "}
             <span className="font-medium">vanban.chinhphu.vn</span>.
           </p>

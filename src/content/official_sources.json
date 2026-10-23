@@ -14,7 +14,7 @@
     },
     {
       "name": "Cơ sở dữ liệu quốc gia về văn bản pháp luật (Bộ Tư pháp)",
-      "domain": "vbpl.vn",
+      "domain": "vbpl.moj.gov.vn",
       "allow_subdomains": false,
       "description": "Kiểm tra tình trạng hiệu lực, văn bản hợp nhất."
     },
