@@ -1,0 +1,51 @@
+{
+  "slug": "dang-ky-thay-doi-doanh-nghiep",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Đăng ký thay đổi thông tin doanh nghiệp",
+  "category": "phap-ly",
+  "summary": "Khi có thay đổi về địa chỉ, người đại diện pháp luật, vốn điều lệ, ngành nghề hoặc tên công ty, doanh nghiệp phải đăng ký với Phòng Đăng ký kinh doanh trong thời hạn quy định — thường là 10 ngày kể từ ngày có quyết định thay đổi.",
+  "related_rules": ["RISK_CHANGES_NOT_REGISTERED"],
+  "body_sections": [
+    {
+      "heading": "Những thay đổi nào phải đăng ký?",
+      "content": "Theo Luật Doanh nghiệp 2020, doanh nghiệp phải đăng ký khi thay đổi:\n\n✅ Bắt buộc đăng ký:\n• Tên công ty\n• Địa chỉ trụ sở chính\n• Người đại diện theo pháp luật\n• Vốn điều lệ (tăng hoặc giảm)\n• Ngành nghề kinh doanh (thêm hoặc bớt)\n• Thành viên/cổ đông sáng lập (công ty cổ phần)\n• Thay đổi loại hình doanh nghiệp\n\n⚠️ Danh sách đầy đủ cần kế toán viên xác minh theo Luật DN hiện hành."
+    },
+    {
+      "heading": "Thời hạn đăng ký",
+      "content": "Thời hạn đăng ký thay đổi:\n• Hầu hết các loại thay đổi: trong vòng 10 ngày làm việc kể từ ngày có quyết định/nghị quyết thay đổi\n• Thay đổi cổ đông trong công ty cổ phần: trong vòng 10 ngày kể từ ngày hoàn thành việc chuyển nhượng\n\n⚠️ Thời hạn cụ thể theo từng loại thay đổi cần kế toán viên xác minh."
+    },
+    {
+      "heading": "Cách đăng ký trực tuyến",
+      "content": "Đăng ký qua Cổng thông tin quốc gia về đăng ký doanh nghiệp:\n→ https://dangkykinhdoanh.gov.vn\n\nCác bước:\n1. Đăng nhập tài khoản doanh nghiệp (hoặc tạo mới)\n2. Chọn Đăng ký thay đổi → chọn loại thay đổi cụ thể\n3. Điền thông tin thay đổi\n4. Đính kèm tài liệu (scan hoặc bản điện tử có ký số)\n5. Ký điện tử bằng chữ ký số của người đại diện pháp luật\n6. Nộp hồ sơ và theo dõi trạng thái\n7. Nhận kết quả qua email hoặc tra cứu trên cổng\n\nThời gian xử lý: thường 3 ngày làm việc."
+    },
+    {
+      "heading": "Hồ sơ cần chuẩn bị",
+      "content": "Tùy loại thay đổi, hồ sơ thường bao gồm:\n\nThay đổi địa chỉ trụ sở:\n• Thông báo thay đổi nội dung đăng ký doanh nghiệp\n• Biên bản họp Hội đồng thành viên (nếu TNHH) về việc thay đổi địa chỉ\n\nThay đổi người đại diện pháp luật:\n• Thông báo thay đổi + quyết định bổ nhiệm người đại diện mới\n• CCCD của người đại diện mới\n\nThay đổi vốn điều lệ:\n• Thông báo thay đổi + biên bản họp về tăng/giảm vốn\n• Danh sách thành viên sau thay đổi (nếu thay đổi tỷ lệ)\n\nThay đổi ngành nghề:\n• Thông báo thay đổi + biên bản họp\n• Nếu ngành có điều kiện: cần bổ sung giấy phép kinh doanh trước"
+    },
+    {
+      "heading": "Đăng ký trực tiếp tại Phòng Đăng ký kinh doanh",
+      "content": "Nếu không đăng ký trực tuyến, có thể nộp hồ sơ giấy:\n\n1. Chuẩn bị hồ sơ đầy đủ (xem mục trên)\n2. Nộp tại Phòng Đăng ký kinh doanh thuộc Sở Kế hoạch và Đầu tư tỉnh/thành phố nơi đăng ký trụ sở\n3. Nộp phí theo quy định\n4. Nhận biên lai và theo dõi kết quả\n\nTra cứu địa chỉ Sở KH&ĐT:\n→ https://www.mpi.gov.vn (Bộ Kế hoạch và Đầu tư)"
+    },
+    {
+      "heading": "Mức phạt nếu không đăng ký đúng hạn",
+      "content": "• Không đăng ký thay đổi hoặc đăng ký chậm: phạt 10.000.000 – 20.000.000 đồng\n• Kê khai không trung thực trong hồ sơ: phạt cao hơn, có thể bị thu hồi Giấy phép\n\n⚠️ Mức phạt cụ thể cần kế toán viên xác minh theo Nghị định hiện hành."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Luật Doanh nghiệp 2020 số 59/2020/QH14 — Điều 30, 31, 32\n• Nghị định 01/2021/NĐ-CP về đăng ký doanh nghiệp\n• Nghị định 122/2021/NĐ-CP về xử phạt vi phạm hành chính lĩnh vực đầu tư và đăng ký kinh doanh\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Đăng ký doanh nghiệp trực tuyến: https://dangkykinhdoanh.gov.vn\n• Tra cứu thông tin doanh nghiệp: https://dangkykinhdoanh.gov.vn (mục Tra cứu)\n• Bộ Kế hoạch và Đầu tư: https://www.mpi.gov.vn\n• Hỗ trợ đăng ký kinh doanh: (024) 3736 6566\n• Email hỗ trợ: dkkd@mpi.gov.vn"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận thời hạn 10 ngày đúng theo Luật DN 2020 và Nghị định 01/2021",
+    "Xác nhận danh sách đầy đủ các loại thay đổi phải đăng ký",
+    "Xác nhận mức phạt theo Nghị định 122/2021 còn hiệu lực không",
+    "Kiểm tra link dangkykinhdoanh.gov.vn còn hoạt động không",
+    "Điền legal_basis với số điều khoản cụ thể"
+  ],
+  "updated_at": "2026-10-23"
+}

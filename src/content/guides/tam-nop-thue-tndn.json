@@ -1,0 +1,51 @@
+{
+  "slug": "tam-nop-thue-tndn",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Tạm nộp thuế thu nhập doanh nghiệp theo quý",
+  "category": "thue",
+  "summary": "Mỗi quý, doanh nghiệp phải tự ước tính và tạm nộp thuế TNDN (không cần nộp tờ khai), hạn nộp là ngày 30 của tháng đầu quý tiếp theo. Cuối năm quyết toán và nộp phần còn thiếu.",
+  "related_rules": ["CIT_PROVISIONAL"],
+  "body_sections": [
+    {
+      "heading": "Tạm nộp là gì?",
+      "content": "Tạm nộp thuế TNDN là việc doanh nghiệp tự ước tính lợi nhuận trong quý, tính số thuế tương ứng và nộp trước — không cần nộp tờ khai riêng cho từng quý.\n\nCuối năm tài chính, doanh nghiệp làm quyết toán thuế TNDN (tờ khai năm), xác định số thuế chính thức và nộp thêm (hoặc được hoàn) phần chênh lệch."
+    },
+    {
+      "heading": "Hạn nộp",
+      "content": "Hạn tạm nộp thuế TNDN từng quý:\n• Quý I: trước ngày 30/4\n• Quý II: trước ngày 30/7\n• Quý III: trước ngày 30/10\n• Quý IV: trước ngày 30/01 năm sau\n\nHạn quyết toán năm: trước ngày 31/3 năm tiếp theo (hoặc ngày 31/12 nếu năm tài chính không theo năm dương lịch).\n\nTổng 4 quý tạm nộp phải đạt ít nhất 75–80% số thuế cả năm để tránh bị phạt."
+    },
+    {
+      "heading": "Cách tính số thuế tạm nộp",
+      "content": "Số thuế tạm nộp = Lợi nhuận ước tính trong quý × Thuế suất TNDN\n\nThuế suất phổ thông: 20% (doanh nghiệp siêu nhỏ áp dụng thuế suất 20%)\n\nVí dụ: Quý II ước tính lợi nhuận 100 triệu đồng\n→ Số thuế tạm nộp = 100 triệu × 20% = 20 triệu đồng\n\nLưu ý: Đây là ước tính — số chính thức sẽ xác định khi quyết toán năm."
+    },
+    {
+      "heading": "Cách nộp tiền thuế",
+      "content": "Không cần nộp tờ khai — chỉ cần nộp tiền:\n\n1. Đăng nhập eTax: https://thuedientu.gdt.gov.vn\n2. Vào mục Nộp thuế → Nộp tạm thuế TNDN\n3. Điền số tiền, kỳ nộp (ví dụ: Quý II/2026)\n4. Chọn phương thức nộp (ngân hàng liên kết hoặc tạo giấy nộp tiền)\n5. Thực hiện giao dịch và lưu biên lai\n\nHoặc nộp trực tiếp tại Kho bạc Nhà nước hoặc qua tài khoản ngân hàng liên kết."
+    },
+    {
+      "heading": "Quyết toán thuế TNDN cuối năm",
+      "content": "Cuối năm, doanh nghiệp phải nộp tờ khai quyết toán (mẫu 03/TNDN) qua eTax:\n• Xác định doanh thu, chi phí, lợi nhuận thực tế cả năm\n• Tính số thuế TNDN chính thức\n• Nộp thêm nếu số tạm nộp 4 quý < số phải nộp\n• Được hoàn hoặc bù trừ nếu tạm nộp nhiều hơn\n\nHạn nộp tờ khai quyết toán: 31/3 năm tiếp theo."
+    },
+    {
+      "heading": "Mức phạt",
+      "content": "• Tạm nộp thiếu dưới 75% số thuế cả năm: có thể bị phạt tiền chậm nộp\n• Không tạm nộp các quý: bị tính lãi chậm nộp 0,03%/ngày\n• Khai quyết toán sai: phạt 20% số thuế khai thiếu\n\n⚠️ Mức phạt và ngưỡng % cần kế toán viên xác minh theo Nghị định hiện hành."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Thuế TNDN số 14/2008/QH12 và các sửa đổi, bổ sung\n• Luật Quản lý thuế số 38/2019/QH14\n• Thông tư 96/2015/TT-BTC hướng dẫn thuế TNDN\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Tổng cục Thuế: https://gdt.gov.vn\n• Hỗ trợ: 1900 3584"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận ngưỡng % tạm nộp tối thiểu (75% hay 80%) theo văn bản hiện hành",
+    "Xác nhận hạn tạm nộp từng quý (ngày 30 hay ngày khác)",
+    "Xác nhận thuế suất TNDN cho doanh nghiệp siêu nhỏ hiện hành",
+    "Xác nhận hạn nộp tờ khai quyết toán năm",
+    "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn"
+  ],
+  "updated_at": "2026-10-23"
+}

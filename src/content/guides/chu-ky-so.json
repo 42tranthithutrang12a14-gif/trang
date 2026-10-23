@@ -1,0 +1,46 @@
+{
+  "slug": "chu-ky-so",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Đăng ký và sử dụng chữ ký số",
+  "category": "thue",
+  "summary": "Doanh nghiệp bắt buộc phải có chữ ký số hợp lệ để nộp tờ khai thuế, nộp hồ sơ qua mạng và ký hóa đơn điện tử. Chữ ký số có thời hạn và phải gia hạn trước khi hết.",
+  "related_rules": ["RISK_NO_DIGITAL_SIGNATURE"],
+  "body_sections": [
+    {
+      "heading": "Tại sao phải có chữ ký số?",
+      "content": "Chữ ký số là bắt buộc để:\n• Ký và nộp tờ khai thuế điện tử qua eTax\n• Ký hóa đơn điện tử khi xuất hóa đơn cho khách hàng\n• Nộp hồ sơ thay đổi đăng ký doanh nghiệp trực tuyến\n• Ký các văn bản hành chính điện tử với cơ quan nhà nước\n\nKhông có chữ ký số, doanh nghiệp không thể thực hiện nghĩa vụ thuế và kê khai qua mạng."
+    },
+    {
+      "heading": "Các loại chữ ký số phổ biến",
+      "content": "Chữ ký số USB Token (thiết bị cắm vào máy tính):\n• Phổ biến, chi phí thấp\n• Cần cắm thiết bị vào máy khi ký\n• Nhà cung cấp: VNPT, Viettel, FPT-CA, BKAV-CA, Newtel-CA...\n\nChữ ký số từ xa (Remote Signing/HSM):\n• Không cần cắm thiết bị, ký qua app\n• Tiện dụng hơn, chi phí có thể cao hơn\n• Phù hợp khi ký trên di động"
+    },
+    {
+      "heading": "Cách đăng ký chữ ký số",
+      "content": "1. Chọn nhà cung cấp chứng thư số được Bộ TT&TT cấp phép\n   → Danh sách tại: https://www.mic.gov.vn (Bộ Thông tin và Truyền thông)\n\n2. Liên hệ nhà cung cấp (VNPT, Viettel CA, FPT-CA, v.v.) hoặc mua trực tuyến\n\n3. Chuẩn bị hồ sơ:\n   - Giấy chứng nhận đăng ký doanh nghiệp\n   - CCCD của người đại diện pháp luật\n   - Giấy ủy quyền (nếu người đăng ký không phải đại diện pháp luật)\n\n4. Nhận USB Token, cài đặt phần mềm theo hướng dẫn nhà cung cấp\n\n5. Đăng ký sử dụng trên Cổng eTax:\n   → https://thuedientu.gdt.gov.vn → mục Đăng ký chữ ký số"
+    },
+    {
+      "heading": "Gia hạn chữ ký số",
+      "content": "Chữ ký số có thời hạn thường 1–3 năm. Khi hết hạn:\n• Không thể ký tờ khai và hóa đơn điện tử\n• Phải gia hạn tại nhà cung cấp trước ngày hết hạn\n\nCách kiểm tra hạn chữ ký số:\n• Cắm USB Token → xem thuộc tính chứng thư số trong phần mềm quản lý\n• Trên Cổng eTax → mục thông tin chữ ký số đang đăng ký\n\nNên gia hạn trước 30 ngày khi gần hết hạn để tránh gián đoạn."
+    },
+    {
+      "heading": "Mức phạt nếu không có chữ ký số",
+      "content": "• Không nộp được tờ khai thuế đúng hạn → bị phạt chậm nộp tờ khai\n• Không xuất được hóa đơn điện tử hợp lệ → hóa đơn không có giá trị pháp lý\n\n⚠️ Mức phạt cụ thể cần kế toán viên xác minh."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 130/2018/NĐ-CP về chữ ký số và dịch vụ chứng thực chữ ký số\n• Thông tư 19/2021/TT-BTC về đăng ký và sử dụng chữ ký số trong khai thuế\n• Nghị định 123/2020/NĐ-CP về hóa đơn điện tử (yêu cầu chữ ký số)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Đăng ký chữ ký số trên eTax: https://thuedientu.gdt.gov.vn\n• Bộ Thông tin và Truyền thông (danh sách CA được cấp phép): https://www.mic.gov.vn\n• VNPT CA: https://ca.vnpt.vn\n• Viettel CA: https://ca.viettel.vn\n• FPT-CA: https://fpt-ca.com.vn"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận văn bản pháp lý bắt buộc dùng chữ ký số khi nộp thuế hiện hành",
+    "Xác nhận danh sách nhà cung cấp CA được Bộ TT&TT cấp phép còn hiệu lực",
+    "Kiểm tra link mic.gov.vn còn đúng trang danh sách CA không",
+    "Điền legal_basis với số điều khoản cụ thể và link chính thức"
+  ],
+  "updated_at": "2026-10-23"
+}

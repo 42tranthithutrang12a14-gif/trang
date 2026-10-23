@@ -1,59 +1,33 @@
 import Link from "next/link";
-import { getSettings, nav } from "@/lib/settings";
-import { telHref } from "@/lib/format";
 
-export async function SiteFooter() {
-  const settings = await getSettings();
-
+export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
-        <div>
-          <p className="text-lg font-semibold text-foreground">{settings.shortName}</p>
-          <p className="mt-2 text-sm leading-relaxed text-muted">{settings.slogan}</p>
-          <p className="mt-4 text-sm text-muted">MST: {settings.taxId}</p>
+    <footer className="border-t border-border bg-surface mt-auto">
+      <div className="mx-auto max-w-5xl px-4 py-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="font-semibold text-foreground">Sổ tay DN Siêu nhỏ</p>
+            <p className="mt-1 text-sm text-muted">
+              Thông tin tham khảo đã được kế toán viên rà soát — không phải dịch vụ kế toán hay tư vấn pháp lý.
+            </p>
+          </div>
+          <nav className="flex flex-wrap gap-4 text-sm text-muted">
+            <Link href="/dieu-khoan" className="hover:text-foreground transition-colors">
+              Điều khoản
+            </Link>
+            <Link href="/rieng-tu" className="hover:text-foreground transition-colors">
+              Quyền riêng tư
+            </Link>
+            <Link href="/mien-tru" className="hover:text-foreground transition-colors">
+              Miễn trừ trách nhiệm
+            </Link>
+          </nav>
         </div>
-
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-foreground">
-            Liên kết
-          </p>
-          <ul className="mt-3 space-y-2">
-            {nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-muted transition-colors hover:text-accent"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-foreground">
-            Liên hệ
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-muted">
-            <li>{settings.address}</li>
-            <li>
-              <a href={telHref(settings.phone)} className="hover:text-accent">
-                {settings.phone}
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${settings.email}`} className="hover:text-accent">
-                {settings.email}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-border py-6 text-center text-xs text-muted">
-        © {new Date().getFullYear()} {settings.companyName}. Đã đăng ký kinh doanh.
+        <p className="mt-6 text-xs text-muted/70">
+          Sổ tay DN Siêu nhỏ cung cấp thông tin tham khảo đã được kế toán viên rà soát.
+          Đây không phải dịch vụ kế toán, dịch vụ làm thủ tục về thuế hay tư vấn pháp lý.
+          Với trường hợp cụ thể, hãy đối chiếu văn bản gốc hoặc hỏi người có chứng chỉ hành nghề.
+        </p>
       </div>
     </footer>
   );
