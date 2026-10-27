@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { href: "/bat-dau", label: "Bắt đầu" },
   { href: "/thu-vien", label: "Thư viện" },
   { href: "/khung-phap-ly", label: "Khung pháp lý" },
-  { href: "/nang-cap", label: "Bảng giá" },
   { href: "/tai-khoan", label: "Tài khoản" },
 ];
 

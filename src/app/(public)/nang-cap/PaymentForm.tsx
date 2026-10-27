@@ -135,7 +135,7 @@ export function PaymentForm({ amount, bank, qrBaseUrl, configured }: Props) {
           <div className="text-center">
             <p className="text-sm text-muted mb-3">Đăng nhập để tạo mã chuyển khoản riêng và theo dõi trạng thái.</p>
             <Link
-              href="/dang-nhap?next=/nang-cap"
+              href="/dang-nhap?next=/tai-khoan"
               className="inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
             >
               Đăng nhập →

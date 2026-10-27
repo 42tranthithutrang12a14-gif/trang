@@ -8,9 +8,23 @@ import { getUserPlan } from "@/app/actions/subscription";
 import { isSupabaseConfigured } from "@/lib/supabase/check";
 import { isEmailConfigured } from "@/lib/email";
 import { isPro } from "@/lib/subscription";
+import { PLANS, getProPriceVND, isPaymentConfigured, getVietQRUrl, getBankInfo } from "@/lib/plans";
 import { EmailPrefsForm } from "./EmailPrefsForm";
 import { SubscriptionSection } from "./SubscriptionSection";
 import { RestoreResultButton } from "./RestoreResultButton";
+import { PaymentForm } from "../nang-cap/PaymentForm";
+
+function CheckIcon() {
+  return (
+    <svg className="h-4 w-4 text-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function formatVND(amount: number): string {
+  return amount.toLocaleString("vi-VN") + " ₫";
+}
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("vi-VN", {
@@ -46,6 +60,10 @@ export default async function TaiKhoanPage({
 
   const emailEnabled = isEmailConfigured();
   const pro = isPro(userPlan);
+  const amount = getProPriceVND();
+  const configured = isPaymentConfigured();
+  const bank = getBankInfo();
+  const qrUrl = configured ? getVietQRUrl(amount, "SOTAY XXXXXXXX") : null;
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
@@ -79,22 +97,54 @@ export default async function TaiKhoanPage({
         </form>
       </div>
 
-      {/* Upgrade CTA (free users only) */}
+      {/* Plan section */}
       {!pro && (
-        <div className="mb-8 rounded-2xl border-2 border-accent/20 bg-accent/5 p-5 flex items-center justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-foreground">Nâng cấp lên Pro</p>
-            <p className="text-xs text-muted mt-0.5">
-              Nhắc hạn nộp qua email · 990.000 ₫/năm
-            </p>
+        <section id="nang-cap-len-pro" className="mb-8">
+          <h2 className="mb-4 text-base font-semibold text-foreground">Nâng cấp lên Pro</h2>
+
+          {/* Plan comparison */}
+          <div className="grid gap-4 sm:grid-cols-2 mb-6">
+            <div className="rounded-2xl border border-border bg-surface p-5">
+              <p className="text-sm font-semibold text-muted mb-1">{PLANS.free.name}</p>
+              <p className="text-2xl font-bold text-foreground mb-3">
+                0₫<span className="text-sm font-normal text-muted">/năm</span>
+              </p>
+              <ul className="space-y-2">
+                {PLANS.free.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-muted">
+                    <CheckIcon />{f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border-2 border-accent bg-accent/5 p-5 relative">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">
+                Phổ biến
+              </span>
+              <p className="text-sm font-semibold text-accent mb-1">{PLANS.pro.name}</p>
+              <p className="text-2xl font-bold text-foreground mb-3">
+                {formatVND(amount)}<span className="text-sm font-normal text-muted">/năm</span>
+              </p>
+              <ul className="space-y-2">
+                {PLANS.pro.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-foreground">
+                    <CheckIcon />{f}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <Link
-            href="/nang-cap"
-            className="flex-shrink-0 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
-          >
-            Nâng cấp →
-          </Link>
-        </div>
+
+          <PaymentForm
+            amount={amount}
+            bank={bank}
+            qrBaseUrl={qrUrl}
+            configured={configured}
+          />
+          <p className="mt-4 text-center text-xs text-muted">
+            Thanh toán qua chuyển khoản ngân hàng nội địa. Admin xác nhận trong 1–2 ngày làm việc.
+          </p>
+        </section>
       )}
 
       {/* Results history */}
@@ -156,9 +206,9 @@ export default async function TaiKhoanPage({
         ) : !pro ? (
           <div className="rounded-xl border border-border bg-surface p-5 flex items-center justify-between gap-4">
             <p className="text-sm text-muted">Chỉ dành cho gói Pro.</p>
-            <Link href="/nang-cap" className="text-xs text-accent hover:underline font-semibold">
+            <a href="#nang-cap-len-pro" className="text-xs text-accent hover:underline font-semibold">
               Nâng cấp →
-            </Link>
+            </a>
           </div>
         ) : (
           <EmailPrefsForm
