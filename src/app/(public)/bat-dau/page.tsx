@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import batDauJson from "@/content/bat-dau.json";
+import { DraftNotice } from "@/components/draft-notice";
 import {
   filterBatDau,
   flattenUnits,
   type BatDauContent,
   type Pillar,
   type Principle,
-  type Reviewable,
 } from "@/lib/bat-dau";
 
 export const metadata: Metadata = {
@@ -37,15 +37,6 @@ const typeLabels: Record<string, string> = {
   accounting: "Kế toán",
   hr: "Lao động",
 };
-
-function DraftNotice({ unit }: { unit: Reviewable }) {
-  if (unit.status === "published" || !unit.sample_notice) return null;
-  return (
-    <span className="mb-2 inline-block rounded-full bg-warning/10 px-2 py-0.5 text-xs font-semibold text-warning">
-      {unit.sample_notice}
-    </span>
-  );
-}
 
 function PrincipleBox({ principle, className }: { principle: Principle; className: string }) {
   return (
@@ -254,6 +245,9 @@ export default function BatDauPage() {
       </div>
 
       <div className="mt-6 flex flex-wrap gap-4 text-sm">
+        <Link href="/tu-0-den-1" className="text-accent hover:underline">
+          Chưa có công ty? Xem Từ 0 - đến 1 →
+        </Link>
         <Link href="/khung-phap-ly" className="text-accent hover:underline">
           Xem khung pháp lý chi tiết →
         </Link>

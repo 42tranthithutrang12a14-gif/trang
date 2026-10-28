@@ -5,6 +5,7 @@ import { useState } from "react";
 import { LogoIcon } from "@/components/logo-icon";
 
 const NAV_LINKS = [
+  { href: "/tu-0-den-1", label: "Từ 0 - đến 1" },
   { href: "/bat-dau", label: "Bắt đầu" },
   { href: "/thu-vien", label: "Thư viện" },
   { href: "/khung-phap-ly", label: "Khung pháp lý" },

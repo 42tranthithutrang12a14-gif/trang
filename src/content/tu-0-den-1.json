@@ -1,0 +1,887 @@
+{
+  "updated_at": "2026-10-28",
+  "todo_for_reviewer": [
+    "Toàn bộ nội dung là bản mẫu do trợ lý AI soạn ngày 2026-10-28 từ hiểu biết chung, chưa đối chiếu văn bản gốc.",
+    "Cách đăng: đổi status của giai đoạn và của từng bước sang \"published\". Giai đoạn chỉ hiện khi chính nó và ít nhất một bước bên trong đã published.",
+    "Mức cấp thiết (Bắt buộc / Nên làm / Tùy trường hợp) và hạn của từng bước cũng cần xác minh.",
+    "Danh sách chỉ dành cho công ty TNHH và cổ phần. Cân nhắc có cần nhánh riêng cho hộ kinh doanh không.",
+    "Id của từng bước dùng để lưu dấu tích trên trình duyệt người dùng. Đổi id sẽ làm mất dấu tích đã lưu của bước đó."
+  ],
+  "stages": [
+    {
+      "id": "chuan-bi",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Chuẩn bị thông tin",
+      "intro": "Làm trước khi nộp hồ sơ đăng ký công ty.",
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Xác minh thứ tự các bước và việc nào phải xong trước khi nộp hồ sơ."
+      ],
+      "steps": [
+        {
+          "id": "chon-loai-hinh",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Chọn loại hình công ty",
+          "prepare": [
+            "Danh sách người cùng góp vốn (nếu có)",
+            "Dự định sau này có gọi thêm người góp vốn không"
+          ],
+          "how": [
+            "Một người làm chủ: công ty TNHH một thành viên.",
+            "Từ 2 đến 50 người góp vốn: công ty TNHH hai thành viên trở lên.",
+            "Chia vốn thành cổ phần, có ít nhất 3 cổ đông: công ty cổ phần.",
+            "Chưa chắc nên chọn loại nào thì hỏi kế toán hoặc luật sư trước."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh điều kiện từng loại hình (số thành viên, số cổ đông) theo Luật Doanh nghiệp đang có hiệu lực.",
+            "Cân nhắc thêm doanh nghiệp tư nhân, hộ kinh doanh nếu phù hợp đối tượng của app.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "dat-ten",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Đặt tên công ty và tra trùng tên",
+          "prepare": [
+            "2–3 phương án tên tiếng Việt",
+            "Tên tiếng nước ngoài và tên viết tắt, nếu muốn có"
+          ],
+          "how": [
+            "Tên tiếng Việt gồm loại hình và tên riêng. Ví dụ: Công ty TNHH Hoa Mai.",
+            "Vào dangkykinhdoanh.gov.vn, mở phần tra cứu thông tin doanh nghiệp.",
+            "Gõ tên riêng dự định. Xem có công ty nào trùng hoặc gần giống không.",
+            "Trùng hoặc dễ gây nhầm lẫn thì chuyển sang phương án khác."
+          ],
+          "links": [
+            { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh quy tắc đặt tên (tên trùng, tên gây nhầm lẫn, từ ngữ không được dùng) theo Luật Doanh nghiệp đang có hiệu lực.",
+            "Xác minh tên và vị trí phần tra cứu trên cổng.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "dia-chi-tru-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Chọn địa chỉ trụ sở chính",
+          "prepare": [
+            "Địa chỉ đầy đủ: số nhà, đường, phường/xã, tỉnh/thành phố",
+            "Số điện thoại của công ty; email, website nếu có",
+            "Hợp đồng thuê hoặc giấy tờ nhà của địa điểm"
+          ],
+          "how": [
+            "Chọn nơi đặt trụ sở. Đây là nơi nhận thư từ của cơ quan nhà nước.",
+            "Ghi địa chỉ theo tên đơn vị hành chính hiện hành.",
+            "Giữ hợp đồng thuê hoặc giấy tờ nhà để xuất trình khi cần."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh khi đăng ký có phải nộp giấy tờ chứng minh địa điểm trụ sở không.",
+            "Xác minh quy định về căn hộ chung cư, nhà tập thể làm trụ sở (Luật Nhà ở).",
+            "Gợi ý của trợ lý AI (chưa xác minh): địa chỉ có thể phải ghi theo đơn vị hành chính sau sắp xếp năm 2025.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "nganh-nghe",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Chọn ngành nghề kinh doanh",
+          "prepare": [
+            "Danh sách việc công ty định làm, viết bằng lời thường"
+          ],
+          "how": [
+            "Với mỗi việc, tìm mã ngành tương ứng trong Hệ thống ngành kinh tế Việt Nam.",
+            "Chọn một ngành làm ngành chính.",
+            "Đánh dấu ngành nào cần giấy phép hoặc điều kiện riêng. Xem lại ở bước \"Kiểm tra giấy phép con\"."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh văn bản ban hành Hệ thống ngành kinh tế Việt Nam đang có hiệu lực và cấp mã ngành phải ghi khi đăng ký.",
+            "Xác minh danh mục ngành nghề kinh doanh có điều kiện.",
+            "Thêm link tra cứu mã ngành từ nguồn chính thức nếu có.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "von-dieu-le",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Quyết định vốn điều lệ",
+          "prepare": [
+            "Số tiền hoặc tài sản mỗi người cam kết góp",
+            "Tỷ lệ sở hữu của từng người"
+          ],
+          "how": [
+            "Ghi tổng vốn điều lệ và phần góp của từng người.",
+            "Số vốn đã đăng ký phải góp đủ trong thời hạn luật định. Xem bước \"Góp đủ vốn điều lệ\".",
+            "Góp bằng tài sản (xe, máy móc...) thì ghi rõ tài sản và giá trị."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh thời hạn góp vốn và các loại tài sản được góp.",
+            "Xác minh ngành nào có yêu cầu vốn tối thiểu.",
+            "Xác minh quy định định giá tài sản góp vốn.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "nguoi-dai-dien",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Chọn người đại diện theo pháp luật",
+          "prepare": [
+            "Họ tên và chức danh (ví dụ: Giám đốc)",
+            "CCCD và số điện thoại của người đại diện"
+          ],
+          "how": [
+            "Chọn người ký giấy tờ thay mặt công ty.",
+            "Ghi chức danh của người này trong điều lệ.",
+            "Người đại diện thường đứng tên trên hồ sơ thuế, tài khoản ngân hàng và chữ ký số của công ty."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh điều kiện cư trú của người đại diện, số người đại diện được phép và việc ủy quyền khi vắng mặt.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "giay-to-ca-nhan",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Chuẩn bị giấy tờ cá nhân",
+          "prepare": [
+            "Ảnh chụp hoặc bản scan CCCD của chủ sở hữu, từng thành viên góp vốn và người đại diện",
+            "Nếu thành viên là tổ chức: giấy tờ pháp lý của tổ chức và văn bản cử người đại diện"
+          ],
+          "how": [
+            "Chụp rõ hai mặt CCCD. Không lóa, không mất góc.",
+            "Lưu thành file PDF hoặc ảnh để tải lên khi nộp trực tuyến.",
+            "Kiểm tra CCCD còn hạn."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh loại giấy tờ pháp lý cá nhân được chấp nhận và định dạng file khi nộp trực tuyến.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "tai-khoan-nop-ho-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "nen-lam",
+          "title": "Tạo tài khoản để nộp hồ sơ trực tuyến",
+          "prepare": [
+            "Email và số điện thoại của người nộp hồ sơ"
+          ],
+          "how": [
+            "Vào dangkykinhdoanh.gov.vn, tạo tài khoản theo hướng dẫn trên cổng.",
+            "Làm theo yêu cầu xác thực của cổng.",
+            "Ghi lại tên đăng nhập ở nơi an toàn."
+          ],
+          "links": [
+            { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Gợi ý của trợ lý AI (chưa xác minh): cổng có thể yêu cầu đăng nhập bằng tài khoản định danh điện tử VNeID hoặc chữ ký số. Xác minh cách xác thực hiện hành.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dang-ky",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Đăng ký thành lập công ty",
+      "intro": "Nộp hồ sơ và nhận Giấy chứng nhận đăng ký doanh nghiệp.",
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Xác minh thủ tục theo nghị định về đăng ký doanh nghiệp đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP."
+      ],
+      "steps": [
+        {
+          "id": "soan-ho-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Soạn hồ sơ đăng ký doanh nghiệp",
+          "prepare": [
+            "Giấy đề nghị đăng ký doanh nghiệp (theo mẫu)",
+            "Điều lệ công ty",
+            "Danh sách thành viên (TNHH hai thành viên trở lên) hoặc danh sách cổ đông sáng lập (cổ phần)",
+            "Bản sao giấy tờ cá nhân đã chuẩn bị"
+          ],
+          "how": [
+            "Lấy biểu mẫu mới nhất trên dangkykinhdoanh.gov.vn.",
+            "Điền đúng tên, địa chỉ, ngành nghề, vốn, người đại diện đã chọn ở phần Chuẩn bị thông tin.",
+            "Các thành viên đọc kỹ và cùng ký điều lệ."
+          ],
+          "links": [
+            { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh thành phần hồ sơ cho từng loại hình.",
+            "Xác minh thông tư ban hành biểu mẫu đăng ký doanh nghiệp đang có hiệu lực.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "khai-thong-tin-thue",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Khai phần thông tin đăng ký thuế",
+          "prepare": [
+            "Người phụ trách kế toán (nếu đã có)",
+            "Năm tài chính",
+            "Số lao động dự kiến",
+            "Phương pháp tính thuế GTGT dự kiến (hỏi kế toán)",
+            "Địa chỉ nhận thông báo thuế, nếu khác trụ sở"
+          ],
+          "how": [
+            "Điền đủ các ô về thuế trong giấy đề nghị đăng ký doanh nghiệp.",
+            "Mã số doanh nghiệp được cấp cũng là mã số thuế, nên cơ quan thuế dùng phần này.",
+            "Chưa chắc ô nào thì hỏi kế toán trước khi nộp."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh các trường thông tin thuế trong biểu mẫu hiện hành.",
+            "Xác minh \"mã số doanh nghiệp đồng thời là mã số thuế\".",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "nop-ho-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Nộp hồ sơ",
+          "prepare": [
+            "Bộ hồ sơ đã ký, scan thành file",
+            "Tài khoản trên cổng đăng ký doanh nghiệp"
+          ],
+          "how": [
+            "Cách 1: đăng nhập dangkykinhdoanh.gov.vn, chọn đăng ký thành lập, điền thông tin, tải file lên, ký và nộp.",
+            "Cách 2: nộp bản giấy tại cơ quan đăng ký kinh doanh cấp tỉnh nơi đặt trụ sở.",
+            "Lưu lại mã hồ sơ để tra cứu."
+          ],
+          "links": [
+            { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Theo báo chí (chưa xác minh): cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Xác minh tên cơ quan hiện nay.",
+            "Xác minh các bước nộp trên cổng.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "le-phi",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Nộp lệ phí đăng ký và phí công bố thông tin",
+          "prepare": [
+            "Thẻ hoặc tài khoản ngân hàng để thanh toán trực tuyến"
+          ],
+          "how": [
+            "Thanh toán theo hướng dẫn trên cổng khi nộp hồ sơ.",
+            "Giữ biên lai hoặc xác nhận thanh toán."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh mức lệ phí đăng ký doanh nghiệp, phí công bố thông tin và trường hợp được miễn khi nộp trực tuyến.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "theo-doi-ho-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Theo dõi hồ sơ, sửa nếu được yêu cầu",
+          "prepare": [],
+          "how": [
+            "Kiểm tra email và tài khoản trên cổng mỗi ngày.",
+            "Có thông báo sửa đổi, bổ sung thì sửa đúng nội dung được nêu rồi nộp lại.",
+            "Không nộp nhiều hồ sơ trùng nhau cho cùng một công ty."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh thời hạn xử lý hồ sơ hiện hành.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "nhan-giay-chung-nhan",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Nhận và kiểm tra Giấy chứng nhận đăng ký doanh nghiệp",
+          "prepare": [],
+          "how": [
+            "Đối chiếu từng dòng: tên, mã số, địa chỉ, vốn, người đại diện.",
+            "Sai thông tin thì đề nghị sửa ngay.",
+            "Lưu bản gốc và bản scan. Các việc ở phần Trước khi bán hàng đều cần giấy này."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh thủ tục hiệu đính khi giấy chứng nhận có sai sót.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "cong-bo-thong-tin",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Kiểm tra đã công bố thông tin doanh nghiệp",
+          "prepare": [],
+          "how": [
+            "Việc công bố thường được đăng ký cùng lúc khi nộp hồ sơ.",
+            "Tra cứu tên công ty trên dangkykinhdoanh.gov.vn để thấy thông tin đã công bố."
+          ],
+          "links": [
+            { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh nghĩa vụ và thời hạn công bố nội dung đăng ký doanh nghiệp.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "truoc-khi-ban",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Trước khi bán hàng",
+      "intro": "Làm sau khi có Giấy chứng nhận đăng ký doanh nghiệp, trước giao dịch đầu tiên.",
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Xác minh việc nào phải xong trước giao dịch đầu tiên, việc nào có thể làm sau.",
+        "Lệ phí môn bài không có trong danh sách. Theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Nếu vẫn còn thu thì thêm bước."
+      ],
+      "steps": [
+        {
+          "id": "gan-ten-tru-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Gắn tên công ty tại trụ sở",
+          "prepare": [],
+          "how": [
+            "Làm biển có tên công ty.",
+            "Gắn ở nơi dễ thấy tại trụ sở chính."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh quy định gắn tên tại trụ sở và nội dung phải có trên biển.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "con-dau",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "tuy-truong-hop",
+          "title": "Làm con dấu (nếu muốn dùng)",
+          "prepare": [
+            "Giấy chứng nhận đăng ký doanh nghiệp"
+          ],
+          "how": [
+            "Công ty tự quyết định có dùng con dấu hay không.",
+            "Nếu dùng: đặt khắc tại cơ sở khắc dấu, chọn số lượng và mẫu dấu.",
+            "Ghi quy định quản lý con dấu vào điều lệ hoặc quy chế."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh quy định hiện hành về con dấu doanh nghiệp, có phải thông báo mẫu dấu không.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "tai-khoan-ngan-hang",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "nen-lam",
+          "title": "Mở tài khoản ngân hàng của công ty",
+          "prepare": [
+            "Giấy chứng nhận đăng ký doanh nghiệp",
+            "CCCD của người đại diện",
+            "Con dấu (nếu có)",
+            "Giấy tờ khác theo yêu cầu của ngân hàng"
+          ],
+          "how": [
+            "Hẹn ngân hàng, mang giấy tờ đến mở tài khoản.",
+            "Đăng ký ngân hàng điện tử để nộp thuế trực tuyến.",
+            "Dùng tài khoản này cho các khoản thu chi của công ty."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh mở tài khoản là bắt buộc hay khuyến nghị, và có phải báo số tài khoản cho cơ quan thuế không.",
+            "\"Dùng tài khoản này cho các khoản thu chi\" là khuyến nghị. Xác minh quy định về thanh toán không dùng tiền mặt liên quan.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "chu-ky-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Mua chữ ký số cho công ty",
+          "prepare": [
+            "Giấy chứng nhận đăng ký doanh nghiệp",
+            "CCCD của người đại diện"
+          ],
+          "how": [
+            "Chọn một nhà cung cấp chữ ký số được cấp phép.",
+            "Chọn loại: USB token hoặc ký từ xa.",
+            "Gửi giấy tờ, ký hợp đồng, nhận chữ ký số.",
+            "Ghi lại ngày hết hạn để gia hạn kịp."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh danh sách nhà cung cấp được cấp phép và cơ quan quản lý hiện nay.",
+            "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 130/2018/NĐ-CP có thể đã được thay bằng Nghị định 23/2025/NĐ-CP. Xác minh văn bản đang có hiệu lực.",
+            "Xác minh chữ ký số là bắt buộc với những việc nào.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "thue-dien-tu",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Đăng ký tài khoản thuế điện tử",
+          "prepare": [
+            "Mã số thuế (chính là mã số doanh nghiệp)",
+            "Chữ ký số",
+            "Email và số điện thoại của công ty"
+          ],
+          "how": [
+            "Vào thuedientu.gdt.gov.vn, chọn đăng ký tài khoản cho doanh nghiệp.",
+            "Nhập mã số thuế, ký bằng chữ ký số.",
+            "Nhận mật khẩu qua email. Đăng nhập và đổi mật khẩu.",
+            "Liên kết tài khoản ngân hàng của công ty để nộp thuế."
+          ],
+          "links": [
+            { "label": "Thuế điện tử", "url": "https://thuedientu.gdt.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh quy trình đăng ký tài khoản giao dịch thuế điện tử hiện hành.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "phuong-phap-thue-gtgt",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Xác định cách tính và kỳ khai thuế GTGT",
+          "prepare": [],
+          "how": [
+            "Hỏi kế toán công ty áp dụng phương pháp khấu trừ hay trực tiếp.",
+            "Nếu phải đăng ký thì nộp mẫu đăng ký qua tài khoản thuế điện tử.",
+            "Ghi lại kỳ khai thuế: theo tháng hay theo quý."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh phương pháp áp dụng cho DN mới thành lập, mẫu đăng ký và thời hạn nộp.",
+            "Xác minh tiêu chí khai theo tháng hay theo quý cho DN mới.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "hoa-don-dien-tu",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Đăng ký sử dụng hóa đơn điện tử",
+          "prepare": [
+            "Tài khoản thuế điện tử",
+            "Chữ ký số"
+          ],
+          "how": [
+            "Chọn cách lập hóa đơn: qua cổng của cơ quan thuế hoặc qua nhà cung cấp phần mềm.",
+            "Gửi tờ khai đăng ký sử dụng hóa đơn điện tử.",
+            "Chờ cơ quan thuế chấp nhận.",
+            "Làm quen với phần mềm lập hóa đơn trước lần bán đầu tiên."
+          ],
+          "links": [
+            { "label": "Cổng hóa đơn điện tử", "url": "https://hoadondientu.gdt.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+            "Xác minh mẫu tờ khai đăng ký, điều kiện dùng hóa đơn có mã và thời điểm phải lập hóa đơn.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "ke-toan",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Chọn người làm kế toán và mở sổ kế toán",
+          "prepare": [],
+          "how": [
+            "Chọn: thuê nhân viên kế toán hoặc dịch vụ kế toán.",
+            "Thống nhất chế độ kế toán công ty áp dụng.",
+            "Mở sổ kế toán. Lưu mọi hóa đơn, chứng từ từ ngày đầu."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc.",
+            "Xác minh điều kiện người làm kế toán, kế toán trưởng cho DN siêu nhỏ.",
+            "Xác minh mốc phải mở sổ kế toán.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "gop-von",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "deadline": "Trong 90 ngày kể từ ngày cấp Giấy chứng nhận",
+          "title": "Góp đủ vốn điều lệ",
+          "prepare": [
+            "Tài khoản ngân hàng của công ty"
+          ],
+          "how": [
+            "Từng thành viên chuyển phần vốn vào tài khoản công ty, ghi nội dung góp vốn.",
+            "Lưu chứng từ chuyển tiền.",
+            "Lập sổ đăng ký thành viên hoặc sổ đăng ký cổ đông.",
+            "Công ty TNHH cấp giấy chứng nhận phần vốn góp cho thành viên."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh thời hạn 90 ngày, mốc tính và loại hình áp dụng.",
+            "Xác minh hình thức góp vốn được phép (tiền mặt, chuyển khoản, tài sản).",
+            "Xác minh nghĩa vụ lập sổ đăng ký thành viên/cổ đông và giấy chứng nhận phần vốn góp.",
+            "Xác minh thủ tục và thời hạn điều chỉnh vốn nếu không góp đủ.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "giay-phep-con",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "tuy-truong-hop",
+          "title": "Kiểm tra giấy phép con của ngành nghề",
+          "prepare": [
+            "Danh sách ngành đã chọn ở phần Chuẩn bị thông tin"
+          ],
+          "how": [
+            "Xem lại các ngành đã đánh dấu là có điều kiện.",
+            "Tra cứu thủ tục trên Cổng Dịch vụ công quốc gia hoặc hỏi cơ quan quản lý ngành.",
+            "Có đủ giấy phép, chứng chỉ hoặc điều kiện rồi mới hoạt động ngành đó."
+          ],
+          "links": [
+            { "label": "Cổng Dịch vụ công quốc gia", "url": "https://dichvucong.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh danh mục ngành nghề kinh doanh có điều kiện và cách tra cứu chính thức.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "lao-dong-bhxh",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "tuy-truong-hop",
+          "deadline": "Trong 30 ngày kể từ ngày ký hợp đồng lao động",
+          "title": "Nếu thuê người lao động: ký hợp đồng, đăng ký bảo hiểm",
+          "prepare": [
+            "Hợp đồng lao động bằng văn bản",
+            "Thông tin người lao động: họ tên, mã số BHXH, mức lương"
+          ],
+          "how": [
+            "Ký hợp đồng lao động bằng văn bản.",
+            "Đăng ký BHXH, BHYT, BHTN cho người lao động.",
+            "Đóng bảo hiểm theo kỳ hạn của cơ quan BHXH."
+          ],
+          "links": [
+            { "label": "Bảo hiểm xã hội Việt Nam", "url": "https://baohiemxahoi.gov.vn" }
+          ],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh thời hạn đăng ký, đối tượng bắt buộc và tỷ lệ đóng theo Luật BHXH đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Luật 58/2014/QH13 có thể đã được thay bằng Luật 41/2024/QH15.",
+            "Xác minh trường hợp hợp đồng lao động phải bằng văn bản.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        },
+        {
+          "id": "luu-ho-so",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "nen-lam",
+          "title": "Lập bộ hồ sơ gốc của công ty",
+          "prepare": [
+            "Giấy chứng nhận đăng ký doanh nghiệp",
+            "Điều lệ",
+            "Chứng từ góp vốn",
+            "Hợp đồng thuê trụ sở"
+          ],
+          "how": [
+            "Để bản giấy ở một chỗ cố định tại trụ sở.",
+            "Lưu bản scan ở nơi an toàn, có sao lưu.",
+            "Ghi lại các hạn quan trọng: hạn góp vốn, hạn gia hạn chữ ký số."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh danh sách tài liệu công ty phải lưu giữ và thời hạn lưu.",
+            "Điền legal_basis nếu có quy định liên quan."
+          ]
+        },
+        {
+          "id": "ban-hang-dau-tien",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "title": "Bán hàng lần đầu: lập hóa đơn, lưu chứng từ",
+          "prepare": [],
+          "how": [
+            "Lập hóa đơn điện tử cho giao dịch theo quy định.",
+            "Thu tiền qua tài khoản công ty.",
+            "Gửi chứng từ cho kế toán ghi sổ.",
+            "Xem tiếp việc cần làm trong năm đầu ở trang Bắt đầu."
+          ],
+          "links": [],
+          "legal_basis": [],
+          "todo_for_reviewer": [
+            "Xác minh trường hợp nào phải lập hóa đơn, kể cả bán lẻ cho người tiêu dùng.",
+            "\"Thu tiền qua tài khoản công ty\" là khuyến nghị. Cân nhắc viết trung tính.",
+            "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          ]
+        }
+      ]
+    }
+  ],
+  "incentives": {
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Ưu đãi và lợi thế nên biết",
+    "intro": "Những ưu đãi, hỗ trợ doanh nghiệp nhỏ có thể được hưởng. Điều kiện cụ thể cần hỏi kế toán.",
+    "legal_basis": [],
+    "todo_for_reviewer": [
+      "Mọi ưu đãi trong phần này do trợ lý AI soạn từ hiểu biết chung, chưa đối chiếu văn bản gốc. Ưu đãi thay đổi thường xuyên; xác minh từng mục trước khi đăng.",
+      "Cân nhắc bổ sung sau khi xác minh (gợi ý của trợ lý AI, chưa xác minh): phần mềm kế toán, nền tảng số miễn phí cho DN siêu nhỏ theo Nghị quyết 198/2025/QH15; hóa đơn điện tử có mã không mất phí trong thời gian đầu cho một số đối tượng; miễn lệ phí khi đăng ký doanh nghiệp trực tuyến."
+    ],
+    "items": [
+      {
+        "id": "thue-suat-tndn-thap",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "phai-biet",
+        "title": "Thuế suất thuế TNDN thấp hơn cho doanh nghiệp doanh thu nhỏ",
+        "who": "Doanh nghiệp có tổng doanh thu năm không quá 50 tỷ đồng.",
+        "benefit": "Thuế suất thấp hơn mức phổ thông 20%: 15% nếu tổng doanh thu năm không quá 3 tỷ đồng, 17% nếu trên 3 tỷ đến 50 tỷ đồng.",
+        "how": [
+          "Kế toán áp dụng khi tạm nộp và quyết toán thuế TNDN.",
+          "Ghi sổ đầy đủ để chứng minh doanh thu."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Gợi ý của trợ lý AI (chưa xác minh): theo Luật Thuế TNDN số 67/2025/QH15, áp dụng từ kỳ tính thuế năm 2025. Xác minh thuế suất, ngưỡng doanh thu, cách xác định doanh thu năm và trường hợp không được áp dụng.",
+          "Mâu thuẫn trong app: guide tam-nop-thue-tndn ghi DN siêu nhỏ chịu thuế suất 20%.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "mien-tndn-dn-moi",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "phai-biet",
+        "title": "Có thể được miễn thuế TNDN trong 3 năm đầu",
+        "who": "Doanh nghiệp nhỏ và vừa thành lập mới.",
+        "benefit": "Miễn thuế TNDN trong 3 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu.",
+        "how": [
+          "Hỏi kế toán công ty có đủ điều kiện không.",
+          "Vẫn khai thuế đúng hạn trong thời gian được miễn."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Gợi ý của trợ lý AI (chưa xác minh): theo Nghị quyết 198/2025/QH15 về phát triển kinh tế tư nhân. Xác minh có quy định này không, điều kiện, thời điểm áp dụng và văn bản hướng dẫn.",
+          "Xác minh DN được miễn có còn phải khai và quyết toán thuế TNDN không.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "bo-le-phi-mon-bai",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "phai-biet",
+        "title": "Không còn lệ phí môn bài",
+        "who": "Doanh nghiệp và hộ kinh doanh.",
+        "benefit": "Lệ phí môn bài được chấm dứt thu từ ngày 1/1/2026.",
+        "how": [
+          "Không cần làm gì thêm.",
+          "Nhờ kế toán kiểm tra các năm trước 2026 đã nộp đủ chưa."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Theo báo chí (chưa xác minh): Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc.",
+          "Nếu đúng thì sửa các chỗ khác trong app còn nhắc lệ phí môn bài (/bat-dau, legal-framework.json).",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "khai-gtgt-theo-quy",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "nen-biet",
+        "title": "Khai thuế GTGT theo quý thay vì theo tháng",
+        "who": "Doanh nghiệp mới thành lập và doanh nghiệp có doanh thu năm trước không quá 50 tỷ đồng.",
+        "benefit": "Khai 4 lần mỗi năm thay vì 12 lần.",
+        "how": [
+          "Kế toán chọn kỳ khai theo quý khi đăng ký thuế hoặc khi khai lần đầu."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh tiêu chí khai theo quý (ngưỡng 50 tỷ, DN mới thành lập) theo văn bản đang có hiệu lực.",
+          "Xác minh thủ tục chọn kỳ khai.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "ke-toan-don-gian",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "nen-biet",
+        "title": "Chế độ kế toán đơn giản cho doanh nghiệp siêu nhỏ",
+        "who": "Doanh nghiệp siêu nhỏ.",
+        "benefit": "Được áp dụng chế độ kế toán đơn giản hơn. Có thể thuê dịch vụ kế toán thay vì tuyển kế toán riêng.",
+        "how": [
+          "Xác định công ty có phải doanh nghiệp siêu nhỏ không (theo số lao động và doanh thu hoặc vốn).",
+          "Thống nhất với kế toán chế độ kế toán áp dụng."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc.",
+          "Xác minh tiêu chí doanh nghiệp siêu nhỏ (Luật Hỗ trợ DNNVV và nghị định hướng dẫn).",
+          "Xác minh DN siêu nhỏ có bắt buộc bố trí kế toán trưởng không.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "ho-tro-dnnvv",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "nen-biet",
+        "title": "Hỗ trợ của Nhà nước cho doanh nghiệp nhỏ và vừa",
+        "who": "Doanh nghiệp nhỏ và vừa đáp ứng tiêu chí.",
+        "benefit": "Có thể được hỗ trợ tư vấn, đào tạo, chuyển đổi số, ứng dụng công nghệ, mở rộng thị trường.",
+        "how": [
+          "Tìm chương trình hỗ trợ của tỉnh/thành nơi đặt trụ sở.",
+          "Nộp hồ sơ đề nghị hỗ trợ theo hướng dẫn của cơ quan, tổ chức hỗ trợ."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh nội dung hỗ trợ theo Luật Hỗ trợ doanh nghiệp nhỏ và vừa (04/2017/QH14) và nghị định hướng dẫn đang có hiệu lực.",
+          "Xác minh cơ quan đầu mối và cách nộp hồ sơ hiện nay.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "ho-tro-phap-ly",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "nen-biet",
+        "title": "Hỗ trợ pháp lý cho doanh nghiệp nhỏ và vừa",
+        "who": "Doanh nghiệp nhỏ và vừa.",
+        "benefit": "Có thể được tư vấn pháp luật và hỗ trợ một phần chi phí tư vấn.",
+        "how": [
+          "Hỏi Sở Tư pháp nơi đặt trụ sở về chương trình hỗ trợ pháp lý cho doanh nghiệp."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 55/2019/NĐ-CP về hỗ trợ pháp lý cho DNNVV. Xác minh hiệu lực, mức hỗ trợ và đầu mối.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "vay-von-uu-dai",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "nen-biet",
+        "title": "Vay vốn ưu đãi, bảo lãnh tín dụng",
+        "who": "Doanh nghiệp nhỏ và vừa có phương án kinh doanh khả thi.",
+        "benefit": "Có thể vay vốn với lãi suất ưu đãi hoặc được bảo lãnh để vay ngân hàng.",
+        "how": [
+          "Tìm hiểu Quỹ phát triển doanh nghiệp nhỏ và vừa và quỹ bảo lãnh tín dụng của tỉnh.",
+          "Chuẩn bị phương án kinh doanh và báo cáo tài chính."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh tên quỹ, điều kiện vay, đối tượng và cách nộp hồ sơ hiện nay.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "uu-dai-nganh-dia-ban",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "level": "nen-biet",
+        "title": "Ưu đãi theo ngành nghề và địa bàn",
+        "who": "Doanh nghiệp hoạt động trong ngành hoặc địa bàn được ưu đãi.",
+        "benefit": "Có thể được thuế suất TNDN thấp hơn, hoặc được miễn, giảm thuế có thời hạn.",
+        "how": [
+          "Khi chọn ngành nghề và địa điểm, hỏi kế toán có ưu đãi nào áp dụng không."
+        ],
+        "links": [],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh danh mục ngành, địa bàn ưu đãi và mức ưu đãi theo Luật Thuế TNDN và Luật Đầu tư đang có hiệu lực.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      }
+    ]
+  }
+}
