@@ -1,0 +1,388 @@
+{
+  "updated_at": "2026-10-28",
+  "todo_for_reviewer": [
+    "Toàn bộ nội dung trang /bat-dau được chuyển nguyên văn từ code cũ ngày 2026-10-28, chưa đối chiếu văn bản gốc.",
+    "Cách đăng: đổi status của phần (pillars, year_one, annual, mistakes) và của từng mục bên trong sang \"published\". Một phần chỉ hiện khi chính nó và ít nhất một mục bên trong đã published. principle là mục riêng."
+  ],
+  "pillars": {
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "3 trụ cột bạn phải quản lý song song",
+    "intro": "Kinh doanh hợp pháp không chỉ là \"đóng thuế\". Có 3 mảng độc lập — bỏ sót bất kỳ cái nào cũng bị phạt.",
+    "legal_basis": [],
+    "todo_for_reviewer": [
+      "\"Bỏ sót bất kỳ cái nào cũng bị phạt\" là nhận định chung, chưa có căn cứ. Cần dẫn căn cứ hoặc viết lại.",
+      "Tiêu đề và lời dẫn ghi cứng số 3. Nếu chỉ đăng một phần các mục thì sửa cho khớp."
+    ],
+    "items": [
+      {
+        "id": "phap-ly-doanh-nghiep",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "🏛️",
+        "tone": "accent",
+        "title": "Pháp lý doanh nghiệp",
+        "desc": "Công ty tồn tại hợp pháp, thông tin luôn đúng với đăng ký. Thay đổi gì phải báo Sở KHĐT trong 10 ngày.",
+        "examples": [
+          "Góp đủ vốn điều lệ trong 90 ngày",
+          "Đăng ký thay đổi địa chỉ, người đại diện",
+          "Lưu hồ sơ thành lập"
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "\"Báo Sở KHĐT\": theo báo chí (chưa xác minh), cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Cần xác minh tên cơ quan hiện nay.",
+          "\"Trong 10 ngày\": xác minh thời hạn và mốc tính. Mâu thuẫn trong app: ở đây ghi \"10 ngày\", legal-framework.json ghi \"10 ngày làm việc\", guide dang-ky-thay-doi-doanh-nghiep ghi cả hai.",
+          "\"Thay đổi gì phải báo\": xác minh thay đổi nào phải đăng ký, thay đổi nào chỉ cần thông báo.",
+          "\"Góp đủ vốn điều lệ trong 90 ngày\": xác minh thời hạn, mốc tính và loại hình áp dụng theo Luật Doanh nghiệp hiện hành.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "thue",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "🧾",
+        "tone": "warning",
+        "title": "Thuế",
+        "desc": "Khai đúng hạn quan trọng hơn khai đúng số. Chậm nộp tờ khai bị phạt ngay cả khi không phát sinh thuế.",
+        "examples": [
+          "GTGT: khai hàng tháng hoặc hàng quý",
+          "TNDN: tạm nộp theo quý, quyết toán năm",
+          "Môn bài: nộp 1 lần/năm trước 30/1"
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "\"Môn bài: nộp 1 lần/năm trước 30/1\": theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ dòng này.",
+          "\"Khai đúng hạn quan trọng hơn khai đúng số\" là nhận định, giống lời khuyên thuế, không phải quy định. Cần đối chiếu quy định xử phạt khai sai trước khi đăng, hoặc bỏ.",
+          "\"Chậm nộp tờ khai bị phạt ngay cả khi không phát sinh thuế\": xác minh theo nghị định xử phạt về thuế đang có hiệu lực.",
+          "GTGT khai tháng/quý, TNDN tạm nộp quý và quyết toán năm: xác minh tiêu chí và văn bản đang có hiệu lực.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "ke-toan",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "📒",
+        "tone": "success",
+        "title": "Kế toán",
+        "desc": "Ghi chép mọi giao dịch ngay từ ngày thành lập. Kế toán là bằng chứng khi cơ quan thuế kiểm tra.",
+        "examples": [
+          "Mở sổ kế toán từ ngày đầu",
+          "Lưu hóa đơn, chứng từ ít nhất 10 năm",
+          "Nộp báo cáo tài chính trước 31/3 mỗi năm"
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Chế độ kế toán DN siêu nhỏ: theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc.",
+          "\"Lưu hóa đơn, chứng từ ít nhất 10 năm\": xác minh thời hạn lưu trữ cho từng loại tài liệu.",
+          "\"Nộp báo cáo tài chính trước 31/3 mỗi năm\": xác minh hạn nộp, nơi nộp, và trường hợp năm tài chính không trùng năm dương lịch.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      }
+    ]
+  },
+  "year_one": {
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Năm đầu tiên: làm gì và làm khi nào",
+    "intro": "Theo thứ tự thời gian từ ngày nhận Giấy chứng nhận ĐKDN.",
+    "legal_basis": [],
+    "todo_for_reviewer": [
+      "Xác minh thứ tự và mốc thời gian các bước (Tuần 1–2, Tháng 1, Tháng 1–3, Quý đầu tiên). Mốc nào có căn cứ thì dẫn văn bản; mốc nào chỉ là gợi ý thì ghi rõ."
+    ],
+    "items": [
+      {
+        "id": "tuan-1-2",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "timing": "Tuần 1–2",
+        "urgency": "hot",
+        "title": "Ngay sau khi có Giấy chứng nhận ĐKDN",
+        "tasks": [
+          { "text": "Mở tài khoản ngân hàng doanh nghiệp", "note": "Cần: GCN ĐKDN + CCCD người đại diện" },
+          { "text": "Đặt mua chữ ký số (USB Token hoặc Remote)", "note": "Cần để nộp thuế, BHXH, hồ sơ điện tử" },
+          { "text": "Thuê kế toán hoặc dịch vụ kế toán", "note": "DNSN: 1–5 triệu/tháng cho dịch vụ ngoài" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Giá dịch vụ kế toán \"1–5 triệu/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số. Guide so-sach-ke-toan cũng ghi \"1–5 triệu đồng/tháng\".",
+          "Mở tài khoản ngân hàng: xác minh là bắt buộc hay khuyến nghị. Giấy tờ cần nộp do từng ngân hàng quy định.",
+          "Chữ ký số: xác minh văn bản đang có hiệu lực về chữ ký số và việc dùng khi nộp thuế, BHXH.",
+          "Thuê kế toán: xác minh quy định về người làm kế toán cho DN siêu nhỏ.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "thang-1",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "timing": "Tháng 1",
+        "urgency": "hot",
+        "title": "Trước khi xuất hóa đơn đầu tiên",
+        "tasks": [
+          { "text": "Đăng ký hóa đơn điện tử tại hoadondientu.gdt.gov.vn", "note": "Bắt buộc với mọi DN từ 01/07/2022" },
+          { "text": "Đăng ký kê khai thuế GTGT (tháng hoặc quý)", "note": "Nếu DN mới → mặc định khai theo quý" },
+          { "text": "Mở sổ kế toán (Excel hoặc phần mềm)", "note": "Theo Thông tư 132/2018 cho DNSN" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Hóa đơn điện tử \"bắt buộc với mọi DN từ 01/07/2022\": theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+          "Xác minh hoadondientu.gdt.gov.vn còn là cổng đăng ký hóa đơn điện tử.",
+          "\"Nếu DN mới → mặc định khai theo quý\": xác minh quy định khai thuế GTGT cho DN mới thành lập.",
+          "\"Theo Thông tư 132/2018 cho DNSN\": theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay thế từ 1/7/2026. Cần mở văn bản gốc.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "trong-90-ngay",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "timing": "Trong 90 ngày",
+        "urgency": "deadline",
+        "title": "Bắt buộc trước khi hết 90 ngày",
+        "tasks": [
+          { "text": "Góp đủ vốn điều lệ đã đăng ký vào tài khoản công ty", "note": "Quá hạn → phải đăng ký giảm vốn hoặc bị phạt" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh thời hạn 90 ngày, mốc tính và loại hình áp dụng theo Luật Doanh nghiệp hiện hành.",
+          "\"Vào tài khoản công ty\": xác minh các hình thức góp vốn được phép. Guide gop-von-dieu-le liệt kê cả tài sản không phải tiền.",
+          "\"Quá hạn → phải đăng ký giảm vốn hoặc bị phạt\": xác minh hệ quả, thời hạn điều chỉnh vốn và mức phạt theo nghị định xử phạt đang có hiệu lực.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "thang-1-3",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "timing": "Tháng 1–3",
+        "urgency": "normal",
+        "title": "Hoàn thiện nền tảng vận hành",
+        "tasks": [
+          { "text": "Đăng ký con dấu doanh nghiệp (nếu cần)", "note": "DN tự quyết định có dùng con dấu hay không" },
+          { "text": "Đăng ký BHXH nếu có nhân viên", "note": "Phải đăng ký trong 30 ngày kể từ ngày ký HĐLĐ" },
+          { "text": "Nộp lệ phí môn bài năm đầu", "note": "Miễn năm đầu nếu thành lập trong năm — xác minh với kế toán" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ việc này.",
+          "Con dấu: việc ghi \"Đăng ký con dấu\" nhưng ghi chú nói \"DN tự quyết định\". Xác minh hiện còn phải đăng ký hoặc thông báo mẫu dấu không.",
+          "BHXH \"trong 30 ngày kể từ ngày ký HĐLĐ\": xác minh thời hạn, mốc tính và đối tượng theo Luật BHXH đang có hiệu lực.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "quy-dau-tien",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "timing": "Quý đầu tiên",
+        "urgency": "normal",
+        "title": "Bắt đầu chu kỳ khai thuế",
+        "tasks": [
+          { "text": "Nộp tờ khai GTGT đầu tiên (dù không phát sinh)", "note": "Khai quý: hạn ngày 30 của tháng đầu quý tiếp theo" },
+          { "text": "Tạm nộp thuế TNDN quý (nếu có lợi nhuận)", "note": "Hạn ngày 30 của tháng đầu quý tiếp theo" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Hạn tờ khai GTGT quý: mâu thuẫn trong app. Ở đây và legal-framework.json ghi \"ngày 30\", guide khai-thue-gtgt-theo-quy ghi 30/4, 31/7, 31/10, 31/01 (ngày cuối tháng). Cần xác minh.",
+          "Xác minh hạn tạm nộp TNDN quý.",
+          "\"Dù không phát sinh\": xác minh nghĩa vụ nộp tờ khai khi không có doanh thu.",
+          "\"Nếu có lợi nhuận\": xác minh điều kiện phải tạm nộp TNDN.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      }
+    ]
+  },
+  "annual": {
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Chu kỳ hàng năm: lịch deadline không được bỏ",
+    "intro": "Sau năm đầu, công việc trở thành lặp đi lặp lại. Nắm được lịch này là nắm được 80% việc cần làm.",
+    "legal_basis": [],
+    "todo_for_reviewer": [
+      "Con số \"80%\" không có nguồn. Cần nguồn hoặc bỏ."
+    ],
+    "items": [
+      {
+        "id": "thang-1",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "month": "Tháng 1",
+        "entries": [
+          { "text": "Nộp lệ phí môn bài", "deadline": "30/1", "type": "tax" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ cả mục này.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "dau-moi-quy",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "month": "T1, T4, T7, T10",
+        "entries": [
+          { "text": "Khai & nộp thuế GTGT quý", "deadline": "30 của tháng đó", "type": "tax" },
+          { "text": "Tạm nộp thuế TNDN quý", "deadline": "30 của tháng đó", "type": "tax" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Hạn GTGT quý \"30 của tháng đó\": mâu thuẫn trong app với guide khai-thue-gtgt-theo-quy (ghi ngày cuối tháng: 31/7, 31/10, 31/01). Cần xác minh.",
+          "Xác minh hạn tạm nộp TNDN quý và cách tính khi hạn trùng ngày nghỉ.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "hang-thang",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "month": "Hàng tháng",
+        "entries": [
+          { "text": "Khai GTGT tháng (nếu khai theo tháng)", "deadline": "Ngày 20 tháng tiếp theo", "type": "tax" },
+          { "text": "Đóng BHXH, BHYT, BHTN", "deadline": "Cuối tháng", "type": "hr" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh hạn khai GTGT tháng \"ngày 20 tháng tiếp theo\".",
+          "\"Đóng BHXH, BHYT, BHTN: cuối tháng\": xác minh hạn và phương thức đóng theo Luật BHXH đang có hiệu lực.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "thang-3",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "month": "Tháng 3",
+        "entries": [
+          { "text": "Quyết toán thuế TNDN năm trước", "deadline": "31/3", "type": "tax" },
+          { "text": "Nộp báo cáo tài chính năm trước", "deadline": "31/3", "type": "accounting" }
+        ],
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh hạn quyết toán TNDN và hạn nộp báo cáo tài chính, kể cả khi năm tài chính không trùng năm dương lịch.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      }
+    ]
+  },
+  "principle": {
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "label": "Nguyên tắc số 1",
+    "lead": "Nộp tờ khai đúng hạn quan trọng hơn nộp đúng số tiền.",
+    "body": "Nếu không chắc số thuế, nộp tờ khai trước — khai gần đúng rồi bổ sung sau còn hơn bỏ lỡ hạn và bị phạt tự động.",
+    "legal_basis": [],
+    "todo_for_reviewer": [
+      "Đây là lời khuyên thuế, không phải quy định. Câu \"khai gần đúng rồi bổ sung sau\" có thể bị hiểu là khuyến khích khai sai. Cần đối chiếu quy định xử phạt khai sai và khai bổ sung; nên viết lại hoặc bỏ.",
+      "\"Bị phạt tự động\": xác minh cách xử phạt khi chậm nộp tờ khai.",
+      "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+    ]
+  },
+  "mistakes": {
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "6 sai lầm phổ biến nhất trong năm đầu",
+    "intro": "Hầu hết đều tránh được nếu biết trước.",
+    "legal_basis": [],
+    "todo_for_reviewer": [
+      "\"Phổ biến nhất\" và \"Hầu hết đều tránh được\" chưa có nguồn. Cần nguồn hoặc viết lại.",
+      "Tiêu đề ghi cứng số 6. Nếu chỉ đăng một phần các mục thì sửa cho khớp."
+    ],
+    "items": [
+      {
+        "id": "khong-mo-so-ke-toan",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "❌",
+        "title": "Không mở sổ kế toán từ ngày đầu",
+        "consequence": "Khi thuế kiểm tra, không có bằng chứng. Phạt và truy thu cả phần không chứng minh được.",
+        "fix": "Thuê dịch vụ kế toán từ tháng đầu, dù chưa có doanh thu.",
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "\"Phạt và truy thu\": xác minh căn cứ xử phạt vi phạm kế toán và việc ấn định thuế.",
+          "\"Thuê dịch vụ kế toán từ tháng đầu\" là lời khuyên, không phải quy định. Cân nhắc viết trung tính.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "bo-qua-to-khai",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "❌",
+        "title": "Bỏ qua tờ khai thuế vì \"tháng này không bán được gì\"",
+        "consequence": "Tờ khai phải nộp đúng hạn kể cả khi doanh thu = 0. Phạt 2–5 triệu đồng/lần chậm.",
+        "fix": "Lịch nhắc hàng tháng/quý. Giao kế toán nộp tờ khai không phát sinh.",
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Mức phạt \"2–5 triệu đồng/lần chậm\": theo báo chí (chưa xác minh), mức phạt có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP). Cần mở văn bản gốc, xác minh từng khung phạt. legal-framework.json và 2 guide khai thuế GTGT cũng ghi \"2–5 triệu\".",
+          "Xác minh nghĩa vụ nộp tờ khai khi doanh thu bằng 0.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "chua-dang-ky-hoa-don-dien-tu",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "❌",
+        "title": "Chưa đăng ký hóa đơn điện tử đã bán hàng",
+        "consequence": "Doanh thu không có hóa đơn hợp lệ → không được ghi nhận chi phí bên mua → mất khách B2B.",
+        "fix": "Đăng ký HĐĐT tại hoadondientu.gdt.gov.vn trước khi nhận tiền đầu tiên.",
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+          "\"Trước khi nhận tiền đầu tiên\": xác minh thời điểm phải lập hóa đơn theo quy định.",
+          "\"Không được ghi nhận chi phí bên mua\": xác minh nhận định này.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "khong-gop-du-von",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "❌",
+        "title": "Không góp đủ vốn điều lệ sau 90 ngày",
+        "consequence": "Vi phạm Luật DN. Phải đăng ký giảm vốn hoặc bị phạt hành chính.",
+        "fix": "Chuyển tiền vào tài khoản công ty đúng số vốn đã đăng ký trong 90 ngày.",
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh thời hạn 90 ngày, nghĩa vụ điều chỉnh vốn khi quá hạn và mức phạt theo nghị định xử phạt đang có hiệu lực.",
+          "\"Chuyển tiền vào tài khoản công ty\": xác minh các hình thức góp vốn được phép.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      },
+      {
+        "id": "lan-tien-ca-nhan",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "❌",
+        "title": "Lẫn lộn tiền cá nhân và tiền công ty",
+        "consequence": "Không tính được doanh thu, chi phí thực. Kế toán không thể làm báo cáo. Thuế không đối chiếu được.",
+        "fix": "Mọi thu chi kinh doanh đều qua tài khoản ngân hàng công ty. Không dùng tài khoản cá nhân.",
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Xác minh có quy định bắt buộc nào không. Nếu chỉ là khuyến nghị thì ghi rõ.",
+          "Điền legal_basis nếu có quy định liên quan."
+        ]
+      },
+      {
+        "id": "thay-doi-khong-dang-ky",
+        "status": "draft",
+        "sample_notice": "MẪU – CHƯA XÁC MINH",
+        "icon": "❌",
+        "title": "Thay đổi địa chỉ, người đại diện mà không đăng ký",
+        "consequence": "Vi phạm Luật DN. Phạt 10–20 triệu đồng. Thư từ cơ quan thuế gửi sai địa chỉ.",
+        "fix": "Bất kỳ thay đổi nào → đăng ký tại dangkykinhdoanh.gov.vn trong 10 ngày.",
+        "legal_basis": [],
+        "todo_for_reviewer": [
+          "Mức phạt \"10–20 triệu đồng\": xác minh theo nghị định xử phạt đang có hiệu lực.",
+          "\"Trong 10 ngày\": xác minh thời hạn và mốc tính. Mâu thuẫn trong app: nơi ghi \"10 ngày\", nơi ghi \"10 ngày làm việc\".",
+          "\"Bất kỳ thay đổi nào\": xác minh thay đổi nào phải đăng ký, thay đổi nào chỉ cần thông báo.",
+          "Xác minh dangkykinhdoanh.gov.vn còn là cổng nộp hồ sơ.",
+          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+        ]
+      }
+    ]
+  }
+}
