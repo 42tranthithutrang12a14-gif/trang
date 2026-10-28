@@ -45,7 +45,10 @@
     "Xác nhận hạn tạm nộp từng quý (ngày 30 hay ngày khác)",
     "Xác nhận thuế suất TNDN cho doanh nghiệp siêu nhỏ hiện hành",
     "Xác nhận hạn nộp tờ khai quyết toán năm",
-    "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn"
+    "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
+    "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế TNDN 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025). Kiểm tra cả Thông tư 96/2015/TT-BTC và Luật Quản lý thuế 38/2019/QH14.",
+    "Mâu thuẫn trong app: guide này ghi doanh nghiệp siêu nhỏ chịu thuế suất 20%; legal-framework.json ghi DNSN doanh thu ≤ 3 tỷ được 15–17%.",
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025."
   ],
   "updated_at": "2026-10-23"
 }

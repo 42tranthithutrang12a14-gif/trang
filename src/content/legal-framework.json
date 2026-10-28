@@ -23,7 +23,8 @@
           "todo_for_reviewer": [
             "Xác nhận số điều khoản 47/113/30/12 còn đúng theo phiên bản hiện hành",
             "Bổ sung thêm nghĩa vụ cốt lõi khác với DNSN",
-            "Xác minh link vbpl.moj.gov.vn"
+            "Xác minh link vbpl.moj.gov.vn",
+            "Mâu thuẫn trong app: ở đây ghi \"10 ngày làm việc\"; /bat-dau và summary guide dang-ky-thay-doi-doanh-nghiep ghi \"10 ngày\"."
           ]
         },
         {
@@ -39,7 +40,8 @@
           ],
           "todo_for_reviewer": [
             "Xác nhận NĐ 01/2021 chưa bị thay thế bởi nghị định mới hơn",
-            "Bổ sung điều khoản cụ thể về phí, thời gian xử lý"
+            "Bổ sung điều khoản cụ thể về phí, thời gian xử lý",
+            "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025)."
           ]
         }
       ]
@@ -64,7 +66,8 @@
           "todo_for_reviewer": [
             "Xác nhận ngưỡng 50 tỷ theo quy định hiện hành (Thông tư 80/2021 hoặc văn bản mới hơn)",
             "Xác nhận thuế suất 8% (giảm thuế tạm thời) còn hiệu lực hay đã hết",
-            "Bổ sung điều kiện hoàn thuế GTGT nếu phù hợp với DNSN"
+            "Bổ sung điều kiện hoàn thuế GTGT nếu phù hợp với DNSN",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật 13/2008/QH12 có thể đã được thay bằng Luật Thuế GTGT số 48/2024/QH15 (từ 1/7/2025)."
           ]
         },
         {
@@ -81,7 +84,9 @@
           ],
           "todo_for_reviewer": [
             "Xác nhận hạn ngày 20 và ngày 30 theo TT 80/2021 còn đúng",
-            "Kiểm tra có văn bản gia hạn nào hiện hành không"
+            "Kiểm tra có văn bản gia hạn nào hiện hành không",
+            "Mâu thuẫn trong app: ở đây ghi hạn GTGT quý \"ngày 30\"; guide khai-thue-gtgt-theo-quy ghi ngày cuối tháng (31/7, 31/10, 31/01).",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật Quản lý thuế 38/2019/QH14 mà thông tư này hướng dẫn có thể đã có luật thay thế (năm 2025)."
           ]
         }
       ]
@@ -106,7 +111,9 @@
           "todo_for_reviewer": [
             "Xác nhận thuế suất ưu đãi 15–17% theo quy định hiện hành",
             "Xác nhận ngưỡng doanh thu được ưu đãi",
-            "Bổ sung quy định về quyết toán TNDN năm"
+            "Bổ sung quy định về quyết toán TNDN năm",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025).",
+            "Mâu thuẫn trong app: ở đây ghi DNSN doanh thu ≤ 3 tỷ được 15–17%; guide tam-nop-thue-tndn ghi DNSN chịu 20%."
           ]
         },
         {
@@ -148,7 +155,8 @@
           "todo_for_reviewer": [
             "Xác nhận mức phí 2tr/3tr còn đúng theo NĐ 22/2020 và văn bản mới hơn nếu có",
             "Xác nhận miễn năm đầu còn áp dụng không",
-            "Xác nhận hạn nộp 30/01"
+            "Xác nhận hạn nộp 30/01",
+            "Theo báo chí (chưa xác minh): Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì cả mục này đã hết hiệu lực."
           ]
         }
       ]
@@ -191,7 +199,8 @@
           "todo_for_reviewer": [
             "Xác nhận TT 132/2018 còn hiệu lực hay đã có thông tư thay thế",
             "Xác nhận tiêu chí DNSN theo Luật Hỗ trợ DNNVV 2017 còn đúng không",
-            "Bổ sung danh sách sổ kế toán bắt buộc tối thiểu"
+            "Bổ sung danh sách sổ kế toán bắt buộc tối thiểu",
+            "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc."
           ]
         }
       ]
@@ -217,7 +226,9 @@
           "todo_for_reviewer": [
             "Xác nhận NĐ 123/2020 chưa bị thay thế",
             "Xác nhận thời hạn lưu trữ 10 năm",
-            "Bổ sung quy trình đăng ký HĐĐT lần đầu cho DN mới"
+            "Bổ sung quy trình đăng ký HĐĐT lần đầu cho DN mới",
+            "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+            "Gợi ý của trợ lý AI (chưa xác minh): trước đó Nghị định 70/2025/NĐ-CP đã sửa đổi Nghị định 123/2020 (từ 1/6/2025)."
           ]
         },
         {
@@ -232,7 +243,8 @@
             "Cổng tra cứu hóa đơn: https://tracuuhoadon.gdt.gov.vn"
           ],
           "todo_for_reviewer": [
-            "Xác nhận TT 78/2021 còn hiệu lực hay đã có văn bản thay thế"
+            "Xác nhận TT 78/2021 còn hiệu lực hay đã có văn bản thay thế",
+            "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Thông tư 32/2025/TT-BTC (từ 1/6/2025)."
           ]
         }
       ]
@@ -257,7 +269,8 @@
           "todo_for_reviewer": [
             "Xác nhận NĐ 130/2018 còn hiệu lực hay đã bị thay thế bởi nghị định mới",
             "Xác nhận danh sách nhà cung cấp chữ ký số được cấp phép hiện tại",
-            "Bổ sung thời hạn hiệu lực chứng thư số điển hình (1–3 năm)"
+            "Bổ sung thời hạn hiệu lực chứng thư số điển hình (1–3 năm)",
+            "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy."
           ]
         },
         {
@@ -273,7 +286,8 @@
           ],
           "todo_for_reviewer": [
             "Xác nhận Luật GDĐT 20/2023 đã có hiệu lực từ 01/07/2024 chưa",
-            "Bổ sung các điểm thay đổi quan trọng so với luật cũ"
+            "Bổ sung các điểm thay đổi quan trọng so với luật cũ",
+            "Mâu thuẫn trong mục: số hiệu ghi luật cũ 51/2005/QH11 (chính mục ghi đã bị thay) nhưng ngày hiệu lực là của luật mới 20/2023/QH15. Nên dẫn luật đang có hiệu lực."
           ]
         }
       ]
@@ -317,7 +331,8 @@
           "todo_for_reviewer": [
             "Xác nhận Luật BHXH mới (thay thế 58/2014) đã có hiệu lực chưa",
             "Xác nhận tỷ lệ đóng BHXH/BHYT/BHTN hiện hành",
-            "Xác nhận mức lương tối thiểu làm căn cứ đóng BHXH"
+            "Xác nhận mức lương tối thiểu làm căn cứ đóng BHXH",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật 58/2014/QH13 có thể đã được thay bằng Luật Bảo hiểm xã hội số 41/2024/QH15 (từ 1/7/2025)."
           ]
         }
       ]
@@ -342,7 +357,8 @@
           "todo_for_reviewer": [
             "Xác nhận NĐ 125/2020 còn hiệu lực hay đã sửa đổi",
             "Xác nhận mức phạt cụ thể cho từng loại vi phạm",
-            "Bổ sung phạt chậm nộp tiền thuế (0.03%/ngày)"
+            "Bổ sung phạt chậm nộp tiền thuế (0.03%/ngày)",
+            "Mức phạt \"Khai thuế chậm: 2–5 triệu đồng\": theo báo chí (chưa xác minh), có thể đến 25 triệu tùy số ngày chậm. Cần mở văn bản gốc."
           ]
         },
         {
@@ -371,6 +387,7 @@
     "Xem xét bổ sung: Luật Hỗ trợ DNNVV 2017 (số 04/2017/QH14) — ưu đãi cho DNSN",
     "Xem xét bổ sung: Quy định về tài khoản ngân hàng doanh nghiệp",
     "Kiểm tra toàn bộ link vbpl.moj.gov.vn — một số ItemID có thể không chính xác",
-    "Xác nhận ngày effective_from và tình trạng hiệu lực của tất cả văn bản"
+    "Xác nhận ngày effective_from và tình trạng hiệu lực của tất cả văn bản",
+    "Các ItemID vbpl.moj.gov.vn và link congbao của Luật Doanh nghiệp 2020 được điền khi soạn mẫu, chưa ai mở kiểm tra. Không dùng làm căn cứ khi chưa kiểm tra."
   ]
 }

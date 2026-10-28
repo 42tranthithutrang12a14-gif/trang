@@ -49,7 +49,10 @@
     "Xác nhận tiêu chí doanh nghiệp siêu nhỏ theo quy định hiện hành",
     "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế",
     "Xác nhận người phụ trách kế toán có cần chứng chỉ hay không theo quy định mới nhất",
-    "Điền legal_basis với số điều khoản cụ thể và link chính thức"
+    "Điền legal_basis với số điều khoản cụ thể và link chính thức",
+    "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Summary và 3 mục nội dung đang dẫn Thông tư 132/2018.",
+    "Kiểm tra Thông tư 133/2016/TT-BTC còn hiệu lực không.",
+    "Giá dịch vụ kế toán \"1–5 triệu đồng/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số."
   ],
   "updated_at": "2026-10-23"
 }

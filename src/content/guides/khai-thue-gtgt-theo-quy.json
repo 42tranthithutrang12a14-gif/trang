@@ -37,7 +37,11 @@
     "Xác nhận hạn nộp chính xác cho từng quý (ngày cuối tháng hay ngày cụ thể)",
     "Xác nhận mức phạt chậm nộp theo Nghị định hiện hành",
     "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
-    "Kiểm tra link eTax còn hoạt động không"
+    "Kiểm tra link eTax còn hoạt động không",
+    "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế GTGT 13/2008/QH12 có thể đã được thay bằng Luật Thuế GTGT số 48/2024/QH15 (từ 1/7/2025); Luật Quản lý thuế 38/2019/QH14 có thể đã có luật thay thế (năm 2025). Kiểm tra cả Thông tư 80/2021/TT-BTC.",
+    "Mâu thuẫn trong app: guide này ghi hạn quý là 30/4, 31/7, 31/10, 31/01 (ngày cuối tháng); /bat-dau và legal-framework.json ghi \"ngày 30\".",
+    "Mức phạt chậm nộp tờ khai \"2.000.000 – 5.000.000 đồng\": theo báo chí (chưa xác minh), có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP).",
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025."
   ],
   "updated_at": "2026-10-23"
 }

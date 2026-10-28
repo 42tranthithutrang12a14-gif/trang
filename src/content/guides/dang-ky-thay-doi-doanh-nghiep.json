@@ -45,7 +45,10 @@
     "Xác nhận danh sách đầy đủ các loại thay đổi phải đăng ký",
     "Xác nhận mức phạt theo Nghị định 122/2021 còn hiệu lực không",
     "Kiểm tra link dangkykinhdoanh.gov.vn còn hoạt động không",
-    "Điền legal_basis với số điều khoản cụ thể"
+    "Điền legal_basis với số điều khoản cụ thể",
+    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025).",
+    "Theo báo chí (chưa xác minh): cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Gợi ý của trợ lý AI (chưa xác minh): Bộ Kế hoạch và Đầu tư đã hợp nhất vào Bộ Tài chính từ 3/2025. Guide đang ghi \"Sở Kế hoạch và Đầu tư\", mpi.gov.vn và email dkkd@mpi.gov.vn.",
+    "Mâu thuẫn trong app: summary ghi \"10 ngày\", mục Thời hạn ghi \"10 ngày làm việc\" và \"10 ngày\"; /bat-dau ghi \"10 ngày\"; legal-framework.json ghi \"10 ngày làm việc\"."
   ],
   "updated_at": "2026-10-23"
 }

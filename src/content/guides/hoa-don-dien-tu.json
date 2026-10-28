@@ -41,7 +41,10 @@
     "Xác nhận điều kiện chọn loại hóa đơn có mã / không mã",
     "Xác nhận mức phạt theo Nghị định 125/2020 còn đang có hiệu lực không",
     "Kiểm tra các link cổng HĐ ĐT còn hoạt động không",
-    "Điền legal_basis với số điều khoản cụ thể"
+    "Điền legal_basis với số điều khoản cụ thể",
+    "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 123/2020 đã được sửa đổi bởi Nghị định 70/2025/NĐ-CP (từ 1/6/2025); Thông tư 78/2021/TT-BTC có thể đã được thay bằng Thông tư 32/2025/TT-BTC.",
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025. official_sources.json của app đang ghi \"Cục Thuế\"."
   ],
   "updated_at": "2026-10-23"
 }
