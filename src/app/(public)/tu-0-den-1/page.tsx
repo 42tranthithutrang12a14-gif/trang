@@ -110,7 +110,7 @@ export default function Tu0Den1Page() {
       <div className="mt-10 rounded-xl border border-border bg-surface p-4">
         <p className="text-xs leading-relaxed text-muted">
           Thông tin mang tính tham khảo, không phải tư vấn pháp lý hay thuế. Thủ tục và ưu đãi có thể thay đổi.
-          Hãy đối chiếu văn bản gốc hoặc hỏi kế toán viên có chứng chỉ hành nghề trước khi làm.
+          Hãy đối chiếu văn bản gốc trước khi làm. Với phần rủi ro cao, có thể hỏi thêm kế toán viên có chứng chỉ hành nghề.
         </p>
       </div>
 

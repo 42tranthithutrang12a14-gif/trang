@@ -2,7 +2,8 @@
   "updated_at": "2026-10-28",
   "todo_for_reviewer": [
     "Toàn bộ nội dung trang /bat-dau được chuyển nguyên văn từ code cũ ngày 2026-10-28, chưa đối chiếu văn bản gốc.",
-    "Cách đăng: đổi status của phần (pillars, year_one, annual, mistakes) và của từng mục bên trong sang \"published\". Một phần chỉ hiện khi chính nó và ít nhất một mục bên trong đã published. principle là mục riêng."
+    "Cách đăng: đổi status của phần (pillars, year_one, annual, mistakes) và của từng mục bên trong sang \"published\". Một phần chỉ hiện khi chính nó và ít nhất một mục bên trong đã published. principle là mục riêng.",
+    "Ngày 2026-10-28 đã sửa 4 chỗ theo định hướng tự làm kế toán (xem AGENTS.md): việc \"Thuê kế toán\" ở Tuần 1–2, ghi chú lệ phí môn bài, cách tránh của 2 sai lầm đầu."
   ],
   "pillars": {
     "status": "draft",
@@ -102,14 +103,14 @@
         "tasks": [
           { "text": "Mở tài khoản ngân hàng doanh nghiệp", "note": "Cần: GCN ĐKDN + CCCD người đại diện" },
           { "text": "Đặt mua chữ ký số (USB Token hoặc Remote)", "note": "Cần để nộp thuế, BHXH, hồ sơ điện tử" },
-          { "text": "Thuê kế toán hoặc dịch vụ kế toán", "note": "DNSN: 1–5 triệu/tháng cho dịch vụ ngoài" }
+          { "text": "Chuẩn bị tự làm kế toán", "note": "Kiểm tra điều kiện tự làm; chọn cách ghi sổ: bảng tính hoặc phần mềm" }
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Giá dịch vụ kế toán \"1–5 triệu/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số. Guide so-sach-ke-toan cũng ghi \"1–5 triệu đồng/tháng\".",
+          "Theo định hướng tự làm kế toán (2026-10-28): đã thay việc \"Thuê kế toán hoặc dịch vụ kế toán\" (kèm giá 1–5 triệu/tháng chưa có nguồn) bằng \"Chuẩn bị tự làm kế toán\".",
           "Mở tài khoản ngân hàng: xác minh là bắt buộc hay khuyến nghị. Giấy tờ cần nộp do từng ngân hàng quy định.",
           "Chữ ký số: xác minh văn bản đang có hiệu lực về chữ ký số và việc dùng khi nộp thuế, BHXH.",
-          "Thuê kế toán: xác minh quy định về người làm kế toán cho DN siêu nhỏ.",
+          "Điểm then chốt: xác minh chủ DN siêu nhỏ có được tự làm kế toán cho công ty mình không, và điều kiện theo Luật Kế toán.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
@@ -162,7 +163,7 @@
         "tasks": [
           { "text": "Đăng ký con dấu doanh nghiệp (nếu cần)", "note": "DN tự quyết định có dùng con dấu hay không" },
           { "text": "Đăng ký BHXH nếu có nhân viên", "note": "Phải đăng ký trong 30 ngày kể từ ngày ký HĐLĐ" },
-          { "text": "Nộp lệ phí môn bài năm đầu", "note": "Miễn năm đầu nếu thành lập trong năm — xác minh với kế toán" }
+          { "text": "Nộp lệ phí môn bài năm đầu", "note": "Miễn năm đầu nếu thành lập trong năm — cần xác minh" }
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
@@ -298,11 +299,11 @@
         "icon": "❌",
         "title": "Không mở sổ kế toán từ ngày đầu",
         "consequence": "Khi thuế kiểm tra, không có bằng chứng. Phạt và truy thu cả phần không chứng minh được.",
-        "fix": "Thuê dịch vụ kế toán từ tháng đầu, dù chưa có doanh thu.",
+        "fix": "Tự mở sổ và ghi chép từ tháng đầu, dù chưa có doanh thu.",
         "legal_basis": [],
         "todo_for_reviewer": [
           "\"Phạt và truy thu\": xác minh căn cứ xử phạt vi phạm kế toán và việc ấn định thuế.",
-          "\"Thuê dịch vụ kế toán từ tháng đầu\" là lời khuyên, không phải quy định. Cân nhắc viết trung tính.",
+          "\"Tự mở sổ và ghi chép từ tháng đầu\" là lời khuyên, không phải quy định. Xác minh mốc phải mở sổ kế toán.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
@@ -313,7 +314,7 @@
         "icon": "❌",
         "title": "Bỏ qua tờ khai thuế vì \"tháng này không bán được gì\"",
         "consequence": "Tờ khai phải nộp đúng hạn kể cả khi doanh thu = 0. Phạt 2–5 triệu đồng/lần chậm.",
-        "fix": "Lịch nhắc hàng tháng/quý. Giao kế toán nộp tờ khai không phát sinh.",
+        "fix": "Đặt lịch nhắc hàng tháng/quý. Tự nộp tờ khai đúng hạn, kể cả tờ khai không phát sinh.",
         "legal_basis": [],
         "todo_for_reviewer": [
           "Mức phạt \"2–5 triệu đồng/lần chậm\": theo báo chí (chưa xác minh), mức phạt có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP). Cần mở văn bản gốc, xác minh từng khung phạt. legal-framework.json và 2 guide khai thuế GTGT cũng ghi \"2–5 triệu\".",

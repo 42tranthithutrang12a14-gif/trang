@@ -5,7 +5,8 @@
     "Cách đăng: đổi status của giai đoạn và của từng bước sang \"published\". Giai đoạn chỉ hiện khi chính nó và ít nhất một bước bên trong đã published.",
     "Mức cấp thiết (Bắt buộc / Nên làm / Tùy trường hợp) và hạn của từng bước cũng cần xác minh.",
     "Danh sách chỉ dành cho công ty TNHH và cổ phần. Cân nhắc có cần nhánh riêng cho hộ kinh doanh không.",
-    "Id của từng bước dùng để lưu dấu tích trên trình duyệt người dùng. Đổi id sẽ làm mất dấu tích đã lưu của bước đó."
+    "Id của từng bước dùng để lưu dấu tích trên trình duyệt người dùng. Đổi id sẽ làm mất dấu tích đã lưu của bước đó.",
+    "Ngày 2026-10-28 đã viết lại theo định hướng tự làm kế toán (xem AGENTS.md): bỏ các câu khuyên thuê hoặc hỏi kế toán; chỉ giữ gợi ý hỏi cơ quan thuế hoặc kế toán ở phần rủi ro cao. Điểm then chốt cần xác minh: chủ DN siêu nhỏ có được tự làm kế toán cho công ty mình không."
   ],
   "stages": [
     {
@@ -33,13 +34,14 @@
             "Một người làm chủ: công ty TNHH một thành viên.",
             "Từ 2 đến 50 người góp vốn: công ty TNHH hai thành viên trở lên.",
             "Chia vốn thành cổ phần, có ít nhất 3 cổ đông: công ty cổ phần.",
-            "Chưa chắc nên chọn loại nào thì hỏi kế toán hoặc luật sư trước."
+            "Ghi lại lựa chọn và lý do. Muốn đổi loại hình sau này thì phải làm thủ tục chuyển đổi."
           ],
           "links": [],
           "legal_basis": [],
           "todo_for_reviewer": [
             "Xác minh điều kiện từng loại hình (số thành viên, số cổ đông) theo Luật Doanh nghiệp đang có hiệu lực.",
             "Cân nhắc thêm doanh nghiệp tư nhân, hộ kinh doanh nếu phù hợp đối tượng của app.",
+            "Xác minh thủ tục chuyển đổi loại hình doanh nghiệp.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
         },
@@ -255,22 +257,24 @@
           "level": "bat-buoc",
           "title": "Khai phần thông tin đăng ký thuế",
           "prepare": [
-            "Người phụ trách kế toán (nếu đã có)",
+            "Người phụ trách kế toán (có thể là chính bạn, nếu đủ điều kiện)",
             "Năm tài chính",
             "Số lao động dự kiến",
-            "Phương pháp tính thuế GTGT dự kiến (hỏi kế toán)",
+            "Phương pháp tính thuế GTGT dự kiến (xem bước \"Xác định cách tính và kỳ khai thuế GTGT\")",
             "Địa chỉ nhận thông báo thuế, nếu khác trụ sở"
           ],
           "how": [
             "Điền đủ các ô về thuế trong giấy đề nghị đăng ký doanh nghiệp.",
             "Mã số doanh nghiệp được cấp cũng là mã số thuế, nên cơ quan thuế dùng phần này.",
-            "Chưa chắc ô nào thì hỏi kế toán trước khi nộp."
+            "Ô nào chưa rõ thì đọc hướng dẫn kèm biểu mẫu, hoặc gọi tổng đài hỗ trợ của cơ quan thuế."
           ],
           "links": [],
           "legal_basis": [],
           "todo_for_reviewer": [
             "Xác minh các trường thông tin thuế trong biểu mẫu hiện hành.",
             "Xác minh \"mã số doanh nghiệp đồng thời là mã số thuế\".",
+            "Xác minh chủ doanh nghiệp có được tự đứng tên người phụ trách kế toán không.",
+            "Bổ sung kênh hỗ trợ chính thức của cơ quan thuế (tổng đài, cổng hỏi đáp).",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
         },
@@ -514,7 +518,8 @@
           "title": "Xác định cách tính và kỳ khai thuế GTGT",
           "prepare": [],
           "how": [
-            "Hỏi kế toán công ty áp dụng phương pháp khấu trừ hay trực tiếp.",
+            "Đọc tiêu chí của hai phương pháp: khấu trừ và trực tiếp. Xác định công ty thuộc phương pháp nào.",
+            "Chưa chắc thì gọi tổng đài hỗ trợ của cơ quan thuế để hỏi.",
             "Nếu phải đăng ký thì nộp mẫu đăng ký qua tài khoản thuế điện tử.",
             "Ghi lại kỳ khai thuế: theo tháng hay theo quý."
           ],
@@ -523,6 +528,7 @@
           "todo_for_reviewer": [
             "Xác minh phương pháp áp dụng cho DN mới thành lập, mẫu đăng ký và thời hạn nộp.",
             "Xác minh tiêu chí khai theo tháng hay theo quý cho DN mới.",
+            "Bổ sung tiêu chí chọn phương pháp tính thuế GTGT theo luật đang có hiệu lực, để người dùng tự xác định.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
         },
@@ -557,18 +563,23 @@
           "status": "draft",
           "sample_notice": "MẪU – CHƯA XÁC MINH",
           "level": "bat-buoc",
-          "title": "Chọn người làm kế toán và mở sổ kế toán",
-          "prepare": [],
+          "title": "Tự làm kế toán: mở sổ và ghi chép",
+          "prepare": [
+            "Máy tính có bảng tính (Excel, Google Sheets) hoặc phần mềm kế toán",
+            "Nơi lưu hóa đơn, chứng từ: bản giấy và bản scan"
+          ],
           "how": [
-            "Chọn: thuê nhân viên kế toán hoặc dịch vụ kế toán.",
-            "Thống nhất chế độ kế toán công ty áp dụng.",
-            "Mở sổ kế toán. Lưu mọi hóa đơn, chứng từ từ ngày đầu."
+            "Kiểm tra mình có đủ điều kiện tự làm kế toán cho công ty không.",
+            "Chọn chế độ kế toán áp dụng cho doanh nghiệp siêu nhỏ.",
+            "Chọn cách ghi sổ: bảng tính theo mẫu hoặc phần mềm kế toán.",
+            "Mở sổ kế toán. Ghi mọi khoản thu, chi và lưu mọi hóa đơn, chứng từ từ ngày đầu.",
+            "Chỉ thuê dịch vụ kế toán khi không đủ điều kiện tự làm, hoặc khi muốn nhờ kiểm tra báo cáo tài chính cuối năm."
           ],
           "links": [],
           "legal_basis": [],
           "todo_for_reviewer": [
             "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc.",
-            "Xác minh điều kiện người làm kế toán, kế toán trưởng cho DN siêu nhỏ.",
+            "Điểm then chốt của cả app: xác minh chủ DN siêu nhỏ có được tự làm kế toán cho công ty mình không, và điều kiện (trình độ chuyên môn, người không được làm kế toán, kế toán trưởng) theo Luật Kế toán và nghị định hướng dẫn. Nếu không được thì phải sửa bước này.",
             "Xác minh mốc phải mở sổ kế toán.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
@@ -682,7 +693,7 @@
           "how": [
             "Lập hóa đơn điện tử cho giao dịch theo quy định.",
             "Thu tiền qua tài khoản công ty.",
-            "Gửi chứng từ cho kế toán ghi sổ.",
+            "Ghi giao dịch vào sổ kế toán ngay trong ngày, lưu hóa đơn và chứng từ.",
             "Xem tiếp việc cần làm trong năm đầu ở trang Bắt đầu."
           ],
           "links": [],
@@ -700,7 +711,7 @@
     "status": "draft",
     "sample_notice": "MẪU – CHƯA XÁC MINH",
     "title": "Ưu đãi và lợi thế nên biết",
-    "intro": "Những ưu đãi, hỗ trợ doanh nghiệp nhỏ có thể được hưởng. Điều kiện cụ thể cần hỏi kế toán.",
+    "intro": "Những ưu đãi, hỗ trợ doanh nghiệp nhỏ có thể được hưởng. Tự kiểm tra điều kiện của từng mục trước khi áp dụng.",
     "legal_basis": [],
     "todo_for_reviewer": [
       "Mọi ưu đãi trong phần này do trợ lý AI soạn từ hiểu biết chung, chưa đối chiếu văn bản gốc. Ưu đãi thay đổi thường xuyên; xác minh từng mục trước khi đăng.",
@@ -716,7 +727,7 @@
         "who": "Doanh nghiệp có tổng doanh thu năm không quá 50 tỷ đồng.",
         "benefit": "Thuế suất thấp hơn mức phổ thông 20%: 15% nếu tổng doanh thu năm không quá 3 tỷ đồng, 17% nếu trên 3 tỷ đến 50 tỷ đồng.",
         "how": [
-          "Kế toán áp dụng khi tạm nộp và quyết toán thuế TNDN.",
+          "Áp dụng thuế suất này khi tự tính số thuế tạm nộp và khi quyết toán thuế TNDN.",
           "Ghi sổ đầy đủ để chứng minh doanh thu."
         ],
         "links": [],
@@ -736,7 +747,8 @@
         "who": "Doanh nghiệp nhỏ và vừa thành lập mới.",
         "benefit": "Miễn thuế TNDN trong 3 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu.",
         "how": [
-          "Hỏi kế toán công ty có đủ điều kiện không.",
+          "Tự đối chiếu công ty với điều kiện được miễn.",
+          "Đây là khoản lớn: chưa chắc mình đủ điều kiện thì hỏi cơ quan thuế quản lý hoặc kế toán trước khi áp dụng, để tránh bị truy thu.",
           "Vẫn khai thuế đúng hạn trong thời gian được miễn."
         ],
         "links": [],
@@ -757,13 +769,14 @@
         "benefit": "Lệ phí môn bài được chấm dứt thu từ ngày 1/1/2026.",
         "how": [
           "Không cần làm gì thêm.",
-          "Nhờ kế toán kiểm tra các năm trước 2026 đã nộp đủ chưa."
+          "Tự tra cứu trên tài khoản thuế điện tử xem các năm trước 2026 đã nộp đủ chưa."
         ],
         "links": [],
         "legal_basis": [],
         "todo_for_reviewer": [
           "Theo báo chí (chưa xác minh): Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc.",
           "Nếu đúng thì sửa các chỗ khác trong app còn nhắc lệ phí môn bài (/bat-dau, legal-framework.json).",
+          "Xác minh cách tra cứu nghĩa vụ thuế đã nộp trên thuế điện tử.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
@@ -776,7 +789,7 @@
         "who": "Doanh nghiệp mới thành lập và doanh nghiệp có doanh thu năm trước không quá 50 tỷ đồng.",
         "benefit": "Khai 4 lần mỗi năm thay vì 12 lần.",
         "how": [
-          "Kế toán chọn kỳ khai theo quý khi đăng ký thuế hoặc khi khai lần đầu."
+          "Chọn kỳ khai theo quý khi đăng ký thuế hoặc khi nộp tờ khai lần đầu."
         ],
         "links": [],
         "legal_basis": [],
@@ -793,10 +806,10 @@
         "level": "nen-biet",
         "title": "Chế độ kế toán đơn giản cho doanh nghiệp siêu nhỏ",
         "who": "Doanh nghiệp siêu nhỏ.",
-        "benefit": "Được áp dụng chế độ kế toán đơn giản hơn. Có thể thuê dịch vụ kế toán thay vì tuyển kế toán riêng.",
+        "benefit": "Được áp dụng chế độ kế toán đơn giản hơn, nên chủ doanh nghiệp dễ tự ghi sổ.",
         "how": [
           "Xác định công ty có phải doanh nghiệp siêu nhỏ không (theo số lao động và doanh thu hoặc vốn).",
-          "Thống nhất với kế toán chế độ kế toán áp dụng."
+          "Chọn chế độ kế toán áp dụng, dùng mẫu sổ và mẫu báo cáo theo chế độ đó."
         ],
         "links": [],
         "legal_basis": [],
@@ -873,7 +886,8 @@
         "who": "Doanh nghiệp hoạt động trong ngành hoặc địa bàn được ưu đãi.",
         "benefit": "Có thể được thuế suất TNDN thấp hơn, hoặc được miễn, giảm thuế có thời hạn.",
         "how": [
-          "Khi chọn ngành nghề và địa điểm, hỏi kế toán có ưu đãi nào áp dụng không."
+          "Khi chọn ngành nghề và địa điểm, tự tra danh mục ngành, địa bàn được ưu đãi.",
+          "Chưa chắc thì hỏi cơ quan thuế quản lý trước khi áp dụng."
         ],
         "links": [],
         "legal_basis": [],

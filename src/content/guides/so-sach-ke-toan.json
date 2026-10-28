@@ -17,7 +17,7 @@
     },
     {
       "heading": "Ai làm kế toán?",
-      "content": "Doanh nghiệp có 3 lựa chọn:\n\n1. Kế toán nội bộ (thuê nhân viên kế toán):\n   → Phù hợp khi có nhiều nghiệp vụ phát sinh\n   → Chi phí: lương nhân viên + BHXH\n\n2. Thuê dịch vụ kế toán ngoài:\n   → Phù hợp cho doanh nghiệp siêu nhỏ ít giao dịch\n   → Công ty dịch vụ kế toán làm báo cáo tháng/quý/năm\n   → Chi phí: 1–5 triệu đồng/tháng tùy phức tạp\n\n3. Chủ doanh nghiệp tự làm (nếu đủ kiến thức):\n   → Có thể dùng phần mềm kế toán đơn giản\n   → Nên học qua khóa đào tạo hoặc thuê tư vấn hỗ trợ ban đầu\n\n⚠️ Người phụ trách kế toán bắt buộc phải có chứng chỉ hành nghề hoặc bằng kế toán theo quy định."
+      "content": "Sổ tay này hướng dẫn chủ doanh nghiệp tự làm kế toán. Có 3 cách:\n\n1. Tự làm (cách sổ tay hướng dẫn):\n   → Ghi sổ bằng bảng tính theo mẫu hoặc phần mềm kế toán đơn giản\n   → Làm theo các hướng dẫn từng bước trong sổ tay\n   → Trước khi bắt đầu: kiểm tra mình có đủ điều kiện làm kế toán cho công ty không (xem lưu ý cuối mục)\n\n2. Thuê dịch vụ kế toán ngoài (để tham khảo):\n   → Khi không đủ điều kiện tự làm, hoặc muốn nhờ kiểm tra báo cáo tài chính cuối năm\n   → Chi phí: 1–5 triệu đồng/tháng tùy phức tạp\n\n3. Tuyển nhân viên kế toán (để tham khảo):\n   → Khi có nhiều nghiệp vụ phát sinh\n   → Chi phí: lương nhân viên + BHXH\n\n⚠️ Người phụ trách kế toán bắt buộc phải có chứng chỉ hành nghề hoặc bằng kế toán theo quy định."
     },
     {
       "heading": "Các sổ kế toán cần mở",
@@ -52,7 +52,9 @@
     "Điền legal_basis với số điều khoản cụ thể và link chính thức",
     "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Summary và 3 mục nội dung đang dẫn Thông tư 132/2018.",
     "Kiểm tra Thông tư 133/2016/TT-BTC còn hiệu lực không.",
-    "Giá dịch vụ kế toán \"1–5 triệu đồng/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số."
+    "Giá dịch vụ kế toán \"1–5 triệu đồng/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số.",
+    "Ngày 2026-10-28 đã viết lại mục \"Ai làm kế toán?\" theo định hướng tự làm kế toán (xem AGENTS.md); giữ nguyên câu ⚠️ về chứng chỉ và con số chi phí.",
+    "Điểm then chốt: câu \"Người phụ trách kế toán bắt buộc phải có chứng chỉ hành nghề hoặc bằng kế toán\" nếu đúng thì mâu thuẫn với hướng tự làm kế toán. Ưu tiên xác minh."
   ],
-  "updated_at": "2026-10-23"
+  "updated_at": "2026-10-28"
 }
