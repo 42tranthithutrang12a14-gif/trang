@@ -1,0 +1,368 @@
+[
+  {
+    "id": "company_type",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 1,
+    "is_conditional": false,
+    "text": "Công ty bạn thuộc loại hình nào?",
+    "type": "single",
+    "options": [
+      { "label": "Doanh nghiệp tư nhân", "value": "dntn" },
+      { "label": "TNHH một thành viên", "value": "tnhh_1tv" },
+      { "label": "TNHH hai thành viên trở lên", "value": "tnhh_2tv" },
+      { "label": "Cổ phần", "value": "co_phan" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "founding_date",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 2,
+    "is_conditional": false,
+    "text": "Công ty được cấp Giấy chứng nhận đăng ký doanh nghiệp ngày nào?",
+    "type": "date",
+    "options": [],
+    "help_text": "Xem trên Giấy chứng nhận đăng ký doanh nghiệp bản gốc. Nếu chỉ nhớ tháng và năm, có thể bỏ qua ngày."
+  },
+  {
+    "id": "from_household",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 3,
+    "is_conditional": false,
+    "text": "Công ty có chuyển đổi từ hộ kinh doanh không?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không", "value": "khong" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "converted_date",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 3.5,
+    "is_conditional": true,
+    "text": "Ngày chuyển đổi từ hộ kinh doanh?",
+    "type": "date",
+    "options": [],
+    "show_if": { "field": "from_household", "op": "eq", "value": "co" },
+    "help_text": "Ngày ghi trên Giấy chứng nhận đăng ký doanh nghiệp sau khi chuyển đổi."
+  },
+  {
+    "id": "sector",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 4,
+    "is_conditional": false,
+    "text": "Ngành kinh doanh chính?",
+    "type": "single",
+    "options": [
+      { "label": "Thương mại (mua bán hàng hóa)", "value": "thuong_mai" },
+      { "label": "Dịch vụ", "value": "dich_vu" },
+      { "label": "Sản xuất", "value": "san_xuat" },
+      { "label": "Xây dựng", "value": "xay_dung" },
+      { "label": "Nông, lâm, thủy sản", "value": "nong_lam_thuy_san" },
+      { "label": "Khác", "value": "khac" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "revenue_band",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 5,
+    "is_conditional": false,
+    "text": "Doanh thu năm gần nhất (hoặc dự kiến năm nay)?",
+    "type": "single",
+    "options": [
+      { "label": "Chưa có doanh thu", "value": "chua_co" },
+      { "label": "Dưới 1 tỷ đồng", "value": "duoi_1_ty" },
+      { "label": "Từ 1 đến 3 tỷ đồng", "value": "1_3_ty" },
+      { "label": "Từ 3 đến 10 tỷ đồng", "value": "3_10_ty" },
+      { "label": "Trên 10 tỷ đồng", "value": "tren_10_ty" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "insured_headcount",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 6,
+    "is_conditional": false,
+    "text": "Bao nhiêu người đang đóng BHXH qua công ty, kể cả giám đốc?",
+    "type": "single",
+    "options": [
+      { "label": "0 người (chưa đóng BHXH)", "value": "0" },
+      { "label": "1 đến 5 người", "value": "1_5" },
+      { "label": "6 đến 10 người", "value": "6_10" },
+      { "label": "Trên 10 người", "value": "tren_10" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "pays_wages",
+    "group": "A",
+    "group_label": "Thông tin chung",
+    "order": 7,
+    "is_conditional": false,
+    "text": "Công ty có trả lương hoặc tiền công cho ai không?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không", "value": "khong" }
+    ],
+    "help_text": "Bao gồm cả trả thù lao cho giám đốc, người thân hoặc cộng tác viên."
+  },
+  {
+    "id": "vat_method",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 8,
+    "is_conditional": false,
+    "text": "Thuế GTGT công ty tính theo cách nào?",
+    "type": "single",
+    "options": [
+      { "label": "Khấu trừ (kê khai đầu vào, đầu ra)", "value": "khau_tru" },
+      { "label": "Tính trực tiếp trên doanh thu", "value": "truc_tiep_doanh_thu" }
+    ],
+    "help_text": "Xem trong Giấy chứng nhận đăng ký thuế hoặc tờ khai thuế GTGT gần nhất."
+  },
+  {
+    "id": "vat_period",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 9,
+    "is_conditional": false,
+    "text": "Công ty khai thuế GTGT theo tháng hay theo quý?",
+    "type": "single",
+    "options": [
+      { "label": "Theo tháng", "value": "thang" },
+      { "label": "Theo quý", "value": "quy" }
+    ],
+    "show_if": { "field": "vat_method", "op": "eq", "value": "khau_tru" },
+    "help_text": "Doanh nghiệp mới thành lập thường khai theo quý trong 2 năm đầu."
+  },
+  {
+    "id": "cit_method",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 10,
+    "is_conditional": false,
+    "text": "Thuế thu nhập doanh nghiệp tính theo cách nào?",
+    "type": "single",
+    "options": [
+      { "label": "Theo thu nhập tính thuế (doanh thu trừ chi phí)", "value": "thu_nhap_tinh_thue" },
+      { "label": "Theo tỷ lệ trên doanh thu", "value": "ty_le_doanh_thu" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "digital_signature",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 11,
+    "is_conditional": false,
+    "text": "Công ty có chữ ký số còn hạn không?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không (chưa có hoặc đã hết hạn)", "value": "khong" }
+    ],
+    "help_text": "Chữ ký số (USB Token hoặc chữ ký số từ xa) dùng để nộp tờ khai thuế điện tử."
+  },
+  {
+    "id": "e_invoice",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 12,
+    "is_conditional": false,
+    "text": "Công ty đã dùng hóa đơn điện tử chưa?",
+    "type": "single",
+    "options": [
+      { "label": "Có, đã đăng ký và đang dùng", "value": "co" },
+      { "label": "Chưa", "value": "khong" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "last_filings_on_time",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 13,
+    "is_conditional": false,
+    "text": "Các tờ khai thuế kỳ gần nhất đã nộp đúng hạn chưa?",
+    "type": "single",
+    "options": [
+      { "label": "Đúng hạn", "value": "dung_han" },
+      { "label": "Trễ hạn", "value": "tre_han" },
+      { "label": "Chưa nộp", "value": "chua_nop" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "tax_debt",
+    "group": "B",
+    "group_label": "Thuế và hóa đơn",
+    "order": 14,
+    "is_conditional": false,
+    "text": "Công ty có đang nợ tiền thuế hoặc tiền phạt không?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không", "value": "khong" }
+    ],
+    "help_text": "Kiểm tra trên Cổng thuế điện tử eTax Mobile hoặc hỏi cơ quan thuế quản lý công ty."
+  },
+  {
+    "id": "accounting_regime",
+    "group": "C",
+    "group_label": "Kế toán",
+    "order": 15,
+    "is_conditional": false,
+    "text": "Công ty áp dụng chế độ kế toán nào?",
+    "type": "single",
+    "options": [
+      { "label": "Chế độ dành cho doanh nghiệp siêu nhỏ", "value": "sieu_nho" },
+      { "label": "Chế độ dành cho doanh nghiệp nhỏ và vừa", "value": "dnnvv" },
+      { "label": "Chưa chọn chế độ kế toán", "value": "chua_chon" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "bookkeeper",
+    "group": "C",
+    "group_label": "Kế toán",
+    "order": 16,
+    "is_conditional": false,
+    "text": "Ai đang ghi sổ kế toán?",
+    "type": "single",
+    "options": [
+      { "label": "Chính tôi (giám đốc) tự làm", "value": "tu_lam" },
+      { "label": "Người thân trong gia đình", "value": "nguoi_nha" },
+      { "label": "Nhân viên kế toán của công ty", "value": "nhan_vien" },
+      { "label": "Thuê dịch vụ kế toán ngoài", "value": "thue_ngoai" },
+      { "label": "Chưa có ai ghi sổ", "value": "chua_co_ai" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "books_medium",
+    "group": "C",
+    "group_label": "Kế toán",
+    "order": 17,
+    "is_conditional": false,
+    "text": "Sổ sách đang giữ bằng gì?",
+    "type": "single",
+    "options": [
+      { "label": "Chưa có sổ sách", "value": "khong_co" },
+      { "label": "Sổ giấy viết tay", "value": "giay" },
+      { "label": "File Excel", "value": "excel" },
+      { "label": "Phần mềm kế toán", "value": "phan_mem" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "annual_reports_last_year",
+    "group": "C",
+    "group_label": "Kế toán",
+    "order": 18,
+    "is_conditional": false,
+    "text": "Năm trước công ty đã nộp báo cáo tài chính và quyết toán thuế chưa?",
+    "type": "single",
+    "options": [
+      { "label": "Đã nộp đầy đủ", "value": "da_nop" },
+      { "label": "Chưa nộp hoặc nộp thiếu", "value": "chua_nop" },
+      { "label": "Chưa đến hạn (công ty mới, chưa có năm đầy đủ)", "value": "chua_den_han" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "capital_paid",
+    "group": "D",
+    "group_label": "Vốn, giấy tờ, hoạt động",
+    "order": 19,
+    "is_conditional": false,
+    "text": "Đã góp đủ vốn điều lệ như đã đăng ký chưa?",
+    "type": "single",
+    "options": [
+      { "label": "Đã góp đủ", "value": "du" },
+      { "label": "Chưa góp đủ", "value": "chua_du" }
+    ],
+    "help_text": "Vốn điều lệ là số tiền cam kết góp vào công ty, ghi trong Giấy chứng nhận đăng ký doanh nghiệp."
+  },
+  {
+    "id": "sells_online",
+    "group": "D",
+    "group_label": "Vốn, giấy tờ, hoạt động",
+    "order": 20,
+    "is_conditional": false,
+    "text": "Công ty có bán hàng online hoặc trên sàn thương mại điện tử?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không", "value": "khong" }
+    ],
+    "help_text": "Bao gồm bán qua website, mạng xã hội, Shopee, TikTok Shop, Lazada và các nền tảng khác."
+  },
+  {
+    "id": "import_export",
+    "group": "D",
+    "group_label": "Vốn, giấy tờ, hoạt động",
+    "order": 21,
+    "is_conditional": false,
+    "text": "Công ty có xuất khẩu hoặc nhập khẩu?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không", "value": "khong" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "rents_premises",
+    "group": "D",
+    "group_label": "Vốn, giấy tờ, hoạt động",
+    "order": 22,
+    "is_conditional": false,
+    "text": "Có thuê địa điểm kinh doanh (văn phòng, cửa hàng, kho)?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không (dùng địa chỉ nhà riêng)", "value": "khong" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "recent_changes",
+    "group": "D",
+    "group_label": "Vốn, giấy tờ, hoạt động",
+    "order": 23,
+    "is_conditional": false,
+    "text": "12 tháng qua có đổi địa chỉ, người đại diện, ngành nghề hoặc vốn?",
+    "type": "single",
+    "options": [
+      { "label": "Có", "value": "co" },
+      { "label": "Không", "value": "khong" }
+    ],
+    "help_text": ""
+  },
+  {
+    "id": "changes_registered",
+    "group": "D",
+    "group_label": "Vốn, giấy tờ, hoạt động",
+    "order": 23.5,
+    "is_conditional": true,
+    "text": "Đã đăng ký các thay đổi đó với Phòng Đăng ký kinh doanh chưa?",
+    "type": "single",
+    "options": [
+      { "label": "Đã đăng ký", "value": "roi" },
+      { "label": "Chưa đăng ký", "value": "chua" }
+    ],
+    "show_if": { "field": "recent_changes", "op": "eq", "value": "co" },
+    "help_text": ""
+  }
+]

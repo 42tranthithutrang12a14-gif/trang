@@ -1,0 +1,49 @@
+{
+  "slug": "gop-von-dieu-le",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Góp đủ vốn điều lệ đã đăng ký",
+  "category": "phap-ly",
+  "summary": "Thành viên/cổ đông phải góp đủ số vốn đã cam kết trong Điều lệ công ty trong thời hạn quy định kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp. Chưa góp đủ vốn có thể dẫn đến vi phạm pháp luật và phải đăng ký giảm vốn điều lệ.",
+  "related_rules": ["RISK_CAPITAL_NOT_PAID"],
+  "body_sections": [
+    {
+      "heading": "Thời hạn góp vốn",
+      "content": "Thời hạn góp vốn điều lệ theo Luật Doanh nghiệp 2020:\n\n• Công ty TNHH (1 thành viên hoặc 2+ thành viên): phải góp đủ trong vòng 90 ngày kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp\n\n• Công ty cổ phần: cổ đông sáng lập phải thanh toán đủ số cổ phần đã đăng ký mua trong 90 ngày kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp\n\n⚠️ Thời hạn 90 ngày cần kế toán viên xác minh theo điều khoản hiện hành."
+    },
+    {
+      "heading": "Góp vốn bằng gì?",
+      "content": "Tài sản góp vốn có thể là:\n• Tiền mặt hoặc tiền chuyển khoản vào tài khoản công ty\n• Vàng, ngoại tệ\n• Quyền sử dụng đất, quyền sở hữu trí tuệ\n• Công nghệ, bí quyết kỹ thuật (phải được định giá)\n• Tài sản khác có thể định giá được bằng tiền\n\nTài sản không phải tiền mặt phải được thành viên/cổ đông góp vốn đồng thuận định giá. Đối với công ty TNHH và cổ phần, có thể cần tổ chức thẩm định giá."
+    },
+    {
+      "heading": "Nếu chưa góp đủ vốn sau 90 ngày",
+      "content": "Khi hết 90 ngày mà chưa góp đủ:\n\n1. Đăng ký điều chỉnh giảm vốn điều lệ bằng số vốn thực góp (trong vòng 30 ngày tiếp theo)\n   → Nộp hồ sơ thay đổi đăng ký doanh nghiệp tại: https://dangkykinhdoanh.gov.vn\n\n2. Nếu không đăng ký giảm vốn trong hạn:\n   → Có thể bị phạt hành chính\n   → Phần vốn chưa góp vẫn tính là nợ của thành viên với công ty\n\n3. Nếu có thành viên rút lui (không góp):\n   → Phần vốn tương ứng có thể được chuyển cho thành viên khác hoặc người khác"
+    },
+    {
+      "heading": "Cách đăng ký giảm vốn điều lệ",
+      "content": "1. Chuẩn bị hồ sơ:\n   - Thông báo thay đổi nội dung đăng ký doanh nghiệp (có chữ ký số)\n   - Biên bản họp Hội đồng thành viên về việc giảm vốn (nếu là công ty TNHH)\n   - Quyết định của chủ sở hữu (nếu là công ty TNHH 1 thành viên)\n\n2. Nộp trực tuyến tại:\n   → https://dangkykinhdoanh.gov.vn\n   (Cổng thông tin quốc gia về đăng ký doanh nghiệp)\n\n3. Phí: theo quy định hiện hành của Bộ Kế hoạch và Đầu tư\n\n4. Thời gian xử lý: thường 3 ngày làm việc"
+    },
+    {
+      "heading": "Mức phạt nếu vi phạm",
+      "content": "• Không đăng ký giảm vốn sau khi quá hạn góp: phạt hành chính\n• Kê khai vốn điều lệ không đúng thực tế: phạt theo Nghị định xử phạt vi phạm về đăng ký doanh nghiệp\n\n⚠️ Mức phạt cụ thể cần kế toán viên xác minh."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Luật Doanh nghiệp 2020 số 59/2020/QH14:\n  - Điều 47 (góp vốn TNHH 2+ thành viên)\n  - Điều 75 (góp vốn TNHH 1 thành viên)\n  - Điều 113 (góp vốn công ty cổ phần)\n• Nghị định 01/2021/NĐ-CP về đăng ký doanh nghiệp\n• Nghị định 122/2021/NĐ-CP về xử phạt vi phạm đăng ký doanh nghiệp\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Đăng ký doanh nghiệp trực tuyến: https://dangkykinhdoanh.gov.vn\n• Cục Quản lý đăng ký kinh doanh: https://dangkykinhdoanh.gov.vn/vn/Pages/trangchu.aspx\n• Tra cứu thông tin doanh nghiệp: https://dangkykinhdoanh.gov.vn (mục Tra cứu)\n• Hỗ trợ: (024) 3736 6566 hoặc email dkkd@mpi.gov.vn"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận thời hạn góp vốn 90 ngày cho TNHH và cổ phần theo Luật DN 2020",
+    "Xác nhận thời hạn 30 ngày đăng ký giảm vốn sau khi quá hạn",
+    "Xác nhận mức phạt theo Nghị định 122/2021 (hoặc văn bản thay thế)",
+    "Kiểm tra link dangkykinhdoanh.gov.vn còn hoạt động",
+    "Điền legal_basis với số điều khoản cụ thể",
+    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025).",
+    "Gợi ý của trợ lý AI (chưa xác minh): Bộ Kế hoạch và Đầu tư đã hợp nhất vào Bộ Tài chính từ 3/2025. Guide đang ghi \"Bộ Kế hoạch và Đầu tư\" và email dkkd@mpi.gov.vn."
+  ],
+  "updated_at": "2026-10-23"
+}

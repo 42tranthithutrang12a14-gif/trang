@@ -1,0 +1,50 @@
+{
+  "slug": "hoa-don-dien-tu",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Đăng ký và sử dụng hóa đơn điện tử",
+  "category": "thue",
+  "summary": "Từ ngày 01/7/2022, toàn bộ doanh nghiệp bắt buộc chuyển sang sử dụng hóa đơn điện tử (e-invoice). Doanh nghiệp chưa đăng ký hoặc vẫn dùng hóa đơn giấy có thể bị phạt và hóa đơn không có giá trị pháp lý.",
+  "related_rules": ["RISK_NO_E_INVOICE"],
+  "body_sections": [
+    {
+      "heading": "Hóa đơn điện tử là gì?",
+      "content": "Hóa đơn điện tử (HĐ ĐT) là hóa đơn được tạo, lập, gửi, nhận và lưu trữ bằng phương tiện điện tử, có giá trị pháp lý tương đương hóa đơn giấy.\n\nTừ 01/7/2022, toàn bộ doanh nghiệp, tổ chức, hộ kinh doanh bắt buộc dùng HĐ ĐT theo Nghị định 123/2020/NĐ-CP."
+    },
+    {
+      "heading": "Hai loại hóa đơn điện tử",
+      "content": "1. Hóa đơn điện tử có mã của cơ quan thuế (có mã):\n   • Phải gửi lên Tổng cục Thuế để lấy mã trước khi gửi cho khách hàng\n   • Áp dụng cho: doanh nghiệp mới thành lập, doanh nghiệp rủi ro cao theo đánh giá của cơ quan thuế, hộ kinh doanh\n   • Ưu điểm: đơn giản, miễn phí cổng kết nối thuế\n\n2. Hóa đơn điện tử không có mã (không mã):\n   • Gửi thẳng cho khách hàng, báo cáo định kỳ với cơ quan thuế\n   • Áp dụng cho: doanh nghiệp đủ điều kiện theo quy định\n   • Cần kết nối qua đơn vị trung gian (MISA, VNPT Invoice, FPT Invoice, v.v.)"
+    },
+    {
+      "heading": "Cách đăng ký sử dụng hóa đơn điện tử",
+      "content": "Phương án 1 — Đăng ký qua Cổng hóa đơn điện tử của Tổng cục Thuế (miễn phí):\n1. Truy cập: https://hoadondientu.gdt.gov.vn\n2. Đăng ký tài khoản bằng mã số thuế doanh nghiệp\n3. Điền thông tin đăng ký, chọn loại hóa đơn (có mã)\n4. Ký đăng ký bằng chữ ký số\n5. Cơ quan thuế phê duyệt (thường 1–3 ngày làm việc)\n6. Bắt đầu xuất hóa đơn\n\nPhương án 2 — Dùng phần mềm bên thứ ba:\n• MISA Invoice: https://misainvoice.vn\n• VNPT Invoice: https://vnptinvoice.vn\n• FPT Invoice: https://einvoice.vn\n• Hỗ trợ nhiều tính năng hơn, phí hàng tháng/năm"
+    },
+    {
+      "heading": "Quy trình xuất hóa đơn điện tử",
+      "content": "1. Lập hóa đơn trên phần mềm (nhập thông tin khách hàng, hàng hóa, thuế suất)\n2. Ký điện tử bằng chữ ký số\n3. Gửi lên Tổng cục Thuế để lấy mã (nếu hóa đơn có mã)\n4. Gửi hóa đơn cho khách hàng qua email hoặc tải xuống PDF\n5. Lưu trữ hóa đơn tối thiểu 10 năm (theo quy định lưu trữ điện tử)"
+    },
+    {
+      "heading": "Mức phạt nếu không dùng hóa đơn điện tử",
+      "content": "• Không lập hóa đơn khi bán hàng: phạt 10.000.000 – 20.000.000 đồng\n• Dùng hóa đơn giấy sau thời hạn bắt buộc chuyển đổi: hóa đơn không có giá trị pháp lý, chi phí mua hàng không được khấu trừ thuế GTGT đầu vào\n\n⚠️ Mức phạt cụ thể cần kế toán viên xác minh theo Nghị định hiện hành."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 123/2020/NĐ-CP về hóa đơn, chứng từ\n• Thông tư 78/2021/TT-BTC hướng dẫn Nghị định 123\n• Nghị định 125/2020/NĐ-CP về xử phạt vi phạm trong lĩnh vực thuế\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Cổng hóa đơn điện tử Tổng cục Thuế: https://hoadondientu.gdt.gov.vn\n• Tra cứu hóa đơn điện tử: https://tracuuhoadon.gdt.gov.vn\n• eTax (khai và nộp thuế): https://thuedientu.gdt.gov.vn\n• Hỗ trợ Tổng cục Thuế: 1900 3584"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xác nhận ngày bắt buộc chuyển đổi toàn bộ sang HĐ ĐT (01/7/2022 đúng không?)",
+    "Xác nhận điều kiện chọn loại hóa đơn có mã / không mã",
+    "Xác nhận mức phạt theo Nghị định 125/2020 còn đang có hiệu lực không",
+    "Kiểm tra các link cổng HĐ ĐT còn hoạt động không",
+    "Điền legal_basis với số điều khoản cụ thể",
+    "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 123/2020 đã được sửa đổi bởi Nghị định 70/2025/NĐ-CP (từ 1/6/2025); Thông tư 78/2021/TT-BTC có thể đã được thay bằng Thông tư 32/2025/TT-BTC.",
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025. official_sources.json của app đang ghi \"Cục Thuế\"."
+  ],
+  "updated_at": "2026-10-23"
+}

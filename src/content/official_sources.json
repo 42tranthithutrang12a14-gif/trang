@@ -1,0 +1,58 @@
+{
+  "sources": [
+    {
+      "name": "Công báo nước CHXHCN Việt Nam",
+      "domain": "congbao.chinhphu.vn",
+      "allow_subdomains": false,
+      "description": "Văn bản gốc đã đăng Công báo: luật, nghị định, thông tư. Ưu tiên số 1."
+    },
+    {
+      "name": "Hệ thống văn bản Chính phủ",
+      "domain": "vanban.chinhphu.vn",
+      "allow_subdomains": false,
+      "description": "Văn bản của Chính phủ, Thủ tướng."
+    },
+    {
+      "name": "Cơ sở dữ liệu quốc gia về văn bản pháp luật (Bộ Tư pháp)",
+      "domain": "vbpl.moj.gov.vn",
+      "allow_subdomains": false,
+      "description": "Kiểm tra tình trạng hiệu lực, văn bản hợp nhất."
+    },
+    {
+      "name": "Quốc hội",
+      "domain": "quochoi.vn",
+      "allow_subdomains": false,
+      "description": "Luật, nghị quyết của Quốc hội."
+    },
+    {
+      "name": "Bộ Tài chính",
+      "domain": "mof.gov.vn",
+      "allow_subdomains": true,
+      "description": "Thông tư về kế toán, thuế; mục Hỏi đáp chính sách tài chính."
+    },
+    {
+      "name": "Cục Thuế",
+      "domain": "gdt.gov.vn",
+      "allow_subdomains": true,
+      "description": "Văn bản, công văn hướng dẫn, thông báo của ngành thuế."
+    },
+    {
+      "name": "Cổng thông tin quốc gia về đăng ký doanh nghiệp",
+      "domain": "dangkykinhdoanh.gov.vn",
+      "allow_subdomains": false,
+      "description": "Thủ tục đăng ký và thay đổi doanh nghiệp."
+    },
+    {
+      "name": "Bảo hiểm xã hội Việt Nam",
+      "domain": "baohiemxahoi.gov.vn",
+      "allow_subdomains": false,
+      "description": "BHXH, BHYT, BHTN."
+    },
+    {
+      "name": "Cổng Dịch vụ công quốc gia",
+      "domain": "dichvucong.gov.vn",
+      "allow_subdomains": false,
+      "description": "Thủ tục hành chính."
+    }
+  ]
+}

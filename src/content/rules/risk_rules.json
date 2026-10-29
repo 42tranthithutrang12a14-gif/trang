@@ -1,0 +1,97 @@
+[
+  {
+    "code": "RISK_CHANGES_NOT_REGISTERED",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": {
+      "all": [
+        { "field": "recent_changes", "op": "eq", "value": "co" },
+        { "field": "changes_registered", "op": "eq", "value": "chua" }
+      ]
+    },
+    "title": "Có thay đổi nhưng chưa đăng ký với Phòng Đăng ký kinh doanh",
+    "ok_title": "Các thay đổi gần đây đã được đăng ký",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "dang-ky-thay-doi-doanh-nghiep",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis với thời hạn đăng ký thay đổi — ví dụ: Luật Doanh nghiệp 2020, Điều 30; Nghị định 01/2021/NĐ-CP; link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "RISK_NO_DIGITAL_SIGNATURE",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": { "field": "digital_signature", "op": "eq", "value": "khong" },
+    "title": "Chưa có chữ ký số hoặc chữ ký số đã hết hạn",
+    "ok_title": "Chữ ký số còn hạn",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "chu-ky-so",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về bắt buộc dùng chữ ký số khi nộp thuế — ví dụ: Nghị định 123/2020/NĐ-CP; Thông tư 19/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "RISK_NO_E_INVOICE",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": { "field": "e_invoice", "op": "eq", "value": "khong" },
+    "title": "Chưa đăng ký và sử dụng hóa đơn điện tử",
+    "ok_title": "Đã sử dụng hóa đơn điện tử",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "hoa-don-dien-tu",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về bắt buộc sử dụng hóa đơn điện tử — ví dụ: Nghị định 123/2020/NĐ-CP, Điều 4; Thông tư 78/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "RISK_CAPITAL_NOT_PAID",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "yellow",
+    "trigger": { "field": "capital_paid", "op": "eq", "value": "chua_du" },
+    "title": "Chưa góp đủ vốn điều lệ đã đăng ký",
+    "ok_title": "Đã góp đủ vốn điều lệ",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "gop-von-dieu-le",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về thời hạn góp vốn — ví dụ: Luật Doanh nghiệp 2020, Điều 47 (TNHH) hoặc Điều 113 (Cổ phần); link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "RISK_NO_BOOKKEEPING",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": {
+      "any": [
+        { "field": "bookkeeper", "op": "eq", "value": "chua_co_ai" },
+        { "field": "books_medium", "op": "eq", "value": "khong_co" }
+      ]
+    },
+    "title": "Chưa có người ghi sổ kế toán hoặc chưa có sổ sách",
+    "ok_title": "Đã có sổ sách kế toán",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "so-sach-ke-toan",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về nghĩa vụ ghi sổ kế toán — ví dụ: Luật Kế toán 2015, Điều 8; Thông tư 133/2016/TT-BTC (DNSN); link vbpl.moj.gov.vn chính thức"
+    ]
+  }
+]
