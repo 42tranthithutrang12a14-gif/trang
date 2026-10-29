@@ -3,14 +3,13 @@ import Link from "next/link";
 import tu0Den1Json from "@/content/tu-0-den-1.json";
 import { DraftNotice } from "@/components/draft-notice";
 import { filterIncentives, filterStages, type Incentive, type Tu0Den1Content } from "@/lib/tu-0-den-1";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 import { Checklist } from "./Checklist";
 
 export const metadata: Metadata = {
   title: "Từ 0 - đến 1 — Sổ tay DN Siêu nhỏ",
   description: "Danh sách việc cần làm từng bước, từ lúc chưa có công ty đến khi sẵn sàng bán hàng.",
 };
-
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 const CONTENT = tu0Den1Json as Tu0Den1Content;
 

@@ -5,13 +5,12 @@ import { useRouter } from "next/navigation";
 import questions from "@/content/questions.json";
 import { evalCondition } from "@/lib/engine/conditions";
 import type { Answers, Condition } from "@/lib/engine/types";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 
 const STORAGE_KEY = "sotay_answers_v1";
 const PROGRESS_KEY = "sotay_progress_v1";
 
 type Question = (typeof questions)[number];
-
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 function isVisible(q: Question, answers: Answers): boolean {
   if (!("show_if" in q) || !q.show_if) return true;

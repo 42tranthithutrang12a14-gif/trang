@@ -10,8 +10,7 @@ import guideDigitalSig from "@/content/guides/chu-ky-so.json";
 import guideEInvoice from "@/content/guides/hoa-don-dien-tu.json";
 import guideCapital from "@/content/guides/gop-von-dieu-le.json";
 import guideBookkeeping from "@/content/guides/so-sach-ke-toan.json";
-
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 
 const GUIDES: Guide[] = [
   guideVatQuarterly as Guide,

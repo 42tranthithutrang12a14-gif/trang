@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import framework from "@/content/legal-framework.json";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 
 export const metadata: Metadata = {
   title: "Khung pháp lý — Sổ tay DN Siêu nhỏ",
   description:
     "Tổng hợp các văn bản pháp luật cốt lõi doanh nghiệp siêu nhỏ cần nắm: thuế, kế toán, hóa đơn, lao động, BHXH. Kèm link nguồn chính thức từ cổng gov.vn.",
 };
-
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 type Law = {
   name: string;

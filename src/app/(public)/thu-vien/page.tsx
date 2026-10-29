@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import obligationRules from "@/content/rules/obligation_rules.json";
 import riskRules from "@/content/rules/risk_rules.json";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 
 export const metadata: Metadata = {
   title: "Thư viện — Sổ tay DN Siêu nhỏ",
   description: "Hướng dẫn chi tiết về thuế, kế toán và pháp lý cho doanh nghiệp siêu nhỏ",
 };
-
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 const CATEGORIES = [
   { slug: "thue", label: "Thuế" },

@@ -12,6 +12,7 @@ import { createClient } from "@/lib/supabase/client";
 import { saveResult } from "@/app/actions/results";
 import type { EngineResult, ObligationInstance, ObligationRule, ResultItem, LegalRef } from "@/lib/engine/types";
 import type { Answers } from "@/lib/engine/types";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 
 function LegalCitations({ item }: { item: ResultItem }) {
   if (item.legalRefs.length > 0) {
@@ -43,7 +44,6 @@ function LegalCitations({ item }: { item: ResultItem }) {
 }
 
 const STORAGE_KEY = "sotay_answers_v1";
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 const obligationTitleMap: Record<string, string> = Object.fromEntries(
   (obligationRules as ObligationRule[]).map((r) => [r.code, r.title])

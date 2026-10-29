@@ -9,14 +9,13 @@ import {
   type Pillar,
   type Principle,
 } from "@/lib/bat-dau";
+import { CONTENT_PREVIEW } from "@/lib/content/preview";
 
 export const metadata: Metadata = {
   title: "Bắt đầu kinh doanh — Khung tư duy pháp lý & thuế",
   description:
     "Khung tư duy pháp lý và thuế cho người mới bắt đầu kinh doanh: phải làm gì và làm khi nào.",
 };
-
-const CONTENT_PREVIEW = process.env.NEXT_PUBLIC_CONTENT_PREVIEW === "true";
 
 const CONTENT = batDauJson as BatDauContent;
 
