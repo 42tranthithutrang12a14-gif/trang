@@ -48,6 +48,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
   - Hỗ trợ DNNVV (legal-framework ghi chú chung, tu-0-den-1): thêm Nghị định 80/2021/NĐ-CP, cần đọc tiêu chí DN siêu nhỏ.
 - Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 5 (2026-11-11)
+
+- Đọc NC-008 (đối chiếu `effective_from` trong `legal-framework.json` với trang thông tin vanban.chinhphu.vn). Chỉ cập nhật todo, không đổi ngày nào. Status giữ "draft".
+  - 12 văn bản khớp ngày: thêm todo "khớp trang thông tin, ngày tra 2026-11-11" kèm link. Ghi rõ khớp ngày không có nghĩa còn hiệu lực. Không đặt `verified_against_original`.
+  - 14/2008/QH12: cổng không ghi ngày hiệu lực, đã ghi vào todo.
+  - 130/2018/NĐ-CP: thay todo tự thêm ở vòng 4 bằng ghi chú NC-008 (ban hành 27/09/2018, hiệu lực 15/11/2018; app ghi 25/09/2018). Chưa đổi `effective_from`, chờ chủ dự án quyết (xem dưới).
+  - Chưa ghi gì cho 13/2008/QH12, 80/2021/TT-BTC, 58/2014/QH13, vì NC-008 chưa đối chiếu được.
+- Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -57,3 +66,4 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 ## Cần chủ dự án quyết
 
 - T25 trong `tests/content.test.ts` lỗi sẵn: test còn dùng `vbpl.vn`, danh sách nguồn đã đổi sang `vbpl.moj.gov.vn`. Chờ chủ dự án đồng ý sửa.
+- (Vòng 5) Ngày hiệu lực 130/2018/NĐ-CP trong `legal-framework.json` ghi 25/09/2018, cổng ghi 15/11/2018. Nếu chủ dự án chấp nhận trang thông tin vanban.chinhphu.vn làm căn cứ cho `number`, `effective_from`, agent Biên tập sẽ sửa ngay (status vẫn "draft").
