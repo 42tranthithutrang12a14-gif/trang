@@ -127,9 +127,31 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Thay ngay được (không phải nội dung pháp lý): ở chỗ hướng dẫn nộp hồ sơ, dùng "cơ quan đăng ký kinh doanh cấp tỉnh" thay cho "Sở KHĐT" / "Sở Kế hoạch và Đầu tư", và trỏ người dùng về `https://dangkykinhdoanh.gov.vn` thay cho `https://www.mpi.gov.vn`. Bỏ hoặc gắn nhãn "cần kiểm tra" cho email `dkkd@mpi.gov.vn` và số (024) 3736 6566.
   - Cập nhật các todo "Bộ Kế hoạch và Đầu tư đã hợp nhất vào Bộ Tài chính từ 3/2025": ghi "đã thấy trên vanban.chinhphu.vn: Nghị định 29/2025/NĐ-CP (hiệu lực 01/03/2025), 166/2025, 376/2026 về cơ cấu Bộ Tài chính; Nghị định 45/2025 và 150/2025 về cơ quan chuyên môn cấp tỉnh; cổng dangkykinhdoanh.gov.vn ghi bản quyền thuộc Bộ Tài chính; chưa đọc toàn văn".
 
+### Ghi chú vòng 4 (2026-11-11, 14:19 UTC)
+
+- Mạng chưa đổi: ba máy chủ PDF vẫn 403; `vbpl.moj.gov.vn` 502; `www.gdt.gov.vn` bị ngắt. vanban.chinhphu.vn chập chờn (có lúc ngắt kết nối), phải thử lại.
+- Đã rà commit `3105c81` của agent Biên tập (NC-006): đổi "Sở KHĐT"/"Sở Kế hoạch và Đầu tư" thành "cơ quan đăng ký kinh doanh cấp tỉnh", thay mpi.gov.vn bằng dangkykinhdoanh.gov.vn, bỏ số điện thoại và email cũ. Đúng đề xuất, không đụng nội dung pháp lý. Không còn chỗ nào nhắc mpi.gov.vn ngoài todo.
+- Còn sót nhỏ: `gop-von-dieu-le.json` vẫn ghi "Cục Quản lý đăng ký kinh doanh". Biên tập đã ghi todo, chưa đổi. Đồng ý giữ, vì chưa có văn bản giao nhiệm vụ.
+
+### NC-007 — Bảo hiểm xã hội, chữ ký số, giao dịch điện tử, hỗ trợ DNNVV: văn bản mới hơn văn bản app dẫn
+
+- Trạng thái: không mở được
+- Liên quan: `src/content/legal-framework.json` (mục 130/2018/NĐ-CP dòng 260; mục "51/2005/QH11 (thay thế bởi 20/2023/QH15)" dòng 279; mục "58/2014/QH13 (đang sửa đổi)" dòng 321; ghi chú bổ sung 04/2017/QH14 dòng 388); `src/content/guides/chu-ky-so.json` (danh sách văn bản dòng 32); `src/content/tu-0-den-1.json` (todo dòng 482, 657, 838).
+- Phát hiện (trang thông tin trên vanban.chinhphu.vn, mở ngày 2026-11-11):
+  - Bảo hiểm xã hội: Luật Bảo hiểm xã hội 41/2024/QH15, ban hành 29/06/2024, hiệu lực 01/07/2025. https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1 — Nghị định 158/2025/NĐ-CP hướng dẫn BHXH bắt buộc, hiệu lực 01/07/2025. https://vanban.chinhphu.vn/?pageid=27160&docid=214189&classid=1 — App ghi "58/2014/QH13 (đang sửa đổi)"; chữ "đang sửa đổi" đã cũ. Chưa đọc điều khoản thi hành nên chưa khẳng định 41/2024 thay hẳn 58/2014, chưa xác minh mức đóng và hạn đóng.
+  - Chữ ký số: Nghị định 130/2018/NĐ-CP (hiệu lực 15/11/2018) đã được sửa bởi Nghị định 48/2024/NĐ-CP (hiệu lực 09/05/2024). https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=210212&classid=1 — Có Nghị định 23/2025/NĐ-CP quy định về chữ ký điện tử và dịch vụ tin cậy, ban hành 21/02/2025, hiệu lực 10/04/2025. https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 — Khớp todo "gợi ý của trợ lý AI". Chưa đọc điều khoản thay thế.
+  - Giao dịch điện tử: Luật Giao dịch điện tử 20/2023/QH15, ban hành 22/06/2023, hiệu lực 01/07/2024. https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1 — Trả lời được todo "Xác nhận Luật GDĐT 20/2023 đã có hiệu lực từ 01/07/2024 chưa" ở mức trang thông tin: cổng ghi hiệu lực 01/07/2024. Luật 20/2026/QH16 sửa đổi, bổ sung Luật Giao dịch điện tử (cùng Luật Viễn thông…), ban hành 24/08/2026, hiệu lực 01/03/2027. https://vanban.chinhphu.vn/?pageid=27160&docid=219488&classid=1
+  - Hỗ trợ DNNVV: Luật 04/2017/QH14, ban hành 12/06/2017, hiệu lực 01/01/2018. https://vanban.chinhphu.vn/?pageid=27160&docid=190283&classid=1 — Nghị định 80/2021/NĐ-CP hướng dẫn, ban hành 26/08/2021, hiệu lực 15/10/2021. https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1 — Nghị định này (nếu đúng như trí nhớ, CHƯA XÁC MINH) có tiêu chí xác định DN siêu nhỏ theo lao động và doanh thu/vốn; đây là căn cứ để người dùng biết mình có phải DN siêu nhỏ không. Nên đưa vào danh sách cần đọc khi mở được toàn văn.
+- Nguồn: vanban.chinhphu.vn, trang thông tin văn bản, mở ngày 2026-11-11. Toàn văn PDF bị chặn.
+- Đề xuất sửa: chỉ cập nhật todo, không đổi nội dung pháp lý.
+  - `legal-framework.json` mục BHXH: todo ghi "đã thấy trên vanban.chinhphu.vn: Luật 41/2024/QH15 hiệu lực 01/07/2025; Nghị định 158/2025/NĐ-CP (BHXH bắt buộc) hiệu lực 01/07/2025; chưa đọc toàn văn". Cân nhắc bỏ chữ "(đang sửa đổi)" ở trường `number`, vì đây là mô tả trạng thái, không phải nội dung pháp lý; nếu thấy chưa chắc thì để nguyên.
+  - Các todo về 130/2018 → 23/2025 (3 chỗ): ghi "đã thấy: Nghị định 23/2025/NĐ-CP hiệu lực 10/04/2025; 130/2018 từng được sửa bởi 48/2024/NĐ-CP; chưa đọc điều khoản thay thế".
+  - `legal-framework.json` mục giao dịch điện tử: todo "Xác nhận Luật GDĐT 20/2023 đã có hiệu lực từ 01/07/2024 chưa" ghi "cổng vanban.chinhphu.vn ghi hiệu lực 01/07/2024; có Luật 20/2026/QH16 sửa đổi, hiệu lực 01/03/2027". Mâu thuẫn số hiệu 51/2005 trong mục này vẫn để todo.
+  - `legal-framework.json` ghi chú 04/2017: thêm "Nghị định 80/2021/NĐ-CP (hiệu lực 15/10/2021) hướng dẫn Luật Hỗ trợ DNNVV; cần đọc tiêu chí DN siêu nhỏ".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
 - Tên miền con của `mof.gov.vn` (`vbpq.mof.gov.vn`, `portal.mof.gov.vn`) cũng bị chặn, dù `official_sources.json` cho phép. Nếu muốn dùng mục Hỏi đáp chính sách của Bộ Tài chính thì cần mở thêm.
-- `vbpl.moj.gov.vn` trả lỗi 502 ở vòng 1, 2 và 3. Sẽ thử lại vòng sau.
+- `vbpl.moj.gov.vn` trả lỗi 502 ở vòng 1–4. Sẽ thử lại vòng sau.
 - Nhắc lại (vòng 2): chưa mở mạng thì các vòng sau chỉ xác nhận được số hiệu, ngày hiệu lực. Câu hỏi then chốt NC-001 và mâu thuẫn thuế suất (NC-004) không giải được.
