@@ -184,10 +184,19 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Các văn bản "khớp": có thể ghi vào todo "ngày hiệu lực khớp trang thông tin vanban.chinhphu.vn (2026-11-11)". Không đặt `verified_against_original: true`.
   - Lưu ý chung: khớp ngày không có nghĩa văn bản còn hiệu lực. Nhiều văn bản trong bảng đã có văn bản thay thế hoặc sửa đổi (xem NC-002 đến NC-007).
 
+### Ghi chú vòng 6–8 (2026-11-11, 18:18 / 20:18 / 22:17 UTC)
+
+- Vòng 6 và 7 không xong: lệnh tìm kiếm bằng trình duyệt không người lái (Playwright) chờ duyệt quyền thì phiên khởi động lại. Không có kết quả, không commit.
+- Vòng 8: mạng chưa đổi. Ba máy chủ PDF vẫn 403; `vbpl.moj.gov.vn` 502; `www.gdt.gov.vn` bị ngắt. Không mở mục mới.
+- Đã rà commit `3289683` (NC-008) của agent Biên tập: chỉ thêm todo, không đổi `effective_from`. Đúng đề xuất. Hai vòng 6, 7 của Biên tập chỉ ghi nhật ký.
+- Việc còn lại khi chưa có toàn văn: đối chiếu ngày hiệu lực của 13/2008/QH12, 80/2021/TT-BTC, 58/2014/QH13 (NC-008). Cần tìm kiếm bằng trình duyệt; sẽ làm khi lệnh đó chạy được không cần duyệt.
+- Hai agent đang chạy vòng không có việc. Đề xuất chủ dự án: tạm giãn lịch chạy (ví dụ mỗi ngày một lần) cho tới khi mở mạng hoặc trả lời hai câu ở mục "Cần chủ dự án quyết".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
 - Tên miền con của `mof.gov.vn` (`vbpq.mof.gov.vn`, `portal.mof.gov.vn`) cũng bị chặn, dù `official_sources.json` cho phép. Nếu muốn dùng mục Hỏi đáp chính sách của Bộ Tài chính thì cần mở thêm.
-- `vbpl.moj.gov.vn` trả lỗi 502 ở vòng 1–5. Sẽ thử lại vòng sau.
+- `vbpl.moj.gov.vn` trả lỗi 502 ở vòng 1–8. Sẽ thử lại vòng sau.
 - Nhắc lại (vòng 2): chưa mở mạng thì các vòng sau chỉ xác nhận được số hiệu, ngày hiệu lực. Câu hỏi then chốt NC-001 và mâu thuẫn thuế suất (NC-004) không giải được.
 - (Vòng 5) Có chấp nhận trang thông tin văn bản trên vanban.chinhphu.vn (số hiệu, ngày ban hành, ngày hiệu lực) làm căn cứ để sửa các trường `number`, `effective_from` không? Nếu có, agent Biên tập sửa được ngay các ngày lệch như 130/2018 (NC-008) mà không cần chờ đọc toàn văn. Nội dung nghĩa vụ, hạn, mức phạt vẫn phải có điều, khoản.
+- (Vòng 8) Hai agent chạy 2 giờ một lần nhưng không còn việc làm được khi chưa có toàn văn. Đề xuất tạm giãn hoặc tắt hai lịch chạy tới khi quyết hai mục trên.
