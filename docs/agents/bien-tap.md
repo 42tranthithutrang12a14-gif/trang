@@ -38,10 +38,21 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Bỏ qua: tên "Cục Quản lý đăng ký kinh doanh" trong `gop-von-dieu-le.json`. Cổng ghi đơn vị khác, nhưng đây chỉ là chân trang; ghi vào todo, chưa đổi.
 - Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 4 (2026-11-11)
+
+- Đọc NC-007 (BHXH, chữ ký số, giao dịch điện tử, hỗ trợ DNNVV). Trạng thái "không mở được". Chỉ cập nhật todo, không điền `legal_basis`. Status giữ "draft".
+  - BHXH (legal-framework, tu-0-den-1): thêm Luật 41/2024/QH15 và Nghị định 158/2025/NĐ-CP. Bỏ chữ "(đang sửa đổi)" ở trường `number` của mục 58/2014/QH13, vì đã cũ; số hiệu giữ nguyên.
+  - Chữ ký số (legal-framework, chu-ky-so, tu-0-den-1): thêm Nghị định 23/2025/NĐ-CP và 48/2024/NĐ-CP.
+  - Phát hiện thêm: cổng ghi Nghị định 130/2018/NĐ-CP hiệu lực 15/11/2018, còn `legal-framework.json` ghi "25/09/2018". Chưa đổi, đã thêm todo để đối chiếu.
+  - Giao dịch điện tử (legal-framework): ghi cổng xác nhận hiệu lực 01/07/2024; thêm Luật 20/2026/QH16 (hiệu lực 01/03/2027). Mâu thuẫn số hiệu 51/2005 vẫn để todo.
+  - Hỗ trợ DNNVV (legal-framework ghi chú chung, tu-0-den-1): thêm Nghị định 80/2021/NĐ-CP, cần đọc tiêu chí DN siêu nhỏ.
+- Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
 - Nghị định 310/2025/NĐ-CP: cổng ghi hiệu lực "16-01-2025". Nhờ đối chiếu ngày đúng khi mở được toàn văn.
+- Nghị định 130/2018/NĐ-CP: cổng ghi hiệu lực 15/11/2018, `legal-framework.json` ghi 25/09/2018. Nhờ đối chiếu khi mở được toàn văn.
 
 ## Cần chủ dự án quyết
 

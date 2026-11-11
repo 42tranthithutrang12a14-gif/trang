@@ -479,7 +479,7 @@
           "legal_basis": [],
           "todo_for_reviewer": [
             "Xác minh danh sách nhà cung cấp được cấp phép và cơ quan quản lý hiện nay.",
-            "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 130/2018/NĐ-CP có thể đã được thay bằng Nghị định 23/2025/NĐ-CP. Xác minh văn bản đang có hiệu lực.",
+            "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 130/2018/NĐ-CP có thể đã được thay bằng Nghị định 23/2025/NĐ-CP. Xác minh văn bản đang có hiệu lực. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy, hiệu lực 10/04/2025; Nghị định 130/2018/NĐ-CP từng được sửa bởi Nghị định 48/2024/NĐ-CP. Chưa đọc điều khoản thay thế. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1",
             "Xác minh chữ ký số là bắt buộc với những việc nào.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
@@ -654,7 +654,7 @@
           ],
           "legal_basis": [],
           "todo_for_reviewer": [
-            "Xác minh thời hạn đăng ký, đối tượng bắt buộc và tỷ lệ đóng theo Luật BHXH đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Luật 58/2014/QH13 có thể đã được thay bằng Luật 41/2024/QH15.",
+            "Xác minh thời hạn đăng ký, đối tượng bắt buộc và tỷ lệ đóng theo Luật BHXH đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Luật 58/2014/QH13 có thể đã được thay bằng Luật 41/2024/QH15. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Bảo hiểm xã hội 41/2024/QH15, hiệu lực 01/07/2025; Nghị định 158/2025/NĐ-CP hướng dẫn BHXH bắt buộc, hiệu lực 01/07/2025. Chưa đọc điều khoản thi hành, mức đóng và hạn đóng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=214189&classid=1",
             "Xác minh trường hợp hợp đồng lao động phải bằng văn bản.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
@@ -835,7 +835,7 @@
         "links": [],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Xác minh nội dung hỗ trợ theo Luật Hỗ trợ doanh nghiệp nhỏ và vừa (04/2017/QH14) và nghị định hướng dẫn đang có hiệu lực.",
+          "Xác minh nội dung hỗ trợ theo Luật Hỗ trợ doanh nghiệp nhỏ và vừa (04/2017/QH14) và nghị định hướng dẫn đang có hiệu lực. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật 04/2017/QH14 (hiệu lực 01/01/2018) và Nghị định 80/2021/NĐ-CP hướng dẫn (hiệu lực 15/10/2021). Cần đọc tiêu chí xác định DN siêu nhỏ khi mở được toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=190283&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1",
           "Xác minh cơ quan đầu mối và cách nộp hồ sơ hiện nay.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
