@@ -57,6 +57,11 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
   - Chưa ghi gì cho 13/2008/QH12, 80/2021/TT-BTC, 58/2014/QH13, vì NC-008 chưa đối chiếu được.
 - Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 6 (2026-11-11, 19:17 UTC)
+
+- `nghien-cuu.md` chưa có mục mới từ vòng 5 (commit mới nhất của agent Nghiên cứu là `eeea0aa`). Không sửa `src/`.
+- Không hoàn thiện thêm câu chữ: các chỗ còn lại đều dính nội dung pháp lý chưa xác minh hoặc đang chờ chủ dự án quyết.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
