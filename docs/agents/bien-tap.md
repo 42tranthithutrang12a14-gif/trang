@@ -28,6 +28,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Bỏ qua: chưa sửa thuế suất 20%/15–17%, "10 ngày"/"10 ngày làm việc", tên Sở. Lý do: chưa có điều, khoản.
 - Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 3 (2026-11-11)
+
+- Đọc NC-006 (tên cơ quan đăng ký kinh doanh). Trạng thái "không mở được". Áp dụng phần đề xuất không phải nội dung pháp lý:
+  - `bat-dau.json`: "báo Sở KHĐT" → "báo cơ quan đăng ký kinh doanh cấp tỉnh". Giữ "10 ngày" vì mâu thuẫn với "10 ngày làm việc" còn chờ xác minh.
+  - `guides/dang-ky-thay-doi-doanh-nghiep.json`: "Phòng Đăng ký kinh doanh thuộc Sở Kế hoạch và Đầu tư" → "cơ quan đăng ký kinh doanh cấp tỉnh, nơi công ty đặt trụ sở". Thay link mpi.gov.vn bằng dangkykinhdoanh.gov.vn (có trong `official_sources.json`). Bỏ số (024) 3736 6566 và email dkkd@mpi.gov.vn, thay bằng "xem thông tin liên hệ trên https://dangkykinhdoanh.gov.vn".
+  - `guides/gop-von-dieu-le.json`: bỏ "của Bộ Kế hoạch và Đầu tư" ở dòng phí. Bỏ số điện thoại, email cũ như trên.
+  - Todo liên quan ở 3 file: thêm ghi chú NC-006 (các nghị định về Bộ Tài chính, cơ quan chuyên môn cấp tỉnh) và ghi lại việc đã đổi trên giao diện.
+- Bỏ qua: tên "Cục Quản lý đăng ký kinh doanh" trong `gop-von-dieu-le.json`. Cổng ghi đơn vị khác, nhưng đây chỉ là chân trang; ghi vào todo, chưa đổi.
+- Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

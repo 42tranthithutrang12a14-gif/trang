@@ -25,7 +25,7 @@
     },
     {
       "heading": "Đăng ký trực tiếp tại Phòng Đăng ký kinh doanh",
-      "content": "Nếu không đăng ký trực tuyến, có thể nộp hồ sơ giấy:\n\n1. Chuẩn bị hồ sơ đầy đủ (xem mục trên)\n2. Nộp tại Phòng Đăng ký kinh doanh thuộc Sở Kế hoạch và Đầu tư tỉnh/thành phố nơi đăng ký trụ sở\n3. Nộp phí theo quy định\n4. Nhận biên lai và theo dõi kết quả\n\nTra cứu địa chỉ Sở KH&ĐT:\n→ https://www.mpi.gov.vn (Bộ Kế hoạch và Đầu tư)"
+      "content": "Nếu không đăng ký trực tuyến, có thể nộp hồ sơ giấy:\n\n1. Chuẩn bị hồ sơ đầy đủ (xem mục trên)\n2. Nộp tại cơ quan đăng ký kinh doanh cấp tỉnh, nơi công ty đặt trụ sở\n3. Nộp phí theo quy định\n4. Nhận biên lai và theo dõi kết quả\n\nTra cứu thông tin đăng ký kinh doanh:\n→ https://dangkykinhdoanh.gov.vn"
     },
     {
       "heading": "Mức phạt nếu không đăng ký đúng hạn",
@@ -37,7 +37,7 @@
     },
     {
       "heading": "Cổng và công cụ cần dùng",
-      "content": "• Đăng ký doanh nghiệp trực tuyến: https://dangkykinhdoanh.gov.vn\n• Tra cứu thông tin doanh nghiệp: https://dangkykinhdoanh.gov.vn (mục Tra cứu)\n• Bộ Kế hoạch và Đầu tư: https://www.mpi.gov.vn\n• Hỗ trợ đăng ký kinh doanh: (024) 3736 6566\n• Email hỗ trợ: dkkd@mpi.gov.vn"
+      "content": "• Đăng ký doanh nghiệp trực tuyến: https://dangkykinhdoanh.gov.vn\n• Tra cứu thông tin doanh nghiệp: https://dangkykinhdoanh.gov.vn (mục Tra cứu)\n• Hỗ trợ: xem thông tin liên hệ trên https://dangkykinhdoanh.gov.vn"
     }
   ],
   "todo_for_reviewer": [
@@ -48,7 +48,7 @@
     "Kiểm tra link dangkykinhdoanh.gov.vn còn hoạt động không",
     "Điền legal_basis với số điều khoản cụ thể",
     "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025). Cập nhật NC-005: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp, hiệu lực 01/07/2025; sửa bởi Nghị định 296/2026/NĐ-CP (hiệu lực 23/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay hẳn Nghị định 01/2021/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214334&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218986&classid=1",
-    "Theo báo chí (chưa xác minh): cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Gợi ý của trợ lý AI (chưa xác minh): Bộ Kế hoạch và Đầu tư đã hợp nhất vào Bộ Tài chính từ 3/2025. Guide đang ghi \"Sở Kế hoạch và Đầu tư\", mpi.gov.vn và email dkkd@mpi.gov.vn.",
+    "Theo báo chí (chưa xác minh): cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Gợi ý của trợ lý AI (chưa xác minh): Bộ Kế hoạch và Đầu tư đã hợp nhất vào Bộ Tài chính từ 3/2025. Guide đang ghi \"Sở Kế hoạch và Đầu tư\", mpi.gov.vn và email dkkd@mpi.gov.vn. Cập nhật NC-006 (ngày tra 2026-11-11): đã thấy trên vanban.chinhphu.vn Nghị định 29/2025/NĐ-CP (hiệu lực 01/03/2025), sửa bởi 166/2025/NĐ-CP, và Nghị định 376/2026/NĐ-CP (hiệu lực 01/10/2026) về cơ cấu Bộ Tài chính; Nghị định 45/2025/NĐ-CP và 150/2025/NĐ-CP về cơ quan chuyên môn cấp tỉnh. Cổng dangkykinhdoanh.gov.vn ghi bản quyền thuộc Bộ Tài chính. Chưa đọc toàn văn, chưa biết tên Sở hiện nay. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212957&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=213923&classid=1 Ngày 2026-11-11 (NC-006): trên giao diện đã đổi tên Sở thành \"cơ quan đăng ký kinh doanh cấp tỉnh\", thay link mpi.gov.vn bằng dangkykinhdoanh.gov.vn, bỏ số (024) 3736 6566 và email dkkd@mpi.gov.vn vì chưa kiểm tra được. Khi xác minh xong thì ghi lại tên cơ quan và kênh hỗ trợ đúng.",
     "Mâu thuẫn trong app: summary ghi \"10 ngày\", mục Thời hạn ghi \"10 ngày làm việc\" và \"10 ngày\"; /bat-dau ghi \"10 ngày\"; legal-framework.json ghi \"10 ngày làm việc\"."
   ],
   "updated_at": "2026-10-23"

@@ -23,7 +23,7 @@
         "icon": "🏛️",
         "tone": "accent",
         "title": "Pháp lý doanh nghiệp",
-        "desc": "Công ty tồn tại hợp pháp, thông tin luôn đúng với đăng ký. Thay đổi gì phải báo Sở KHĐT trong 10 ngày.",
+        "desc": "Công ty tồn tại hợp pháp, thông tin luôn đúng với đăng ký. Thay đổi gì phải báo cơ quan đăng ký kinh doanh cấp tỉnh trong 10 ngày.",
         "examples": [
           "Góp đủ vốn điều lệ trong 90 ngày",
           "Đăng ký thay đổi địa chỉ, người đại diện",
@@ -31,7 +31,7 @@
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "\"Báo Sở KHĐT\": theo báo chí (chưa xác minh), cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Cần xác minh tên cơ quan hiện nay.",
+          "\"Báo Sở KHĐT\": theo báo chí (chưa xác minh), cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Cần xác minh tên cơ quan hiện nay. Cập nhật NC-006 (ngày tra 2026-11-11): đã thấy trên vanban.chinhphu.vn Nghị định 29/2025/NĐ-CP (hiệu lực 01/03/2025), sửa bởi 166/2025/NĐ-CP, và Nghị định 376/2026/NĐ-CP (hiệu lực 01/10/2026) về cơ cấu Bộ Tài chính; Nghị định 45/2025/NĐ-CP và 150/2025/NĐ-CP về cơ quan chuyên môn cấp tỉnh. Cổng dangkykinhdoanh.gov.vn ghi bản quyền thuộc Bộ Tài chính. Chưa đọc toàn văn, chưa biết tên Sở hiện nay. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212957&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=213923&classid=1 Ngày 2026-11-11 (NC-006): trên giao diện đã đổi tên Sở thành \"cơ quan đăng ký kinh doanh cấp tỉnh\", thay link mpi.gov.vn bằng dangkykinhdoanh.gov.vn, bỏ số (024) 3736 6566 và email dkkd@mpi.gov.vn vì chưa kiểm tra được. Khi xác minh xong thì ghi lại tên cơ quan và kênh hỗ trợ đúng.",
           "\"Trong 10 ngày\": xác minh thời hạn và mốc tính. Mâu thuẫn trong app: ở đây ghi \"10 ngày\", legal-framework.json ghi \"10 ngày làm việc\", guide dang-ky-thay-doi-doanh-nghiep ghi cả hai.",
           "\"Thay đổi gì phải báo\": xác minh thay đổi nào phải đăng ký, thay đổi nào chỉ cần thông báo.",
           "\"Góp đủ vốn điều lệ trong 90 ngày\": xác minh thời hạn, mốc tính và loại hình áp dụng theo Luật Doanh nghiệp hiện hành.",
