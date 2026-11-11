@@ -149,9 +149,45 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal-framework.json` mục giao dịch điện tử: todo "Xác nhận Luật GDĐT 20/2023 đã có hiệu lực từ 01/07/2024 chưa" ghi "cổng vanban.chinhphu.vn ghi hiệu lực 01/07/2024; có Luật 20/2026/QH16 sửa đổi, hiệu lực 01/03/2027". Mâu thuẫn số hiệu 51/2005 trong mục này vẫn để todo.
   - `legal-framework.json` ghi chú 04/2017: thêm "Nghị định 80/2021/NĐ-CP (hiệu lực 15/10/2021) hướng dẫn Luật Hỗ trợ DNNVV; cần đọc tiêu chí DN siêu nhỏ".
 
+### Ghi chú vòng 5 (2026-11-11, 16:17 UTC)
+
+- Mạng chưa đổi: ba máy chủ PDF vẫn 403; `vbpl.moj.gov.vn` 502; `www.gdt.gov.vn` bị ngắt.
+- Đã rà commit `7f4395b` của agent Biên tập (NC-007): chỉ cập nhật todo; bỏ chữ "(đang sửa đổi)" ở trường `number` mục BHXH, số hiệu giữ nguyên. Đúng đề xuất. Biên tập tự phát hiện ngày hiệu lực 130/2018 lệch; vòng này kiểm lại (NC-008).
+
+### NC-008 — Đối chiếu ngày hiệu lực trong `legal-framework.json` với vanban.chinhphu.vn
+
+- Trạng thái: không mở được (chỉ đối chiếu với trang thông tin văn bản, chưa đọc điều khoản hiệu lực trong toàn văn)
+- Liên quan: `src/content/legal-framework.json`, trường `effective_from` của từng văn bản.
+- Phát hiện: 12/14 văn bản khớp. 1 văn bản lệch, 1 không đối chiếu được. Hai văn bản không tìm thấy trên cổng bằng ô tìm kiếm (13/2008/QH12, 80/2021/TT-BTC). Chưa tra 58/2014/QH13 vòng này.
+
+  | Văn bản | App ghi | Cổng ghi hiệu lực | Kết quả | Trang |
+  | --- | --- | --- | --- | --- |
+  | 59/2020/QH14 | 01/01/2021 | 01/01/2021 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1 |
+  | 01/2021/NĐ-CP | 04/01/2021 | 04/01/2021 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=202344&classid=1 |
+  | 14/2008/QH12 | 01/01/2009 | cổng không ghi | chưa đối chiếu được | https://vanban.chinhphu.vn/?pageid=27160&docid=70678&classid=1 |
+  | 96/2015/TT-BTC | 06/08/2015 | 06/08/2015 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=180650&classid=1 |
+  | 139/2016/NĐ-CP | 01/01/2017 | 01/01/2017 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=186624&classid=1 |
+  | 88/2015/QH13 | 01/01/2017 | 01/01/2017 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1 |
+  | 132/2018/TT-BTC | 15/02/2019 | 15/02/2019 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1 |
+  | 123/2020/NĐ-CP | 01/07/2022 | 01/07/2022 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=201365&classid=1 |
+  | 78/2021/TT-BTC | 01/07/2022 | 01/07/2022 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=204200&classid=1 |
+  | 130/2018/NĐ-CP | 25/09/2018 | 15/11/2018 (ban hành 27/09/2018) | **lệch** | https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1 |
+  | 20/2023/QH15 (mục Giao dịch điện tử) | 01/07/2024 | 01/07/2024 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1 |
+  | 45/2019/QH14 | 01/01/2021 | 01/01/2021 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=198540&classid=1 |
+  | 125/2020/NĐ-CP | 05/12/2020 | 05/12/2020 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1 |
+  | 122/2021/NĐ-CP | 01/01/2022 | 01/01/2022 | khớp | https://vanban.chinhphu.vn/?pageid=27160&docid=204874&classid=1 |
+
+- Lưu ý: `legal-framework.json` ghi 130/2018/NĐ-CP hiệu lực "25/09/2018". Ngày này không khớp cả ngày ban hành (27/09/2018) lẫn ngày hiệu lực (15/11/2018) trên cổng. Khả năng cao là nhập nhầm.
+- Nguồn: vanban.chinhphu.vn, trang thông tin văn bản, mở ngày 2026-11-11.
+- Đề xuất sửa:
+  - 130/2018/NĐ-CP: thêm vào todo "cổng vanban.chinhphu.vn ghi ban hành 27/09/2018, hiệu lực 15/11/2018; app ghi 25/09/2018". Ngày hiệu lực là dữ liệu pháp lý, nên chỉ đổi khi người duyệt đồng ý hoặc khi đọc được Điều về hiệu lực thi hành trong toàn văn. Nếu chủ dự án chấp nhận trang thông tin của cổng Chính phủ làm căn cứ cho ngày hiệu lực, thì đổi thành 15/11/2018 (status vẫn "draft").
+  - Các văn bản "khớp": có thể ghi vào todo "ngày hiệu lực khớp trang thông tin vanban.chinhphu.vn (2026-11-11)". Không đặt `verified_against_original: true`.
+  - Lưu ý chung: khớp ngày không có nghĩa văn bản còn hiệu lực. Nhiều văn bản trong bảng đã có văn bản thay thế hoặc sửa đổi (xem NC-002 đến NC-007).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
 - Tên miền con của `mof.gov.vn` (`vbpq.mof.gov.vn`, `portal.mof.gov.vn`) cũng bị chặn, dù `official_sources.json` cho phép. Nếu muốn dùng mục Hỏi đáp chính sách của Bộ Tài chính thì cần mở thêm.
-- `vbpl.moj.gov.vn` trả lỗi 502 ở vòng 1–4. Sẽ thử lại vòng sau.
+- `vbpl.moj.gov.vn` trả lỗi 502 ở vòng 1–5. Sẽ thử lại vòng sau.
 - Nhắc lại (vòng 2): chưa mở mạng thì các vòng sau chỉ xác nhận được số hiệu, ngày hiệu lực. Câu hỏi then chốt NC-001 và mâu thuẫn thuế suất (NC-004) không giải được.
+- (Vòng 5) Có chấp nhận trang thông tin văn bản trên vanban.chinhphu.vn (số hiệu, ngày ban hành, ngày hiệu lực) làm căn cứ để sửa các trường `number`, `effective_from` không? Nếu có, agent Biên tập sửa được ngay các ngày lệch như 130/2018 (NC-008) mà không cần chờ đọc toàn văn. Nội dung nghĩa vụ, hạn, mức phạt vẫn phải có điều, khoản.
