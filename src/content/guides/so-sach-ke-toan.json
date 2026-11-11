@@ -37,7 +37,7 @@
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Luật Kế toán số 88/2015/QH13\n• Thông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ\n• Thông tư 133/2016/TT-BTC — Chế độ kế toán doanh nghiệp nhỏ và vừa\n• Nghị định 41/2018/NĐ-CP về xử phạt vi phạm kế toán\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Luật Kế toán số 88/2015/QH13\n• Thông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ\n• Thông tư 133/2016/TT-BTC — Chế độ kế toán doanh nghiệp nhỏ và vừa\n• Nghị định 41/2018/NĐ-CP về xử phạt vi phạm kế toán\n• Nghị định 132/2026/NĐ-CP sửa đổi Nghị định 41/2018/NĐ-CP (hiệu lực 21/05/2026)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
@@ -47,10 +47,10 @@
   "todo_for_reviewer": [
     "Xác nhận Thông tư 132/2018 còn hiệu lực hay đã có văn bản thay thế",
     "Xác nhận tiêu chí doanh nghiệp siêu nhỏ theo quy định hiện hành",
-    "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế",
-    "Xác nhận người phụ trách kế toán có cần chứng chỉ hay không theo quy định mới nhất",
+    "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế. Cập nhật NC-002: Nghị định 41/2018/NĐ-CP đã được sửa bởi Nghị định 132/2026/NĐ-CP, ban hành 06/04/2026, hiệu lực 21/05/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217618&classid=1",
+    "Xác nhận người phụ trách kế toán có cần chứng chỉ hay không theo quy định mới nhất. Cập nhật NC-001: Luật Kế toán 88/2015/QH13 đã được sửa bởi Luật 56/2024/QH15 (hiệu lực 01/01/2025). Có Thông tư 101/2026/TT-BTC về chứng chỉ bồi dưỡng kế toán trưởng (hiệu lực 01/01/2027). Khi xác minh phải đọc cả hai, cùng Nghị định 174/2016/NĐ-CP. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212484&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218950&classid=1",
     "Điền legal_basis với số điều khoản cụ thể và link chính thức",
-    "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Summary và 3 mục nội dung đang dẫn Thông tư 132/2018.",
+    "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Summary và 3 mục nội dung đang dẫn Thông tư 132/2018. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
     "Kiểm tra Thông tư 133/2016/TT-BTC còn hiệu lực không.",
     "Giá dịch vụ kế toán \"1–5 triệu đồng/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số.",
     "Ngày 2026-10-28 đã viết lại mục \"Ai làm kế toán?\" theo định hướng tự làm kế toán (xem AGENTS.md); giữ nguyên câu ⚠️ về chứng chỉ và con số chi phí.",

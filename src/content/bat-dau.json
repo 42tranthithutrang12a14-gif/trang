@@ -53,7 +53,7 @@
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "\"Môn bài: nộp 1 lần/năm trước 30/1\": theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ dòng này.",
+          "\"Môn bài: nộp 1 lần/năm trước 30/1\": theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ dòng này. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
           "\"Khai đúng hạn quan trọng hơn khai đúng số\" là nhận định, giống lời khuyên thuế, không phải quy định. Cần đối chiếu quy định xử phạt khai sai trước khi đăng, hoặc bỏ.",
           "\"Chậm nộp tờ khai bị phạt ngay cả khi không phát sinh thuế\": xác minh theo nghị định xử phạt về thuế đang có hiệu lực.",
           "GTGT khai tháng/quý, TNDN tạm nộp quý và quyết toán năm: xác minh tiêu chí và văn bản đang có hiệu lực.",
@@ -75,7 +75,7 @@
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Chế độ kế toán DN siêu nhỏ: theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc.",
+          "Chế độ kế toán DN siêu nhỏ: theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
           "\"Lưu hóa đơn, chứng từ ít nhất 10 năm\": xác minh thời hạn lưu trữ cho từng loại tài liệu.",
           "\"Nộp báo cáo tài chính trước 31/3 mỗi năm\": xác minh hạn nộp, nơi nộp, và trường hợp năm tài chính không trùng năm dương lịch.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
@@ -128,10 +128,10 @@
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Hóa đơn điện tử \"bắt buộc với mọi DN từ 01/07/2022\": theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+          "Hóa đơn điện tử \"bắt buộc với mọi DN từ 01/07/2022\": theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
           "Xác minh hoadondientu.gdt.gov.vn còn là cổng đăng ký hóa đơn điện tử.",
           "\"Nếu DN mới → mặc định khai theo quý\": xác minh quy định khai thuế GTGT cho DN mới thành lập.",
-          "\"Theo Thông tư 132/2018 cho DNSN\": theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay thế từ 1/7/2026. Cần mở văn bản gốc.",
+          "\"Theo Thông tư 132/2018 cho DNSN\": theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay thế từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
@@ -167,7 +167,7 @@
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ việc này.",
+          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ việc này. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
           "Con dấu: việc ghi \"Đăng ký con dấu\" nhưng ghi chú nói \"DN tự quyết định\". Xác minh hiện còn phải đăng ký hoặc thông báo mẫu dấu không.",
           "BHXH \"trong 30 ngày kể từ ngày ký HĐLĐ\": xác minh thời hạn, mốc tính và đối tượng theo Luật BHXH đang có hiệu lực.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
@@ -215,7 +215,7 @@
         ],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ cả mục này.",
+          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ cả mục này. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
@@ -317,7 +317,7 @@
         "fix": "Đặt lịch nhắc hàng tháng/quý. Tự nộp tờ khai đúng hạn, kể cả tờ khai không phát sinh.",
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Mức phạt \"2–5 triệu đồng/lần chậm\": theo báo chí (chưa xác minh), mức phạt có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP). Cần mở văn bản gốc, xác minh từng khung phạt. legal-framework.json và 2 guide khai thuế GTGT cũng ghi \"2–5 triệu\".",
+          "Mức phạt \"2–5 triệu đồng/lần chậm\": theo báo chí (chưa xác minh), mức phạt có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP). Cần mở văn bản gốc, xác minh từng khung phạt. legal-framework.json và 2 guide khai thuế GTGT cũng ghi \"2–5 triệu\". Cập nhật NC-003: Nghị định 125/2020/NĐ-CP đã có các văn bản sửa đổi: 102/2021/NĐ-CP, 310/2025/NĐ-CP, 291/2026/NĐ-CP (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
           "Xác minh nghĩa vụ nộp tờ khai khi doanh thu bằng 0.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
@@ -332,7 +332,7 @@
         "fix": "Đăng ký HĐĐT tại hoadondientu.gdt.gov.vn trước khi nhận tiền đầu tiên.",
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc.",
+          "Theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
           "\"Trước khi nhận tiền đầu tiên\": xác minh thời điểm phải lập hóa đơn theo quy định.",
           "\"Không được ghi nhận chi phí bên mua\": xác minh nhận định này.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
