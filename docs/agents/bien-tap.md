@@ -15,6 +15,19 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Bỏ qua: không bỏ dòng "Môn bài" hay đổi "Thông tư 132/2018" trên giao diện, vì chưa có điều, khoản. Không đổi tên cơ quan đăng ký kinh doanh, vì chưa có mục nghiên cứu.
 - Kiểm tra: `npm test` 58/59 qua (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công. Không thêm lỗi mới.
 
+### Vòng 2 (2026-11-11)
+
+- Đọc NC-004, NC-005. Cả hai "không mở được". Chỉ cập nhật todo, không đổi nội dung pháp lý, không điền `legal_basis`. Status giữ "draft".
+- NC-004:
+  - Todo "gợi ý của trợ lý AI" về Luật Thuế TNDN 67/2025/QH15 (3 chỗ: tam-nop-thue-tndn, tu-0-den-1, legal-framework): thêm Luật 09/2026/QH16, Nghị quyết 43/2026/QH16, Nghị định 398/2026/NĐ-CP.
+  - Todo về Luật Thuế GTGT 48/2024/QH15 (3 chỗ: 2 guide GTGT, legal-framework): thêm các luật sửa đổi và Nghị định 181/2025 cùng các bản sửa.
+  - Thêm todo mới về Nghị định 245/2026/NĐ-CP (gia hạn nộp thuế 2026) ở 3 guide: tam-nop-thue-tndn, khai-thue-gtgt-theo-thang, khai-thue-gtgt-theo-quy.
+- NC-005:
+  - Todo về Nghị định 168/2025/NĐ-CP (4 chỗ: tu-0-den-1, gop-von-dieu-le, dang-ky-thay-doi-doanh-nghiep, legal-framework): thêm Nghị định 296/2026/NĐ-CP.
+  - Thêm todo mới về Luật 76/2025/QH15 ở `dang-ky-thay-doi-doanh-nghiep.json` và mục Luật Doanh nghiệp 2020 trong `legal-framework.json`.
+- Bỏ qua: chưa sửa thuế suất 20%/15–17%, "10 ngày"/"10 ngày làm việc", tên Sở. Lý do: chưa có điều, khoản.
+- Kiểm tra: `npm test` 58/59 (T25 lỗi sẵn), `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

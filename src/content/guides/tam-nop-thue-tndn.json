@@ -41,12 +41,13 @@
     }
   ],
   "todo_for_reviewer": [
+    "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
     "Xác nhận ngưỡng % tạm nộp tối thiểu (75% hay 80%) theo văn bản hiện hành",
     "Xác nhận hạn tạm nộp từng quý (ngày 30 hay ngày khác)",
     "Xác nhận thuế suất TNDN cho doanh nghiệp siêu nhỏ hiện hành",
     "Xác nhận hạn nộp tờ khai quyết toán năm",
     "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
-    "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế TNDN 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025). Kiểm tra cả Thông tư 96/2015/TT-BTC và Luật Quản lý thuế 38/2019/QH14. Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+    "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế TNDN 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025). Kiểm tra cả Thông tư 96/2015/TT-BTC và Luật Quản lý thuế 38/2019/QH14. Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
     "Mâu thuẫn trong app: guide này ghi doanh nghiệp siêu nhỏ chịu thuế suất 20%; legal-framework.json ghi DNSN doanh thu ≤ 3 tỷ được 15–17%.",
     "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025."
   ],

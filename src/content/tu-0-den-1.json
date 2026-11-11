@@ -220,7 +220,7 @@
       "intro": "Nộp hồ sơ và nhận Giấy chứng nhận đăng ký doanh nghiệp.",
       "legal_basis": [],
       "todo_for_reviewer": [
-        "Xác minh thủ tục theo nghị định về đăng ký doanh nghiệp đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP."
+        "Xác minh thủ tục theo nghị định về đăng ký doanh nghiệp đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP. Cập nhật NC-005: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp, hiệu lực 01/07/2025; sửa bởi Nghị định 296/2026/NĐ-CP (hiệu lực 23/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay hẳn Nghị định 01/2021/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214334&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218986&classid=1"
       ],
       "steps": [
         {
@@ -733,7 +733,7 @@
         "links": [],
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Gợi ý của trợ lý AI (chưa xác minh): theo Luật Thuế TNDN số 67/2025/QH15, áp dụng từ kỳ tính thuế năm 2025. Xác minh thuế suất, ngưỡng doanh thu, cách xác định doanh thu năm và trường hợp không được áp dụng.",
+          "Gợi ý của trợ lý AI (chưa xác minh): theo Luật Thuế TNDN số 67/2025/QH15, áp dụng từ kỳ tính thuế năm 2025. Xác minh thuế suất, ngưỡng doanh thu, cách xác định doanh thu năm và trường hợp không được áp dụng. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
           "Mâu thuẫn trong app: guide tam-nop-thue-tndn ghi DN siêu nhỏ chịu thuế suất 20%.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]

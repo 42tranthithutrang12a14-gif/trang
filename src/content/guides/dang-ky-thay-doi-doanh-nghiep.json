@@ -41,12 +41,13 @@
     }
   ],
   "todo_for_reviewer": [
+    "Cập nhật NC-005: Luật 76/2025/QH15 sửa đổi, bổ sung một số điều của Luật Doanh nghiệp, ban hành 17/06/2025, hiệu lực 01/07/2025 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Kiểm tra Điều 30–32 (thời hạn đăng ký thay đổi, \"10 ngày\" hay \"10 ngày làm việc\") và tên cơ quan đăng ký kinh doanh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1",
     "Xác nhận thời hạn 10 ngày đúng theo Luật DN 2020 và Nghị định 01/2021",
     "Xác nhận danh sách đầy đủ các loại thay đổi phải đăng ký",
     "Xác nhận mức phạt theo Nghị định 122/2021 còn hiệu lực không",
     "Kiểm tra link dangkykinhdoanh.gov.vn còn hoạt động không",
     "Điền legal_basis với số điều khoản cụ thể",
-    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025).",
+    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 01/2021/NĐ-CP có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025). Cập nhật NC-005: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp, hiệu lực 01/07/2025; sửa bởi Nghị định 296/2026/NĐ-CP (hiệu lực 23/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay hẳn Nghị định 01/2021/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214334&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218986&classid=1",
     "Theo báo chí (chưa xác minh): cơ quan đăng ký kinh doanh cấp tỉnh có thể đã đổi tên hoặc cơ cấu. Gợi ý của trợ lý AI (chưa xác minh): Bộ Kế hoạch và Đầu tư đã hợp nhất vào Bộ Tài chính từ 3/2025. Guide đang ghi \"Sở Kế hoạch và Đầu tư\", mpi.gov.vn và email dkkd@mpi.gov.vn.",
     "Mâu thuẫn trong app: summary ghi \"10 ngày\", mục Thời hạn ghi \"10 ngày làm việc\" và \"10 ngày\"; /bat-dau ghi \"10 ngày\"; legal-framework.json ghi \"10 ngày làm việc\"."
   ],
