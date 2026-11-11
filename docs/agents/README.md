@@ -54,7 +54,9 @@ Không agent nào sửa file của agent kia.
 
 ## Phiên
 
-Mã phiên của hai agent được ghi bên dưới sau khi tạo.
+- Agent Nghiên cứu: `session_01AGVBxq4xx5tu4Y3hrF8yi3`
+- Agent Biên tập: `session_01AGVBxrReB9co2B9Rmtgujm`
+- Lịch chạy: Nghiên cứu vào phút 17 các giờ chẵn (giờ UTC), Biên tập vào phút 17 các giờ lẻ. Hai agent xen kẽ, mỗi agent cách nhau 2 tiếng.
 
 ## Dừng
 
