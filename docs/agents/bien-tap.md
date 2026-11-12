@@ -121,6 +121,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Bỏ các todo "mâu thuẫn 20% / 15–17%" ở 3 file. Thêm todo: mức miễn thuế chưa xác minh; Luật 67/2025 đã bị sửa bởi 5 luật chưa đọc; cách tính doanh thu năm trước cho DN mới thành lập.
 - Kiểm tra: `npm test` 84/84 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 13 (2026-11-12, 19:17 UTC)
+
+- Đọc NC-011 (miễn thuế TNDN khi doanh thu năm trước từ 1 tỷ đồng trở xuống, Nghị định 141/2026/NĐ-CP, đã xác minh). Status giữ "draft".
+- `guides/tam-nop-thue-tndn.json`: thêm mục đầu "Trước khi tạm nộp: kiểm tra có được miễn thuế không" (doanh thu để xét, quy đổi khi chưa đủ 12 tháng, công ty mới, công ty liên kết, căn cứ). Sửa summary. Câu "chưa cập nhật mức doanh thu" đổi thành 1 tỷ đồng.
+- `tu-0-den-1.json`: thêm mục mới `mien-tndn-doanh-thu-1-ty` (draft, có `legal_basis` Nghị định 141/2026 và Luật 09/2026). Cập nhật todo mục thuế suất.
+- `bat-dau.json`: thêm ý miễn thuế vào trụ cột Thuế; "Tạm nộp TNDN quý (nếu có lợi nhuận)" → "(nếu không được miễn)" kèm ghi chú cho công ty mới; lịch năm thêm "(nếu doanh thu năm trước trên 1 tỷ đồng)". Điền `legal_basis` cho 3 mục, todo ghi rõ chỉ phủ ý miễn thuế.
+- `rules/obligation_rules.json`, `CIT_PROVISIONAL`: thêm ý miễn thuế vào `summary_plain`, điền `legal_basis`. Chưa đổi `applies_if`: engine chưa có trường doanh thu, nên nghĩa vụ vẫn hiện với mọi công ty (xem "Cần chủ dự án quyết").
+- Không viết "không phải quyết toán" cho DN được miễn: chưa có căn cứ. Đã ghi todo các điểm còn mở của NC-011.
+- Kiểm tra: `npm test` 84/84 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -131,6 +141,9 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 
 - (Vòng 12) NC-010 còn mở: mức doanh thu được miễn thuế TNDN theo Luật 09/2026 Điều 3; tỷ lệ % tính thuế trên doanh thu (Điều 11 khoản 2); 5 luật sửa Luật 67/2025 có sửa Điều 10, 11 không; DN mới thành lập xác định doanh thu năm trước thế nào.
 
+- (Vòng 13) NC-011: DN được miễn thuế TNDN có còn phải kê khai, quyết toán TNDN không (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). DN cũ có doanh thu năm trước từ 1 tỷ trở xuống có văn bản nói thẳng là không phải tạm nộp quý không.
+
 ## Cần chủ dự án quyết
 
 - (Vòng 10) NC-001: theo Luật Kế toán và Nghị định 174/2016, giám đốc DN siêu nhỏ được làm kế toán cho công ty mình, nhưng phải có bằng hoặc chứng chỉ kế toán. Người phụ trách kế toán còn cần chứng chỉ bồi dưỡng kế toán trưởng và 2–3 năm kinh nghiệm. Nội dung app đã ghi như vậy. Định hướng "tự làm trọn vẹn, không cần thuê kế toán ngoài" trong `AGENTS.md` có thể cần sửa, ví dụ: "tự làm việc hằng ngày; thuê dịch vụ phụ trách kế toán nếu chưa đủ điều kiện". Agent Biên tập không sửa `AGENTS.md`.
+- (Vòng 13) Công cụ tạo lịch nghĩa vụ (`obligation_rules.json`, engine) chưa có trường doanh thu năm trước. Vì vậy nghĩa vụ tạm nộp TNDN vẫn hiện với mọi công ty, kể cả công ty được miễn. Thêm câu hỏi doanh thu vào form và điều kiện vào engine là việc lớn (đổi cấu trúc dữ liệu), cần chủ dự án đồng ý.

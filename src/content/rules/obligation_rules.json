@@ -74,7 +74,7 @@
     "status": "draft",
     "sample_notice": "MẪU – CHƯA XÁC MINH",
     "title": "Tạm nộp thuế thu nhập doanh nghiệp theo quý",
-    "summary_plain": "Mỗi quý, công ty tạm nộp thuế TNDN ước tính của quý đó.",
+    "summary_plain": "Mỗi quý, công ty tạm nộp thuế TNDN ước tính của quý đó. Công ty có doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN. Công ty mới, dự kiến doanh thu cả năm không quá 1 tỷ đồng: không phải tạm nộp.",
     "why_plain": "Doanh nghiệp phải tạm nộp thuế TNDN hằng quý dựa trên ước tính thu nhập.",
     "applies_if": { "field": "company_type", "op": "is_set" },
     "schedule": {
@@ -86,7 +86,34 @@
     },
     "how_to_steps": [],
     "penalty_plain": "",
-    "legal_basis": [],
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "141/2026/NĐ-CP",
+        "title": "Nghị định sửa đổi, bổ sung Nghị định 68/2026/NĐ-CP và Nghị định 320/2025/NĐ-CP",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-04-29",
+        "effective_date": "2026-01-01",
+        "article": "Điều 2 (khoản 15 Điều 4 Nghị định 320/2025/NĐ-CP, điểm a, b, c, d); Điều 3; Điều 4 khoản 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "09/2026/QH16",
+        "title": "Luật sửa đổi, bổ sung Luật Thuế TNCN, Luật Thuế GTGT, Luật Thuế TNDN và Luật Thuế TTĐB",
+        "issuer": "Quốc hội",
+        "issued_date": "2026-04-24",
+        "effective_date": "2026-04-24",
+        "article": "Điều 3 (khoản 14a Điều 4 Luật Thuế TNDN); Điều 5 khoản 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      }
+    ],
     "guide_slug": "tam-nop-thue-tndn",
     "severity": "high",
     "effective_from": "2026-01-01",
@@ -94,7 +121,8 @@
     "version": 1,
     "todo_for_reviewer": [
       "Xác nhận hạn tạm nộp và cách tính theo Luật Thuế TNDN",
-      "Xác nhận trường hợp nào được miễn/giảm",
+      "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã thêm vào summary_plain, điền legal_basis. applies_if chưa có điều kiện doanh thu (engine chưa có trường doanh thu), nên nghĩa vụ vẫn hiện với mọi công ty.",
+      "Còn mở sau NC-011 (2026-11-12): (1) DN được miễn có còn phải kê khai, quyết toán TNDN không: chưa xác minh (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). Không viết \"không phải quyết toán\". (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
       "Viết các bước và mức phạt khi tạm nộp thiếu",
       "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Thuế TNDN số 14/2008/QH12 (sửa đổi), Điều 17; Thông tư 96/2015/TT-BTC; link vbpl.moj.gov.vn chính thức"
     ]
