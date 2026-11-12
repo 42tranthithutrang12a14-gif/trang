@@ -21,14 +21,41 @@
     },
     "how_to_steps": [],
     "penalty_plain": "",
-    "legal_basis": [],
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "252/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 10 khoản 3",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "108/2025/QH15",
+        "title": "Luật Quản lý thuế",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-12-10",
+        "effective_date": "2026-07-01",
+        "article": "Điều 14 khoản 1 điểm a",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      }
+    ],
     "guide_slug": "khai-thue-gtgt-theo-quy",
     "severity": "high",
     "effective_from": "2026-01-01",
     "effective_to": null,
     "version": 1,
     "todo_for_reviewer": [
-      "Xác nhận hạn nộp theo Luật Quản lý thuế đang có hiệu lực",
+      "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn quý là ngày cuối cùng của tháng đầu quý tiếp theo, khớp due_day \"last\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
       "Viết các bước làm và mức phạt",
       "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
@@ -56,14 +83,41 @@
     },
     "how_to_steps": [],
     "penalty_plain": "",
-    "legal_basis": [],
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "252/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 10 khoản 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "108/2025/QH15",
+        "title": "Luật Quản lý thuế",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-12-10",
+        "effective_date": "2026-07-01",
+        "article": "Điều 14 khoản 1 điểm a",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      }
+    ],
     "guide_slug": "khai-thue-gtgt-theo-thang",
     "severity": "high",
     "effective_from": "2026-01-01",
     "effective_to": null,
     "version": 1,
     "todo_for_reviewer": [
-      "Xác nhận hạn nộp theo Luật Quản lý thuế đang có hiệu lực",
+      "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tháng là ngày 20 tháng sau, khớp due_day 20. Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
       "Viết các bước làm và mức phạt",
       "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
@@ -80,13 +134,26 @@
     "schedule": {
       "type": "quarterly",
       "offset_months": 1,
-      "due_day": 30,
+      "due_day": "last",
       "shift_rule": "next_working_day",
       "first_period": "containing_founding"
     },
     "how_to_steps": [],
     "penalty_plain": "",
     "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "252/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 24 khoản 1, 2, 3",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
       {
         "doc_type": "Nghị định",
         "doc_number": "141/2026/NĐ-CP",
@@ -120,7 +187,7 @@
     "effective_to": null,
     "version": 1,
     "todo_for_reviewer": [
-      "Xác nhận hạn tạm nộp và cách tính theo Luật Thuế TNDN",
+      "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tạm nộp là ngày cuối cùng của tháng đầu quý tiếp theo (Điều 24 khoản 2); đổi due_day từ 30 sang \"last\"; 4 quý ít nhất 80% (khoản 3). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã thêm vào summary_plain, điền legal_basis. applies_if chưa có điều kiện doanh thu (engine chưa có trường doanh thu), nên nghĩa vụ vẫn hiện với mọi công ty.",
       "Còn mở sau NC-011 (2026-11-12): (1) DN được miễn có còn phải kê khai, quyết toán TNDN không: chưa xác minh (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). Không viết \"không phải quyết toán\". (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
       "Viết các bước và mức phạt khi tạm nộp thiếu",

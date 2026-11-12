@@ -4,7 +4,7 @@
   "sample_notice": "MẪU – CHƯA XÁC MINH",
   "title": "Nộp tờ khai thuế GTGT theo quý",
   "category": "thue",
-  "summary": "Mỗi quý, công ty tính thuế GTGT theo phương pháp khấu trừ và khai theo quý phải lập và nộp tờ khai thuế GTGT (mẫu 01/GTGT) qua mạng trước ngày cuối tháng đầu của quý tiếp theo.",
+  "summary": "Mỗi quý, công ty tính thuế GTGT theo phương pháp khấu trừ và khai theo quý phải lập và nộp tờ khai thuế GTGT (mẫu 01/GTGT) qua mạng chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo.",
   "related_rules": ["VAT_QUARTERLY_RETURN"],
   "body_sections": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "heading": "Hạn nộp",
-      "content": "Hạn nộp tờ khai và tiền thuế:\n• Quý I (tháng 1–3): nộp trước ngày 30/4\n• Quý II (tháng 4–6): nộp trước ngày 31/7\n• Quý III (tháng 7–9): nộp trước ngày 31/10\n• Quý IV (tháng 10–12): nộp trước ngày 31/01 năm sau\n\nNếu ngày hạn trùng ngày nghỉ/lễ, hạn được dời sang ngày làm việc tiếp theo."
+      "content": "Hạn nộp tờ khai và tiền thuế (Nghị định 252/2026/NĐ-CP Điều 10 khoản 3; Luật Quản lý thuế 108/2025/QH15 Điều 14 khoản 1 điểm a):\n• Quý I (tháng 1–3): chậm nhất ngày 30/4\n• Quý II (tháng 4–6): chậm nhất ngày 31/7\n• Quý III (tháng 7–9): chậm nhất ngày 31/10\n• Quý IV (tháng 10–12): chậm nhất ngày 31/01 năm sau\n\nNếu ngày hạn trùng ngày nghỉ/lễ, hạn được dời sang ngày làm việc tiếp theo."
     },
     {
       "heading": "Các bước thực hiện",
@@ -35,12 +35,11 @@
   "todo_for_reviewer": [
     "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
     "Xác nhận ngưỡng doanh thu 50 tỷ để khai quý theo văn bản hiện hành",
-    "Xác nhận hạn nộp chính xác cho từng quý (ngày cuối tháng hay ngày cụ thể)",
-    "Xác nhận mức phạt chậm nộp theo Nghị định hiện hành",
+        "Xác nhận mức phạt chậm nộp theo Nghị định hiện hành",
     "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
     "Kiểm tra link eTax còn hoạt động không",
     "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế GTGT 13/2008/QH12 có thể đã được thay bằng Luật Thuế GTGT số 48/2024/QH15 (từ 1/7/2025); Luật Quản lý thuế 38/2019/QH14 có thể đã có luật thay thế (năm 2025). Kiểm tra cả Thông tư 80/2021/TT-BTC. Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế GTGT 48/2024/QH15, hiệu lực 01/07/2025; sửa bởi Luật 90/2025/QH15, 149/2025/QH15, 09/2026/QH16. Nghị định hướng dẫn 181/2025/NĐ-CP, sửa bởi 359/2025/NĐ-CP và 144/2026/NĐ-CP. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
-    "Mâu thuẫn trong app: guide này ghi hạn quý là 30/4, 31/7, 31/10, 31/01 (ngày cuối tháng); /bat-dau và legal-framework.json ghi \"ngày 30\".",
+    "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn quý là ngày cuối cùng của tháng đầu quý tiếp theo (Điều 10 khoản 3); hạn nộp tiền thuế là ngày cuối cùng của hạn nộp hồ sơ khai (Luật 108/2025 Điều 14 khoản 1 điểm a). Đổi \"nộp trước ngày\" thành \"chậm nhất ngày\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
     "Mức phạt chậm nộp tờ khai \"2.000.000 – 5.000.000 đồng\": theo báo chí (chưa xác minh), có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP).",
     "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025."
   ],

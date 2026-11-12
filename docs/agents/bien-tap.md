@@ -142,6 +142,17 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `tests/so-ke-toan.test.ts`: thêm SK12.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 15 (2026-11-12, 23:17 UTC)
+
+- Đọc NC-013 (hạn khai thuế và tạm nộp TNDN theo Luật 108/2025/QH15, Nghị định 252/2026/NĐ-CP, đã xác minh). Status giữ "draft".
+- Hạn quý: sửa mọi chỗ "ngày 30 của tháng đầu quý tiếp theo" thành "ngày cuối cùng của tháng đầu quý tiếp theo (30/4, 31/7, 31/10, 31/01)" ở `bat-dau.json` (bước quý đầu, lịch năm), `guides/tam-nop-thue-tndn.json`, `legal-framework.json`. Guide GTGT quý đã đúng ngày; đổi "nộp trước ngày" thành "chậm nhất ngày", ghi căn cứ.
+- `rules/obligation_rules.json`: `CIT_PROVISIONAL` đổi `due_day` 30 → "last". Đã chạy engine thử: hạn ra 30/4, 31/7, 31/10, 31/01. Điền `legal_basis` cho 3 nghĩa vụ (GTGT quý, GTGT tháng, tạm nộp TNDN).
+- `guides/tam-nop-thue-tndn.json`: ngưỡng tạm nộp 80% (bỏ "75–80%", "dưới 75%"); hạn quyết toán là ngày cuối tháng thứ 3 sau khi hết năm tài chính (bỏ câu sai "31/12 nếu năm tài chính không theo năm dương lịch"); thêm câu công ty được miễn vẫn nên nộp quyết toán (ghi rõ là cách hiểu theo Điều 11).
+- Guide GTGT tháng: ghi căn cứ ngày 20 (Điều 10 khoản 2).
+- Bỏ các todo mâu thuẫn "ngày 30 / cuối tháng" và "75% hay 80%". Việc dời hạn khi trùng ngày nghỉ chưa xác minh, đã ghi todo.
+- Không đổi: hạn môn bài "30/01" (`legal-framework.json`), ngoài NC-013.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -155,6 +166,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 13) NC-011: DN được miễn thuế TNDN có còn phải kê khai, quyết toán TNDN không (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). DN cũ có doanh thu năm trước từ 1 tỷ trở xuống có văn bản nói thẳng là không phải tạm nộp quý không.
 
 - (Vòng 14) NC-012: DN nộp thuế TNDN theo % doanh thu thì kê khai theo quý hay năm, dùng mẫu tờ khai nào. Có Thông tư hướng dẫn Nghị định 320/2025 không.
+
+- (Vòng 15) NC-013: hạn trùng ngày nghỉ, lễ có được dời sang ngày làm việc tiếp theo không (app đang ghi có, engine dùng `next_working_day`). Thông tư 89/2026 có nói rõ DN được miễn TNDN vẫn nộp quyết toán không.
 
 ## Cần chủ dự án quyết
 

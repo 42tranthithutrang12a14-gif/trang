@@ -82,14 +82,13 @@
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
             "Hạn nộp tờ khai GTGT tháng: ngày 20 của tháng tiếp theo",
-            "Hạn nộp tờ khai GTGT quý: ngày 30 của tháng đầu quý tiếp theo",
+            "Hạn nộp tờ khai GTGT quý: ngày cuối cùng của tháng đầu quý tiếp theo (Nghị định 252/2026/NĐ-CP Điều 10 khoản 3)",
             "Nộp qua hệ thống eTax: https://thuedientu.gdt.gov.vn"
           ],
           "todo_for_reviewer": [
-            "Xác nhận hạn ngày 20 và ngày 30 theo TT 80/2021 còn đúng",
             "Kiểm tra có văn bản gia hạn nào hiện hành không",
-            "Mâu thuẫn trong app: ở đây ghi hạn GTGT quý \"ngày 30\"; guide khai-thue-gtgt-theo-quy ghi ngày cuối tháng (31/7, 31/10, 31/01).",
-            "Gợi ý của trợ lý AI (chưa xác minh): Luật Quản lý thuế 38/2019/QH14 mà thông tư này hướng dẫn có thể đã có luật thay thế (năm 2025). Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1"
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật Quản lý thuế 38/2019/QH14 mà thông tư này hướng dẫn có thể đã có luật thay thế (năm 2025). Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+            "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): từ 01/07/2026 áp dụng Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP. Hạn tháng ngày 20 (Điều 10 khoản 2), hạn quý ngày cuối cùng của tháng đầu quý sau (Điều 10 khoản 3). Thông tư 80/2021 hướng dẫn luật cũ; chưa tra Thông tư 89/2026. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1"
           ]
         }
       ]
@@ -109,7 +108,7 @@
           "key_points": [
             "Thuế suất 20%; 15% nếu tổng doanh thu năm trước không quá 3 tỷ đồng; 17% nếu trên 3 tỷ đến 50 tỷ đồng (Điều 10 khoản 1, 2, 3)",
             "Áp dụng từ kỳ tính thuế năm 2025 (Điều 19 khoản 1)",
-            "Tạm nộp thuế TNDN theo quý: ngày 30 của tháng đầu quý tiếp theo"
+            "Tạm nộp thuế TNDN theo quý: ngày cuối cùng của tháng đầu quý tiếp theo; 4 quý ít nhất 80% số thuế quyết toán (Nghị định 252/2026/NĐ-CP Điều 24)"
           ],
           "todo_for_reviewer": [
             "Bổ sung quy định về quyết toán TNDN năm",
@@ -117,7 +116,7 @@
             "Ngày 2026-11-12 (NC-010, đã đối chiếu toàn văn): đổi number từ \"14/2008/QH12 (sửa đổi bổ sung)\" thành \"67/2025/QH15\", effective_from 01/10/2025 (Điều 19 khoản 1), url sang trang vanban.chinhphu.vn; sửa 2 ý thuế suất trong key_points theo Điều 10. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
             "Luật 09/2026/QH16 Điều 3 (hiệu lực 01/01/2026, đã đối chiếu toàn văn theo NC-010) bổ sung khoản 14a Điều 4 Luật Thuế TNDN: DN có tổng doanh thu năm từ mức Chính phủ quy định trở xuống được miễn thuế TNDN. Mức doanh thu này chưa xác minh (có thể ở nghị định hướng dẫn); không ghi con số khi chưa có nguồn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
             "Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
-            "Ý \"Tạm nộp thuế TNDN theo quý: ngày 30 của tháng đầu quý tiếp theo\" chưa xác minh (thuộc Luật Quản lý thuế)."
+            "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): sửa ý tạm nộp quý theo Điều 24 khoản 1, 2, 3. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1"
           ]
         },
         {
