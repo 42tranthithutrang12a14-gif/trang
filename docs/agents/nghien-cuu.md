@@ -312,6 +312,35 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Thêm todo ở các mục TNDN: "Luật 09/2026/QH16 Điều 3 (hiệu lực 01/01/2026): DN có doanh thu năm từ mức Chính phủ quy định trở xuống được miễn thuế TNDN; mức này chưa xác minh." Không viết con số mức miễn.
   - `so-ke-toan.json`: thêm điều kiện áp dụng 4 sổ S1–S4: "chỉ dành cho DN nộp thuế TNDN theo tỷ lệ % trên doanh thu: doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí (Luật 67/2025 Điều 11 khoản 2 điểm b; TT 132/2018 Điều 3 khoản 2). DN tính thuế trên thu nhập tính thuế dùng S01–S10."
 
+### Ghi chú vòng 12 (2026-11-12, 18:18 UTC)
+
+- Đã rà commit `9135e64` của Biên tập (áp dụng NC-010): sửa thuế suất 15/17/20% ở `tam-nop-thue-tndn.json`, `tu-0-den-1.json`, `legal-framework.json`; thêm điều kiện 4 sổ ở `so-ke-toan.json`. Đúng đề xuất.
+- Vòng này làm NC-011: mức doanh thu được miễn thuế TNDN (điểm còn mở của NC-010).
+
+### NC-011 — DN có tổng doanh thu năm từ 1 tỷ đồng trở xuống được miễn thuế TNDN (Nghị định 141/2026/NĐ-CP)
+
+- Trạng thái: đã xác minh
+- Liên quan: `src/content/guides/tam-nop-thue-tndn.json` (toàn bộ hướng dẫn tạm nộp theo quý); `src/content/tu-0-den-1.json` và `src/content/bat-dau.json` (các bước tạm nộp TNDN quý, quyết toán năm); `src/content/rules/obligation_rules.json` (luật nghĩa vụ tạm nộp); `src/content/legal-framework.json` (mục thuế TNDN).
+- Nguồn: Nghị định 141/2026/NĐ-CP sửa đổi, bổ sung Nghị định 68/2026/NĐ-CP và Nghị định 320/2025/NĐ-CP. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1; PDF có chữ ký số https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/141-ndcp.signed.pdf (4 trang, bản quét, đã OCR rồi đọc lại). Ban hành 29/04/2026. Mở ngày 2026-11-12. Căn cứ luật: Luật 09/2026/QH16 Điều 3 (NC-010).
+- Phát hiện:
+  - Điều 2 bổ sung khoản 15 Điều 4 Nghị định 320/2025/NĐ-CP (thu nhập được miễn thuế): "Thu nhập của doanh nghiệp, tổ chức được thành lập theo quy định của pháp luật Việt Nam có tổng doanh thu năm từ 01 tỷ đồng trở xuống, cụ thể như sau:"
+    - Điểm a: tổng doanh thu năm làm căn cứ "là tổng doanh thu từ hoạt động bán hàng, cung cấp dịch vụ (không bao gồm các khoản giảm trừ doanh thu), doanh thu từ hoạt động tài chính và thu nhập khác trên Phụ lục kết quả hoạt động sản xuất, kinh doanh kèm theo tờ khai quyết toán thuế thu nhập doanh nghiệp của kỳ tính thuế năm trước liền kề".
+    - Điểm b: năm trước hoạt động dưới 12 tháng thì quy đổi: doanh thu thực tế ÷ số tháng hoạt động × 12; tháng thành lập tính đủ tháng.
+    - Điểm c: "Trường hợp doanh nghiệp mới thành lập trong kỳ tính thuế và dự kiến tổng doanh thu trong kỳ tính thuế không quá 01 tỷ đồng thì doanh nghiệp không phải tạm nộp thuế thu nhập doanh nghiệp. Kết thúc kỳ tính thuế, trường hợp tổng doanh thu thực tế trong kỳ tính thuế vượt mức 01 tỷ đồng thì doanh nghiệp thực hiện kê khai, quyết toán thuế thu nhập doanh nghiệp theo quy định và không phải tính tiền chậm nộp."
+    - Điểm d: không áp dụng cho công ty con hoặc công ty có quan hệ liên kết mà doanh nghiệp liên kết không đáp ứng điều kiện miễn thuế (OCR đoạn này có chỗ mờ; nghĩa chính đọc được).
+  - Điều 3: "Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026."
+  - Điều 4 khoản 2: DN đã tạm nộp quý I năm 2026 mà đủ điều kiện thì "không phải tạm nộp thuế thu nhập doanh nghiệp các quý tiếp theo", được bù trừ, hoàn trả số nộp thừa. Khoản 3: kỳ tính thuế 2025 kết thúc sau 01/01/2026 thì miễn phần thời gian từ 01/01/2026, tính theo tỷ lệ tháng.
+  - Điều 1 (ngoài phạm vi DN): nâng ngưỡng của hộ, cá nhân kinh doanh trong Nghị định 68/2026 từ "500 triệu đồng" lên "01 tỷ đồng".
+- **Kết luận:** Từ kỳ tính thuế năm 2026, DN siêu nhỏ có tổng doanh thu năm trước liền kề (gồm doanh thu bán hàng, dịch vụ, tài chính, thu nhập khác) từ 1 tỷ đồng trở xuống được miễn thuế TNDN. DN mới thành lập dự kiến doanh thu năm không quá 1 tỷ thì không phải tạm nộp TNDN theo quý. Đây là thay đổi lớn cho người dùng chính của app: nhiều DN siêu nhỏ không phải tạm nộp TNDN.
+- **Còn mở:**
+  - Văn bản chỉ nói miễn **thuế**. Chưa đọc quy định về nghĩa vụ **kê khai, quyết toán** TNDN cho DN được miễn (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). Không được viết "không phải quyết toán" khi chưa có căn cứ.
+  - Ngoài quy định cho DN mới thành lập ở điểm c, chưa thấy câu nói rõ DN cũ có doanh thu năm trước ≤ 1 tỷ thì không phải tạm nộp quý. Điều 4 khoản 2 ngầm hiểu như vậy cho năm 2026. Ghi là cách hiểu.
+  - Chưa đọc Nghị định 320/2025 gốc (76 trang, bản quét). Vòng sau: đọc tỷ lệ % tính thuế trên doanh thu (cho chế độ 4 sổ) và quy định tạm nộp.
+- **Đề xuất sửa (Biên tập):**
+  - `tam-nop-thue-tndn.json`: thêm ngay đầu hướng dẫn một mục "Trước khi tạm nộp: kiểm tra có được miễn thuế không". Nội dung: "Từ năm 2026, công ty có tổng doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN. Doanh thu gồm tiền bán hàng, dịch vụ (trừ các khoản giảm trừ), doanh thu tài chính và thu nhập khác. Công ty mới thành lập, dự kiến doanh thu cả năm không quá 1 tỷ đồng: không phải tạm nộp TNDN. Nếu cuối năm doanh thu thực tế vượt 1 tỷ: kê khai, quyết toán bình thường, không bị tính tiền chậm nộp. Công ty con, công ty liên kết có thể không được miễn." `legal_basis`: Nghị định 141/2026/NĐ-CP Điều 2 (khoản 15 Điều 4 Nghị định 320/2025/NĐ-CP, điểm a–d), Điều 3; Luật 09/2026/QH16 Điều 3; URL https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1; `verified_against_original: true`.
+  - `tu-0-den-1.json`, `bat-dau.json`, `obligation_rules.json`: các bước "tạm nộp TNDN quý" thêm điều kiện "nếu doanh thu năm trước trên 1 tỷ đồng (hoặc DN mới, dự kiến trên 1 tỷ)". Không bỏ hẳn bước, vì DN vượt ngưỡng vẫn phải nộp.
+  - Ghi todo: nghĩa vụ kê khai, quyết toán TNDN của DN được miễn chưa xác minh; điểm d (DN liên kết) cần đối chiếu lại bản gốc nếu dùng chi tiết.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
