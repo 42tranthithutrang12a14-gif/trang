@@ -81,11 +81,24 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Bỏ T25 và câu hỏi về ngày 130/2018 khỏi các mục chờ, vì đã xong.
 - Kiểm tra: `npm test` 59/59 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 10 (2026-11-12, 13:20 UTC)
+
+- Đọc NC-001 (đã xác minh, toàn văn Luật Kế toán 88/2015, Nghị định 174/2016, Thông tư 132/2018) và quyết định mới trong `README.md` (xây hệ thống trước; ưu tiên sổ kế toán, thao tác, lộ trình).
+- Áp dụng NC-001. Status giữ "draft".
+  - `guides/so-sach-ke-toan.json`, mục "Ai làm kế toán?": thay câu ⚠️ "phải có chứng chỉ hành nghề hoặc bằng kế toán" bằng 5 ý có điều, khoản. Giữ một câu khuyên hỏi cơ quan thuế hoặc kế toán, kèm lý do: Thông tư 132/2018 Điều 8 khoản 1 câu 2 chưa rõ có bỏ điều kiện trình độ không. Guide không có trường `legal_basis` nên căn cứ ghi trong nội dung và todo.
+  - `tu-0-den-1.json`, bước "Tự làm kế toán": bước kiểm tra thành 3 câu tự hỏi; bước thuê dịch vụ ghi rõ chỉ thuê phần phụ trách kế toán. Điền `legal_basis` (3 văn bản, `verified_against_original: true`, `checked_at` 2026-11-12).
+  - `tu-0-den-1.json`, bước DN siêu nhỏ: trả lời todo "có bắt buộc kế toán trưởng không", điền `legal_basis` (Nghị định 174/2016 Điều 20; Thông tư 132/2018 Điều 8).
+  - `bat-dau.json`, Tuần 1–2: sửa ghi chú việc "Chuẩn bị tự làm kế toán", điền `legal_basis`.
+  - Ghi "điểm còn mở" của NC-001 vào todo ở cả 3 file.
+- Chưa làm sổ kế toán, thao tác, lộ trình: `nghien-cuu.md` chưa có mục cho các phần này.
+- Môi trường: phải chạy `npm install` vì `package.json` mới thêm `exceljs`. Không đổi `package-lock.json`.
+- Kiểm tra: `npm test` 83/83 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
-- Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
+- (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
 - Nghị định 310/2025/NĐ-CP: cổng ghi hiệu lực "16-01-2025". Nhờ đối chiếu ngày đúng khi mở được toàn văn.
 
 ## Cần chủ dự án quyết
 
-Chưa có.
+- (Vòng 10) NC-001: theo Luật Kế toán và Nghị định 174/2016, giám đốc DN siêu nhỏ được làm kế toán cho công ty mình, nhưng phải có bằng hoặc chứng chỉ kế toán. Người phụ trách kế toán còn cần chứng chỉ bồi dưỡng kế toán trưởng và 2–3 năm kinh nghiệm. Nội dung app đã ghi như vậy. Định hướng "tự làm trọn vẹn, không cần thuê kế toán ngoài" trong `AGENTS.md` có thể cần sửa, ví dụ: "tự làm việc hằng ngày; thuê dịch vụ phụ trách kế toán nếu chưa đủ điều kiện". Agent Biên tập không sửa `AGENTS.md`.

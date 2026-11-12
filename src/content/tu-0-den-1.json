@@ -569,17 +569,58 @@
             "Nơi lưu hóa đơn, chứng từ: bản giấy và bản scan"
           ],
           "how": [
-            "Kiểm tra mình có đủ điều kiện tự làm kế toán cho công ty không.",
+            "Tự kiểm tra 3 điều: (1) công ty không có vốn nhà nước; (2) bạn có bằng trung cấp trở lên ngành tài chính, kế toán, kiểm toán, hoặc chứng chỉ kế toán viên, kiểm toán viên; (3) bạn có chứng chỉ bồi dưỡng kế toán trưởng và 2–3 năm làm kế toán.",
             "Chọn chế độ kế toán áp dụng cho doanh nghiệp siêu nhỏ.",
             "Chọn cách ghi sổ: bảng tính theo mẫu hoặc phần mềm kế toán.",
             "Mở sổ kế toán. Ghi mọi khoản thu, chi và lưu mọi hóa đơn, chứng từ từ ngày đầu.",
-            "Chỉ thuê dịch vụ kế toán khi không đủ điều kiện tự làm, hoặc khi muốn nhờ kiểm tra báo cáo tài chính cuối năm."
+            "Nếu điều (2) hoặc (3) chưa đạt: thuê dịch vụ kế toán cho phần phụ trách kế toán. Bạn vẫn tự lập, giữ chứng từ và ghi chép hằng ngày."
           ],
           "links": [],
-          "legal_basis": [],
+          "legal_basis": [
+            {
+              "doc_type": "Luật",
+              "doc_number": "88/2015/QH13",
+              "title": "Luật Kế toán",
+              "issuer": "Quốc hội",
+              "issued_date": "2015-11-20",
+              "effective_date": "2017-01-01",
+              "article": "Điều 51 khoản 1; Điều 52 khoản 3, khoản 4; Điều 54 khoản 1",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-12",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "174/2016/NĐ-CP",
+              "title": "Nghị định quy định chi tiết một số điều của Luật Kế toán",
+              "issuer": "Chính phủ",
+              "issued_date": "2016-12-30",
+              "effective_date": "2017-01-01",
+              "article": "Điều 18 khoản 1, khoản 5; Điều 19 khoản 2, khoản 3; Điều 20 khoản 1, khoản 2 điểm b; Điều 21 khoản 1, khoản 3 điểm g; Điều 22 khoản 1",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-12",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Thông tư",
+              "doc_number": "132/2018/TT-BTC",
+              "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+              "issuer": "Bộ Tài chính",
+              "issued_date": "2018-12-28",
+              "effective_date": "2019-02-15",
+              "article": "Điều 8 khoản 1, 2, 3",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-12",
+              "snapshot_path": ""
+            }
+          ],
           "todo_for_reviewer": [
             "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
-            "Điểm then chốt của cả app: xác minh chủ DN siêu nhỏ có được tự làm kế toán cho công ty mình không, và điều kiện (trình độ chuyên môn, người không được làm kế toán, kế toán trưởng) theo Luật Kế toán và nghị định hướng dẫn. Nếu không được thì phải sửa bước này.",
+            "Ngày 2026-11-12 (NC-001, đã đối chiếu toàn văn): đã viết lại bước kiểm tra điều kiện và bước thuê dịch vụ, điền legal_basis (Luật Kế toán, Nghị định 174/2016/NĐ-CP, Thông tư 132/2018/TT-BTC). legal_basis chỉ phủ phần điều kiện làm kế toán, chưa phủ chế độ kế toán và mốc mở sổ.",
+            "Điểm còn mở sau NC-001 (2026-11-12): (1) Nghị định 174/2016 Điều 20 khoản 2 điểm b ghi DN siêu nhỏ \"được bố trí phụ trách kế toán\"; cách hiểu là phải có phụ trách kế toán hoặc thuê dịch vụ, chưa có văn bản hướng dẫn trực tiếp. (2) Thông tư 132/2018 Điều 8 khoản 1 câu 2: DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu \"có thể tự tổ chức thực hiện công tác kế toán\"; chưa rõ có bỏ điều kiện trình độ không. Rủi ro cao, cần kế toán hoặc luật sư cho ý kiến. (3) Chưa đọc Thông tư 101/2026/TT-BTC (chứng chỉ bồi dưỡng kế toán trưởng, hiệu lực 01/01/2027). (4) Chưa tìm thấy văn bản sửa Nghị định 174/2016. (5) Tiêu chí DN siêu nhỏ (Nghị định 80/2021/NĐ-CP) chưa đọc. Luật 56/2024/QH15 không sửa khoản 1 Điều 51, Điều 52, Điều 54 Luật Kế toán (theo NC-001).",
             "Xác minh mốc phải mở sổ kế toán.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
@@ -812,11 +853,38 @@
           "Chọn chế độ kế toán áp dụng, dùng mẫu sổ và mẫu báo cáo theo chế độ đó."
         ],
         "links": [],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "174/2016/NĐ-CP",
+            "title": "Nghị định quy định chi tiết một số điều của Luật Kế toán",
+            "issuer": "Chính phủ",
+            "issued_date": "2016-12-30",
+            "effective_date": "2017-01-01",
+            "article": "Điều 20 khoản 1, khoản 2 điểm b",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "132/2018/TT-BTC",
+            "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2018-12-28",
+            "effective_date": "2019-02-15",
+            "article": "Điều 8 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
           "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
           "Xác minh tiêu chí doanh nghiệp siêu nhỏ (Luật Hỗ trợ DNNVV và nghị định hướng dẫn).",
-          "Xác minh DN siêu nhỏ có bắt buộc bố trí kế toán trưởng không.",
+          "DN siêu nhỏ có bắt buộc bố trí kế toán trưởng không: đã trả lời (NC-001, 2026-11-12). Không bắt buộc kế toán trưởng, \"được bố trí phụ trách kế toán\" (Nghị định 174/2016/NĐ-CP Điều 20 khoản 2 điểm b; Thông tư 132/2018/TT-BTC Điều 8 khoản 1). legal_basis chỉ phủ ý này, chưa phủ tiêu chí DN siêu nhỏ và chế độ kế toán.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },

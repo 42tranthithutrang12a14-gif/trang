@@ -103,14 +103,55 @@
         "tasks": [
           { "text": "Mở tài khoản ngân hàng doanh nghiệp", "note": "Cần: GCN ĐKDN + CCCD người đại diện" },
           { "text": "Đặt mua chữ ký số (USB Token hoặc Remote)", "note": "Cần để nộp thuế, BHXH, hồ sơ điện tử" },
-          { "text": "Chuẩn bị tự làm kế toán", "note": "Kiểm tra điều kiện tự làm; chọn cách ghi sổ: bảng tính hoặc phần mềm" }
+          { "text": "Chuẩn bị tự làm kế toán", "note": "Kiểm tra điều kiện làm kế toán: cần bằng hoặc chứng chỉ kế toán. Chưa đủ thì thuê dịch vụ phụ trách kế toán, việc ghi chép vẫn tự làm. Chọn cách ghi sổ: bảng tính hoặc phần mềm" }
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Luật",
+            "doc_number": "88/2015/QH13",
+            "title": "Luật Kế toán",
+            "issuer": "Quốc hội",
+            "issued_date": "2015-11-20",
+            "effective_date": "2017-01-01",
+            "article": "Điều 51 khoản 1; Điều 52 khoản 3, khoản 4; Điều 54 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "174/2016/NĐ-CP",
+            "title": "Nghị định quy định chi tiết một số điều của Luật Kế toán",
+            "issuer": "Chính phủ",
+            "issued_date": "2016-12-30",
+            "effective_date": "2017-01-01",
+            "article": "Điều 18 khoản 1, khoản 5; Điều 19 khoản 2, khoản 3; Điều 20 khoản 1, khoản 2 điểm b; Điều 21 khoản 1, khoản 3 điểm g; Điều 22 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "132/2018/TT-BTC",
+            "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2018-12-28",
+            "effective_date": "2019-02-15",
+            "article": "Điều 8 khoản 1, 2, 3",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
           "Theo định hướng tự làm kế toán (2026-10-28): đã thay việc \"Thuê kế toán hoặc dịch vụ kế toán\" (kèm giá 1–5 triệu/tháng chưa có nguồn) bằng \"Chuẩn bị tự làm kế toán\".",
           "Mở tài khoản ngân hàng: xác minh là bắt buộc hay khuyến nghị. Giấy tờ cần nộp do từng ngân hàng quy định.",
           "Chữ ký số: xác minh văn bản đang có hiệu lực về chữ ký số và việc dùng khi nộp thuế, BHXH.",
-          "Điểm then chốt: xác minh chủ DN siêu nhỏ có được tự làm kế toán cho công ty mình không, và điều kiện theo Luật Kế toán.",
+          "Ngày 2026-11-12 (NC-001, đã đối chiếu toàn văn): đã sửa ghi chú việc \"Chuẩn bị tự làm kế toán\" và điền legal_basis. legal_basis chỉ phủ việc này, chưa phủ tài khoản ngân hàng và chữ ký số.",
+          "Điểm còn mở sau NC-001 (2026-11-12): (1) Nghị định 174/2016 Điều 20 khoản 2 điểm b ghi DN siêu nhỏ \"được bố trí phụ trách kế toán\"; cách hiểu là phải có phụ trách kế toán hoặc thuê dịch vụ, chưa có văn bản hướng dẫn trực tiếp. (2) Thông tư 132/2018 Điều 8 khoản 1 câu 2: DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu \"có thể tự tổ chức thực hiện công tác kế toán\"; chưa rõ có bỏ điều kiện trình độ không. Rủi ro cao, cần kế toán hoặc luật sư cho ý kiến. (3) Chưa đọc Thông tư 101/2026/TT-BTC (chứng chỉ bồi dưỡng kế toán trưởng, hiệu lực 01/01/2027). (4) Chưa tìm thấy văn bản sửa Nghị định 174/2016. (5) Tiêu chí DN siêu nhỏ (Nghị định 80/2021/NĐ-CP) chưa đọc. Luật 56/2024/QH15 không sửa khoản 1 Điều 51, Điều 52, Điều 54 Luật Kế toán (theo NC-001).",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
