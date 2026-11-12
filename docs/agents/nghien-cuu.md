@@ -237,6 +237,47 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Đã rà commit `017f991` của Biên tập: sửa `effective_from` 130/2018 thành 15/11/2018 và `number` mục giao dịch điện tử thành 20/2023/QH15. Khớp trang thông tin trên cổng và quyết định của chủ dự án. Không thấy sai sót.
 - NC-001 chuyển sang "đã xác minh". Xem phần cập nhật vòng 9 trong NC-001.
 
+### Ghi chú vòng 10 (2026-11-12, 14:19 UTC)
+
+- Ba lịch chạy 10:17, 12:18, 14:18 bị dồn do phiên khởi động lại; gộp làm một vòng.
+- Theo thứ tự ưu tiên mới trong README (commit `630f752`): mục 1 là sổ kế toán. Vòng này làm NC-009.
+- Đã rà commit `a722fd1` của Biên tập (áp dụng NC-001): `legal_basis` dẫn đúng điều, khoản tôi đã trích (Luật 88/2015 Điều 51, 52, 54; Nghị định 174/2016 Điều 18–22; TT 132/2018 Điều 8), URL vanban.chinhphu.vn, `verified_against_original: true`, status giữ "draft". Câu ⚠️ đã thay. Không thấy sai sót.
+
+### NC-009 — Sổ kế toán DN siêu nhỏ theo Thông tư 132/2018: danh mục, mẫu, cột
+
+- Trạng thái: đã xác minh (phần danh mục sổ và cột); còn mở phần hiệu lực của Chương III (xem dưới)
+- Liên quan: `src/content/so-ke-toan.json` (sổ thu chi Excel; trường `notice` đang ghi "Chưa đối chiếu với mẫu sổ kế toán của Bộ Tài chính"); trang `/cong-cu`.
+- Nguồn: Thông tư 132/2018/TT-BTC, trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1; PDF có chữ ký số https://datafiles.chinhphu.vn/cpp/files/vbpq/2019/02/132-btc.signed.pdf (bản quét, đã OCR rồi đọc lại). Mở ngày 2026-11-12.
+- Phát hiện:
+  - **Hai chế độ, chọn theo cách nộp thuế TNDN** (Điều 3, PDF trang 2):
+    - Khoản 1: DN siêu nhỏ nộp thuế TNDN "theo phương pháp tính trên thu nhập tính thuế" áp dụng Chương II.
+    - Khoản 2: DN siêu nhỏ nộp thuế TNDN "tính theo tỷ lệ % trên doanh thu bán hàng hóa, dịch vụ" áp dụng Chương III, hoặc chọn Chương II.
+    - Khoản 3: được chọn chế độ kế toán DN nhỏ và vừa (TT 133/2016/TT-BTC). Khoản 4: phải áp dụng nhất quán trong một năm tài chính.
+  - **Chương II — danh mục sổ** (Điều 11 khoản 1, PDF trang 5). Mẫu và cách ghi ở Phụ lục 3.
+    - Sổ tổng hợp: Sổ Nhật ký – Sổ Cái (S01-DNSN). Cột: thứ tự dòng; ngày tháng ghi sổ; chứng từ (số hiệu, ngày); diễn giải; số tiền phát sinh; số hiệu tài khoản đối ứng (Nợ, Có); thứ tự dòng; rồi từng cặp cột Nợ/Có cho mỗi tài khoản.
+    - Sổ chi tiết: S02 vật liệu, dụng cụ, sản phẩm, hàng hóa; S03 tài sản cố định; S04 thanh toán với người mua, người bán; S05 các khoản nợ phải trả; S06a doanh thu (nộp GTGT khấu trừ); S06b doanh thu (nộp GTGT trực tiếp); S07 chi phí sản xuất, kinh doanh; S08 thuế GTGT được khấu trừ; S09 thuế GTGT đầu ra; S10 tiền gửi ngân hàng.
+    - Phụ lục 3, cách ghi S01: "Hàng ngày, căn cứ vào các chứng từ kế toán đã được kiểm tra… xác định tài khoản ghi Nợ, tài khoản ghi Có để ghi vào Sổ Nhật ký – Sổ Cái. Số liệu của mỗi chứng từ được ghi trên một dòng ở cả 2 phần Nhật ký và phần Sổ Cái." Chương II đòi ghi Nợ/Có theo hệ thống tài khoản (Phụ lục 2).
+  - **Chương III — danh mục sổ** (Điều 17 khoản 1, PDF trang 8–9). Mẫu ở Phụ lục 4 (PDF trang 73–76, số trang in 62–65):
+    - S1-DNSN Sổ chi tiết doanh thu bán hàng hóa, dịch vụ. Cột: A ngày tháng ghi sổ; B số hiệu chứng từ; C ngày tháng chứng từ; D diễn giải; 1 doanh thu kinh doanh hàng hóa; 2 kinh doanh dịch vụ; 3 hoạt động khác; ghi chú. Dòng "Cộng số phát sinh trong kỳ".
+    - S2-DNSN Sổ theo dõi thanh toán tiền lương và các khoản nộp theo lương. Cột: ngày ghi sổ; chứng từ; diễn giải; với mỗi nhóm "Tiền lương và thu nhập của người lao động", BHXH, BHYT, BHTN có 3 cột: số phải trả, số đã trả, số còn phải trả. Dòng số dư đầu kỳ, phát sinh, cuối kỳ.
+    - S3-DNSN Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa (mở theo từng tên hàng). Cột: chứng từ (số hiệu, ngày); diễn giải; nhập; xuất; tồn; ghi chú.
+    - S4-DNSN Sổ theo dõi tình hình thực hiện nghĩa vụ với NSNN. Cột: chứng từ (số hiệu, ngày); diễn giải; số thuế phải nộp; số thuế đã nộp; ghi chú. Có số dư đầu kỳ, cuối kỳ.
+    - Điều 17 khoản 3: ngoài 4 sổ trên, được chọn thêm sổ chi tiết hoặc hình thức sổ tổng hợp khác theo TT 133/2016.
+    - Mọi mẫu có chân: "Sổ này có … trang, đánh số từ trang 01 đến trang …", "Ngày mở sổ", chữ ký người lập biểu, kế toán trưởng, người đại diện theo pháp luật (ký, đóng dấu).
+  - **Không có "sổ quỹ tiền mặt" riêng** trong cả hai danh mục. Chương II theo dõi tiền mặt qua tài khoản trên Nhật ký – Sổ Cái; S10 chỉ dành cho tiền gửi ngân hàng.
+- **Đối chiếu với sổ thu chi của app** (`so-ke-toan.json`):
+  - Sổ của app ghi theo dòng tiền (tiền vào, tiền ra, tồn quỹ). Các sổ theo mẫu ghi theo nghiệp vụ: doanh thu ghi khi bán hàng, cung cấp dịch vụ, không phải khi nhận tiền. Một khoản bán chịu chưa thu tiền sẽ không có trong sổ thu chi nhưng phải có trong S1/S06.
+  - Với Chương III, lấy được từ "Nhật ký thu chi": S1 (nếu thêm cột phân loại doanh thu hàng hóa, dịch vụ, khác và cột ghi doanh thu chưa thu tiền) và S4 (nếu thêm loại dòng "thuế phải nộp" ngoài "đã nộp"). S2 cần bảng lương riêng. S3 cần theo dõi số lượng nhập, xuất, tồn theo từng mặt hàng.
+  - Với Chương II, cần ghi Nợ/Có theo tài khoản. Sổ thu chi hiện tại không đủ.
+- **Còn mở:**
+  - Chương III chỉ dùng được nếu DN còn được nộp thuế TNDN theo tỷ lệ % trên doanh thu. Luật Thuế TNDN 67/2025/QH15 (hiệu lực 01/10/2025) và Luật 09/2026/QH16 có thể đã đổi phương pháp này cho DN siêu nhỏ. Chưa đọc toàn văn hai luật. Vòng sau ưu tiên.
+  - Thông tư 132/2018 còn hiệu lực không: trên vanban.chinhphu.vn chưa thấy văn bản thay thế (NC-002). Chưa thấy Thông tư 58/2026.
+  - Phương pháp ghi chi tiết từng cột của S1–S4 (Phụ lục 4 mục 2, PDF trang 77 trở đi) chưa trích hết; vòng sau trích nếu Biên tập cần.
+- **Đề xuất sửa (Biên tập):**
+  - Trong `so-ke-toan.json`, giữ trường `notice` nhưng sửa cho đúng: "Sổ này giúp ghi thu chi hằng ngày. Theo Thông tư 132/2018/TT-BTC, DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu phải mở 4 sổ: S1 doanh thu, S2 lương và bảo hiểm, S3 hàng tồn kho, S4 nghĩa vụ thuế. DN tính thuế trên thu nhập tính thuế phải dùng Sổ Nhật ký – Sổ Cái (S01) và các sổ chi tiết S02–S10." `legal_basis`: TT 132/2018 Điều 3, Điều 11 khoản 1, Điều 17 khoản 1, Phụ lục 3, Phụ lục 4; URL ở trên; `verified_against_original: true`.
+  - Thêm vào sổ Excel (theo hướng README: ghi chi tiết ở Nhật ký, sổ mẫu lấy ra từ đó): (1) cột "Loại doanh thu" (hàng hóa / dịch vụ / khác) và cách ghi doanh thu bán chịu; (2) trang "S1-DNSN" tự cộng doanh thu theo 3 cột; (3) trang "S4-DNSN" với cột phải nộp, đã nộp; (4) trang "S2-DNSN", "S3-DNSN" để trống theo đúng cột mẫu, cho DN có lao động hoặc hàng tồn kho. Đầu mỗi trang ghi mã mẫu và dòng "Ban hành kèm theo Thông tư số 132/2018/TT-BTC ngày 28/12/2018 của Bộ Tài chính" như mẫu.
+  - Ghi todo: Chương III phụ thuộc phương pháp tính thuế TNDN theo Luật 67/2025 (chưa xác minh).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
