@@ -12,6 +12,12 @@ export function SiteFooter() {
             </p>
           </div>
           <nav className="flex flex-wrap gap-4 text-sm text-muted">
+            <Link href="/lo-trinh" className="hover:text-foreground transition-colors">
+              Lộ trình
+            </Link>
+            <Link href="/bat-dau" className="hover:text-foreground transition-colors">
+              Khung tư duy
+            </Link>
             <Link href="/khung-phap-ly" className="hover:text-foreground transition-colors">
               Khung pháp lý
             </Link>

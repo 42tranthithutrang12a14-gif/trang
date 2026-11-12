@@ -72,6 +72,17 @@ export default function ThuVienPage() {
         </p>
       </div>
 
+      <div className="mb-8 grid gap-3 sm:grid-cols-2">
+        <Link href="/bat-dau" className="rounded-xl border border-border bg-surface p-4 transition-colors hover:border-accent/40">
+          <p className="text-sm font-semibold text-foreground">🧠 Khung tư duy pháp lý và thuế</p>
+          <p className="mt-1 text-xs leading-relaxed text-muted">3 mảng cần quản lý, việc của năm đầu, lịch hằng năm.</p>
+        </Link>
+        <Link href="/khung-phap-ly" className="rounded-xl border border-border bg-surface p-4 transition-colors hover:border-accent/40">
+          <p className="text-sm font-semibold text-foreground">⚖️ Khung pháp lý</p>
+          <p className="mt-1 text-xs leading-relaxed text-muted">Danh sách văn bản pháp luật cốt lõi, kèm link nguồn chính thức.</p>
+        </Link>
+      </div>
+
       {guides.length === 0 ? (
         <div className="rounded-2xl border border-border bg-surface p-12 text-center">
           <p className="text-3xl mb-4">📚</p>

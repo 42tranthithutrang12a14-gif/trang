@@ -76,6 +76,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Người mới bắt đầu */}
+      <section className="border-b border-border bg-accent/5">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-12 text-center">
+          <h2 className="text-2xl font-bold text-foreground">Mới kinh doanh, chưa biết bắt đầu từ đâu?</h2>
+          <p className="max-w-xl text-sm leading-relaxed text-muted">
+            Chọn chỗ bạn đang đứng. Sổ tay chỉ ra việc tiếp theo, cách làm từng bước, kèm sổ thu chi Excel
+            và hướng dẫn từng cú nhấp chuột.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/lo-trinh"
+              className="rounded-xl bg-accent px-8 py-4 text-base font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark"
+            >
+              Bắt đầu từ đây →
+            </Link>
+            <Link
+              href="/cong-cu"
+              className="rounded-xl border-2 border-accent/30 bg-surface px-8 py-4 text-base font-semibold text-accent transition-colors hover:border-accent"
+            >
+              Tải sổ thu chi
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 3 lợi ích */}
       <section className="mx-auto max-w-5xl px-4 py-16">
         <h2 className="text-center text-2xl font-bold text-foreground">

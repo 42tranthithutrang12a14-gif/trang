@@ -1,0 +1,114 @@
+{
+  "updated_at": "2026-11-12",
+  "todo_for_reviewer": [
+    "Khung do trợ lý AI dựng ngày 2026-11-12. Việc của hai giai đoạn đầu lấy từ tu-0-den-1.json. Việc định kỳ của giai đoạn \"đang kinh doanh\" là bản nháp, chưa đối chiếu văn bản gốc.",
+    "Agent Nghiên cứu: đối chiếu việc định kỳ với hướng dẫn chính thức (kỳ khai thuế, hạn nộp, lưu chứng từ). Agent Biên tập: bổ sung việc còn thiếu cho giai đoạn \"đang kinh doanh\"."
+  ],
+  "stages": [
+    {
+      "id": "chua-co-cong-ty",
+      "icon": "🌱",
+      "title": "Tôi chưa có công ty",
+      "desc": "Đang tìm hiểu hoặc đang chuẩn bị hồ sơ.",
+      "goal": "Đích đến: có Giấy chứng nhận đăng ký doanh nghiệp.",
+      "checklist_stages": ["chuan-bi", "dang-ky"]
+    },
+    {
+      "id": "vua-co-giay-phep",
+      "icon": "📄",
+      "title": "Tôi vừa có giấy phép",
+      "desc": "Đã có Giấy chứng nhận, chưa bán hàng.",
+      "goal": "Đích đến: sẵn sàng bán hàng và xuất hóa đơn.",
+      "checklist_stages": ["truoc-khi-ban"]
+    },
+    {
+      "id": "dang-kinh-doanh",
+      "icon": "🏪",
+      "title": "Tôi đang kinh doanh",
+      "desc": "Đã bán hàng. Cần làm đều việc sổ sách và thuế.",
+      "goal": "Đích đến: sổ sách gọn, nộp tờ khai đúng hạn.",
+      "checklist_stages": []
+    }
+  ],
+  "routines": [
+    {
+      "id": "ghi-so-hang-ngay",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Mỗi ngày",
+      "title": "Ghi mọi khoản tiền vào, tiền ra",
+      "how": [
+        "Mở file sổ thu chi.",
+        "Mỗi khoản ghi một dòng: ngày, nội dung, nhóm, số tiền, quỹ.",
+        "Cất hóa đơn, chứng từ của ngày vào một chỗ. Chụp ảnh lưu thêm một bản."
+      ],
+      "tool": { "label": "Tải sổ thu chi (Excel)", "href": "/cong-cu#so-thu-chi" },
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Xác minh yêu cầu về chứng từ kế toán và thời hạn lưu chứng từ.",
+        "Sổ thu chi là sổ theo dõi nội bộ, chưa đối chiếu mẫu sổ theo quy định (xem so-ke-toan.json)."
+      ]
+    },
+    {
+      "id": "doi-chieu-hang-tuan",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Mỗi tuần",
+      "title": "So sổ với tiền thật",
+      "how": [
+        "Đếm tiền mặt trong két. So với cột \"Tồn tiền mặt\" trong sổ.",
+        "Mở ứng dụng ngân hàng. So số dư với cột \"Tồn ngân hàng\".",
+        "Nếu lệch: tìm khoản chưa ghi và ghi bổ sung."
+      ],
+      "legal_basis": [],
+      "todo_for_reviewer": ["Đây là cách làm thông dụng, không phải quy định. Xác minh có quy định về kiểm kê quỹ áp dụng cho DN siêu nhỏ không."]
+    },
+    {
+      "id": "xem-tong-hop-hang-thang",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Mỗi tháng",
+      "title": "Xem tổng hợp của tháng",
+      "how": [
+        "Mở trang \"Tổng hợp\" trong file sổ.",
+        "Xem 4 ô kiểm tra ở đầu trang. Cả 4 ô phải bằng 0.",
+        "Xem tiền vào, tiền ra, lãi lỗ tạm tính và thuế GTGT của tháng."
+      ],
+      "legal_basis": [],
+      "todo_for_reviewer": ["Lãi lỗ tạm tính là số nội bộ. Xác minh cách dùng số này khi lập tờ khai và báo cáo tài chính."]
+    },
+    {
+      "id": "khai-thue-theo-ky",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Theo kỳ thuế",
+      "title": "Khai và nộp thuế đúng hạn",
+      "how": [
+        "Xem công ty bạn khai thuế theo tháng hay theo quý, và hạn nộp của kỳ này.",
+        "Dùng số ở trang \"Tổng hợp\" để đối chiếu khi lập tờ khai.",
+        "Nộp tờ khai và tiền thuế qua thuế điện tử, trước hạn."
+      ],
+      "tool": { "label": "Xem việc theo năm và lịch hạn nộp", "href": "/bat-dau" },
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Xác minh kỳ khai thuế và hạn nộp theo Luật Quản lý thuế đang có hiệu lực (xem NC-003 trong docs/agents/nghien-cuu.md).",
+        "Xác minh số liệu nào trong sổ thu chi dùng được cho tờ khai thuế GTGT, và số nào phải lấy từ hóa đơn.",
+        "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+      ]
+    },
+    {
+      "id": "kham-dinh-ky",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Mỗi quý",
+      "title": "Khám sức khỏe pháp lý",
+      "how": [
+        "Trả lời 23 câu hỏi về tình hình công ty. Mất khoảng 5 phút.",
+        "Xem danh sách việc cần làm ngay và lịch hạn nộp của riêng công ty bạn."
+      ],
+      "tool": { "label": "Khám miễn phí", "href": "/kham" },
+      "legal_basis": [],
+      "todo_for_reviewer": ["Bộ quy tắc của phần khám vẫn là bản nháp (xem src/content/rules)."]
+    }
+  ]
+}
