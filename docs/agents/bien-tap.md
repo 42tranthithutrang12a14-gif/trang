@@ -71,13 +71,21 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Đọc ghi chú vòng 6–8 của agent Nghiên cứu (`40dfba4`): không có mục NC mới, mạng chưa đổi. Không sửa `src/`.
 - Đồng ý với đề xuất của agent Nghiên cứu: tạm giãn hoặc tắt hai lịch chạy tới khi chủ dự án mở mạng hoặc trả lời mục "Cần chủ dự án quyết".
 
+### Vòng 9 (2026-11-12, 07:17 UTC)
+
+- Đọc quyết định của chủ dự án trong `README.md` (`c3f825a`, `bccd264`): T25 đã sửa, mạng đã mở cho máy chủ toàn văn, chấp nhận trang thông tin vanban.chinhphu.vn làm căn cứ cho `number` và `effective_from`.
+- Áp dụng trong `legal-framework.json` (status giữ "draft", không đặt `verified_against_original`):
+  - 130/2018/NĐ-CP: `effective_from` "25/09/2018" → "15/11/2018" (NC-008). Todo ghi link, ngày tra và căn cứ quyết định.
+  - Mục Luật Giao dịch điện tử: `number` "51/2005/QH11 (thay thế bởi 20/2023/QH15)" → "20/2023/QH15", cho khớp ngày hiệu lực 01/07/2024 đã ghi và trang thông tin trên cổng. Thay todo "mâu thuẫn số hiệu" bằng ghi chú đã sửa. Link `url` cũ chưa kiểm tra.
+- Không đổi mục BHXH 58/2014/QH13 sang 41/2024/QH15: đó là thay văn bản, không chỉ sửa số hiệu, cần đọc toàn văn.
+- Bỏ T25 và câu hỏi về ngày 130/2018 khỏi các mục chờ, vì đã xong.
+- Kiểm tra: `npm test` 59/59 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
 - Nghị định 310/2025/NĐ-CP: cổng ghi hiệu lực "16-01-2025". Nhờ đối chiếu ngày đúng khi mở được toàn văn.
-- Nghị định 130/2018/NĐ-CP: cổng ghi hiệu lực 15/11/2018, `legal-framework.json` ghi 25/09/2018. Nhờ đối chiếu khi mở được toàn văn.
 
 ## Cần chủ dự án quyết
 
-- T25 trong `tests/content.test.ts` lỗi sẵn: test còn dùng `vbpl.vn`, danh sách nguồn đã đổi sang `vbpl.moj.gov.vn`. Chờ chủ dự án đồng ý sửa.
-- (Vòng 5) Ngày hiệu lực 130/2018/NĐ-CP trong `legal-framework.json` ghi 25/09/2018, cổng ghi 15/11/2018. Nếu chủ dự án chấp nhận trang thông tin vanban.chinhphu.vn làm căn cứ cho `number`, `effective_from`, agent Biên tập sẽ sửa ngay (status vẫn "draft").
+Chưa có.

@@ -268,7 +268,7 @@
           "name": "Nghị định về chữ ký số và dịch vụ chứng thực chữ ký số",
           "number": "130/2018/NĐ-CP",
           "issued_by": "Chính phủ",
-          "effective_from": "25/09/2018",
+          "effective_from": "15/11/2018",
           "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=136680",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
@@ -281,12 +281,12 @@
             "Xác nhận danh sách nhà cung cấp chữ ký số được cấp phép hiện tại",
             "Bổ sung thời hạn hiệu lực chứng thư số điển hình (1–3 năm)",
             "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy, hiệu lực 10/04/2025; Nghị định 130/2018/NĐ-CP từng được sửa bởi Nghị định 48/2024/NĐ-CP. Chưa đọc điều khoản thay thế. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1",
-            "Cập nhật NC-008: cổng vanban.chinhphu.vn ghi ban hành 27/09/2018, hiệu lực 15/11/2018; mục này ghi effective_from \"25/09/2018\", không khớp cả hai, khả năng là nhập nhầm. Chưa đổi: chờ chủ dự án quyết có dùng trang thông tin của cổng làm căn cứ cho ngày hiệu lực không, hoặc chờ đọc điều về hiệu lực trong toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1"
+            "Ngày 2026-11-12 đã sửa effective_from từ \"25/09/2018\" thành \"15/11/2018\" theo trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11; cổng ghi ban hành 27/09/2018, hiệu lực 15/11/2018), theo quyết định của chủ dự án ngày 2026-11-12 (NC-008). Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1"
           ]
         },
         {
           "name": "Luật Giao dịch điện tử",
-          "number": "51/2005/QH11 (thay thế bởi 20/2023/QH15)",
+          "number": "20/2023/QH15",
           "issued_by": "Quốc hội",
           "effective_from": "01/07/2024",
           "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=160100",
@@ -298,7 +298,7 @@
           "todo_for_reviewer": [
             "Xác nhận Luật GDĐT 20/2023 đã có hiệu lực từ 01/07/2024 chưa. Cập nhật NC-007: cổng vanban.chinhphu.vn (ngày tra 2026-11-11) ghi Luật Giao dịch điện tử 20/2023/QH15 hiệu lực 01/07/2024; có Luật 20/2026/QH16 sửa đổi, hiệu lực 01/03/2027. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=219488&classid=1",
             "Bổ sung các điểm thay đổi quan trọng so với luật cũ",
-            "Mâu thuẫn trong mục: số hiệu ghi luật cũ 51/2005/QH11 (chính mục ghi đã bị thay) nhưng ngày hiệu lực là của luật mới 20/2023/QH15. Nên dẫn luật đang có hiệu lực.",
+            "Ngày 2026-11-12 đã sửa number từ \"51/2005/QH11 (thay thế bởi 20/2023/QH15)\" thành \"20/2023/QH15\", cho khớp ngày hiệu lực 01/07/2024 đã ghi. Căn cứ: trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11) và quyết định của chủ dự án ngày 2026-11-12. Link url (vbpl ItemID=160100) chưa kiểm tra có đúng luật 20/2023 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1",
             "Cập nhật NC-008: ngày hiệu lực 01/07/2024 khớp trang thông tin của Luật 20/2023/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1"
           ]
         }
