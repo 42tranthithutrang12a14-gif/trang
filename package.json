@@ -10,7 +10,8 @@
     "lint": "eslint",
     "postinstall": "prisma generate",
     "hash-password": "tsx scripts/hash-password.ts",
-    "tao-so": "tsx scripts/tao-so-ke-toan.ts"
+    "tao-so": "tsx scripts/tao-so-ke-toan.ts",
+    "chup": "node scripts/chup-man-hinh.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

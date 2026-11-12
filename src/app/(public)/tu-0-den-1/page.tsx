@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import tu0Den1Json from "@/content/tu-0-den-1.json";
+import thaoTacJson from "@/content/thao-tac.json";
 import { DraftNotice } from "@/components/draft-notice";
 import { filterIncentives, filterStages, type Incentive, type Tu0Den1Content } from "@/lib/tu-0-den-1";
+import { guideLinksByStep, visibleGuides, type ThaoTacContent } from "@/lib/thao-tac";
 import { CONTENT_PREVIEW } from "@/lib/content/preview";
 import { Checklist } from "./Checklist";
 
@@ -21,6 +23,7 @@ const incentiveLevels: Record<Incentive["level"], { label: string; className: st
 export default function Tu0Den1Page() {
   const stages = filterStages(CONTENT.stages, CONTENT_PREVIEW);
   const incentives = filterIncentives(CONTENT.incentives, CONTENT_PREVIEW);
+  const guideLinks = guideLinksByStep(visibleGuides(thaoTacJson as ThaoTacContent, CONTENT_PREVIEW));
   const units = [
     ...stages.flatMap((stage) => [stage, ...stage.steps]),
     ...(incentives ? [incentives, ...incentives.items] : []),
@@ -54,7 +57,7 @@ export default function Tu0Den1Page() {
         </div>
       )}
 
-      {stages.length > 0 && <Checklist stages={stages} />}
+      {stages.length > 0 && <Checklist stages={stages} guideLinks={guideLinks} />}
 
       {incentives && (
         <section id="uu-dai" className="mt-12 scroll-mt-20">

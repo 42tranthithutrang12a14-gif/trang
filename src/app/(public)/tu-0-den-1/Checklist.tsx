@@ -1,50 +1,23 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import Link from "next/link";
 import { DraftNotice } from "@/components/draft-notice";
+import { StepLevel } from "@/components/step-level";
+import { checklistStore } from "@/lib/local-store";
+import type { GuideLinks } from "@/lib/thao-tac";
 import { countDone, parseDone, toggleDone, type ChecklistStage, type ChecklistStep } from "@/lib/tu-0-den-1";
 
-const STORAGE_KEY = "sotay_tu0den1_v1";
-const listeners = new Set<() => void>();
-// Storage can be blocked (e.g. private mode); then ticks live in memory for this visit only.
-let unsaved: string | null = null;
-
-function subscribe(onChange: () => void) {
-  listeners.add(onChange);
-  window.addEventListener("storage", onChange);
-  return () => {
-    listeners.delete(onChange);
-    window.removeEventListener("storage", onChange);
-  };
-}
-
-function readStored(): string {
-  if (unsaved !== null) return unsaved;
-  try {
-    return localStorage.getItem(STORAGE_KEY) ?? "";
-  } catch {
-    return "";
-  }
-}
-
-function writeStored(value: string) {
-  try {
-    localStorage.setItem(STORAGE_KEY, value);
-    unsaved = null;
-  } catch {
-    unsaved = value;
-  }
-  listeners.forEach((listener) => listener());
-}
-
-const LEVELS: Record<ChecklistStep["level"], { label: string; className: string }> = {
-  "bat-buoc": { label: "Bắt buộc", className: "bg-danger/10 text-danger" },
-  "nen-lam": { label: "Nên làm", className: "bg-accent/10 text-accent" },
-  "tuy-truong-hop": { label: "Tùy trường hợp", className: "bg-border text-muted" },
-};
-
-function StepItem({ step, checked, onToggle }: { step: ChecklistStep; checked: boolean; onToggle: () => void }) {
-  const level = LEVELS[step.level];
+function StepItem({
+  step,
+  checked,
+  guide,
+  onToggle,
+}: {
+  step: ChecklistStep;
+  checked: boolean;
+  guide?: { slug: string; title: string };
+  onToggle: () => void;
+}) {
   const inputId = `buoc-${step.id}`;
   return (
     <li className={`rounded-xl border bg-surface p-4 transition-colors ${checked ? "border-success/40" : "border-border"}`}>
@@ -65,13 +38,18 @@ function StepItem({ step, checked, onToggle }: { step: ChecklistStep; checked: b
             {step.title}
           </label>
           <div className="mt-1.5 flex flex-wrap gap-1.5">
-            <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${level.className}`}>{level.label}</span>
+            <StepLevel level={step.level} />
             {step.deadline && (
               <span className="rounded-full bg-warning/10 px-2 py-0.5 text-xs font-medium text-warning">
                 Hạn: {step.deadline}
               </span>
             )}
           </div>
+          {guide && (
+            <Link href={`/thao-tac/${guide.slug}`} className="mt-2 inline-block text-xs font-semibold text-accent hover:underline">
+              🖱️ Hướng dẫn từng cú nhấp chuột →
+            </Link>
+          )}
           <details className="mt-2">
             <summary className="cursor-pointer text-xs font-semibold text-accent">Xem cách làm</summary>
             <div className="mt-3 space-y-3">
@@ -124,14 +102,14 @@ function StepItem({ step, checked, onToggle }: { step: ChecklistStep; checked: b
   );
 }
 
-export function Checklist({ stages }: { stages: ChecklistStage[] }) {
-  const done = parseDone(useSyncExternalStore(subscribe, readStored, () => ""));
+export function Checklist({ stages, guideLinks }: { stages: ChecklistStage[]; guideLinks: GuideLinks }) {
+  const done = parseDone(checklistStore.useValue());
   const steps = stages.flatMap((stage) => stage.steps);
   const doneCount = countDone(steps, done);
   const percent = Math.round((doneCount / steps.length) * 100);
 
   function reset() {
-    if (window.confirm("Bỏ hết dấu tích?")) writeStored("");
+    if (window.confirm("Bỏ hết dấu tích?")) checklistStore.write("");
   }
 
   return (
@@ -179,7 +157,8 @@ export function Checklist({ stages }: { stages: ChecklistStage[] }) {
                   key={step.id}
                   step={step}
                   checked={done.includes(step.id)}
-                  onToggle={() => writeStored(JSON.stringify(toggleDone(done, step.id)))}
+                  guide={guideLinks[step.id]}
+                  onToggle={() => checklistStore.write(JSON.stringify(toggleDone(done, step.id)))}
                 />
               ))}
             </ul>
