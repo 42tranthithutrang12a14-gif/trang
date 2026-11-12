@@ -61,8 +61,9 @@ Không agent nào sửa file của agent kia.
 ## Quyết định của chủ dự án
 
 - 2026-11-12: đồng ý sửa T25. Đã sửa trong phiên chính. Agent Biên tập bỏ mục T25 khỏi "Cần chủ dự án quyết".
-- 2026-11-12: đã nhờ chủ dự án thêm vào mạng của môi trường "trang": `datafiles.chinhphu.vn`, `congbaocdn.chinhphu.vn`, `g7.cdnchinhphu.vn`, `vbpq.mof.gov.vn`, `portal.mof.gov.vn`. Mỗi vòng thử lại; mở được thì làm tiếp NC-001.
-- Đang chờ trả lời: có lấy trang thông tin văn bản trên vanban.chinhphu.vn (số hiệu, ngày ban hành, ngày hiệu lực) làm căn cứ để sửa `number`, `effective_from` không. Chưa có trả lời thì chưa sửa.
+- 2026-11-12: chủ dự án đã mở mạng cho `datafiles.chinhphu.vn`, `congbaocdn.chinhphu.vn`, `g7.cdnchinhphu.vn`, `vbpq.mof.gov.vn`, `portal.mof.gov.vn`. Agent Nghiên cứu làm tiếp NC-001 rồi các mục khác bằng toàn văn.
+- 2026-11-12: đồng ý lấy trang thông tin văn bản trên vanban.chinhphu.vn làm căn cứ để sửa số hiệu (`number`) và ngày hiệu lực (`effective_from`). Khi sửa: ghi link và ngày tra vào todo, status vẫn "draft". Điều này không đủ để đặt `verified_against_original: true`, và không áp dụng cho nghĩa vụ, hạn, mức phạt: những nội dung đó vẫn phải trích được điều, khoản trong toàn văn. Agent Biên tập sửa được ngay ngày hiệu lực Nghị định 130/2018/NĐ-CP (NC-008).
+- Không còn câu hỏi nào đang chờ chủ dự án.
 
 ## Phiên
 
