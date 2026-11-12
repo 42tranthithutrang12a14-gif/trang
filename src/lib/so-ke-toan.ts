@@ -18,6 +18,18 @@ export type LedgerExample = {
   note: string;
 };
 
+export type FormColumn = { label: string; group?: string; kind: "date" | "text" | "money"; total?: boolean };
+
+/** A book in the official template (e.g. S1-DNSN), left blank for the user to fill in. */
+export type FormSpec = {
+  code: string;
+  sheet: string;
+  title: string;
+  subtitle: string;
+  balances: boolean;
+  columns: FormColumn[];
+};
+
 export type LedgerSpec = Reviewable & {
   updated_at: string;
   title: string;
@@ -32,6 +44,9 @@ export type LedgerSpec = Reviewable & {
   spare_income_rows: number;
   spare_expense_rows: number;
   examples: LedgerExample[];
+  forms: FormSpec[];
+  form_issue_line: string;
+  form_rows: number;
 };
 
 export const SHEETS = {
@@ -557,6 +572,146 @@ function buildGuide(ws: Sheet, spec: LedgerSpec, year: number) {
   text(`Nguồn: Sổ tay DN Siêu nhỏ. Cập nhật: ${spec.updated_at}. Thông tin mang tính tham khảo, không phải tư vấn kế toán hay thuế.`, { italic: true });
 }
 
+export function formLayout(form: FormSpec, rows: number) {
+  const grouped = form.columns.some((column) => column.group);
+  const header = 8;
+  const subHeader = grouped ? header + 1 : header;
+  const opening = form.balances ? subHeader + 1 : null;
+  const first = (opening ?? subHeader) + 1;
+  const last = first + rows - 1;
+  const total = last + 1;
+  const closing = form.balances ? total + 1 : null;
+  return { header, subHeader, opening, first, last, total, closing, footer: (closing ?? total) + 2 };
+}
+
+function buildForm(ws: Sheet, spec: LedgerSpec, form: FormSpec, year: number) {
+  const S = quoted(SHEETS.setup);
+  const layout = formLayout(form, spec.form_rows);
+  const count = form.columns.length;
+  const describe = form.columns.findIndex((column) => column.label === "Diễn giải") + 1;
+  setColumns(
+    ws,
+    form.columns.map((column) => (column.label === "Diễn giải" ? 34 : column.kind === "money" ? 15 : 13)),
+  );
+  form.columns.forEach((column, i) => {
+    const col = ws.getColumn(i + 1);
+    if (column.kind === "date") col.numFmt = DATE;
+    if (column.kind === "money") col.numFmt = MONEY;
+    if (column.kind === "text") col.numFmt = "@";
+  });
+  ws.getColumn(describe).alignment = { vertical: "top", wrapText: true };
+
+  const half = Math.max(2, Math.floor(count / 2));
+  ws.mergeCells(1, 1, 1, half);
+  ws.getCell(1, 1).value = formula(`"Đơn vị: "&${S}!$B$4`, "Đơn vị: ");
+  ws.mergeCells(2, 1, 2, half);
+  ws.getCell(2, 1).value = formula(`"Mã số thuế: "&${S}!$B$5`, "Mã số thuế: ");
+  ws.mergeCells(1, half + 1, 1, count);
+  const code = ws.getCell(1, half + 1);
+  code.value = `Mẫu số ${form.code}`;
+  code.font = { ...FONT, bold: true };
+  code.alignment = { horizontal: "center" };
+  ws.mergeCells(2, half + 1, 2, count);
+  const issue = ws.getCell(2, half + 1);
+  issue.value = spec.form_issue_line;
+  issue.font = { ...FONT, italic: true };
+  issue.alignment = { horizontal: "center", wrapText: true };
+  ws.getRow(2).height = 28;
+
+  const centered = (row: number, value: ExcelJS.CellValue, font: Partial<ExcelJS.Font> = {}) => {
+    ws.mergeCells(row, 1, row, count);
+    const cell = ws.getCell(row, 1);
+    cell.value = value;
+    cell.font = { ...FONT, ...font };
+    cell.alignment = { horizontal: "center", wrapText: true };
+  };
+  centered(4, form.title, { size: 12, bold: true });
+  ws.getRow(4).height = 32;
+  centered(5, formula(`"Năm "&${S}!$B$6`, `Năm ${year}`));
+  if (form.subtitle) centered(6, form.subtitle);
+  if (spec.status !== "published" && spec.sample_notice) {
+    centered(7, `${spec.sample_notice}. Trang này để trống, bạn tự ghi. Chưa tự lấy số từ trang ${SHEETS.journal}.`, {
+      bold: true,
+      color: { argb: "FFC62828" },
+    });
+  }
+
+  form.columns.forEach((column, i) => {
+    const col = i + 1;
+    if (column.group) {
+      headerCell(ws.getCell(layout.header, col), column.group, COLOR.blue);
+      headerCell(ws.getCell(layout.subHeader, col), column.label, COLOR.blue);
+    } else {
+      headerCell(ws.getCell(layout.header, col), column.label, COLOR.blue);
+      if (layout.subHeader !== layout.header) ws.mergeCells(layout.header, col, layout.subHeader, col);
+    }
+  });
+  for (let i = 0; i < count; ) {
+    const group = form.columns[i].group;
+    let j = i;
+    while (group && j + 1 < count && form.columns[j + 1].group === group) j++;
+    if (group && j > i) ws.mergeCells(layout.header, i + 1, layout.header, j + 1);
+    i = j + 1;
+  }
+  ws.getRow(layout.header).height = 30;
+  ws.getRow(layout.subHeader).height = 30;
+
+  const labelRow = (row: number | null, text: string, bold = true) => {
+    if (row === null) return;
+    const cell = ws.getCell(row, describe);
+    cell.value = text;
+    cell.font = { ...FONT, bold };
+  };
+  labelRow(layout.opening, "Số dư đầu kỳ");
+  for (let row = layout.first; row <= layout.last; row++) {
+    for (let col = 1; col <= count; col++) ws.getCell(row, col).fill = solid(COLOR.input);
+  }
+  labelRow(layout.total, "Cộng số phát sinh trong kỳ");
+  form.columns.forEach((column, i) => {
+    if (column.kind !== "money" || !column.total) return;
+    const letter = ws.getColumn(i + 1).letter;
+    const cell = ws.getCell(layout.total, i + 1);
+    cell.value = formula(`SUM(${letter}${layout.first}:${letter}${layout.last})`, 0);
+    cell.fill = solid(COLOR.auto);
+    cell.font = { ...FONT, bold: true };
+  });
+  labelRow(layout.closing, "Số dư cuối kỳ");
+
+  let row = layout.footer;
+  ws.getCell(row++, 1).value = "- Sổ này có … trang, đánh số từ trang 01 đến trang …";
+  ws.getCell(row++, 1).value = "- Ngày mở sổ: …";
+  row++;
+  const signers: [string, string][] = [
+    ["Người lập biểu", "(Ký, họ tên)"],
+    ["Kế toán trưởng", "(Ký, họ tên)"],
+    ["Người đại diện theo pháp luật", "(Ký, họ tên, đóng dấu)"],
+  ];
+  const span = Math.max(1, Math.floor(count / signers.length));
+  signers.forEach(([role, hint], i) => {
+    const from = i * span + 1;
+    const to = i === signers.length - 1 ? count : from + span - 1;
+    ws.mergeCells(row, from, row, to);
+    ws.mergeCells(row + 1, from, row + 1, to);
+    const roleCell = ws.getCell(row, from);
+    roleCell.value = role;
+    roleCell.font = { ...FONT, bold: true };
+    roleCell.alignment = { horizontal: "center" };
+    const hintCell = ws.getCell(row + 1, from);
+    hintCell.value = hint;
+    hintCell.font = { ...FONT, italic: true };
+    hintCell.alignment = { horizontal: "center" };
+  });
+
+  ws.views = [{ state: "frozen", ySplit: layout.subHeader, xSplit: 0 }];
+  ws.pageSetup = {
+    orientation: "landscape",
+    fitToPage: true,
+    fitToWidth: 1,
+    fitToHeight: 0,
+    printTitlesRow: `${layout.header}:${layout.subHeader}`,
+  };
+}
+
 export function buildLedgerWorkbook(spec: LedgerSpec, year: number): ExcelJS.Workbook {
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "Sổ tay DN Siêu nhỏ";
@@ -565,5 +720,6 @@ export function buildLedgerWorkbook(spec: LedgerSpec, year: number): ExcelJS.Wor
   buildSetup(workbook.addWorksheet(SHEETS.setup), spec, year);
   buildJournal(workbook.addWorksheet(SHEETS.journal), spec, year);
   buildSummary(workbook.addWorksheet(SHEETS.summary), spec, year);
+  for (const form of spec.forms) buildForm(workbook.addWorksheet(form.sheet), spec, form, year);
   return workbook;
 }

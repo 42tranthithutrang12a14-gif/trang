@@ -5,7 +5,7 @@
   "title": "Sổ thu chi hằng ngày",
   "summary": "File Excel để ghi tiền vào, tiền ra mỗi ngày. File tự tính tồn quỹ, tổng hợp theo tháng và lãi lỗ tạm tính.",
   "file_name": "so-thu-chi-dn-sieu-nho.xlsx",
-  "notice": "Đây là sổ theo dõi thu chi nội bộ. Chưa đối chiếu với mẫu sổ kế toán của Bộ Tài chính, nên chưa thay được sổ kế toán theo quy định.",
+  "notice": "Sổ này giúp ghi thu chi hằng ngày, chưa phải sổ kế toán theo mẫu. Theo Thông tư 132/2018/TT-BTC, DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu phải mở 4 sổ: S1 doanh thu, S2 lương và bảo hiểm, S3 hàng tồn kho, S4 nghĩa vụ thuế. DN tính thuế TNDN trên thu nhập tính thuế phải dùng Sổ Nhật ký – Sổ Cái (S01-DNSN) và các sổ chi tiết S02–S10.",
   "how_to_use": [
     "Mở trang \"Thiết lập\". Gõ tên công ty, mã số thuế, năm ghi sổ, số tiền mặt và tiền ngân hàng đang có.",
     "Xem danh mục nhóm thu, nhóm chi ở trang \"Thiết lập\". Đổi tên hoặc thêm nhóm cho hợp với việc kinh doanh của bạn.",
@@ -13,6 +13,7 @@
     "Có hóa đơn thì gõ thêm số hóa đơn và tiền thuế GTGT ghi trên hóa đơn.",
     "Cuối ngày, so cột \"Tồn tiền mặt\" với tiền thật trong két. So cột \"Tồn ngân hàng\" với số dư tài khoản.",
     "Cuối tháng, mở trang \"Tổng hợp\" để xem tiền vào, tiền ra, lãi lỗ tạm tính và thuế GTGT của tháng.",
+    "Nếu công ty nộp thuế TNDN theo tỷ lệ % trên doanh thu: ghi thêm 4 trang S1-DNSN đến S4-DNSN theo hóa đơn, bảng lương, phiếu nhập xuất kho và giấy nộp thuế. 4 trang này có đúng cột theo mẫu, nhưng chưa tự lấy số từ Nhật ký thu chi.",
     "Mỗi năm dùng một file mới. Số tồn cuối năm cũ là số đầu năm của file mới."
   ],
   "notes": [
@@ -21,13 +22,18 @@
     "Tiền thuế GTGT: gõ đúng số ghi trên hóa đơn. Không có hóa đơn thì để trống.",
     "Ô chuyển màu đỏ nhạt là dòng còn thiếu ngày, nhóm hoặc quỹ. Điền đủ thì hết đỏ.",
     "Lãi lỗ tạm tính là số theo dõi nội bộ, chưa phải lợi nhuận tính thuế.",
+    "Sổ thu chi ghi khi tiền vào, tiền ra. Sổ S1-DNSN ghi doanh thu khi bán hàng, cung cấp dịch vụ, kể cả khi khách chưa trả tiền. Vì vậy hai sổ có thể chênh nhau.",
     "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
   ],
   "sheets": [
     { "name": "Hướng dẫn", "desc": "Cách dùng, chú giải màu và ví dụ cách ghi." },
     { "name": "Thiết lập", "desc": "Tên công ty, năm ghi sổ, tiền đầu năm và danh mục nhóm thu, chi. Bạn sửa được danh mục." },
     { "name": "Nhật ký thu chi", "desc": "Nơi ghi hằng ngày. Mỗi khoản tiền vào hoặc ra là một dòng. Tồn quỹ tự tính." },
-    { "name": "Tổng hợp", "desc": "Tự tính theo từng tháng: tiền vào, tiền ra, tồn quỹ, lãi lỗ tạm tính, thuế GTGT, chi tiết từng nhóm." }
+    { "name": "Tổng hợp", "desc": "Tự tính theo từng tháng: tiền vào, tiền ra, tồn quỹ, lãi lỗ tạm tính, thuế GTGT, chi tiết từng nhóm." },
+    { "name": "S1-DNSN Doanh thu", "desc": "Mẫu S1-DNSN: sổ chi tiết doanh thu bán hàng hóa, dịch vụ. Ghi theo từng hóa đơn bán ra." },
+    { "name": "S2-DNSN Lương", "desc": "Mẫu S2-DNSN: theo dõi tiền lương và các khoản BHXH, BHYT, BHTN. Dùng khi có người lao động." },
+    { "name": "S3-DNSN Hàng tồn kho", "desc": "Mẫu S3-DNSN: theo dõi nhập, xuất, tồn từng loại vật liệu, dụng cụ, hàng hóa. Mỗi mặt hàng một bảng." },
+    { "name": "S4-DNSN Thuế", "desc": "Mẫu S4-DNSN: theo dõi số thuế phải nộp và đã nộp vào ngân sách." }
   ],
   "income_groups": [
     { "name": "Bán hàng, cung cấp dịch vụ", "in_result": true, "example": "Tiền khách trả khi mua hàng, dùng dịch vụ" },
@@ -66,10 +72,102 @@
     { "day": 12, "month": 1, "doc": "", "content": "Rút tiền ngân hàng về quỹ", "group": "Chuyển tiền nội bộ đi", "money_in": null, "money_out": 10000000, "vat": null, "fund": "Ngân hàng", "invoice": "", "partner": "", "note": "Dòng chuyển đi" },
     { "day": 12, "month": 1, "doc": "", "content": "Rút tiền ngân hàng về quỹ", "group": "Nhận tiền chuyển nội bộ", "money_in": 10000000, "money_out": null, "vat": null, "fund": "Tiền mặt", "invoice": "", "partner": "", "note": "Dòng nhận" }
   ],
-  "legal_basis": [],
+  "forms": [
+    {
+      "code": "S1-DNSN",
+      "sheet": "S1-DNSN Doanh thu",
+      "title": "SỔ CHI TIẾT DOANH THU BÁN HÀNG HÓA, DỊCH VỤ",
+      "subtitle": "",
+      "balances": false,
+      "columns": [
+        { "label": "Ngày, tháng ghi sổ", "kind": "date" },
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Kinh doanh hàng hóa", "group": "Doanh thu", "kind": "money", "total": true },
+        { "label": "Kinh doanh dịch vụ", "group": "Doanh thu", "kind": "money", "total": true },
+        { "label": "Hoạt động khác", "group": "Doanh thu", "kind": "money", "total": true },
+        { "label": "Ghi chú", "kind": "text" }
+      ]
+    },
+    {
+      "code": "S2-DNSN",
+      "sheet": "S2-DNSN Lương",
+      "title": "SỔ THEO DÕI TÌNH HÌNH THANH TOÁN TIỀN LƯƠNG VÀ CÁC KHOẢN NỘP THEO LƯƠNG CỦA NGƯỜI LAO ĐỘNG",
+      "subtitle": "",
+      "balances": true,
+      "columns": [
+        { "label": "Ngày, tháng ghi sổ", "kind": "date" },
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Số phải trả", "group": "Tiền lương và thu nhập của người lao động", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "Tiền lương và thu nhập của người lao động", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "Tiền lương và thu nhập của người lao động", "kind": "money", "total": false },
+        { "label": "Số phải trả", "group": "BHXH", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "BHXH", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "BHXH", "kind": "money", "total": false },
+        { "label": "Số phải trả", "group": "BHYT", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "BHYT", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "BHYT", "kind": "money", "total": false },
+        { "label": "Số phải trả", "group": "BHTN", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "BHTN", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "BHTN", "kind": "money", "total": false }
+      ]
+    },
+    {
+      "code": "S3-DNSN",
+      "sheet": "S3-DNSN Hàng tồn kho",
+      "title": "SỔ CHI TIẾT VẬT LIỆU, DỤNG CỤ, SẢN PHẨM, HÀNG HÓA",
+      "subtitle": "Tên vật liệu, dụng cụ, sản phẩm, hàng hóa: ……………………",
+      "balances": false,
+      "columns": [
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Nhập", "kind": "money", "total": true },
+        { "label": "Xuất", "kind": "money", "total": true },
+        { "label": "Tồn", "kind": "money", "total": false },
+        { "label": "Ghi chú", "kind": "text" }
+      ]
+    },
+    {
+      "code": "S4-DNSN",
+      "sheet": "S4-DNSN Thuế",
+      "title": "SỔ THEO DÕI TÌNH HÌNH THỰC HIỆN NGHĨA VỤ VỚI NGÂN SÁCH NHÀ NƯỚC",
+      "subtitle": "",
+      "balances": true,
+      "columns": [
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Số thuế phải nộp", "kind": "money", "total": true },
+        { "label": "Số thuế đã nộp", "kind": "money", "total": true },
+        { "label": "Ghi chú", "kind": "text" }
+      ]
+    }
+  ],
+  "form_issue_line": "(Ban hành kèm theo Thông tư số 132/2018/TT-BTC ngày 28/12/2018 của Bộ Tài chính)",
+  "form_rows": 200,
+  "legal_basis": [
+    {
+      "doc_type": "Thông tư",
+      "doc_number": "132/2018/TT-BTC",
+      "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+      "issuer": "Bộ Tài chính",
+      "issued_date": "2018-12-28",
+      "effective_date": "2019-02-15",
+      "article": "Điều 3 khoản 1, 2, 3, 4; Điều 11 khoản 1; Điều 17 khoản 1, 3; Phụ lục 3; Phụ lục 4",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-12",
+      "snapshot_path": ""
+    }
+  ],
   "todo_for_reviewer": [
-    "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Chưa đối chiếu với danh mục và mẫu sổ kế toán của Thông tư 132/2018/TT-BTC hay văn bản thay thế.",
-    "Agent Nghiên cứu: đọc phụ lục mẫu sổ cho DN siêu nhỏ, ghi đặc tả (tên sổ, mã mẫu, cột). Agent Biên tập: thêm các trang sổ theo mẫu, lấy số từ trang \"Nhật ký thu chi\".",
+    "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Ngày 2026-11-12 (NC-009) đã đối chiếu danh mục sổ và cột với Thông tư 132/2018/TT-BTC (Điều 3, 11, 17, Phụ lục 3, 4): sửa notice, thêm 4 trang S1-DNSN đến S4-DNSN để trống, đúng cột theo mẫu. Cột của S3 theo mô tả NC-009 (nhập, xuất, tồn); chưa rõ mẫu có tách số lượng, thành tiền không.",
+    "Còn làm: cho S1-DNSN, S4-DNSN lấy số từ Nhật ký. Cần trước: (1) phương pháp ghi từng cột S1–S4 (Phụ lục 4 mục 2), ví dụ S1 ghi doanh thu có hay chưa có thuế GTGT; (2) cách ghi doanh thu bán chịu trong Nhật ký thu chi (sổ hiện ghi theo tiền). Chưa làm sổ Chương II (S01-DNSN Nhật ký – Sổ Cái, S02–S10): cần ghi Nợ/Có theo tài khoản.",
+    "Chương III (4 sổ S1–S4) chỉ dùng được khi DN còn nộp thuế TNDN theo tỷ lệ % trên doanh thu. Luật Thuế TNDN 67/2025/QH15 và Luật 09/2026/QH16 có thể đã đổi phương pháp này; chưa đọc toàn văn (NC-009, NC-004). Thông tư 132/2018 còn hiệu lực không: chưa thấy văn bản thay thế (NC-002).",
     "Cột \"Tính vào lãi, lỗ?\" của từng nhóm là mặc định tạm. Cần xác minh cách xếp: thuế đã nộp, mua thiết bị giá trị lớn (tài sản cố định, khấu hao), tiền đặt cọc, lương chủ sở hữu.",
     "Lãi lỗ tạm tính lấy số chưa gồm thuế GTGT. Cần xác minh cách tính cho DN tính thuế GTGT theo phương pháp trực tiếp.",
     "Xác minh khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt, để được tính vào chi phí. Khi có căn cứ thì thêm cột kiểm tra.",

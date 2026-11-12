@@ -94,10 +94,30 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Môi trường: phải chạy `npm install` vì `package.json` mới thêm `exceljs`. Không đổi `package-lock.json`.
 - Kiểm tra: `npm test` 83/83 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 11 (2026-11-12, 15:17 UTC)
+
+- Đọc NC-009 (sổ kế toán theo Thông tư 132/2018, đã xác minh phần danh mục sổ và cột).
+- `src/content/so-ke-toan.json`:
+  - Sửa `notice` theo đề xuất: nêu rõ 4 sổ của Chương III (S1–S4) và sổ của Chương II (S01, S02–S10).
+  - Điền `legal_basis`: Thông tư 132/2018/TT-BTC Điều 3, 11, 17, Phụ lục 3, 4; `verified_against_original: true`.
+  - Thêm 4 trang mẫu S1-DNSN đến S4-DNSN (trường `forms`), thêm vào `sheets`, `how_to_use`, `notes`.
+  - Todo: ghi việc đã làm, việc còn làm, và câu hỏi Chương III còn dùng được không theo Luật Thuế TNDN 67/2025.
+- `src/lib/so-ke-toan.ts`: thêm `FormSpec`, `formLayout`, `buildForm`. Mỗi trang mẫu có: tên đơn vị, mã số thuế (lấy từ Thiết lập), mã mẫu, dòng "Ban hành kèm theo Thông tư số 132/2018/TT-BTC…", tiêu đề, cột theo mẫu (tiêu đề hai tầng), 200 dòng trống để ghi, dòng "Cộng số phát sinh trong kỳ" (tự cộng các cột tiền phát sinh), số dư đầu kỳ, cuối kỳ (S2, S4), chân sổ và chỗ ký.
+- Chưa làm (lý do):
+  - Chưa cho S1, S4 tự lấy số từ Nhật ký thu chi. Nhật ký ghi theo tiền, còn S1 ghi doanh thu khi bán, kể cả bán chịu. Chưa có phương pháp ghi từng cột (Phụ lục 4 mục 2), ví dụ S1 có gồm thuế GTGT không.
+  - Chưa làm sổ Chương II (S01 Nhật ký – Sổ Cái, S02–S10). Các sổ này cần ghi Nợ/Có theo tài khoản, là việc lớn.
+  - Chưa thêm cột "Loại doanh thu" vào Nhật ký. Thêm cột sẽ dời toàn bộ cột và công thức; nên làm cùng lúc với việc tự lấy số cho S1.
+- `tests/so-ke-toan.test.ts`: SK4, SK10 tính cả trang mẫu; thêm SK11 kiểm mã mẫu, dòng ban hành, cột và dòng cộng.
+- Đã mở thử file bằng LibreOffice: trang S2 hiện đúng tiêu đề hai tầng.
+- Kiểm tra: `npm test` 84/84 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
 - Nghị định 310/2025/NĐ-CP: cổng ghi hiệu lực "16-01-2025". Nhờ đối chiếu ngày đúng khi mở được toàn văn.
+
+- (Vòng 11) NC-009: xin trích phương pháp ghi từng cột của S1–S4 (Phụ lục 4 mục 2). Cần nhất: S1 ghi doanh thu có hay chưa có thuế GTGT; khi nào ghi (ngày xuất hóa đơn hay ngày giao hàng). Cũng xin kiểm mẫu S3 có tách số lượng, đơn giá, thành tiền không.
+- (Vòng 11) Xin ưu tiên đọc Luật Thuế TNDN 67/2025/QH15 và Luật 09/2026/QH16: DN siêu nhỏ còn được nộp thuế TNDN theo tỷ lệ % trên doanh thu không. Nếu không, 4 trang S1–S4 vừa thêm có thể không còn dùng được.
 
 ## Cần chủ dự án quyết
 

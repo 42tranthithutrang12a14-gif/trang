@@ -9,6 +9,7 @@ import {
   SHEETS,
   YES,
   buildLedgerWorkbook,
+  formLayout,
   ledgerLayout,
   type LedgerSpec,
 } from "@/lib/so-ke-toan";
@@ -17,6 +18,7 @@ const SPEC = ledgerJson as LedgerSpec;
 const GROUPS = [...SPEC.income_groups, ...SPEC.expense_groups];
 const LAYOUT = ledgerLayout(SPEC);
 const WORKBOOK = buildLedgerWorkbook(SPEC, 2026);
+const ALL_SHEETS = [...Object.values(SHEETS), ...SPEC.forms.map((form) => form.sheet)];
 
 function sheet(name: string): ExcelJS.Worksheet {
   const ws = WORKBOOK.getWorksheet(name);
@@ -55,8 +57,8 @@ describe("so-ke-toan.json", () => {
   });
 
   it("SK4: danh sách trang trong JSON khớp với file", () => {
-    expect(SPEC.sheets.map((s) => s.name)).toEqual(Object.values(SHEETS));
-    expect(WORKBOOK.worksheets.map((ws) => ws.name)).toEqual(Object.values(SHEETS));
+    expect(SPEC.sheets.map((s) => s.name)).toEqual(ALL_SHEETS);
+    expect(WORKBOOK.worksheets.map((ws) => ws.name)).toEqual(ALL_SHEETS);
   });
 });
 
@@ -136,12 +138,39 @@ describe("buildLedgerWorkbook", () => {
     }
   });
 
-  it("SK10: file ghi ra được và đọc lại đủ 4 trang", async () => {
+  it("SK10: file ghi ra được và đọc lại đủ các trang", async () => {
     const buffer = await WORKBOOK.xlsx.writeBuffer();
     expect(buffer.byteLength).toBeGreaterThan(20_000);
     const { default: Excel } = await import("exceljs");
     const reread = new Excel.Workbook();
     await reread.xlsx.load(buffer);
-    expect(reread.worksheets.map((ws) => ws.name)).toEqual(Object.values(SHEETS));
+    expect(reread.worksheets.map((ws) => ws.name)).toEqual(ALL_SHEETS);
+  });
+
+  it("SK11: trang sổ theo mẫu có mã mẫu, dòng ban hành, đủ cột và dòng cộng", () => {
+    expect(SPEC.forms.map((form) => form.code)).toEqual(["S1-DNSN", "S2-DNSN", "S3-DNSN", "S4-DNSN"]);
+    for (const form of SPEC.forms) {
+      const ws = sheet(form.sheet);
+      const layout = formLayout(form, SPEC.form_rows);
+      const texts: string[] = [];
+      ws.getRow(1).eachCell((cell) => texts.push(String(cell.value)));
+      expect(texts, form.code).toContain(`Mẫu số ${form.code}`);
+      let issue = "";
+      ws.getRow(2).eachCell((cell) => {
+        if (typeof cell.value === "string") issue = cell.value;
+      });
+      expect(issue).toContain("132/2018/TT-BTC");
+      form.columns.forEach((column, i) => {
+        expect(ws.getCell(layout.subHeader, i + 1).value, `${form.code} cột ${i + 1}`).toBe(column.label);
+        const total = formulaOf(ws, ws.getCell(layout.total, i + 1).address);
+        if (column.kind === "money" && column.total) {
+          expect(total).toContain(`${layout.first}:`);
+          expect(total).toContain(`${layout.last})`);
+        } else {
+          expect(total).toBe("");
+        }
+      });
+      expect(layout.opening !== null).toBe(form.balances);
+    }
   });
 });
