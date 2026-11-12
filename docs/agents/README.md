@@ -7,7 +7,7 @@ Hai phiên Claude chạy song song trên nhánh `claude/eager-archimedes-kdz3e4`
 | Agent | Làm gì | Được ghi |
 | --- | --- | --- |
 | Nghiên cứu | Tra văn bản gốc trên cổng chính thức, rà soát nội dung, giao diện và thay đổi mới của agent Biên tập, đề xuất sửa | Chỉ `docs/agents/nghien-cuu.md` |
-| Biên tập | Áp dụng đề xuất đã có nguồn vào `src/`, hoàn thiện câu chữ, giữ test/lint/build không thêm lỗi | `src/`, `tests/`, `docs/agents/bien-tap.md` |
+| Biên tập | Đưa kết quả nghiên cứu vào hệ thống (sổ kế toán, hướng dẫn thao tác, lộ trình, nội dung), giữ test/lint/build không thêm lỗi | `src/`, `tests/`, `public/thao-tac/`, `docs/agents/bien-tap.md` |
 
 Không agent nào sửa file của agent kia.
 
@@ -28,19 +28,22 @@ Không agent nào sửa file của agent kia.
    - Chỉ sửa nội dung pháp lý khi mục đó có nguồn chính thức đã mở và trích đúng điều, khoản.
    - Điền `legal_basis` (url chính thức, điều, khoản, `checked_at`, `verified_against_original: true`), rồi cập nhật hoặc bỏ todo tương ứng.
    - Giữ status "draft". Không bao giờ tự chuyển sang "published".
-4. Được tự hoàn thiện câu chữ, sửa lỗi nhỏ, theo `AGENTS.md`. Việc lớn (tính năng mới, đổi cấu trúc dữ liệu) thì không làm, ghi vào mục "Cần chủ dự án quyết".
+4. Không đánh bóng câu chữ chi tiết. Ưu tiên lấp nội dung vào hệ thống: sổ kế toán, hướng dẫn thao tác, lộ trình. Việc lớn ngoài các phần đó (tính năng mới, đổi cấu trúc dữ liệu) thì không làm, ghi vào mục "Cần chủ dự án quyết".
 5. Chạy `npm test`, `npm run lint`, `npm run build`. Không thêm lỗi mới so với hiện trạng.
 6. Ghi nhật ký vào `bien-tap.md`: mã NC đã làm và commit, việc bỏ qua kèm lý do, câu hỏi cho agent Nghiên cứu.
 7. Commit riêng, `git pull --rebase`, push.
 
 ## Thứ tự ưu tiên
 
-1. Câu hỏi then chốt: chủ doanh nghiệp siêu nhỏ có được tự làm kế toán cho công ty mình không, cần điều kiện gì.
-2. Các điểm nghi lỗi thời: lệ phí môn bài (Nghị quyết 198/2025/QH15), Thông tư 132/2018 và 58/2026, Nghị định 123/2020 và 254/2026, mức phạt chậm nộp tờ khai (Nghị định 125/2020), tên cơ quan đăng ký kinh doanh cấp tỉnh, thời hạn đăng ký thay đổi.
-3. Các mâu thuẫn trong app: hạn khai GTGT quý ("ngày 30" hay cuối tháng), thuế suất TNDN cho DN siêu nhỏ (20% hay 15–17%), "10 ngày" hay "10 ngày làm việc".
-4. Các `todo_for_reviewer` còn lại trong `src/content/`.
-5. Hoàn thiện hướng dẫn tự làm kế toán từng bước, đúng định hướng trong `AGENTS.md`.
-6. Khi các mục trên đều đang chờ (mạng, quyết định của chủ dự án): rà chữ hiển thị trên các trang (lỗi chính tả, câu dài, câu khó hiểu, chỗ lặp, chỗ không khớp giữa các trang) và đề xuất sửa không đổi nghĩa pháp lý. Tối đa 3 đề xuất mỗi vòng.
+1. **Sổ kế toán thực tế và đúng luật** (`src/content/so-ke-toan.json`, file Excel tải ở trang `/cong-cu`):
+   - Đọc toàn văn Thông tư 132/2018/TT-BTC (phụ lục danh mục và mẫu sổ cho DN siêu nhỏ), kiểm tra còn hiệu lực hay đã có văn bản thay thế. Ghi đặc tả: tên sổ, mã mẫu, các cột, cách ghi.
+   - Nghiên cứu tính thực tế, linh hoạt: nhóm thu, nhóm chi chi tiết mà DN siêu nhỏ thật sự cần; khoản chi nào cần hóa đơn, chứng từ để được tính vào chi phí; thuế GTGT đầu ra, đầu vào; tiền mặt và chuyển khoản. Mẫu nhà nước có thể không đủ chi tiết: người dùng ghi chi tiết ở "Nhật ký thu chi", các sổ theo mẫu lấy ra từ đó.
+2. **Hướng dẫn thao tác trên mạng, cầm tay chỉ việc từng cú nhấp chuột, có ảnh** (`src/content/thao-tac.json`, ảnh trong `public/thao-tac/`):
+   - Tìm tài liệu hướng dẫn sử dụng chính thức của từng cổng (đăng ký doanh nghiệp, thuế điện tử, hóa đơn điện tử, BHXH, dịch vụ công).
+   - Ghi từng bước: bấm vào đâu, nhập gì, màn hình hiện gì. Chụp ảnh các trang công khai (không đăng nhập) nếu chạy được mà không cần duyệt quyền; nếu không, ghi tên tài liệu, số trang, số hình trong tài liệu chính thức. Không vẽ giao diện giả.
+3. Câu hỏi then chốt NC-001: chủ DN siêu nhỏ có được tự làm kế toán cho công ty mình không, cần điều kiện gì.
+4. Nội dung trang `/lo-trinh`: việc phải làm ở từng giai đoạn, đối chiếu hướng dẫn chính thức.
+5. Các điểm nghi lỗi thời và mâu thuẫn đã ghi trong todo: chỉ làm khi ảnh hưởng tới 4 mục trên.
 
 ## Quy tắc chung
 
@@ -63,7 +66,7 @@ Không agent nào sửa file của agent kia.
 - 2026-11-12: đồng ý sửa T25. Đã sửa trong phiên chính. Agent Biên tập bỏ mục T25 khỏi "Cần chủ dự án quyết".
 - 2026-11-12: chủ dự án đã mở mạng cho `datafiles.chinhphu.vn`, `congbaocdn.chinhphu.vn`, `g7.cdnchinhphu.vn`, `vbpq.mof.gov.vn`, `portal.mof.gov.vn`. Agent Nghiên cứu làm tiếp NC-001 rồi các mục khác bằng toàn văn.
 - 2026-11-12: đồng ý lấy trang thông tin văn bản trên vanban.chinhphu.vn làm căn cứ để sửa số hiệu (`number`) và ngày hiệu lực (`effective_from`). Khi sửa: ghi link và ngày tra vào todo, status vẫn "draft". Điều này không đủ để đặt `verified_against_original: true`, và không áp dụng cho nghĩa vụ, hạn, mức phạt: những nội dung đó vẫn phải trích được điều, khoản trong toàn văn. Agent Biên tập sửa được ngay ngày hiệu lực Nghị định 130/2018/NĐ-CP (NC-008).
-- Không còn câu hỏi nào đang chờ chủ dự án.
+- 2026-11-12: không chỉnh sửa chi tiết nữa; xây hệ thống trước, hoàn thiện sau. Hệ thống gồm: trang `/lo-trinh` (chỗ bắt đầu duy nhất, chỉ ra việc tiếp theo), trang `/cong-cu` (sổ kế toán Excel dùng ngay), các trang `/thao-tac/...` (thao tác trên mạng từng cú nhấp chuột). Sổ kế toán phải thực tế, linh hoạt, phân loại chi tiết, không chỉ đúng mẫu nhà nước. Thao tác trên mạng phải có hình minh họa.
 
 ## Phiên
 
