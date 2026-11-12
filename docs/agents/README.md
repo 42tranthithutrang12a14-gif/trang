@@ -55,11 +55,33 @@ Không agent nào sửa file của agent kia.
 - Tài liệu: mỗi agent chỉ ghi file của mình và đọc file của agent kia.
 - Tin nhắn: khi có việc gấp cho agent kia, gửi một tin ngắn (send_message tới mã phiên ở mục "Phiên"), chỉ rõ mục trong file. Lượt nào bắt đầu từ một tin nhắn thì không gửi tin nhắn đáp lại, để tránh hai agent nhắn qua lại không dừng.
 
+## Hệ thống cho người mới (dựng ngày 2026-11-12)
+
+| Phần | Trang | Nội dung | Code |
+| --- | --- | --- | --- |
+| Lộ trình | `/lo-trinh` | `src/content/lo-trinh.json` (giai đoạn, việc định kỳ); việc của 2 giai đoạn đầu lấy từ `tu-0-den-1.json` | `src/lib/lo-trinh.ts`, `src/app/(public)/lo-trinh/` |
+| Sổ thu chi Excel | `/cong-cu`, tải ở `/tai-ve/so-thu-chi.xlsx` | `src/content/so-ke-toan.json` (nhóm thu chi, cách dùng, ví dụ) | `src/lib/so-ke-toan.ts` (dựng 4 trang bằng exceljs) |
+| Thao tác từng cú nhấp chuột | `/thao-tac/<slug>` | `src/content/thao-tac.json`, ảnh trong `public/thao-tac/<slug>/` | `src/lib/thao-tac.ts`, `src/app/(public)/thao-tac/` |
+
+Mọi nội dung mới đều là "draft". Sửa nội dung thì sửa file JSON; chỉ sửa code khi cần thêm cột, thêm trang sổ.
+
+### Sổ thu chi
+
+- Người dùng ghi chi tiết ở trang "Nhật ký thu chi". Trang "Tổng hợp" tự tính. Sổ theo mẫu nhà nước (khi nghiên cứu xong) là các trang thêm vào, lấy số từ nhật ký; không thay nhật ký.
+- Đổi tên nhóm, thêm nhóm, sửa cách dùng: sửa `so-ke-toan.json`.
+- Sau khi sửa `src/lib/so-ke-toan.ts`: chạy `npm run tao-so -- <đường dẫn>.xlsx`, mở file bằng LibreOffice không giao diện để tính lại, và kiểm tra không có ô lỗi (`#REF!`, `#NAME?`, `#VALUE!`). Điền vài dòng thử và so số ở trang "Tổng hợp" với số tự tính. Ghi cách đã kiểm vào nhật ký.
+
+### Ảnh minh họa cho thao tác
+
+- Chụp trang công khai: `npm run chup -- <https://...> public/thao-tac/<slug>/<tên>.png [--rong 1280] [--cao 800] [--ca-trang]`. Lệnh in ra `image`, `image_width`, `image_height` để chép vào bước tương ứng trong `thao-tac.json`, kèm `image_alt` và `source` (ghi ngày chụp).
+- Chỉ chụp trang công khai, không đăng nhập, không nhập thông tin cá nhân. Không vẽ giao diện giả.
+- Nếu lệnh chụp đòi duyệt quyền hoặc cổng chặn: không thử lại nhiều lần. Ghi tên tài liệu hướng dẫn chính thức (trang, hình) vào `source` và ghi vào "Cần chủ dự án quyết".
+
 ## Hiện trạng đã biết
 
-- `npm test`: 59/59 qua (T25 đã sửa ngày 2026-11-12).
+- `npm test`: 82/82 qua.
 - `npm run lint`: 15 vấn đề có sẵn (6 lỗi ở dieu-khoan, ket-qua, kham, rieng-tu).
-- Mạng của môi trường "trang" mở các cổng chính thức trong `src/content/official_sources.json`. Trang ngoài danh sách sẽ bị chặn.
+- Mạng của môi trường "trang" mở các cổng chính thức trong `src/content/official_sources.json`. Trang ngoài danh sách sẽ bị chặn. `thuedientu.gdt.gov.vn` và `hoadondientu.gdt.gov.vn` chưa được mở.
 
 ## Quyết định của chủ dự án
 
