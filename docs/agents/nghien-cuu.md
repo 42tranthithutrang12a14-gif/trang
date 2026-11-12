@@ -278,6 +278,40 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Thêm vào sổ Excel (theo hướng README: ghi chi tiết ở Nhật ký, sổ mẫu lấy ra từ đó): (1) cột "Loại doanh thu" (hàng hóa / dịch vụ / khác) và cách ghi doanh thu bán chịu; (2) trang "S1-DNSN" tự cộng doanh thu theo 3 cột; (3) trang "S4-DNSN" với cột phải nộp, đã nộp; (4) trang "S2-DNSN", "S3-DNSN" để trống theo đúng cột mẫu, cho DN có lao động hoặc hàng tồn kho. Đầu mỗi trang ghi mã mẫu và dòng "Ban hành kèm theo Thông tư số 132/2018/TT-BTC ngày 28/12/2018 của Bộ Tài chính" như mẫu.
   - Ghi todo: Chương III phụ thuộc phương pháp tính thuế TNDN theo Luật 67/2025 (chưa xác minh).
 
+### Ghi chú vòng 11 (2026-11-12, 16:17 UTC)
+
+- Đã rà commit `7eeaca7` của Biên tập: thêm 4 trang trống S1–S4-DNSN vào sổ Excel, tên sổ và tên trang khớp mẫu Phụ lục 4 TT 132/2018. Không thấy sai sót ở phần tiêu đề. Chưa so từng cột.
+- Vòng này làm NC-010: điều kiện để dùng chế độ 4 sổ (Chương III TT 132/2018) và mâu thuẫn thuế suất TNDN 20% / 15–17% (ưu tiên mục 3 cũ, nay ảnh hưởng trực tiếp sổ kế toán).
+
+### NC-010 — Thuế suất TNDN cho DN nhỏ và phương pháp tính theo % doanh thu (Luật 67/2025/QH15, Luật 09/2026/QH16)
+
+- Trạng thái: đã xác minh
+- Liên quan: `src/content/guides/tam-nop-thue-tndn.json` (mục thuế suất ghi "doanh nghiệp siêu nhỏ áp dụng thuế suất 20%"; todo mâu thuẫn); `src/content/tu-0-den-1.json` (mục thuế suất 15%/17%); `src/content/legal-framework.json` (mục Luật Thuế TNDN 14/2008/QH12); `src/content/so-ke-toan.json` (chế độ 4 sổ của Chương III TT 132/2018).
+- Nguồn:
+  - Luật Thuế TNDN 67/2025/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1; PDF có chữ ký số https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/67qh.signed.pdf (bản quét, đã OCR rồi đọc lại). Mở ngày 2026-11-12.
+  - Luật 09/2026/QH16 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/5/09-qh.signed.pdf (2 trang, bản quét). Mở ngày 2026-11-12.
+- Phát hiện:
+  - **Thuế suất** (Luật 67/2025, Điều 10, PDF trang 9–10):
+    - Khoản 1: "Thuế suất thuế thu nhập doanh nghiệp là 20%, trừ trường hợp quy định tại các khoản 2, 3 và 4 Điều này và đối tượng được ưu đãi về thuế suất quy định tại Điều 13 của Luật này."
+    - Khoản 2: "Thuế suất 15% áp dụng đối với doanh nghiệp có tổng doanh thu năm không quá 03 tỷ đồng."
+    - Khoản 3: "Thuế suất 17% áp dụng đối với doanh nghiệp có tổng doanh thu năm từ trên 03 tỷ đồng đến không quá 50 tỷ đồng." Đoạn tiếp: "Doanh thu làm căn cứ … là tổng doanh thu của kỳ tính thuế thu nhập doanh nghiệp trước liền kề. Việc xác định tổng doanh thu làm căn cứ áp dụng thực hiện theo quy định của Chính phủ."
+  - **Phương pháp tính thuế** (Điều 11, PDF trang 10):
+    - Khoản 1: thuế phải nộp = thu nhập tính thuế × thuế suất, trừ khoản 2.
+    - Khoản 2 điểm b: Chính phủ quy định số thuế tính theo tỷ lệ % trên doanh thu cho "Doanh nghiệp có tổng doanh thu năm không quá 03 tỷ đồng quy định tại khoản 2 Điều 10 của Luật này trong trường hợp xác định được doanh thu nhưng không xác định được chi phí, thu nhập của hoạt động sản xuất, kinh doanh".
+  - **Hiệu lực** (Điều 19 khoản 1, PDF trang 20): "Luật này có hiệu lực thi hành từ ngày 01 tháng 10 năm 2025 và áp dụng từ kỳ tính thuế thu nhập doanh nghiệp năm 2025."
+  - **Miễn thuế theo ngưỡng doanh thu** (Luật 09/2026, Điều 3, PDF trang 2): bổ sung khoản 14a Điều 4 Luật Thuế TNDN: "Thu nhập của doanh nghiệp, tổ chức được thành lập theo quy định của pháp luật Việt Nam có tổng doanh thu năm từ mức quy định của Chính phủ trở xuống được miễn thuế thu nhập doanh nghiệp." Điều 5 khoản 2: các điều 1, 2, 3 "có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026".
+  - Phần mở đầu Luật 09/2026 ghi Luật 67/2025 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15. Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không.
+- **Kết luận:**
+  1. Câu "doanh nghiệp siêu nhỏ áp dụng thuế suất 20%" trong `tam-nop-thue-tndn.json` **sai** với Luật 67/2025 (áp dụng từ kỳ tính thuế năm 2025). DN có tổng doanh thu năm trước liền kề không quá 3 tỷ đồng: 15%; trên 3 tỷ đến 50 tỷ: 17%; còn lại 20%. Mục 15%/17% trong `tu-0-den-1.json` đúng.
+  2. Chế độ 4 sổ của Chương III TT 132/2018 vẫn có cơ sở: Luật 67/2025 Điều 11 khoản 2 điểm b vẫn cho tính thuế theo % trên doanh thu, nhưng chỉ khi DN có doanh thu năm không quá 3 tỷ **và** không xác định được chi phí, thu nhập. Tỷ lệ % do Chính phủ quy định (chưa đọc nghị định).
+  3. Từ 01/01/2026, DN có tổng doanh thu năm từ mức Chính phủ quy định trở xuống được miễn thuế TNDN. Mức này chưa xác minh (có thể nằm ở Nghị định 141/2026/NĐ-CP hoặc nghị định hướng dẫn Luật 67/2025; chưa đọc).
+- **Đề xuất sửa (Biên tập):**
+  - `tam-nop-thue-tndn.json` mục thuế suất: thay "Thuế suất phổ thông: 20% (doanh nghiệp siêu nhỏ áp dụng thuế suất 20%)" bằng: "Thuế suất: 15% nếu tổng doanh thu năm trước không quá 3 tỷ đồng; 17% nếu trên 3 tỷ đến 50 tỷ đồng; 20% với các trường hợp còn lại." Sửa ví dụ tính (đang dùng 20%) cho khớp, ví dụ dùng 15%. `legal_basis`: Luật Thuế TNDN 67/2025/QH15, Điều 10 khoản 1, 2, 3; URL https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1; `verified_against_original: true`. Bỏ todo "mâu thuẫn 20% / 15–17%".
+  - `tu-0-den-1.json` mục thuế suất 15%/17%: điền `legal_basis` như trên; thêm "căn cứ là doanh thu của kỳ tính thuế trước liền kề".
+  - `legal-framework.json` mục Luật Thuế TNDN: được đổi `number` thành 67/2025/QH15 và `effective_from` 01/10/2025 (theo quyết định của chủ dự án về trang thông tin, và đã đọc Điều 19 khoản 1). Ghi chú áp dụng từ kỳ tính thuế năm 2025.
+  - Thêm todo ở các mục TNDN: "Luật 09/2026/QH16 Điều 3 (hiệu lực 01/01/2026): DN có doanh thu năm từ mức Chính phủ quy định trở xuống được miễn thuế TNDN; mức này chưa xác minh." Không viết con số mức miễn.
+  - `so-ke-toan.json`: thêm điều kiện áp dụng 4 sổ S1–S4: "chỉ dành cho DN nộp thuế TNDN theo tỷ lệ % trên doanh thu: doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí (Luật 67/2025 Điều 11 khoản 2 điểm b; TT 132/2018 Điều 3 khoản 2). DN tính thuế trên thu nhập tính thuế dùng S01–S10."
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
