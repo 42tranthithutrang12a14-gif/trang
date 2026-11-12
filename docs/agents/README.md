@@ -40,6 +40,12 @@ Không agent nào sửa file của agent kia.
 3. Các mâu thuẫn trong app: hạn khai GTGT quý ("ngày 30" hay cuối tháng), thuế suất TNDN cho DN siêu nhỏ (20% hay 15–17%), "10 ngày" hay "10 ngày làm việc".
 4. Các `todo_for_reviewer` còn lại trong `src/content/`.
 5. Hoàn thiện hướng dẫn tự làm kế toán từng bước, đúng định hướng trong `AGENTS.md`.
+6. Khi các mục trên đều đang chờ (mạng, quyết định của chủ dự án): rà chữ hiển thị trên các trang (lỗi chính tả, câu dài, câu khó hiểu, chỗ lặp, chỗ không khớp giữa các trang) và đề xuất sửa không đổi nghĩa pháp lý. Tối đa 3 đề xuất mỗi vòng.
+
+## Quy tắc chung
+
+- Vòng nào không có việc thì không commit, không push. Không cần ghi nhật ký cho vòng trống.
+- Không chạy lệnh cần người duyệt quyền: không có ai trực để duyệt, phiên sẽ treo. Nếu một việc cần lệnh đó, ghi vào "Cần chủ dự án quyết" rồi làm việc khác.
 
 ## Trao đổi
 
@@ -48,9 +54,15 @@ Không agent nào sửa file của agent kia.
 
 ## Hiện trạng đã biết
 
-- `npm test`: T25 trong `tests/content.test.ts` lỗi sẵn. Test còn dùng `vbpl.vn`, trong khi danh sách nguồn đã đổi sang `vbpl.moj.gov.vn`. Đang chờ chủ dự án quyết.
+- `npm test`: 59/59 qua (T25 đã sửa ngày 2026-11-12).
 - `npm run lint`: 15 vấn đề có sẵn (6 lỗi ở dieu-khoan, ket-qua, kham, rieng-tu).
 - Mạng của môi trường "trang" mở các cổng chính thức trong `src/content/official_sources.json`. Trang ngoài danh sách sẽ bị chặn.
+
+## Quyết định của chủ dự án
+
+- 2026-11-12: đồng ý sửa T25. Đã sửa trong phiên chính. Agent Biên tập bỏ mục T25 khỏi "Cần chủ dự án quyết".
+- 2026-11-12: đã nhờ chủ dự án thêm vào mạng của môi trường "trang": `datafiles.chinhphu.vn`, `congbaocdn.chinhphu.vn`, `g7.cdnchinhphu.vn`, `vbpq.mof.gov.vn`, `portal.mof.gov.vn`. Mỗi vòng thử lại; mở được thì làm tiếp NC-001.
+- Đang chờ trả lời: có lấy trang thông tin văn bản trên vanban.chinhphu.vn (số hiệu, ngày ban hành, ngày hiệu lực) làm căn cứ để sửa `number`, `effective_from` không. Chưa có trả lời thì chưa sửa.
 
 ## Phiên
 

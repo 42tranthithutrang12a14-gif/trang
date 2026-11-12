@@ -8,7 +8,7 @@ import riskRules from "@/content/rules/risk_rules.json";
 // T25: isOfficialSourceUrl
 describe("isOfficialSourceUrl", () => {
   it("T25: accepts exact official domain", () => {
-    expect(isOfficialSourceUrl("https://vbpl.vn/pages/portal.aspx")).toBe(true);
+    expect(isOfficialSourceUrl("https://vbpl.moj.gov.vn/pages/portal.aspx")).toBe(true);
   });
 
   it("T26: accepts subdomain when allow_subdomains=true", () => {
@@ -16,7 +16,7 @@ describe("isOfficialSourceUrl", () => {
   });
 
   it("T27: rejects http (not https)", () => {
-    expect(isOfficialSourceUrl("http://vbpl.vn/pages/portal.aspx")).toBe(false);
+    expect(isOfficialSourceUrl("http://vbpl.moj.gov.vn/pages/portal.aspx")).toBe(false);
   });
 
   it("T28: rejects unknown domain", () => {
@@ -24,8 +24,8 @@ describe("isOfficialSourceUrl", () => {
   });
 
   it("T29: rejects subdomain when allow_subdomains=false", () => {
-    // vbpl.vn does not have allow_subdomains=true
-    expect(isOfficialSourceUrl("https://sub.vbpl.vn/page")).toBe(false);
+    // vbpl.moj.gov.vn does not have allow_subdomains=true
+    expect(isOfficialSourceUrl("https://sub.vbpl.moj.gov.vn/page")).toBe(false);
   });
 });
 
