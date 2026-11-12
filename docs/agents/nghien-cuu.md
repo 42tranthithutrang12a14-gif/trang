@@ -375,6 +375,45 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `so-ke-toan.json` (chế độ 4 sổ): thêm bảng tỷ lệ % theo Điều 12 khoản 4 Nghị định 320/2025. Trong Nhật ký thu chi hoặc S1, thêm cột "Nhóm tỷ lệ thuế TNDN" (0,3% / 1,2% / 1,5% / 4% / 0,5%) để tự tính thuế phải nộp. Nhắc: chỉ dùng khi doanh thu năm không quá 3 tỷ và không xác định được chi phí; và DN doanh thu ≤ 1 tỷ được miễn (NC-011).
   - `legal-framework.json` mục 96/2015/TT-BTC: thêm todo "văn bản hướng dẫn Luật 67/2025 là Nghị định 320/2025/NĐ-CP (hiệu lực từ ngày ký 15/12/2025, áp dụng từ kỳ tính thuế 2025); chưa tra Thông tư hướng dẫn mới". Có thể thêm một mục cho Nghị định 320/2025 (số hiệu, ngày ký theo trang thông tin; theo quyết định của chủ dự án).
 
+### Ghi chú vòng 14 (2026-11-12, 22:18 UTC)
+
+- Đã rà commit `5ffe956` của Biên tập (áp dụng NC-012): bảng tỷ lệ % trong `so-ke-toan.json` khớp Nghị định 320/2025 Điều 12 khoản 4 (0,3 / 1,2 / 1,5 / 4 / 4 / 0,5%). Không thấy sai sót.
+- Vòng này làm NC-013: hạn nộp hồ sơ khai thuế tháng, quý, quyết toán; tạm nộp TNDN quý; các trường hợp không phải nộp hồ sơ khai. Giải quyết mâu thuẫn "ngày 30" hay "cuối tháng" (ưu tiên mục 3 cũ) và điểm còn mở của NC-011.
+
+### NC-013 — Hạn khai thuế quý là ngày cuối cùng của tháng đầu quý sau; tạm nộp TNDN 4 quý tối thiểu 80% (Luật 108/2025, Nghị định 252/2026)
+
+- Trạng thái: đã xác minh
+- Liên quan:
+  - Hạn GTGT quý: `bat-dau.json` dòng 253 ("hạn ngày 30 của tháng đầu quý tiếp theo"); `legal-framework.json` dòng 85; `guides/khai-thue-gtgt-theo-quy.json` (ghi 30/4, 31/7, 31/10, 31/01 — đúng).
+  - Hạn tạm nộp TNDN: `bat-dau.json` dòng 254; `legal-framework.json` dòng 112; `guides/tam-nop-thue-tndn.json` dòng 7 ("ngày 30 của tháng đầu quý tiếp theo") và dòng 24 ("30/4, 30/7, 30/10, 30/01").
+  - Ngưỡng tạm nộp: `guides/tam-nop-thue-tndn.json` dòng 24 ("ít nhất 75–80%") và dòng 40 ("Tạm nộp thiếu dưới 75%…"); todo dòng 54.
+- Nguồn:
+  - Luật Quản lý thuế 108/2025/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/108-qh15.signed.pdf (65 trang, bản quét, đã OCR). Hiệu lực 01/07/2026 (trang thông tin).
+  - Nghị định 252/2026/NĐ-CP hướng dẫn Luật Quản lý thuế — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/252-ndcp.signed.pdf (133 trang, bản quét, đã OCR). Ban hành 30/06/2026, hiệu lực 01/07/2026 (trang thông tin). Mở ngày 2026-11-12.
+- Phát hiện:
+  - Luật 108/2025, Điều 12 khoản 8 (PDF trang 11): Chính phủ quy định "các trường hợp không phải nộp hồ sơ khai thuế, khoản thu khác; kỳ tính thuế; thời hạn nộp hồ sơ khai thuế…". Điều 14 khoản 1 điểm a (PDF trang 13): người nộp thuế tự tính thuế thì "thời hạn nộp thuế… chậm nhất là ngày cuối cùng của thời hạn nộp hồ sơ khai thuế"; tạm nộp theo quý theo quy định của Chính phủ.
+  - Nghị định 252/2026, Điều 10 (PDF trang 21):
+    - Khoản 2: khai theo tháng: "chậm nhất là ngày thứ 20 của tháng tiếp theo tháng phát sinh nghĩa vụ thuế."
+    - Khoản 3: khai theo quý: "chậm nhất là ngày cuối cùng của tháng đầu của quý tiếp theo quý phát sinh nghĩa vụ thuế."
+    - Khoản 4: khai theo năm: "chậm nhất là ngày cuối cùng của tháng đầu tiên của năm dương lịch tiếp theo hoặc của năm tài chính tiếp theo."
+    - Khoản 5 điểm a: khai quyết toán: "Chậm nhất là ngày cuối cùng của tháng thứ 03 kể từ ngày kết thúc kỳ quyết toán thuế". Điểm b: 45 ngày kể từ quyết định giải thể, chấm dứt hoạt động…
+  - Nghị định 252/2026, Điều 24 (PDF trang 47–48):
+    - Khoản 1: tạm nộp theo quý đối với "a) Thuế thu nhập doanh nghiệp".
+    - Khoản 2: "Thời hạn tạm nộp quý chậm nhất là ngày cuối cùng của tháng đầu của quý tiếp theo quý phát sinh nghĩa vụ thuế".
+    - Khoản 3 điểm a: "tổng số thuế… đã tạm nộp của 04 quý không được thấp hơn 80% số thuế… phải nộp theo quyết toán năm"; điểm b: nộp thiếu thì tính tiền chậm nộp trên số nộp thiếu, từ ngày tiếp theo hạn tạm nộp quý 4.
+  - Nghị định 252/2026, Điều 11 (PDF trang 22–24): 13 trường hợp không phải nộp hồ sơ khai. Khoản 1: "Người nộp thuế chỉ có hoạt động, kinh doanh thuộc đối tượng không chịu thuế…". **Không có** trường hợp "doanh nghiệp được miễn thuế TNDN". Khoản 4: trong thời gian tạm ngừng kinh doanh.
+- **Kết luận:**
+  1. Hạn khai thuế GTGT quý và hạn tạm nộp TNDN quý (năm dương lịch): Quý I – 30/4; Quý II – 31/7; Quý III – 31/10; Quý IV – 31/01 năm sau. Các chỗ ghi "ngày 30 của tháng đầu quý tiếp theo" và "30/7, 30/10, 30/01" **sai** ba quý sau. Guide `khai-thue-gtgt-theo-quy.json` đúng.
+  2. Khai thuế tháng: ngày 20 tháng sau. Quyết toán năm (năm dương lịch): 31/3 năm sau (ngày cuối tháng thứ 3).
+  3. Tạm nộp 4 quý phải đạt ít nhất **80%** số thuế quyết toán; câu "75%" và "75–80%" sai.
+  4. NC-011 (miễn TNDN ≤ 1 tỷ): Điều 11 không miễn nộp hồ sơ khai cho DN được miễn thuế TNDN. Bản thân Nghị định 141/2026 lấy doanh thu "trên Phụ lục… kèm theo tờ khai quyết toán thuế TNDN của kỳ tính thuế năm trước". Cách hiểu hợp lý: DN được miễn vẫn nộp tờ khai quyết toán TNDN năm. Ghi là cách hiểu; Thông tư 89/2026 có thể nói rõ hơn (chưa đọc).
+- **Đề xuất sửa (Biên tập):**
+  - Sửa mọi chỗ "ngày 30 của tháng đầu quý tiếp theo" thành "ngày cuối cùng của tháng đầu quý tiếp theo (30/4, 31/7, 31/10, 31/01)" ở `bat-dau.json` (dòng 253, 254), `legal-framework.json` (dòng 85, 112), `tam-nop-thue-tndn.json` (dòng 7, 24). Bỏ todo mâu thuẫn "ngày 30 / cuối tháng". `legal_basis`: Nghị định 252/2026/NĐ-CP Điều 10 khoản 2, 3, 5 điểm a; Điều 24 khoản 1, 2, 3; Luật 108/2025/QH15 Điều 12 khoản 8, Điều 14 khoản 1 điểm a; URL như trên; `verified_against_original: true`.
+  - `tam-nop-thue-tndn.json`: thay "75–80%" và "dưới 75%" bằng "ít nhất 80% số thuế quyết toán năm; thiếu thì tính tiền chậm nộp trên phần thiếu, từ sau hạn tạm nộp quý 4". Bỏ todo "75% hay 80%". Ghi rõ hạn quyết toán 31/3 năm sau (kỳ kế toán theo năm dương lịch).
+  - `legal-framework.json`: các mục dẫn Luật Quản lý thuế 38/2019/QH14 và Thông tư 80/2021/TT-BTC: thêm todo "từ 01/07/2026 áp dụng Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP; hạn khai đã đối chiếu (NC-013)". Có thể đổi `number`, `effective_from` của mục Luật Quản lý thuế theo quyết định của chủ dự án.
+  - Các mục miễn TNDN (NC-011): thêm câu "Được miễn thuế vẫn nộp tờ khai quyết toán TNDN năm (cách hiểu theo Nghị định 252/2026 Điều 11; chưa có văn bản nói rõ)". Giữ todo.
+  - Câu "Nắm được lịch này là nắm được 80% việc cần làm" (`bat-dau.json` dòng 299) không liên quan ngưỡng 80% tạm nộp; giữ todo "không có nguồn" như cũ.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
