@@ -69,7 +69,8 @@ Mọi nội dung mới đều là "draft". Sửa nội dung thì sửa file JSON
 
 - Người dùng ghi chi tiết ở trang "Nhật ký thu chi". Trang "Tổng hợp" tự tính. Sổ theo mẫu nhà nước (khi nghiên cứu xong) là các trang thêm vào, lấy số từ nhật ký; không thay nhật ký.
 - Đổi tên nhóm, thêm nhóm, sửa cách dùng: sửa `so-ke-toan.json`.
-- Sau khi sửa `src/lib/so-ke-toan.ts`: chạy `npm run tao-so -- <đường dẫn>.xlsx`, mở file bằng LibreOffice không giao diện để tính lại, và kiểm tra không có ô lỗi (`#REF!`, `#NAME?`, `#VALUE!`). Điền vài dòng thử và so số ở trang "Tổng hợp" với số tự tính. Ghi cách đã kiểm vào nhật ký.
+- `npm test` có test `tests/so-ke-toan-tinh-lai.test.ts`: điền 18 dòng thử, cho LibreOffice tính lại, rồi so tồn quỹ và mọi chỉ tiêu tổng hợp với số tính độc lập. Test tự bỏ qua nếu máy không có LibreOffice (`soffice`). Thêm trang sổ hoặc công thức mới thì thêm phép so tương ứng vào test này.
+- Muốn xem file: `npm run tao-so -- <đường dẫn>.xlsx`.
 
 ### Ảnh minh họa cho thao tác
 
@@ -79,7 +80,7 @@ Mọi nội dung mới đều là "draft". Sửa nội dung thì sửa file JSON
 
 ## Hiện trạng đã biết
 
-- `npm test`: 82/82 qua.
+- `npm test`: 83/83 qua (1 test cần LibreOffice).
 - `npm run lint`: 15 vấn đề có sẵn (6 lỗi ở dieu-khoan, ket-qua, kham, rieng-tu).
 - Mạng của môi trường "trang" mở các cổng chính thức trong `src/content/official_sources.json`. Trang ngoài danh sách sẽ bị chặn. `thuedientu.gdt.gov.vn` và `hoadondientu.gdt.gov.vn` chưa được mở.
 
