@@ -131,6 +131,17 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Không viết "không phải quyết toán" cho DN được miễn: chưa có căn cứ. Đã ghi todo các điểm còn mở của NC-011.
 - Kiểm tra: `npm test` 84/84 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 14 (2026-11-12, 21:18 UTC)
+
+- Đọc NC-012 (Nghị định 320/2025/NĐ-CP Điều 11, 12, 24, đã xác minh). Status giữ "draft".
+- `guides/tam-nop-thue-tndn.json`: thêm mục "Công ty mới thành lập: tạm nộp theo doanh thu dự kiến" (1 tỷ / 3 tỷ / 50 tỷ; nộp bù và tiền chậm nộp nếu dự kiến thấp; công ty liên kết). Mục thuế suất dẫn thêm Nghị định 320/2025 Điều 11. Danh sách văn bản thêm Nghị định 320/2025, 141/2026; ghi Thông tư 96/2015 là hướng dẫn luật cũ.
+- `tu-0-den-1.json`, mục thuế suất: thêm bước cho công ty mới, thêm `legal_basis` Nghị định 320/2025.
+- `legal-framework.json`: thêm mục Nghị định 320/2025/NĐ-CP (số hiệu, ngày ký theo trang thông tin; 4 ý chính có điều, khoản). Todo ở mục Thông tư 96/2015.
+- Sổ Excel: thêm trang "Thuế TNDN theo % DT" (6 tỷ lệ theo Điều 12 khoản 4; gõ doanh thu từng nhóm, tự nhân tỷ lệ, có dòng cộng). Dữ liệu ở `so-ke-toan.json` (`cit_rate_sheet`), mã ở `src/lib/so-ke-toan.ts` (`buildCitRates`). Thêm `legal_basis` Nghị định 320/2025. Đã cho LibreOffice tính lại với số thử: đúng từng dòng và tổng.
+- Chưa làm: chưa thêm cột "Nhóm tỷ lệ" vào Nhật ký hay S1 để tự tính. S1 theo mẫu chia doanh thu khác nhóm tỷ lệ; thêm cột vào Nhật ký sẽ dời mọi cột và công thức. Chưa rõ kỳ kê khai của cách tính % doanh thu (quý hay năm).
+- `tests/so-ke-toan.test.ts`: thêm SK12.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -142,6 +153,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 12) NC-010 còn mở: mức doanh thu được miễn thuế TNDN theo Luật 09/2026 Điều 3; tỷ lệ % tính thuế trên doanh thu (Điều 11 khoản 2); 5 luật sửa Luật 67/2025 có sửa Điều 10, 11 không; DN mới thành lập xác định doanh thu năm trước thế nào.
 
 - (Vòng 13) NC-011: DN được miễn thuế TNDN có còn phải kê khai, quyết toán TNDN không (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). DN cũ có doanh thu năm trước từ 1 tỷ trở xuống có văn bản nói thẳng là không phải tạm nộp quý không.
+
+- (Vòng 14) NC-012: DN nộp thuế TNDN theo % doanh thu thì kê khai theo quý hay năm, dùng mẫu tờ khai nào. Có Thông tư hướng dẫn Nghị định 320/2025 không.
 
 ## Cần chủ dự án quyết
 

@@ -817,10 +817,24 @@
         "benefit": "Thuế suất thấp hơn mức phổ thông 20%: 15% nếu tổng doanh thu năm không quá 3 tỷ đồng, 17% nếu trên 3 tỷ đến 50 tỷ đồng. Doanh thu để xét là tổng doanh thu của năm tính thuế trước liền kề.",
         "how": [
           "Áp dụng thuế suất này khi tự tính số thuế tạm nộp và khi quyết toán thuế TNDN.",
+          "Công ty mới thành lập: tự dự kiến doanh thu cả năm để chọn 15% hay 17% khi tạm nộp. Dự kiến thấp, thực tế cao hơn thì nộp bù phần thiếu và tiền chậm nộp.",
           "Ghi sổ đầy đủ để chứng minh doanh thu."
         ],
         "links": [],
         "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "320/2025/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-12-15",
+            "effective_date": "2025-12-15",
+            "article": "Điều 11 khoản 2, 3, 4 (điểm a, b, c); Điều 24 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Luật",
             "doc_number": "67/2025/QH15",
@@ -836,6 +850,7 @@
           }
         ],
         "todo_for_reviewer": [
+          "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm bước cho công ty mới thành lập (Điều 11 khoản 4 điểm b), thêm legal_basis Nghị định 320/2025. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
           "Gợi ý của trợ lý AI (chưa xác minh): theo Luật Thuế TNDN số 67/2025/QH15, áp dụng từ kỳ tính thuế năm 2025. Xác minh thuế suất, ngưỡng doanh thu, cách xác định doanh thu năm và trường hợp không được áp dụng. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
           "Ngày 2026-11-12 (NC-010): đã đối chiếu Luật 67/2025/QH15 Điều 10 khoản 1, 2, 3 và Điều 19 khoản 1; thuế suất 15% / 17% đúng; thêm câu doanh thu xét là năm trước liền kề; điền legal_basis. Guide tam-nop-thue-tndn đã sửa theo.",
           "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Xem mục mien-tndn-doanh-thu-1-ty.",

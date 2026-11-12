@@ -121,6 +121,24 @@
           ]
         },
         {
+          "name": "Nghị định quy định chi tiết Luật Thuế TNDN",
+          "number": "320/2025/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "15/12/2025",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Doanh thu xét thuế suất 15%, 17%: doanh thu bán hàng, dịch vụ (trừ giảm trừ), doanh thu tài chính, thu nhập khác của năm trước liền kề (Điều 11 khoản 4)",
+            "Công ty mới thành lập tạm nộp theo doanh thu dự kiến; nộp thiếu thì nộp bù và tiền chậm nộp (Điều 11 khoản 4 điểm b)",
+            "DN doanh thu năm không quá 3 tỷ, không xác định được chi phí: nộp theo % doanh thu, 0,3% đến 4% tùy ngành (Điều 12 khoản 4)",
+            "Miễn thuế khi doanh thu năm từ 1 tỷ đồng trở xuống: khoản 15 Điều 4, do Nghị định 141/2026/NĐ-CP bổ sung, hiệu lực 01/01/2026"
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): mục mới do agent Biên tập thêm. Hiệu lực: Điều 24 khoản 1 ghi \"có hiệu lực thi hành kể từ ngày ký ban hành và áp dụng từ kỳ tính thuế thu nhập doanh nghiệp năm 2025\"; ngày ký 15/12/2025 theo trang thông tin. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+            "Chưa tra Thông tư hướng dẫn Nghị định 320/2025 (nếu có)."
+          ]
+        },
+        {
           "name": "Thông tư hướng dẫn thuế TNDN",
           "number": "96/2015/TT-BTC",
           "issued_by": "Bộ Tài chính",
@@ -134,7 +152,8 @@
           "todo_for_reviewer": [
             "Xác nhận TT 96/2015 còn hiệu lực hay đã có thông tư thay thế",
             "Bổ sung chi phí được trừ phổ biến với DNSN (thuê nhà, điện nước, điện thoại)",
-            "Cập nhật NC-008: ngày hiệu lực 06/08/2015 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=180650&classid=1"
+            "Cập nhật NC-008: ngày hiệu lực 06/08/2015 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=180650&classid=1",
+            "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): văn bản hướng dẫn Luật 67/2025 hiện là Nghị định 320/2025/NĐ-CP (hiệu lực từ ngày ký 15/12/2025, áp dụng từ kỳ tính thuế 2025). Thông tư 96/2015 hướng dẫn luật cũ; chưa tra Thông tư hướng dẫn mới. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1"
           ]
         }
       ]

@@ -30,6 +30,15 @@ export type FormSpec = {
   columns: FormColumn[];
 };
 
+/** Calculator for CIT as a percentage of revenue, one row per rate group. */
+export type CitRateSheet = {
+  sheet: string;
+  title: string;
+  intro: string[];
+  rates: { group: string; rate: number }[];
+  source: string;
+};
+
 export type LedgerSpec = Reviewable & {
   updated_at: string;
   title: string;
@@ -47,6 +56,7 @@ export type LedgerSpec = Reviewable & {
   forms: FormSpec[];
   form_issue_line: string;
   form_rows: number;
+  cit_rate_sheet: CitRateSheet;
 };
 
 export const SHEETS = {
@@ -712,6 +722,75 @@ function buildForm(ws: Sheet, spec: LedgerSpec, form: FormSpec, year: number) {
   };
 }
 
+export function citRateLayout(spec: LedgerSpec) {
+  const header = 4 + spec.cit_rate_sheet.intro.length + 1;
+  const first = header + 1;
+  const last = first + spec.cit_rate_sheet.rates.length - 1;
+  return { header, first, last, total: last + 1 };
+}
+
+function buildCitRates(ws: Sheet, spec: LedgerSpec, year: number) {
+  const S = quoted(SHEETS.setup);
+  const calc = spec.cit_rate_sheet;
+  const layout = citRateLayout(spec);
+  setColumns(ws, [62, 12, 20, 20]);
+  ws.getColumn(1).alignment = { vertical: "top", wrapText: true };
+  titleCell(ws, "A1", calc.title);
+  ws.getCell("A2").value = formula(`"Năm "&${S}!$B$6`, `Năm ${year}`);
+  if (spec.status !== "published" && spec.sample_notice) {
+    const draft = ws.getCell("A3");
+    draft.value = `${spec.sample_notice}. Chỉ để tham khảo, không thay tờ khai thuế.`;
+    draft.font = { ...FONT, bold: true, color: { argb: "FFC62828" } };
+  }
+  calc.intro.forEach((line, i) => {
+    const row = 4 + i;
+    ws.mergeCells(row, 1, row, 4);
+    const cell = ws.getCell(row, 1);
+    cell.value = `• ${line}`;
+    cell.alignment = { vertical: "top", wrapText: true };
+    ws.getRow(row).height = Math.ceil(line.length / 110) * 14 + 2;
+  });
+
+  ["Nhóm ngành", "Tỷ lệ", "Doanh thu (đồng)", "Thuế TNDN (tự tính)"].forEach((text, i) => {
+    headerCell(ws.getCell(layout.header, i + 1), text, i === 2 ? COLOR.blue : COLOR.grey);
+  });
+  ws.getRow(layout.header).height = 30;
+  calc.rates.forEach(({ group, rate }, i) => {
+    const row = layout.first + i;
+    ws.getCell(row, 1).value = group;
+    const rateCell = ws.getCell(row, 2);
+    rateCell.value = rate;
+    rateCell.numFmt = "0.0%";
+    rateCell.fill = solid(COLOR.auto);
+    const revenue = ws.getCell(row, 3);
+    revenue.numFmt = MONEY;
+    revenue.fill = solid(COLOR.input);
+    const tax = ws.getCell(row, 4);
+    tax.value = formula(`ROUND(B${row}*C${row},0)`, 0);
+    tax.numFmt = MONEY_DASH;
+    tax.fill = solid(COLOR.auto);
+  });
+  addValidation(ws, `C${layout.first}:C${layout.last}`, {
+    type: "decimal",
+    operator: "greaterThanOrEqual",
+    formulae: [0],
+    allowBlank: true,
+    showErrorMessage: true,
+    errorTitle: "Doanh thu",
+    error: "Chỉ gõ số, không gõ chữ.",
+  });
+  ws.getCell(layout.total, 1).value = "Cộng";
+  for (const column of ["C", "D"]) {
+    const cell = ws.getCell(`${column}${layout.total}`);
+    cell.value = formula(`SUM(${column}${layout.first}:${column}${layout.last})`, 0);
+    cell.numFmt = MONEY_DASH;
+  }
+  ws.getRow(layout.total).font = { ...FONT, bold: true };
+  const source = ws.getCell(layout.total + 2, 1);
+  source.value = calc.source;
+  source.font = { ...FONT, italic: true };
+}
+
 export function buildLedgerWorkbook(spec: LedgerSpec, year: number): ExcelJS.Workbook {
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "Sổ tay DN Siêu nhỏ";
@@ -721,5 +800,6 @@ export function buildLedgerWorkbook(spec: LedgerSpec, year: number): ExcelJS.Wor
   buildJournal(workbook.addWorksheet(SHEETS.journal), spec, year);
   buildSummary(workbook.addWorksheet(SHEETS.summary), spec, year);
   for (const form of spec.forms) buildForm(workbook.addWorksheet(form.sheet), spec, form, year);
+  buildCitRates(workbook.addWorksheet(spec.cit_rate_sheet.sheet), spec, year);
   return workbook;
 }

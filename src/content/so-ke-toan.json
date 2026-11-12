@@ -33,7 +33,8 @@
     { "name": "S1-DNSN Doanh thu", "desc": "Mẫu S1-DNSN: sổ chi tiết doanh thu bán hàng hóa, dịch vụ. Ghi theo từng hóa đơn bán ra." },
     { "name": "S2-DNSN Lương", "desc": "Mẫu S2-DNSN: theo dõi tiền lương và các khoản BHXH, BHYT, BHTN. Dùng khi có người lao động." },
     { "name": "S3-DNSN Hàng tồn kho", "desc": "Mẫu S3-DNSN: theo dõi nhập, xuất, tồn từng loại vật liệu, dụng cụ, hàng hóa. Mỗi mặt hàng một bảng." },
-    { "name": "S4-DNSN Thuế", "desc": "Mẫu S4-DNSN: theo dõi số thuế phải nộp và đã nộp vào ngân sách." }
+    { "name": "S4-DNSN Thuế", "desc": "Mẫu S4-DNSN: theo dõi số thuế phải nộp và đã nộp vào ngân sách." },
+    { "name": "Thuế TNDN theo % DT", "desc": "Tính thuế TNDN theo tỷ lệ % trên doanh thu, cho DN doanh thu năm không quá 3 tỷ và không xác định được chi phí. Gõ doanh thu từng nhóm ngành, file tự nhân tỷ lệ." }
   ],
   "income_groups": [
     { "name": "Bán hàng, cung cấp dịch vụ", "in_result": true, "example": "Tiền khách trả khi mua hàng, dùng dịch vụ" },
@@ -175,6 +176,19 @@
       "verified_against_original": true,
       "checked_at": "2026-11-12",
       "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "320/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-15",
+      "effective_date": "2025-12-15",
+      "article": "Điều 11 khoản 4; Điều 12 khoản 4 điểm a, b, c, d, đ; Điều 24 khoản 1",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-12",
+      "snapshot_path": ""
     }
   ],
   "todo_for_reviewer": [
@@ -184,6 +198,43 @@
     "Cột \"Tính vào lãi, lỗ?\" của từng nhóm là mặc định tạm. Cần xác minh cách xếp: thuế đã nộp, mua thiết bị giá trị lớn (tài sản cố định, khấu hao), tiền đặt cọc, lương chủ sở hữu.",
     "Lãi lỗ tạm tính lấy số chưa gồm thuế GTGT. Cần xác minh cách tính cho DN tính thuế GTGT theo phương pháp trực tiếp.",
     "Xác minh khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt, để được tính vào chi phí. Khi có căn cứ thì thêm cột kiểm tra.",
-    "Xác minh thời hạn lưu sổ, chứng từ và việc sổ lập trên máy tính có phải in, ký không."
-  ]
+    "Xác minh thời hạn lưu sổ, chứng từ và việc sổ lập trên máy tính có phải in, ký không.",
+    "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm trang \"Thuế TNDN theo % DT\" với 6 tỷ lệ theo Điều 12 khoản 4. Chưa nối với S1-DNSN: S1 chia doanh thu thành hàng hóa, dịch vụ, khác, không khớp nhóm tỷ lệ. Chưa rõ kỳ kê khai (quý hay năm) của cách tính này. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1"
+  ],
+  "cit_rate_sheet": {
+    "sheet": "Thuế TNDN theo % DT",
+    "title": "TÍNH THUẾ TNDN THEO TỶ LỆ % TRÊN DOANH THU",
+    "intro": [
+      "Chỉ dùng khi công ty có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập (Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b; Nghị định 320/2025/NĐ-CP Điều 12 khoản 4).",
+      "Công ty có tổng doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN (Nghị định 141/2026/NĐ-CP). Khi đó không cần trang này.",
+      "Gõ doanh thu bán hàng hóa, dịch vụ của từng nhóm ngành vào cột nền vàng. Cột thuế tự tính."
+    ],
+    "rates": [
+      {
+        "group": "Phân phối, cung cấp hàng hóa",
+        "rate": 0.003
+      },
+      {
+        "group": "Sản xuất, vận tải, dịch vụ có gắn với hàng hóa, xây dựng có bao thầu nguyên vật liệu",
+        "rate": 0.012
+      },
+      {
+        "group": "Dịch vụ (kể cả lãi tiền gửi, lãi tiền cho vay), xây dựng không bao thầu nguyên vật liệu",
+        "rate": 0.015
+      },
+      {
+        "group": "Cho thuê tài sản, đại lý bảo hiểm, đại lý xổ số, đại lý bán hàng đa cấp",
+        "rate": 0.04
+      },
+      {
+        "group": "Sản phẩm, dịch vụ nội dung thông tin số về giải trí, trò chơi điện tử, phim số, ảnh số, nhạc số, quảng cáo số",
+        "rate": 0.04
+      },
+      {
+        "group": "Hoạt động khác",
+        "rate": 0.005
+      }
+    ],
+    "source": "Tỷ lệ theo Nghị định 320/2025/NĐ-CP Điều 12 khoản 4 điểm a–đ."
+  }
 }

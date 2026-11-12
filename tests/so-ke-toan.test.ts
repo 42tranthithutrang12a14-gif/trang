@@ -9,6 +9,7 @@ import {
   SHEETS,
   YES,
   buildLedgerWorkbook,
+  citRateLayout,
   formLayout,
   ledgerLayout,
   type LedgerSpec,
@@ -18,7 +19,7 @@ const SPEC = ledgerJson as LedgerSpec;
 const GROUPS = [...SPEC.income_groups, ...SPEC.expense_groups];
 const LAYOUT = ledgerLayout(SPEC);
 const WORKBOOK = buildLedgerWorkbook(SPEC, 2026);
-const ALL_SHEETS = [...Object.values(SHEETS), ...SPEC.forms.map((form) => form.sheet)];
+const ALL_SHEETS = [...Object.values(SHEETS), ...SPEC.forms.map((form) => form.sheet), SPEC.cit_rate_sheet.sheet];
 
 function sheet(name: string): ExcelJS.Worksheet {
   const ws = WORKBOOK.getWorksheet(name);
@@ -172,5 +173,19 @@ describe("buildLedgerWorkbook", () => {
       });
       expect(layout.opening !== null).toBe(form.balances);
     }
+  });
+
+  it("SK12: trang thuế TNDN theo % doanh thu có đủ 6 tỷ lệ của Nghị định 320/2025 và tự nhân", () => {
+    const calc = SPEC.cit_rate_sheet;
+    expect(calc.rates.map((r) => r.rate)).toEqual([0.003, 0.012, 0.015, 0.04, 0.04, 0.005]);
+    const ws = sheet(calc.sheet);
+    const layout = citRateLayout(SPEC);
+    calc.rates.forEach((rate, i) => {
+      const row = layout.first + i;
+      expect(ws.getCell(row, 1).value).toBe(rate.group);
+      expect(ws.getCell(row, 2).value).toBe(rate.rate);
+      expect(formulaOf(ws, `D${row}`)).toBe(`ROUND(B${row}*C${row},0)`);
+    });
+    expect(formulaOf(ws, `D${layout.total}`)).toBe(`SUM(D${layout.first}:D${layout.last})`);
   });
 });
