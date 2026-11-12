@@ -111,6 +111,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Đã mở thử file bằng LibreOffice: trang S2 hiện đúng tiêu đề hai tầng.
 - Kiểm tra: `npm test` 84/84 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 12 (2026-11-12, 17:17 UTC)
+
+- Đọc NC-010 (thuế suất TNDN và phương pháp % doanh thu, đã xác minh với Luật 67/2025/QH15, Luật 09/2026/QH16). Status giữ "draft".
+- `guides/tam-nop-thue-tndn.json`: sửa thuế suất "20% cho DN siêu nhỏ" thành 15% / 17% / 20% theo doanh thu năm trước (Điều 10). Ví dụ đổi sang 15%. Thêm một câu: từ 2026 DN doanh thu dưới mức Chính phủ quy định được miễn thuế TNDN (Luật 09/2026 Điều 3), chưa ghi con số. Danh sách văn bản đổi sang Luật 67/2025.
+- `tu-0-den-1.json`, mục thuế suất thấp: thêm câu "doanh thu để xét là năm tính thuế trước liền kề", điền `legal_basis` (Điều 10 khoản 1, 2, 3; Điều 19 khoản 1).
+- `legal-framework.json`, mục Luật Thuế TNDN: `number` 14/2008/QH12 → 67/2025/QH15, `effective_from` 01/10/2025, `url` sang trang vanban.chinhphu.vn, sửa 2 ý thuế suất trong `key_points`.
+- `so-ke-toan.json`: `notice` thêm điều kiện dùng 4 sổ S1–S4 (doanh thu năm không quá 3 tỷ và không xác định được chi phí, Điều 11 khoản 2 điểm b); thêm `legal_basis` Luật 67/2025; cập nhật todo.
+- Bỏ các todo "mâu thuẫn 20% / 15–17%" ở 3 file. Thêm todo: mức miễn thuế chưa xác minh; Luật 67/2025 đã bị sửa bởi 5 luật chưa đọc; cách tính doanh thu năm trước cho DN mới thành lập.
+- Kiểm tra: `npm test` 84/84 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -118,6 +128,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 
 - (Vòng 11) NC-009: xin trích phương pháp ghi từng cột của S1–S4 (Phụ lục 4 mục 2). Cần nhất: S1 ghi doanh thu có hay chưa có thuế GTGT; khi nào ghi (ngày xuất hóa đơn hay ngày giao hàng). Cũng xin kiểm mẫu S3 có tách số lượng, đơn giá, thành tiền không.
 - (Vòng 11) Xin ưu tiên đọc Luật Thuế TNDN 67/2025/QH15 và Luật 09/2026/QH16: DN siêu nhỏ còn được nộp thuế TNDN theo tỷ lệ % trên doanh thu không. Nếu không, 4 trang S1–S4 vừa thêm có thể không còn dùng được.
+
+- (Vòng 12) NC-010 còn mở: mức doanh thu được miễn thuế TNDN theo Luật 09/2026 Điều 3; tỷ lệ % tính thuế trên doanh thu (Điều 11 khoản 2); 5 luật sửa Luật 67/2025 có sửa Điều 10, 11 không; DN mới thành lập xác định doanh thu năm trước thế nào.
 
 ## Cần chủ dự án quyết
 

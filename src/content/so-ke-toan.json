@@ -5,7 +5,7 @@
   "title": "Sổ thu chi hằng ngày",
   "summary": "File Excel để ghi tiền vào, tiền ra mỗi ngày. File tự tính tồn quỹ, tổng hợp theo tháng và lãi lỗ tạm tính.",
   "file_name": "so-thu-chi-dn-sieu-nho.xlsx",
-  "notice": "Sổ này giúp ghi thu chi hằng ngày, chưa phải sổ kế toán theo mẫu. Theo Thông tư 132/2018/TT-BTC, DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu phải mở 4 sổ: S1 doanh thu, S2 lương và bảo hiểm, S3 hàng tồn kho, S4 nghĩa vụ thuế. DN tính thuế TNDN trên thu nhập tính thuế phải dùng Sổ Nhật ký – Sổ Cái (S01-DNSN) và các sổ chi tiết S02–S10.",
+  "notice": "Sổ này giúp ghi thu chi hằng ngày, chưa phải sổ kế toán theo mẫu. Theo Thông tư 132/2018/TT-BTC, DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu phải mở 4 sổ: S1 doanh thu, S2 lương và bảo hiểm, S3 hàng tồn kho, S4 nghĩa vụ thuế. Cách nộp thuế này chỉ dành cho DN có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập (Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b). DN tính thuế TNDN trên thu nhập tính thuế phải dùng Sổ Nhật ký – Sổ Cái (S01-DNSN) và các sổ chi tiết S02–S10.",
   "how_to_use": [
     "Mở trang \"Thiết lập\". Gõ tên công ty, mã số thuế, năm ghi sổ, số tiền mặt và tiền ngân hàng đang có.",
     "Xem danh mục nhóm thu, nhóm chi ở trang \"Thiết lập\". Đổi tên hoặc thêm nhóm cho hợp với việc kinh doanh của bạn.",
@@ -162,12 +162,25 @@
       "verified_against_original": true,
       "checked_at": "2026-11-12",
       "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "67/2025/QH15",
+      "title": "Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Quốc hội",
+      "issued_date": "2025-06-14",
+      "effective_date": "2025-10-01",
+      "article": "Điều 11 khoản 2 điểm b; Điều 19 khoản 1",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-12",
+      "snapshot_path": ""
     }
   ],
   "todo_for_reviewer": [
     "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Ngày 2026-11-12 (NC-009) đã đối chiếu danh mục sổ và cột với Thông tư 132/2018/TT-BTC (Điều 3, 11, 17, Phụ lục 3, 4): sửa notice, thêm 4 trang S1-DNSN đến S4-DNSN để trống, đúng cột theo mẫu. Cột của S3 theo mô tả NC-009 (nhập, xuất, tồn); chưa rõ mẫu có tách số lượng, thành tiền không.",
     "Còn làm: cho S1-DNSN, S4-DNSN lấy số từ Nhật ký. Cần trước: (1) phương pháp ghi từng cột S1–S4 (Phụ lục 4 mục 2), ví dụ S1 ghi doanh thu có hay chưa có thuế GTGT; (2) cách ghi doanh thu bán chịu trong Nhật ký thu chi (sổ hiện ghi theo tiền). Chưa làm sổ Chương II (S01-DNSN Nhật ký – Sổ Cái, S02–S10): cần ghi Nợ/Có theo tài khoản.",
-    "Chương III (4 sổ S1–S4) chỉ dùng được khi DN còn nộp thuế TNDN theo tỷ lệ % trên doanh thu. Luật Thuế TNDN 67/2025/QH15 và Luật 09/2026/QH16 có thể đã đổi phương pháp này; chưa đọc toàn văn (NC-009, NC-004). Thông tư 132/2018 còn hiệu lực không: chưa thấy văn bản thay thế (NC-002).",
+    "Ngày 2026-11-12 (NC-010): Chương III (4 sổ S1–S4) vẫn có cơ sở. Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b cho tính thuế theo tỷ lệ % trên doanh thu với DN có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập. Tỷ lệ % do Chính phủ quy định, chưa đọc nghị định. Thông tư 132/2018 còn hiệu lực không: chưa thấy văn bản thay thế (NC-002). Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
     "Cột \"Tính vào lãi, lỗ?\" của từng nhóm là mặc định tạm. Cần xác minh cách xếp: thuế đã nộp, mua thiết bị giá trị lớn (tài sản cố định, khấu hao), tiền đặt cọc, lương chủ sở hữu.",
     "Lãi lỗ tạm tính lấy số chưa gồm thuế GTGT. Cần xác minh cách tính cho DN tính thuế GTGT theo phương pháp trực tiếp.",
     "Xác minh khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt, để được tính vào chi phí. Khi có căn cứ thì thêm cột kiểm tra.",

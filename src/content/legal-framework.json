@@ -101,23 +101,23 @@
       "laws": [
         {
           "name": "Luật Thuế thu nhập doanh nghiệp",
-          "number": "14/2008/QH12 (sửa đổi bổ sung)",
+          "number": "67/2025/QH15",
           "issued_by": "Quốc hội",
-          "effective_from": "01/01/2009",
-          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=15105",
+          "effective_from": "01/10/2025",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
-            "Thuế suất phổ thông: 20%",
-            "Ưu đãi DNSN (doanh thu ≤ 3 tỷ): thuế suất 15–17% (cần xác minh điều kiện hiện hành)",
+            "Thuế suất 20%; 15% nếu tổng doanh thu năm trước không quá 3 tỷ đồng; 17% nếu trên 3 tỷ đến 50 tỷ đồng (Điều 10 khoản 1, 2, 3)",
+            "Áp dụng từ kỳ tính thuế năm 2025 (Điều 19 khoản 1)",
             "Tạm nộp thuế TNDN theo quý: ngày 30 của tháng đầu quý tiếp theo"
           ],
           "todo_for_reviewer": [
-            "Xác nhận thuế suất ưu đãi 15–17% theo quy định hiện hành",
-            "Xác nhận ngưỡng doanh thu được ưu đãi",
             "Bổ sung quy định về quyết toán TNDN năm",
             "Gợi ý của trợ lý AI (chưa xác minh): Luật 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025). Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
-            "Mâu thuẫn trong app: ở đây ghi DNSN doanh thu ≤ 3 tỷ được 15–17%; guide tam-nop-thue-tndn ghi DNSN chịu 20%.",
-            "Cập nhật NC-008: trang thông tin trên vanban.chinhphu.vn không ghi ngày hiệu lực (ngày tra 2026-11-11). Chưa đối chiếu được 01/01/2009. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=70678&classid=1"
+            "Ngày 2026-11-12 (NC-010, đã đối chiếu toàn văn): đổi number từ \"14/2008/QH12 (sửa đổi bổ sung)\" thành \"67/2025/QH15\", effective_from 01/10/2025 (Điều 19 khoản 1), url sang trang vanban.chinhphu.vn; sửa 2 ý thuế suất trong key_points theo Điều 10. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
+            "Luật 09/2026/QH16 Điều 3 (hiệu lực 01/01/2026, đã đối chiếu toàn văn theo NC-010) bổ sung khoản 14a Điều 4 Luật Thuế TNDN: DN có tổng doanh thu năm từ mức Chính phủ quy định trở xuống được miễn thuế TNDN. Mức doanh thu này chưa xác minh (có thể ở nghị định hướng dẫn); không ghi con số khi chưa có nguồn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+            "Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
+            "Ý \"Tạm nộp thuế TNDN theo quý: ngày 30 của tháng đầu quý tiếp theo\" chưa xác minh (thuộc Luật Quản lý thuế)."
           ]
         },
         {
