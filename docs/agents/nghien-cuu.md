@@ -341,6 +341,40 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `tu-0-den-1.json`, `bat-dau.json`, `obligation_rules.json`: các bước "tạm nộp TNDN quý" thêm điều kiện "nếu doanh thu năm trước trên 1 tỷ đồng (hoặc DN mới, dự kiến trên 1 tỷ)". Không bỏ hẳn bước, vì DN vượt ngưỡng vẫn phải nộp.
   - Ghi todo: nghĩa vụ kê khai, quyết toán TNDN của DN được miễn chưa xác minh; điểm d (DN liên kết) cần đối chiếu lại bản gốc nếu dùng chi tiết.
 
+### Ghi chú vòng 13 (2026-11-12, 20:18 UTC)
+
+- Đã rà commit `ece01dd` của Biên tập (áp dụng NC-011): thêm mục miễn thuế TNDN khi doanh thu năm trước từ 1 tỷ trở xuống; các bước tạm nộp có điều kiện; chỉ nhắc "không phải quyết toán" trong todo để dặn không viết. Đúng đề xuất.
+- Vòng này làm NC-012: Nghị định 320/2025 (thuế suất, tạm nộp của DN mới, tỷ lệ % trên doanh thu). Bản quét 76 trang, đã OCR. Hai số dễ nhầm (50 tỷ, 4%) đã OCR lại ở độ phân giải cao để chắc.
+
+### NC-012 — Nghị định 320/2025/NĐ-CP: căn cứ doanh thu xét thuế suất, tạm nộp của DN mới, tỷ lệ % trên doanh thu
+
+- Trạng thái: đã xác minh
+- Liên quan: `src/content/guides/tam-nop-thue-tndn.json`; `src/content/tu-0-den-1.json` (mục thuế suất); `src/content/so-ke-toan.json` (chế độ 4 sổ S1–S4); `src/content/legal-framework.json` (mục thông tư hướng dẫn TNDN 96/2015/TT-BTC).
+- Nguồn: Nghị định 320/2025/NĐ-CP quy định chi tiết và hướng dẫn thi hành Luật Thuế TNDN, ban hành 15/12/2025. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; PDF có chữ ký số https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf (76 trang, bản quét, đã OCR). Mở ngày 2026-11-12.
+- Phát hiện:
+  - **Điều 11 (thuế suất), PDF trang 41:**
+    - Khoản 2, 3: 15% với DN có tổng doanh thu năm không quá 3 tỷ; 17% với trên 3 tỷ đến 50 tỷ (giống Luật 67/2025 Điều 10).
+    - Khoản 4: tổng doanh thu để xét "là tổng doanh thu từ hoạt động bán hàng, cung cấp dịch vụ (không bao gồm các khoản giảm trừ doanh thu), doanh thu từ hoạt động tài chính và thu nhập khác trên Phụ lục kết quả hoạt động sản xuất kinh doanh kèm theo tờ khai quyết toán thuế thu nhập doanh nghiệp của kỳ tính thuế năm trước liền kề". Điểm a: năm trước dưới 12 tháng thì quy đổi ra 12 tháng.
+    - Khoản 4 điểm b: "Trường hợp doanh nghiệp mới thành lập trong kỳ tính thuế và dự kiến tổng doanh thu trong kỳ tính thuế không quá 03 tỷ đồng hoặc không quá 50 tỷ đồng thì doanh nghiệp xác định tạm nộp hàng quý tương ứng theo mức thuế suất 15% hoặc 17%." Cuối năm, nếu doanh thu thực tế không đúng dự kiến dẫn đến nộp thiếu thì "nộp bổ sung số tiền thuế còn thiếu và tiền chậm nộp".
+    - Khoản 4 điểm c: 15% và 17% không áp dụng cho công ty con, công ty có quan hệ liên kết mà doanh nghiệp liên kết không đủ điều kiện.
+  - **Điều 12 khoản 4 (tỷ lệ % trên doanh thu), PDF trang 44–45:** "Doanh nghiệp có tổng doanh thu năm không quá 03 tỷ đồng quy định tại Điều 11 của Nghị định này, trong trường hợp không xác định được chi phí, thu nhập của hoạt động sản xuất, kinh doanh thì kê khai nộp thuế thu nhập doanh nghiệp theo tỷ lệ phần trăm (%) trên doanh thu bán hàng hoá, dịch vụ, cụ thể như sau:"
+    - a) Phân phối, cung cấp hàng hóa: 0,3%;
+    - b) Sản xuất, vận tải, dịch vụ có gắn với hàng hóa, xây dựng có bao thầu nguyên vật liệu: 1,2%;
+    - c) Dịch vụ (bao gồm cả lãi tiền gửi, lãi tiền cho vay), xây dựng không bao thầu nguyên vật liệu: 1,5%. Riêng cho thuê tài sản, đại lý bảo hiểm, đại lý xổ số, đại lý bán hàng đa cấp: 4%;
+    - d) Cung cấp sản phẩm và dịch vụ nội dung thông tin số về giải trí, trò chơi điện tử, phim số, ảnh số, nhạc số, quảng cáo số: 4%;
+    - đ) Hoạt động khác: 0,5%.
+  - **Điều 24 khoản 1 (hiệu lực), PDF trang 74:** "Nghị định này có hiệu lực thi hành kể từ ngày ký ban hành và áp dụng từ kỳ tính thuế thu nhập doanh nghiệp năm 2025."
+  - Điều 4 khoản 15 (miễn thuế khi doanh thu ≤ 1 tỷ) do Nghị định 141/2026 bổ sung, xem NC-011.
+- **Kết luận:**
+  1. Ngưỡng 1 tỷ (miễn thuế), 3 tỷ (15%), 50 tỷ (17%) đều tính trên **cùng một loại doanh thu**: doanh thu bán hàng, dịch vụ (trừ giảm trừ) + doanh thu tài chính + thu nhập khác, của năm trước liền kề.
+  2. DN mới thành lập tự dự kiến doanh thu để chọn mức tạm nộp 15% hoặc 17% (hoặc không tạm nộp nếu dự kiến ≤ 1 tỷ, NC-011). Dự kiến thấp mà thực tế cao hơn thì phải nộp bù và tiền chậm nộp ở mức 15/17%; riêng ngưỡng 1 tỷ thì không tính tiền chậm nộp (NC-011).
+  3. DN dùng chế độ 4 sổ (S1–S4, TT 132/2018 Chương III) nộp thuế TNDN = doanh thu × tỷ lệ % ở trên, theo từng nhóm ngành. Sổ S1 chia doanh thu thành "hàng hóa", "dịch vụ", "hoạt động khác", nhưng các nhóm tỷ lệ của Nghị định chia khác (0,3% / 1,2% / 1,5% / 4% / 0,5%). Sổ cần phân loại doanh thu theo nhóm tỷ lệ thì mới tính được thuế.
+  4. Thông tư 96/2015/TT-BTC (`legal-framework.json`) hướng dẫn luật cũ; văn bản hướng dẫn hiện hành là Nghị định 320/2025 (và Thông tư hướng dẫn mới nếu có, chưa tra).
+- **Đề xuất sửa (Biên tập):**
+  - `tam-nop-thue-tndn.json`: thêm mục "Công ty mới thành lập": tự dự kiến doanh thu cả năm. Dự kiến không quá 1 tỷ: không tạm nộp (NC-011). Không quá 3 tỷ: tạm nộp theo 15%. Trên 3 tỷ đến 50 tỷ: 17%. Dự kiến thấp hơn thực tế dẫn đến nộp thiếu thì phải nộp bù và tiền chậm nộp. Ghi rõ doanh thu để xét gồm doanh thu tài chính và thu nhập khác. `legal_basis`: Nghị định 320/2025/NĐ-CP Điều 11 khoản 2, 3, 4 (điểm a, b, c); URL https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; `verified_against_original: true`.
+  - `so-ke-toan.json` (chế độ 4 sổ): thêm bảng tỷ lệ % theo Điều 12 khoản 4 Nghị định 320/2025. Trong Nhật ký thu chi hoặc S1, thêm cột "Nhóm tỷ lệ thuế TNDN" (0,3% / 1,2% / 1,5% / 4% / 0,5%) để tự tính thuế phải nộp. Nhắc: chỉ dùng khi doanh thu năm không quá 3 tỷ và không xác định được chi phí; và DN doanh thu ≤ 1 tỷ được miễn (NC-011).
+  - `legal-framework.json` mục 96/2015/TT-BTC: thêm todo "văn bản hướng dẫn Luật 67/2025 là Nghị định 320/2025/NĐ-CP (hiệu lực từ ngày ký 15/12/2025, áp dụng từ kỳ tính thuế 2025); chưa tra Thông tư hướng dẫn mới". Có thể thêm một mục cho Nghị định 320/2025 (số hiệu, ngày ký theo trang thông tin; theo quyết định của chủ dự án).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
