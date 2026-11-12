@@ -1,0 +1,78 @@
+{
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "updated_at": "2026-11-12",
+  "title": "Sổ thu chi hằng ngày",
+  "summary": "File Excel để ghi tiền vào, tiền ra mỗi ngày. File tự tính tồn quỹ, tổng hợp theo tháng và lãi lỗ tạm tính.",
+  "file_name": "so-thu-chi-dn-sieu-nho.xlsx",
+  "notice": "Đây là sổ theo dõi thu chi nội bộ. Chưa đối chiếu với mẫu sổ kế toán của Bộ Tài chính, nên chưa thay được sổ kế toán theo quy định.",
+  "how_to_use": [
+    "Mở trang \"Thiết lập\". Gõ tên công ty, mã số thuế, năm ghi sổ, số tiền mặt và tiền ngân hàng đang có.",
+    "Xem danh mục nhóm thu, nhóm chi ở trang \"Thiết lập\". Đổi tên hoặc thêm nhóm cho hợp với việc kinh doanh của bạn.",
+    "Mỗi lần có tiền vào hoặc tiền ra, mở trang \"Nhật ký thu chi\" và ghi một dòng: ngày, nội dung, nhóm, số tiền, quỹ.",
+    "Có hóa đơn thì gõ thêm số hóa đơn và tiền thuế GTGT ghi trên hóa đơn.",
+    "Cuối ngày, so cột \"Tồn tiền mặt\" với tiền thật trong két. So cột \"Tồn ngân hàng\" với số dư tài khoản.",
+    "Cuối tháng, mở trang \"Tổng hợp\" để xem tiền vào, tiền ra, lãi lỗ tạm tính và thuế GTGT của tháng.",
+    "Mỗi năm dùng một file mới. Số tồn cuối năm cũ là số đầu năm của file mới."
+  ],
+  "notes": [
+    "Mỗi dòng chỉ ghi Tiền vào hoặc Tiền ra, không ghi cả hai.",
+    "Chuyển tiền giữa quỹ tiền mặt và ngân hàng: ghi 2 dòng. Một dòng tiền ra ở nơi chuyển, một dòng tiền vào ở nơi nhận.",
+    "Tiền thuế GTGT: gõ đúng số ghi trên hóa đơn. Không có hóa đơn thì để trống.",
+    "Ô chuyển màu đỏ nhạt là dòng còn thiếu ngày, nhóm hoặc quỹ. Điền đủ thì hết đỏ.",
+    "Lãi lỗ tạm tính là số theo dõi nội bộ, chưa phải lợi nhuận tính thuế.",
+    "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
+  ],
+  "sheets": [
+    { "name": "Hướng dẫn", "desc": "Cách dùng, chú giải màu và ví dụ cách ghi." },
+    { "name": "Thiết lập", "desc": "Tên công ty, năm ghi sổ, tiền đầu năm và danh mục nhóm thu, chi. Bạn sửa được danh mục." },
+    { "name": "Nhật ký thu chi", "desc": "Nơi ghi hằng ngày. Mỗi khoản tiền vào hoặc ra là một dòng. Tồn quỹ tự tính." },
+    { "name": "Tổng hợp", "desc": "Tự tính theo từng tháng: tiền vào, tiền ra, tồn quỹ, lãi lỗ tạm tính, thuế GTGT, chi tiết từng nhóm." }
+  ],
+  "income_groups": [
+    { "name": "Bán hàng, cung cấp dịch vụ", "in_result": true, "example": "Tiền khách trả khi mua hàng, dùng dịch vụ" },
+    { "name": "Thu khác", "in_result": true, "example": "Lãi tiền gửi, bán đồ cũ, tiền được bồi thường" },
+    { "name": "Chủ sở hữu góp vốn", "in_result": false, "example": "Tiền chủ sở hữu, thành viên góp vào công ty" },
+    { "name": "Tiền đi vay", "in_result": false, "example": "Nhận tiền vay ngân hàng, vay cá nhân" },
+    { "name": "Nhận tiền chuyển nội bộ", "in_result": false, "example": "Dòng nhận khi rút tiền ngân hàng về quỹ, hoặc nộp tiền mặt vào ngân hàng" }
+  ],
+  "expense_groups": [
+    { "name": "Mua hàng hóa, nguyên vật liệu", "in_result": true, "example": "Hàng để bán lại, nguyên liệu để làm ra sản phẩm" },
+    { "name": "Lương, tiền công", "in_result": true, "example": "Lương nhân viên, tiền thuê người làm theo việc" },
+    { "name": "Bảo hiểm cho người lao động", "in_result": true, "example": "Phần công ty đóng bảo hiểm xã hội, y tế, thất nghiệp" },
+    { "name": "Thuê mặt bằng, văn phòng", "in_result": true, "example": "Tiền thuê cửa hàng, kho, văn phòng" },
+    { "name": "Điện, nước, internet, điện thoại", "in_result": true, "example": "Hóa đơn điện, nước, cước mạng, cước điện thoại" },
+    { "name": "Vận chuyển, giao hàng", "in_result": true, "example": "Phí ship, xăng xe, thuê xe chở hàng" },
+    { "name": "Quảng cáo, tiếp thị", "in_result": true, "example": "Chạy quảng cáo, in tờ rơi, làm biển hiệu" },
+    { "name": "Công cụ, thiết bị, đồ dùng", "in_result": true, "example": "Máy tính, bàn ghế, dụng cụ làm việc" },
+    { "name": "Văn phòng phẩm, in ấn", "in_result": true, "example": "Giấy, mực in, sổ, bút" },
+    { "name": "Phí ngân hàng", "in_result": true, "example": "Phí chuyển khoản, phí quản lý tài khoản" },
+    { "name": "Dịch vụ thuê ngoài", "in_result": true, "example": "Phần mềm, chữ ký số, sửa chữa, dịch vụ kế toán" },
+    { "name": "Phí, lệ phí", "in_result": true, "example": "Lệ phí làm thủ tục, phí công chứng" },
+    { "name": "Trả lãi vay", "in_result": true, "example": "Tiền lãi trả cho khoản vay" },
+    { "name": "Nộp thuế", "in_result": false, "example": "Nộp thuế GTGT, thuế TNDN vào ngân sách" },
+    { "name": "Trả nợ gốc vay", "in_result": false, "example": "Trả tiền gốc của khoản vay" },
+    { "name": "Chủ sở hữu rút vốn, chia lợi nhuận", "in_result": false, "example": "Tiền chủ sở hữu rút ra, chia lãi cho thành viên" },
+    { "name": "Chuyển tiền nội bộ đi", "in_result": false, "example": "Dòng chuyển đi khi rút tiền ngân hàng về quỹ, hoặc nộp tiền mặt vào ngân hàng" },
+    { "name": "Chi khác", "in_result": true, "example": "Khoản chi chưa xếp được vào nhóm nào" }
+  ],
+  "spare_income_rows": 3,
+  "spare_expense_rows": 6,
+  "examples": [
+    { "day": 5, "month": 1, "doc": "PT001", "content": "Chủ sở hữu góp vốn", "group": "Chủ sở hữu góp vốn", "money_in": 50000000, "money_out": null, "vat": null, "fund": "Ngân hàng", "invoice": "", "partner": "Nguyễn Văn A", "note": "" },
+    { "day": 6, "month": 1, "doc": "PC001", "content": "Mua hàng về bán", "group": "Mua hàng hóa, nguyên vật liệu", "money_in": null, "money_out": 11000000, "vat": 1000000, "fund": "Ngân hàng", "invoice": "0000123", "partner": "Công ty B", "note": "" },
+    { "day": 7, "month": 1, "doc": "PT002", "content": "Bán hàng cho khách lẻ", "group": "Bán hàng, cung cấp dịch vụ", "money_in": 3300000, "money_out": null, "vat": 300000, "fund": "Tiền mặt", "invoice": "0000001", "partner": "Khách lẻ", "note": "" },
+    { "day": 10, "month": 1, "doc": "PC002", "content": "Trả tiền thuê cửa hàng tháng 1", "group": "Thuê mặt bằng, văn phòng", "money_in": null, "money_out": 5000000, "vat": null, "fund": "Tiền mặt", "invoice": "", "partner": "Chủ nhà", "note": "Chưa nhận hóa đơn" },
+    { "day": 12, "month": 1, "doc": "", "content": "Rút tiền ngân hàng về quỹ", "group": "Chuyển tiền nội bộ đi", "money_in": null, "money_out": 10000000, "vat": null, "fund": "Ngân hàng", "invoice": "", "partner": "", "note": "Dòng chuyển đi" },
+    { "day": 12, "month": 1, "doc": "", "content": "Rút tiền ngân hàng về quỹ", "group": "Nhận tiền chuyển nội bộ", "money_in": 10000000, "money_out": null, "vat": null, "fund": "Tiền mặt", "invoice": "", "partner": "", "note": "Dòng nhận" }
+  ],
+  "legal_basis": [],
+  "todo_for_reviewer": [
+    "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Chưa đối chiếu với danh mục và mẫu sổ kế toán của Thông tư 132/2018/TT-BTC hay văn bản thay thế.",
+    "Agent Nghiên cứu: đọc phụ lục mẫu sổ cho DN siêu nhỏ, ghi đặc tả (tên sổ, mã mẫu, cột). Agent Biên tập: thêm các trang sổ theo mẫu, lấy số từ trang \"Nhật ký thu chi\".",
+    "Cột \"Tính vào lãi, lỗ?\" của từng nhóm là mặc định tạm. Cần xác minh cách xếp: thuế đã nộp, mua thiết bị giá trị lớn (tài sản cố định, khấu hao), tiền đặt cọc, lương chủ sở hữu.",
+    "Lãi lỗ tạm tính lấy số chưa gồm thuế GTGT. Cần xác minh cách tính cho DN tính thuế GTGT theo phương pháp trực tiếp.",
+    "Xác minh khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt, để được tính vào chi phí. Khi có căn cứ thì thêm cột kiểm tra.",
+    "Xác minh thời hạn lưu sổ, chứng từ và việc sổ lập trên máy tính có phải in, ký không."
+  ]
+}
