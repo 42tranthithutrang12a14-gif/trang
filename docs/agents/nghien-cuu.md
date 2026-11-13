@@ -551,6 +551,40 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal-framework.json` mục Luật Doanh nghiệp: đổi "10 ngày làm việc" thành "10 ngày". `bat-dau.json` dòng 26, 622: giữ "10 ngày", thêm "kể từ ngày có thay đổi"; bỏ todo mâu thuẫn dòng 35, 626.
   - `legal_basis` cho các mục trên: Luật Doanh nghiệp 59/2020/QH14 Điều 30 khoản 1, 2, 3; Điều 31 khoản 1, 2 (khoản 1 đã sửa bởi Luật 76/2025/QH15 Điều 1 khoản 13); URL như trên; `verified_against_original: true`.
 
+### Ghi chú vòng 19 (2026-11-13, 08:17 UTC)
+
+- Đã rà commit `3ce013f` (NC-016): mốc doanh thu trong `questions.json` đổi thành "Từ 1 tỷ đồng trở xuống / Trên 1 tỷ đến 3 tỷ / Trên 3 tỷ đến 10 tỷ" (giữ nguyên `value`, không đổi cấu trúc); tiêu chí DN siêu nhỏ ở `so-sach-ke-toan.json` có đủ hai điều kiện và nhánh nguồn vốn. Đúng đề xuất. Commit `3d4806d` (NC-017) mới đến; vòng sau rà.
+- Vòng này làm NC-018: mức phạt chậm nộp hồ sơ khai thuế (điểm nghi lỗi thời ở mục 2 cũ; app đang ghi "2–5 triệu đồng/lần chậm"). Trả lời luôn câu hỏi của Biên tập về ngày hiệu lực Nghị định 310/2025.
+
+### NC-018 — Phạt chậm nộp hồ sơ khai thuế theo số ngày chậm: cảnh cáo đến 25 triệu đồng; mức phạt là mức cho tổ chức (Nghị định 125/2020 Điều 13, sửa bởi Nghị định 310/2025)
+
+- Trạng thái: đã xác minh
+- Liên quan: `bat-dau.json` dòng 588 ("Phạt 2–5 triệu đồng/lần chậm") và todo dòng 552, 592; `guides/khai-thue-gtgt-theo-thang.json`, `guides/khai-thue-gtgt-theo-quy.json` (mức "2.000.000 – 5.000.000 đồng", todo dòng 42, 43); `legal-framework.json` mục Nghị định 125/2020; câu hỏi của Biên tập về ngày hiệu lực Nghị định 310/2025.
+- Nguồn:
+  - Nghị định 125/2020/NĐ-CP quy định xử phạt vi phạm hành chính về thuế, hóa đơn — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2020/10/125.signed.pdf (87 trang, bản quét; đã OCR trang 4–18). Hiệu lực 05/12/2020.
+  - Nghị định 310/2025/NĐ-CP sửa đổi, bổ sung Nghị định 125/2020 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/310-cp.signed.pdf (16 trang, bản quét, đã OCR toàn bộ). Mở ngày 2026-11-13.
+  - Chưa đọc các nghị định sửa đổi khác: 102/2021/NĐ-CP và 291/2026/NĐ-CP (ban hành 21/07/2026). Có thể đã sửa tiếp Điều 13.
+- Phát hiện:
+  - **Nghị định 125/2020, Điều 13 (PDF trang 15):** "Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế"
+    - Khoản 1: "Phạt cảnh cáo đối với hành vi nộp hồ sơ khai thuế quá thời hạn từ 01 ngày đến 05 ngày và có tình tiết giảm nhẹ."
+    - Khoản 2: phạt 2.000.000–5.000.000 đồng: quá hạn từ 01 đến 30 ngày (trừ khoản 1).
+    - Khoản 3: 5.000.000–8.000.000 đồng: quá hạn từ 31 đến 60 ngày.
+    - Khoản 4: 8.000.000–15.000.000 đồng: a) quá hạn 61–90 ngày; b) quá hạn từ 91 ngày trở lên nhưng không phát sinh số thuế phải nộp; c) không nộp hồ sơ khai thuế nhưng không phát sinh số thuế phải nộp; d) không nộp phụ lục giao dịch liên kết.
+    - Khoản 6 điểm b: buộc nộp hồ sơ khai thuế đối với hành vi ở điểm c, d khoản 4.
+  - **Nghị định 310/2025, Điều 1 khoản 10 (PDF trang 7–8)** sửa khoản 5 Điều 13: "Phạt tiền từ 15.000.000 đồng đến 25.000.000 đồng đối với hành vi nộp hồ sơ khai thuế quá thời hạn trên 90 ngày kể từ ngày hết hạn nộp hồ sơ khai thuế, có phát sinh số thuế phải nộp và người nộp thuế đã nộp đủ số tiền thuế, tiền chậm nộp vào ngân sách nhà nước trước thời điểm cơ quan thuế công bố quyết định kiểm tra thuế, cơ quan có thẩm quyền khác công bố quyết định thanh tra, kiểm tra hoặc trước thời điểm cơ quan thuế lập biên bản về hành vi chậm nộp hồ sơ khai thuế." Nếu số phạt lớn hơn số thuế phát sinh thì phạt tối đa bằng số thuế, nhưng không thấp hơn mức trung bình khung khoản 4. Sửa điểm a khoản 6: buộc nộp đủ tiền chậm nộp tiền thuế với hành vi ở khoản 1–4 khi chậm khai dẫn đến chậm nộp thuế.
+  - **Nghị định 310/2025, Điều 4 khoản 1 (PDF trang 15):** "Nghị định này có hiệu lực thi hành từ ngày 16 tháng 01 năm 2026." → Trang thông tin vanban.chinhphu.vn ghi "16-01-2025" là **gõ nhầm năm**; đúng là 16/01/2026 (trả lời câu hỏi của Biên tập).
+  - **Nghị định 125/2020, Điều 7 khoản 4 điểm a (PDF trang 7):** "Mức phạt tiền quy định tại Điều 10, 11, 12, 13, 14, 15, khoản 1, 2 Điều 19 và Chương III Nghị định này là mức phạt tiền áp dụng đối với tổ chức." Điều 5 khoản 5: với cùng một hành vi, mức phạt tổ chức bằng 02 lần cá nhân (trừ Điều 16, 17, 18).
+- **Kết luận:**
+  1. "2–5 triệu đồng/lần chậm" chỉ đúng với quá hạn 1–30 ngày. Phạt tăng theo số ngày chậm: 31–60 ngày 5–8 triệu; 61–90 ngày 8–15 triệu; trên 90 ngày (có số thuế phải nộp, đã tự nộp đủ thuế và tiền chậm nộp trước khi bị kiểm tra, lập biên bản) 15–25 triệu. Quá hạn 1–5 ngày có tình tiết giảm nhẹ: cảnh cáo.
+  2. Tờ khai không phát sinh số thuế (ví dụ doanh thu bằng 0) mà nộp muộn trên 90 ngày hoặc không nộp: 8–15 triệu, và vẫn buộc nộp tờ khai.
+  3. Các mức trên là mức cho tổ chức (công ty). Ngoài tiền phạt, nếu khai chậm dẫn đến nộp thuế chậm thì còn phải nộp tiền chậm nộp.
+  4. Chưa kiểm tra Nghị định 291/2026 (mới nhất) có sửa Điều 13 không. Ghi todo; không viết "mức phạt hiện hành" cho tới khi đọc xong 291/2026.
+- **Đề xuất sửa (Biên tập):**
+  - `bat-dau.json` dòng 588: thay "Phạt 2–5 triệu đồng/lần chậm" bằng "Nộp muộn bị phạt theo số ngày chậm: 1–30 ngày phạt 2–5 triệu đồng; 31–60 ngày 5–8 triệu; 61–90 ngày 8–15 triệu; trên 90 ngày có thể đến 25 triệu. Tờ khai không có số thuế cũng bị phạt nếu nộp muộn hoặc không nộp." Giữ todo "chưa đọc Nghị định 291/2026".
+  - Hai guide khai GTGT: sửa mục mức phạt tương tự; thêm "Chậm nộp tờ khai làm chậm nộp thuế thì còn phải nộp tiền chậm nộp."
+  - `legal_basis`: Nghị định 125/2020/NĐ-CP Điều 13 khoản 1, 2, 3, 4, 6; Điều 7 khoản 4 điểm a; Nghị định 310/2025/NĐ-CP Điều 1 khoản 10 (khoản 5, điểm a khoản 6 Điều 13), Điều 4 khoản 1; URL như trên; `verified_against_original: true`.
+  - `legal-framework.json`: nếu có trường ngày hiệu lực của Nghị định 310/2025 (hoặc ghi chú), dùng 16/01/2026, không dùng "16-01-2025" của trang thông tin.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
