@@ -9,7 +9,7 @@
   "body_sections": [
     {
       "heading": "Ai phải nộp tờ khai quý?",
-      "content": "Doanh nghiệp tính thuế GTGT theo phương pháp khấu trừ VÀ có doanh thu năm trước dưới 50 tỷ đồng (hoặc mới thành lập) được khai theo quý thay vì khai hàng tháng.\n\nNếu doanh thu vượt 50 tỷ đồng thì phải chuyển sang khai tháng từ năm sau."
+      "content": "Mặc định, thuế GTGT khai theo tháng. Công ty được chọn khai theo quý nếu:\n• Tổng doanh thu bán hàng hóa, dịch vụ năm trước từ 50 tỷ đồng trở xuống (cộng doanh thu trên các tờ khai GTGT trong năm dương lịch), hoặc\n• Mới bắt đầu kinh doanh.\n\nChọn rồi thì giữ cả năm dương lịch. Đang khai tháng, muốn chuyển sang quý: gửi Văn bản đề nghị thay đổi kỳ tính thuế (mẫu 01/ĐK-TĐKTTT) cho cơ quan thuế chậm nhất ngày 31/01 của năm bắt đầu khai quý.\n\nDoanh thu năm trước trên 50 tỷ đồng: khai tháng. Công ty mới, năm đầu doanh thu trên 50 tỷ: khai tháng từ năm sau.\n\nCăn cứ: Thông tư 89/2026/TT-BTC Điều 19 khoản 1."
     },
     {
       "heading": "Hạn nộp",
@@ -34,7 +34,7 @@
   ],
   "todo_for_reviewer": [
     "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
-    "Xác nhận ngưỡng doanh thu 50 tỷ để khai quý theo văn bản hiện hành",
+    "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): sửa mục \"Ai phải nộp tờ khai quý?\": khai quý là quyền lựa chọn, ngưỡng \"từ 50 tỷ đồng trở xuống\" (không phải \"dưới 50 tỷ\"), DN mới được chọn quý, chọn thì giữ cả năm, mẫu 01/ĐK-TĐKTTT trước 31/01 (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
         "Xác nhận mức phạt chậm nộp theo Nghị định hiện hành",
     "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
     "Kiểm tra link eTax còn hoạt động không",

@@ -48,10 +48,23 @@
         "desc": "Khai đúng hạn quan trọng hơn khai đúng số. Chậm nộp tờ khai bị phạt ngay cả khi không phát sinh thuế.",
         "examples": [
           "GTGT: khai hàng tháng hoặc hàng quý",
-          "TNDN: tạm nộp theo quý, quyết toán năm. Doanh thu năm trước từ 1 tỷ đồng trở xuống: được miễn thuế",
+          "TNDN: tạm nộp theo quý, quyết toán năm. Doanh thu năm trước từ 1 tỷ đồng trở xuống: được miễn thuế, vẫn quyết toán năm",
           "Môn bài: nộp 1 lần/năm trước 30/1"
         ],
         "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "89/2026/TT-BTC",
+            "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 21 khoản 1 điểm c.1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Nghị định",
             "doc_number": "141/2026/NĐ-CP",
@@ -192,14 +205,28 @@
         "title": "Trước khi xuất hóa đơn đầu tiên",
         "tasks": [
           { "text": "Đăng ký hóa đơn điện tử tại hoadondientu.gdt.gov.vn", "note": "Bắt buộc với mọi DN từ 01/07/2022" },
-          { "text": "Đăng ký kê khai thuế GTGT (tháng hoặc quý)", "note": "Nếu DN mới → mặc định khai theo quý" },
+          { "text": "Đăng ký kê khai thuế GTGT (tháng hoặc quý)", "note": "DN mới được chọn khai theo quý (đỡ việc hơn). Chọn rồi giữ cả năm" },
           { "text": "Mở sổ kế toán (Excel hoặc phần mềm)", "note": "Theo Thông tư 132/2018 cho DNSN" }
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "89/2026/TT-BTC",
+            "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 19 khoản 1 điểm a, b.1, b.2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
           "Hóa đơn điện tử \"bắt buộc với mọi DN từ 01/07/2022\": theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
           "Xác minh hoadondientu.gdt.gov.vn còn là cổng đăng ký hóa đơn điện tử.",
-          "\"Nếu DN mới → mặc định khai theo quý\": xác minh quy định khai thuế GTGT cho DN mới thành lập.",
+          "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): DN mới \"được lựa chọn\" khai quý, mặc định của luật là khai tháng; đã sửa ghi chú. legal_basis chỉ phủ việc chọn kỳ khai GTGT (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
           "\"Theo Thông tư 132/2018 cho DNSN\": theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay thế từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
@@ -312,7 +339,7 @@
           "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn khai GTGT quý và hạn tạm nộp TNDN quý là ngày cuối cùng của tháng đầu quý tiếp theo (Nghị định 252/2026 Điều 10 khoản 3, Điều 24 khoản 2). Đã sửa \"ngày 30\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
           "\"Dù không phát sinh\": xác minh nghĩa vụ nộp tờ khai khi không có doanh thu.",
           "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã đổi \"nếu có lợi nhuận\" thành \"nếu không được miễn\" và thêm ghi chú cho công ty mới. legal_basis chỉ phủ ý miễn thuế TNDN; hạn nộp và tờ khai GTGT chưa xác minh.",
-          "Còn mở sau NC-011 (2026-11-12): (1) DN được miễn có còn phải kê khai, quyết toán TNDN không: chưa xác minh (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). Không viết \"không phải quyết toán\". (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
+          "Còn mở sau NC-011 (2026-11-12): (1) Đã trả lời ở NC-014 (2026-11-13): DN được miễn vẫn phải quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       }

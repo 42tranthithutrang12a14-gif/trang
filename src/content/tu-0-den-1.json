@@ -771,10 +771,24 @@
           "Lấy tổng doanh thu năm trước: bán hàng, dịch vụ (trừ giảm trừ doanh thu), doanh thu tài chính và thu nhập khác.",
           "Năm trước chưa đủ 12 tháng: chia doanh thu cho số tháng hoạt động rồi nhân 12.",
           "Công ty mới thành lập: nếu cuối năm doanh thu thực tế vượt 1 tỷ đồng thì kê khai, quyết toán TNDN bình thường, không bị tính tiền chậm nộp.",
+          "Vẫn nộp tờ khai quyết toán TNDN năm, hạn 31/3 năm sau (năm tài chính theo năm dương lịch).",
           "Công ty con, công ty có quan hệ liên kết: kiểm tra kỹ, có thể không được miễn."
         ],
         "links": [],
         "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "89/2026/TT-BTC",
+            "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 21 khoản 1 điểm c.1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Nghị định",
             "doc_number": "141/2026/NĐ-CP",
@@ -804,7 +818,7 @@
         ],
         "todo_for_reviewer": [
           "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Mục mới do agent Biên tập thêm.",
-          "Còn mở sau NC-011 (2026-11-12): (1) DN được miễn có còn phải kê khai, quyết toán TNDN không: chưa xác minh (Luật Quản lý thuế 108/2025, Nghị định 252/2026, Thông tư 89/2026). Không viết \"không phải quyết toán\". (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết."
+          "Còn mở sau NC-011 (2026-11-12): (1) Đã trả lời ở NC-014 (2026-11-13): DN được miễn vẫn phải quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết."
         ]
       },
       {
@@ -906,15 +920,31 @@
         "sample_notice": "MẪU – CHƯA XÁC MINH",
         "level": "nen-biet",
         "title": "Khai thuế GTGT theo quý thay vì theo tháng",
-        "who": "Doanh nghiệp mới thành lập và doanh nghiệp có doanh thu năm trước không quá 50 tỷ đồng.",
+        "who": "Doanh nghiệp mới bắt đầu kinh doanh, và doanh nghiệp có tổng doanh thu bán hàng hóa, dịch vụ năm trước từ 50 tỷ đồng trở xuống.",
         "benefit": "Khai 4 lần mỗi năm thay vì 12 lần.",
         "how": [
-          "Chọn kỳ khai theo quý khi đăng ký thuế hoặc khi nộp tờ khai lần đầu."
+          "Khai theo quý là quyền lựa chọn. Không chọn thì mặc định khai theo tháng.",
+          "Chọn rồi thì giữ cả năm dương lịch.",
+          "Đang khai tháng, muốn chuyển sang quý: gửi Văn bản đề nghị thay đổi kỳ tính thuế (mẫu 01/ĐK-TĐKTTT) chậm nhất ngày 31/01 của năm bắt đầu khai quý."
         ],
         "links": [],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "89/2026/TT-BTC",
+            "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 19 khoản 1 điểm a, b.1, b.2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Xác minh tiêu chí khai theo quý (ngưỡng 50 tỷ, DN mới thành lập) theo văn bản đang có hiệu lực.",
+          "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): tiêu chí và thủ tục chuyển kỳ khai đã đối chiếu (Điều 19 khoản 1 điểm a, b.1, b.2); sửa who, how, điền legal_basis. Chưa rõ cách chọn kỳ khai lần đầu của DN mới (ghi ở tờ khai đăng ký thuế hay tờ khai đầu tiên). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
           "Xác minh thủ tục chọn kỳ khai.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]

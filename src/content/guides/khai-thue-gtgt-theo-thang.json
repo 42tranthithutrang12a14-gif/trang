@@ -4,12 +4,12 @@
   "sample_notice": "MẪU – CHƯA XÁC MINH",
   "title": "Nộp tờ khai thuế GTGT theo tháng",
   "category": "thue",
-  "summary": "Doanh nghiệp có doanh thu từ 50 tỷ đồng/năm trở lên tính thuế GTGT theo phương pháp khấu trừ phải nộp tờ khai thuế GTGT hàng tháng, hạn nộp là ngày 20 của tháng tiếp theo.",
+  "summary": "Khai thuế GTGT theo tháng là mặc định. Doanh nghiệp tính thuế GTGT theo phương pháp khấu trừ, doanh thu năm trước trên 50 tỷ đồng, phải nộp tờ khai thuế GTGT hàng tháng, hạn nộp là ngày 20 của tháng tiếp theo.",
   "related_rules": ["VAT_MONTHLY_RETURN"],
   "body_sections": [
     {
       "heading": "Ai phải khai theo tháng?",
-      "content": "Doanh nghiệp phải khai thuế GTGT theo tháng nếu:\n• Tính thuế GTGT theo phương pháp khấu trừ, VÀ\n• Doanh thu năm trước từ 50 tỷ đồng trở lên\n\nDoanh nghiệp mới thành lập hoặc có doanh thu dưới 50 tỷ được chọn khai theo quý."
+      "content": "Doanh nghiệp phải khai thuế GTGT theo tháng nếu:\n• Tính thuế GTGT theo phương pháp khấu trừ, VÀ\n• Doanh thu bán hàng hóa, dịch vụ năm trước trên 50 tỷ đồng\n\nDoanh nghiệp mới bắt đầu kinh doanh, hoặc có doanh thu năm trước từ 50 tỷ đồng trở xuống, được chọn khai theo quý. Không chọn thì khai theo tháng.\n\nCăn cứ: Thông tư 89/2026/TT-BTC Điều 19 khoản 1."
     },
     {
       "heading": "Hạn nộp",
@@ -34,7 +34,7 @@
   ],
   "todo_for_reviewer": [
     "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
-    "Xác nhận ngưỡng doanh thu 50 tỷ để khai tháng theo văn bản hiện hành",
+    "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): đổi \"từ 50 tỷ đồng trở lên\" thành \"trên 50 tỷ đồng\", ghi khai tháng là mặc định (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
     "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn ngày 20 tháng sau khớp Nghị định 252/2026 Điều 10 khoản 2. Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
     "Xác nhận mức phạt theo Nghị định xử phạt hành chính thuế đang có hiệu lực",
     "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",

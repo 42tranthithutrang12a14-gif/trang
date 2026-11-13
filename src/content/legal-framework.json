@@ -63,11 +63,11 @@
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
             "Thuế suất phổ thông: 10% (một số hàng hóa dịch vụ thiết yếu: 5%, miễn thuế: 0%)",
-            "Khai thuế theo tháng: doanh thu năm trước trên 50 tỷ đồng",
-            "Khai thuế theo quý: doanh thu năm trước dưới 50 tỷ đồng (áp dụng cho DNSN)"
+            "Khai thuế theo tháng: mặc định; bắt buộc khi doanh thu năm trước trên 50 tỷ đồng (Thông tư 89/2026/TT-BTC Điều 19 khoản 1)",
+            "Khai thuế theo quý: được chọn nếu doanh thu năm trước từ 50 tỷ đồng trở xuống hoặc mới bắt đầu kinh doanh (Thông tư 89/2026/TT-BTC Điều 19 khoản 1)"
           ],
           "todo_for_reviewer": [
-            "Xác nhận ngưỡng 50 tỷ theo quy định hiện hành (Thông tư 80/2021 hoặc văn bản mới hơn)",
+            "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): ngưỡng 50 tỷ đã đối chiếu (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
             "Xác nhận thuế suất 8% (giảm thuế tạm thời) còn hiệu lực hay đã hết",
             "Bổ sung điều kiện hoàn thuế GTGT nếu phù hợp với DNSN",
             "Gợi ý của trợ lý AI (chưa xác minh): Luật 13/2008/QH12 có thể đã được thay bằng Luật Thuế GTGT số 48/2024/QH15 (từ 1/7/2025). Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế GTGT 48/2024/QH15, hiệu lực 01/07/2025; sửa bởi Luật 90/2025/QH15, 149/2025/QH15, 09/2026/QH16. Nghị định hướng dẫn 181/2025/NĐ-CP, sửa bởi 359/2025/NĐ-CP và 144/2026/NĐ-CP. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1"

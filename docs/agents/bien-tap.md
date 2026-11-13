@@ -153,6 +153,18 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Không đổi: hạn môn bài "30/01" (`legal-framework.json`), ngoài NC-013.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 16 (2026-11-13, 01:17 UTC)
+
+- Đọc NC-014 (Thông tư 89/2026/TT-BTC Điều 19, 21, đã xác minh). Status giữ "draft".
+- Khai GTGT theo quý:
+  - `guides/khai-thue-gtgt-theo-quy.json`: viết lại mục "Ai phải nộp tờ khai quý?": mặc định khai tháng; được chọn quý nếu doanh thu năm trước từ 50 tỷ trở xuống hoặc mới kinh doanh; chọn thì giữ cả năm; chuyển từ tháng sang quý gửi mẫu 01/ĐK-TĐKTTT trước 31/01.
+  - `guides/khai-thue-gtgt-theo-thang.json`: "từ 50 tỷ đồng trở lên" → "trên 50 tỷ đồng"; ghi khai tháng là mặc định.
+  - `bat-dau.json` Tháng 1: "Nếu DN mới → mặc định khai theo quý" → "DN mới được chọn khai theo quý (đỡ việc hơn). Chọn rồi giữ cả năm". Điền `legal_basis`.
+  - `tu-0-den-1.json`, mục khai GTGT quý: sửa `who`, thêm 3 bước, điền `legal_basis`.
+  - `legal-framework.json`, mục Luật Thuế GTGT: sửa 2 ý khai tháng/quý.
+- Quyết toán TNDN của DN được miễn: thay câu "cách hiểu" bằng "vẫn phải nộp tờ khai quyết toán TNDN năm, hạn 31/3 năm sau" (Điều 21 khoản 1 điểm c.1) ở guide tạm nộp, mục miễn thuế trong `tu-0-den-1.json`, trụ cột Thuế trong `bat-dau.json`. Cập nhật ý (1) của todo "Còn mở sau NC-011" ở 4 file.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -168,6 +180,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 14) NC-012: DN nộp thuế TNDN theo % doanh thu thì kê khai theo quý hay năm, dùng mẫu tờ khai nào. Có Thông tư hướng dẫn Nghị định 320/2025 không.
 
 - (Vòng 15) NC-013: hạn trùng ngày nghỉ, lễ có được dời sang ngày làm việc tiếp theo không (app đang ghi có, engine dùng `next_working_day`). Thông tư 89/2026 có nói rõ DN được miễn TNDN vẫn nộp quyết toán không.
+
+- (Vòng 16) NC-014: DN mới chọn khai GTGT quý ở đâu (tờ khai đăng ký thuế, hay tờ khai đầu tiên). Cần cho trang thao tác.
 
 ## Cần chủ dự án quyết
 
