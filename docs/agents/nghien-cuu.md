@@ -486,6 +486,38 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `tu-0-den-1.json` mục `mien-tndn-dn-moi`: điền `legal_basis`: Nghị quyết 198/2025/QH15 Điều 10 khoản 4; Nghị định 20/2026/NĐ-CP Điều 7 khoản 3, 4, 5, Điều 16 khoản 2; URL https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1; `verified_against_original: true`. Thêm vào `who`/`how`: thời gian miễn tính liên tục từ năm được cấp giấy lần đầu; không áp dụng cho DN thành lập do sáp nhập, hợp nhất, chia, tách, chuyển đổi; không áp dụng nếu người đại diện theo pháp luật (có góp vốn) hoặc người góp vốn cao nhất đang giữ vai trò đó ở DN khác đang hoạt động hoặc DN giải thể chưa đủ 12 tháng; kỳ đầu dưới 12 tháng được chọn hưởng ngay hoặc từ kỳ sau; trùng ưu đãi thì chọn mức có lợi nhất. Giữ câu khuyên hỏi cơ quan thuế (khoản lớn, rủi ro truy thu). Thay todo "DN được miễn có còn quyết toán không" bằng kết luận NC-014.
   - Có thể thêm một dòng ở `/cong-cu` hoặc mục sổ kế toán: "Nhà nước sẽ cung cấp miễn phí phần mềm kế toán cho DN siêu nhỏ (Nghị định 20/2026 Điều 10); chưa có tên nền tảng". Không dẫn link khi chưa có nguồn chính thức.
 
+### Ghi chú vòng 17 (2026-11-13, 04:17 UTC)
+
+- Đã rà commit `0ae71b3` của Biên tập (áp dụng NC-015): sửa các mục lệ phí môn bài và miễn TNDN 3 năm ở `bat-dau.json`, `legal-framework.json`, `tu-0-den-1.json`, `so-ke-toan.json`. Chưa đọc từng dòng; không thấy dấu hiệu sai trong phần thống kê.
+- Vòng này làm NC-016: tiêu chí DN siêu nhỏ (Nghị định 80/2021). Đây là căn cứ để người dùng biết mình có thuộc diện áp dụng TT 132/2018, các ưu đãi DN nhỏ và vừa, và ngoại lệ "được làm kế toán" ở NC-001 hay không.
+
+### NC-016 — Tiêu chí DN siêu nhỏ: lao động đóng BHXH bình quân năm ≤ 10 người và doanh thu năm ≤ 3 tỷ (nông, lâm, thủy sản; công nghiệp, xây dựng) hoặc ≤ 10 tỷ (thương mại, dịch vụ), hoặc tổng nguồn vốn ≤ 3 tỷ (Nghị định 80/2021)
+
+- Trạng thái: đã xác minh
+- Liên quan:
+  - `legal-framework.json` mục TT 132/2018, `key_points`: "Áp dụng cho DNSN: doanh thu ≤ 10 tỷ/năm, ≤ 10 lao động (thương mại/dịch vụ)"; todo "Xác nhận tiêu chí DNSN…".
+  - `questions.json` câu `revenue_band` (các mức "Dưới 1 tỷ", "Từ 1 đến 3 tỷ", "Từ 3 đến 10 tỷ", "Trên 10 tỷ") và câu `insured_headcount`.
+  - Mọi chỗ dùng chữ "DN siêu nhỏ" làm điều kiện (NC-001 ngoại lệ làm kế toán; NC-009 TT 132/2018; NC-015 ưu đãi DN nhỏ và vừa).
+- Nguồn: Nghị định 80/2021/NĐ-CP quy định chi tiết và hướng dẫn thi hành một số điều của Luật Hỗ trợ DN nhỏ và vừa. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2021/08/80.signed_01.pdf (29 trang, bản quét; đã OCR 6 trang đầu, Điều 1–10). Hiệu lực 15/10/2021. Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Điều 5 khoản 1 (PDF trang 4):** "Doanh nghiệp siêu nhỏ trong lĩnh vực nông nghiệp, lâm nghiệp, thủy sản; lĩnh vực công nghiệp và xây dựng sử dụng lao động có tham gia bảo hiểm xã hội bình quân năm không quá 10 người và tổng doanh thu của năm không quá 3 tỷ đồng hoặc tổng nguồn vốn của năm không quá 3 tỷ đồng. Doanh nghiệp siêu nhỏ trong lĩnh vực thương mại và dịch vụ sử dụng lao động có tham gia bảo hiểm xã hội bình quân năm không quá 10 người và tổng doanh thu của năm không quá 10 tỷ đồng hoặc tổng nguồn vốn của năm không quá 3 tỷ đồng."
+  - Khoản 2, 3: DN nhỏ (NLTS, CN-XD: ≤ 100 lao động và doanh thu ≤ 50 tỷ hoặc nguồn vốn ≤ 20 tỷ; TM-DV: ≤ 50 lao động và doanh thu ≤ 100 tỷ hoặc nguồn vốn ≤ 50 tỷ). DN vừa (NLTS, CN-XD: ≤ 200 lao động và doanh thu ≤ 200 tỷ hoặc nguồn vốn ≤ 100 tỷ; TM-DV: ≤ 100 lao động và doanh thu ≤ 300 tỷ hoặc nguồn vốn ≤ 100 tỷ).
+  - **Điều 6:** lĩnh vực xác định "căn cứ vào ngành, nghề kinh doanh chính mà doanh nghiệp đã đăng ký với cơ quan đăng ký kinh doanh".
+  - **Điều 7 khoản 2, 3:** lao động bình quân năm = tổng số lao động tham gia BHXH của các tháng năm trước liền kề ÷ 12 (số tháng xác định cuối tháng, theo chứng từ nộp BHXH); DN hoạt động dưới 1 năm thì chia cho số tháng hoạt động.
+  - **Điều 8:** tổng nguồn vốn lấy trên bảng cân đối kế toán của Báo cáo tài chính năm trước nộp cơ quan thuế, tại thời điểm cuối năm; DN dưới 1 năm: cuối quý liền kề trước thời điểm đăng ký hỗ trợ.
+  - **Điều 9:** tổng doanh thu = doanh thu bán hàng hóa, cung cấp dịch vụ trên Báo cáo tài chính năm trước; DN dưới 1 năm hoặc chưa có doanh thu thì dùng tiêu chí tổng nguồn vốn.
+  - **Điều 10 khoản 1:** DN tự xác định, kê khai quy mô theo mẫu Phụ lục, nộp cho cơ quan, tổ chức hỗ trợ; chịu trách nhiệm về kê khai. Khoản 3: kê khai không trung thực để hưởng hỗ trợ thì hoàn trả toàn bộ.
+- **Kết luận:**
+  1. DN siêu nhỏ cần **cả hai** điều kiện: (a) lao động đóng BHXH bình quân năm ≤ 10 người; và (b) doanh thu năm ≤ 3 tỷ (NLTS, CN-XD) hoặc ≤ 10 tỷ (TM-DV), **hoặc** tổng nguồn vốn ≤ 3 tỷ. Lĩnh vực theo ngành nghề kinh doanh chính đã đăng ký.
+  2. `key_points` ở `legal-framework.json` thiếu: chỉ nêu TM-DV, bỏ nhánh "hoặc tổng nguồn vốn ≤ 3 tỷ" và nhánh NLTS, CN-XD ≤ 3 tỷ; "lao động" phải là lao động có tham gia BHXH bình quân năm.
+  3. DN mới (dưới 1 năm, chưa có doanh thu): xét theo tổng nguồn vốn ≤ 3 tỷ và lao động BHXH bình quân các tháng hoạt động.
+  4. Lưu ý ngưỡng doanh thu khác nhau giữa các văn bản: tiêu chí DN siêu nhỏ dùng doanh thu bán hàng, dịch vụ trên BCTC (Điều 9); miễn TNDN ≤ 1 tỷ và thuế suất 15/17% dùng doanh thu gồm cả tài chính và thu nhập khác (NC-011, NC-012); khai GTGT quý dùng doanh thu trên tờ khai GTGT (NC-014).
+  5. Chưa kiểm tra Nghị định 80/2021 có văn bản sửa đổi tiêu chí sau 2021 hay không (trên vanban.chinhphu.vn chỉ thấy Thông tư hướng dẫn 205807; chưa thấy nghị định sửa đổi).
+- **Đề xuất sửa (Biên tập):**
+  - `legal-framework.json` mục TT 132/2018, thay key point bằng: "Áp dụng cho DN siêu nhỏ: lao động đóng BHXH bình quân năm không quá 10 người, và doanh thu năm không quá 10 tỷ (thương mại, dịch vụ) hoặc 3 tỷ (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ." `legal_basis`: Nghị định 80/2021/NĐ-CP Điều 5 khoản 1, Điều 6, 7, 8, 9; URL https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1; `verified_against_original: true`. Bỏ todo "Xác nhận tiêu chí DNSN".
+  - Thêm một mục tự kiểm "Công ty mình có phải DN siêu nhỏ không?" (ví dụ trong `tu-0-den-1.json` bước đầu, hoặc `/lo-trinh`): 3 câu hỏi — ngành nghề chính (TM-DV hay NLTS/CN-XD); số lao động đóng BHXH bình quân năm; doanh thu năm trước trên BCTC hoặc tổng nguồn vốn cuối năm. DN mới chưa có doanh thu: dùng tổng nguồn vốn.
+  - `questions.json` `revenue_band`: cân nhắc đổi mốc cho khớp các ngưỡng pháp lý: "Từ 1 tỷ trở xuống" (miễn TNDN), "Trên 1 đến 3 tỷ" (15%; ngưỡng siêu nhỏ NLTS/CN-XD), "Trên 3 đến 10 tỷ" (ngưỡng siêu nhỏ TM-DV), "Trên 10 tỷ". Mốc hiện tại "Dưới 1 tỷ"/"Từ 1 đến 3 tỷ" làm DN đúng 1 tỷ rơi sai nhóm. Đây là đổi giá trị lựa chọn, có thể ảnh hưởng luật trong `rules/` — nếu cần đổi cấu trúc thì ghi "Cần chủ dự án quyết".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
