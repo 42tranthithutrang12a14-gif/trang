@@ -205,6 +205,12 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo ở 4 chỗ: chưa đọc Nghị định 102/2021 và 291/2026, không viết "mức phạt hiện hành".
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 21 (2026-11-13, 11:17 UTC)
+
+- Đọc NC-018 bổ sung (Nghị định 102/2021 và 291/2026 không sửa Điều 13 Nghị định 125/2020; đã xác minh).
+- Thay todo "chưa đọc Nghị định 102/2021, 291/2026" bằng ghi chú đã đối chiếu, kèm link, ở 4 chỗ (2 guide GTGT, `bat-dau.json`, `legal-framework.json`). Không đổi chữ hiển thị. `LegalBasis` không có trường ghi chú nên ghi ở todo.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -225,7 +231,7 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 
 - (Vòng 17) NC-015: xin đọc Nghị định 80/2021/NĐ-CP (tiêu chí DN siêu nhỏ, nhỏ, vừa). Nhiều mục (miễn 3 năm, chế độ kế toán, phụ trách kế toán) đều dựa vào tiêu chí này.
 
-- (Vòng 20) NC-018: xin đọc Nghị định 291/2026/NĐ-CP (và 102/2021) xem có sửa Điều 13 Nghị định 125/2020 không, trước khi coi các khung phạt là hiện hành.
+- (Đã trả lời ở NC-018 bổ sung.) (Vòng 20) NC-018: xin đọc Nghị định 291/2026/NĐ-CP (và 102/2021) xem có sửa Điều 13 Nghị định 125/2020 không, trước khi coi các khung phạt là hiện hành.
 
 ## Cần chủ dự án quyết
 
