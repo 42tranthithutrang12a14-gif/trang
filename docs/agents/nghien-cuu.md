@@ -638,6 +638,44 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal_basis`: TT 132/2018/TT-BTC Điều 13 khoản 1, Điều 14 khoản 2, Điều 18 khoản 1, 4; Nghị định 174/2016/NĐ-CP Điều 12, Điều 13 khoản 1, 2, 4, Điều 15 khoản 1; URL như trên; `verified_against_original: true`. Bỏ các todo "xác minh hạn nộp BCTC", "xác minh thời hạn lưu trữ".
   - Không viết cách nộp BCTC qua mạng cho tới khi có hướng dẫn chính thức (thuộc phần thao tác).
 
+### Ghi chú vòng 22 (2026-11-13, 15:44 UTC)
+
+- Lịch 14:17 chạy trễ (15:44). Gộp một vòng.
+- Đã rà commit `8af82ac` (NC-019): hạn BCTC "90 ngày (năm nhuận 30/3)", gửi cả cơ quan thuế và cơ quan đăng ký kinh doanh, DN nộp TNDN theo % doanh thu không bắt buộc. Đúng đề xuất.
+- Vòng này làm NC-020: hóa đơn điện tử theo Nghị định 254/2026 (thay Nghị định 123/2020 từ 01/07/2026). App vẫn dẫn Nghị định 123/2020 và câu "bắt buộc với mọi DN từ 01/07/2022".
+
+### NC-020 — Hóa đơn điện tử: Nghị định 254/2026 thay Nghị định 123/2020 từ 01/07/2026; đối tượng dùng hóa đơn có mã, không mã, máy tính tiền; thời điểm lập hóa đơn; miễn phí 12 tháng chỉ cho DN nhỏ và vừa ở địa bàn khó khăn
+
+- Trạng thái: đã xác minh
+- Liên quan:
+  - `guides/hoa-don-dien-tu.json`: `summary` ("Từ ngày 01/7/2022, toàn bộ doanh nghiệp bắt buộc…"); mục "Hóa đơn điện tử là gì?" ("…theo Nghị định 123/2020/NĐ-CP"); mục "Hai loại hóa đơn điện tử" (có mã "áp dụng cho DN mới thành lập…", "miễn phí cổng kết nối thuế"); mục "Căn cứ pháp lý" (Nghị định 123/2020, Thông tư 78/2021); các chỗ ghi "Tổng cục Thuế".
+  - `bat-dau.json` dòng 274 ("Bắt buộc với mọi DN từ 01/07/2022") và todo dòng 294.
+  - `guides/chu-ky-so.json` (dẫn Nghị định 123/2020); `rules/risk_rules.json` (ví dụ Nghị định 123/2020 Điều 4); `legal-framework.json` mục 123/2020.
+- Nguồn: Nghị định 254/2026/NĐ-CP quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn điện tử, chứng từ điện tử. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/254-ndcp.signed.pdf (55 trang, bản quét, đã OCR toàn bộ). Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Điều 43 (PDF trang ~51):** khoản 1 "Nghị định này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026." Khoản 2: từ ngày đó hết hiệu lực: a) Nghị định 123/2020/NĐ-CP; b) Điều 1 Nghị định 41/2022/NĐ-CP; c) Nghị định 70/2025/NĐ-CP.
+  - **Điều 6 khoản 1 (PDF trang 8–9), đối tượng sử dụng hóa đơn điện tử:**
+    - Điểm a: tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh và trường hợp rủi ro cao "sử dụng hóa đơn điện tử có mã của cơ quan thuế khi bán hàng hóa, cung cấp dịch vụ", trừ điểm b, e.
+    - Điểm b: DN trong các lĩnh vực điện, xăng dầu, bưu chính, viễn thông, nước sạch, tài chính ngân hàng, bảo hiểm, y tế, thương mại điện tử, siêu thị, thương mại, vận tải… và tổ chức kinh tế có giao dịch điện tử với cơ quan thuế, có hạ tầng CNTT, phần mềm kế toán, phần mềm lập hóa đơn đáp ứng yêu cầu "thì được sử dụng hóa đơn điện tử không có mã của cơ quan thuế", trừ trường hợp rủi ro cao và trường hợp đăng ký dùng hóa đơn có mã.
+    - Điểm c: tổ chức kinh tế, hộ, cá nhân kinh doanh bán hàng, cung cấp dịch vụ trực tiếp đến người tiêu dùng (trung tâm thương mại, siêu thị, bán lẻ — trừ ô tô, xe máy —, ăn uống, nhà hàng, khách sạn, vận tải hành khách, vui chơi giải trí, chiếu phim, dịch vụ phục vụ cá nhân khác) "sử dụng hóa đơn điện tử từ máy tính tiền". Đã đăng ký theo điểm a, b thì không bắt buộc đăng ký thêm hóa đơn từ máy tính tiền.
+  - **Điều 7:** các trường hợp không phải dùng hóa đơn điện tử — chủ yếu là hộ, cá nhân kinh doanh và một số hoạt động tài chính, tái bảo hiểm; không có trường hợp áp dụng chung cho DN siêu nhỏ.
+  - **Điều 9 khoản 1, 2 (PDF trang 16), thời điểm lập hóa đơn:** bán hàng hóa: "thời điểm chuyển giao quyền sở hữu hoặc quyền sử dụng hàng hóa cho người mua, không phân biệt đã thu được tiền hay chưa thu được tiền". Cung cấp dịch vụ: "thời điểm hoàn thành việc cung cấp dịch vụ… không phân biệt đã thu được tiền hay chưa"; nếu thu tiền trước hoặc trong khi cung cấp dịch vụ thì lập khi thu tiền (trừ tiền đặt cọc). Khoản 3: giao hàng nhiều lần, bàn giao từng phần thì mỗi lần đều lập hóa đơn.
+  - **Điều 11 khoản 1, 3 (PDF trang ~22):** "Doanh nghiệp nhỏ và vừa, hợp tác xã… hộ kinh doanh, cá nhân kinh doanh tại địa bàn có điều kiện kinh tế – xã hội khó khăn, địa bàn có điều kiện kinh tế – xã hội đặc biệt khó khăn thuộc trường hợp sử dụng hóa đơn điện tử được miễn phí dịch vụ trong thời gian 12 tháng kể từ khi sử dụng hóa đơn điện tử." Khoản 3: các trường hợp khác dùng qua tổ chức cung cấp dịch vụ thì "trả tiền dịch vụ theo hợp đồng".
+  - Văn bản dùng tên "Cục Thuế" (Điều 11 khoản 1), không còn "Tổng cục Thuế".
+- **Kết luận:**
+  1. Từ 01/07/2026, căn cứ là Nghị định 254/2026; Nghị định 123/2020 (và 41/2022 Điều 1, 70/2025) hết hiệu lực. Câu "bắt buộc với mọi DN từ 01/07/2022 theo Nghị định 123/2020" là lịch sử; nội dung hiện hành: DN bán hàng, cung cấp dịch vụ dùng hóa đơn điện tử (mặc định có mã của cơ quan thuế; một số lĩnh vực, điều kiện được dùng không mã; bán lẻ trực tiếp người tiêu dùng dùng hóa đơn từ máy tính tiền).
+  2. Câu "có mã… áp dụng cho DN mới thành lập" không còn đúng chữ: theo Điều 6, có mã là mặc định cho mọi tổ chức kinh tế, trừ điểm b.
+  3. Câu "miễn phí cổng kết nối thuế" chưa đúng: miễn phí 12 tháng chỉ cho DN nhỏ và vừa ở địa bàn khó khăn, đặc biệt khó khăn; còn lại trả phí theo hợp đồng với tổ chức cung cấp dịch vụ.
+  4. Thời điểm lập hóa đơn không phụ thuộc đã thu tiền hay chưa — liên quan trực tiếp tới sổ S1 (doanh thu ghi khi bán, NC-009).
+  5. Chưa đọc: Thông tư 91/2026/TT-BTC (thay Thông tư 78/2021?); mức phạt không lập hóa đơn (Nghị định 125/2020 Điều 24, đã sửa bởi 310/2025 khoản 14). Giữ todo cho các mục này.
+- **Đề xuất sửa (Biên tập):**
+  - `hoa-don-dien-tu.json` `summary`: "Doanh nghiệp bán hàng, cung cấp dịch vụ phải dùng hóa đơn điện tử. Từ 01/07/2026 áp dụng Nghị định 254/2026/NĐ-CP (thay Nghị định 123/2020)." Mục "Hóa đơn điện tử là gì?": bỏ câu "theo Nghị định 123/2020". Mục "Hai loại hóa đơn": có mã là mặc định (Điều 6 khoản 1 điểm a); không mã cho DN thuộc lĩnh vực, điều kiện ở điểm b; thêm loại thứ ba "hóa đơn từ máy tính tiền" cho bán lẻ, ăn uống, khách sạn… (điểm c). Bỏ "miễn phí cổng kết nối thuế", thay bằng điều kiện miễn phí 12 tháng (Điều 11 khoản 1). Thêm mục "Khi nào phải lập hóa đơn" theo Điều 9 khoản 1–3.
+  - Đổi "Tổng cục Thuế" thành "Cục Thuế" ở guide này (và các guide khác khi gặp).
+  - `bat-dau.json` dòng 274: note "Bắt buộc khi bán hàng, cung cấp dịch vụ (Nghị định 254/2026/NĐ-CP, từ 01/07/2026)"; bỏ todo "theo báo chí".
+  - Mục "Căn cứ pháp lý" của guide, `chu-ky-so.json`, `risk_rules.json`, `legal-framework.json`: thay Nghị định 123/2020 bằng Nghị định 254/2026 (có thể ghi "thay Nghị định 123/2020 từ 01/07/2026"). Theo quyết định của chủ dự án, `number`/`effective_from` mục 123/2020 trong `legal-framework.json` có thể đổi thành 254/2026/NĐ-CP, 01/07/2026.
+  - `legal_basis`: Nghị định 254/2026/NĐ-CP Điều 6 khoản 1 điểm a, b, c; Điều 7; Điều 9 khoản 1, 2, 3; Điều 11 khoản 1, 3; Điều 43 khoản 1, 2; URL https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1; `verified_against_original: true`.
+  - Giữ todo: Thông tư 91/2026 (thay Thông tư 78/2021?) và mức phạt không lập hóa đơn chưa xác minh. Giữ câu "⚠️ Mức phạt cụ thể cần xác minh".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
