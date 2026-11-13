@@ -706,6 +706,32 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `questions.json` `vat_method`: thêm `help_text`: "Doanh thu năm từ 1 tỷ trở lên: khấu trừ. Dưới 1 tỷ: trực tiếp trên doanh thu, trừ khi tự chọn khấu trừ."
   - Hai guide khai GTGT: thêm một câu đầu "Hướng dẫn này cho DN tính thuế theo phương pháp khấu trừ. DN doanh thu dưới 1 tỷ, tính trực tiếp, xem …" (chưa có guide riêng → ghi vào "Cần chủ dự án quyết" nếu cần trang mới).
 
+### Ghi chú vòng 24 (2026-11-13, 18:17 UTC)
+
+- Đã rà commit `2a1b4da` (NC-020, NC-021): Nghị định 123/2020 chỉ còn trong todo và ghi chú "đã thay"; "Tổng cục Thuế" chỉ còn trong todo (3 guide khai thuế). Đúng đề xuất.
+- Vòng này đóng điểm còn mở của NC-021: cách xác định doanh thu năm, DN mới thành lập, đăng ký tự nguyện khấu trừ (Nghị định 181/2025 Điều 21).
+
+### NC-021 (bổ sung) — Nghị định 181/2025 Điều 21: doanh thu xét phương pháp lấy trên tờ khai GTGT từ tháng 11 (quý 4) năm trước đến tháng 10 (quý 3) năm nay; áp dụng ổn định 2 năm; DN mới có thuê địa điểm, mua sắm tài sản, công cụ được tự nguyện khấu trừ
+
+- Trạng thái: đã xác minh
+- Nguồn:
+  - Nghị định 181/2025/NĐ-CP quy định chi tiết Luật Thuế GTGT — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/181nd.signed.pdf (75 trang, bản quét, đã OCR toàn bộ). Điều 38 khoản 1: hiệu lực 01/07/2025; khoản 2: thay Nghị định 209/2013/NĐ-CP và các văn bản cũ.
+  - Nghị định 359/2025/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=216388&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/359-nd.signed.pdf (3 trang): chỉ bổ sung khoản 1b Điều 4 và bãi bỏ khoản 3 Điều 37, khoản 3 Điều 39. Hiệu lực 01/01/2026.
+  - Nghị định 144/2026/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=218020&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/144-ndcp.signed.pdf (23 trang): sửa Điều 4, điểm b khoản 1 Điều 9, khoản 2 Điều 23, điểm g khoản 2 Điều 26, thay Phụ lục I, II. **Không sửa Điều 21.** Mở ngày 2026-11-13.
+- Phát hiện (Nghị định 181/2025, Điều 21, PDF trang 24–26):
+  - Câu dẫn: phương pháp khấu trừ "áp dụng đối với cơ sở kinh doanh thực hiện đầy đủ chế độ kế toán, hóa đơn, chứng từ…".
+  - Khoản 1 điểm a: doanh thu hằng năm "do cơ sở kinh doanh tự xác định căn cứ vào tổng cộng chỉ tiêu 'Tổng doanh thu của hàng hóa, dịch vụ bán ra chịu thuế giá trị gia tăng' trên Tờ khai thuế giá trị gia tăng tháng của kỳ tính thuế từ tháng 11 năm trước đến hết kỳ tính thuế tháng 10 năm hiện tại… hoặc trên Tờ khai… quý của kỳ tính thuế từ quý 4 năm trước đến hết kỳ tính thuế quý 3 năm hiện tại… Thời gian áp dụng ổn định phương pháp tính thuế là 02 năm liên tục."
+  - Khoản 1 điểm b: cơ sở kinh doanh mới thành lập, hoạt động không đủ 12 tháng: doanh thu ước tính = tổng doanh thu trên tờ khai GTGT các tháng hoạt động ÷ số tháng × 12. Từ 1 tỷ trở lên: khấu trừ. "Trường hợp doanh thu ước tính… chưa đến 01 tỷ đồng thì cơ sở kinh doanh áp dụng phương pháp tính trực tiếp theo doanh thu trong 02 năm, trừ trường hợp cơ sở kinh doanh đăng ký tự nguyện áp dụng phương pháp khấu trừ thuế."
+  - Khoản 2, các trường hợp được tự nguyện khấu trừ, trong đó: a) DN đang hoạt động có doanh thu dưới 1 tỷ "đã thực hiện đầy đủ chế độ kế toán, sổ sách, hóa đơn, chứng từ"; đ) "Doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã mới thành lập có thực hiện đầu tư, mua sắm, nhận góp vốn bằng tài sản cố định, máy móc, thiết bị, công cụ, dụng cụ hoặc có hợp đồng thuê địa điểm kinh doanh."
+- **Kết luận:**
+  1. Doanh thu xét phương pháp GTGT là doanh thu chịu thuế GTGT trên các tờ khai GTGT, tính từ tháng 11 năm trước đến tháng 10 năm nay (hoặc quý 4 năm trước đến quý 3 năm nay); phương pháp được giữ ổn định 2 năm.
+  2. DN mới thành lập có thuê địa điểm kinh doanh, hoặc mua sắm, nhận góp vốn bằng tài sản, máy móc, công cụ, được đăng ký tự nguyện khấu trừ ngay. Phần lớn DN siêu nhỏ mới (có thuê văn phòng, cửa hàng) thuộc trường hợp này.
+  3. DN mới không đăng ký tự nguyện và doanh thu ước tính dưới 1 tỷ: tính trực tiếp trong 2 năm.
+  4. Mẫu, thời hạn đăng ký tự nguyện: chưa xác minh (thuộc Luật Quản lý thuế / Thông tư 89/2026 hoặc thủ tục đăng ký thuế; chưa đọc phần này).
+- **Đề xuất sửa (Biên tập):**
+  - `tu-0-den-1.json` bước `phuong-phap-thue-gtgt`: thêm vào `how`: "Công ty mới thành lập có thuê địa điểm kinh doanh, hoặc mua sắm, nhận góp vốn bằng tài sản, máy móc, công cụ, được đăng ký tự nguyện tính theo phương pháp khấu trừ ngay từ đầu. Không đăng ký và doanh thu ước tính cả năm dưới 1 tỷ thì tính trực tiếp trong 2 năm." "Phương pháp đã chọn được giữ 2 năm liên tục. Doanh thu để xét lấy trên tờ khai GTGT từ tháng 11 năm trước đến tháng 10 năm nay." `legal_basis` thêm: Nghị định 181/2025/NĐ-CP Điều 21 khoản 1 điểm a, b; khoản 2 điểm a, đ; URL https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1; ghi chú đã đối chiếu Nghị định 359/2025 và 144/2026 không sửa Điều 21; `verified_against_original: true`. Thay todo "Xác minh phương pháp áp dụng cho DN mới" bằng todo "Mẫu và thời hạn đăng ký tự nguyện khấu trừ: chưa xác minh".
+  - `questions.json` `vat_method` `help_text`: thêm "DN mới có thuê địa điểm hoặc mua tài sản, công cụ được đăng ký tự nguyện khấu trừ."
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
