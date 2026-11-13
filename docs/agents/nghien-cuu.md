@@ -414,6 +414,41 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Các mục miễn TNDN (NC-011): thêm câu "Được miễn thuế vẫn nộp tờ khai quyết toán TNDN năm (cách hiểu theo Nghị định 252/2026 Điều 11; chưa có văn bản nói rõ)". Giữ todo.
   - Câu "Nắm được lịch này là nắm được 80% việc cần làm" (`bat-dau.json` dòng 299) không liên quan ngưỡng 80% tạm nộp; giữ todo "không có nguồn" như cũ.
 
+### Ghi chú vòng 15 (2026-11-13, 00:17 UTC)
+
+- Đã rà commit `951ff66` của Biên tập (áp dụng NC-013): không còn chỗ "ngày 30 của tháng đầu quý", "30/7, 30/10, 30/01" hay "75%" ngoài todo. Dòng "Hạn nộp: 30/01" còn lại ở `legal-framework.json` thuộc mục lệ phí môn bài, ngoài phạm vi NC-013.
+- Vòng này làm NC-014: Thông tư 89/2026/TT-BTC — ai được khai GTGT theo quý; DN được miễn TNDN có phải quyết toán không (điểm còn mở của NC-011, NC-013).
+
+### NC-014 — Khai GTGT theo quý: doanh thu năm trước từ 50 tỷ trở xuống, là quyền lựa chọn; khai quyết toán TNDN năm không có ngoại lệ cho DN được miễn (Thông tư 89/2026)
+
+- Trạng thái: đã xác minh
+- Liên quan:
+  - `guides/khai-thue-gtgt-theo-quy.json` dòng 12: "doanh thu năm trước dưới 50 tỷ đồng (hoặc mới thành lập) được khai theo quý".
+  - `guides/khai-thue-gtgt-theo-thang.json` dòng 7 và 12: "Doanh nghiệp có doanh thu từ 50 tỷ đồng/năm trở lên…", "Doanh thu năm trước từ 50 tỷ đồng trở lên".
+  - `bat-dau.json` dòng 195: "Nếu DN mới → mặc định khai theo quý".
+  - Các mục miễn TNDN (NC-011) và todo về nghĩa vụ quyết toán.
+- Nguồn: Thông tư 89/2026/TT-BTC quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf (839 trang, phần lớn là mẫu biểu; đã OCR 60 trang đầu, gồm Điều 1–23). Hiệu lực 01/07/2026 (trang thông tin). Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Điều 19 khoản 1 (kỳ tính thuế GTGT), PDF trang 30–31:**
+    - Điểm a: "Khai thuế giá trị gia tăng là loại khai thuế theo tháng, trừ các trường hợp quy định tại điểm b và điểm c khoản này".
+    - Điểm b.1.1: "Người nộp thuế thuộc diện khai thuế giá trị gia tăng theo tháng nếu có tổng doanh thu bán hàng hóa và cung cấp dịch vụ của năm trước liền kề từ 50 tỷ đồng trở xuống thì được lựa chọn khai thuế giá trị gia tăng theo quý. Doanh thu… được xác định là tổng doanh thu trên các tờ khai thuế giá trị gia tăng của các kỳ tính thuế trong năm dương lịch."
+    - Điểm b.1.2: "Trường hợp người nộp thuế mới bắt đầu hoạt động, kinh doanh thì được lựa chọn khai thuế giá trị gia tăng theo quý." Sau đủ 12 tháng thì căn cứ doanh thu năm dương lịch trước liền kề (đủ 12 tháng) để xác định tháng hay quý. Doanh thu năm đầu trên 50 tỷ thì khai tháng từ năm sau.
+    - Điểm b.1.3: "Người nộp thuế có trách nhiệm tự xác định thuộc đối tượng khai thuế theo tháng hay khai thuế theo quý".
+    - Điểm b.2.1: được chọn tháng hoặc quý "ổn định trọn năm dương lịch". Điểm b.2.2: đang khai tháng, muốn chuyển sang quý thì gửi "Văn bản đề nghị thay đổi kỳ tính thuế từ tháng sang quý mẫu số 01/ĐK-TĐKTTT Phụ lục I… chậm nhất là ngày 31 tháng 01 của năm bắt đầu khai thuế theo quý."
+    - Điểm b.2.3: không đủ điều kiện mà đã khai quý thì chuyển sang khai tháng từ quý sau, nộp lại tờ khai tháng của các quý trước và tiền chậm nộp; không bị phạt chậm nộp hồ sơ cho các tờ khai nộp lại.
+  - **Điều 21 khoản 1 điểm c (khai quyết toán TNDN), PDF trang 43–44:** "Người nộp thuế khai quyết toán thuế thu nhập doanh nghiệp trong các trường hợp sau: c.1) Khai quyết toán khi kết thúc năm (năm dương lịch hoặc năm tài chính), bao gồm cả trường hợp người nộp thuế tạm ngừng hoạt động, kinh doanh không trọn năm". Ngoại lệ duy nhất (c.3): đã khai TNDN theo từng lần phát sinh. **Không có** ngoại lệ cho DN được miễn thuế TNDN.
+  - **Điều 21 khoản 3 điểm a, PDF trang 45:** người nộp thuế phải quyết toán TNDN "thực hiện tạm nộp thuế thu nhập doanh nghiệp theo quy định tại Điều 24 Nghị định số 252/2026/NĐ-CP"; điểm b: căn cứ báo cáo tài chính quý (nếu có) hoặc kết quả kinh doanh quý để xác định số tạm nộp.
+- **Kết luận:**
+  1. Ngưỡng khai GTGT quý là "từ 50 tỷ đồng trở xuống" (không phải "dưới 50 tỷ"). Phải khai tháng khi doanh thu năm trước **trên** 50 tỷ (không phải "từ 50 tỷ trở lên"). Doanh thu để xét là tổng doanh thu trên các tờ khai GTGT trong năm dương lịch.
+  2. Khai quý là **quyền lựa chọn**, mặc định của luật là khai tháng. DN mới "được lựa chọn" khai quý; câu "mặc định khai theo quý" không đúng chữ. Chọn rồi thì giữ trọn năm. Đang khai tháng muốn chuyển sang quý: gửi mẫu 01/ĐK-TĐKTTT trước 31/01.
+  3. DN được miễn TNDN (≤ 1 tỷ, NC-011) vẫn thuộc diện khai quyết toán TNDN năm theo Điều 21 khoản 1 điểm c.1 (không có ngoại lệ), hạn 31/3 năm sau (NC-013). Kết luận này thay cho "cách hiểu" ghi ở NC-011, NC-013.
+- **Đề xuất sửa (Biên tập):**
+  - `khai-thue-gtgt-theo-quy.json` dòng 12: "Doanh nghiệp có tổng doanh thu bán hàng hóa, dịch vụ năm trước từ 50 tỷ đồng trở xuống (tính trên các tờ khai GTGT trong năm), hoặc mới bắt đầu kinh doanh, được chọn khai theo quý. Chọn rồi thì giữ cả năm. Đang khai tháng, muốn chuyển sang quý: gửi Văn bản đề nghị mẫu 01/ĐK-TĐKTTT cho cơ quan thuế trước ngày 31/01. Doanh thu năm trước trên 50 tỷ: khai tháng." Bỏ todo "Xác nhận ngưỡng 50 tỷ".
+  - `khai-thue-gtgt-theo-thang.json` dòng 7, 12: đổi "từ 50 tỷ đồng trở lên" thành "trên 50 tỷ đồng"; thêm "Khai tháng là mặc định; DN đủ điều kiện có thể chọn khai quý". Bỏ todo tương ứng.
+  - `bat-dau.json` dòng 195: đổi "Nếu DN mới → mặc định khai theo quý" thành "DN mới được chọn khai theo quý (nên chọn để đỡ việc); chọn rồi giữ cả năm".
+  - Các mục miễn TNDN (NC-011): thay câu "cách hiểu" bằng "Được miễn thuế vẫn phải nộp tờ khai quyết toán TNDN năm, hạn 31/3 năm sau (Thông tư 89/2026 Điều 21 khoản 1 điểm c.1)". Bỏ todo nghĩa vụ quyết toán.
+  - `legal_basis` cho các mục trên: Thông tư 89/2026/TT-BTC Điều 19 khoản 1 điểm a, b.1, b.2; Điều 21 khoản 1 điểm c, khoản 3; URL https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1; `verified_against_original: true`.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
