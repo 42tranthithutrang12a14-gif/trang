@@ -255,6 +255,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Chưa ghi số tiền mức tham chiếu, tỷ lệ đóng cho nhân viên, BHYT, BHTN (chưa xác minh). Dòng lịch năm "Đóng BHXH, BHYT, BHTN: cuối tháng" giữ todo cũ.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 26 (2026-11-13, 23:18 UTC)
+
+- Đọc NC-022 bổ sung (định nghĩa người quản lý doanh nghiệp, Luật Doanh nghiệp Điều 4 khoản 24; mức tham chiếu bằng lương cơ sở, Luật BHXH Điều 7, 141; lương cơ sở 2.530.000 đồng từ 01/07/2026, Nghị định 161/2026; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json`, bước `bhxh-nguoi-quan-ly`: thêm danh sách người quản lý; mức tham chiếu hiện là 2.530.000 đồng/tháng, khoảng chọn 2.530.000–50.600.000; mức đóng thấp nhất khoảng 632.500 đồng/tháng mỗi người; ghi rõ số tiền đổi khi lương cơ sở điều chỉnh. Thêm 3 `legal_basis`.
+- `bat-dau.json`, việc đăng ký BHXH: ghi chức danh người quản lý và mức đóng thấp nhất. Thêm `legal_basis`.
+- Todo "chưa xác minh mức tham chiếu, định nghĩa người quản lý" ở 4 chỗ đổi thành ghi chú đã xác minh; còn mở Nghị định 158/2025, BHYT, BHTN, tỷ lệ đóng cho nhân viên.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

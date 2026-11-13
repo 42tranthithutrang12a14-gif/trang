@@ -743,10 +743,10 @@
             "Mức lương tự chọn làm căn cứ đóng"
           ],
           "how": [
-            "Từ 01/07/2025, người quản lý doanh nghiệp (giám đốc, chủ tịch công ty…) phải tham gia BHXH bắt buộc, kể cả khi không nhận lương.",
+            "Từ 01/07/2025, người quản lý doanh nghiệp phải tham gia BHXH bắt buộc, kể cả khi không nhận lương. Người quản lý gồm: Chủ tịch công ty, Giám đốc hoặc Tổng giám đốc, Chủ tịch và thành viên Hội đồng thành viên, chủ doanh nghiệp tư nhân, và người giữ chức danh quản lý khác theo Điều lệ công ty (Luật Doanh nghiệp Điều 4 khoản 24). Mỗi người quản lý đều thuộc diện, trừ các trường hợp ở bước dưới.",
             "Không áp dụng nếu: đã đủ tuổi nghỉ hưu; đang hưởng lương hưu hoặc trợ cấp BHXH hằng tháng; hoặc quản lý nhiều công ty và đã tham gia ở công ty mình quản lý đầu tiên.",
-            "Người quản lý không nhận lương tự chọn mức lương làm căn cứ đóng, thấp nhất bằng mức tham chiếu, cao nhất bằng 20 lần mức tham chiếu. Sau ít nhất 12 tháng được chọn lại.",
-            "Mức đóng: 25% mức lương đã chọn (3% vào quỹ ốm đau và thai sản, 22% vào quỹ hưu trí và tử tuất).",
+            "Người quản lý không nhận lương tự chọn mức lương làm căn cứ đóng, thấp nhất bằng mức tham chiếu, cao nhất bằng 20 lần mức tham chiếu. Sau ít nhất 12 tháng được chọn lại. Mức tham chiếu hiện bằng mức lương cơ sở: 2.530.000 đồng/tháng từ 01/07/2026, nên mức lương chọn được từ 2.530.000 đến 50.600.000 đồng/tháng. Số tiền này đổi khi Chính phủ điều chỉnh mức lương cơ sở.",
+            "Mức đóng: 25% mức lương đã chọn (3% vào quỹ ốm đau và thai sản, 22% vào quỹ hưu trí và tử tuất). Chọn mức thấp nhất thì đóng khoảng 632.500 đồng/tháng cho mỗi người.",
             "Đóng hằng tháng, 3 tháng hoặc 6 tháng một lần; tự đóng cho cơ quan BHXH hoặc đóng qua công ty. Hạn chậm nhất là ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng.",
             "Đây là nghĩa vụ mới, số tiền không nhỏ. Nếu chưa chắc trường hợp của mình, hỏi cơ quan BHXH nơi công ty đặt trụ sở trước khi đăng ký."
           ],
@@ -757,6 +757,45 @@
             }
           ],
           "legal_basis": [
+          {
+            "doc_type": "Luật",
+            "doc_number": "59/2020/QH14",
+            "title": "Luật Doanh nghiệp",
+            "issuer": "Quốc hội",
+            "issued_date": "2020-06-17",
+            "effective_date": "2021-01-01",
+            "article": "Điều 4 khoản 24",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Luật",
+            "doc_number": "41/2024/QH15",
+            "title": "Luật Bảo hiểm xã hội",
+            "issuer": "Quốc hội",
+            "issued_date": "2024-06-29",
+            "effective_date": "2025-07-01",
+            "article": "Điều 7 khoản 1; Điều 141 khoản 13",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "161/2026/NĐ-CP",
+            "title": "Nghị định quy định mức lương cơ sở",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-05-15",
+            "effective_date": "2026-07-01",
+            "article": "Điều 3 khoản 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
             {
               "doc_type": "Luật",
               "doc_number": "41/2024/QH15",
@@ -773,7 +812,7 @@
           ],
           "todo_for_reviewer": [
             "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): mục mới do agent Biên tập thêm theo Điều 2 khoản 1 điểm i, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27, 28, 31, 33. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
-            "Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn."
+            "Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1"
           ]
         },
         {
@@ -811,7 +850,7 @@
             }
           ],
           "todo_for_reviewer": [
-            "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng là người làm việc theo HĐLĐ từ đủ 1 tháng (Điều 2 khoản 1 điểm a), hạn 30 ngày kể từ ngày thuộc đối tượng, không phải kể từ ngày ký HĐLĐ (Điều 28 khoản 1); đã sửa deadline, điền legal_basis. Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn.",
+            "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng là người làm việc theo HĐLĐ từ đủ 1 tháng (Điều 2 khoản 1 điểm a), hạn 30 ngày kể từ ngày thuộc đối tượng, không phải kể từ ngày ký HĐLĐ (Điều 28 khoản 1); đã sửa deadline, điền legal_basis. Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1",
             "Xác minh trường hợp hợp đồng lao động phải bằng văn bản.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
