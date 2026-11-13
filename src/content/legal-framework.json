@@ -17,14 +17,14 @@
           "congbao_url": "https://congbao.chinhphu.vn/noi-dung-van-ban-so-59-2020-qh14-28588",
           "key_points": [
             "Thời hạn góp vốn điều lệ: 90 ngày từ ngày cấp Giấy chứng nhận ĐKDN (Điều 47, 113)",
-            "Đăng ký thay đổi thông tin: trong vòng 10 ngày làm việc kể từ ngày có quyết định thay đổi (Điều 30)",
+            "Đăng ký, thông báo thay đổi: trong 10 ngày kể từ ngày có thay đổi (Điều 30 khoản 2, Điều 31 khoản 2)",
             "Người đại diện pháp luật phải cư trú tại Việt Nam; nếu xuất cảnh dài ngày phải uỷ quyền (Điều 12)"
           ],
           "todo_for_reviewer": [
             "Xác nhận số điều khoản 47/113/30/12 còn đúng theo phiên bản hiện hành",
             "Bổ sung thêm nghĩa vụ cốt lõi khác với DNSN",
             "Xác minh link vbpl.moj.gov.vn",
-            "Mâu thuẫn trong app: ở đây ghi \"10 ngày làm việc\"; /bat-dau và summary guide dang-ky-thay-doi-doanh-nghiep ghi \"10 ngày\".",
+            "Ngày 2026-11-13 (NC-017, đã đối chiếu toàn văn Luật Doanh nghiệp 59/2020/QH14 Điều 30, 31 và Luật 76/2025/QH15): thời hạn là \"10 ngày kể từ ngày có thay đổi\" (ngày lịch, không có chữ \"làm việc\"); 3 ngày làm việc là thời hạn cơ quan đăng ký xử lý hồ sơ. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1 Đã sửa key point.",
             "Cập nhật NC-005: Luật 76/2025/QH15 sửa đổi, bổ sung một số điều của Luật Doanh nghiệp, ban hành 17/06/2025, hiệu lực 01/07/2025 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Kiểm tra Điều 30–32 (thời hạn đăng ký thay đổi, \"10 ngày\" hay \"10 ngày làm việc\") và tên cơ quan đăng ký kinh doanh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1",
             "Cập nhật NC-008: ngày hiệu lực 01/01/2021 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1"
           ]

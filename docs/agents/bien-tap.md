@@ -186,6 +186,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Chưa thêm mục tự kiểm riêng "Công ty mình có phải DN siêu nhỏ không": đã đưa vào bước `ke-toan-don-gian`. Thêm trang hoặc câu hỏi mới là việc lớn hơn.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 19 (2026-11-13, 07:18 UTC)
+
+- Đọc NC-017 (thời hạn đăng ký, thông báo thay đổi; Luật Doanh nghiệp 59/2020 Điều 30, 31 và Luật 76/2025; đã xác minh). Status giữ "draft".
+- `guides/dang-ky-thay-doi-doanh-nghiep.json`: summary bỏ "thường là", mốc là "ngày có thay đổi", đổi "Phòng Đăng ký kinh doanh" thành "cơ quan đăng ký kinh doanh". Viết lại mục "Thời hạn đăng ký": đăng ký (Điều 30) và thông báo (Điều 31) đều 10 ngày; theo bản án 15 ngày; 10 ngày là ngày lịch; cơ quan đăng ký xử lý 3 ngày làm việc; thêm thông tin chủ sở hữu hưởng lợi từ 01/07/2025. Bỏ dòng "chuyển nhượng cổ phần" chưa có nguồn.
+- `legal-framework.json`: "10 ngày làm việc kể từ ngày có quyết định thay đổi" → "10 ngày kể từ ngày có thay đổi (Điều 30 khoản 2, Điều 31 khoản 2)".
+- `bat-dau.json`: thêm "kể từ ngày có thay đổi" ở trụ cột Pháp lý và lỗi "Thay đổi không đăng ký"; "Bất kỳ thay đổi nào → đăng ký" → "Có thay đổi → đăng ký hoặc thông báo". Điền `legal_basis` 2 chỗ.
+- `rules/risk_rules.json`, `RISK_CHANGES_NOT_REGISTERED`: viết `explain_plain`, điền `legal_basis`, đổi tiêu đề sang "cơ quan đăng ký kinh doanh". Không ghi mức phạt (chưa xác minh).
+- Bỏ các todo mâu thuẫn "10 ngày / 10 ngày làm việc".
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

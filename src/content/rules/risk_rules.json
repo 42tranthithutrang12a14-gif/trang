@@ -10,15 +10,42 @@
         { "field": "changes_registered", "op": "eq", "value": "chua" }
       ]
     },
-    "title": "Có thay đổi nhưng chưa đăng ký với Phòng Đăng ký kinh doanh",
+    "title": "Có thay đổi nhưng chưa đăng ký với cơ quan đăng ký kinh doanh",
     "ok_title": "Các thay đổi gần đây đã được đăng ký",
-    "explain_plain": "",
+    "explain_plain": "Luật Doanh nghiệp yêu cầu đăng ký hoặc thông báo thay đổi trong 10 ngày kể từ ngày có thay đổi. Quá hạn là vi phạm.",
     "fix_steps": [],
-    "legal_basis": [],
+    "legal_basis": [
+      {
+        "doc_type": "Luật",
+        "doc_number": "59/2020/QH14",
+        "title": "Luật Doanh nghiệp",
+        "issuer": "Quốc hội",
+        "issued_date": "2020-06-17",
+        "effective_date": "2021-01-01",
+        "article": "Điều 30 khoản 1, 2, 3, 4 điểm a; Điều 31 khoản 1, 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "76/2025/QH15",
+        "title": "Luật sửa đổi, bổ sung một số điều của Luật Doanh nghiệp",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-06-17",
+        "effective_date": "2025-07-01",
+        "article": "Điều 1 khoản 13 (sửa khoản 1 Điều 31 Luật Doanh nghiệp)",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      }
+    ],
     "guide_slug": "dang-ky-thay-doi-doanh-nghiep",
     "todo_for_reviewer": [
       "Viết explain_plain và fix_steps",
-      "Điền legal_basis với thời hạn đăng ký thay đổi — ví dụ: Luật Doanh nghiệp 2020, Điều 30; Nghị định 01/2021/NĐ-CP; link vbpl.moj.gov.vn chính thức"
+      "Ngày 2026-11-13 (NC-017, đã đối chiếu toàn văn Luật Doanh nghiệp 59/2020/QH14 Điều 30, 31 và Luật 76/2025/QH15): thời hạn là \"10 ngày kể từ ngày có thay đổi\" (ngày lịch, không có chữ \"làm việc\"); 3 ngày làm việc là thời hạn cơ quan đăng ký xử lý hồ sơ. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1 Đã điền legal_basis, viết explain_plain, đổi \"Phòng Đăng ký kinh doanh\" thành \"cơ quan đăng ký kinh doanh\" (NC-006). Mức phạt chưa xác minh nên không ghi."
     ]
   },
   {
