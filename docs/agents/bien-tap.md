@@ -211,6 +211,17 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Thay todo "chưa đọc Nghị định 102/2021, 291/2026" bằng ghi chú đã đối chiếu, kèm link, ở 4 chỗ (2 guide GTGT, `bat-dau.json`, `legal-framework.json`). Không đổi chữ hiển thị. `LegalBasis` không có trường ghi chú nên ghi ở todo.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 22 (2026-11-13, 15:23 UTC)
+
+- Đọc NC-019 (báo cáo tài chính và lưu trữ; Thông tư 132/2018 Điều 13, 14, 18; Nghị định 174/2016 Điều 12, 13, 15; đã xác minh). Status giữ "draft".
+- `bat-dau.json`:
+  - Trụ cột Kế toán: "Lưu hóa đơn, chứng từ ít nhất 10 năm" → "Lưu chứng từ dùng ghi sổ, sổ kế toán, báo cáo tài chính ít nhất 10 năm"; "Nộp báo cáo tài chính trước 31/3 mỗi năm" → hạn 90 ngày (năm nhuận 30/3), DN nộp TNDN theo % doanh thu không bắt buộc. Điền `legal_basis`.
+  - Lịch Tháng 3: dòng BCTC ghi "31/3 (năm nhuận 30/3)" và trường hợp không bắt buộc. Điền `legal_basis` (Thông tư 132/2018; Nghị định 252/2026 cho hạn quyết toán).
+- `guides/so-sach-ke-toan.json`: viết lại mục "Báo cáo tài chính hàng năm" (B01, B02, F01, F02; hạn; nơi nộp gồm cả cơ quan đăng ký kinh doanh; trường hợp không bắt buộc; lưu trữ 5/10 năm). Bỏ "Bản thuyết minh" và "tùy quy định từng địa phương". Sửa tên báo cáo ở mục "Chế độ kế toán".
+- `legal-framework.json`: mục Luật Kế toán sửa 2 ý lưu trữ, BCTC (bỏ "Điều 40" chưa đối chiếu); mục Thông tư 132/2018 sửa danh mục BCTC.
+- Chưa viết cách nộp BCTC qua mạng (chờ hướng dẫn chính thức cho phần thao tác).
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

@@ -151,14 +151,41 @@
         "desc": "Ghi chép mọi giao dịch ngay từ ngày thành lập. Kế toán là bằng chứng khi cơ quan thuế kiểm tra.",
         "examples": [
           "Mở sổ kế toán từ ngày đầu",
-          "Lưu hóa đơn, chứng từ ít nhất 10 năm",
-          "Nộp báo cáo tài chính trước 31/3 mỗi năm"
+          "Lưu chứng từ dùng ghi sổ, sổ kế toán, báo cáo tài chính ít nhất 10 năm",
+          "Nộp báo cáo tài chính chậm nhất 90 ngày sau khi hết năm tài chính (năm dương lịch: 31/3, năm nhuận 30/3). DN nộp TNDN theo % doanh thu không bắt buộc"
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "132/2018/TT-BTC",
+            "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2018-12-28",
+            "effective_date": "2019-02-15",
+            "article": "Điều 13 khoản 1; Điều 14 khoản 2; Điều 18 khoản 1, 4",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "174/2016/NĐ-CP",
+            "title": "Nghị định quy định chi tiết một số điều của Luật Kế toán",
+            "issuer": "Chính phủ",
+            "issued_date": "2016-12-30",
+            "effective_date": "2017-01-01",
+            "article": "Điều 12; Điều 13 khoản 1, 2, 4; Điều 15 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
           "Chế độ kế toán DN siêu nhỏ: theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
-          "\"Lưu hóa đơn, chứng từ ít nhất 10 năm\": xác minh thời hạn lưu trữ cho từng loại tài liệu.",
-          "\"Nộp báo cáo tài chính trước 31/3 mỗi năm\": xác minh hạn nộp, nơi nộp, và trường hợp năm tài chính không trùng năm dương lịch.",
+          "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): 10 năm cho chứng từ dùng ghi sổ, sổ kế toán, báo cáo tài chính (Nghị định 174/2016 Điều 13); 5 năm cho chứng từ không dùng trực tiếp ghi sổ (Điều 12); tính từ ngày kết thúc kỳ kế toán năm (Điều 15 khoản 1). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+          "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): hạn 90 ngày sau khi hết năm tài chính, gửi cơ quan thuế và cơ quan đăng ký kinh doanh (Thông tư 132/2018 Điều 14 khoản 2); DN nộp TNDN theo % doanh thu không bắt buộc lập để nộp (Điều 18). Đã sửa 2 ví dụ; legal_basis chỉ phủ 2 ý này.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       }
@@ -530,11 +557,38 @@
         "month": "Tháng 3",
         "entries": [
           { "text": "Quyết toán thuế TNDN năm trước", "deadline": "31/3", "type": "tax" },
-          { "text": "Nộp báo cáo tài chính năm trước", "deadline": "31/3", "type": "accounting" }
+          { "text": "Nộp báo cáo tài chính năm trước (DN nộp TNDN theo % doanh thu không bắt buộc)", "deadline": "31/3 (năm nhuận 30/3)", "type": "accounting" }
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "132/2018/TT-BTC",
+            "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2018-12-28",
+            "effective_date": "2019-02-15",
+            "article": "Điều 14 khoản 2; Điều 18 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "252/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 10 khoản 5 điểm a",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Xác minh hạn quyết toán TNDN và hạn nộp báo cáo tài chính, kể cả khi năm tài chính không trùng năm dương lịch.",
+          "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): hạn BCTC 90 ngày sau khi hết năm tài chính (năm nhuận là 30/3); hạn quyết toán TNDN là ngày cuối tháng thứ 3, luôn 31/3 (NC-013). Năm tài chính khác năm dương lịch: tính theo ngày kết thúc năm tài chính.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       }

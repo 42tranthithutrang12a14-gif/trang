@@ -13,7 +13,7 @@
     },
     {
       "heading": "Chế độ kế toán cho doanh nghiệp siêu nhỏ",
-      "content": "Công ty là doanh nghiệp siêu nhỏ khi đạt cả hai điều kiện (Nghị định 80/2021/NĐ-CP Điều 5 khoản 1):\n• Lao động có đóng BHXH bình quân năm không quá 10 người.\n• Doanh thu năm không quá 10 tỷ đồng (thương mại, dịch vụ) hoặc 3 tỷ đồng (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ đồng.\nLĩnh vực xác định theo ngành nghề kinh doanh chính đã đăng ký. Công ty mới, chưa có doanh thu: xét theo tổng nguồn vốn.\n\nDoanh nghiệp siêu nhỏ được áp dụng:\n\nThông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ:\n• Hệ thống tài khoản đơn giản hơn (ít tài khoản hơn)\n• Báo cáo tài chính đơn giản (Bảng cân đối kế toán + Báo cáo kết quả kinh doanh)\n• Không bắt buộc thuyết minh báo cáo tài chính chi tiết\n\nCó thể ghi sổ bằng Excel (đơn giản) hoặc phần mềm kế toán."
+      "content": "Công ty là doanh nghiệp siêu nhỏ khi đạt cả hai điều kiện (Nghị định 80/2021/NĐ-CP Điều 5 khoản 1):\n• Lao động có đóng BHXH bình quân năm không quá 10 người.\n• Doanh thu năm không quá 10 tỷ đồng (thương mại, dịch vụ) hoặc 3 tỷ đồng (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ đồng.\nLĩnh vực xác định theo ngành nghề kinh doanh chính đã đăng ký. Công ty mới, chưa có doanh thu: xét theo tổng nguồn vốn.\n\nDoanh nghiệp siêu nhỏ được áp dụng:\n\nThông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ:\n• Hệ thống tài khoản đơn giản hơn (ít tài khoản hơn)\n• Báo cáo tài chính gồm Báo cáo tình hình tài chính (B01-DNSN) và Báo cáo kết quả hoạt động kinh doanh (B02-DNSN), kèm 2 phụ biểu\n\nCó thể ghi sổ bằng Excel (đơn giản) hoặc phần mềm kế toán."
     },
     {
       "heading": "Ai làm kế toán?",
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Báo cáo tài chính hàng năm",
-      "content": "Mỗi năm, doanh nghiệp phải lập và nộp Báo cáo tài chính (BCTC):\n\n• Hạn nộp: 31/3 năm tiếp theo (kèm tờ khai quyết toán thuế TNDN)\n• Nộp cho cơ quan thuế qua eTax: https://thuedientu.gdt.gov.vn\n• Nộp cho cơ quan đăng ký kinh doanh (tùy quy định từng địa phương)\n\nDoanh nghiệp siêu nhỏ lập BCTC gồm:\n1. Bảng cân đối kế toán\n2. Báo cáo kết quả hoạt động kinh doanh\n3. Bản thuyết minh báo cáo tài chính (đơn giản hóa)"
+      "content": "Doanh nghiệp siêu nhỏ nộp thuế TNDN trên thu nhập tính thuế phải lập báo cáo tài chính (BCTC) năm (Thông tư 132/2018/TT-BTC Điều 13 khoản 1):\n1. Báo cáo tình hình tài chính (mẫu B01-DNSN)\n2. Báo cáo kết quả hoạt động kinh doanh (mẫu B02-DNSN)\nKèm phụ biểu: Bảng cân đối tài khoản (F01-DNSN) và Báo cáo tình hình thực hiện nghĩa vụ với ngân sách nhà nước (F02-DNSN).\n\nHạn nộp: chậm nhất 90 ngày kể từ ngày kết thúc năm tài chính. Năm tài chính theo năm dương lịch: 31/3, năm nhuận 30/3. Gửi cho cả cơ quan thuế quản lý trực tiếp và cơ quan đăng ký kinh doanh, đồng thời lưu tại công ty (Điều 14 khoản 2).\n\nDN nộp thuế TNDN theo tỷ lệ % trên doanh thu không bắt buộc lập BCTC để nộp cho cơ quan thuế; vẫn làm các báo cáo theo pháp luật thuế (Điều 18).\n\nLưu trữ: chứng từ dùng ghi sổ, sổ kế toán, BCTC ít nhất 10 năm; chứng từ không dùng trực tiếp để ghi sổ ít nhất 5 năm; tính từ ngày kết thúc năm kế toán (Nghị định 174/2016/NĐ-CP Điều 12, 13, 15)."
     },
     {
       "heading": "Mức phạt nếu không ghi sổ kế toán",
@@ -45,6 +45,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): viết lại mục \"Báo cáo tài chính hàng năm\": tên mẫu B01, B02, F01, F02; hạn 90 ngày (năm nhuận 30/3); gửi cả cơ quan thuế và cơ quan đăng ký kinh doanh (bỏ \"tùy địa phương\"); DN nộp theo % doanh thu không bắt buộc; thời hạn lưu trữ 5 và 10 năm. Bỏ \"Bản thuyết minh\" (không có trong danh mục). Chưa viết cách nộp qua mạng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
     "Xác nhận Thông tư 132/2018 còn hiệu lực hay đã có văn bản thay thế",
     "Ngày 2026-11-13 (NC-016, đã đối chiếu toàn văn Nghị định 80/2021/NĐ-CP Điều 5–10): sửa tiêu chí ở mục \"Chế độ kế toán cho doanh nghiệp siêu nhỏ\". Cùng vòng, sửa mục \"Các sổ kế toán cần mở\" theo NC-009 (Thông tư 132/2018 Điều 3, 11, 17): bỏ danh sách cũ (nhật ký chung, sổ cái, sổ quỹ) không khớp văn bản. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
     "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế. Cập nhật NC-002: Nghị định 41/2018/NĐ-CP đã được sửa bởi Nghị định 132/2026/NĐ-CP, ban hành 06/04/2026, hiệu lực 21/05/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217618&classid=1",
