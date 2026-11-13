@@ -585,11 +585,39 @@
         "sample_notice": "MẪU – CHƯA XÁC MINH",
         "icon": "❌",
         "title": "Bỏ qua tờ khai thuế vì \"tháng này không bán được gì\"",
-        "consequence": "Tờ khai phải nộp đúng hạn kể cả khi doanh thu = 0. Phạt 2–5 triệu đồng/lần chậm.",
+        "consequence": "Tờ khai phải nộp đúng hạn kể cả khi doanh thu = 0. Nộp muộn bị phạt theo số ngày chậm: 1–30 ngày 2–5 triệu đồng; 31–60 ngày 5–8 triệu; 61–90 ngày 8–15 triệu; trên 90 ngày có thể đến 25 triệu. Tờ khai không có số thuế cũng bị phạt nếu nộp muộn hoặc không nộp.",
         "fix": "Đặt lịch nhắc hàng tháng/quý. Tự nộp tờ khai đúng hạn, kể cả tờ khai không phát sinh.",
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "125/2020/NĐ-CP",
+            "title": "Nghị định quy định xử phạt vi phạm hành chính về thuế, hóa đơn",
+            "issuer": "Chính phủ",
+            "issued_date": "2020-10-19",
+            "effective_date": "2020-12-05",
+            "article": "Điều 13 khoản 1, 2, 3, 4, 6; Điều 7 khoản 4 điểm a",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "310/2025/NĐ-CP",
+            "title": "Nghị định sửa đổi, bổ sung Nghị định 125/2020/NĐ-CP",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-12-02",
+            "effective_date": "2026-01-16",
+            "article": "Điều 1 khoản 10 (khoản 5, điểm a khoản 6 Điều 13 Nghị định 125/2020); Điều 4 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Mức phạt \"2–5 triệu đồng/lần chậm\": theo báo chí (chưa xác minh), mức phạt có thể đến 25 triệu tùy số ngày chậm (Nghị định 125/2020/NĐ-CP). Cần mở văn bản gốc, xác minh từng khung phạt. legal-framework.json và 2 guide khai thuế GTGT cũng ghi \"2–5 triệu\". Cập nhật NC-003: Nghị định 125/2020/NĐ-CP đã có các văn bản sửa đổi: 102/2021/NĐ-CP, 310/2025/NĐ-CP, 291/2026/NĐ-CP (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
+          "Ngày 2026-11-13 (NC-018, đã đối chiếu toàn văn Nghị định 125/2020/NĐ-CP Điều 7, 13 và Nghị định 310/2025/NĐ-CP Điều 1 khoản 10, Điều 4): thay \"2–5 triệu đồng/lần chậm\" bằng các khung theo số ngày chậm; điền legal_basis. Mức cho tổ chức (Điều 7 khoản 4 điểm a). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+          "Chưa đọc Nghị định 102/2021/NĐ-CP và 291/2026/NĐ-CP (ban hành 21/07/2026); có thể đã sửa tiếp Điều 13. Không viết \"mức phạt hiện hành\" cho tới khi đọc xong.",
           "Xác minh nghĩa vụ nộp tờ khai khi doanh thu bằng 0.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]

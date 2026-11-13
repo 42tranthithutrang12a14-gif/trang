@@ -376,16 +376,17 @@
           "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=152596",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
-            "Khai thuế chậm: phạt 2–5 triệu đồng (chậm ≤ 90 ngày kể từ hạn)",
-            "Không khai thuế: phạt 10–25 triệu đồng",
+            "Nộp tờ khai muộn (mức cho tổ chức): 1–30 ngày 2–5 triệu; 31–60 ngày 5–8 triệu; 61–90 ngày 8–15 triệu (Điều 13 khoản 2, 3, 4)",
+            "Muộn trên 90 ngày hoặc không nộp, không có số thuế phải nộp: 8–15 triệu, buộc nộp tờ khai; muộn trên 90 ngày có số thuế, đã tự nộp đủ trước khi bị kiểm tra: 15–25 triệu (Điều 13 khoản 4, 5, sửa bởi Nghị định 310/2025/NĐ-CP, hiệu lực 16/01/2026)",
             "Vi phạm về hóa đơn điện tử: phạt 4–8 triệu đồng"
           ],
           "todo_for_reviewer": [
             "Xác nhận NĐ 125/2020 còn hiệu lực hay đã sửa đổi. Cập nhật NC-003: Nghị định 125/2020/NĐ-CP đã có các văn bản sửa đổi: 102/2021/NĐ-CP, 310/2025/NĐ-CP, 291/2026/NĐ-CP (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
             "Xác nhận mức phạt cụ thể cho từng loại vi phạm",
             "Bổ sung phạt chậm nộp tiền thuế (0.03%/ngày)",
-            "Mức phạt \"Khai thuế chậm: 2–5 triệu đồng\": theo báo chí (chưa xác minh), có thể đến 25 triệu tùy số ngày chậm. Cần mở văn bản gốc.",
-            "Cập nhật NC-008: ngày hiệu lực 05/12/2020 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1"
+            "Ngày 2026-11-13 (NC-018, đã đối chiếu toàn văn Nghị định 125/2020/NĐ-CP Điều 7, 13 và Nghị định 310/2025/NĐ-CP Điều 1 khoản 10, Điều 4): sửa 2 ý phạt khai thuế chậm, không khai thuế. Ý cũ \"Không khai thuế: phạt 10–25 triệu\" không khớp Điều 13. Nghị định 310/2025 hiệu lực 16/01/2026 theo Điều 4 khoản 1 (trang thông tin ghi \"16-01-2025\" là gõ nhầm năm). Ý \"hóa đơn điện tử 4–8 triệu\" chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+            "Cập nhật NC-008: ngày hiệu lực 05/12/2020 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1",
+            "Chưa đọc Nghị định 102/2021/NĐ-CP và 291/2026/NĐ-CP (ban hành 21/07/2026); có thể đã sửa tiếp Điều 13. Không viết \"mức phạt hiện hành\" cho tới khi đọc xong."
           ]
         },
         {

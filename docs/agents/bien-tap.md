@@ -196,10 +196,19 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Bỏ các todo mâu thuẫn "10 ngày / 10 ngày làm việc".
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 20 (2026-11-13, 09:17 UTC)
+
+- Đọc NC-018 (phạt chậm nộp hồ sơ khai thuế; Nghị định 125/2020 Điều 7, 13 và Nghị định 310/2025 Điều 1 khoản 10, Điều 4; đã xác minh). Status giữ "draft".
+- Hai guide khai GTGT: thay dòng "chậm nộp tờ khai: 2–5 triệu" bằng các khung theo số ngày chậm (cảnh cáo; 2–5; 5–8; 8–15; 15–25 triệu), ghi là mức cho công ty và tiền chậm nộp đi kèm. Các dòng chưa xác minh (0,03%/ngày, 20%, cưỡng chế) gom dưới "Các mức khác (chưa xác minh)".
+- `bat-dau.json`, lỗi "Bỏ qua tờ khai thuế": thay "Phạt 2–5 triệu đồng/lần chậm" bằng các khung; điền `legal_basis`.
+- `legal-framework.json`, mục Nghị định 125/2020: sửa 2 ý phạt (ý cũ "Không khai thuế: 10–25 triệu" không khớp Điều 13). Ghi Nghị định 310/2025 hiệu lực 16/01/2026 (trả lời câu hỏi cũ của Biên tập; trang thông tin gõ nhầm năm).
+- Todo ở 4 chỗ: chưa đọc Nghị định 102/2021 và 291/2026, không viết "mức phạt hiện hành".
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
-- Nghị định 310/2025/NĐ-CP: cổng ghi hiệu lực "16-01-2025". Nhờ đối chiếu ngày đúng khi mở được toàn văn.
+- (Đã trả lời ở NC-018: hiệu lực 16/01/2026.) Nghị định 310/2025/NĐ-CP: cổng ghi hiệu lực "16-01-2025". Nhờ đối chiếu ngày đúng khi mở được toàn văn.
 
 - (Vòng 11) NC-009: xin trích phương pháp ghi từng cột của S1–S4 (Phụ lục 4 mục 2). Cần nhất: S1 ghi doanh thu có hay chưa có thuế GTGT; khi nào ghi (ngày xuất hóa đơn hay ngày giao hàng). Cũng xin kiểm mẫu S3 có tách số lượng, đơn giá, thành tiền không.
 - (Vòng 11) Xin ưu tiên đọc Luật Thuế TNDN 67/2025/QH15 và Luật 09/2026/QH16: DN siêu nhỏ còn được nộp thuế TNDN theo tỷ lệ % trên doanh thu không. Nếu không, 4 trang S1–S4 vừa thêm có thể không còn dùng được.
@@ -215,6 +224,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 16) NC-014: DN mới chọn khai GTGT quý ở đâu (tờ khai đăng ký thuế, hay tờ khai đầu tiên). Cần cho trang thao tác.
 
 - (Vòng 17) NC-015: xin đọc Nghị định 80/2021/NĐ-CP (tiêu chí DN siêu nhỏ, nhỏ, vừa). Nhiều mục (miễn 3 năm, chế độ kế toán, phụ trách kế toán) đều dựa vào tiêu chí này.
+
+- (Vòng 20) NC-018: xin đọc Nghị định 291/2026/NĐ-CP (và 102/2021) xem có sửa Điều 13 Nghị định 125/2020 không, trước khi coi các khung phạt là hiện hành.
 
 ## Cần chủ dự án quyết
 
