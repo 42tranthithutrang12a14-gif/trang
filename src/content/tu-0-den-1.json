@@ -1001,11 +1001,27 @@
         "who": "Doanh nghiệp siêu nhỏ.",
         "benefit": "Được áp dụng chế độ kế toán đơn giản hơn, nên chủ doanh nghiệp dễ tự ghi sổ.",
         "how": [
-          "Xác định công ty có phải doanh nghiệp siêu nhỏ không (theo số lao động và doanh thu hoặc vốn).",
+          "Xác định công ty có phải doanh nghiệp siêu nhỏ không. DN siêu nhỏ phải đạt cả hai điều kiện: (1) lao động có đóng BHXH bình quân năm không quá 10 người; (2) doanh thu năm không quá 10 tỷ đồng (thương mại, dịch vụ) hoặc không quá 3 tỷ đồng (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ đồng.",
+          "Lao động bình quân năm: cộng số người đóng BHXH cuối mỗi tháng của năm trước, chia 12. Công ty chưa đủ 1 năm: chia cho số tháng hoạt động.",
+          "Doanh thu: doanh thu bán hàng hóa, dịch vụ trên báo cáo tài chính năm trước. Tổng nguồn vốn: trên bảng cân đối kế toán cuối năm trước. Công ty mới, chưa có doanh thu: dùng tổng nguồn vốn.",
+          "Lĩnh vực xét theo ngành nghề kinh doanh chính đã đăng ký.",
           "Chọn chế độ kế toán áp dụng, dùng mẫu sổ và mẫu báo cáo theo chế độ đó."
         ],
         "links": [],
         "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "80/2021/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Hỗ trợ doanh nghiệp nhỏ và vừa",
+            "issuer": "Chính phủ",
+            "issued_date": "2021-08-26",
+            "effective_date": "2021-10-15",
+            "article": "Điều 5 khoản 1; Điều 6; Điều 7 khoản 2, 3; Điều 8; Điều 9; Điều 10 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Nghị định",
             "doc_number": "174/2016/NĐ-CP",
@@ -1035,7 +1051,7 @@
         ],
         "todo_for_reviewer": [
           "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
-          "Xác minh tiêu chí doanh nghiệp siêu nhỏ (Luật Hỗ trợ DNNVV và nghị định hướng dẫn).",
+          "Ngày 2026-11-13 (NC-016, đã đối chiếu toàn văn Nghị định 80/2021/NĐ-CP Điều 5–10): thêm tiêu chí và cách tính lao động, doanh thu, nguồn vốn; điền legal_basis. Chưa kiểm tra Nghị định 80/2021 có văn bản sửa tiêu chí sau 2021 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1",
           "DN siêu nhỏ có bắt buộc bố trí kế toán trưởng không: đã trả lời (NC-001, 2026-11-12). Không bắt buộc kế toán trưởng, \"được bố trí phụ trách kế toán\" (Nghị định 174/2016/NĐ-CP Điều 20 khoản 2 điểm b; Thông tư 132/2018/TT-BTC Điều 8 khoản 1). legal_basis chỉ phủ ý này, chưa phủ tiêu chí DN siêu nhỏ và chế độ kế toán.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]

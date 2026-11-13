@@ -176,6 +176,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `so-ke-toan.json`: thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10 (chưa có tên nền tảng, không dẫn link).
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 18 (2026-11-13, 05:17 UTC)
+
+- Đọc NC-016 (tiêu chí DN siêu nhỏ, Nghị định 80/2021/NĐ-CP Điều 5–10, đã xác minh). Status giữ "draft".
+- `legal-framework.json`, mục Thông tư 132/2018: sửa key point tiêu chí (thêm nhánh nông, lâm, thủy sản, công nghiệp, xây dựng ≤ 3 tỷ; nhánh tổng nguồn vốn ≤ 3 tỷ; lao động đóng BHXH bình quân năm).
+- `guides/so-sach-ke-toan.json`: mục "Chế độ kế toán cho DN siêu nhỏ" ghi đủ tiêu chí. Cùng vòng, sửa mục "Các sổ kế toán cần mở" theo NC-009 (đã xác minh ở vòng 10 của Nghiên cứu, vòng 11 mình bỏ sót): bỏ danh sách cũ (nhật ký chung, sổ cái, sổ quỹ tiền mặt), thay bằng 4 sổ S1–S4 hoặc S01, S02–S10 tùy cách nộp thuế TNDN.
+- `tu-0-den-1.json`, mục `ke-toan-don-gian`: thêm tiêu chí và cách tính lao động, doanh thu, nguồn vốn; điền `legal_basis` Nghị định 80/2021.
+- `questions.json`, câu `revenue_band`: chỉ đổi nhãn cho khớp ngưỡng ("Từ 1 tỷ đồng trở xuống", "Trên 1 tỷ đến 3 tỷ đồng", "Trên 3 tỷ đến 10 tỷ đồng"). Giữ nguyên `value` để không ảnh hưởng câu trả lời đã lưu; giá trị này chưa được dùng trong `rules/` hay code.
+- Chưa thêm mục tự kiểm riêng "Công ty mình có phải DN siêu nhỏ không": đã đưa vào bước `ke-toan-don-gian`. Thêm trang hoặc câu hỏi mới là việc lớn hơn.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

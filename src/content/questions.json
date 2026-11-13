@@ -80,9 +80,9 @@
     "type": "single",
     "options": [
       { "label": "Chưa có doanh thu", "value": "chua_co" },
-      { "label": "Dưới 1 tỷ đồng", "value": "duoi_1_ty" },
-      { "label": "Từ 1 đến 3 tỷ đồng", "value": "1_3_ty" },
-      { "label": "Từ 3 đến 10 tỷ đồng", "value": "3_10_ty" },
+      { "label": "Từ 1 tỷ đồng trở xuống", "value": "duoi_1_ty" },
+      { "label": "Trên 1 tỷ đến 3 tỷ đồng", "value": "1_3_ty" },
+      { "label": "Trên 3 tỷ đến 10 tỷ đồng", "value": "3_10_ty" },
       { "label": "Trên 10 tỷ đồng", "value": "tren_10_ty" }
     ],
     "help_text": ""

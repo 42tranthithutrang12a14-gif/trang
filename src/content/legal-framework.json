@@ -211,14 +211,14 @@
           "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=139173",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
-            "Áp dụng cho DNSN: doanh thu ≤ 10 tỷ/năm, ≤ 10 lao động (thương mại/dịch vụ)",
+            "Áp dụng cho DN siêu nhỏ: lao động đóng BHXH bình quân năm không quá 10 người, và doanh thu năm không quá 10 tỷ (thương mại, dịch vụ) hoặc 3 tỷ (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ (Nghị định 80/2021/NĐ-CP Điều 5 khoản 1)",
             "Hệ thống tài khoản đơn giản hóa so với chế độ chuẩn",
             "Báo cáo tài chính gồm: Bảng CĐKT + Báo cáo KQKD + Thuyết minh đơn giản",
             "Được ghi sổ bằng Excel hoặc phần mềm kế toán"
           ],
           "todo_for_reviewer": [
             "Xác nhận TT 132/2018 còn hiệu lực hay đã có thông tư thay thế",
-            "Xác nhận tiêu chí DNSN theo Luật Hỗ trợ DNNVV 2017 còn đúng không",
+            "Ngày 2026-11-13 (NC-016, đã đối chiếu toàn văn Nghị định 80/2021/NĐ-CP Điều 5–10): sửa key point tiêu chí DN siêu nhỏ (thêm nhánh nông, lâm, thủy sản, công nghiệp, xây dựng; nhánh tổng nguồn vốn; lao động là lao động đóng BHXH bình quân năm). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1",
             "Bổ sung danh sách sổ kế toán bắt buộc tối thiểu",
             "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
             "Cập nhật NC-008: ngày hiệu lực 15/02/2019 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1"

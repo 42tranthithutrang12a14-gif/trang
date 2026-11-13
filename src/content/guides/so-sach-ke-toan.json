@@ -13,7 +13,7 @@
     },
     {
       "heading": "Chế độ kế toán cho doanh nghiệp siêu nhỏ",
-      "content": "Doanh nghiệp siêu nhỏ (doanh thu ≤ 10 tỷ/năm, ≤ 10 lao động trong thương mại/dịch vụ) được áp dụng:\n\nThông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ:\n• Hệ thống tài khoản đơn giản hơn (ít tài khoản hơn)\n• Báo cáo tài chính đơn giản (Bảng cân đối kế toán + Báo cáo kết quả kinh doanh)\n• Không bắt buộc thuyết minh báo cáo tài chính chi tiết\n\nCó thể ghi sổ bằng Excel (đơn giản) hoặc phần mềm kế toán."
+      "content": "Công ty là doanh nghiệp siêu nhỏ khi đạt cả hai điều kiện (Nghị định 80/2021/NĐ-CP Điều 5 khoản 1):\n• Lao động có đóng BHXH bình quân năm không quá 10 người.\n• Doanh thu năm không quá 10 tỷ đồng (thương mại, dịch vụ) hoặc 3 tỷ đồng (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ đồng.\nLĩnh vực xác định theo ngành nghề kinh doanh chính đã đăng ký. Công ty mới, chưa có doanh thu: xét theo tổng nguồn vốn.\n\nDoanh nghiệp siêu nhỏ được áp dụng:\n\nThông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ:\n• Hệ thống tài khoản đơn giản hơn (ít tài khoản hơn)\n• Báo cáo tài chính đơn giản (Bảng cân đối kế toán + Báo cáo kết quả kinh doanh)\n• Không bắt buộc thuyết minh báo cáo tài chính chi tiết\n\nCó thể ghi sổ bằng Excel (đơn giản) hoặc phần mềm kế toán."
     },
     {
       "heading": "Ai làm kế toán?",
@@ -21,7 +21,7 @@
     },
     {
       "heading": "Các sổ kế toán cần mở",
-      "content": "Theo Thông tư 132/2018/TT-BTC (doanh nghiệp siêu nhỏ), các sổ tối thiểu:\n\n• Sổ nhật ký chung: ghi tất cả nghiệp vụ theo thứ tự thời gian\n• Sổ cái tài khoản: theo dõi từng tài khoản (tiền mặt, ngân hàng, hàng hóa, công nợ...)\n• Sổ quỹ tiền mặt: theo dõi thu chi tiền mặt hàng ngày\n• Sổ tiền gửi ngân hàng: đối chiếu với sao kê ngân hàng\n\nHoặc có thể gộp vào phần mềm kế toán — phần mềm tự động lập các sổ này."
+      "content": "Theo Thông tư 132/2018/TT-BTC, sổ phải mở tùy cách nộp thuế TNDN (Điều 3):\n\n• Nộp thuế TNDN theo tỷ lệ % trên doanh thu (doanh thu năm không quá 3 tỷ, không xác định được chi phí): 4 sổ S1-DNSN doanh thu, S2-DNSN lương và bảo hiểm, S3-DNSN vật liệu, hàng hóa, S4-DNSN nghĩa vụ thuế (Điều 17 khoản 1).\n• Nộp thuế TNDN trên thu nhập tính thuế: Sổ Nhật ký – Sổ Cái (S01-DNSN) và các sổ chi tiết S02-DNSN đến S10-DNSN, ghi Nợ/Có theo tài khoản (Điều 11 khoản 1).\n\nKhông có \"sổ quỹ tiền mặt\" riêng trong danh mục. Có thể dùng phần mềm kế toán để lập các sổ này. File sổ thu chi ở trang Công cụ có sẵn 4 trang mẫu S1–S4."
     },
     {
       "heading": "Phần mềm kế toán phổ biến",
@@ -46,7 +46,7 @@
   ],
   "todo_for_reviewer": [
     "Xác nhận Thông tư 132/2018 còn hiệu lực hay đã có văn bản thay thế",
-    "Xác nhận tiêu chí doanh nghiệp siêu nhỏ theo quy định hiện hành",
+    "Ngày 2026-11-13 (NC-016, đã đối chiếu toàn văn Nghị định 80/2021/NĐ-CP Điều 5–10): sửa tiêu chí ở mục \"Chế độ kế toán cho doanh nghiệp siêu nhỏ\". Cùng vòng, sửa mục \"Các sổ kế toán cần mở\" theo NC-009 (Thông tư 132/2018 Điều 3, 11, 17): bỏ danh sách cũ (nhật ký chung, sổ cái, sổ quỹ) không khớp văn bản. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
     "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế. Cập nhật NC-002: Nghị định 41/2018/NĐ-CP đã được sửa bởi Nghị định 132/2026/NĐ-CP, ban hành 06/04/2026, hiệu lực 21/05/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217618&classid=1",
     "Xác nhận người phụ trách kế toán có cần chứng chỉ hay không theo quy định mới nhất. Cập nhật NC-001: Luật Kế toán 88/2015/QH13 đã được sửa bởi Luật 56/2024/QH15 (hiệu lực 01/01/2025). Có Thông tư 101/2026/TT-BTC về chứng chỉ bồi dưỡng kế toán trưởng (hiệu lực 01/01/2027). Khi xác minh phải đọc cả hai, cùng Nghị định 174/2016/NĐ-CP. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212484&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218950&classid=1",
     "Điền legal_basis với số điều khoản cụ thể và link chính thức",
