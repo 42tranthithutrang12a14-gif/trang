@@ -603,6 +603,41 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - **Kết luận:** Điều 13 Nghị định 125/2020 hiện hành gồm khoản 1–4 và khoản 6 điểm b bản gốc; khoản 5 và khoản 6 điểm a theo Nghị định 310/2025 (hiệu lực 16/01/2026). Bảng phạt trong NC-018 là mức hiện hành theo các văn bản đã đọc.
 - **Đề xuất sửa (Biên tập):** bỏ todo "chưa đọc Nghị định 291/2026" ở các chỗ ghi mức phạt chậm nộp tờ khai; thêm vào `legal_basis` ghi chú: đã đối chiếu Nghị định 102/2021/NĐ-CP và 291/2026/NĐ-CP, hai văn bản này không sửa Điều 13 (ngày tra 2026-11-13).
 
+### Ghi chú vòng 21 (2026-11-13, 12:19 UTC)
+
+- Đã rà commit `16a2c0e` (bổ sung NC-018): chỉ ghi nhận đã đối chiếu 102/2021, 291/2026 và bỏ todo tương ứng. Đúng đề xuất.
+- Vòng này làm NC-019: báo cáo tài chính năm của DN siêu nhỏ (gồm gì, nộp cho ai, hạn nào, ai được miễn nộp) và thời hạn lưu trữ chứng từ. Các câu "Nộp báo cáo tài chính trước 31/3 mỗi năm", "Lưu hóa đơn, chứng từ ít nhất 10 năm" trong `bat-dau.json` đang chưa có nguồn.
+
+### NC-019 — Báo cáo tài chính DN siêu nhỏ: hạn 90 ngày sau năm tài chính, gửi cơ quan thuế và cơ quan đăng ký kinh doanh; DN nộp TNDN theo % doanh thu không bắt buộc lập để nộp (TT 132/2018 Điều 13, 14, 18); lưu trữ 5 hoặc 10 năm (Nghị định 174/2016 Điều 12, 13, 15)
+
+- Trạng thái: đã xác minh
+- Liên quan:
+  - `bat-dau.json` dòng 155 ("Nộp báo cáo tài chính trước 31/3 mỗi năm"), dòng 154 ("Lưu hóa đơn, chứng từ ít nhất 10 năm"), todo dòng 160–161; lịch tháng 3 dòng 533 ("Nộp báo cáo tài chính năm trước", hạn "31/3"), todo dòng 537.
+  - `legal-framework.json` dòng 198 ("Lập và nộp báo cáo tài chính hàng năm: hạn 31/03 năm tiếp theo"); dòng 216 ("Báo cáo tài chính gồm: Bảng CĐKT + Báo cáo KQKD + Thuyết minh đơn giản").
+  - `guides/so-sach-ke-toan.json` dòng 32 ("Hạn nộp: 31/3 năm tiếp theo…").
+- Nguồn:
+  - Thông tư 132/2018/TT-BTC — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2019/02/132-btc.signed.pdf (bản quét, đã OCR). Mở lại ngày 2026-11-13.
+  - Nghị định 174/2016/NĐ-CP — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2017/01/174.signed.pdf (bản quét, đã OCR). Mở lại ngày 2026-11-13.
+- Phát hiện:
+  - **TT 132/2018, Điều 13 khoản 1 (PDF trang 6):** DN siêu nhỏ nộp TNDN theo thu nhập tính thuế lập hằng năm: Báo cáo tình hình tài chính (Mẫu B01-DNSN); Báo cáo kết quả hoạt động kinh doanh (Mẫu B02-DNSN); phụ biểu: Bảng cân đối tài khoản (Mẫu F01-DNSN), Báo cáo tình hình thực hiện nghĩa vụ với NSNN (Mẫu F02-DNSN). Khoản 2: mẫu và cách lập ở Phụ lục 5. Khoản 3: được chọn thêm báo cáo theo TT 133/2016.
+  - **TT 132/2018, Điều 14 khoản 2 (PDF trang 7):** "Báo cáo tài chính và các phụ biểu báo cáo tài chính của doanh nghiệp siêu nhỏ phải được gửi cho cơ quan thuế quản lý trực tiếp doanh nghiệp và cơ quan đăng ký kinh doanh chậm nhất là 90 ngày kể từ ngày kết thúc năm tài chính đồng thời phải được bảo quản, lưu trữ tại doanh nghiệp…"
+  - **TT 132/2018, Điều 18 (PDF trang 9–10):** khoản 1: DN siêu nhỏ nộp TNDN theo tỷ lệ % trên doanh thu "không bắt buộc phải lập báo cáo tài chính để nộp cho cơ quan thuế"; khoản 2: thực hiện các báo cáo theo pháp luật thuế; khoản 4: nếu chọn áp dụng Chương II thì vẫn lập BCTC nhưng "không phải nộp cho cơ quan thuế", lưu tại DN.
+  - **Nghị định 174/2016, Điều 12 (PDF trang 9–10):** lưu tối thiểu 5 năm: chứng từ kế toán **không** dùng trực tiếp để ghi sổ và lập BCTC (phiếu thu, phiếu chi, phiếu nhập kho, xuất kho không lưu trong tập tài liệu kế toán); tài liệu dùng cho quản lý, điều hành không trực tiếp ghi sổ.
+  - **Nghị định 174/2016, Điều 13 (PDF trang 10):** lưu tối thiểu 10 năm: chứng từ kế toán dùng trực tiếp để ghi sổ và lập BCTC, bảng kê, bảng tổng hợp chi tiết, sổ kế toán chi tiết và tổng hợp, BCTC tháng, quý, năm, báo cáo quyết toán, biên bản tiêu hủy tài liệu…; tài liệu thanh lý, nhượng bán tài sản cố định; tài liệu thành lập, chia, tách, hợp nhất, sáp nhập, chuyển đổi, giải thể, phá sản.
+  - **Nghị định 174/2016, Điều 15 khoản 1:** thời hạn lưu trữ (Điều 12, khoản 1, 2, 7 Điều 13, Điều 14) tính từ ngày kết thúc kỳ kế toán năm.
+- **Kết luận:**
+  1. Hạn nộp BCTC là "chậm nhất 90 ngày kể từ ngày kết thúc năm tài chính", gửi **cả** cơ quan thuế quản lý trực tiếp **và** cơ quan đăng ký kinh doanh. Năm tài chính 01/01–31/12 thì 90 ngày rơi vào 31/3 (năm thường) hoặc 30/3 (năm nhuận, vì tháng 2 có 29 ngày). Ghi "31/3" sai một ngày vào năm nhuận; nên ghi "90 ngày" kèm ngày cụ thể.
+  2. BCTC của DN siêu nhỏ (Chương II) là B01-DNSN và B02-DNSN, kèm phụ biểu F01-DNSN và F02-DNSN. Câu "Bảng CĐKT + Báo cáo KQKD + Thuyết minh đơn giản" không khớp tên và danh mục trong TT 132/2018 (không có Thuyết minh trong danh mục bắt buộc).
+  3. DN nộp TNDN theo % doanh thu (chế độ 4 sổ, NC-009/NC-010) **không bắt buộc lập BCTC để nộp cho cơ quan thuế**. Câu "Nộp báo cáo tài chính trước 31/3 mỗi năm" áp cho mọi DN là chưa đúng.
+  4. "Lưu ít nhất 10 năm" đúng với chứng từ dùng ghi sổ, sổ kế toán, BCTC; một số chứng từ không dùng trực tiếp để ghi sổ chỉ cần 5 năm. Thời hạn tính từ ngày kết thúc kỳ kế toán năm.
+  5. Hạn quyết toán TNDN (31/3 với năm dương lịch, NC-013) là "ngày cuối cùng của tháng thứ 3" nên luôn là 31/3, khác hạn BCTC trong năm nhuận.
+- **Đề xuất sửa (Biên tập):**
+  - `bat-dau.json` dòng 155: "Nộp báo cáo tài chính năm chậm nhất 90 ngày sau khi kết thúc năm tài chính (năm dương lịch: 31/3; năm nhuận: 30/3), gửi cơ quan thuế và cơ quan đăng ký kinh doanh. DN nộp thuế TNDN theo tỷ lệ % trên doanh thu không bắt buộc nộp." Dòng 154: "Lưu chứng từ dùng để ghi sổ, sổ kế toán và báo cáo tài chính ít nhất 10 năm, tính từ ngày kết thúc năm kế toán." Lịch tháng 3 dòng 533: hạn BCTC ghi "31/3 (năm nhuận 30/3)" và ghi chú "không áp dụng cho DN nộp TNDN theo % doanh thu".
+  - `legal-framework.json` dòng 198: đổi như trên. Dòng 216: "Báo cáo tài chính gồm: Báo cáo tình hình tài chính (B01-DNSN), Báo cáo kết quả hoạt động kinh doanh (B02-DNSN); phụ biểu: Bảng cân đối tài khoản (F01-DNSN), Báo cáo tình hình thực hiện nghĩa vụ với NSNN (F02-DNSN)."
+  - `so-sach-ke-toan.json` dòng 32: cùng nội dung hạn, nơi nộp, trường hợp không bắt buộc.
+  - `legal_basis`: TT 132/2018/TT-BTC Điều 13 khoản 1, Điều 14 khoản 2, Điều 18 khoản 1, 4; Nghị định 174/2016/NĐ-CP Điều 12, Điều 13 khoản 1, 2, 4, Điều 15 khoản 1; URL như trên; `verified_against_original: true`. Bỏ các todo "xác minh hạn nộp BCTC", "xác minh thời hạn lưu trữ".
+  - Không viết cách nộp BCTC qua mạng cho tới khi có hướng dẫn chính thức (thuộc phần thao tác).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
