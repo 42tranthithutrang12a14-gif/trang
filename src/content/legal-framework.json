@@ -159,7 +159,7 @@
     },
     {
       "id": "thue-mon-bai",
-      "label": "Lệ phí môn bài",
+      "label": "Lệ phí môn bài (đã bỏ từ 2026)",
       "icon": "📋",
       "laws": [
         {
@@ -170,16 +170,11 @@
           "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=118694",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
-            "Doanh nghiệp mới thành lập: miễn lệ phí môn bài năm đầu tiên",
-            "Doanh thu trên 10 tỷ/năm: 3.000.000 đ/năm",
-            "Doanh thu từ 10 tỷ trở xuống (DNSN): 2.000.000 đ/năm",
-            "Hạn nộp: 30/01 hàng năm"
+            "Chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7)",
+            "Mục này chỉ giữ để tra cứu nghĩa vụ các năm trước 2026. Mức phí, hạn nộp cũ chưa xác minh nên không ghi ở đây."
           ],
           "todo_for_reviewer": [
-            "Xác nhận mức phí 2tr/3tr còn đúng theo NĐ 22/2020 và văn bản mới hơn nếu có",
-            "Xác nhận miễn năm đầu còn áp dụng không",
-            "Xác nhận hạn nộp 30/01",
-            "Theo báo chí (chưa xác minh): Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì cả mục này đã hết hiệu lực. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+            "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã đổi tên nhóm, thay key_points (bỏ các ý mức phí 2–3 triệu, miễn năm đầu, hạn 30/01 khỏi nghĩa vụ hiện hành).",
             "Cập nhật NC-008: ngày hiệu lực 01/01/2017 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=186624&classid=1"
           ]
         }

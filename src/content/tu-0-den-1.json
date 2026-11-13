@@ -878,19 +878,48 @@
         "sample_notice": "MẪU – CHƯA XÁC MINH",
         "level": "phai-biet",
         "title": "Có thể được miễn thuế TNDN trong 3 năm đầu",
-        "who": "Doanh nghiệp nhỏ và vừa thành lập mới.",
-        "benefit": "Miễn thuế TNDN trong 3 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu.",
+        "who": "Doanh nghiệp nhỏ và vừa (gồm doanh nghiệp siêu nhỏ) đăng ký kinh doanh lần đầu.",
+        "benefit": "Miễn thuế TNDN trong 3 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu, tính liên tục từ năm được cấp giấy. Áp dụng từ kỳ tính thuế năm 2025. Công ty cấp giấy trước đó mà còn thời gian thì hưởng phần còn lại.",
         "how": [
-          "Tự đối chiếu công ty với điều kiện được miễn.",
+          "Tự đối chiếu công ty với điều kiện được miễn. Không được miễn nếu: công ty lập ra do sáp nhập, hợp nhất, chia, tách, chuyển đổi chủ sở hữu hoặc loại hình; hoặc người đại diện theo pháp luật (có góp vốn), thành viên hợp danh, người góp vốn nhiều nhất đang giữ vai trò đó ở một công ty khác còn hoạt động, hoặc ở công ty đã giải thể chưa đủ 12 tháng.",
+          "Năm đầu hoạt động chưa đủ 12 tháng: được chọn hưởng miễn thuế ngay từ năm đó, hoặc đăng ký bắt đầu từ năm sau.",
+          "Được nhiều ưu đãi cùng lúc (ví dụ cả miễn 3 năm và miễn vì doanh thu từ 1 tỷ trở xuống): chọn ưu đãi có lợi nhất, giữ ổn định trong thời gian hưởng.",
           "Đây là khoản lớn: chưa chắc mình đủ điều kiện thì hỏi cơ quan thuế quản lý hoặc kế toán trước khi áp dụng, để tránh bị truy thu.",
-          "Vẫn khai thuế đúng hạn trong thời gian được miễn."
+          "Vẫn khai thuế đúng hạn trong thời gian được miễn, và vẫn nộp tờ khai quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1)."
         ],
         "links": [],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "198/2025/QH15",
+            "title": "Nghị quyết về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân",
+            "issuer": "Quốc hội",
+            "issued_date": "2025-05-17",
+            "effective_date": "2025-05-17",
+            "article": "Điều 10 khoản 4; Điều 17",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "20/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết Nghị quyết 198/2025/QH15",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-01-15",
+            "effective_date": "2026-01-15",
+            "article": "Điều 7 khoản 3 điểm a, b, khoản 4, khoản 5; Điều 16 khoản 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Gợi ý của trợ lý AI (chưa xác minh): theo Nghị quyết 198/2025/QH15 về phát triển kinh tế tư nhân. Xác minh có quy định này không, điều kiện, thời điểm áp dụng và văn bản hướng dẫn.",
-          "Xác minh DN được miễn có còn phải khai và quyết toán thuế TNDN không.",
-          "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
+          "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): đối chiếu Nghị quyết 198/2025 Điều 10 khoản 4 và Nghị định 20/2026 Điều 7 khoản 3–5, Điều 16 khoản 2. Sửa who, benefit, thêm điều kiện loại trừ, cách chọn kỳ đầu, chọn ưu đãi có lợi nhất; điền legal_basis. Giữ câu khuyên hỏi cơ quan thuế vì khoản lớn, rủi ro truy thu. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",
+          "Đã trả lời ở NC-014: DN được miễn vẫn quyết toán TNDN năm.",
+          "Tiêu chí doanh nghiệp nhỏ và vừa, siêu nhỏ (Nghị định 80/2021/NĐ-CP) chưa đọc toàn văn. Điểm b2 (điều kiện người đại diện, người góp vốn) nên đối chiếu lại bản gốc trước khi viết chi tiết hơn."
         ]
       },
       {
@@ -900,16 +929,30 @@
         "level": "phai-biet",
         "title": "Không còn lệ phí môn bài",
         "who": "Doanh nghiệp và hộ kinh doanh.",
-        "benefit": "Lệ phí môn bài được chấm dứt thu từ ngày 1/1/2026.",
+        "benefit": "Lệ phí môn bài được chấm dứt thu từ ngày 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7).",
         "how": [
           "Không cần làm gì thêm.",
           "Tự tra cứu trên tài khoản thuế điện tử xem các năm trước 2026 đã nộp đủ chưa."
         ],
         "links": [],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "198/2025/QH15",
+            "title": "Nghị quyết về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân",
+            "issuer": "Quốc hội",
+            "issued_date": "2025-05-17",
+            "effective_date": "2025-05-17",
+            "article": "Điều 10 khoản 7; Điều 17 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Theo báo chí (chưa xác minh): Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
-          "Nếu đúng thì sửa các chỗ khác trong app còn nhắc lệ phí môn bài (/bat-dau, legal-framework.json).",
+          "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+          "Đã sửa /bat-dau và legal-framework.json (NC-015, 2026-11-13).",
           "Xác minh cách tra cứu nghĩa vụ thuế đã nộp trên thuế điện tử.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]

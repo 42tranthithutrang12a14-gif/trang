@@ -49,9 +49,22 @@
         "examples": [
           "GTGT: khai hàng tháng hoặc hàng quý",
           "TNDN: tạm nộp theo quý, quyết toán năm. Doanh thu năm trước từ 1 tỷ đồng trở xuống: được miễn thuế, vẫn quyết toán năm",
-          "Môn bài: nộp 1 lần/năm trước 30/1"
+          "Lệ phí môn bài: đã bỏ từ 01/01/2026"
         ],
         "legal_basis": [
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "198/2025/QH15",
+            "title": "Nghị quyết về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân",
+            "issuer": "Quốc hội",
+            "issued_date": "2025-05-17",
+            "effective_date": "2025-05-17",
+            "article": "Điều 10 khoản 7",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Thông tư",
             "doc_number": "89/2026/TT-BTC",
@@ -94,7 +107,7 @@
         ],
         "todo_for_reviewer": [
           "legal_basis chỉ phủ ý miễn thuế TNDN (NC-011); các ý GTGT, môn bài, tạm nộp quý chưa xác minh.",
-          "\"Môn bài: nộp 1 lần/năm trước 30/1\": theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ dòng này. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+          "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã đổi ví dụ thành \"Lệ phí môn bài: đã bỏ từ 01/01/2026\".",
           "\"Khai đúng hạn quan trọng hơn khai đúng số\" là nhận định, giống lời khuyên thuế, không phải quy định. Cần đối chiếu quy định xử phạt khai sai trước khi đăng, hoặc bỏ.",
           "\"Chậm nộp tờ khai bị phạt ngay cả khi không phát sinh thuế\": xác minh theo nghị định xử phạt về thuế đang có hiệu lực.",
           "GTGT khai tháng/quý, TNDN tạm nộp quý và quyết toán năm: xác minh tiêu chí và văn bản đang có hiệu lực.",
@@ -259,11 +272,25 @@
         "tasks": [
           { "text": "Đăng ký con dấu doanh nghiệp (nếu cần)", "note": "DN tự quyết định có dùng con dấu hay không" },
           { "text": "Đăng ký BHXH nếu có nhân viên", "note": "Phải đăng ký trong 30 ngày kể từ ngày ký HĐLĐ" },
-          { "text": "Nộp lệ phí môn bài năm đầu", "note": "Miễn năm đầu nếu thành lập trong năm — cần xác minh" }
+          { "text": "Không còn nộp lệ phí môn bài", "note": "Chấm dứt thu từ 01/01/2026. Không cần làm gì" }
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "198/2025/QH15",
+            "title": "Nghị quyết về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân",
+            "issuer": "Quốc hội",
+            "issued_date": "2025-05-17",
+            "effective_date": "2025-05-17",
+            "article": "Điều 10 khoản 7",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ việc này. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+          "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã thay việc \"Nộp lệ phí môn bài năm đầu\". legal_basis chỉ phủ ý này.",
           "Con dấu: việc ghi \"Đăng ký con dấu\" nhưng ghi chú nói \"DN tự quyết định\". Xác minh hiện còn phải đăng ký hoặc thông báo mẫu dấu không.",
           "BHXH \"trong 30 ngày kể từ ngày ký HĐLĐ\": xác minh thời hạn, mốc tính và đối tượng theo Luật BHXH đang có hiệu lực.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
@@ -361,11 +388,25 @@
         "sample_notice": "MẪU – CHƯA XÁC MINH",
         "month": "Tháng 1",
         "entries": [
-          { "text": "Nộp lệ phí môn bài", "deadline": "30/1", "type": "tax" }
+          { "text": "Không còn nộp lệ phí môn bài (đã bỏ từ 01/01/2026)", "deadline": "Không có", "type": "tax" }
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "198/2025/QH15",
+            "title": "Nghị quyết về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân",
+            "issuer": "Quốc hội",
+            "issued_date": "2025-05-17",
+            "effective_date": "2025-05-17",
+            "article": "Điều 10 khoản 7",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Lệ phí môn bài: theo báo chí (chưa xác minh), Nghị quyết 198/2025/QH15 chấm dứt thu lệ phí môn bài từ 1/1/2026. Cần mở văn bản gốc. Nếu đúng thì bỏ cả mục này. Cập nhật NC-003: đã thấy Nghị quyết 198/2025/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành và hiệu lực 17/05/2025; có Nghị định 20/2026/NĐ-CP hướng dẫn. Chưa đọc điều về lệ phí môn bài. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1",
+          "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã thay dòng \"Nộp lệ phí môn bài, hạn 30/1\".",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },

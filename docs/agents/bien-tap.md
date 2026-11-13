@@ -165,6 +165,17 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Quyết toán TNDN của DN được miễn: thay câu "cách hiểu" bằng "vẫn phải nộp tờ khai quyết toán TNDN năm, hạn 31/3 năm sau" (Điều 21 khoản 1 điểm c.1) ở guide tạm nộp, mục miễn thuế trong `tu-0-den-1.json`, trụ cột Thuế trong `bat-dau.json`. Cập nhật ý (1) của todo "Còn mở sau NC-011" ở 4 file.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 17 (2026-11-13, 03:17 UTC)
+
+- Đọc NC-015 (Nghị quyết 198/2025/QH15 Điều 10, Nghị định 20/2026/NĐ-CP Điều 7, 10, 16; đã xác minh). Status giữ "draft".
+- Lệ phí môn bài (chấm dứt thu từ 01/01/2026, Nghị quyết 198/2025 Điều 10 khoản 7):
+  - `bat-dau.json`: trụ cột Thuế "Môn bài: nộp 1 lần/năm trước 30/1" → "Lệ phí môn bài: đã bỏ từ 01/01/2026"; việc "Nộp lệ phí môn bài năm đầu" → "Không còn nộp lệ phí môn bài"; lịch năm Tháng 1 → "Không còn nộp lệ phí môn bài (đã bỏ từ 01/01/2026)", hạn "Không có". Điền `legal_basis` 3 chỗ.
+  - `legal-framework.json`: nhóm đổi tên "Lệ phí môn bài (đã bỏ từ 2026)"; key_points chỉ còn ý chấm dứt thu và ghi chú tra cứu năm cũ (bỏ mức phí, miễn năm đầu, hạn 30/01 chưa xác minh).
+  - `tu-0-den-1.json` mục `bo-le-phi-mon-bai`: điền `legal_basis`, bỏ todo "theo báo chí".
+- Miễn TNDN 3 năm cho DN nhỏ và vừa đăng ký lần đầu (`tu-0-den-1.json`, `mien-tndn-dn-moi`): sửa who, benefit (tính liên tục, áp dụng từ kỳ 2025, phần còn lại cho DN cũ); thêm điều kiện loại trừ, cách chọn kỳ đầu, chọn ưu đãi có lợi nhất, vẫn quyết toán năm; điền `legal_basis`. Giữ câu khuyên hỏi cơ quan thuế, có lý do (khoản lớn, rủi ro truy thu).
+- `so-ke-toan.json`: thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10 (chưa có tên nền tảng, không dẫn link).
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -182,6 +193,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 15) NC-013: hạn trùng ngày nghỉ, lễ có được dời sang ngày làm việc tiếp theo không (app đang ghi có, engine dùng `next_working_day`). Thông tư 89/2026 có nói rõ DN được miễn TNDN vẫn nộp quyết toán không.
 
 - (Vòng 16) NC-014: DN mới chọn khai GTGT quý ở đâu (tờ khai đăng ký thuế, hay tờ khai đầu tiên). Cần cho trang thao tác.
+
+- (Vòng 17) NC-015: xin đọc Nghị định 80/2021/NĐ-CP (tiêu chí DN siêu nhỏ, nhỏ, vừa). Nhiều mục (miễn 3 năm, chế độ kế toán, phụ trách kế toán) đều dựa vào tiêu chí này.
 
 ## Cần chủ dự án quyết
 
