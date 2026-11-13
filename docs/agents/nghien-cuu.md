@@ -732,6 +732,40 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `tu-0-den-1.json` bước `phuong-phap-thue-gtgt`: thêm vào `how`: "Công ty mới thành lập có thuê địa điểm kinh doanh, hoặc mua sắm, nhận góp vốn bằng tài sản, máy móc, công cụ, được đăng ký tự nguyện tính theo phương pháp khấu trừ ngay từ đầu. Không đăng ký và doanh thu ước tính cả năm dưới 1 tỷ thì tính trực tiếp trong 2 năm." "Phương pháp đã chọn được giữ 2 năm liên tục. Doanh thu để xét lấy trên tờ khai GTGT từ tháng 11 năm trước đến tháng 10 năm nay." `legal_basis` thêm: Nghị định 181/2025/NĐ-CP Điều 21 khoản 1 điểm a, b; khoản 2 điểm a, đ; URL https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1; ghi chú đã đối chiếu Nghị định 359/2025 và 144/2026 không sửa Điều 21; `verified_against_original: true`. Thay todo "Xác minh phương pháp áp dụng cho DN mới" bằng todo "Mẫu và thời hạn đăng ký tự nguyện khấu trừ: chưa xác minh".
   - `questions.json` `vat_method` `help_text`: thêm "DN mới có thuê địa điểm hoặc mua tài sản, công cụ được đăng ký tự nguyện khấu trừ."
 
+### Ghi chú vòng 25 (2026-11-13, 20:18 UTC)
+
+- Đã rà commit `46affed` (bổ sung NC-021): thêm DN mới thuê địa điểm, mua tài sản được tự nguyện khấu trừ; phương pháp giữ 2 năm. Đúng đề xuất.
+- Vòng này làm NC-022: đối tượng, hạn đăng ký, mức đóng BHXH bắt buộc theo Luật BHXH 41/2024 — đặc biệt giám đốc, người quản lý DN siêu nhỏ (thường chính là chủ DN). App chưa nhắc nghĩa vụ này.
+
+### NC-022 — Từ 01/07/2025, người quản lý doanh nghiệp (giám đốc, chủ tịch công ty…) phải đóng BHXH bắt buộc kể cả khi không hưởng lương; đăng ký trong 30 ngày (Luật BHXH 41/2024)
+
+- Trạng thái: đã xác minh
+- Liên quan: `bat-dau.json` dòng 341 ("Đăng ký BHXH nếu có nhân viên", "Phải đăng ký trong 30 ngày kể từ ngày ký HĐLĐ") và todo dòng 362; `tu-0-den-1.json` dòng ~739 (hạn "Trong 30 ngày kể từ ngày ký hợp đồng lao động"); `questions.json` `insured_headcount` ("kể cả giám đốc"), `pays_wages`; `legal-framework.json` mục Luật BHXH (đang dẫn 58/2014/QH13).
+- Nguồn: Luật Bảo hiểm xã hội 41/2024/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/9/41-2024-qh15.pdf (bản Công báo số 987+988 ngày 25/8/2024, có lớp chữ). Điều 141 khoản 1: "Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2025." Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Điều 2 khoản 1 (Công báo trang 3–4)**, người lao động là công dân Việt Nam thuộc đối tượng BHXH bắt buộc, gồm:
+    - Điểm a: người làm việc theo hợp đồng lao động không xác định thời hạn, xác định thời hạn từ đủ 01 tháng trở lên, kể cả thỏa thuận bằng tên gọi khác nhưng có nội dung làm việc có trả công, tiền lương và sự quản lý, điều hành, giám sát.
+    - Điểm i: "Người quản lý doanh nghiệp, kiểm soát viên, người đại diện phần vốn nhà nước, người đại diện phần vốn của doanh nghiệp theo quy định của pháp luật; … có hưởng tiền lương".
+    - Điểm l: lao động ở điểm a làm việc không trọn thời gian có tiền lương tháng bằng hoặc cao hơn tiền lương làm căn cứ đóng thấp nhất.
+    - Điểm n: "Người quản lý doanh nghiệp, kiểm soát viên, người đại diện phần vốn nhà nước, người đại diện phần vốn của doanh nghiệp theo quy định của pháp luật; … không hưởng tiền lương."
+  - **Điều 2 khoản 5 điểm c:** người ở điểm i, n quản lý nhiều doanh nghiệp thì tham gia tại doanh nghiệp đầu tiên tham gia quản lý, điều hành. **Khoản 7 điểm c:** người ở điểm m, n đã đủ tuổi nghỉ hưu thì không thuộc đối tượng bắt buộc (trừ trường hợp còn thiếu tối đa 6 tháng đóng). Điểm a: người đang hưởng lương hưu, trợ cấp BHXH hằng tháng cũng không thuộc đối tượng bắt buộc.
+  - **Điều 28 khoản 1 (Công báo trang 23–24):** người sử dụng lao động kê khai, nộp hồ sơ tham gia BHXH bắt buộc của người lao động "trong thời hạn 30 ngày kể từ ngày người lao động thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc". Khoản 2: người ở điểm m, n tự nộp thì nộp tờ khai trong 30 ngày kể từ ngày thuộc đối tượng. Điều 27 khoản 2: người ở điểm n nộp qua người sử dụng lao động hoặc tự nộp.
+  - **Điều 31 khoản 1 điểm d (Công báo trang 25):** người ở điểm g, h, m, n "được lựa chọn tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc nhưng thấp nhất bằng mức tham chiếu và cao nhất bằng 20 lần mức tham chiếu tại thời điểm đóng"; sau ít nhất 12 tháng được chọn lại.
+  - **Điều 33 khoản 4 (Công báo trang ~27):** người ở điểm m, n: "a) Mức đóng hằng tháng bằng 3% tiền lương làm căn cứ đóng… vào quỹ ốm đau và thai sản, 22%… vào quỹ hưu trí và tử tuất; b) Đóng trực tiếp cho cơ quan bảo hiểm xã hội hoặc đóng qua hộ kinh doanh, doanh nghiệp… theo phương thức đóng hằng tháng, 03 tháng hoặc 06 tháng một lần; thời hạn đóng chậm nhất là ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng."
+- **Kết luận:**
+  1. Chủ DN siêu nhỏ giữ chức người quản lý doanh nghiệp (giám đốc, chủ tịch công ty, thành viên hội đồng thành viên… theo Luật Doanh nghiệp) **phải tham gia BHXH bắt buộc từ 01/07/2025**, kể cả khi không nhận lương (điểm n). Trừ khi đã đủ tuổi nghỉ hưu hoặc đang hưởng lương hưu, hoặc đang tham gia BHXH bắt buộc ở DN khác mà mình quản lý trước.
+  2. Người quản lý không hưởng lương tự chọn mức lương làm căn cứ đóng, từ mức tham chiếu đến 20 lần mức tham chiếu; đóng 25% (3% + 22%), hằng tháng, 3 tháng hoặc 6 tháng một lần; tự đóng hoặc đóng qua DN; đăng ký trong 30 ngày.
+  3. Hạn đăng ký BHXH cho nhân viên: 30 ngày kể từ ngày người lao động thuộc đối tượng (thường là ngày bắt đầu làm việc theo HĐLĐ từ đủ 1 tháng), không phải "kể từ ngày ký HĐLĐ".
+  4. Câu "Đăng ký BHXH nếu có nhân viên" chưa đủ: DN không có nhân viên vẫn phải đăng ký cho người quản lý.
+  5. Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa "người quản lý doanh nghiệp" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 — chưa trích); Nghị định 158/2025 hướng dẫn BHXH bắt buộc (chưa đọc); BHYT, BHTN của người quản lý không lương (Luật BHYT, Luật Việc làm — chưa đọc).
+- **Đề xuất sửa (Biên tập):**
+  - `bat-dau.json` dòng 341: đổi thành "Đăng ký BHXH bắt buộc cho người quản lý công ty (giám đốc, chủ tịch công ty…) và cho nhân viên có hợp đồng từ đủ 1 tháng"; note: "Trong 30 ngày kể từ ngày thuộc diện phải đóng. Từ 01/07/2025, người quản lý không nhận lương cũng phải đóng." Bỏ todo "xác minh thời hạn, mốc tính và đối tượng" ở dòng 362.
+  - `tu-0-den-1.json` bước BHXH (~dòng 739): hạn "Trong 30 ngày kể từ ngày người lao động thuộc diện phải đóng"; thêm mục riêng "Giám đốc không nhận lương vẫn phải đóng BHXH": tự chọn mức lương làm căn cứ (từ mức tham chiếu đến 20 lần), đóng 25%, hằng tháng hoặc 3, 6 tháng một lần, hạn chậm nhất ngày cuối tháng sau chu kỳ đóng; không áp dụng nếu đã đủ tuổi nghỉ hưu, đang hưởng lương hưu, hoặc đã đóng ở DN khác mình quản lý trước. Đây là nghĩa vụ mới và số tiền không nhỏ: giữ câu khuyên hỏi cơ quan BHXH để xác nhận trường hợp của mình.
+  - `questions.json` `insured_headcount` `help_text`: "Từ 01/07/2025, giám đốc, người quản lý công ty phải đóng BHXH kể cả khi không nhận lương."
+  - `legal-framework.json` mục Luật BHXH: có thể đổi `number` thành 41/2024/QH15, `effective_from` 01/07/2025 (đã đọc Điều 141 khoản 1).
+  - `legal_basis`: Luật BHXH 41/2024/QH15 Điều 2 khoản 1 điểm a, i, l, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27 khoản 2; Điều 28 khoản 1, 2; Điều 31 khoản 1 điểm d; Điều 33 khoản 4; Điều 141 khoản 1; URL https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1; `verified_against_original: true`.
+  - Todo: mức tham chiếu, Nghị định 158/2025, BHYT và BHTN của người quản lý không lương — chưa xác minh. Không ghi số tiền.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
