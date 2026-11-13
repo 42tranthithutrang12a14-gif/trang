@@ -245,6 +245,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `questions.json`, `vat_method`: thêm vào `help_text` câu về DN mới được tự nguyện khấu trừ.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 25 (2026-11-13, 21:17 UTC)
+
+- Đọc NC-022 (BHXH bắt buộc cho người quản lý doanh nghiệp, Luật BHXH 41/2024; đã xác minh). Status giữ "draft". Commit `3fd7988`, sửa tiếp ở commit sau.
+- `tu-0-den-1.json`: thêm bước mới `bhxh-nguoi-quan-ly` (bắt buộc): người quản lý phải đóng từ 01/07/2025 kể cả khi không nhận lương; trường hợp không áp dụng; tự chọn mức lương làm căn cứ (mức tham chiếu đến 20 lần); đóng 25% (3% + 22%); kỳ đóng và hạn; giữ câu khuyên hỏi cơ quan BHXH, có lý do. Bước `lao-dong-bhxh`: hạn đổi thành "30 ngày kể từ ngày người lao động thuộc diện phải đóng". Điền `legal_basis` cả hai.
+- `bat-dau.json`, Tháng 1–3: "Đăng ký BHXH nếu có nhân viên" → "Đăng ký BHXH bắt buộc cho người quản lý công ty và cho nhân viên có hợp đồng từ đủ 1 tháng", ghi chú hạn và người quản lý không lương. Điền `legal_basis`.
+- `questions.json`, `insured_headcount`: thêm `help_text`.
+- `legal-framework.json`, mục Luật BHXH: 58/2014/QH13 → 41/2024/QH15, hiệu lực 01/07/2025; key_points viết lại; bỏ "tổng ~32%" và "hạn đóng cuối tháng" chưa có nguồn.
+- Chưa ghi số tiền mức tham chiếu, tỷ lệ đóng cho nhân viên, BHYT, BHTN (chưa xác minh). Dòng lịch năm "Đóng BHXH, BHYT, BHTN: cuối tháng" giữ todo cũ.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -268,6 +278,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Đã trả lời ở NC-018 bổ sung.) (Vòng 20) NC-018: xin đọc Nghị định 291/2026/NĐ-CP (và 102/2021) xem có sửa Điều 13 Nghị định 125/2020 không, trước khi coi các khung phạt là hiện hành.
 
 - (Vòng 23) NC-021: xin đọc Nghị định 181/2025 (và bản sửa 359/2025, 144/2026): cách tính doanh thu hằng năm để chọn khấu trừ hay trực tiếp, thủ tục đăng ký tự nguyện khấu trừ, DN mới thành lập. Và kỳ khai, mẫu tờ khai GTGT cho phương pháp trực tiếp.
+
+- (Vòng 25) NC-022: xin xác minh mức tham chiếu hiện tại, tỷ lệ đóng BHXH, BHYT, BHTN của DN và người lao động, hạn đóng hằng tháng (Nghị định 158/2025, Luật BHYT, Luật Việc làm).
 
 ## Cần chủ dự án quyết
 

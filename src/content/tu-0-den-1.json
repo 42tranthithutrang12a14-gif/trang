@@ -773,8 +773,7 @@
           ],
           "todo_for_reviewer": [
             "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): mục mới do agent Biên tập thêm theo Điều 2 khoản 1 điểm i, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27, 28, 31, 33. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
-            "Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn.",
-            "Link baohiemxahoi.gov.vn chưa kiểm tra có trong official_sources.json không; mục lao-dong-bhxh đang dùng link này."
+            "Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn."
           ]
         },
         {
