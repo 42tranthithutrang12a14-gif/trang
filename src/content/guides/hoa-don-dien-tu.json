@@ -4,24 +4,28 @@
   "sample_notice": "MẪU – CHƯA XÁC MINH",
   "title": "Đăng ký và sử dụng hóa đơn điện tử",
   "category": "thue",
-  "summary": "Từ ngày 01/7/2022, toàn bộ doanh nghiệp bắt buộc chuyển sang sử dụng hóa đơn điện tử (e-invoice). Doanh nghiệp chưa đăng ký hoặc vẫn dùng hóa đơn giấy có thể bị phạt và hóa đơn không có giá trị pháp lý.",
+  "summary": "Doanh nghiệp bán hàng, cung cấp dịch vụ phải dùng hóa đơn điện tử. Từ 01/07/2026 áp dụng Nghị định 254/2026/NĐ-CP (thay Nghị định 123/2020/NĐ-CP).",
   "related_rules": ["RISK_NO_E_INVOICE"],
   "body_sections": [
     {
       "heading": "Hóa đơn điện tử là gì?",
-      "content": "Hóa đơn điện tử (HĐ ĐT) là hóa đơn được tạo, lập, gửi, nhận và lưu trữ bằng phương tiện điện tử, có giá trị pháp lý tương đương hóa đơn giấy.\n\nTừ 01/7/2022, toàn bộ doanh nghiệp, tổ chức, hộ kinh doanh bắt buộc dùng HĐ ĐT theo Nghị định 123/2020/NĐ-CP."
+      "content": "Hóa đơn điện tử (HĐ ĐT) là hóa đơn được tạo, lập, gửi, nhận và lưu trữ bằng phương tiện điện tử, có giá trị pháp lý tương đương hóa đơn giấy.\n\nDoanh nghiệp bán hàng hóa, cung cấp dịch vụ phải dùng hóa đơn điện tử (Nghị định 254/2026/NĐ-CP Điều 6, hiệu lực 01/07/2026)."
     },
     {
-      "heading": "Hai loại hóa đơn điện tử",
-      "content": "1. Hóa đơn điện tử có mã của cơ quan thuế (có mã):\n   • Phải gửi lên Tổng cục Thuế để lấy mã trước khi gửi cho khách hàng\n   • Áp dụng cho: doanh nghiệp mới thành lập, doanh nghiệp rủi ro cao theo đánh giá của cơ quan thuế, hộ kinh doanh\n   • Ưu điểm: đơn giản, miễn phí cổng kết nối thuế\n\n2. Hóa đơn điện tử không có mã (không mã):\n   • Gửi thẳng cho khách hàng, báo cáo định kỳ với cơ quan thuế\n   • Áp dụng cho: doanh nghiệp đủ điều kiện theo quy định\n   • Cần kết nối qua đơn vị trung gian (MISA, VNPT Invoice, FPT Invoice, v.v.)"
+      "heading": "Các loại hóa đơn điện tử",
+      "content": "Có ba loại (Nghị định 254/2026/NĐ-CP Điều 6 khoản 1):\n\n1. Hóa đơn điện tử có mã của cơ quan thuế (mặc định):\n   • Gửi lên cơ quan thuế để cấp mã trước khi gửi cho khách hàng\n   • Áp dụng cho doanh nghiệp nói chung, trừ trường hợp ở mục 2\n\n2. Hóa đơn điện tử không có mã:\n   • Được dùng khi doanh nghiệp thuộc một số lĩnh vực (điện, xăng dầu, bưu chính, viễn thông, nước sạch, tài chính ngân hàng, bảo hiểm, y tế, thương mại điện tử, siêu thị, thương mại, vận tải…) hoặc có giao dịch điện tử với cơ quan thuế, có hạ tầng, phần mềm kế toán và phần mềm lập hóa đơn đáp ứng yêu cầu\n   • Không áp dụng cho trường hợp rủi ro cao\n\n3. Hóa đơn điện tử từ máy tính tiền:\n   • Dùng khi bán hàng, cung cấp dịch vụ trực tiếp đến người tiêu dùng: bán lẻ (trừ ô tô, xe máy), ăn uống, nhà hàng, khách sạn, vận tải hành khách, vui chơi giải trí, chiếu phim, dịch vụ cá nhân khác\n   • Đã đăng ký loại 1 hoặc 2 thì không bắt buộc đăng ký thêm loại này\n\nChi phí: doanh nghiệp nhỏ và vừa ở địa bàn có điều kiện kinh tế – xã hội khó khăn, đặc biệt khó khăn được miễn phí dịch vụ 12 tháng kể từ khi dùng hóa đơn điện tử. Các trường hợp khác dùng qua tổ chức cung cấp dịch vụ thì trả phí theo hợp đồng (Điều 11 khoản 1, 3)."
+    },
+    {
+      "heading": "Khi nào phải lập hóa đơn",
+      "content": "Theo Nghị định 254/2026/NĐ-CP Điều 9:\n• Bán hàng hóa: lập khi chuyển giao quyền sở hữu hoặc quyền sử dụng hàng cho người mua, dù đã thu tiền hay chưa.\n• Cung cấp dịch vụ: lập khi hoàn thành việc cung cấp dịch vụ, dù đã thu tiền hay chưa. Nếu thu tiền trước hoặc trong khi làm dịch vụ thì lập khi thu tiền (trừ tiền đặt cọc).\n• Giao hàng nhiều lần, bàn giao từng phần: mỗi lần giao, mỗi lần bàn giao đều lập hóa đơn.\n\nVì vậy doanh thu ghi trên hóa đơn có thể khác số tiền đã thu trong sổ thu chi."
     },
     {
       "heading": "Cách đăng ký sử dụng hóa đơn điện tử",
-      "content": "Phương án 1 — Đăng ký qua Cổng hóa đơn điện tử của Tổng cục Thuế (miễn phí):\n1. Truy cập: https://hoadondientu.gdt.gov.vn\n2. Đăng ký tài khoản bằng mã số thuế doanh nghiệp\n3. Điền thông tin đăng ký, chọn loại hóa đơn (có mã)\n4. Ký đăng ký bằng chữ ký số\n5. Cơ quan thuế phê duyệt (thường 1–3 ngày làm việc)\n6. Bắt đầu xuất hóa đơn\n\nPhương án 2 — Dùng phần mềm bên thứ ba:\n• MISA Invoice: https://misainvoice.vn\n• VNPT Invoice: https://vnptinvoice.vn\n• FPT Invoice: https://einvoice.vn\n• Hỗ trợ nhiều tính năng hơn, phí hàng tháng/năm"
+      "content": "Phương án 1 — Đăng ký qua Cổng hóa đơn điện tử của Cục Thuế:\n1. Truy cập: https://hoadondientu.gdt.gov.vn\n2. Đăng ký tài khoản bằng mã số thuế doanh nghiệp\n3. Điền thông tin đăng ký, chọn loại hóa đơn (có mã)\n4. Ký đăng ký bằng chữ ký số\n5. Cơ quan thuế phê duyệt (thường 1–3 ngày làm việc)\n6. Bắt đầu xuất hóa đơn\n\nPhương án 2 — Dùng phần mềm bên thứ ba:\n• MISA Invoice: https://misainvoice.vn\n• VNPT Invoice: https://vnptinvoice.vn\n• FPT Invoice: https://einvoice.vn\n• Hỗ trợ nhiều tính năng hơn, phí hàng tháng/năm"
     },
     {
       "heading": "Quy trình xuất hóa đơn điện tử",
-      "content": "1. Lập hóa đơn trên phần mềm (nhập thông tin khách hàng, hàng hóa, thuế suất)\n2. Ký điện tử bằng chữ ký số\n3. Gửi lên Tổng cục Thuế để lấy mã (nếu hóa đơn có mã)\n4. Gửi hóa đơn cho khách hàng qua email hoặc tải xuống PDF\n5. Lưu trữ hóa đơn tối thiểu 10 năm (theo quy định lưu trữ điện tử)"
+      "content": "1. Lập hóa đơn trên phần mềm (nhập thông tin khách hàng, hàng hóa, thuế suất)\n2. Ký điện tử bằng chữ ký số\n3. Gửi lên Cục Thuế để lấy mã (nếu hóa đơn có mã)\n4. Gửi hóa đơn cho khách hàng qua email hoặc tải xuống PDF\n5. Lưu trữ hóa đơn tối thiểu 10 năm (theo quy định lưu trữ điện tử)"
     },
     {
       "heading": "Mức phạt nếu không dùng hóa đơn điện tử",
@@ -29,22 +33,21 @@
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 123/2020/NĐ-CP về hóa đơn, chứng từ\n• Thông tư 78/2021/TT-BTC hướng dẫn Nghị định 123\n• Nghị định 125/2020/NĐ-CP về xử phạt vi phạm trong lĩnh vực thuế\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 254/2026/NĐ-CP về hóa đơn điện tử, chứng từ điện tử (hiệu lực 01/07/2026, thay Nghị định 123/2020/NĐ-CP)\n• Thông tư 91/2026/TT-BTC (hướng dẫn, chưa xác minh nội dung)\n• Nghị định 125/2020/NĐ-CP về xử phạt vi phạm trong lĩnh vực thuế\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
-      "content": "• Cổng hóa đơn điện tử Tổng cục Thuế: https://hoadondientu.gdt.gov.vn\n• Tra cứu hóa đơn điện tử: https://tracuuhoadon.gdt.gov.vn\n• eTax (khai và nộp thuế): https://thuedientu.gdt.gov.vn\n• Hỗ trợ Tổng cục Thuế: 1900 3584"
+      "content": "• Cổng hóa đơn điện tử Cục Thuế: https://hoadondientu.gdt.gov.vn\n• Tra cứu hóa đơn điện tử: https://tracuuhoadon.gdt.gov.vn\n• eTax (khai và nộp thuế): https://thuedientu.gdt.gov.vn\n• Hỗ trợ Cục Thuế: 1900 3584"
     }
   ],
   "todo_for_reviewer": [
-    "Xác nhận ngày bắt buộc chuyển đổi toàn bộ sang HĐ ĐT (01/7/2022 đúng không?)",
-    "Xác nhận điều kiện chọn loại hóa đơn có mã / không mã",
+    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): sửa summary, mục \"Hóa đơn điện tử là gì?\", đổi mục loại hóa đơn thành 3 loại (Điều 6 khoản 1), bỏ \"miễn phí cổng kết nối thuế\" thay bằng điều kiện miễn phí 12 tháng (Điều 11), thêm mục \"Khi nào phải lập hóa đơn\" (Điều 9), đổi \"Tổng cục Thuế\" thành \"Cục Thuế\", thay Nghị định 123/2020 trong căn cứ. Chưa xác minh: mức phạt không lập hóa đơn (Nghị định 125/2020 Điều 24 đã sửa), Thông tư 91/2026, thời gian cơ quan thuế duyệt đăng ký. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
     "Xác nhận mức phạt theo Nghị định 125/2020 còn đang có hiệu lực không. Cập nhật NC-003: Nghị định 125/2020/NĐ-CP đã có các văn bản sửa đổi: 102/2021/NĐ-CP, 310/2025/NĐ-CP, 291/2026/NĐ-CP (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
     "Kiểm tra các link cổng HĐ ĐT còn hoạt động không",
     "Điền legal_basis với số điều khoản cụ thể",
-    "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
     "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 123/2020 đã được sửa đổi bởi Nghị định 70/2025/NĐ-CP (từ 1/6/2025); Thông tư 78/2021/TT-BTC có thể đã được thay bằng Thông tư 32/2025/TT-BTC.",
-    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025. official_sources.json của app đang ghi \"Cục Thuế\"."
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025. official_sources.json của app đang ghi \"Cục Thuế\"."
   ],
   "updated_at": "2026-10-23"
 }

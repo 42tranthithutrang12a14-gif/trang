@@ -222,6 +222,22 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Chưa viết cách nộp BCTC qua mạng (chờ hướng dẫn chính thức cho phần thao tác).
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 23 (2026-11-13, 17:17 UTC)
+
+- Đọc NC-020 (hóa đơn điện tử, Nghị định 254/2026 Điều 6, 7, 9, 11, 43) và NC-021 (phương pháp tính thuế GTGT, Luật 48/2024 Điều 10–12, Luật 149/2025). Cả hai đã xác minh. Status giữ "draft".
+- NC-020:
+  - `guides/hoa-don-dien-tu.json`: sửa summary và mục "Hóa đơn điện tử là gì?" (bỏ "bắt buộc từ 01/07/2022 theo Nghị định 123/2020"); mục loại hóa đơn thành 3 loại (có mã là mặc định, không mã, máy tính tiền); bỏ "miễn phí cổng kết nối thuế", thay bằng miễn phí 12 tháng chỉ ở địa bàn khó khăn; thêm mục "Khi nào phải lập hóa đơn"; căn cứ đổi sang Nghị định 254/2026; bỏ "(miễn phí)" ở phương án 1.
+  - "Tổng cục Thuế" → "Cục Thuế" ở 4 guide (hóa đơn, 2 guide GTGT, tạm nộp TNDN).
+  - `legal-framework.json`: mục 123/2020 đổi thành Nghị định 254/2026, hiệu lực 01/07/2026, key_points viết lại có điều, khoản.
+  - `bat-dau.json` (Tháng 1), `tu-0-den-1.json` (bước hóa đơn điện tử, thêm bước thời điểm lập), `risk_rules.json` (`RISK_NO_E_INVOICE`): sửa chữ, điền `legal_basis`. `chu-ky-so.json`: căn cứ đổi sang 254/2026.
+  - 7 todo "theo báo chí… 254/2026 thay 123/2020" ở nhiều file đổi thành ghi chú đã xác minh.
+- NC-021:
+  - `tu-0-den-1.json`, bước `phuong-phap-thue-gtgt`: thêm tiêu chí 1 tỷ và tỷ lệ % (1/5/3/2%); điền `legal_basis`.
+  - `questions.json`, `vat_method`: thêm `help_text` về ngưỡng 1 tỷ.
+  - Hai guide khai GTGT: thêm câu đầu "hướng dẫn này cho phương pháp khấu trừ".
+- Chưa làm: guide cho phương pháp trực tiếp trên doanh thu (trang mới, xem "Cần chủ dự án quyết"); mức phạt không lập hóa đơn; Thông tư 91/2026; Nghị định 181/2025.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -244,7 +260,10 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 
 - (Đã trả lời ở NC-018 bổ sung.) (Vòng 20) NC-018: xin đọc Nghị định 291/2026/NĐ-CP (và 102/2021) xem có sửa Điều 13 Nghị định 125/2020 không, trước khi coi các khung phạt là hiện hành.
 
+- (Vòng 23) NC-021: xin đọc Nghị định 181/2025 (và bản sửa 359/2025, 144/2026): cách tính doanh thu hằng năm để chọn khấu trừ hay trực tiếp, thủ tục đăng ký tự nguyện khấu trừ, DN mới thành lập. Và kỳ khai, mẫu tờ khai GTGT cho phương pháp trực tiếp.
+
 ## Cần chủ dự án quyết
 
 - (Vòng 10) NC-001: theo Luật Kế toán và Nghị định 174/2016, giám đốc DN siêu nhỏ được làm kế toán cho công ty mình, nhưng phải có bằng hoặc chứng chỉ kế toán. Người phụ trách kế toán còn cần chứng chỉ bồi dưỡng kế toán trưởng và 2–3 năm kinh nghiệm. Nội dung app đã ghi như vậy. Định hướng "tự làm trọn vẹn, không cần thuê kế toán ngoài" trong `AGENTS.md` có thể cần sửa, ví dụ: "tự làm việc hằng ngày; thuê dịch vụ phụ trách kế toán nếu chưa đủ điều kiện". Agent Biên tập không sửa `AGENTS.md`.
 - (Vòng 13) Công cụ tạo lịch nghĩa vụ (`obligation_rules.json`, engine) chưa có trường doanh thu năm trước. Vì vậy nghĩa vụ tạm nộp TNDN vẫn hiện với mọi công ty, kể cả công ty được miễn. Thêm câu hỏi doanh thu vào form và điều kiện vào engine là việc lớn (đổi cấu trúc dữ liệu), cần chủ dự án đồng ý.
+- (Vòng 23) Nhiều DN siêu nhỏ (doanh thu dưới 1 tỷ) mặc định tính thuế GTGT trực tiếp trên doanh thu (NC-021), nhưng app chỉ có guide cho phương pháp khấu trừ. Có làm guide mới "Khai thuế GTGT theo phương pháp trực tiếp" không? Cần thêm trang và rule mới.

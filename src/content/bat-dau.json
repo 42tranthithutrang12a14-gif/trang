@@ -271,11 +271,24 @@
         "urgency": "hot",
         "title": "Trước khi xuất hóa đơn đầu tiên",
         "tasks": [
-          { "text": "Đăng ký hóa đơn điện tử tại hoadondientu.gdt.gov.vn", "note": "Bắt buộc với mọi DN từ 01/07/2022" },
+          { "text": "Đăng ký hóa đơn điện tử tại hoadondientu.gdt.gov.vn", "note": "Bắt buộc khi bán hàng, cung cấp dịch vụ (Nghị định 254/2026/NĐ-CP, từ 01/07/2026)" },
           { "text": "Đăng ký kê khai thuế GTGT (tháng hoặc quý)", "note": "DN mới được chọn khai theo quý (đỡ việc hơn). Chọn rồi giữ cả năm" },
           { "text": "Mở sổ kế toán (Excel hoặc phần mềm)", "note": "Theo Thông tư 132/2018 cho DNSN" }
         ],
         "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "254/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết Luật Quản lý thuế về hóa đơn điện tử, chứng từ điện tử",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 6 khoản 1; Điều 43 khoản 1, 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Thông tư",
             "doc_number": "89/2026/TT-BTC",
@@ -291,7 +304,7 @@
           }
         ],
         "todo_for_reviewer": [
-          "Hóa đơn điện tử \"bắt buộc với mọi DN từ 01/07/2022\": theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+          "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
           "Xác minh hoadondientu.gdt.gov.vn còn là cổng đăng ký hóa đơn điện tử.",
           "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): DN mới \"được lựa chọn\" khai quý, mặc định của luật là khai tháng; đã sửa ghi chú. legal_basis chỉ phủ việc chọn kỳ khai GTGT (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
           "\"Theo Thông tư 132/2018 cho DNSN\": theo báo chí (chưa xác minh), Thông tư 58/2026/TT-BTC thay thế từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
@@ -686,7 +699,7 @@
         "fix": "Đăng ký HĐĐT tại hoadondientu.gdt.gov.vn trước khi nhận tiền đầu tiên.",
         "legal_basis": [],
         "todo_for_reviewer": [
-          "Theo báo chí (chưa xác minh), Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+          "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
           "\"Trước khi nhận tiền đầu tiên\": xác minh thời điểm phải lập hóa đơn theo quy định.",
           "\"Không được ghi nhận chi phí bên mua\": xác minh nhận định này.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."

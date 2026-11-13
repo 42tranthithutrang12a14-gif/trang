@@ -9,7 +9,7 @@
   "body_sections": [
     {
       "heading": "Ai phải khai theo tháng?",
-      "content": "Doanh nghiệp phải khai thuế GTGT theo tháng nếu:\n• Tính thuế GTGT theo phương pháp khấu trừ, VÀ\n• Doanh thu bán hàng hóa, dịch vụ năm trước trên 50 tỷ đồng\n\nDoanh nghiệp mới bắt đầu kinh doanh, hoặc có doanh thu năm trước từ 50 tỷ đồng trở xuống, được chọn khai theo quý. Không chọn thì khai theo tháng.\n\nCăn cứ: Thông tư 89/2026/TT-BTC Điều 19 khoản 1."
+      "content": "Hướng dẫn này dành cho công ty tính thuế GTGT theo phương pháp khấu trừ (doanh thu năm từ 1 tỷ đồng trở lên, hoặc tự chọn khấu trừ). Công ty doanh thu dưới 1 tỷ mặc định tính trực tiếp trên doanh thu; sổ tay chưa có hướng dẫn riêng cho cách này (Luật Thuế GTGT 48/2024/QH15 Điều 11 khoản 2, Điều 12 khoản 2).\n\nDoanh nghiệp phải khai thuế GTGT theo tháng nếu:\n• Tính thuế GTGT theo phương pháp khấu trừ, VÀ\n• Doanh thu bán hàng hóa, dịch vụ năm trước trên 50 tỷ đồng\n\nDoanh nghiệp mới bắt đầu kinh doanh, hoặc có doanh thu năm trước từ 50 tỷ đồng trở xuống, được chọn khai theo quý. Không chọn thì khai theo tháng.\n\nCăn cứ: Thông tư 89/2026/TT-BTC Điều 19 khoản 1."
     },
     {
       "heading": "Hạn nộp",
@@ -29,10 +29,11 @@
     },
     {
       "heading": "Cổng và công cụ cần dùng",
-      "content": "• Khai và nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Tổng cục Thuế (hỗ trợ): https://gdt.gov.vn\n• Hỗ trợ kỹ thuật eTax: 1900 3584"
+      "content": "• Khai và nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Cục Thuế (hỗ trợ): https://gdt.gov.vn\n• Hỗ trợ kỹ thuật eTax: 1900 3584"
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-13 (NC-021, đã đối chiếu toàn văn Luật Thuế GTGT 48/2024/QH15 Điều 10–12 và Luật 149/2025/QH15): thêm câu đầu nói rõ guide chỉ cho phương pháp khấu trừ, ngưỡng 1 tỷ. Chưa có guide cho phương pháp trực tiếp (xem \"Cần chủ dự án quyết\" trong bien-tap.md). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
     "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
     "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): đổi \"từ 50 tỷ đồng trở lên\" thành \"trên 50 tỷ đồng\", ghi khai tháng là mặc định (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
     "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn ngày 20 tháng sau khớp Nghị định 252/2026 Điều 10 khoản 2. Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",

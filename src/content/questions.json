@@ -129,7 +129,7 @@
       { "label": "Khấu trừ (kê khai đầu vào, đầu ra)", "value": "khau_tru" },
       { "label": "Tính trực tiếp trên doanh thu", "value": "truc_tiep_doanh_thu" }
     ],
-    "help_text": "Xem trong Giấy chứng nhận đăng ký thuế hoặc tờ khai thuế GTGT gần nhất."
+    "help_text": "Doanh thu năm từ 1 tỷ đồng trở lên: khấu trừ. Dưới 1 tỷ: trực tiếp trên doanh thu, trừ khi công ty tự chọn khấu trừ. Có thể xem tờ khai thuế GTGT gần nhất."
   },
   {
     "id": "vat_period",

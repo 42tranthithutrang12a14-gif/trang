@@ -518,17 +518,44 @@
           "title": "Xác định cách tính và kỳ khai thuế GTGT",
           "prepare": [],
           "how": [
-            "Đọc tiêu chí của hai phương pháp: khấu trừ và trực tiếp. Xác định công ty thuộc phương pháp nào.",
+            "Xác định phương pháp tính thuế GTGT. Doanh thu bán hàng, dịch vụ cả năm từ 1 tỷ đồng trở lên: phương pháp khấu trừ (thuế đầu ra trừ thuế đầu vào). Dưới 1 tỷ: tính trực tiếp = doanh thu × tỷ lệ (1% bán hàng hóa; 5% dịch vụ; 3% sản xuất, vận tải, dịch vụ gắn với hàng hóa, xây dựng có bao thầu vật liệu; 2% khác), trừ khi công ty tự nguyện chọn khấu trừ. Khấu trừ đòi hỏi làm đủ sổ sách, hóa đơn, chứng từ.",
             "Chưa chắc thì gọi tổng đài hỗ trợ của cơ quan thuế để hỏi.",
             "Nếu phải đăng ký thì nộp mẫu đăng ký qua tài khoản thuế điện tử.",
             "Ghi lại kỳ khai thuế: theo tháng hay theo quý."
           ],
           "links": [],
-          "legal_basis": [],
+          "legal_basis": [
+            {
+              "doc_type": "Luật",
+              "doc_number": "48/2024/QH15",
+              "title": "Luật Thuế giá trị gia tăng",
+              "issuer": "Quốc hội",
+              "issued_date": "2024-11-26",
+              "effective_date": "2025-07-01",
+              "article": "Điều 10; Điều 11 khoản 1, 2; Điều 12 khoản 2",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-13",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Luật",
+              "doc_number": "149/2025/QH15",
+              "title": "Luật sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng",
+              "issuer": "Quốc hội",
+              "issued_date": "2025-12-11",
+              "effective_date": "2026-01-01",
+              "article": "Điều 1 (không sửa Điều 11 và khoản 2 Điều 12 Luật 48/2024)",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216588&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-13",
+              "snapshot_path": ""
+            }
+          ],
           "todo_for_reviewer": [
             "Xác minh phương pháp áp dụng cho DN mới thành lập, mẫu đăng ký và thời hạn nộp.",
             "Xác minh tiêu chí khai theo tháng hay theo quý cho DN mới.",
-            "Bổ sung tiêu chí chọn phương pháp tính thuế GTGT theo luật đang có hiệu lực, để người dùng tự xác định.",
+            "Ngày 2026-11-13 (NC-021, đã đối chiếu toàn văn Luật Thuế GTGT 48/2024/QH15 Điều 10–12 và Luật 149/2025/QH15): thêm tiêu chí ngưỡng 1 tỷ và tỷ lệ % (Điều 11 khoản 2, Điều 12 khoản 2); điền legal_basis. Chưa đọc: Nghị định 181/2025 (sửa bởi 359/2025, 144/2026) về cách tính doanh thu hằng năm, thủ tục đăng ký tự nguyện khấu trừ, cách xác định cho DN mới; Luật 90/2025/QH15. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
         },
@@ -546,15 +573,30 @@
             "Chọn cách lập hóa đơn: qua cổng của cơ quan thuế hoặc qua nhà cung cấp phần mềm.",
             "Gửi tờ khai đăng ký sử dụng hóa đơn điện tử.",
             "Chờ cơ quan thuế chấp nhận.",
-            "Làm quen với phần mềm lập hóa đơn trước lần bán đầu tiên."
+            "Làm quen với phần mềm lập hóa đơn trước lần bán đầu tiên.",
+            "Lập hóa đơn khi giao hàng hoặc khi làm xong dịch vụ, dù đã thu tiền hay chưa. Thu tiền dịch vụ trước thì lập khi thu tiền (trừ tiền đặt cọc)."
           ],
           "links": [
             { "label": "Cổng hóa đơn điện tử", "url": "https://hoadondientu.gdt.gov.vn" }
           ],
-          "legal_basis": [],
+          "legal_basis": [
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "254/2026/NĐ-CP",
+              "title": "Nghị định quy định chi tiết Luật Quản lý thuế về hóa đơn điện tử, chứng từ điện tử",
+              "issuer": "Chính phủ",
+              "issued_date": "2026-06-30",
+              "effective_date": "2026-07-01",
+              "article": "Điều 6 khoản 1; Điều 9 khoản 1, 2, 3; Điều 43",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-13",
+              "snapshot_path": ""
+            }
+          ],
           "todo_for_reviewer": [
-            "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
-            "Xác minh mẫu tờ khai đăng ký, điều kiện dùng hóa đơn có mã và thời điểm phải lập hóa đơn.",
+            "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+            "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): điều kiện dùng hóa đơn có mã (Điều 6) và thời điểm lập hóa đơn (Điều 9) đã đối chiếu; thêm bước thời điểm lập; điền legal_basis. Mẫu tờ khai đăng ký chưa xác minh.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
         },

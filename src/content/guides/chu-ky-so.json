@@ -29,7 +29,7 @@
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 130/2018/NĐ-CP về chữ ký số và dịch vụ chứng thực chữ ký số\n• Thông tư 19/2021/TT-BTC về đăng ký và sử dụng chữ ký số trong khai thuế\n• Nghị định 123/2020/NĐ-CP về hóa đơn điện tử (yêu cầu chữ ký số)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 130/2018/NĐ-CP về chữ ký số và dịch vụ chứng thực chữ ký số\n• Thông tư 19/2021/TT-BTC về đăng ký và sử dụng chữ ký số trong khai thuế\n• Nghị định 254/2026/NĐ-CP về hóa đơn điện tử (hiệu lực 01/07/2026, thay Nghị định 123/2020/NĐ-CP)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
@@ -43,7 +43,7 @@
     "Điền legal_basis với số điều khoản cụ thể và link chính thức",
     "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 130/2018/NĐ-CP có thể đã được thay bằng Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy, hiệu lực 10/04/2025; Nghị định 130/2018/NĐ-CP từng được sửa bởi Nghị định 48/2024/NĐ-CP. Chưa đọc điều khoản thay thế. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1",
     "Gợi ý của trợ lý AI (chưa xác minh): Bộ Thông tin và Truyền thông đã hợp nhất vào Bộ Khoa học và Công nghệ từ 3/2025. Tên cơ quan cấp phép và link mic.gov.vn có thể đã cũ.",
-    "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Guide đang dẫn Nghị định 123/2020. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
     "Kiểm tra Thông tư 19/2021/TT-BTC còn hiệu lực không."
   ],
   "updated_at": "2026-10-23"

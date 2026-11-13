@@ -234,25 +234,24 @@
       "icon": "🖨️",
       "laws": [
         {
-          "name": "Nghị định về hóa đơn, chứng từ",
-          "number": "123/2020/NĐ-CP",
+          "name": "Nghị định về hóa đơn điện tử, chứng từ điện tử",
+          "number": "254/2026/NĐ-CP",
           "issued_by": "Chính phủ",
-          "effective_from": "01/07/2022",
-          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=152700",
+          "effective_from": "01/07/2026",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
-            "Bắt buộc sử dụng hóa đơn điện tử từ 01/07/2022 với tất cả DN",
-            "Hai loại: HĐĐT có mã của CQT (qua cổng thuế) và HĐĐT không có mã (DN lớn)",
-            "DNSN thường dùng HĐĐT có mã: đăng ký và xuất qua https://hoadondientu.gdt.gov.vn",
-            "Lưu trữ hóa đơn: tối thiểu 10 năm"
+            "Thay Nghị định 123/2020/NĐ-CP từ 01/07/2026 (Điều 43)",
+            "Doanh nghiệp bán hàng, cung cấp dịch vụ dùng hóa đơn điện tử: có mã của cơ quan thuế là mặc định; một số lĩnh vực, điều kiện được dùng không mã; bán lẻ trực tiếp người tiêu dùng dùng hóa đơn từ máy tính tiền (Điều 6 khoản 1)",
+            "Lập hóa đơn khi chuyển giao hàng hoặc hoàn thành dịch vụ, không phân biệt đã thu tiền hay chưa (Điều 9)",
+            "Miễn phí dịch vụ 12 tháng chỉ cho DN nhỏ và vừa ở địa bàn khó khăn, đặc biệt khó khăn (Điều 11 khoản 1)",
+            "DNSN thường dùng hóa đơn có mã: đăng ký và xuất qua https://hoadondientu.gdt.gov.vn"
           ],
           "todo_for_reviewer": [
-            "Xác nhận NĐ 123/2020 chưa bị thay thế",
+            "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): đổi mục từ Nghị định 123/2020 (hiệu lực 01/07/2022) sang Nghị định 254/2026 (01/07/2026), url sang trang vanban.chinhphu.vn, viết lại key_points có điều, khoản. Ý \"lưu trữ 10 năm\" đã bỏ khỏi đây, xem mục Luật Kế toán (NC-019). Ý cổng hoadondientu.gdt.gov.vn chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
             "Xác nhận thời hạn lưu trữ 10 năm",
             "Bổ sung quy trình đăng ký HĐĐT lần đầu cho DN mới",
-            "Theo báo chí (chưa xác minh): Nghị định 254/2026/NĐ-CP thay Nghị định 123/2020/NĐ-CP từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-003: đã thấy trang thông tin Nghị định 254/2026/NĐ-CP trên vanban.chinhphu.vn (ngày tra 2026-11-11): ban hành 30/06/2026, hiệu lực 01/07/2026, quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn, chứng từ điện tử; kèm Thông tư 91/2026/TT-BTC. Chưa đọc toàn văn nên chưa rõ có thay Nghị định 123/2020/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
-            "Gợi ý của trợ lý AI (chưa xác minh): trước đó Nghị định 70/2025/NĐ-CP đã sửa đổi Nghị định 123/2020 (từ 1/6/2025).",
-            "Cập nhật NC-008: ngày hiệu lực 01/07/2022 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201365&classid=1"
+            "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1"
           ]
         },
         {
