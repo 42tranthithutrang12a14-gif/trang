@@ -238,6 +238,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Chưa làm: guide cho phương pháp trực tiếp trên doanh thu (trang mới, xem "Cần chủ dự án quyết"); mức phạt không lập hóa đơn; Thông tư 91/2026; Nghị định 181/2025.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 24 (2026-11-13, 19:18 UTC)
+
+- Đọc NC-021 bổ sung (Nghị định 181/2025 Điều 21; 359/2025 và 144/2026 không sửa điều này; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json`, bước `phuong-phap-thue-gtgt`: thêm 2 bước (doanh thu xét từ tháng 11 năm trước đến tháng 10 năm nay, giữ 2 năm; DN mới có thuê địa điểm hoặc mua tài sản, công cụ được tự nguyện khấu trừ, không đăng ký và dưới 1 tỷ thì trực tiếp 2 năm). Thêm `legal_basis` Nghị định 181/2025. Todo còn mở: mẫu và thời hạn đăng ký tự nguyện.
+- `questions.json`, `vat_method`: thêm vào `help_text` câu về DN mới được tự nguyện khấu trừ.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

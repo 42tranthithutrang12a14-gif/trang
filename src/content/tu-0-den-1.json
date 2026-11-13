@@ -519,12 +519,27 @@
           "prepare": [],
           "how": [
             "Xác định phương pháp tính thuế GTGT. Doanh thu bán hàng, dịch vụ cả năm từ 1 tỷ đồng trở lên: phương pháp khấu trừ (thuế đầu ra trừ thuế đầu vào). Dưới 1 tỷ: tính trực tiếp = doanh thu × tỷ lệ (1% bán hàng hóa; 5% dịch vụ; 3% sản xuất, vận tải, dịch vụ gắn với hàng hóa, xây dựng có bao thầu vật liệu; 2% khác), trừ khi công ty tự nguyện chọn khấu trừ. Khấu trừ đòi hỏi làm đủ sổ sách, hóa đơn, chứng từ.",
+            "Doanh thu để xét lấy trên tờ khai GTGT từ tháng 11 năm trước đến tháng 10 năm nay (khai quý: quý 4 năm trước đến quý 3 năm nay). Phương pháp đã áp dụng được giữ 2 năm liên tục.",
+            "Công ty mới thành lập có thuê địa điểm kinh doanh, hoặc mua sắm, nhận góp vốn bằng tài sản, máy móc, công cụ, được đăng ký tự nguyện tính theo phương pháp khấu trừ ngay từ đầu. Không đăng ký và doanh thu ước tính cả năm dưới 1 tỷ thì tính trực tiếp trong 2 năm.",
             "Chưa chắc thì gọi tổng đài hỗ trợ của cơ quan thuế để hỏi.",
             "Nếu phải đăng ký thì nộp mẫu đăng ký qua tài khoản thuế điện tử.",
             "Ghi lại kỳ khai thuế: theo tháng hay theo quý."
           ],
           "links": [],
           "legal_basis": [
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "181/2025/NĐ-CP",
+              "title": "Nghị định quy định chi tiết một số điều của Luật Thuế giá trị gia tăng",
+              "issuer": "Chính phủ",
+              "issued_date": "2025-07-01",
+              "effective_date": "2025-07-01",
+              "article": "Điều 21 khoản 1 điểm a, b; khoản 2 điểm a, đ (Nghị định 359/2025/NĐ-CP và 144/2026/NĐ-CP không sửa Điều 21)",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-13",
+              "snapshot_path": ""
+            },
             {
               "doc_type": "Luật",
               "doc_number": "48/2024/QH15",
@@ -553,7 +568,7 @@
             }
           ],
           "todo_for_reviewer": [
-            "Xác minh phương pháp áp dụng cho DN mới thành lập, mẫu đăng ký và thời hạn nộp.",
+            "Ngày 2026-11-13 (NC-021 bổ sung, đã đối chiếu toàn văn Nghị định 181/2025/NĐ-CP Điều 21; Nghị định 359/2025 và 144/2026 không sửa Điều 21): thêm cách xác định doanh thu, thời gian giữ 2 năm, trường hợp DN mới được tự nguyện khấu trừ; điền legal_basis. Còn mở: mẫu và thời hạn đăng ký tự nguyện khấu trừ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
             "Xác minh tiêu chí khai theo tháng hay theo quý cho DN mới.",
             "Ngày 2026-11-13 (NC-021, đã đối chiếu toàn văn Luật Thuế GTGT 48/2024/QH15 Điều 10–12 và Luật 149/2025/QH15): thêm tiêu chí ngưỡng 1 tỷ và tỷ lệ % (Điều 11 khoản 2, Điều 12 khoản 2); điền legal_basis. Chưa đọc: Nghị định 181/2025 (sửa bởi 359/2025, 144/2026) về cách tính doanh thu hằng năm, thủ tục đăng ký tự nguyện khấu trừ, cách xác định cho DN mới; Luật 90/2025/QH15. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
