@@ -676,6 +676,36 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal_basis`: Nghị định 254/2026/NĐ-CP Điều 6 khoản 1 điểm a, b, c; Điều 7; Điều 9 khoản 1, 2, 3; Điều 11 khoản 1, 3; Điều 43 khoản 1, 2; URL https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1; `verified_against_original: true`.
   - Giữ todo: Thông tư 91/2026 (thay Thông tư 78/2021?) và mức phạt không lập hóa đơn chưa xác minh. Giữ câu "⚠️ Mức phạt cụ thể cần xác minh".
 
+### Ghi chú vòng 23 (2026-11-13, 16:34 UTC)
+
+- Chưa có commit mới của Biên tập từ sau `8af82ac` (đã rà ở vòng 22). NC-020 chưa được áp dụng.
+- Vòng này làm NC-021: tiêu chí chọn phương pháp tính thuế GTGT (khấu trừ hay trực tiếp) — todo trong bước `phuong-phap-thue-gtgt` của `tu-0-den-1.json`.
+
+### NC-021 — Phương pháp tính thuế GTGT: DN doanh thu năm từ 1 tỷ trở lên dùng khấu trừ; dưới 1 tỷ dùng trực tiếp theo tỷ lệ % trên doanh thu, trừ khi tự nguyện chọn khấu trừ (Luật Thuế GTGT 48/2024 Điều 10–12)
+
+- Trạng thái: đã xác minh
+- Liên quan: `tu-0-den-1.json` bước `phuong-phap-thue-gtgt` (`legal_basis` rỗng; todo "Bổ sung tiêu chí chọn phương pháp…", "Xác minh phương pháp áp dụng cho DN mới…"); `questions.json` câu `vat_method`; `so-ke-toan.json` todo dòng 213 (lãi lỗ tạm tính cho DN tính GTGT trực tiếp); các guide khai GTGT (đang mặc định phương pháp khấu trừ).
+- Nguồn:
+  - Luật Thuế GTGT 48/2024/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/01/luat48.pdf (bản Công báo số 1527+1528 ngày 29/12/2024, có lớp chữ — không cần OCR). Hiệu lực 01/07/2025. Mở ngày 2026-11-13.
+  - Luật 149/2025/QH15 sửa Luật Thuế GTGT — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216588&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat149.signed.pdf (2 trang, bản quét, đã OCR). Hiệu lực 01/01/2026.
+  - Luật 09/2026/QH16 Điều 2 (đã đọc ở NC-010): chỉ sửa khoản 25 Điều 5.
+  - Chưa đọc Luật 90/2025/QH15 (cũng sửa Luật Thuế GTGT).
+- Phát hiện:
+  - **Luật 48/2024, Điều 10 (Công báo trang 87):** "Phương pháp tính thuế giá trị gia tăng gồm phương pháp khấu trừ thuế và phương pháp tính trực tiếp."
+  - **Điều 11 khoản 1:** thuế phải nộp = thuế GTGT đầu ra − thuế GTGT đầu vào được khấu trừ; đầu vào được khấu trừ phải đáp ứng điều kiện Điều 14.
+  - **Điều 11 khoản 2:** "Phương pháp khấu trừ thuế áp dụng đối với cơ sở kinh doanh thực hiện đầy đủ chế độ kế toán, hóa đơn, chứng từ theo quy định của pháp luật về kế toán, hóa đơn, chứng từ bao gồm: a) Cơ sở kinh doanh có doanh thu hằng năm từ bán hàng hóa, cung cấp dịch vụ từ 01 tỷ đồng trở lên, trừ hộ, cá nhân sản xuất, kinh doanh; b) Cơ sở kinh doanh tự nguyện áp dụng phương pháp khấu trừ thuế, trừ hộ, cá nhân sản xuất, kinh doanh; …" Khoản 3: Chính phủ quy định chi tiết.
+  - **Điều 12 khoản 2 (Công báo trang 88):** tính trực tiếp theo doanh thu = tỷ lệ % × doanh thu. Điểm a1: áp dụng cho "Doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã có doanh thu hằng năm dưới mức ngưỡng doanh thu 01 tỷ đồng, trừ trường hợp tự nguyện áp dụng phương pháp khấu trừ thuế quy định tại khoản 2 Điều 11". Điểm b, tỷ lệ: b1) phân phối, cung cấp hàng hóa 1%; b2) dịch vụ, xây dựng không bao thầu nguyên vật liệu 5%; b3) sản xuất, vận tải, dịch vụ có gắn với hàng hóa, xây dựng có bao thầu nguyên vật liệu 3%; b4) hoạt động kinh doanh khác 2%. Điểm c: doanh thu tính thuế là tổng tiền bán hàng hóa, dịch vụ ghi trên hóa đơn bán hàng, gồm phụ thu, phí thu thêm.
+  - **Luật 149/2025, Điều 1:** sửa khoản 1, 25 Điều 5; khoản 5 Điều 9; khoản 3: "Bãi bỏ khoản 3 Điều 12 và điểm c khoản 9 Điều 15" (khoản 3 Điều 12 là khoán thuế cho hộ, cá nhân — không liên quan DN). Không sửa Điều 11 và khoản 2 Điều 12.
+- **Kết luận:**
+  1. DN có doanh thu hằng năm từ bán hàng, dịch vụ **từ 1 tỷ đồng trở lên** dùng phương pháp khấu trừ (phải làm đủ chế độ kế toán, hóa đơn, chứng từ).
+  2. DN có doanh thu **dưới 1 tỷ đồng** dùng phương pháp trực tiếp theo tỷ lệ % trên doanh thu (1% hàng hóa; 5% dịch vụ; 3% sản xuất, vận tải, dịch vụ gắn với hàng hóa, xây dựng có bao thầu vật liệu; 2% khác), **trừ khi tự nguyện chọn khấu trừ**.
+  3. Lưu ý ngưỡng: GTGT dùng "từ 1 tỷ trở lên" → khấu trừ; còn miễn TNDN dùng "từ 1 tỷ trở xuống" (NC-011). DN đúng 1 tỷ: khấu trừ GTGT và vẫn được miễn TNDN (nếu đủ điều kiện khác). Cách tính "doanh thu hằng năm", thủ tục đăng ký tự nguyện và cách xác định cho DN mới do Chính phủ quy định (Nghị định 181/2025, sửa bởi 359/2025, 144/2026 — chưa đọc).
+  4. Nhiều DN siêu nhỏ có doanh thu dưới 1 tỷ sẽ mặc định tính GTGT trực tiếp — hai guide khai GTGT hiện chỉ viết cho phương pháp khấu trừ (mẫu 01/GTGT).
+- **Đề xuất sửa (Biên tập):**
+  - `tu-0-den-1.json` bước `phuong-phap-thue-gtgt`, `how` bước 1: "Doanh thu bán hàng, dịch vụ cả năm từ 1 tỷ đồng trở lên: tính thuế GTGT theo phương pháp khấu trừ (thuế đầu ra trừ thuế đầu vào). Dưới 1 tỷ: tính trực tiếp = doanh thu × tỷ lệ (1% bán hàng hóa; 5% dịch vụ; 3% sản xuất, vận tải, dịch vụ gắn với hàng hóa; 2% khác), trừ khi công ty tự nguyện chọn khấu trừ. Khấu trừ đòi hỏi làm đủ sổ sách, hóa đơn, chứng từ." `legal_basis`: Luật Thuế GTGT 48/2024/QH15 Điều 10, Điều 11 khoản 1, 2; Điều 12 khoản 2; Luật 149/2025/QH15 Điều 1 (không sửa Điều 11, khoản 2 Điều 12); URL như trên; `verified_against_original: true`. Thay todo "Bổ sung tiêu chí…" bằng todo "Thủ tục đăng ký tự nguyện khấu trừ, cách xác định doanh thu cho DN mới: Nghị định 181/2025 (chưa đọc)".
+  - `questions.json` `vat_method`: thêm `help_text`: "Doanh thu năm từ 1 tỷ trở lên: khấu trừ. Dưới 1 tỷ: trực tiếp trên doanh thu, trừ khi tự chọn khấu trừ."
+  - Hai guide khai GTGT: thêm một câu đầu "Hướng dẫn này cho DN tính thuế theo phương pháp khấu trừ. DN doanh thu dưới 1 tỷ, tính trực tiếp, xem …" (chưa có guide riêng → ghi vào "Cần chủ dự án quyết" nếu cần trang mới).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
