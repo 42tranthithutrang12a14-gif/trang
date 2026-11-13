@@ -449,6 +449,43 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Các mục miễn TNDN (NC-011): thay câu "cách hiểu" bằng "Được miễn thuế vẫn phải nộp tờ khai quyết toán TNDN năm, hạn 31/3 năm sau (Thông tư 89/2026 Điều 21 khoản 1 điểm c.1)". Bỏ todo nghĩa vụ quyết toán.
   - `legal_basis` cho các mục trên: Thông tư 89/2026/TT-BTC Điều 19 khoản 1 điểm a, b.1, b.2; Điều 21 khoản 1 điểm c, khoản 3; URL https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1; `verified_against_original: true`.
 
+### Ghi chú vòng 16 (2026-11-13, 02:18 UTC)
+
+- Đã rà commit `80673de` của Biên tập (áp dụng NC-014): ngưỡng "từ 50 tỷ trở xuống", khai quý là lựa chọn, DN miễn TNDN vẫn quyết toán. Không thấy sai sót ở phần đã đọc.
+- Vòng này làm NC-015: Nghị quyết 198/2025/QH15 và Nghị định 20/2026/NĐ-CP — lệ phí môn bài, miễn TNDN 3 năm cho DN nhỏ và vừa mới thành lập, phần mềm kế toán miễn phí. Đây là các điểm nghi lỗi thời ở mục 2 cũ, vẫn còn trong app.
+
+### NC-015 — Chấm dứt thu lệ phí môn bài từ 01/01/2026; DN nhỏ và vừa mới đăng ký lần đầu được miễn TNDN 3 năm (Nghị quyết 198/2025, Nghị định 20/2026)
+
+- Trạng thái: đã xác minh
+- Liên quan:
+  - Lệ phí môn bài: `bat-dau.json` dòng 262 ("Nộp lệ phí môn bài năm đầu"), dòng 364 ("Nộp lệ phí môn bài"); `legal-framework.json` dòng 162–181 (mục Nghị định 139/2016, "miễn lệ phí môn bài năm đầu tiên", "Hạn nộp: 30/01 hàng năm"); `tu-0-den-1.json` mục `bo-le-phi-mon-bai` (dòng ~901, đã ghi "chấm dứt thu từ 1/1/2026", chưa có nguồn).
+  - Miễn TNDN 3 năm: `tu-0-den-1.json` mục `mien-tndn-dn-moi` (dòng ~876; `legal_basis` rỗng; todo "gợi ý của trợ lý AI").
+- Nguồn:
+  - Nghị quyết 198/2025/QH15 về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/5/198_nq.pdf (11 trang, bản quét, đã OCR). Hiệu lực 17/05/2025.
+  - Nghị định 20/2026/NĐ-CP quy định chi tiết Nghị quyết 198/2025 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/20nd.signed.pdf (23 trang, bản quét, đã OCR). Ban hành, hiệu lực 15/01/2026. Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Nghị quyết 198/2025, Điều 10 (PDF trang 6–7):**
+    - Khoản 4: "Miễn thuế thu nhập doanh nghiệp cho doanh nghiệp nhỏ và vừa trong 03 năm kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu."
+    - Khoản 7: "Chấm dứt việc thu, nộp lệ phí môn bài từ ngày 01 tháng 01 năm 2026."
+    - Điều 17 khoản 1: "Nghị quyết này có hiệu lực thi hành từ ngày được Quốc hội thông qua." Khoản 2: Nghị quyết được áp dụng khi khác với luật khác; văn bản khác ưu đãi hơn thì áp dụng văn bản đó.
+  - **Nghị định 20/2026, Điều 7 khoản 3 (PDF trang 9):** "Doanh nghiệp nhỏ và vừa đăng ký kinh doanh lần đầu:"
+    - Điểm a: "Được miễn thuế thu nhập doanh nghiệp trong 03 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu. Thời gian miễn thuế được tính liên tục từ năm đầu tiên được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu. Trường hợp Giấy chứng nhận… được cấp trước thời điểm Nghị quyết số 198/2025/QH15 có hiệu lực thi hành mà còn thời gian áp dụng ưu đãi thì doanh nghiệp được hưởng ưu đãi… cho thời gian còn lại".
+    - Điểm b, không áp dụng cho: b1) DN thành lập mới do sáp nhập, hợp nhất, chia, tách, chuyển đổi chủ sở hữu, chuyển đổi loại hình; b2) DN mới mà người đại diện theo pháp luật (trừ khi người này không góp vốn), thành viên hợp danh hoặc người góp vốn cao nhất đã giữ vai trò đó trong DN đang hoạt động, hoặc DN đã giải thể chưa được 12 tháng; b3) thu nhập tại khoản 3 Điều 18 Luật Thuế TNDN 67/2025.
+    - Khoản 4: cùng lúc được nhiều ưu đãi thì chọn ưu đãi có lợi nhất, giữ ổn định trong thời gian miễn, giảm. Khoản 5: kỳ tính thuế đầu dưới 12 tháng thì được chọn hưởng ngay từ kỳ đó hoặc đăng ký bắt đầu từ kỳ sau.
+  - **Nghị định 20/2026, Điều 16 khoản 2 (PDF trang 16):** khoản 1, khoản 3 Điều 7 "có hiệu lực từ ngày Nghị quyết số 198/2025/QH15 có hiệu lực thi hành và áp dụng kể từ kỳ tính thuế năm 2025."
+  - **Nghị định 20/2026, Điều 10 (PDF trang 11–12):** "Nhà nước cung cấp miễn phí cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số…". Bộ Tài chính tổ chức thuê, mua sắm. Chưa thấy tên nền tảng hay thời điểm cung cấp.
+- **Kết luận:**
+  1. Từ 01/01/2026 không còn thu, nộp lệ phí môn bài. Các bước "Nộp lệ phí môn bài" trong app phải bỏ (hoặc đổi thành ghi chú "đã bỏ từ 2026"). Nghị định 139/2016 và 22/2020 không còn là nghĩa vụ hiện hành của người dùng mới.
+  2. DN nhỏ và vừa (gồm DN siêu nhỏ) đăng ký lần đầu được miễn TNDN 3 năm, tính liên tục từ năm được cấp Giấy chứng nhận ĐKDN lần đầu, áp dụng từ kỳ tính thuế 2025; có các trường hợp loại trừ ở điểm b. Mục `mien-tndn-dn-moi` đúng về nội dung chính.
+  3. Miễn 3 năm (NC-015) và miễn khi doanh thu ≤ 1 tỷ (NC-011) là hai ưu đãi khác nhau. Khoản 4 Điều 7 Nghị định 20/2026 cho chọn ưu đãi có lợi nhất. DN được miễn vẫn quyết toán TNDN năm (NC-014).
+  4. Tiêu chí "doanh nghiệp nhỏ và vừa", "siêu nhỏ" theo Nghị định 80/2021 (chưa đọc toàn văn).
+- **Đề xuất sửa (Biên tập):**
+  - `bat-dau.json` dòng 262, 364: bỏ việc "Nộp lệ phí môn bài", hoặc thay bằng "Không còn lệ phí môn bài (chấm dứt thu từ 01/01/2026)". `legal_basis`: Nghị quyết 198/2025/QH15 Điều 10 khoản 7; URL https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1; `verified_against_original: true`.
+  - `legal-framework.json` mục lệ phí môn bài: ghi rõ "chấm dứt thu từ 01/01/2026 theo Nghị quyết 198/2025/QH15 Điều 10 khoản 7"; bỏ các dòng "miễn năm đầu", "hạn nộp 30/01" khỏi nghĩa vụ hiện hành (hoặc chuyển sang ghi chú lịch sử). Bỏ todo "theo báo chí".
+  - `tu-0-den-1.json` mục `bo-le-phi-mon-bai`: điền `legal_basis` như trên; bỏ todo "theo báo chí".
+  - `tu-0-den-1.json` mục `mien-tndn-dn-moi`: điền `legal_basis`: Nghị quyết 198/2025/QH15 Điều 10 khoản 4; Nghị định 20/2026/NĐ-CP Điều 7 khoản 3, 4, 5, Điều 16 khoản 2; URL https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1; `verified_against_original: true`. Thêm vào `who`/`how`: thời gian miễn tính liên tục từ năm được cấp giấy lần đầu; không áp dụng cho DN thành lập do sáp nhập, hợp nhất, chia, tách, chuyển đổi; không áp dụng nếu người đại diện theo pháp luật (có góp vốn) hoặc người góp vốn cao nhất đang giữ vai trò đó ở DN khác đang hoạt động hoặc DN giải thể chưa đủ 12 tháng; kỳ đầu dưới 12 tháng được chọn hưởng ngay hoặc từ kỳ sau; trùng ưu đãi thì chọn mức có lợi nhất. Giữ câu khuyên hỏi cơ quan thuế (khoản lớn, rủi ro truy thu). Thay todo "DN được miễn có còn quyết toán không" bằng kết luận NC-014.
+  - Có thể thêm một dòng ở `/cong-cu` hoặc mục sổ kế toán: "Nhà nước sẽ cung cấp miễn phí phần mềm kế toán cho DN siêu nhỏ (Nghị định 20/2026 Điều 10); chưa có tên nền tảng". Không dẫn link khi chưa có nguồn chính thức.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
