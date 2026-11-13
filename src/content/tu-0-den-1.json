@@ -732,11 +732,57 @@
           ]
         },
         {
+          "id": "bhxh-nguoi-quan-ly",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "bat-buoc",
+          "deadline": "Trong 30 ngày kể từ ngày thuộc diện phải đóng",
+          "title": "Đóng BHXH cho giám đốc, người quản lý công ty, kể cả khi không nhận lương",
+          "prepare": [
+            "Thông tin người quản lý: họ tên, số định danh, mã số BHXH (nếu đã có)",
+            "Mức lương tự chọn làm căn cứ đóng"
+          ],
+          "how": [
+            "Từ 01/07/2025, người quản lý doanh nghiệp (giám đốc, chủ tịch công ty…) phải tham gia BHXH bắt buộc, kể cả khi không nhận lương.",
+            "Không áp dụng nếu: đã đủ tuổi nghỉ hưu; đang hưởng lương hưu hoặc trợ cấp BHXH hằng tháng; hoặc quản lý nhiều công ty và đã tham gia ở công ty mình quản lý đầu tiên.",
+            "Người quản lý không nhận lương tự chọn mức lương làm căn cứ đóng, thấp nhất bằng mức tham chiếu, cao nhất bằng 20 lần mức tham chiếu. Sau ít nhất 12 tháng được chọn lại.",
+            "Mức đóng: 25% mức lương đã chọn (3% vào quỹ ốm đau và thai sản, 22% vào quỹ hưu trí và tử tuất).",
+            "Đóng hằng tháng, 3 tháng hoặc 6 tháng một lần; tự đóng cho cơ quan BHXH hoặc đóng qua công ty. Hạn chậm nhất là ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng.",
+            "Đây là nghĩa vụ mới, số tiền không nhỏ. Nếu chưa chắc trường hợp của mình, hỏi cơ quan BHXH nơi công ty đặt trụ sở trước khi đăng ký."
+          ],
+          "links": [
+            {
+              "label": "Bảo hiểm xã hội Việt Nam",
+              "url": "https://baohiemxahoi.gov.vn"
+            }
+          ],
+          "legal_basis": [
+            {
+              "doc_type": "Luật",
+              "doc_number": "41/2024/QH15",
+              "title": "Luật Bảo hiểm xã hội",
+              "issuer": "Quốc hội",
+              "issued_date": "2024-06-29",
+              "effective_date": "2025-07-01",
+              "article": "Điều 2 khoản 1 điểm a, i, l, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27 khoản 2; Điều 28 khoản 1, 2; Điều 31 khoản 1 điểm d; Điều 33 khoản 4; Điều 141 khoản 1",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-13",
+              "snapshot_path": ""
+            }
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): mục mới do agent Biên tập thêm theo Điều 2 khoản 1 điểm i, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27, 28, 31, 33. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn.",
+            "Link baohiemxahoi.gov.vn chưa kiểm tra có trong official_sources.json không; mục lao-dong-bhxh đang dùng link này."
+          ]
+        },
+        {
           "id": "lao-dong-bhxh",
           "status": "draft",
           "sample_notice": "MẪU – CHƯA XÁC MINH",
           "level": "tuy-truong-hop",
-          "deadline": "Trong 30 ngày kể từ ngày ký hợp đồng lao động",
+          "deadline": "Trong 30 ngày kể từ ngày người lao động thuộc diện phải đóng",
           "title": "Nếu thuê người lao động: ký hợp đồng, đăng ký bảo hiểm",
           "prepare": [
             "Hợp đồng lao động bằng văn bản",
@@ -750,9 +796,23 @@
           "links": [
             { "label": "Bảo hiểm xã hội Việt Nam", "url": "https://baohiemxahoi.gov.vn" }
           ],
-          "legal_basis": [],
+          "legal_basis": [
+            {
+              "doc_type": "Luật",
+              "doc_number": "41/2024/QH15",
+              "title": "Luật Bảo hiểm xã hội",
+              "issuer": "Quốc hội",
+              "issued_date": "2024-06-29",
+              "effective_date": "2025-07-01",
+              "article": "Điều 2 khoản 1 điểm a, l; Điều 28 khoản 1; Điều 141 khoản 1",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-13",
+              "snapshot_path": ""
+            }
+          ],
           "todo_for_reviewer": [
-            "Xác minh thời hạn đăng ký, đối tượng bắt buộc và tỷ lệ đóng theo Luật BHXH đang có hiệu lực. Gợi ý của trợ lý AI (chưa xác minh): Luật 58/2014/QH13 có thể đã được thay bằng Luật 41/2024/QH15. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Bảo hiểm xã hội 41/2024/QH15, hiệu lực 01/07/2025; Nghị định 158/2025/NĐ-CP hướng dẫn BHXH bắt buộc, hiệu lực 01/07/2025. Chưa đọc điều khoản thi hành, mức đóng và hạn đóng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=214189&classid=1",
+            "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng là người làm việc theo HĐLĐ từ đủ 1 tháng (Điều 2 khoản 1 điểm a), hạn 30 ngày kể từ ngày thuộc đối tượng, không phải kể từ ngày ký HĐLĐ (Điều 28 khoản 1); đã sửa deadline, điền legal_basis. Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn.",
             "Xác minh trường hợp hợp đồng lao động phải bằng văn bản.",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]

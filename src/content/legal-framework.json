@@ -344,22 +344,22 @@
         },
         {
           "name": "Luật Bảo hiểm xã hội",
-          "number": "58/2014/QH13",
+          "number": "41/2024/QH15",
           "issued_by": "Quốc hội",
-          "effective_from": "01/01/2016",
-          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=87684",
+          "effective_from": "01/07/2025",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
-            "DN có từ 1 lao động trở lên phải đóng BHXH bắt buộc",
-            "Tỷ lệ đóng BHXH, BHYT, BHTN tổng cộng ~32% lương (DN đóng ~21.5%, NLĐ đóng ~10.5%)",
-            "Hạn đóng: ngày cuối tháng",
+            "Người làm việc theo hợp đồng lao động từ đủ 1 tháng phải tham gia BHXH bắt buộc (Điều 2 khoản 1 điểm a)",
+            "Từ 01/07/2025, người quản lý doanh nghiệp phải tham gia BHXH bắt buộc kể cả khi không hưởng lương; tự chọn lương làm căn cứ đóng từ mức tham chiếu đến 20 lần, đóng 25% (Điều 2 khoản 1 điểm n; Điều 31 khoản 1 điểm d; Điều 33 khoản 4)",
+            "Đăng ký trong 30 ngày kể từ ngày thuộc đối tượng (Điều 28 khoản 1)",
+            "Tỷ lệ đóng của DN và người lao động cho nhân viên: chưa xác minh",
             "Cổng tra cứu và kê khai: https://baohiemxahoi.gov.vn"
           ],
           "todo_for_reviewer": [
-            "Xác nhận Luật BHXH mới (thay thế 58/2014) đã có hiệu lực chưa",
-            "Xác nhận tỷ lệ đóng BHXH/BHYT/BHTN hiện hành",
-            "Xác nhận mức lương tối thiểu làm căn cứ đóng BHXH",
-            "Gợi ý của trợ lý AI (chưa xác minh): Luật 58/2014/QH13 có thể đã được thay bằng Luật Bảo hiểm xã hội số 41/2024/QH15 (từ 1/7/2025). Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Bảo hiểm xã hội 41/2024/QH15, hiệu lực 01/07/2025; Nghị định 158/2025/NĐ-CP hướng dẫn BHXH bắt buộc, hiệu lực 01/07/2025. Chưa đọc điều khoản thi hành, mức đóng và hạn đóng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=214189&classid=1"
+            "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đổi number từ 58/2014/QH13 sang 41/2024/QH15, effective_from 01/07/2025 (Điều 141 khoản 1), url sang trang vanban.chinhphu.vn; viết lại key_points. Bỏ ý \"tổng ~32%\" và \"hạn đóng ngày cuối tháng\" chưa có nguồn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn.",
+            "Xác nhận tỷ lệ đóng BHXH/BHYT/BHTN hiện hành"
           ]
         }
       ]

@@ -101,7 +101,7 @@
       { "label": "6 đến 10 người", "value": "6_10" },
       { "label": "Trên 10 người", "value": "tren_10" }
     ],
-    "help_text": ""
+    "help_text": "Từ 01/07/2025, giám đốc, người quản lý công ty phải đóng BHXH kể cả khi không nhận lương."
   },
   {
     "id": "pays_wages",

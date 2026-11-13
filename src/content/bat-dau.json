@@ -338,10 +338,23 @@
         "title": "Hoàn thiện nền tảng vận hành",
         "tasks": [
           { "text": "Đăng ký con dấu doanh nghiệp (nếu cần)", "note": "DN tự quyết định có dùng con dấu hay không" },
-          { "text": "Đăng ký BHXH nếu có nhân viên", "note": "Phải đăng ký trong 30 ngày kể từ ngày ký HĐLĐ" },
+          { "text": "Đăng ký BHXH bắt buộc cho người quản lý công ty (giám đốc, chủ tịch công ty…) và cho nhân viên có hợp đồng từ đủ 1 tháng", "note": "Trong 30 ngày kể từ ngày thuộc diện phải đóng. Từ 01/07/2025, người quản lý không nhận lương cũng phải đóng" },
           { "text": "Không còn nộp lệ phí môn bài", "note": "Chấm dứt thu từ 01/01/2026. Không cần làm gì" }
         ],
         "legal_basis": [
+          {
+            "doc_type": "Luật",
+            "doc_number": "41/2024/QH15",
+            "title": "Luật Bảo hiểm xã hội",
+            "issuer": "Quốc hội",
+            "issued_date": "2024-06-29",
+            "effective_date": "2025-07-01",
+            "article": "Điều 2 khoản 1 điểm a, i, n; Điều 28 khoản 1; Điều 141 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-13",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Nghị quyết",
             "doc_number": "198/2025/QH15",
@@ -359,7 +372,7 @@
         "todo_for_reviewer": [
           "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã thay việc \"Nộp lệ phí môn bài năm đầu\". legal_basis chỉ phủ ý này.",
           "Con dấu: việc ghi \"Đăng ký con dấu\" nhưng ghi chú nói \"DN tự quyết định\". Xác minh hiện còn phải đăng ký hoặc thông báo mẫu dấu không.",
-          "BHXH \"trong 30 ngày kể từ ngày ký HĐLĐ\": xác minh thời hạn, mốc tính và đối tượng theo Luật BHXH đang có hiệu lực.",
+          "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng (Điều 2 khoản 1 điểm a, i, n) và hạn 30 ngày kể từ ngày thuộc đối tượng (Điều 28) đã đối chiếu; đã sửa việc và ghi chú; legal_basis chỉ phủ việc BHXH. Chưa xác minh: mức tham chiếu hiện tại (số tiền); định nghĩa \"người quản lý doanh nghiệp\" (Luật Doanh nghiệp 59/2020 Điều 4 khoản 24); Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Không ghi số tiền khi chưa có nguồn.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
