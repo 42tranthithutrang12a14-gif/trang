@@ -518,6 +518,39 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Thêm một mục tự kiểm "Công ty mình có phải DN siêu nhỏ không?" (ví dụ trong `tu-0-den-1.json` bước đầu, hoặc `/lo-trinh`): 3 câu hỏi — ngành nghề chính (TM-DV hay NLTS/CN-XD); số lao động đóng BHXH bình quân năm; doanh thu năm trước trên BCTC hoặc tổng nguồn vốn cuối năm. DN mới chưa có doanh thu: dùng tổng nguồn vốn.
   - `questions.json` `revenue_band`: cân nhắc đổi mốc cho khớp các ngưỡng pháp lý: "Từ 1 tỷ trở xuống" (miễn TNDN), "Trên 1 đến 3 tỷ" (15%; ngưỡng siêu nhỏ NLTS/CN-XD), "Trên 3 đến 10 tỷ" (ngưỡng siêu nhỏ TM-DV), "Trên 10 tỷ". Mốc hiện tại "Dưới 1 tỷ"/"Từ 1 đến 3 tỷ" làm DN đúng 1 tỷ rơi sai nhóm. Đây là đổi giá trị lựa chọn, có thể ảnh hưởng luật trong `rules/` — nếu cần đổi cấu trúc thì ghi "Cần chủ dự án quyết".
 
+### Ghi chú vòng 18 (2026-11-13, 06:17 UTC)
+
+- Đã đọc kỹ commit `0ae71b3` (NC-015): bước môn bài đổi thành "Không còn nộp lệ phí môn bài (đã bỏ từ 01/01/2026)"; mục miễn TNDN 3 năm ghi đúng "tính liên tục từ năm được cấp giấy", có `legal_basis` Nghị quyết 198/2025 và Nghị định 20/2026. Khớp NC-015.
+- Commit `3ce013f` (NC-016) mới đến; vòng sau rà.
+- Vòng này làm NC-017: thời hạn đăng ký, thông báo thay đổi ("10 ngày" hay "10 ngày làm việc", ưu tiên mục 3 cũ).
+
+### NC-017 — Đăng ký, thông báo thay đổi nội dung đăng ký doanh nghiệp: 10 ngày (ngày lịch) kể từ ngày có thay đổi (Luật Doanh nghiệp 59/2020 Điều 30, 31)
+
+- Trạng thái: đã xác minh
+- Liên quan: `bat-dau.json` dòng 26, 622 ("trong 10 ngày") và todo dòng 35, 626; `guides/dang-ky-thay-doi-doanh-nghiep.json` dòng 7 ("thường là 10 ngày kể từ ngày có quyết định thay đổi"), dòng 16 ("Hầu hết các loại thay đổi: trong vòng 10 ngày làm việc…"), todo dòng 44; `legal-framework.json` mục Luật Doanh nghiệp ("10 ngày làm việc").
+- Nguồn:
+  - Luật Doanh nghiệp 59/2020/QH14 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2020/07/59.signed.pdf (70 trang, bản quét; đã OCR trang 12–20). Hiệu lực 01/01/2021.
+  - Luật 76/2025/QH15 sửa đổi, bổ sung một số điều của Luật Doanh nghiệp — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/76qh.signed.pdf (7 trang, bản quét, đã OCR toàn bộ). Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Luật 59/2020, Điều 30 (PDF trang 19):**
+    - Khoản 1: "Doanh nghiệp phải đăng ký với Cơ quan đăng ký kinh doanh khi thay đổi nội dung Giấy chứng nhận đăng ký doanh nghiệp quy định tại Điều 28 của Luật này."
+    - Khoản 2: "Doanh nghiệp chịu trách nhiệm đăng ký thay đổi nội dung Giấy chứng nhận đăng ký doanh nghiệp trong thời hạn 10 ngày kể từ ngày có thay đổi."
+    - Khoản 3: "Trong thời hạn 03 ngày làm việc kể từ ngày nhận hồ sơ, Cơ quan đăng ký kinh doanh có trách nhiệm xem xét tính hợp lệ của hồ sơ và cấp Giấy chứng nhận đăng ký doanh nghiệp mới…"
+    - Khoản 4 điểm a: thay đổi theo bản án, quyết định của Tòa án hoặc phán quyết Trọng tài: gửi đề nghị trong 15 ngày kể từ ngày bản án, quyết định có hiệu lực.
+  - **Luật 59/2020, Điều 31 (PDF trang 19–20):**
+    - Khoản 1 (bản gốc): phải thông báo khi thay đổi ngành, nghề kinh doanh; cổ đông sáng lập và cổ đông là nhà đầu tư nước ngoài (công ty cổ phần); nội dung khác trong hồ sơ đăng ký.
+    - Khoản 2: "Doanh nghiệp chịu trách nhiệm thông báo thay đổi nội dung đăng ký doanh nghiệp trong thời hạn 10 ngày kể từ ngày có thay đổi."
+  - **Luật 76/2025, Điều 1 khoản 13 (PDF trang 3–4):** sửa khoản 1 Điều 31, bổ sung điểm c: phải thông báo khi thay đổi "Thông tin về chủ sở hữu hưởng lợi của doanh nghiệp, trừ trường hợp đối với công ty niêm yết và công ty đăng ký giao dịch chứng khoán". Luật 76/2025 **không sửa** Điều 30 và khoản 2 Điều 31. Hiệu lực: "Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2025."
+- **Kết luận:**
+  1. Thời hạn của doanh nghiệp là **"10 ngày kể từ ngày có thay đổi"**, không có chữ "làm việc". Các chỗ ghi "10 ngày làm việc" là sai. "03 ngày làm việc" là thời hạn của cơ quan đăng ký kinh doanh xử lý hồ sơ.
+  2. Mốc tính là "ngày có thay đổi", không phải "ngày có quyết định thay đổi" như guide đang viết. (Thường trùng nhau, nhưng câu chữ nên theo luật.)
+  3. Từ 01/07/2025, thay đổi thông tin chủ sở hữu hưởng lợi cũng phải thông báo trong 10 ngày.
+  4. Hồ sơ, trình tự chi tiết theo Nghị định 168/2025/NĐ-CP (sửa bởi 296/2026); chưa đọc toàn văn.
+- **Đề xuất sửa (Biên tập):**
+  - `dang-ky-thay-doi-doanh-nghiep.json` dòng 16: "Thay đổi nội dung Giấy chứng nhận đăng ký doanh nghiệp, hoặc nội dung đăng ký khác (ngành nghề, thông tin chủ sở hữu hưởng lợi…): đăng ký hoặc thông báo trong 10 ngày kể từ ngày có thay đổi. Cơ quan đăng ký kinh doanh xử lý trong 3 ngày làm việc." Dòng 7: bỏ "thường là", đổi "ngày có quyết định thay đổi" thành "ngày có thay đổi". Bỏ todo "10 ngày hay 10 ngày làm việc".
+  - `legal-framework.json` mục Luật Doanh nghiệp: đổi "10 ngày làm việc" thành "10 ngày". `bat-dau.json` dòng 26, 622: giữ "10 ngày", thêm "kể từ ngày có thay đổi"; bỏ todo mâu thuẫn dòng 35, 626.
+  - `legal_basis` cho các mục trên: Luật Doanh nghiệp 59/2020/QH14 Điều 30 khoản 1, 2, 3; Điều 31 khoản 1, 2 (khoản 1 đã sửa bởi Luật 76/2025/QH15 Điều 1 khoản 13); URL như trên; `verified_against_original: true`.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
