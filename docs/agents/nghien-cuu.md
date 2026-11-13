@@ -766,6 +766,31 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal_basis`: Luật BHXH 41/2024/QH15 Điều 2 khoản 1 điểm a, i, l, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27 khoản 2; Điều 28 khoản 1, 2; Điều 31 khoản 1 điểm d; Điều 33 khoản 4; Điều 141 khoản 1; URL https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1; `verified_against_original: true`.
   - Todo: mức tham chiếu, Nghị định 158/2025, BHYT và BHTN của người quản lý không lương — chưa xác minh. Không ghi số tiền.
 
+### Ghi chú vòng 26 (2026-11-13, 22:17 UTC)
+
+- Đã rà commit `3fd7988` (NC-022) và `8c65a8e` (nhật ký Biên tập). Áp dụng NC-022 ở `bat-dau.json`, `tu-0-den-1.json`, `questions.json`, `legal-framework.json`.
+- Vòng này đóng hai điểm còn mở của NC-022: định nghĩa "người quản lý doanh nghiệp" và mức tham chiếu.
+
+### NC-022 (bổ sung) — "Người quản lý doanh nghiệp" theo Luật Doanh nghiệp; mức tham chiếu BHXH hiện bằng mức lương cơ sở 2.530.000 đồng/tháng (từ 01/07/2026)
+
+- Trạng thái: đã xác minh
+- Nguồn:
+  - Luật Doanh nghiệp 59/2020/QH14 — https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2020/07/59.signed.pdf (đã OCR trang 2–4). Mở ngày 2026-11-13.
+  - Luật BHXH 41/2024/QH15 — https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/9/41-2024-qh15.pdf (có lớp chữ).
+  - Nghị định 161/2026/NĐ-CP quy định mức lương cơ sở… — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1 (ban hành 15/05/2026, hiệu lực 01/07/2026); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/5/161-ndcp.signed.pdf (7 trang, bản quét; đã OCR trang 1–4). Mở ngày 2026-11-13.
+- Phát hiện:
+  - **Luật Doanh nghiệp 59/2020, Điều 4 khoản 24 (PDF trang 3):** "Người quản lý doanh nghiệp là người quản lý doanh nghiệp tư nhân và người quản lý công ty, bao gồm chủ doanh nghiệp tư nhân, thành viên hợp danh, Chủ tịch Hội đồng thành viên, thành viên Hội đồng thành viên, Chủ tịch công ty, Chủ tịch Hội đồng quản trị, thành viên Hội đồng quản trị, Giám đốc hoặc Tổng giám đốc và cá nhân giữ chức danh quản lý khác theo quy định tại Điều lệ công ty." (Chưa kiểm tra Luật 76/2025 có sửa khoản này không; ở NC-017 đã đọc toàn bộ Luật 76/2025, danh sách sửa đổi không có khoản 24 Điều 4 trong phần đã đối chiếu — cần xác nhận lại nếu dùng chi tiết.)
+  - **Luật BHXH 41/2024, Điều 7 khoản 1:** "Mức tham chiếu là mức tiền do Chính phủ quyết định dùng để tính mức đóng, mức hưởng một số chế độ bảo hiểm xã hội…". **Điều 141 khoản 13:** "Khi chưa bãi bỏ mức lương cơ sở thì mức tham chiếu quy định tại Luật này bằng mức lương cơ sở. Tại thời điểm mức lương cơ sở bị bãi bỏ thì mức tham chiếu không thấp hơn mức lương cơ sở đó."
+  - **Nghị định 161/2026, Điều 3 khoản 2:** "Từ ngày 01 tháng 7 năm 2026, mức lương cơ sở là 2.530.000 đồng/tháng."
+- **Kết luận:**
+  1. Với công ty TNHH một thành viên do chủ DN làm chủ: Chủ tịch công ty và Giám đốc đều là "người quản lý doanh nghiệp" → thuộc đối tượng BHXH bắt buộc (điểm i nếu hưởng lương, điểm n nếu không). Với công ty TNHH hai thành viên trở lên: cả thành viên Hội đồng thành viên cũng là người quản lý.
+  2. Từ 01/07/2026, mức tham chiếu = mức lương cơ sở = 2.530.000 đồng/tháng. Người quản lý không hưởng lương chọn mức lương làm căn cứ từ 2.530.000 đến 50.600.000 đồng/tháng (20 lần); đóng 25% → tối thiểu 632.500 đồng/tháng. (Số tiền đổi khi Chính phủ điều chỉnh mức lương cơ sở.)
+  3. Câu này có điểm cần lưu ý: Luật dùng "người quản lý doanh nghiệp" của Luật Doanh nghiệp; nếu một công ty có nhiều người quản lý không lương, mỗi người đều thuộc diện (trừ ngoại lệ ở Điều 2 khoản 5 điểm c, khoản 7). Đây là nghĩa vụ có số tiền lớn: nên giữ câu khuyên xác nhận với cơ quan BHXH.
+- **Đề xuất sửa (Biên tập):**
+  - Ở mục "Giám đốc không nhận lương vẫn phải đóng BHXH" (`tu-0-den-1.json`) và chỗ liên quan ở `bat-dau.json`: thêm "Người quản lý gồm: Chủ tịch công ty, Giám đốc, thành viên Hội đồng thành viên… (Luật Doanh nghiệp Điều 4 khoản 24)". Thêm "Mức lương làm căn cứ tối thiểu bằng mức tham chiếu, hiện là 2.530.000 đồng/tháng (từ 01/07/2026); đóng 25% → ít nhất khoảng 632.500 đồng/tháng." Ghi rõ số tiền có thể thay đổi khi mức lương cơ sở điều chỉnh.
+  - `legal_basis` thêm: Luật Doanh nghiệp 59/2020/QH14 Điều 4 khoản 24; Luật BHXH 41/2024/QH15 Điều 7 khoản 1, Điều 141 khoản 13; Nghị định 161/2026/NĐ-CP Điều 3 khoản 2; URL như trên; `verified_against_original: true`. Bỏ todo "mức tham chiếu chưa xác minh".
+  - Giữ todo: Nghị định 158/2025; BHYT, BHTN của người quản lý không lương.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
