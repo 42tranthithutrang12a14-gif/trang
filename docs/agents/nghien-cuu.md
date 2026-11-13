@@ -585,6 +585,24 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal_basis`: Nghị định 125/2020/NĐ-CP Điều 13 khoản 1, 2, 3, 4, 6; Điều 7 khoản 4 điểm a; Nghị định 310/2025/NĐ-CP Điều 1 khoản 10 (khoản 5, điểm a khoản 6 Điều 13), Điều 4 khoản 1; URL như trên; `verified_against_original: true`.
   - `legal-framework.json`: nếu có trường ngày hiệu lực của Nghị định 310/2025 (hoặc ghi chú), dùng 16/01/2026, không dùng "16-01-2025" của trang thông tin.
 
+### Ghi chú vòng 20 (2026-11-13, 10:25 UTC)
+
+- Đã rà commit `3d4806d` (NC-017): "10 ngày làm việc" chỉ còn trong nhật ký và todo đã xử lý; nội dung hiển thị đã đổi thành "10 ngày kể từ ngày có thay đổi". Đúng đề xuất.
+- Đã rà commit `e834e28` (NC-018): bảng phạt theo số ngày chậm (1–30, 31–60, 61–90, trên 90) ở `bat-dau.json` và hai guide GTGT khớp NC-018. Đúng đề xuất.
+- Vòng này đóng điểm còn mở của NC-018: đọc Nghị định 291/2026 và 102/2021 (hai văn bản sửa Nghị định 125/2020 còn lại).
+
+### NC-018 (bổ sung) — Nghị định 102/2021 và 291/2026 không sửa Điều 13 Nghị định 125/2020
+
+- Trạng thái: đã xác minh
+- Nguồn:
+  - Nghị định 291/2026/NĐ-CP — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/291_2026_nd-cp_21072026-signed.signed.pdf (3 trang, bản quét, đã OCR). Mở ngày 2026-11-13.
+  - Nghị định 102/2021/NĐ-CP — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=204477&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2021/11/102.signed.pdf (26 trang, bản quét, đã OCR). Mở ngày 2026-11-13.
+- Phát hiện:
+  - Nghị định 291/2026 chỉ có 4 điều: Điều 1 sửa điểm đ khoản 3 Điều 5; Điều 2 bổ sung Mục 3 và Điều 19a (phạt vi phạm cung cấp thông tin phục vụ trao đổi thông tin thuế quốc tế, 10–100 triệu đồng); Điều 3 bổ sung cụm từ "Điều 19a" vào một số điều; Điều 4: "Nghị định này có hiệu lực thi hành kể từ ngày ký ban hành" (ký 21/07/2026). Không đụng Điều 13.
+  - Nghị định 102/2021, Điều 1 sửa Nghị định 125/2020 ở: điểm a khoản 1 Điều 8; khoản 2 Điều 22; điểm h khoản 4 Điều 24; khoản 3, 4 Điều 26; điểm b khoản 2 Điều 42; Điều 43. Điều 6 khoản 1: bổ sung cụm từ ở khoản 3 Điều 5, bãi bỏ khoản 3 Điều 8. Không đụng Điều 13.
+- **Kết luận:** Điều 13 Nghị định 125/2020 hiện hành gồm khoản 1–4 và khoản 6 điểm b bản gốc; khoản 5 và khoản 6 điểm a theo Nghị định 310/2025 (hiệu lực 16/01/2026). Bảng phạt trong NC-018 là mức hiện hành theo các văn bản đã đọc.
+- **Đề xuất sửa (Biên tập):** bỏ todo "chưa đọc Nghị định 291/2026" ở các chỗ ghi mức phạt chậm nộp tờ khai; thêm vào `legal_basis` ghi chú: đã đối chiếu Nghị định 102/2021/NĐ-CP và 291/2026/NĐ-CP, hai văn bản này không sửa Điều 13 (ngày tra 2026-11-13).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
