@@ -817,6 +817,33 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Ở mục BHXH nhân viên trong `tu-0-den-1.json` và `legal-framework.json`: thêm tỷ lệ 17% / 8% và hạn đóng. Thay todo "tỷ lệ đóng của DN cho nhân viên" bằng "BHYT, BHTN, bảo hiểm TNLĐ-BNN: chưa xác minh".
   - Sổ S2-DNSN (NC-009) có cột BHXH, BHYT, BHTN: có thể ghi chú tỷ lệ BHXH 17% / 8% ở trang hướng dẫn sổ; chưa điền tỷ lệ BHYT, BHTN.
 
+### Ghi chú vòng 28 (2026-11-14, 02:18 UTC)
+
+- Đã rà commit `0fa7d45` (NC-023): tách dòng BHXH (17% / 8%, hạn ngày cuối cùng của tháng tiếp theo) khỏi BHYT, BHTN. Đúng đề xuất.
+- Vòng này bổ sung NC-023: BHYT và BHTN — đối tượng và mức đóng tối đa theo luật.
+
+### NC-023 (bổ sung) — BHYT tối đa 6% tiền lương (DN 2/3, người lao động 1/3); BHTN tối đa 1% mỗi bên; người quản lý không lương tự đóng BHYT, không thuộc diện BHTN (Luật BHYT sửa đổi 51/2024; Luật Việc làm 74/2025)
+
+- Trạng thái: đã xác minh (đối tượng, mức tối đa, cách chia); mức đóng cụ thể do Chính phủ quy định — chưa xác minh
+- Nguồn:
+  - Luật 51/2024/QH15 sửa đổi, bổ sung một số điều của Luật Bảo hiểm y tế — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=212479&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/01/luat51.pdf (Công báo số 1523+1524, có lớp chữ). Hiệu lực 01/07/2025 (Điều 3 khoản 1, trừ một số quy định). Mở ngày 2026-11-14.
+  - Luật Việc làm 74/2025/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=214560&classid=1 (ban hành 16/06/2025, hiệu lực 01/01/2026); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/74qh15.signed.pdf (26 trang, bản quét, đã OCR). Mở ngày 2026-11-14.
+- Phát hiện:
+  - **Luật BHYT (sửa bởi Luật 51/2024), Điều 12 khoản 1:** nhóm do người sử dụng lao động, người lao động đóng hoặc cùng đóng: điểm a — người lao động theo HĐLĐ từ đủ 01 tháng; người quản lý doanh nghiệp… **có hưởng tiền lương**; điểm b — người quản lý doanh nghiệp… **không hưởng tiền lương**.
+  - **Điều 13 khoản 1 (Công báo trang 10):** "a) Mức đóng hằng tháng của đối tượng quy định tại các điểm a, c, d và e khoản 1 Điều 12… tối đa bằng 6% tiền lương tháng, trong đó người sử dụng lao động đóng hai phần ba và người lao động đóng một phần ba; b) Mức đóng hằng tháng của đối tượng quy định tại điểm b khoản 1 Điều 12… tối đa bằng 6% tiền lương tháng làm căn cứ đóng bảo hiểm xã hội bắt buộc và do đối tượng đóng".
+  - **Luật Việc làm 74/2025, Điều 31 khoản 1 (PDF trang 14):** đối tượng BHTN: a) HĐLĐ từ đủ 01 tháng; b) làm không trọn thời gian có lương bằng hoặc cao hơn mức thấp nhất làm căn cứ đóng BHXH; c) hợp đồng làm việc; d) người quản lý doanh nghiệp… **có hưởng tiền lương**. Khoản 2: người đang hưởng lương hưu, đủ điều kiện hưởng lương hưu, người đang làm hợp đồng thử việc, người giúp việc gia đình không thuộc đối tượng.
+  - **Điều 32 khoản 1:** đăng ký BHTN thực hiện đồng bộ với đăng ký BHXH bắt buộc.
+  - **Điều 33 khoản 1, 2 (PDF trang 15):** "a) Người lao động đóng tối đa bằng 1% tiền lương tháng; b) Người sử dụng lao động đóng tối đa bằng 1% quỹ tiền lương tháng của những người lao động đang tham gia bảo hiểm thất nghiệp"; hằng tháng DN đóng phần mình và trích lương người lao động để đóng cùng lúc.
+- **Kết luận:**
+  1. Nhân viên HĐLĐ từ đủ 1 tháng và người quản lý có hưởng lương: tham gia cả BHXH, BHYT, BHTN. BHYT tối đa 6% (DN 2/3, người lao động 1/3); BHTN tối đa 1% mỗi bên. Luật chỉ đặt mức **tối đa**; mức cụ thể do Chính phủ quy định (chưa đọc nghị định). Không ghi "4,5%", "1%" như mức chính thức cho tới khi đọc nghị định.
+  2. Người quản lý **không** hưởng lương: tự đóng BHXH 25% (NC-022) và tự đóng BHYT (tối đa 6% tiền lương làm căn cứ đóng BHXH); **không** thuộc diện BHTN (Điều 31 chỉ có người quản lý có hưởng lương).
+  3. Người lao động đang làm hợp đồng thử việc không thuộc đối tượng BHTN (Luật Việc làm Điều 31 khoản 2).
+  4. Chưa xác minh: mức đóng BHYT, BHTN cụ thể (nghị định hướng dẫn); bảo hiểm tai nạn lao động – bệnh nghề nghiệp (Luật An toàn, vệ sinh lao động).
+- **Đề xuất sửa (Biên tập):**
+  - Lịch "Hàng tháng" (`bat-dau.json`) dòng BHYT, BHTN: "Đóng BHYT, BHTN cùng BHXH cho nhân viên. BHYT tối đa 6% tiền lương (DN 2/3, nhân viên 1/3); BHTN tối đa 1% mỗi bên. Mức cụ thể theo quy định của Chính phủ (chưa xác minh)." Hạn đóng: giữ todo (luật BHYT, Việc làm chưa đọc phần hạn đóng của DN; Luật Việc làm Điều 33 khoản 2 chỉ nêu hạn cho trường hợp đóng 3, 6 tháng).
+  - Mục "Giám đốc không nhận lương vẫn phải đóng BHXH" (`tu-0-den-1.json`): thêm "Cũng phải tự đóng BHYT (tối đa 6% mức lương làm căn cứ đóng BHXH). Không phải đóng BHTN." `legal_basis` thêm: Luật BHYT (sửa bởi Luật 51/2024/QH15) Điều 12 khoản 1 điểm a, b; Điều 13 khoản 1 điểm a, b; Luật Việc làm 74/2025/QH15 Điều 31 khoản 1, 2; Điều 32 khoản 1; Điều 33 khoản 1, 2; URL như trên; `verified_against_original: true`.
+  - Giữ todo: mức đóng BHYT, BHTN cụ thể; bảo hiểm TNLĐ-BNN.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
