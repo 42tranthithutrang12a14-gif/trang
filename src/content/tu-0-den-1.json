@@ -1035,6 +1035,59 @@
           ]
         },
         {
+          "id": "thue-tncn-nhan-vien",
+          "status": "draft",
+          "sample_notice": "MẪU – CHƯA XÁC MINH",
+          "level": "tuy-truong-hop",
+          "deadline": "Khai quý: 30/4, 31/7, 31/10, 31/01. Quyết toán năm: 31/3",
+          "title": "Nếu trả lương: khai và quyết toán thuế TNCN của nhân viên",
+          "prepare": [
+            "Bảng lương hằng tháng",
+            "Văn bản ủy quyền quyết toán của nhân viên (mẫu 08/UQ-QTT-TNCN), nếu nhân viên ủy quyền"
+          ],
+          "how": [
+            "Khi trả lương, công ty khấu trừ thuế TNCN của nhân viên (nếu có).",
+            "Khai số thuế TNCN đã khấu trừ theo quý. Hạn chậm nhất là ngày cuối cùng của tháng đầu quý sau: 30/4, 31/7, 31/10, 31/01.",
+            "Quý nào không khấu trừ thuế của ai thì không phải nộp tờ khai quý đó. Riêng quý cuối năm, một số trường hợp vẫn phải nộp.",
+            "Có trả lương trong năm thì phải quyết toán TNCN năm, kể cả khi không khấu trừ được đồng nào. Hạn 31/3 năm sau.",
+            "Nhân viên muốn công ty quyết toán thay thì gửi văn bản ủy quyền (mẫu 08/UQ-QTT-TNCN) trước khi công ty quyết toán.",
+            "Cả năm không trả lương, tiền công cho ai thì không phải quyết toán TNCN."
+          ],
+          "links": [],
+          "legal_basis": [
+            {
+              "doc_type": "Thông tư",
+              "doc_number": "89/2026/TT-BTC",
+              "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+              "issuer": "Bộ Tài chính",
+              "issued_date": "2026-06-30",
+              "effective_date": "2026-07-01",
+              "article": "Điều 22 khoản 1 điểm a (a.1, a.2.1, a.3.1, a.4), điểm b",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-14",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "252/2026/NĐ-CP",
+              "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+              "issuer": "Chính phủ",
+              "issued_date": "2026-06-30",
+              "effective_date": "2026-07-01",
+              "article": "Điều 9 khoản 2 điểm đ.2; Điều 10 khoản 3, khoản 5 điểm a; Điều 11 khoản 6, 7",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-14",
+              "snapshot_path": ""
+            }
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-14 (NC-026, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 22 và Nghị định 252/2026/NĐ-CP Điều 9, 10, 11): bước mới do agent Biên tập thêm. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+            "Chưa xác minh: biểu thuế TNCN lũy tiến, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN, sửa bởi Luật 09/2026). Không ghi các con số này."
+          ]
+        },
+        {
           "id": "luu-ho-so",
           "status": "draft",
           "sample_notice": "MẪU – CHƯA XÁC MINH",

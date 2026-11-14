@@ -536,9 +536,36 @@
         "month": "T1, T4, T7, T10",
         "entries": [
           { "text": "Khai & nộp thuế GTGT quý", "deadline": "Ngày cuối cùng của tháng đó", "type": "tax" },
-          { "text": "Tạm nộp thuế TNDN quý (nếu doanh thu năm trước trên 1 tỷ đồng)", "deadline": "Ngày cuối cùng của tháng đó", "type": "tax" }
+          { "text": "Tạm nộp thuế TNDN quý (nếu doanh thu năm trước trên 1 tỷ đồng)", "deadline": "Ngày cuối cùng của tháng đó", "type": "tax" },
+          { "text": "Khai thuế TNCN quý của nhân viên (nếu quý đó có khấu trừ)", "deadline": "Ngày cuối cùng của tháng đó", "type": "tax" }
         ],
         "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "89/2026/TT-BTC",
+            "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 22 khoản 1 điểm a (a.1, a.2.1, a.3.1, a.4), điểm b",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "252/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 9 khoản 2 điểm đ.2; Điều 10 khoản 3, khoản 5 điểm a; Điều 11 khoản 6, 7",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Nghị định",
             "doc_number": "252/2026/NĐ-CP",
@@ -593,6 +620,7 @@
           }
         ],
         "todo_for_reviewer": [
+          "Ngày 2026-11-14 (NC-026, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 22 và Nghị định 252/2026/NĐ-CP Điều 9, 10, 11): thêm dòng TNCN (khai quý / quyết toán năm). Chưa xác minh: biểu thuế TNCN lũy tiến, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN, sửa bởi Luật 09/2026). Không ghi các con số này.",
           "legal_basis chỉ phủ ý miễn thuế TNDN (NC-011): đã thêm điều kiện \"nếu doanh thu năm trước trên 1 tỷ đồng\". Hạn nộp chưa xác minh.",
           "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn khai GTGT quý và hạn tạm nộp TNDN quý là ngày cuối cùng của tháng đầu quý tiếp theo (Nghị định 252/2026 Điều 10 khoản 3, Điều 24 khoản 2). Đã sửa \"ngày 30\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
           "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn khai GTGT quý và hạn tạm nộp TNDN quý là ngày cuối cùng của tháng đầu quý tiếp theo (Nghị định 252/2026 Điều 10 khoản 3, Điều 24 khoản 2). Đã sửa \"ngày 30\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
@@ -717,9 +745,36 @@
         "month": "Tháng 3",
         "entries": [
           { "text": "Quyết toán thuế TNDN năm trước", "deadline": "31/3", "type": "tax" },
+          { "text": "Quyết toán thuế TNCN năm trước (nếu có trả lương, kể cả khi không khấu trừ)", "deadline": "31/3", "type": "tax" },
           { "text": "Nộp báo cáo tài chính năm trước (DN nộp TNDN theo % doanh thu không bắt buộc)", "deadline": "31/3 (năm nhuận 30/3)", "type": "accounting" }
         ],
         "legal_basis": [
+          {
+            "doc_type": "Thông tư",
+            "doc_number": "89/2026/TT-BTC",
+            "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+            "issuer": "Bộ Tài chính",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 22 khoản 1 điểm a (a.1, a.2.1, a.3.1, a.4), điểm b",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "252/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 9 khoản 2 điểm đ.2; Điều 10 khoản 3, khoản 5 điểm a; Điều 11 khoản 6, 7",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Thông tư",
             "doc_number": "132/2018/TT-BTC",
@@ -748,6 +803,7 @@
           }
         ],
         "todo_for_reviewer": [
+          "Ngày 2026-11-14 (NC-026, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 22 và Nghị định 252/2026/NĐ-CP Điều 9, 10, 11): thêm dòng TNCN (khai quý / quyết toán năm). Chưa xác minh: biểu thuế TNCN lũy tiến, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN, sửa bởi Luật 09/2026). Không ghi các con số này.",
           "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): hạn BCTC 90 ngày sau khi hết năm tài chính (năm nhuận là 30/3); hạn quyết toán TNDN là ngày cuối tháng thứ 3, luôn 31/3 (NC-013). Năm tài chính khác năm dương lịch: tính theo ngày kết thúc năm tài chính.",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]

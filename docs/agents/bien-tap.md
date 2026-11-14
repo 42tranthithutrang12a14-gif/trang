@@ -319,6 +319,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Test LibreOffice tính lại sổ vẫn qua với 2 nhóm chi mới.
 - Kiểm tra: `npm test` 86/86 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 33 (2026-11-14, 13:17 UTC)
+
+- Đọc NC-026 (khai thuế TNCN của công ty trả lương; Thông tư 89/2026 Điều 22, Nghị định 252/2026 Điều 9–11; đã xác minh kỳ khai, đối tượng, hạn). Status giữ "draft".
+- `tu-0-den-1.json`: thêm bước mới `thue-tncn-nhan-vien` (tùy trường hợp): khấu trừ khi trả lương; khai quý (30/4, 31/7, 31/10, 31/01); quý không khấu trừ thì không nộp (trừ quý cuối một số trường hợp); quyết toán năm 31/3 kể cả không khấu trừ; ủy quyền mẫu 08/UQ-QTT-TNCN; không trả lương thì không quyết toán. Có `legal_basis`.
+- `bat-dau.json`, lịch năm: thêm "Khai thuế TNCN quý (nếu quý đó có khấu trừ)" vào đầu mỗi quý, "Quyết toán thuế TNCN năm trước" vào Tháng 3. Thêm `legal_basis`.
+- `legal-framework.json`: thêm mục Thông tư 89/2026/TT-BTC (gộp TNCN, khai GTGT quý, quyết toán TNDN); sửa ghi chú chung "xem xét bổ sung TNCN".
+- Không ghi biểu thuế, giảm trừ gia cảnh, khấu trừ 10% (chưa xác minh).
+- Kiểm tra: `npm test` 86/86 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -348,6 +357,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 27) NC-023: xin xác minh tỷ lệ và hạn đóng BHYT (Luật Bảo hiểm y tế), BHTN (Luật Việc làm), bảo hiểm tai nạn lao động – bệnh nghề nghiệp; và người quản lý không lương có phải đóng BHYT, BHTN không.
 
 - (Vòng 31) NC-024: xin đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ), nhất là lương của chủ DN, chi mua tài sản cố định, chi không có hóa đơn. Cần để xếp lại cột "Tính vào lãi, lỗ?" của các nhóm chi trong sổ.
+
+- (Vòng 33) NC-026: xin xác minh biểu thuế TNCN từ tiền lương, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN hiện hành, Luật 09/2026). Cần để chủ DN tự tính số thuế khấu trừ khi trả lương.
 
 ## Cần chủ dự án quyết
 
