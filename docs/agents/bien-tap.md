@@ -347,6 +347,12 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "Nghị quyết 43/2026, Nghị định 398/2026 chưa đọc" ở 4 file đổi thành ghi chú đã xác minh. Còn mở: cách xử lý số đã tạm nộp các quý 2026 trước 29/10/2026.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 36 (2026-11-14, 19:18 UTC)
+
+- Đọc NC-010 (bổ sung): Luật 141/2025 chỉ thêm khoản 11a, 11b (thu nhập miễn thuế) vào Điều 4 Luật Thuế TNDN; không sửa thuế suất hay cách tính theo % doanh thu.
+- Đúng đề xuất, chỉ sửa todo, không đổi nội dung: câu "Chưa đọc các luật này…" ở `tu-0-den-1.json`, `so-ke-toan.json`, `guides/tam-nop-thue-tndn.json`, `legal-framework.json` đổi thành "Đã đối chiếu Luật 141/2025… Các luật 116, 122, 133, 143/2025 chưa đối chiếu". Status giữ "draft".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
