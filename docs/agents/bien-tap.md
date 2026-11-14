@@ -361,6 +361,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Giữ mở: mẫu và thời hạn đăng ký tự nguyện phương pháp khấu trừ.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 38 (2026-11-14, 23:18 UTC)
+
+- Đọc NC-029 (đăng ký phương pháp tính thuế GTGT; Thông tư 90/2026 Điều 7 khoản 1, Điều 9 khoản 1 điểm a; xác minh một phần).
+- Đúng đề xuất, chưa đổi nội dung hiển thị. Thay todo "mẫu và thời hạn đăng ký tự nguyện khấu trừ chưa xác minh" ở `tu-0-den-1.json` và hai guide khai GTGT bằng câu mới: DN đăng ký thuế cùng đăng ký doanh nghiệp, thay đổi thì làm cùng thủ tục thay đổi nội dung đăng ký doanh nghiệp. Còn mở: ô chọn phương pháp trên giấy đề nghị, hạn đăng ký.
+- `legal-framework.json` không có mục Thông tư 86/2024 nên không thêm todo ở đó.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
