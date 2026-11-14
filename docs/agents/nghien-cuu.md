@@ -791,6 +791,32 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal_basis` thêm: Luật Doanh nghiệp 59/2020/QH14 Điều 4 khoản 24; Luật BHXH 41/2024/QH15 Điều 7 khoản 1, Điều 141 khoản 13; Nghị định 161/2026/NĐ-CP Điều 3 khoản 2; URL như trên; `verified_against_original: true`. Bỏ todo "mức tham chiếu chưa xác minh".
   - Giữ todo: Nghị định 158/2025; BHYT, BHTN của người quản lý không lương.
 
+### Ghi chú vòng 27 (2026-11-14, 00:18 UTC)
+
+- Đã rà commit `91b7403` (bổ sung NC-022): thêm định nghĩa người quản lý và mức tham chiếu 2.530.000 đồng. Đúng đề xuất.
+- Vòng này làm NC-023: tỷ lệ đóng BHXH của DN và người lao động; hạn đóng hằng tháng (todo ở lịch "Hàng tháng" của `bat-dau.json` và nhiều chỗ khác).
+
+### NC-023 — Tỷ lệ đóng BHXH bắt buộc: DN 17% (3% + 14%), người lao động 8%; hạn đóng hằng tháng là ngày cuối cùng của tháng tiếp theo (Luật BHXH 41/2024 Điều 32–34)
+
+- Trạng thái: đã xác minh (phần BHXH); BHYT, BHTN chưa xác minh
+- Liên quan: `bat-dau.json` lịch "Hàng tháng" (id `hang-thang`, dòng ~609: "Đóng BHXH, BHYT, BHTN" hạn "Cuối tháng"; todo dòng 614); các todo "tỷ lệ đóng của DN cho nhân viên" ở `bat-dau.json` dòng 414, `tu-0-den-1.json` dòng 815, 853, `legal-framework.json` dòng 361–362.
+- Nguồn: Luật BHXH 41/2024/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/9/41-2024-qh15.pdf (bản Công báo số 987+988, có lớp chữ). Hiệu lực 01/07/2025. Mở ngày 2026-11-14.
+- Phát hiện:
+  - **Điều 32 khoản 1 (Công báo trang 26):** tỷ lệ đóng BHXH bắt buộc: a) 3% tiền lương làm căn cứ đóng vào quỹ ốm đau và thai sản; b) 22% vào quỹ hưu trí và tử tuất.
+  - **Điều 33 khoản 1 (trang 26–27):** người lao động ở điểm a, b, c, d, i, k, l khoản 1 Điều 2 (gồm người làm theo HĐLĐ từ đủ 1 tháng, người quản lý DN có hưởng lương): "Mức đóng hằng tháng bằng 8% tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc vào quỹ hưu trí và tử tuất"; đóng hằng tháng.
+  - **Điều 33 khoản 5:** người lao động không hưởng tiền lương từ 14 ngày làm việc trở lên trong tháng thì không phải đóng BHXH tháng đó (trừ khi hai bên thỏa thuận đóng). Khoản 6: tháng đầu làm việc nghỉ ốm từ 14 ngày làm việc trở lên vẫn phải đóng.
+  - **Điều 34 khoản 1 (trang 28):** người sử dụng lao động hằng tháng đóng trên tiền lương làm căn cứ của các đối tượng trên: "a) 3% vào quỹ ốm đau và thai sản; b) 14% vào quỹ hưu trí và tử tuất." Khoản 3: không phải đóng cho người lao động thuộc khoản 5 Điều 33.
+  - **Điều 34 khoản 4:** "Phương thức, thời hạn đóng bảo hiểm xã hội bắt buộc chậm nhất đối với người sử dụng lao động được quy định như sau: a) Ngày cuối cùng của tháng tiếp theo đối với phương thức đóng hằng tháng; b) Ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng đối với phương thức đóng 03 tháng một lần hoặc 06 tháng một lần."
+  - Người quản lý không hưởng lương (điểm n): tự đóng 25% (Điều 33 khoản 4), DN không đóng phần 17% (xem NC-022).
+- **Kết luận:**
+  1. Với mỗi nhân viên có HĐLĐ từ đủ 1 tháng và người quản lý có hưởng lương: DN đóng BHXH 17% (3% ốm đau thai sản + 14% hưu trí tử tuất), người lao động đóng 8% (DN khấu trừ từ lương), tổng 25% tiền lương làm căn cứ đóng.
+  2. Hạn đóng hằng tháng là **ngày cuối cùng của tháng tiếp theo** (lương tháng 3 → đóng chậm nhất 30/4), không phải "cuối tháng".
+  3. Chưa xác minh (không có trong Luật BHXH): BHYT (Luật Bảo hiểm y tế), BHTN (Luật Việc làm), bảo hiểm tai nạn lao động – bệnh nghề nghiệp (Luật An toàn, vệ sinh lao động). Không ghi tỷ lệ "tổng 32%" hay "21,5% / 10,5%" cho tới khi đọc các luật này.
+- **Đề xuất sửa (Biên tập):**
+  - `bat-dau.json` lịch "Hàng tháng": tách thành "Đóng BHXH (DN 17%, người lao động 8% trên tiền lương làm căn cứ đóng)", hạn "Ngày cuối cùng của tháng tiếp theo". BHYT, BHTN: giữ dòng riêng với todo "tỷ lệ và hạn đóng chưa xác minh", hoặc ghi "đóng cùng BHXH (chưa xác minh)". `legal_basis`: Luật BHXH 41/2024/QH15 Điều 32 khoản 1, Điều 33 khoản 1, 5, Điều 34 khoản 1, 3, 4; URL https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1; `verified_against_original: true`. Bỏ todo "xác minh hạn và phương thức đóng" (phần BHXH).
+  - Ở mục BHXH nhân viên trong `tu-0-den-1.json` và `legal-framework.json`: thêm tỷ lệ 17% / 8% và hạn đóng. Thay todo "tỷ lệ đóng của DN cho nhân viên" bằng "BHYT, BHTN, bảo hiểm TNLĐ-BNN: chưa xác minh".
+  - Sổ S2-DNSN (NC-009) có cột BHXH, BHYT, BHTN: có thể ghi chú tỷ lệ BHXH 17% / 8% ở trang hướng dẫn sổ; chưa điền tỷ lệ BHYT, BHTN.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
