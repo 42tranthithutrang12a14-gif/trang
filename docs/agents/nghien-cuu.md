@@ -907,7 +907,7 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Nguồn:
   - Nghị định 320/2025/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf (bản quét, đã OCR). Mở lại 2026-11-14.
   - Luật Thuế GTGT 48/2024/QH15 — https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/01/luat48.pdf (có lớp chữ).
-  - Nghị định 181/2025/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/181nd.signed.pdf (bản quét, đã OCR). Đã kiểm ở NC-021: Nghị định 359/2025 và 144/2026 không sửa Điều 26 (144/2026 sửa điểm g khoản 2 Điều 26 — xem lưu ý dưới).
+  - Nghị định 181/2025/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/181nd.signed.pdf (bản quét, đã OCR). Đã kiểm ở NC-021: Nghị định 359/2025 không sửa Điều 26; Nghị định 144/2026 chỉ sửa điểm g khoản 2 Điều 26 (xem lưu ý dưới), không sửa câu dẫn và khoản 1.
 - Phát hiện:
   - **Nghị định 320/2025, Điều 9 khoản 1 (PDF trang 21–23):** trừ các khoản ở Điều 10, DN được trừ khoản chi nếu đủ cả ba điều kiện:
     - a) "Khoản chi thực tế phát sinh liên quan đến hoạt động sản xuất, kinh doanh của doanh nghiệp";
