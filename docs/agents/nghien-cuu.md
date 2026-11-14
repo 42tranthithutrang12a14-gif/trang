@@ -966,6 +966,34 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Mục "Giám đốc không nhận lương" (NC-022) và các bước TNDN: thêm câu "Nếu chủ công ty TNHH một thành viên tự trả lương cho mình, khoản lương này không được tính vào chi phí khi tính thuế TNDN."
   - `legal_basis`: Nghị định 320/2025/NĐ-CP Điều 10 khoản 1, 2, 4 điểm d, 8 điểm a, b, c, đ (hai điểm đ), 9, 10, 12, 14, 17, 22; URL https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; `verified_against_original: true`. Todo: "BHXH DN đóng cho chủ công ty TNHH một thành viên có được trừ không: chưa xác minh"; "áp ngưỡng 5 triệu cho tiền lương: cách hiểu".
 
+### Ghi chú vòng 33 (2026-11-14, 12:17 UTC)
+
+- Đã rà commit `fd2f34d` (NC-025): thêm danh sách khoản chi không được trừ, ghi chú lương chủ công ty TNHH một thành viên. Chưa thấy sai sót trong phần thống kê.
+- Vòng này làm NC-026: nghĩa vụ khai thuế TNCN của DN trả lương. App hiện chưa có bước nào về TNCN (`legal-framework.json` dòng 419 chỉ ghi "Xem xét bổ sung thêm: Thuế TNCN").
+
+### NC-026 — DN trả lương: khai thuế TNCN đã khấu trừ theo quý và quyết toán năm, kể cả khi không khấu trừ được đồng nào; quý không khấu trừ thì không nộp tờ khai quý (trừ quý cuối) (Thông tư 89/2026 Điều 22; Nghị định 252/2026 Điều 10, 11)
+
+- Trạng thái: đã xác minh (kỳ khai, đối tượng khai, hạn nộp); chưa xác minh biểu thuế, giảm trừ gia cảnh
+- Liên quan: không có bước TNCN trong `bat-dau.json`, `tu-0-den-1.json`, lịch thuế; `legal-framework.json` dòng 419 (ghi chú "Xem xét bổ sung thêm: Thuế TNCN (nếu có trả lương)"); sổ S2-DNSN (NC-009).
+- Nguồn:
+  - Thông tư 89/2026/TT-BTC — https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/89-btc.signed.pdf (đã OCR 60 trang đầu). Điều 22, PDF trang 49–51. Mở lại 2026-11-14.
+  - Nghị định 252/2026/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/252-ndcp.signed.pdf (đã OCR). Điều 10, 11 (PDF trang 21–24; đã trích ở NC-013).
+- Phát hiện:
+  - **Thông tư 89/2026, Điều 22 khoản 1 điểm a:** "Tổ chức, cá nhân trả thu nhập thực hiện khai theo quý và quyết toán năm như sau: a.1) Trường hợp khai theo quý: Tổ chức, cá nhân trả thu nhập từ tiền lương, tiền công thực hiện khai số thuế thu nhập cá nhân đã khấu trừ của cá nhân nhận thu nhập theo quý; a.2.1) Tổ chức, cá nhân trả thu nhập từ tiền lương, tiền công có trách nhiệm quyết toán thuế và quyết toán thay cho các cá nhân có ủy quyền cho tổ chức, cá nhân trả thu nhập quyết toán thuế, không phân biệt có phát sinh khấu trừ thuế hay không phát sinh khấu trừ thuế".
+  - Điểm a.3.1: hồ sơ nộp cho cơ quan thuế quản lý trực tiếp DN. Điểm a.4: hồ sơ khai quý, quyết toán theo điểm 7.1 Phụ lục I. Điểm b: người lao động ủy quyền quyết toán bằng mẫu 08/UQ-QTT-TNCN gửi DN trước khi DN quyết toán.
+  - **Nghị định 252/2026, Điều 11 khoản 6:** tổ chức trả thu nhập khai TNCN theo tháng, quý "mà trong tháng, quý đó không phát sinh việc khấu trừ thuế thu nhập cá nhân của đối tượng nhận thu nhập" thì không phải nộp hồ sơ khai; nhưng quý cuối năm (hoặc quý giải thể, chấm dứt…) không phát sinh khấu trừ mà thuộc trường hợp không phải quyết toán TNCN thì vẫn phải nộp hồ sơ khai quý đó. **Khoản 7:** "Trường hợp tổ chức, cá nhân không phát sinh trả thu nhập từ tiền lương, tiền công thì không phải nộp hồ sơ khai quyết toán thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công."
+  - **Nghị định 252/2026, Điều 10 khoản 3, khoản 5 điểm a (NC-013):** khai quý hạn ngày cuối cùng của tháng đầu quý sau; quyết toán hạn ngày cuối cùng của tháng thứ 3 sau kỳ quyết toán. (Điều 9 khoản 2 điểm đ.2: kỳ quyết toán TNCN theo năm dương lịch → hạn 31/3.)
+- **Kết luận:**
+  1. DN có trả lương, tiền công: khai TNCN đã khấu trừ **theo quý** (Thông tư 89/2026 không còn kỳ khai tháng cho trường hợp này); hạn ngày cuối cùng của tháng đầu quý sau (30/4, 31/7, 31/10, 31/01).
+  2. Quý nào không khấu trừ TNCN của ai (ví dụ lương thấp, dưới mức phải nộp): không phải nộp tờ khai quý đó, trừ quý cuối năm trong trường hợp nêu ở Điều 11 khoản 6.
+  3. Có trả lương trong năm thì **phải quyết toán TNCN năm**, kể cả không khấu trừ đồng nào; hạn 31/3 năm sau. Không trả lương, tiền công cho ai cả năm thì không phải quyết toán.
+  4. Chưa xác minh: biểu thuế lũy tiến, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN 109/2025/QH15 sửa bởi Luật 09/2026 — chưa đọc). Không ghi các con số này.
+- **Đề xuất sửa (Biên tập):**
+  - Thêm bước "Thuế TNCN của nhân viên" (ví dụ trong `tu-0-den-1.json` cạnh bước BHXH, và trong `bat-dau.json`): "Công ty trả lương phải khấu trừ thuế TNCN (nếu có) khi trả lương, khai theo quý (hạn 30/4, 31/7, 31/10, 31/01) và quyết toán năm (hạn 31/3), kể cả khi không khấu trừ được đồng nào. Quý không khấu trừ của ai thì không phải nộp tờ khai quý, trừ quý cuối năm trong một số trường hợp. Cả năm không trả lương cho ai thì không phải quyết toán." `legal_basis`: Thông tư 89/2026/TT-BTC Điều 22 khoản 1 điểm a (a.1, a.2.1, a.3.1, a.4), điểm b; Nghị định 252/2026/NĐ-CP Điều 9 khoản 2 điểm đ.2, Điều 10 khoản 3, khoản 5 điểm a, Điều 11 khoản 6, 7; URL như trên; `verified_against_original: true`.
+  - Lịch thuế: thêm "Khai TNCN quý (nếu có khấu trừ)" vào các mốc 30/4, 31/7, 31/10, 31/01; thêm "Quyết toán TNCN năm (nếu có trả lương)" vào 31/3.
+  - `legal-framework.json` dòng 419: thay ghi chú bằng một mục TNCN tham chiếu NC-026.
+  - Todo: biểu thuế, giảm trừ gia cảnh, khấu trừ lao động thời vụ — chưa xác minh.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
