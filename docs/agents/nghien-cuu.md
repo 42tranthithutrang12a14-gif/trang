@@ -1019,6 +1019,36 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Todo: "Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNCN có thể làm thay đổi số thuế; chưa xác minh. Khấu trừ với lao động thời vụ, không ký HĐLĐ: chưa xác minh."
   - Có thể thêm một bảng tính nhỏ trong sổ S2 (lương) dùng biểu thuế này; nếu cần tính năng mới thì ghi "Cần chủ dự án quyết".
 
+### Ghi chú vòng 35 (2026-11-14, 16:17 UTC)
+
+- Đã rà commit `decbd17` (bổ sung NC-026): bảng tính TNCN trong sổ dùng giảm trừ 15.500.000 / 6.200.000 và biểu 5 bậc (đến 10 / 30 / 60 / 100 triệu; 5 / 10 / 20 / 30 / 35%). Khớp Luật 109/2025 Điều 9, 10. Có ghi chú "chưa tính giảm thuế theo Nghị quyết 43/2026" — vòng này trả lời điểm đó.
+
+### NC-027 — Giảm 30% thuế TNDN năm 2026, 2027 cho DN có doanh thu năm không quá 10 tỷ; không áp dụng cho TNCN từ tiền lương (Nghị quyết 43/2026/QH16; Nghị định 398/2026)
+
+- Trạng thái: đã xác minh
+- Liên quan: `guides/tam-nop-thue-tndn.json`; mục TNDN trong `tu-0-den-1.json`, `bat-dau.json`; todo về Nghị quyết 43/2026 và Nghị định 398/2026 (NC-004); ghi chú trong bảng tính TNCN của `so-ke-toan.json`.
+- Nguồn:
+  - Nghị quyết 43/2026/QH16 về giảm thuế TNCN, TNDN đối với cá nhân và doanh nghiệp — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=219330&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/9/nq43vegiamthuetncntndn.signed.pdf (2 trang, bản quét, đã OCR). Mở ngày 2026-11-14.
+  - Nghị định 398/2026/NĐ-CP quy định chi tiết Nghị quyết 43/2026 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=220138&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/398_2026_nd-cp_29102026-signed.signed.pdf (10 trang, bản quét, đã OCR). Mở ngày 2026-11-14.
+- Phát hiện:
+  - **Nghị quyết 43/2026, Điều 1 khoản 1:** "Giảm 30% số thuế thu nhập cá nhân phải nộp của kỳ tính thuế năm 2026 và năm 2027 đối với thu nhập từ kinh doanh của cá nhân cư trú có mức doanh thu hằng năm của năm 2026, năm 2027 không quá 10 tỷ đồng." (Chỉ thu nhập **từ kinh doanh**, không phải tiền lương.)
+  - **Khoản 2:** "Giảm 30% số thuế thu nhập doanh nghiệp phải nộp của kỳ tính thuế năm 2026 và năm 2027 đối với thu nhập của doanh nghiệp, tổ chức được thành lập theo quy định của pháp luật Việt Nam có mức doanh thu hằng năm của năm 2026, năm 2027 không quá 10 tỷ đồng; trừ các doanh nghiệp được hình thành từ việc chia, tách doanh nghiệp sau ngày Nghị quyết này có hiệu lực, mà tổng doanh thu hằng năm… của các doanh nghiệp sau chia, tách trên 10 tỷ đồng." DN đang được ưu đãi thì giảm 30% trên số thuế còn phải nộp sau ưu đãi.
+  - **Điều 2 khoản 1:** hiệu lực từ 24/08/2026, áp dụng cho kỳ tính thuế 2026, 2027.
+  - **Nghị định 398/2026, Điều 3 (PDF trang 3–4):**
+    - Khoản 2: số thuế được giảm tính trên toàn bộ thu nhập, "không phân biệt phương pháp tính thuế thu nhập doanh nghiệp" (áp dụng cả DN nộp theo % doanh thu).
+    - Khoản 3: doanh thu căn cứ "bao gồm doanh thu từ hoạt động bán hàng, cung cấp dịch vụ (không bao gồm các khoản giảm trừ doanh thu), doanh thu từ hoạt động tài chính và thu nhập khác" — của **chính năm** 2026, 2027 (không phải năm trước như các ngưỡng 1 tỷ, 3 tỷ).
+    - Khoản 4 điểm a: "Doanh nghiệp dự kiến doanh thu trong kỳ tính thuế năm 2026, năm 2027 nếu không quá 10 tỷ đồng thì tự xác định số thuế được giảm khi tạm nộp thuế thu nhập doanh nghiệp hằng quý." Điểm b: thực tế vượt 10 tỷ thì nộp đủ số thiếu, tiền chậm nộp theo khoản 3 Điều 24 Nghị định 252/2026.
+  - **Nghị định 398/2026, Điều 4:** hiệu lực từ 29/10/2026, áp dụng kỳ tính thuế 2026, 2027.
+- **Kết luận:**
+  1. DN siêu nhỏ có doanh thu năm 2026 (và 2027) không quá 10 tỷ được giảm 30% số thuế TNDN phải nộp của năm đó. Tính sau thuế suất 15/17/20% (NC-010) và sau các ưu đãi khác (ví dụ miễn 3 năm, NC-015). DN đã được miễn hoàn toàn (≤ 1 tỷ, NC-011) thì không còn thuế để giảm.
+  2. DN tự trừ 30% khi tạm nộp quý (năm 2026 đã qua 3 quý — tự điều chỉnh khi quyết toán; Nghị định không nói rõ cách xử lý số đã tạm nộp trước 29/10/2026, ghi todo).
+  3. Không giảm TNCN của nhân viên (thu nhập tiền lương). Ghi chú trong bảng tính TNCN của sổ ("chưa tính giảm thuế theo Nghị quyết 43/2026") nên sửa thành "Nghị quyết 43/2026 chỉ giảm TNCN từ kinh doanh, không áp dụng cho tiền lương".
+- **Đề xuất sửa (Biên tập):**
+  - `tam-nop-thue-tndn.json` và mục TNDN: thêm "Năm 2026 và 2027: công ty có doanh thu cả năm (bán hàng, dịch vụ, tài chính, thu nhập khác) không quá 10 tỷ đồng được giảm 30% số thuế TNDN phải nộp. Tự trừ khi tạm nộp quý. Cuối năm doanh thu thực tế vượt 10 tỷ thì nộp bù số đã giảm." Thêm ví dụ giả định: thuế TNDN 15% tính ra 30 triệu → giảm 9 triệu → nộp 21 triệu.
+  - `so-ke-toan.json` bảng tính TNCN: sửa ghi chú như kết luận 3.
+  - Bỏ các todo "Nghị quyết 43/2026, Nghị định 398/2026 chưa đọc" (NC-004).
+  - `legal_basis`: Nghị quyết 43/2026/QH16 Điều 1 khoản 1, 2; Điều 2 khoản 1; Nghị định 398/2026/NĐ-CP Điều 3 khoản 1, 2, 3, 4; Điều 4; URL như trên; `verified_against_original: true`. Todo: "cách xử lý số TNDN đã tạm nộp các quý 2026 trước 29/10/2026: chưa xác minh".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
