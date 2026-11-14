@@ -27,6 +27,7 @@
     "Sổ S2-DNSN: trên tiền lương làm căn cứ đóng, công ty đóng BHXH 17%, BHYT 3%, BHTN 1%; người lao động đóng BHXH 8%, BHYT 1,5%, BHTN 1% (Luật BHXH 41/2024/QH15 Điều 33, 34; Nghị định 188/2025/NĐ-CP Điều 6; Nghị định 374/2025/NĐ-CP Điều 4). Công ty đóng thêm bảo hiểm tai nạn lao động – bệnh nghề nghiệp 0,5% (Nghị định 58/2020/NĐ-CP Điều 4). Tổng: công ty 21,5%, người lao động 10,5%.",
     "Muốn khoản chi được tính vào chi phí khi tính thuế TNDN: chi cho việc kinh doanh, có hóa đơn, chứng từ; từ 5 triệu đồng trở lên (kể cả thuế GTGT) thì phải chuyển khoản hoặc thanh toán không dùng tiền mặt. Nộp tiền mặt vào tài khoản người bán không tính là chuyển khoản. Mua của cùng người bán nhiều lần trong một ngày, tổng từ 5 triệu, cũng phải chuyển khoản. Cùng điều kiện này áp dụng để được khấu trừ thuế GTGT đầu vào. Mua của người bán nhỏ không có hóa đơn: lập Bảng kê thu mua, có chữ ký người đại diện công ty.",
     "Dòng chi từ 5.000.000 đồng trở lên mà ghi quỹ \"Tiền mặt\" sẽ tô màu cam: khoản này có thể không được tính vào chi phí và không được khấu trừ thuế GTGT.",
+    "Khoản chi không được tính vào chi phí khi tính thuế TNDN (dù vẫn là tiền ra): tiền phạt hành chính và tiền chậm nộp thuế; lương của chủ doanh nghiệp tư nhân, chủ công ty TNHH một thành viên do một cá nhân làm chủ; lương nhân viên không ghi rõ mức, điều kiện trong hợp đồng lao động hoặc quy chế, hoặc không thực trả có chứng từ; phúc lợi cho nhân viên vượt 1 tháng lương bình quân/năm; trang phục bằng tiền vượt 5 triệu đồng/người/năm; từ thiện, tài trợ thông thường; tiền điện, nước đứng tên chủ nhà mà không có hợp đồng thuê và chứng từ theo số thực tế (Nghị định 320/2025/NĐ-CP Điều 10). Lãi lỗ tạm tính trong sổ chưa loại các khoản này.",
     "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
   ],
   "sheets": [
@@ -49,7 +50,7 @@
   ],
   "expense_groups": [
     { "name": "Mua hàng hóa, nguyên vật liệu", "in_result": true, "example": "Hàng để bán lại, nguyên liệu để làm ra sản phẩm" },
-    { "name": "Lương, tiền công", "in_result": true, "example": "Lương nhân viên, tiền thuê người làm theo việc" },
+    { "name": "Lương, tiền công", "in_result": true, "example": "Lương nhân viên, tiền thuê người làm theo việc. Lương của chủ công ty TNHH một thành viên (chủ là cá nhân) không được trừ khi tính thuế TNDN" },
     { "name": "Bảo hiểm cho người lao động", "in_result": true, "example": "Phần công ty đóng bảo hiểm xã hội, y tế, thất nghiệp" },
     { "name": "Thuê mặt bằng, văn phòng", "in_result": true, "example": "Tiền thuê cửa hàng, kho, văn phòng" },
     { "name": "Điện, nước, internet, điện thoại", "in_result": true, "example": "Hóa đơn điện, nước, cước mạng, cước điện thoại" },
@@ -65,6 +66,8 @@
     { "name": "Trả nợ gốc vay", "in_result": false, "example": "Trả tiền gốc của khoản vay" },
     { "name": "Chủ sở hữu rút vốn, chia lợi nhuận", "in_result": false, "example": "Tiền chủ sở hữu rút ra, chia lãi cho thành viên" },
     { "name": "Chuyển tiền nội bộ đi", "in_result": false, "example": "Dòng chuyển đi khi rút tiền ngân hàng về quỹ, hoặc nộp tiền mặt vào ngân hàng" },
+    { "name": "Tiền phạt, tiền chậm nộp", "in_result": true, "example": "Phạt vi phạm hành chính, tiền chậm nộp thuế. Không được trừ khi tính thuế TNDN" },
+    { "name": "Từ thiện, tài trợ", "in_result": true, "example": "Ủng hộ, tài trợ, từ thiện. Thường không được trừ khi tính thuế TNDN" },
     { "name": "Chi khác", "in_result": true, "example": "Khoản chi chưa xếp được vào nhóm nào" }
   ],
   "spare_income_rows": 3,
@@ -297,6 +300,19 @@
       "verified_against_original": true,
       "checked_at": "2026-11-14",
       "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "320/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-15",
+      "effective_date": "2025-12-15",
+      "article": "Điều 10 khoản 1, 2, 4 điểm d, 8 điểm a, b, c, đ, 9, 10, 12, 14, 17, 22",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
     }
   ],
   "todo_for_reviewer": [
@@ -311,7 +327,8 @@
     "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10. Khi Bộ Tài chính công bố nền tảng thì thêm tên và link chính thức. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",
     "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): thêm lưu ý tỷ lệ BHXH cho sổ S2-DNSN. Chưa điền tỷ lệ BHYT, BHTN. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
     "Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): cập nhật lưu ý tỷ lệ BHYT, BHTN cho sổ S2-DNSN. Bảo hiểm tai nạn lao động – bệnh nghề nghiệp chưa xác minh.",
-    "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN vào lưu ý S2-DNSN. Nghị định 58/2020/NĐ-CP dẫn chiếu Luật BHXH 58/2014 (đã được thay bởi Luật 41/2024 từ 01/07/2025); chưa thấy văn bản thay thế trên vanban.chinhphu.vn (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động 84/2015 chưa đọc. Chưa xác minh phần 0,5% có tính cho người quản lý không lương không."
+    "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN vào lưu ý S2-DNSN. Nghị định 58/2020/NĐ-CP dẫn chiếu Luật BHXH 58/2014 (đã được thay bởi Luật 41/2024 từ 01/07/2025); chưa thấy văn bản thay thế trên vanban.chinhphu.vn (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động 84/2015 chưa đọc. Chưa xác minh phần 0,5% có tính cho người quản lý không lương không.",
+    "Ngày 2026-11-14 (NC-025, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10): thêm lưu ý khoản chi không được trừ; thêm 2 nhóm chi \"Tiền phạt, tiền chậm nộp\" và \"Từ thiện, tài trợ\"; ghi chú nhóm lương. Cột \"Tính vào lãi, lỗ?\" vẫn là lãi lỗ tạm tính, chưa phải thu nhập tính thuế; có thêm cờ \"được trừ khi tính thuế\" hay không: chờ chủ dự án quyết. Chưa xác minh: phần BHXH công ty đóng cho chủ công ty TNHH một thành viên có được trừ khi tính thuế TNDN không. Áp ngưỡng 5 triệu chuyển khoản cho tiền lương là cách hiểu (\"các khoản thanh toán khác từng lần\")."
   ],
   "cit_rate_sheet": {
     "sheet": "Thuế TNDN theo % DT",

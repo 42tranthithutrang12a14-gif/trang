@@ -310,6 +310,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Chưa làm: cột "Có hóa đơn?" (sẽ dời cột, công thức). Chưa đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ).
 - Kiểm tra: `npm test` 86/86 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 32 (2026-11-14, 11:17 UTC)
+
+- Đọc NC-025 (khoản chi không được trừ, Nghị định 320/2025 Điều 10; đã xác minh). Status giữ "draft".
+- `so-ke-toan.json`: thêm lưu ý liệt kê các khoản chi không được trừ khi tính thuế TNDN (tiền phạt, tiền chậm nộp; lương chủ DN tư nhân, chủ công ty TNHH một thành viên; lương không ghi trong HĐLĐ hoặc không thực trả; phúc lợi vượt 1 tháng lương; trang phục bằng tiền vượt 5 triệu; từ thiện, tài trợ; điện nước đứng tên chủ nhà thiếu chứng từ). Thêm 2 nhóm chi "Tiền phạt, tiền chậm nộp" và "Từ thiện, tài trợ"; ghi chú nhóm "Lương, tiền công". Thêm `legal_basis`.
+- `tu-0-den-1.json`, bước `bhxh-nguoi-quan-ly`: thêm câu lương của chủ công ty TNHH một thành viên không được trừ; thêm `legal_basis`.
+- Todo: BHXH công ty đóng cho chủ có được trừ không; áp ngưỡng 5 triệu cho tiền lương là cách hiểu.
+- Test LibreOffice tính lại sổ vẫn qua với 2 nhóm chi mới.
+- Kiểm tra: `npm test` 86/86 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -345,3 +354,4 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 10) NC-001: theo Luật Kế toán và Nghị định 174/2016, giám đốc DN siêu nhỏ được làm kế toán cho công ty mình, nhưng phải có bằng hoặc chứng chỉ kế toán. Người phụ trách kế toán còn cần chứng chỉ bồi dưỡng kế toán trưởng và 2–3 năm kinh nghiệm. Nội dung app đã ghi như vậy. Định hướng "tự làm trọn vẹn, không cần thuê kế toán ngoài" trong `AGENTS.md` có thể cần sửa, ví dụ: "tự làm việc hằng ngày; thuê dịch vụ phụ trách kế toán nếu chưa đủ điều kiện". Agent Biên tập không sửa `AGENTS.md`.
 - (Vòng 13) Công cụ tạo lịch nghĩa vụ (`obligation_rules.json`, engine) chưa có trường doanh thu năm trước. Vì vậy nghĩa vụ tạm nộp TNDN vẫn hiện với mọi công ty, kể cả công ty được miễn. Thêm câu hỏi doanh thu vào form và điều kiện vào engine là việc lớn (đổi cấu trúc dữ liệu), cần chủ dự án đồng ý.
 - (Vòng 23) Nhiều DN siêu nhỏ (doanh thu dưới 1 tỷ) mặc định tính thuế GTGT trực tiếp trên doanh thu (NC-021), nhưng app chỉ có guide cho phương pháp khấu trừ. Có làm guide mới "Khai thuế GTGT theo phương pháp trực tiếp" không? Cần thêm trang và rule mới.
+- (Vòng 32) Sổ thu chi hiện chỉ có cờ "Tính vào lãi, lỗ?" cho mỗi nhóm (lãi lỗ tạm tính). Có thêm cờ thứ hai "Được trừ khi tính thuế TNDN" để sổ tính sẵn thu nhập tính thuế tạm không? Việc này đổi cấu trúc trang Thiết lập và Tổng hợp.
