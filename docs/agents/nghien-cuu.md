@@ -876,6 +876,25 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Sổ S2-DNSN (lương và bảo hiểm): có thể thêm chú thích tỷ lệ ở trang hướng dẫn.
   - `legal_basis` thêm: Nghị định 188/2025/NĐ-CP Điều 6 khoản 1 điểm a, b; Nghị định 374/2025/NĐ-CP Điều 4 khoản 1, 2, Điều 5; URL như trên; `verified_against_original: true`. Thay todo "mức đóng BHYT, BHTN cụ thể" bằng "bảo hiểm TNLĐ-BNN và hạn đóng BHYT, BHTN chưa xác minh".
 
+### Ghi chú vòng 30 (2026-11-14, 06:18 UTC)
+
+- Đã rà commit `3b14f11` (bổ sung 2 NC-023): ghi BHYT 4,5% (DN 3%, nhân viên 1,5%), BHTN 1% mỗi bên. Đúng đề xuất.
+- Vòng này làm phần cuối NC-023: bảo hiểm tai nạn lao động – bệnh nghề nghiệp (TNLĐ-BNN), phần DN đóng.
+
+### NC-023 (bổ sung 3) — Bảo hiểm TNLĐ-BNN: DN đóng 0,5% quỹ tiền lương làm căn cứ đóng BHXH (0,3% nếu đủ điều kiện) (Nghị định 58/2020)
+
+- Trạng thái: đã xác minh (mức đóng theo Nghị định 58/2020); còn mở về việc văn bản này đã được thay chưa
+- Nguồn: Nghị định 58/2020/NĐ-CP quy định mức đóng bảo hiểm xã hội bắt buộc vào Quỹ bảo hiểm tai nạn lao động, bệnh nghề nghiệp — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=200108&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2020/05/58.signed.pdf (24 trang, bản quét, đã OCR). Điều 11 khoản 1: hiệu lực từ ngày 15/7/2020. Mở ngày 2026-11-14.
+- Phát hiện:
+  - **Điều 4 khoản 1 (PDF trang 2):** người sử dụng lao động hằng tháng đóng trên quỹ tiền lương đóng BHXH cho người lao động (trừ người giúp việc gia đình), theo một trong các mức: "a) Mức đóng bình thường bằng 0,5% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội…; b) Mức đóng bằng 0,3% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội được áp dụng đối với doanh nghiệp bảo đảm điều kiện theo quy định tại Điều 5 của Nghị định này."
+  - Điều 5: điều kiện được mức 0,3% (DN hoạt động trong ngành nghề có nguy cơ cao phải có văn bản đề xuất, báo cáo đánh giá an toàn vệ sinh lao động…; thời gian áp dụng 36 tháng). Chưa trích chi tiết.
+  - Phần này chỉ DN đóng; người lao động không đóng.
+- **Lưu ý:** Nghị định 58/2020 dẫn chiếu các điểm của khoản 1 Điều 2 Luật BHXH cũ (58/2014). Luật BHXH 41/2024 đã thay luật cũ từ 01/07/2025, các điểm đánh số khác. Trên vanban.chinhphu.vn (tìm theo trích yếu "Quỹ bảo hiểm tai nạn lao động") chỉ thấy 44/2017 và 58/2020; chưa thấy nghị định mới thay 58/2020. Căn cứ trực tiếp của mức đóng là Luật An toàn, vệ sinh lao động 84/2015 (chưa đọc điều về mức đóng tối đa).
+- **Kết luận (gộp NC-023):** DN đóng cho mỗi nhân viên trên tiền lương làm căn cứ đóng BHXH: BHXH 17% + BHYT 3% + BHTN 1% + TNLĐ-BNN 0,5% = **21,5%** (hoặc 21,3% nếu được mức 0,3%). Nhân viên đóng 8% + 1,5% + 1% = **10,5%**. Tổng 32%.
+- **Đề xuất sửa (Biên tập):**
+  - Lịch "Hàng tháng" (`bat-dau.json`) và mục BHXH nhân viên: thêm dòng "Bảo hiểm tai nạn lao động – bệnh nghề nghiệp: DN đóng 0,5% (một số DN đủ điều kiện được 0,3%)". Tổng: "DN 21,5%, nhân viên 10,5% tiền lương làm căn cứ đóng BHXH." `legal_basis`: Nghị định 58/2020/NĐ-CP Điều 4 khoản 1 điểm a, b; URL https://vanban.chinhphu.vn/?pageid=27160&docid=200108&classid=1; `verified_against_original: true`. Thêm todo: "Nghị định 58/2020 dẫn chiếu Luật BHXH 58/2014; chưa thấy văn bản thay thế (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động chưa đọc."
+  - Không áp dụng phần 0,5% này cho giám đốc không nhận lương (Điều 4 khoản 1 tính trên quỹ lương của người lao động ở các điểm được liệt kê; người quản lý không lương tự đóng, NC-022). Ghi todo nếu muốn chắc chắn.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
