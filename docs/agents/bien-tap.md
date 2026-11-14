@@ -300,6 +300,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "chưa xác minh bảo hiểm TNLĐ-BNN" ở các chỗ cũ đổi thành ghi chú đã xác minh; còn mở hạn đóng BHYT, BHTN.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 31 (2026-11-14, 09:18 UTC)
+
+- Đọc NC-024 (chi phí được trừ và khấu trừ GTGT: hóa đơn, chứng từ, ngưỡng 5 triệu thanh toán không dùng tiền mặt; Nghị định 320/2025 Điều 9, Luật Thuế GTGT 48/2024 Điều 14, Nghị định 181/2025 Điều 26; đã xác minh). Status giữ "draft".
+- `so-ke-toan.json`: thêm 2 lưu ý (điều kiện chi phí được trừ, ngưỡng 5 triệu, nộp tiền mặt vào tài khoản người bán không tính, mua nhiều lần trong ngày, bảng kê thu mua; giải thích ô cam). Thêm `legal_basis` 3 văn bản. Cập nhật todo.
+- `src/lib/so-ke-toan.ts`: thêm `CASH_LIMIT = 5_000_000` và quy tắc tô cam ô "Tiền ra" khi số tiền từ 5 triệu và quỹ là "Tiền mặt"; thêm dòng chú giải màu. Không đổi cột. Đã kiểm quy tắc còn nguyên sau khi LibreOffice mở và lưu lại.
+- `tests/so-ke-toan.test.ts`: thêm SK13.
+- `tu-0-den-1.json`, bước mở tài khoản ngân hàng: thêm câu về ngưỡng 5 triệu; điền `legal_basis`.
+- Chưa làm: cột "Có hóa đơn?" (sẽ dời cột, công thức). Chưa đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ).
+- Kiểm tra: `npm test` 86/86 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -327,6 +337,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 25) NC-022: xin xác minh mức tham chiếu hiện tại, tỷ lệ đóng BHXH, BHYT, BHTN của DN và người lao động, hạn đóng hằng tháng (Nghị định 158/2025, Luật BHYT, Luật Việc làm).
 
 - (Vòng 27) NC-023: xin xác minh tỷ lệ và hạn đóng BHYT (Luật Bảo hiểm y tế), BHTN (Luật Việc làm), bảo hiểm tai nạn lao động – bệnh nghề nghiệp; và người quản lý không lương có phải đóng BHYT, BHTN không.
+
+- (Vòng 31) NC-024: xin đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ), nhất là lương của chủ DN, chi mua tài sản cố định, chi không có hóa đơn. Cần để xếp lại cột "Tính vào lãi, lỗ?" của các nhóm chi trong sổ.
 
 ## Cần chủ dự án quyết
 

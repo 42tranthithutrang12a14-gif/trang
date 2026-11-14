@@ -94,7 +94,9 @@ const MONTH_COLUMNS = ["B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 const YEAR_COLUMN = "N";
 
 const FONT = { name: "Arial", size: 10 };
-const COLOR = { blue: "FF1565C0", grey: "FF757575", input: "FFFFF2CC", auto: "FFF2F2F2", section: "FFE3F2FD", alert: "FFFFC7CE" };
+const COLOR = { blue: "FF1565C0", grey: "FF757575", input: "FFFFF2CC", auto: "FFF2F2F2", section: "FFE3F2FD", alert: "FFFFC7CE", warn: "FFFFE0B2" };
+/** Purchases from this amount (VAT included) need a non-cash payment record (Decree 320/2025 Art. 9; Decree 181/2025 Art. 26). */
+export const CASH_LIMIT = 5_000_000;
 const MONEY = "#,##0";
 const MONEY_DASH = '#,##0;-#,##0;"-"';
 const DATE = "dd/mm/yyyy";
@@ -361,6 +363,17 @@ function buildJournal(ws: Sheet, spec: LedgerSpec, year: number) {
     ref: `E${first}:F${last}`,
     rules: [alertRule(`AND($E${first}<>"",$F${first}<>"")`, 4)],
   });
+  ws.addConditionalFormatting({
+    ref: `F${first}:F${last}`,
+    rules: [
+      {
+        type: "expression",
+        priority: 5,
+        formulae: [`AND(N($F${first})>=${CASH_LIMIT},$H${first}="${FUND_CASH}")`],
+        style: { fill: { type: "pattern", pattern: "solid", bgColor: { argb: COLOR.warn } } },
+      },
+    ],
+  });
 
   ws.views = [{ state: "frozen", ySplit: journal.header, xSplit: 0 }];
   ws.autoFilter = { from: { row: journal.header, column: 1 }, to: { row: last, column: JOURNAL_HEADERS.length } };
@@ -543,6 +556,7 @@ function buildGuide(ws: Sheet, spec: LedgerSpec, year: number) {
     [COLOR.blue, "Cột tiêu đề nền xanh (trang Nhật ký thu chi): bạn gõ vào."],
     [COLOR.grey, "Cột tiêu đề nền xám và ô nền xám: file tự tính, không gõ vào."],
     [COLOR.alert, "Ô đỏ nhạt: dòng còn thiếu ngày, nhóm hoặc quỹ."],
+    [COLOR.warn, "Ô cam (cột Tiền ra): chi từ 5.000.000 đồng trở lên bằng tiền mặt. Khoản này có thể không được tính vào chi phí và không được khấu trừ thuế GTGT."],
   ];
   for (const [argb, label] of legend) {
     ws.getCell(row, 2).fill = solid(argb);

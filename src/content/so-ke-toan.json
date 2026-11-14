@@ -25,6 +25,8 @@
     "Sổ thu chi ghi khi tiền vào, tiền ra. Sổ S1-DNSN ghi doanh thu khi bán hàng, cung cấp dịch vụ, kể cả khi khách chưa trả tiền. Vì vậy hai sổ có thể chênh nhau.",
     "Nhà nước sẽ cung cấp miễn phí cho DN siêu nhỏ một nền tảng số, trong đó có phần mềm kế toán gắn với hóa đơn điện tử và chữ ký số (Nghị định 20/2026/NĐ-CP Điều 10). Chưa có tên nền tảng và thời điểm cung cấp.",
     "Sổ S2-DNSN: trên tiền lương làm căn cứ đóng, công ty đóng BHXH 17%, BHYT 3%, BHTN 1%; người lao động đóng BHXH 8%, BHYT 1,5%, BHTN 1% (Luật BHXH 41/2024/QH15 Điều 33, 34; Nghị định 188/2025/NĐ-CP Điều 6; Nghị định 374/2025/NĐ-CP Điều 4). Công ty đóng thêm bảo hiểm tai nạn lao động – bệnh nghề nghiệp 0,5% (Nghị định 58/2020/NĐ-CP Điều 4). Tổng: công ty 21,5%, người lao động 10,5%.",
+    "Muốn khoản chi được tính vào chi phí khi tính thuế TNDN: chi cho việc kinh doanh, có hóa đơn, chứng từ; từ 5 triệu đồng trở lên (kể cả thuế GTGT) thì phải chuyển khoản hoặc thanh toán không dùng tiền mặt. Nộp tiền mặt vào tài khoản người bán không tính là chuyển khoản. Mua của cùng người bán nhiều lần trong một ngày, tổng từ 5 triệu, cũng phải chuyển khoản. Cùng điều kiện này áp dụng để được khấu trừ thuế GTGT đầu vào. Mua của người bán nhỏ không có hóa đơn: lập Bảng kê thu mua, có chữ ký người đại diện công ty.",
+    "Dòng chi từ 5.000.000 đồng trở lên mà ghi quỹ \"Tiền mặt\" sẽ tô màu cam: khoản này có thể không được tính vào chi phí và không được khấu trừ thuế GTGT.",
     "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
   ],
   "sheets": [
@@ -256,6 +258,45 @@
       "verified_against_original": true,
       "checked_at": "2026-11-14",
       "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "320/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-15",
+      "effective_date": "2025-12-15",
+      "article": "Điều 9 khoản 1 điểm a, b, c (c1, c2, c3)",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "48/2024/QH15",
+      "title": "Luật Thuế giá trị gia tăng",
+      "issuer": "Quốc hội",
+      "issued_date": "2024-11-26",
+      "effective_date": "2025-07-01",
+      "article": "Điều 14 khoản 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "181/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Thuế giá trị gia tăng",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-07-01",
+      "effective_date": "2025-07-01",
+      "article": "Điều 26 câu dẫn, khoản 1, 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
     }
   ],
   "todo_for_reviewer": [
@@ -264,7 +305,7 @@
     "Ngày 2026-11-12 (NC-010): Chương III (4 sổ S1–S4) vẫn có cơ sở. Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b cho tính thuế theo tỷ lệ % trên doanh thu với DN có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập. Tỷ lệ % do Chính phủ quy định, chưa đọc nghị định. Thông tư 132/2018 còn hiệu lực không: chưa thấy văn bản thay thế (NC-002). Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
     "Cột \"Tính vào lãi, lỗ?\" của từng nhóm là mặc định tạm. Cần xác minh cách xếp: thuế đã nộp, mua thiết bị giá trị lớn (tài sản cố định, khấu hao), tiền đặt cọc, lương chủ sở hữu.",
     "Lãi lỗ tạm tính lấy số chưa gồm thuế GTGT. Cần xác minh cách tính cho DN tính thuế GTGT theo phương pháp trực tiếp.",
-    "Xác minh khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt, để được tính vào chi phí. Khi có căn cứ thì thêm cột kiểm tra.",
+    "Ngày 2026-11-14 (NC-024, đã đối chiếu toàn văn Nghị định 320/2025 Điều 9, Luật Thuế GTGT 48/2024 Điều 14, Nghị định 181/2025 Điều 26): thêm lưu ý điều kiện chi phí được trừ, ngưỡng 5 triệu, và tô màu cam dòng chi tiền mặt từ 5 triệu. Chưa đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ) và điểm g khoản 2 Điều 26 Nghị định 181/2025 đã sửa bởi Nghị định 144/2026.",
     "Xác minh thời hạn lưu sổ, chứng từ và việc sổ lập trên máy tính có phải in, ký không.",
     "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm trang \"Thuế TNDN theo % DT\" với 6 tỷ lệ theo Điều 12 khoản 4. Chưa nối với S1-DNSN: S1 chia doanh thu thành hàng hóa, dịch vụ, khác, không khớp nhóm tỷ lệ. Chưa rõ kỳ kê khai (quý hay năm) của cách tính này. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
     "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10. Khi Bộ Tài chính công bố nền tảng thì thêm tên và link chính thức. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",

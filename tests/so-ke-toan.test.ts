@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import type ExcelJS from "exceljs";
 import ledgerJson from "@/content/so-ke-toan.json";
 import {
+  CASH_LIMIT,
   FUND_BANK,
   FUND_CASH,
   JOURNAL_HEADERS,
@@ -187,5 +188,18 @@ describe("buildLedgerWorkbook", () => {
       expect(formulaOf(ws, `D${row}`)).toBe(`ROUND(B${row}*C${row},0)`);
     });
     expect(formulaOf(ws, `D${layout.total}`)).toBe(`SUM(D${layout.first}:D${layout.last})`);
+  });
+
+  it("SK13: tô màu dòng chi tiền mặt từ 5 triệu đồng (Nghị định 320/2025 Điều 9)", () => {
+    expect(CASH_LIMIT).toBe(5_000_000);
+    const journal = sheet(SHEETS.journal);
+    const { first, last } = LAYOUT.journal;
+    const list = (journal as unknown as { conditionalFormattings: { ref: string; rules: { formulae?: string[] }[] }[] })
+      .conditionalFormattings;
+    const rule = list.find((cf) => cf.ref === `F${first}:F${last}`);
+    expect(rule).toBeDefined();
+    const formulaText = rule!.rules[0].formulae?.[0] ?? "";
+    expect(formulaText).toContain(`>=${CASH_LIMIT}`);
+    expect(formulaText).toContain(`"${FUND_CASH}"`);
   });
 });

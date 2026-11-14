@@ -449,13 +449,53 @@
           "how": [
             "Hẹn ngân hàng, mang giấy tờ đến mở tài khoản.",
             "Đăng ký ngân hàng điện tử để nộp thuế trực tuyến.",
-            "Dùng tài khoản này cho các khoản thu chi của công ty."
+            "Dùng tài khoản này cho các khoản thu chi của công ty. Khoản mua từ 5 triệu đồng trở lên (kể cả thuế GTGT) phải chuyển khoản thì mới được tính vào chi phí và khấu trừ thuế GTGT; nộp tiền mặt vào tài khoản người bán không tính."
           ],
           "links": [],
-          "legal_basis": [],
+          "legal_basis": [
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "320/2025/NĐ-CP",
+              "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+              "issuer": "Chính phủ",
+              "issued_date": "2025-12-15",
+              "effective_date": "2025-12-15",
+              "article": "Điều 9 khoản 1 điểm a, b, c (c1, c2, c3)",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-14",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Luật",
+              "doc_number": "48/2024/QH15",
+              "title": "Luật Thuế giá trị gia tăng",
+              "issuer": "Quốc hội",
+              "issued_date": "2024-11-26",
+              "effective_date": "2025-07-01",
+              "article": "Điều 14 khoản 2",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-14",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "181/2025/NĐ-CP",
+              "title": "Nghị định quy định chi tiết một số điều của Luật Thuế giá trị gia tăng",
+              "issuer": "Chính phủ",
+              "issued_date": "2025-07-01",
+              "effective_date": "2025-07-01",
+              "article": "Điều 26 câu dẫn, khoản 1, 2",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-14",
+              "snapshot_path": ""
+            }
+          ],
           "todo_for_reviewer": [
             "Xác minh mở tài khoản là bắt buộc hay khuyến nghị, và có phải báo số tài khoản cho cơ quan thuế không.",
-            "\"Dùng tài khoản này cho các khoản thu chi\" là khuyến nghị. Xác minh quy định về thanh toán không dùng tiền mặt liên quan.",
+            "Ngày 2026-11-14 (NC-024, đã đối chiếu toàn văn Nghị định 320/2025 Điều 9, Luật Thuế GTGT 48/2024 Điều 14, Nghị định 181/2025 Điều 26): thêm ngưỡng 5 triệu đồng và điều kiện chứng từ thanh toán không dùng tiền mặt; điền legal_basis. Việc mở tài khoản vẫn là khuyến nghị (chưa xác minh bắt buộc).",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
           ]
         },
