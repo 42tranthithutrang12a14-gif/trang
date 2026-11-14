@@ -411,7 +411,7 @@
         "todo_for_reviewer": [
           "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã thay việc \"Nộp lệ phí môn bài năm đầu\". legal_basis chỉ phủ ý này.",
           "Con dấu: việc ghi \"Đăng ký con dấu\" nhưng ghi chú nói \"DN tự quyết định\". Xác minh hiện còn phải đăng ký hoặc thông báo mẫu dấu không.",
-          "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng (Điều 2 khoản 1 điểm a, i, n) và hạn 30 ngày kể từ ngày thuộc đối tượng (Điều 28) đã đối chiếu; đã sửa việc và ghi chú; legal_basis chỉ phủ việc BHXH. Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; tỷ lệ đóng của DN cho nhân viên. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1",
+          "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng (Điều 2 khoản 1 điểm a, i, n) và hạn 30 ngày kể từ ngày thuộc đối tượng (Điều 28) đã đối chiếu; đã sửa việc và ghi chú; legal_basis chỉ phủ việc BHXH. Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; bảo hiểm tai nạn lao động – bệnh nghề nghiệp (tỷ lệ BHXH đã xác minh ở NC-023). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },
@@ -606,12 +606,40 @@
         "month": "Hàng tháng",
         "entries": [
           { "text": "Khai GTGT tháng (nếu khai theo tháng)", "deadline": "Ngày 20 tháng tiếp theo", "type": "tax" },
-          { "text": "Đóng BHXH, BHYT, BHTN", "deadline": "Cuối tháng", "type": "hr" }
+          { "text": "Đóng BHXH: công ty 17%, người lao động 8% tiền lương làm căn cứ đóng", "deadline": "Ngày cuối cùng của tháng tiếp theo", "type": "hr" },
+          { "text": "Đóng BHYT, BHTN (tỷ lệ chưa có trong sổ tay)", "deadline": "Chưa xác minh", "type": "hr" }
         ],
-        "legal_basis": [],
+        "legal_basis": [
+          {
+            "doc_type": "Luật",
+            "doc_number": "41/2024/QH15",
+            "title": "Luật Bảo hiểm xã hội",
+            "issuer": "Quốc hội",
+            "issued_date": "2024-06-29",
+            "effective_date": "2025-07-01",
+            "article": "Điều 32 khoản 1; Điều 33 khoản 1, 5; Điều 34 khoản 1, 3, 4",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "252/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-06-30",
+            "effective_date": "2026-07-01",
+            "article": "Điều 10 khoản 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-12",
+            "snapshot_path": ""
+          }
+        ],
         "todo_for_reviewer": [
-          "Xác minh hạn khai GTGT tháng \"ngày 20 tháng tiếp theo\".",
-          "\"Đóng BHXH, BHYT, BHTN: cuối tháng\": xác minh hạn và phương thức đóng theo Luật BHXH đang có hiệu lực.",
+          "Ngày 2026-11-12 (NC-013): hạn khai GTGT tháng ngày 20 tháng tiếp theo khớp Nghị định 252/2026 Điều 10 khoản 2.",
+          "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): tách dòng BHXH (tỷ lệ 17% / 8%, hạn ngày cuối cùng của tháng tiếp theo, Điều 34 khoản 4) khỏi BHYT, BHTN. Tỷ lệ và hạn BHYT (Luật Bảo hiểm y tế), BHTN (Luật Việc làm) chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
         ]
       },

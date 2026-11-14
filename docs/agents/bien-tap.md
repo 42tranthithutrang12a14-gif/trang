@@ -263,6 +263,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "chưa xác minh mức tham chiếu, định nghĩa người quản lý" ở 4 chỗ đổi thành ghi chú đã xác minh; còn mở Nghị định 158/2025, BHYT, BHTN, tỷ lệ đóng cho nhân viên.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 27 (2026-11-14, 01:17 UTC)
+
+- Đọc NC-023 (tỷ lệ và hạn đóng BHXH, Luật BHXH 41/2024 Điều 32–34; đã xác minh phần BHXH). Status giữ "draft".
+- `bat-dau.json`, lịch "Hàng tháng": tách "Đóng BHXH, BHYT, BHTN – cuối tháng" thành "Đóng BHXH: công ty 17%, người lao động 8%" (hạn ngày cuối cùng của tháng tiếp theo) và "Đóng BHYT, BHTN (tỷ lệ chưa có trong sổ tay)" (hạn "Chưa xác minh"). Điền `legal_basis` (Luật BHXH; Nghị định 252/2026 cho hạn GTGT tháng).
+- `tu-0-den-1.json`, bước `lao-dong-bhxh`: thêm tỷ lệ, hạn, trường hợp không phải đóng (nghỉ không lương từ 14 ngày); BHYT, BHTN ghi rõ chưa có.
+- `legal-framework.json`, mục Luật BHXH: thêm tỷ lệ và hạn đóng vào key_points.
+- `so-ke-toan.json`: thêm lưu ý tỷ lệ BHXH cho sổ S2-DNSN.
+- Todo "tỷ lệ đóng của DN cho nhân viên" ở 4 chỗ đổi thành "bảo hiểm tai nạn lao động – bệnh nghề nghiệp" (phần còn mở).
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -288,6 +298,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 23) NC-021: xin đọc Nghị định 181/2025 (và bản sửa 359/2025, 144/2026): cách tính doanh thu hằng năm để chọn khấu trừ hay trực tiếp, thủ tục đăng ký tự nguyện khấu trừ, DN mới thành lập. Và kỳ khai, mẫu tờ khai GTGT cho phương pháp trực tiếp.
 
 - (Vòng 25) NC-022: xin xác minh mức tham chiếu hiện tại, tỷ lệ đóng BHXH, BHYT, BHTN của DN và người lao động, hạn đóng hằng tháng (Nghị định 158/2025, Luật BHYT, Luật Việc làm).
+
+- (Vòng 27) NC-023: xin xác minh tỷ lệ và hạn đóng BHYT (Luật Bảo hiểm y tế), BHTN (Luật Việc làm), bảo hiểm tai nạn lao động – bệnh nghề nghiệp; và người quản lý không lương có phải đóng BHYT, BHTN không.
 
 ## Cần chủ dự án quyết
 

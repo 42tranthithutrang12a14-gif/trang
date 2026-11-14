@@ -24,6 +24,7 @@
     "Lãi lỗ tạm tính là số theo dõi nội bộ, chưa phải lợi nhuận tính thuế.",
     "Sổ thu chi ghi khi tiền vào, tiền ra. Sổ S1-DNSN ghi doanh thu khi bán hàng, cung cấp dịch vụ, kể cả khi khách chưa trả tiền. Vì vậy hai sổ có thể chênh nhau.",
     "Nhà nước sẽ cung cấp miễn phí cho DN siêu nhỏ một nền tảng số, trong đó có phần mềm kế toán gắn với hóa đơn điện tử và chữ ký số (Nghị định 20/2026/NĐ-CP Điều 10). Chưa có tên nền tảng và thời điểm cung cấp.",
+    "Sổ S2-DNSN: tỷ lệ BHXH công ty đóng 17%, người lao động đóng 8% tiền lương làm căn cứ đóng (Luật BHXH 41/2024/QH15 Điều 33, 34). Tỷ lệ BHYT, BHTN chưa có trong sổ tay.",
     "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
   ],
   "sheets": [
@@ -203,6 +204,19 @@
       "verified_against_original": true,
       "checked_at": "2026-11-13",
       "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "41/2024/QH15",
+      "title": "Luật Bảo hiểm xã hội",
+      "issuer": "Quốc hội",
+      "issued_date": "2024-06-29",
+      "effective_date": "2025-07-01",
+      "article": "Điều 33 khoản 1; Điều 34 khoản 1",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
     }
   ],
   "todo_for_reviewer": [
@@ -214,7 +228,8 @@
     "Xác minh khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt, để được tính vào chi phí. Khi có căn cứ thì thêm cột kiểm tra.",
     "Xác minh thời hạn lưu sổ, chứng từ và việc sổ lập trên máy tính có phải in, ký không.",
     "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm trang \"Thuế TNDN theo % DT\" với 6 tỷ lệ theo Điều 12 khoản 4. Chưa nối với S1-DNSN: S1 chia doanh thu thành hàng hóa, dịch vụ, khác, không khớp nhóm tỷ lệ. Chưa rõ kỳ kê khai (quý hay năm) của cách tính này. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
-    "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10. Khi Bộ Tài chính công bố nền tảng thì thêm tên và link chính thức. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1"
+    "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10. Khi Bộ Tài chính công bố nền tảng thì thêm tên và link chính thức. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",
+    "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): thêm lưu ý tỷ lệ BHXH cho sổ S2-DNSN. Chưa điền tỷ lệ BHYT, BHTN. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1"
   ],
   "cit_rate_sheet": {
     "sheet": "Thuế TNDN theo % DT",
