@@ -338,6 +338,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo: Nghị quyết 43/2026/QH16, Nghị định 398/2026 về giảm thuế TNCN; khấu trừ lao động thời vụ — chưa xác minh.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 35 (2026-11-14, 17:17 UTC)
+
+- Đọc NC-027 (giảm 30% thuế TNDN năm 2026, 2027 cho DN doanh thu năm không quá 10 tỷ; không áp dụng cho TNCN tiền lương; Nghị quyết 43/2026/QH16, Nghị định 398/2026; đã xác minh). Status giữ "draft".
+- `guides/tam-nop-thue-tndn.json`: thêm mục "Năm 2026, 2027: giảm 30% thuế TNDN" (doanh thu xét của chính năm đó, giảm sau thuế suất và ưu đãi khác, tự trừ khi tạm nộp, vượt 10 tỷ thì nộp bù, ngoại lệ chia tách) kèm ví dụ giả định 30 → 21 triệu.
+- `tu-0-den-1.json`, mục thuế suất thấp: thêm bước giảm 30%; thêm `legal_basis`.
+- `so-ke-toan.json`: trang "Tính thuế TNCN" sửa ghi chú (Nghị quyết 43/2026 chỉ giảm TNCN từ kinh doanh); trang thuế TNDN theo % doanh thu thêm ghi chú giảm 30% (bảng chưa tự trừ). Thêm `legal_basis`.
+- Todo "Nghị quyết 43/2026, Nghị định 398/2026 chưa đọc" ở 4 file đổi thành ghi chú đã xác minh. Còn mở: cách xử lý số đã tạm nộp các quý 2026 trước 29/10/2026.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -370,7 +379,7 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 
 - (Vòng 33) NC-026: xin xác minh biểu thuế TNCN từ tiền lương, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN hiện hành, Luật 09/2026). Cần để chủ DN tự tính số thuế khấu trừ khi trả lương.
 
-- (Vòng 34) NC-026: xin đọc Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP (giảm thuế TNCN, TNDN): có làm thay đổi số thuế TNCN từ tiền lương, thuế TNDN của DN siêu nhỏ không.
+- (Đã trả lời ở NC-027.) (Vòng 34) NC-026: xin đọc Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP (giảm thuế TNCN, TNDN): có làm thay đổi số thuế TNCN từ tiền lương, thuế TNDN của DN siêu nhỏ không.
 
 ## Cần chủ dự án quyết
 

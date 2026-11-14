@@ -1113,7 +1113,7 @@
           ],
           "todo_for_reviewer": [
             "Ngày 2026-11-14 (NC-026, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 22 và Nghị định 252/2026/NĐ-CP Điều 9, 10, 11): bước mới do agent Biên tập thêm. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
-            "Ngày 2026-11-14 (NC-026 bổ sung, đã đối chiếu toàn văn Luật Thuế TNCN 109/2025/QH15 Điều 8–10, 21, 29 và Nghị quyết 110/2025/UBTVQH15): thêm cách tính, biểu thuế 5 bậc, giảm trừ 15,5 / 6,2 triệu, ví dụ ghi rõ số giả định. Chưa xác minh: Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNCN có thể làm thay đổi số thuế; khấu trừ với lao động thời vụ, không ký HĐLĐ (Nghị định 253/2026, Thông tư 87/2026)."
+            "Ngày 2026-11-14 (NC-026 bổ sung, đã đối chiếu toàn văn Luật Thuế TNCN 109/2025/QH15 Điều 8–10, 21, 29 và Nghị quyết 110/2025/UBTVQH15): thêm cách tính, biểu thuế 5 bậc, giảm trừ 15,5 / 6,2 triệu, ví dụ ghi rõ số giả định. Nghị quyết 43/2026/QH16 chỉ giảm TNCN từ kinh doanh, không áp dụng cho tiền lương (NC-027). Chưa xác minh: khấu trừ với lao động thời vụ, không ký HĐLĐ (Nghị định 253/2026, Thông tư 87/2026)."
           ]
         },
         {
@@ -1248,10 +1248,37 @@
         "how": [
           "Áp dụng thuế suất này khi tự tính số thuế tạm nộp và khi quyết toán thuế TNDN.",
           "Công ty mới thành lập: tự dự kiến doanh thu cả năm để chọn 15% hay 17% khi tạm nộp. Dự kiến thấp, thực tế cao hơn thì nộp bù phần thiếu và tiền chậm nộp.",
+          "Năm 2026, 2027: nếu doanh thu cả năm không quá 10 tỷ đồng thì được giảm thêm 30% số thuế TNDN phải nộp; tự trừ khi tạm nộp quý, vượt 10 tỷ thì nộp bù.",
           "Ghi sổ đầy đủ để chứng minh doanh thu."
         ],
         "links": [],
         "legal_basis": [
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "43/2026/QH16",
+            "title": "Nghị quyết về giảm thuế thu nhập cá nhân, thuế thu nhập doanh nghiệp đối với cá nhân và doanh nghiệp",
+            "issuer": "Quốc hội",
+            "issued_date": "2026-08-24",
+            "effective_date": "2026-08-24",
+            "article": "Điều 1 khoản 1, 2; Điều 2 khoản 1",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=219330&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "398/2026/NĐ-CP",
+            "title": "Nghị định quy định chi tiết Nghị quyết 43/2026/QH16",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-10-29",
+            "effective_date": "2026-10-29",
+            "article": "Điều 3 khoản 1, 2, 3, 4; Điều 4",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=220138&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Nghị định",
             "doc_number": "320/2025/NĐ-CP",
@@ -1280,8 +1307,9 @@
           }
         ],
         "todo_for_reviewer": [
+          "Ngày 2026-11-14 (NC-027, đã đối chiếu toàn văn Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP): thêm bước giảm 30% năm 2026, 2027; điền legal_basis. Chưa xác minh: cách xử lý số TNDN đã tạm nộp các quý năm 2026 trước ngày 29/10/2026 (Nghị định 398/2026 không nói rõ).",
           "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm bước cho công ty mới thành lập (Điều 11 khoản 4 điểm b), thêm legal_basis Nghị định 320/2025. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
-          "Gợi ý của trợ lý AI (chưa xác minh): theo Luật Thuế TNDN số 67/2025/QH15, áp dụng từ kỳ tính thuế năm 2025. Xác minh thuế suất, ngưỡng doanh thu, cách xác định doanh thu năm và trường hợp không được áp dụng. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+          "Gợi ý của trợ lý AI (chưa xác minh): theo Luật Thuế TNDN số 67/2025/QH15, áp dụng từ kỳ tính thuế năm 2025. Xác minh thuế suất, ngưỡng doanh thu, cách xác định doanh thu năm và trường hợp không được áp dụng. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP: giảm 30% thuế TNDN năm 2026, 2027 cho DN doanh thu năm không quá 10 tỷ (đã xác minh ở NC-027). Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
           "Ngày 2026-11-12 (NC-010): đã đối chiếu Luật 67/2025/QH15 Điều 10 khoản 1, 2, 3 và Điều 19 khoản 1; thuế suất 15% / 17% đúng; thêm câu doanh thu xét là năm trước liền kề; điền legal_basis. Guide tam-nop-thue-tndn đã sửa theo.",
           "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Xem mục mien-tndn-doanh-thu-1-ty.",
           "Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
