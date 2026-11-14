@@ -844,6 +844,38 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Mục "Giám đốc không nhận lương vẫn phải đóng BHXH" (`tu-0-den-1.json`): thêm "Cũng phải tự đóng BHYT (tối đa 6% mức lương làm căn cứ đóng BHXH). Không phải đóng BHTN." `legal_basis` thêm: Luật BHYT (sửa bởi Luật 51/2024/QH15) Điều 12 khoản 1 điểm a, b; Điều 13 khoản 1 điểm a, b; Luật Việc làm 74/2025/QH15 Điều 31 khoản 1, 2; Điều 32 khoản 1; Điều 33 khoản 1, 2; URL như trên; `verified_against_original: true`.
   - Giữ todo: mức đóng BHYT, BHTN cụ thể; bảo hiểm TNLĐ-BNN.
 
+### Ghi chú vòng 29 (2026-11-14, 04:17 UTC)
+
+- Đã rà commit `99c64f2` (bổ sung NC-023 vòng 28): BHYT, BHTN ghi mức tối đa và chưa ghi mức cụ thể. Đúng đề xuất.
+- Vòng này chốt mức đóng cụ thể BHYT, BHTN (điểm còn mở của NC-023).
+
+### NC-023 (bổ sung 2) — Mức đóng cụ thể: BHYT 4,5% tiền lương làm căn cứ đóng BHXH (DN 2/3 = 3%, người lao động 1/3 = 1,5%); BHTN 1% mỗi bên (Nghị định 188/2025, Nghị định 374/2025)
+
+- Trạng thái: đã xác minh
+- Nguồn:
+  - Nghị định 188/2025/NĐ-CP quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm y tế — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1 (hiệu lực 15/08/2025); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/188-ndcp.signed.pdf (106 trang, bản quét; đã OCR trang 1–24). Mở ngày 2026-11-14.
+  - Nghị định 374/2025/NĐ-CP quy định chi tiết một số điều của Luật Việc làm về bảo hiểm thất nghiệp — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1 (hiệu lực 01/01/2026); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/374-1.signed.pdf (45 trang, bản quét, đã OCR toàn bộ). Mở ngày 2026-11-14.
+- Phát hiện:
+  - **Nghị định 188/2025, Điều 6 khoản 1 (PDF trang 6):** "a) Mức đóng hằng tháng của đối tượng quy định tại các điểm a, c, d và e khoản 1 Điều 12 của Luật Bảo hiểm y tế bằng 4,5% tiền lương tháng làm căn cứ đóng bảo hiểm xã hội bắt buộc, trong đó người sử dụng lao động đóng hai phần ba và người lao động đóng một phần ba; b) Mức đóng hằng tháng của đối tượng quy định tại các điểm b và đ khoản 1 Điều 12 của Luật Bảo hiểm y tế bằng 4,5% tiền lương tháng làm căn cứ đóng bảo hiểm xã hội bắt buộc và do đối tượng đóng".
+  - **Nghị định 374/2025, Điều 4 (PDF trang 2–3):** "1. Người lao động đóng bằng 1% tiền lương tháng. 2. Người sử dụng lao động đóng bằng 1% quỹ tiền lương tháng của những người lao động đang tham gia bảo hiểm thất nghiệp." Điểm c khoản 2: DN hạch toán khoản đóng BHTN vào chi phí sản xuất, kinh doanh. Điều 5: DN tuyển mới người khuyết tật được giảm phần đóng của DN từ 1% xuống 0% trong tối đa 12 tháng đầu.
+- **Kết luận (gộp NC-023):**
+  - Với mỗi nhân viên HĐLĐ từ đủ 1 tháng và người quản lý có hưởng lương, trên tiền lương làm căn cứ đóng BHXH:
+
+    | Loại | DN đóng | Người lao động đóng |
+    | --- | --- | --- |
+    | BHXH (ốm đau thai sản 3%, hưu trí tử tuất 14% / 8%) | 17% | 8% |
+    | BHYT | 3% (2/3 của 4,5%) | 1,5% (1/3 của 4,5%) |
+    | BHTN | 1% | 1% |
+    | Cộng (chưa gồm bảo hiểm TNLĐ-BNN) | 21% | 10,5% |
+
+  - Người quản lý không hưởng lương: tự đóng BHXH 25% (NC-022) + BHYT 4,5% = 29,5% mức lương tự chọn làm căn cứ (tối thiểu 2.530.000 đồng/tháng từ 01/07/2026 → khoảng 746.350 đồng/tháng); không đóng BHTN.
+  - Chưa xác minh: bảo hiểm tai nạn lao động – bệnh nghề nghiệp phần DN đóng (Luật An toàn, vệ sinh lao động và nghị định hướng dẫn); hạn đóng BHYT, BHTN của DN (thường đóng cùng BHXH — Luật Việc làm Điều 32 nói đăng ký "đồng bộ" với BHXH, nhưng chưa trích điều về hạn đóng). Vì vậy không ghi "tổng 21,5% / 10,5%" hay "32%".
+- **Đề xuất sửa (Biên tập):**
+  - Lịch "Hàng tháng" (`bat-dau.json`): dòng BHYT, BHTN đổi thành "BHYT 4,5% (DN 3%, nhân viên 1,5%); BHTN 1% mỗi bên". Ghi chú "Cộng với BHXH: DN 21%, nhân viên 10,5% tiền lương làm căn cứ đóng, chưa gồm bảo hiểm tai nạn lao động – bệnh nghề nghiệp (chưa xác minh)". Hạn đóng BHYT, BHTN: giữ todo.
+  - Mục "Giám đốc không nhận lương" (`tu-0-den-1.json`): "Tự đóng BHYT 4,5% mức lương đã chọn. Cộng BHXH 25%: 29,5%, ít nhất khoảng 746.350 đồng/tháng (theo mức tham chiếu từ 01/07/2026)." Không đóng BHTN.
+  - Sổ S2-DNSN (lương và bảo hiểm): có thể thêm chú thích tỷ lệ ở trang hướng dẫn.
+  - `legal_basis` thêm: Nghị định 188/2025/NĐ-CP Điều 6 khoản 1 điểm a, b; Nghị định 374/2025/NĐ-CP Điều 4 khoản 1, 2, Điều 5; URL như trên; `verified_against_original: true`. Thay todo "mức đóng BHYT, BHTN cụ thể" bằng "bảo hiểm TNLĐ-BNN và hạn đóng BHYT, BHTN chưa xác minh".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
