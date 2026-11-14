@@ -994,6 +994,31 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - `legal-framework.json` dòng 419: thay ghi chú bằng một mục TNCN tham chiếu NC-026.
   - Todo: biểu thuế, giảm trừ gia cảnh, khấu trừ lao động thời vụ — chưa xác minh.
 
+### Ghi chú vòng 34 (2026-11-14, 14:17 UTC)
+
+- Đã rà commit `efa2ab0` (NC-026): thêm nghĩa vụ khai TNCN quý, quyết toán năm. Chưa đọc từng dòng.
+- Vòng này bổ sung NC-026: biểu thuế TNCN từ tiền lương và mức giảm trừ gia cảnh (Luật Thuế TNCN 109/2025).
+
+### NC-026 (bổ sung) — Biểu thuế lũy tiến 5 bậc (5% đến 35%); giảm trừ bản thân 15,5 triệu/tháng, mỗi người phụ thuộc 6,2 triệu/tháng; áp dụng từ kỳ tính thuế năm 2026 (Luật Thuế TNCN 109/2025)
+
+- Trạng thái: đã xác minh
+- Nguồn:
+  - Luật Thuế thu nhập cá nhân 109/2025/QH15 — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216495&classid=1 (ban hành 10/12/2025, hiệu lực 01/07/2026); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat109-2025.pdf (15 trang, bản quét, đã OCR). Mở ngày 2026-11-14.
+  - Nghị quyết 110/2025/UBTVQH15 về điều chỉnh mức giảm trừ gia cảnh — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=215927&classid=1 (hiệu lực 01/01/2026); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/11/nq110cuaubtvqh.pdf (1 trang, bản quét, đã OCR).
+- Phát hiện:
+  - **Luật 109/2025, Điều 8 khoản 2 (PDF trang 8):** thu nhập tính thuế từ tiền lương = tổng thu nhập chịu thuế trừ các khoản đóng BHXH, BHYT, BHTN, bảo hiểm trách nhiệm nghề nghiệp bắt buộc, bảo hiểm hưu trí bổ sung, hưu trí tự nguyện, nhân thọ (không vượt mức Chính phủ quy định), và các khoản giảm trừ ở Điều 10, 11. Khoản 3: thời điểm xác định là thời điểm trả hoặc nhận thu nhập.
+  - **Điều 9 khoản 2 (PDF trang 8), biểu thuế lũy tiến từng phần (thu nhập tính thuế/tháng):** bậc 1 đến 10 triệu: 5%; bậc 2 trên 10 đến 30 triệu: 10%; bậc 3 trên 30 đến 60 triệu: 20%; bậc 4 trên 60 đến 100 triệu: 30%; bậc 5 trên 100 triệu: 35%. (Theo năm: đến 120; trên 120–360; trên 360–720; trên 720–1.200; trên 1.200 triệu.)
+  - **Điều 10 khoản 1:** "a) Mức giảm trừ đối với người nộp thuế là 15,5 triệu đồng/tháng (186 triệu đồng/năm); b) Mức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/tháng."
+  - **Điều 21:** cá nhân không cư trú: thuế = tổng tiền lương × 20%.
+  - **Điều 29 khoản 1, 2 (PDF trang 14–15):** hiệu lực 01/07/2026; "Các quy định liên quan đến thu nhập từ kinh doanh, từ tiền lương, tiền công của cá nhân cư trú áp dụng từ kỳ tính thuế năm 2026." Khoản 3: Luật 04/2007/QH12 hết hiệu lực (phần tiền lương của cá nhân cư trú hết hiệu lực từ kỳ tính thuế 2026).
+  - **Nghị quyết 110/2025/UBTVQH15, Điều 1, 2:** cùng mức 15,5 triệu / 6,2 triệu, hiệu lực 01/01/2026, áp dụng từ kỳ tính thuế 2026 (theo luật cũ, trước khi Luật 109/2025 có hiệu lực).
+- **Kết luận:** Từ kỳ tính thuế năm 2026, TNCN tháng của nhân viên cư trú = (lương chịu thuế − BHXH, BHYT, BHTN người lao động đóng − 15,5 triệu − 6,2 triệu × số người phụ thuộc) × biểu thuế 5 bậc trên. Ví dụ: lương chịu thuế 20 triệu, không người phụ thuộc, đóng bảo hiểm 10,5% = 2,1 triệu → thu nhập tính thuế 2,4 triệu → thuế 5% = 120.000 đồng/tháng. (Ví dụ minh họa, cần ghi rõ là giả định.)
+- **Còn mở:** Nghị quyết 43/2026/QH16 "về giảm thuế TNCN, TNDN đối với cá nhân và doanh nghiệp" (NC-004) và Nghị định 398/2026 — có thể giảm số thuế phải nộp; chưa đọc. Nghị định 253/2026 và Thông tư 87/2026 hướng dẫn Luật 109/2025 (khấu trừ 10% với lao động thời vụ, cam kết 08…) — chưa đọc.
+- **Đề xuất sửa (Biên tập):**
+  - Bước "Thuế TNCN của nhân viên" (NC-026): thêm cách tính, biểu thuế 5 bậc, mức giảm trừ 15,5 / 6,2 triệu, ví dụ có ghi "số giả định". `legal_basis`: Luật Thuế TNCN 109/2025/QH15 Điều 8 khoản 2, 3; Điều 9 khoản 2; Điều 10 khoản 1; Điều 21; Điều 29 khoản 1, 2; Nghị quyết 110/2025/UBTVQH15 Điều 1, 2; URL như trên; `verified_against_original: true`.
+  - Todo: "Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNCN có thể làm thay đổi số thuế; chưa xác minh. Khấu trừ với lao động thời vụ, không ký HĐLĐ: chưa xác minh."
+  - Có thể thêm một bảng tính nhỏ trong sổ S2 (lương) dùng biểu thuế này; nếu cần tính năng mới thì ghi "Cần chủ dự án quyết".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
