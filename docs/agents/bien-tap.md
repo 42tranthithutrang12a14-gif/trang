@@ -273,6 +273,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "tỷ lệ đóng của DN cho nhân viên" ở 4 chỗ đổi thành "bảo hiểm tai nạn lao động – bệnh nghề nghiệp" (phần còn mở).
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 28 (2026-11-14, 03:17 UTC)
+
+- Đọc NC-023 bổ sung (BHYT theo Luật 51/2024 sửa Luật Bảo hiểm y tế; BHTN theo Luật Việc làm 74/2025; đã xác minh đối tượng, mức tối đa, cách chia). Status giữ "draft".
+- `bat-dau.json`, lịch "Hàng tháng": dòng BHYT, BHTN ghi mức tối đa (BHYT 6%, công ty 2/3, nhân viên 1/3; BHTN 1% mỗi bên) và "mức cụ thể theo quy định của Chính phủ". Hạn vẫn "Chưa xác minh". Thêm `legal_basis`.
+- `tu-0-den-1.json`: bước `bhxh-nguoi-quan-ly` thêm "người quản lý không lương tự đóng BHYT, không đóng BHTN"; bước `lao-dong-bhxh` thay câu "chưa có tỷ lệ" bằng mức tối đa, đăng ký đồng bộ, thử việc không thuộc diện BHTN. Thêm `legal_basis` cả hai.
+- `legal-framework.json`, mục Luật BHXH: thêm ý BHYT, BHTN.
+- Không ghi mức cụ thể (ví dụ 4,5%, 1%) vì luật chỉ đặt mức tối đa; chưa đọc nghị định.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
