@@ -748,7 +748,7 @@
             "Người quản lý không nhận lương tự chọn mức lương làm căn cứ đóng, thấp nhất bằng mức tham chiếu, cao nhất bằng 20 lần mức tham chiếu. Sau ít nhất 12 tháng được chọn lại. Mức tham chiếu hiện bằng mức lương cơ sở: 2.530.000 đồng/tháng từ 01/07/2026, nên mức lương chọn được từ 2.530.000 đến 50.600.000 đồng/tháng. Số tiền này đổi khi Chính phủ điều chỉnh mức lương cơ sở.",
             "Mức đóng: 25% mức lương đã chọn (3% vào quỹ ốm đau và thai sản, 22% vào quỹ hưu trí và tử tuất). Chọn mức thấp nhất thì đóng khoảng 632.500 đồng/tháng cho mỗi người.",
             "Đóng hằng tháng, 3 tháng hoặc 6 tháng một lần; tự đóng cho cơ quan BHXH hoặc đóng qua công ty. Hạn chậm nhất là ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng.",
-          "Người quản lý không nhận lương cũng phải tự đóng BHYT, tối đa 6% mức lương làm căn cứ đóng BHXH. Không phải đóng BHTN. Người quản lý có nhận lương thì đóng BHXH, BHYT, BHTN như nhân viên.",
+          "Người quản lý không nhận lương cũng phải tự đóng BHYT 4,5% mức lương đã chọn. Cộng với BHXH 25% là 29,5%, ít nhất khoảng 746.350 đồng/tháng mỗi người (theo mức tham chiếu từ 01/07/2026). Không phải đóng BHTN. Người quản lý có nhận lương thì đóng BHXH, BHYT, BHTN như nhân viên.",
             "Đây là nghĩa vụ mới, số tiền không nhỏ. Nếu chưa chắc trường hợp của mình, hỏi cơ quan BHXH nơi công ty đặt trụ sở trước khi đăng ký."
           ],
           "links": [
@@ -758,6 +758,19 @@
             }
           ],
           "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "188/2025/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm y tế",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-07-01",
+            "effective_date": "2025-08-15",
+            "article": "Điều 6 khoản 1 điểm a, b",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Luật",
             "doc_number": "51/2024/QH15",
@@ -838,7 +851,7 @@
             }
           ],
           "todo_for_reviewer": [
-          "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): người quản lý không lương tự đóng BHYT (Điều 12 khoản 1 điểm b, Điều 13 khoản 1 điểm b), không thuộc diện BHTN (Luật Việc làm Điều 31 khoản 1 chỉ có người quản lý hưởng lương). Chưa xác minh: mức đóng BHYT, BHTN cụ thể (luật chỉ đặt mức tối đa, Chính phủ quy định mức cụ thể); hạn đóng BHYT, BHTN; bảo hiểm tai nạn lao động – bệnh nghề nghiệp.",
+          "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): người quản lý không lương tự đóng BHYT (Điều 12 khoản 1 điểm b, Điều 13 khoản 1 điểm b), không thuộc diện BHTN (Luật Việc làm Điều 31 khoản 1 chỉ có người quản lý hưởng lương). Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): BHYT 4,5% tiền lương làm căn cứ đóng BHXH (DN 2/3, người lao động 1/3); BHTN 1% mỗi bên. Còn chưa xác minh: hạn đóng BHYT, BHTN của DN; bảo hiểm tai nạn lao động – bệnh nghề nghiệp. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
             "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): mục mới do agent Biên tập thêm theo Điều 2 khoản 1 điểm i, n; khoản 5 điểm c; khoản 7 điểm a, c; Điều 27, 28, 31, 33. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
             "Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; bảo hiểm tai nạn lao động – bệnh nghề nghiệp (tỷ lệ BHXH đã xác minh ở NC-023). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1"
           ]
@@ -859,12 +872,38 @@
             "Đăng ký BHXH, BHYT, BHTN cho người lao động.",
             "Đóng BHXH hằng tháng: công ty 17% (3% ốm đau, thai sản + 14% hưu trí, tử tuất), người lao động 8% (công ty khấu trừ từ lương) trên tiền lương làm căn cứ đóng. Hạn chậm nhất là ngày cuối cùng của tháng tiếp theo (lương tháng 3 đóng chậm nhất 30/4).",
             "Tháng nào người lao động không hưởng lương từ 14 ngày làm việc trở lên thì không phải đóng BHXH tháng đó.",
-            "BHYT: tối đa 6% tiền lương, công ty đóng 2/3, nhân viên 1/3. BHTN: mỗi bên tối đa 1%; đăng ký cùng lúc với BHXH. Mức cụ thể theo quy định của Chính phủ, sổ tay chưa cập nhật. Nhân viên đang làm hợp đồng thử việc không thuộc diện BHTN."
+            "BHYT: 4,5% tiền lương làm căn cứ đóng BHXH, công ty đóng 3%, nhân viên 1,5%. BHTN: mỗi bên 1%; đăng ký cùng lúc với BHXH. Cộng cả ba: công ty 21%, nhân viên 10,5%, chưa gồm bảo hiểm tai nạn lao động – bệnh nghề nghiệp. Nhân viên đang làm hợp đồng thử việc không thuộc diện BHTN."
           ],
           "links": [
             { "label": "Bảo hiểm xã hội Việt Nam", "url": "https://baohiemxahoi.gov.vn" }
           ],
           "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "188/2025/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm y tế",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-07-01",
+            "effective_date": "2025-08-15",
+            "article": "Điều 6 khoản 1 điểm a, b",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "374/2025/NĐ-CP",
+            "title": "Nghị định quy định chi tiết một số điều của Luật Việc làm về bảo hiểm thất nghiệp",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-12-31",
+            "effective_date": "2026-01-01",
+            "article": "Điều 4 khoản 1, 2; Điều 5",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Luật",
             "doc_number": "51/2024/QH15",
@@ -919,7 +958,7 @@
             }
           ],
           "todo_for_reviewer": [
-          "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): thêm mức tối đa, cách chia BHYT, BHTN, đăng ký đồng bộ, thử việc không thuộc diện BHTN. Chưa xác minh: mức đóng BHYT, BHTN cụ thể (luật chỉ đặt mức tối đa, Chính phủ quy định mức cụ thể); hạn đóng BHYT, BHTN; bảo hiểm tai nạn lao động – bệnh nghề nghiệp.",
+          "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): thêm mức tối đa, cách chia BHYT, BHTN, đăng ký đồng bộ, thử việc không thuộc diện BHTN. Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): BHYT 4,5% tiền lương làm căn cứ đóng BHXH (DN 2/3, người lao động 1/3); BHTN 1% mỗi bên. Còn chưa xác minh: hạn đóng BHYT, BHTN của DN; bảo hiểm tai nạn lao động – bệnh nghề nghiệp. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
             "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): thêm tỷ lệ BHXH 17% / 8%, hạn đóng, trường hợp không phải đóng (Điều 33 khoản 5); điền legal_basis. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
             "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đối tượng là người làm việc theo HĐLĐ từ đủ 1 tháng (Điều 2 khoản 1 điểm a), hạn 30 ngày kể từ ngày thuộc đối tượng, không phải kể từ ngày ký HĐLĐ (Điều 28 khoản 1); đã sửa deadline, điền legal_basis. Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương; bảo hiểm tai nạn lao động – bệnh nghề nghiệp (tỷ lệ BHXH đã xác minh ở NC-023). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1",
             "Xác minh trường hợp hợp đồng lao động phải bằng văn bản.",

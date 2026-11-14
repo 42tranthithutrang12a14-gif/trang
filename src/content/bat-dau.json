@@ -607,9 +607,35 @@
         "entries": [
           { "text": "Khai GTGT tháng (nếu khai theo tháng)", "deadline": "Ngày 20 tháng tiếp theo", "type": "tax" },
           { "text": "Đóng BHXH: công ty 17%, người lao động 8% tiền lương làm căn cứ đóng", "deadline": "Ngày cuối cùng của tháng tiếp theo", "type": "hr" },
-          { "text": "Đóng BHYT, BHTN cùng BHXH cho nhân viên: BHYT tối đa 6% tiền lương (công ty 2/3, nhân viên 1/3); BHTN tối đa 1% mỗi bên. Mức cụ thể theo quy định của Chính phủ", "deadline": "Chưa xác minh", "type": "hr" }
+          { "text": "Đóng BHYT, BHTN cùng BHXH cho nhân viên: BHYT 4,5% (công ty 3%, nhân viên 1,5%); BHTN 1% mỗi bên. Cộng với BHXH: công ty 21%, nhân viên 10,5% tiền lương làm căn cứ đóng, chưa gồm bảo hiểm tai nạn lao động – bệnh nghề nghiệp", "deadline": "Chưa xác minh", "type": "hr" }
         ],
         "legal_basis": [
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "188/2025/NĐ-CP",
+            "title": "Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm y tế",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-07-01",
+            "effective_date": "2025-08-15",
+            "article": "Điều 6 khoản 1 điểm a, b",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "374/2025/NĐ-CP",
+            "title": "Nghị định quy định chi tiết một số điều của Luật Việc làm về bảo hiểm thất nghiệp",
+            "issuer": "Chính phủ",
+            "issued_date": "2025-12-31",
+            "effective_date": "2026-01-01",
+            "article": "Điều 4 khoản 1, 2; Điều 5",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
           {
             "doc_type": "Luật",
             "doc_number": "51/2024/QH15",
@@ -664,7 +690,7 @@
           }
         ],
         "todo_for_reviewer": [
-          "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): thêm mức tối đa và cách chia BHYT (Điều 13 khoản 1), BHTN (Luật Việc làm Điều 33). Chưa xác minh: mức đóng BHYT, BHTN cụ thể (luật chỉ đặt mức tối đa, Chính phủ quy định mức cụ thể); hạn đóng BHYT, BHTN; bảo hiểm tai nạn lao động – bệnh nghề nghiệp.",
+          "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): thêm mức tối đa và cách chia BHYT (Điều 13 khoản 1), BHTN (Luật Việc làm Điều 33). Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): BHYT 4,5% tiền lương làm căn cứ đóng BHXH (DN 2/3, người lao động 1/3); BHTN 1% mỗi bên. Còn chưa xác minh: hạn đóng BHYT, BHTN của DN; bảo hiểm tai nạn lao động – bệnh nghề nghiệp. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
           "Ngày 2026-11-12 (NC-013): hạn khai GTGT tháng ngày 20 tháng tiếp theo khớp Nghị định 252/2026 Điều 10 khoản 2.",
           "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): tách dòng BHXH (tỷ lệ 17% / 8%, hạn ngày cuối cùng của tháng tiếp theo, Điều 34 khoản 4) khỏi BHYT, BHTN. Tỷ lệ và hạn BHYT (Luật Bảo hiểm y tế), BHTN (Luật Việc làm) chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
           "Điền legal_basis với số điều, khoản cụ thể và link chính thức."

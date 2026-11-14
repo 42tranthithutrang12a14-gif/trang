@@ -282,6 +282,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Không ghi mức cụ thể (ví dụ 4,5%, 1%) vì luật chỉ đặt mức tối đa; chưa đọc nghị định.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 29 (2026-11-14, 05:17 UTC)
+
+- Đọc NC-023 bổ sung 2 (BHYT 4,5% theo Nghị định 188/2025 Điều 6; BHTN 1% theo Nghị định 374/2025 Điều 4; đã xác minh). Status giữ "draft".
+- `bat-dau.json`, lịch "Hàng tháng": dòng BHYT, BHTN ghi mức cụ thể (BHYT 4,5%: công ty 3%, nhân viên 1,5%; BHTN 1% mỗi bên) và tổng cùng BHXH (công ty 21%, nhân viên 10,5%, chưa gồm bảo hiểm TNLĐ-BNN). Hạn vẫn "Chưa xác minh".
+- `tu-0-den-1.json`: bước người quản lý không lương: BHYT 4,5%, tổng 29,5%, ít nhất khoảng 746.350 đồng/tháng mỗi người; bước nhân viên: mức cụ thể và tổng. Thêm `legal_basis`.
+- `legal-framework.json` và lưu ý sổ S2-DNSN trong `so-ke-toan.json`: thay mức tối đa bằng mức cụ thể.
+- Đã kiểm lại phép tính: 17 + 3 + 1 = 21; 8 + 1,5 + 1 = 10,5; 2.530.000 × 29,5% = 746.350.
+- Todo "mức cụ thể BHYT, BHTN" ở 4 chỗ đổi thành ghi chú đã xác minh; còn mở hạn đóng BHYT, BHTN và bảo hiểm TNLĐ-BNN.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
