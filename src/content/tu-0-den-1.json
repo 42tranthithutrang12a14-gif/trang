@@ -1047,6 +1047,9 @@
           ],
           "how": [
             "Khi trả lương, công ty khấu trừ thuế TNCN của nhân viên (nếu có).",
+          "Cách tính hằng tháng cho nhân viên cư trú (từ kỳ tính thuế năm 2026): thu nhập tính thuế = lương chịu thuế − BHXH, BHYT, BHTN nhân viên đóng − 15,5 triệu đồng (bản thân) − 6,2 triệu đồng × số người phụ thuộc.",
+          "Biểu thuế theo tháng: đến 10 triệu 5%; trên 10 đến 30 triệu 10%; trên 30 đến 60 triệu 20%; trên 60 đến 100 triệu 30%; trên 100 triệu 35% (tính lũy tiến từng phần). Trang \"Tính thuế TNCN\" trong file sổ thu chi tính sẵn.",
+          "Ví dụ (số giả định): lương chịu thuế 20 triệu, không có người phụ thuộc, đóng bảo hiểm 10,5% = 2,1 triệu. Thu nhập tính thuế 2,4 triệu, thuế 5% = 120.000 đồng/tháng.",
             "Khai số thuế TNCN đã khấu trừ theo quý. Hạn chậm nhất là ngày cuối cùng của tháng đầu quý sau: 30/4, 31/7, 31/10, 31/01.",
             "Quý nào không khấu trừ thuế của ai thì không phải nộp tờ khai quý đó. Riêng quý cuối năm, một số trường hợp vẫn phải nộp.",
             "Có trả lương trong năm thì phải quyết toán TNCN năm, kể cả khi không khấu trừ được đồng nào. Hạn 31/3 năm sau.",
@@ -1055,6 +1058,32 @@
           ],
           "links": [],
           "legal_basis": [
+          {
+            "doc_type": "Luật",
+            "doc_number": "109/2025/QH15",
+            "title": "Luật Thuế thu nhập cá nhân",
+            "issuer": "Quốc hội",
+            "issued_date": "2025-12-10",
+            "effective_date": "2026-07-01",
+            "article": "Điều 8 khoản 2, 3; Điều 9 khoản 2; Điều 10 khoản 1; Điều 21; Điều 29 khoản 1, 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216495&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị quyết",
+            "doc_number": "110/2025/UBTVQH15",
+            "title": "Nghị quyết về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+            "issuer": "Ủy ban Thường vụ Quốc hội",
+            "issued_date": "2025-10-17",
+            "effective_date": "2026-01-01",
+            "article": "Điều 1, 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=215927&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-14",
+            "snapshot_path": ""
+          },
             {
               "doc_type": "Thông tư",
               "doc_number": "89/2026/TT-BTC",
@@ -1084,7 +1113,7 @@
           ],
           "todo_for_reviewer": [
             "Ngày 2026-11-14 (NC-026, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 22 và Nghị định 252/2026/NĐ-CP Điều 9, 10, 11): bước mới do agent Biên tập thêm. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
-            "Chưa xác minh: biểu thuế TNCN lũy tiến, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN, sửa bởi Luật 09/2026). Không ghi các con số này."
+            "Ngày 2026-11-14 (NC-026 bổ sung, đã đối chiếu toàn văn Luật Thuế TNCN 109/2025/QH15 Điều 8–10, 21, 29 và Nghị quyết 110/2025/UBTVQH15): thêm cách tính, biểu thuế 5 bậc, giảm trừ 15,5 / 6,2 triệu, ví dụ ghi rõ số giả định. Chưa xác minh: Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNCN có thể làm thay đổi số thuế; khấu trừ với lao động thời vụ, không ký HĐLĐ (Nghị định 253/2026, Thông tư 87/2026)."
           ]
         },
         {

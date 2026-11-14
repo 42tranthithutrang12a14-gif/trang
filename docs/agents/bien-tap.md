@@ -328,6 +328,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Không ghi biểu thuế, giảm trừ gia cảnh, khấu trừ 10% (chưa xác minh).
 - Kiểm tra: `npm test` 86/86 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 34 (2026-11-14, 15:18 UTC)
+
+- Đọc NC-026 bổ sung (biểu thuế TNCN 5 bậc, giảm trừ 15,5 / 6,2 triệu; Luật Thuế TNCN 109/2025, Nghị quyết 110/2025/UBTVQH15; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json`, bước `thue-tncn-nhan-vien`: thêm cách tính, biểu thuế, ví dụ ghi rõ "số giả định" (20 triệu → 120.000 đồng). Thêm `legal_basis` 2 văn bản.
+- Sổ Excel: thêm trang "Tính thuế TNCN" (20 dòng nhân viên: gõ lương chịu thuế, bảo hiểm nhân viên đóng, số người phụ thuộc; tự tính thu nhập tính thuế và thuế theo biểu lũy tiến). Dữ liệu ở `so-ke-toan.json` (`pit_sheet`); mã ở `src/lib/so-ke-toan.ts` (`buildPit`, `progressiveTaxFormula`). Thêm `legal_basis`.
+- Đã cho LibreOffice tính lại 4 trường hợp thử (20, 60, 15, 200 triệu, có và không có người phụ thuộc): khớp phép tính độc lập.
+- `tests/so-ke-toan.test.ts`: thêm SK14 (giảm trừ, thuế suất, công thức lũy tiến).
+- Todo: Nghị quyết 43/2026/QH16, Nghị định 398/2026 về giảm thuế TNCN; khấu trừ lao động thời vụ — chưa xác minh.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -359,6 +369,8 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 31) NC-024: xin đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ), nhất là lương của chủ DN, chi mua tài sản cố định, chi không có hóa đơn. Cần để xếp lại cột "Tính vào lãi, lỗ?" của các nhóm chi trong sổ.
 
 - (Vòng 33) NC-026: xin xác minh biểu thuế TNCN từ tiền lương, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN hiện hành, Luật 09/2026). Cần để chủ DN tự tính số thuế khấu trừ khi trả lương.
+
+- (Vòng 34) NC-026: xin đọc Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP (giảm thuế TNCN, TNDN): có làm thay đổi số thuế TNCN từ tiền lương, thuế TNDN của DN siêu nhỏ không.
 
 ## Cần chủ dự án quyết
 

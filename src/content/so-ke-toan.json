@@ -39,7 +39,8 @@
     { "name": "S2-DNSN Lương", "desc": "Mẫu S2-DNSN: theo dõi tiền lương và các khoản BHXH, BHYT, BHTN. Dùng khi có người lao động." },
     { "name": "S3-DNSN Hàng tồn kho", "desc": "Mẫu S3-DNSN: theo dõi nhập, xuất, tồn từng loại vật liệu, dụng cụ, hàng hóa. Mỗi mặt hàng một bảng." },
     { "name": "S4-DNSN Thuế", "desc": "Mẫu S4-DNSN: theo dõi số thuế phải nộp và đã nộp vào ngân sách." },
-    { "name": "Thuế TNDN theo % DT", "desc": "Tính thuế TNDN theo tỷ lệ % trên doanh thu, cho DN doanh thu năm không quá 3 tỷ và không xác định được chi phí. Gõ doanh thu từng nhóm ngành, file tự nhân tỷ lệ." }
+    { "name": "Thuế TNDN theo % DT", "desc": "Tính thuế TNDN theo tỷ lệ % trên doanh thu, cho DN doanh thu năm không quá 3 tỷ và không xác định được chi phí. Gõ doanh thu từng nhóm ngành, file tự nhân tỷ lệ." },
+    { "name": "Tính thuế TNCN", "desc": "Tính thuế TNCN hằng tháng phải khấu trừ khi trả lương cho nhân viên cư trú. Gõ lương chịu thuế, bảo hiểm nhân viên đóng, số người phụ thuộc; file tự tính." }
   ],
   "income_groups": [
     { "name": "Bán hàng, cung cấp dịch vụ", "in_result": true, "example": "Tiền khách trả khi mua hàng, dùng dịch vụ" },
@@ -313,6 +314,32 @@
       "verified_against_original": true,
       "checked_at": "2026-11-14",
       "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "109/2025/QH15",
+      "title": "Luật Thuế thu nhập cá nhân",
+      "issuer": "Quốc hội",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-07-01",
+      "article": "Điều 8 khoản 2, 3; Điều 9 khoản 2; Điều 10 khoản 1; Điều 21; Điều 29 khoản 1, 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216495&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị quyết",
+      "doc_number": "110/2025/UBTVQH15",
+      "title": "Nghị quyết về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+      "issuer": "Ủy ban Thường vụ Quốc hội",
+      "issued_date": "2025-10-17",
+      "effective_date": "2026-01-01",
+      "article": "Điều 1, 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=215927&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
     }
   ],
   "todo_for_reviewer": [
@@ -328,7 +355,8 @@
     "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): thêm lưu ý tỷ lệ BHXH cho sổ S2-DNSN. Chưa điền tỷ lệ BHYT, BHTN. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
     "Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): cập nhật lưu ý tỷ lệ BHYT, BHTN cho sổ S2-DNSN. Bảo hiểm tai nạn lao động – bệnh nghề nghiệp chưa xác minh.",
     "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN vào lưu ý S2-DNSN. Nghị định 58/2020/NĐ-CP dẫn chiếu Luật BHXH 58/2014 (đã được thay bởi Luật 41/2024 từ 01/07/2025); chưa thấy văn bản thay thế trên vanban.chinhphu.vn (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động 84/2015 chưa đọc. Chưa xác minh phần 0,5% có tính cho người quản lý không lương không.",
-    "Ngày 2026-11-14 (NC-025, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10): thêm lưu ý khoản chi không được trừ; thêm 2 nhóm chi \"Tiền phạt, tiền chậm nộp\" và \"Từ thiện, tài trợ\"; ghi chú nhóm lương. Cột \"Tính vào lãi, lỗ?\" vẫn là lãi lỗ tạm tính, chưa phải thu nhập tính thuế; có thêm cờ \"được trừ khi tính thuế\" hay không: chờ chủ dự án quyết. Chưa xác minh: phần BHXH công ty đóng cho chủ công ty TNHH một thành viên có được trừ khi tính thuế TNDN không. Áp ngưỡng 5 triệu chuyển khoản cho tiền lương là cách hiểu (\"các khoản thanh toán khác từng lần\")."
+    "Ngày 2026-11-14 (NC-025, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10): thêm lưu ý khoản chi không được trừ; thêm 2 nhóm chi \"Tiền phạt, tiền chậm nộp\" và \"Từ thiện, tài trợ\"; ghi chú nhóm lương. Cột \"Tính vào lãi, lỗ?\" vẫn là lãi lỗ tạm tính, chưa phải thu nhập tính thuế; có thêm cờ \"được trừ khi tính thuế\" hay không: chờ chủ dự án quyết. Chưa xác minh: phần BHXH công ty đóng cho chủ công ty TNHH một thành viên có được trừ khi tính thuế TNDN không. Áp ngưỡng 5 triệu chuyển khoản cho tiền lương là cách hiểu (\"các khoản thanh toán khác từng lần\").",
+    "Ngày 2026-11-14 (NC-026 bổ sung, đã đối chiếu toàn văn Luật Thuế TNCN 109/2025/QH15 Điều 8–10, 21, 29 và Nghị quyết 110/2025/UBTVQH15): thêm trang \"Tính thuế TNCN\" (giảm trừ, biểu thuế 5 bậc). Chưa xác minh: Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNCN có thể làm thay đổi số thuế; khấu trừ với lao động thời vụ, không ký HĐLĐ (Nghị định 253/2026, Thông tư 87/2026)."
   ],
   "cit_rate_sheet": {
     "sheet": "Thuế TNDN theo % DT",
@@ -365,5 +393,40 @@
       }
     ],
     "source": "Tỷ lệ theo Nghị định 320/2025/NĐ-CP Điều 12 khoản 4 điểm a–đ."
+  },
+  "pit_sheet": {
+    "sheet": "Tính thuế TNCN",
+    "title": "TÍNH THUẾ TNCN KHẤU TRỪ KHI TRẢ LƯƠNG (THEO THÁNG)",
+    "intro": [
+      "Dành cho nhân viên cư trú có hợp đồng lao động, từ kỳ tính thuế năm 2026 (Luật Thuế TNCN 109/2025/QH15 Điều 8, 9, 10).",
+      "Thu nhập tính thuế = lương chịu thuế − bảo hiểm bắt buộc nhân viên đóng − giảm trừ bản thân − giảm trừ người phụ thuộc. Thuế tính lũy tiến từng phần theo biểu dưới.",
+      "Chưa tính các khoản giảm thuế theo Nghị quyết 43/2026/QH16 (chưa xác minh). Lao động thời vụ, không ký hợp đồng: cách khấu trừ khác, chưa có trong sổ tay."
+    ],
+    "self_deduction": 15500000,
+    "dependant_deduction": 6200000,
+    "brackets": [
+      {
+        "upto": 10000000,
+        "rate": 0.05
+      },
+      {
+        "upto": 30000000,
+        "rate": 0.1
+      },
+      {
+        "upto": 60000000,
+        "rate": 0.2
+      },
+      {
+        "upto": 100000000,
+        "rate": 0.3
+      },
+      {
+        "upto": null,
+        "rate": 0.35
+      }
+    ],
+    "rows": 20,
+    "source": "Biểu thuế: Luật Thuế TNCN 109/2025/QH15 Điều 9 khoản 2. Giảm trừ: Điều 10 khoản 1; Nghị quyết 110/2025/UBTVQH15."
   }
 }

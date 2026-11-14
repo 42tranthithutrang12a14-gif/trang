@@ -39,6 +39,37 @@ export type CitRateSheet = {
   source: string;
 };
 
+/** Monthly PIT withholding calculator for resident employees (progressive brackets). */
+export type PitSheet = {
+  sheet: string;
+  title: string;
+  intro: string[];
+  self_deduction: number;
+  dependant_deduction: number;
+  brackets: { upto: number | null; rate: number }[];
+  rows: number;
+  source: string;
+};
+
+/** Builds an Excel expression for progressive tax on `cell`, using the quick-deduction form. */
+export function progressiveTaxFormula(cell: string, brackets: PitSheet["brackets"]): string {
+  let deduction = 0;
+  let previousRate = 0;
+  let previousLimit = 0;
+  const parts = brackets.map(({ upto, rate }) => {
+    deduction += previousLimit * (rate - previousRate);
+    previousRate = rate;
+    previousLimit = upto ?? previousLimit;
+    const expr = `${cell}*${rate}-${Math.round(deduction)}`;
+    return { upto, expr };
+  });
+  let formulaText = parts[parts.length - 1].expr;
+  for (let i = parts.length - 2; i >= 0; i--) {
+    formulaText = `IF(${cell}<=${parts[i].upto},${parts[i].expr},${formulaText})`;
+  }
+  return formulaText;
+}
+
 export type LedgerSpec = Reviewable & {
   updated_at: string;
   title: string;
@@ -57,6 +88,7 @@ export type LedgerSpec = Reviewable & {
   form_issue_line: string;
   form_rows: number;
   cit_rate_sheet: CitRateSheet;
+  pit_sheet: PitSheet;
 };
 
 export const SHEETS = {
@@ -805,6 +837,83 @@ function buildCitRates(ws: Sheet, spec: LedgerSpec, year: number) {
   source.font = { ...FONT, italic: true };
 }
 
+export function pitLayout(spec: LedgerSpec) {
+  const pit = spec.pit_sheet;
+  const selfRow = 4 + pit.intro.length + 1;
+  const dependantRow = selfRow + 1;
+  const bracketHeader = dependantRow + 2;
+  const bracketFirst = bracketHeader + 1;
+  const header = bracketFirst + pit.brackets.length + 1;
+  const first = header + 1;
+  return { selfRow, dependantRow, bracketHeader, bracketFirst, header, first, last: first + pit.rows - 1 };
+}
+
+function buildPit(ws: Sheet, spec: LedgerSpec, year: number) {
+  const S = quoted(SHEETS.setup);
+  const pit = spec.pit_sheet;
+  const layout = pitLayout(spec);
+  setColumns(ws, [28, 18, 18, 14, 20, 18]);
+  titleCell(ws, "A1", pit.title);
+  ws.getCell("A2").value = formula(`"Năm "&${S}!$B$6`, `Năm ${year}`);
+  if (spec.status !== "published" && spec.sample_notice) {
+    const draft = ws.getCell("A3");
+    draft.value = `${spec.sample_notice}. Chỉ để tham khảo, không thay tờ khai thuế.`;
+    draft.font = { ...FONT, bold: true, color: { argb: "FFC62828" } };
+  }
+  pit.intro.forEach((line, i) => {
+    const row = 4 + i;
+    ws.mergeCells(row, 1, row, 6);
+    const cell = ws.getCell(row, 1);
+    cell.value = `• ${line}`;
+    cell.alignment = { vertical: "top", wrapText: true };
+    ws.getRow(row).height = Math.ceil(line.length / 110) * 14 + 2;
+  });
+  const constant = (row: number, label: string, value: number) => {
+    ws.getCell(row, 1).value = label;
+    const cell = ws.getCell(row, 2);
+    cell.value = value;
+    cell.numFmt = MONEY;
+    cell.fill = solid(COLOR.auto);
+  };
+  constant(layout.selfRow, "Giảm trừ bản thân (đồng/tháng)", pit.self_deduction);
+  constant(layout.dependantRow, "Giảm trừ mỗi người phụ thuộc (đồng/tháng)", pit.dependant_deduction);
+
+  ["Thu nhập tính thuế/tháng đến (đồng)", "Thuế suất"].forEach((text, i) => headerCell(ws.getCell(layout.bracketHeader, i + 1), text, COLOR.grey));
+  pit.brackets.forEach(({ upto, rate }, i) => {
+    const row = layout.bracketFirst + i;
+    const limit = ws.getCell(row, 1);
+    limit.value = upto ?? "Trên mức trước";
+    if (upto !== null) limit.numFmt = MONEY;
+    const r = ws.getCell(row, 2);
+    r.value = rate;
+    r.numFmt = "0%";
+  });
+
+  const headers = ["Họ tên nhân viên", "Lương chịu thuế (đồng)", "Bảo hiểm nhân viên đóng (đồng)", "Số người phụ thuộc", "Thu nhập tính thuế (tự tính)", "Thuế TNCN (tự tính)"];
+  headers.forEach((text, i) => headerCell(ws.getCell(layout.header, i + 1), text, i < 4 ? COLOR.blue : COLOR.grey));
+  ws.getRow(layout.header).height = 30;
+  for (let row = layout.first; row <= layout.last; row++) {
+    for (let col = 1; col <= 4; col++) ws.getCell(row, col).fill = solid(COLOR.input);
+    ws.getCell(row, 2).numFmt = MONEY;
+    ws.getCell(row, 3).numFmt = MONEY;
+    ws.getCell(row, 4).numFmt = "0";
+    const taxable = ws.getCell(row, 5);
+    taxable.value = formula(
+      `IF($B${row}="","",MAX(0,$B${row}-N($C${row})-$B$${layout.selfRow}-$B$${layout.dependantRow}*N($D${row})))`,
+      "",
+    );
+    taxable.numFmt = MONEY;
+    taxable.fill = solid(COLOR.auto);
+    const tax = ws.getCell(row, 6);
+    tax.value = formula(`IF($E${row}="","",ROUND(${progressiveTaxFormula(`$E${row}`, pit.brackets)},0))`, "");
+    tax.numFmt = MONEY_DASH;
+    tax.fill = solid(COLOR.auto);
+  }
+  const source = ws.getCell(layout.last + 2, 1);
+  source.value = pit.source;
+  source.font = { ...FONT, italic: true };
+}
+
 export function buildLedgerWorkbook(spec: LedgerSpec, year: number): ExcelJS.Workbook {
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "Sổ tay DN Siêu nhỏ";
@@ -815,5 +924,6 @@ export function buildLedgerWorkbook(spec: LedgerSpec, year: number): ExcelJS.Wor
   buildSummary(workbook.addWorksheet(SHEETS.summary), spec, year);
   for (const form of spec.forms) buildForm(workbook.addWorksheet(form.sheet), spec, form, year);
   buildCitRates(workbook.addWorksheet(spec.cit_rate_sheet.sheet), spec, year);
+  buildPit(workbook.addWorksheet(spec.pit_sheet.sheet), spec, year);
   return workbook;
 }

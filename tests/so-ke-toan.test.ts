@@ -13,6 +13,8 @@ import {
   citRateLayout,
   formLayout,
   ledgerLayout,
+  pitLayout,
+  progressiveTaxFormula,
   type LedgerSpec,
 } from "@/lib/so-ke-toan";
 
@@ -20,7 +22,7 @@ const SPEC = ledgerJson as LedgerSpec;
 const GROUPS = [...SPEC.income_groups, ...SPEC.expense_groups];
 const LAYOUT = ledgerLayout(SPEC);
 const WORKBOOK = buildLedgerWorkbook(SPEC, 2026);
-const ALL_SHEETS = [...Object.values(SHEETS), ...SPEC.forms.map((form) => form.sheet), SPEC.cit_rate_sheet.sheet];
+const ALL_SHEETS = [...Object.values(SHEETS), ...SPEC.forms.map((form) => form.sheet), SPEC.cit_rate_sheet.sheet, SPEC.pit_sheet.sheet];
 
 function sheet(name: string): ExcelJS.Worksheet {
   const ws = WORKBOOK.getWorksheet(name);
@@ -201,5 +203,19 @@ describe("buildLedgerWorkbook", () => {
     const formulaText = rule!.rules[0].formulae?.[0] ?? "";
     expect(formulaText).toContain(`>=${CASH_LIMIT}`);
     expect(formulaText).toContain(`"${FUND_CASH}"`);
+  });
+
+  it("SK14: trang tính thuế TNCN dùng giảm trừ và biểu thuế của Luật 109/2025", () => {
+    const pit = SPEC.pit_sheet;
+    expect(pit.self_deduction).toBe(15_500_000);
+    expect(pit.dependant_deduction).toBe(6_200_000);
+    expect(pit.brackets.map((b) => b.rate)).toEqual([0.05, 0.1, 0.2, 0.3, 0.35]);
+    expect(progressiveTaxFormula("X", pit.brackets)).toBe(
+      "IF(X<=10000000,X*0.05-0,IF(X<=30000000,X*0.1-500000,IF(X<=60000000,X*0.2-3500000,IF(X<=100000000,X*0.3-9500000,X*0.35-14500000))))",
+    );
+    const ws = sheet(pit.sheet);
+    const layout = pitLayout(SPEC);
+    expect(formulaOf(ws, `F${layout.first}`)).toContain(`$E${layout.first}`);
+    expect(formulaOf(ws, `F${layout.last}`)).not.toBe("");
   });
 });
