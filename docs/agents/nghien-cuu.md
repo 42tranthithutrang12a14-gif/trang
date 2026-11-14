@@ -1049,6 +1049,19 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Bỏ các todo "Nghị quyết 43/2026, Nghị định 398/2026 chưa đọc" (NC-004).
   - `legal_basis`: Nghị quyết 43/2026/QH16 Điều 1 khoản 1, 2; Điều 2 khoản 1; Nghị định 398/2026/NĐ-CP Điều 3 khoản 1, 2, 3, 4; Điều 4; URL như trên; `verified_against_original: true`. Todo: "cách xử lý số TNDN đã tạm nộp các quý 2026 trước 29/10/2026: chưa xác minh".
 
+### Ghi chú vòng 36 (2026-11-14, 18:18 UTC)
+
+- Đã rà commit `2a5eb71` (NC-027): thêm mục giảm 30% TNDN 2026–2027. Chưa đọc từng dòng.
+- Vòng này kiểm điểm còn mở của NC-010: Luật 67/2025 đã được sửa bởi các luật 116, 122 (hoặc 127), 133, 141, 143/2025/QH15 — có đụng Điều 10 (thuế suất), Điều 11 (phương pháp tính) không.
+
+### NC-010 (bổ sung) — Luật 141/2025 chỉ bổ sung hai khoản thu nhập miễn thuế ở Điều 4 Luật Thuế TNDN; không sửa thuế suất
+
+- Trạng thái: đã xác minh (Luật 141/2025); các luật 116, 122/127, 133, 143/2025 chưa đọc
+- Nguồn: Luật 141/2025/QH15 sửa đổi, bổ sung một số điều của Luật Quản lý nợ công — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216523&classid=1 (ban hành 10/12/2025); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat141-2025.pdf (10 trang, bản quét, đã OCR). Mở ngày 2026-11-14.
+- Phát hiện: **Điều 2 khoản 1:** hiệu lực 01/01/2026. **Khoản 2:** "Bổ sung khoản 11a và khoản 11b vào sau khoản 11 Điều 4 của Luật Thuế thu nhập doanh nghiệp số 67/2025/QH15 như sau: 11a. Thu nhập của nhà đầu tư từ lãi trái phiếu Chính phủ Việt Nam. 11b. Thu nhập của bên cho vay nước ngoài từ lãi, phí phát sinh từ khoản cho vay đối với Nhà nước, Chính phủ Việt Nam."
+- **Kết luận:** Luật 141/2025 không ảnh hưởng thuế suất 15/17/20% hay phương pháp tính theo % doanh thu. Các luật sửa đổi còn lại (116, 122/127, 133, 143/2025) có tên là luật chuyên ngành khác (danh sách "Luật sửa đổi" trên vanban.chinhphu.vn); nhiều khả năng cũng chỉ sửa điều khoản ưu đãi hoặc miễn thuế riêng. Chưa kiểm chứng; giữ todo ngắn ở mục thuế suất TNDN: "Luật 67/2025 đã được sửa bởi 116, 122/127, 133, 141, 143/2025/QH15; đã đối chiếu 141/2025 (không sửa Điều 10, 11); các luật còn lại chưa đối chiếu."
+- **Đề xuất sửa (Biên tập):** chỉ cập nhật todo như trên ở `legal-framework.json` mục Luật Thuế TNDN và `tam-nop-thue-tndn.json`. Không đổi nội dung.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
