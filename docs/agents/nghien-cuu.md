@@ -930,6 +930,42 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Lưu ý: Nghị định 144/2026 có sửa điểm g khoản 2 Điều 26 Nghị định 181/2025 (một trường hợp đặc thù). Chưa đọc điểm này; không ảnh hưởng ngưỡng 5 triệu ở câu dẫn Điều 26.
   - Chưa đọc Điều 10 Nghị định 320/2025 (các khoản chi không được trừ) — vòng sau.
 
+### Ghi chú vòng 32 (2026-11-14, 10:18 UTC)
+
+- Đã rà commit `fe21848` (NC-024): sổ Excel cảnh báo dòng chi từ 5 triệu ghi quỹ tiền mặt. Đúng hướng đề xuất.
+- Vòng này làm NC-025: các khoản chi **không** được trừ khi tính thuế TNDN (Nghị định 320/2025 Điều 10) — phần tiếp của NC-024, phục vụ nhóm chi trong sổ.
+
+### NC-025 — Khoản chi không được trừ: tiền phạt và tiền chậm nộp; lương của chủ công ty TNHH một thành viên do cá nhân làm chủ; lương không ghi trong HĐLĐ hoặc không thực trả; phúc lợi vượt 1 tháng lương; trang phục bằng tiền vượt 5 triệu/người/năm; từ thiện, tài trợ… (Nghị định 320/2025 Điều 10)
+
+- Trạng thái: đã xác minh
+- Liên quan: `so-ke-toan.json` `expense_groups` (đặc biệt "Lương, tiền công", "Chi khác"; trường `in_result`) và cột lãi lỗ tạm tính; các bước tạm nộp, quyết toán TNDN (NC-011 đến NC-014); mục giám đốc không nhận lương (NC-022).
+- Nguồn: Nghị định 320/2025/NĐ-CP — trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf (bản quét, đã OCR). Điều 10, PDF trang 28–41. Mở lại 2026-11-14.
+- Phát hiện (các khoản liên quan DN siêu nhỏ; trích Điều 10):
+  - **Khoản 1:** khoản chi không đủ điều kiện tại khoản 1 Điều 9 (NC-024).
+  - **Khoản 2:** "Các khoản tiền phạt về vi phạm hành chính bao gồm: Vi phạm luật giao thông, vi phạm quy định đăng ký kinh doanh, vi phạm quy định kế toán, vi phạm pháp luật về thuế bao gồm cả tiền chậm nộp thuế theo quy định của Luật Quản lý thuế và các khoản phạt về vi phạm hành chính khác…"
+  - **Khoản 4 điểm d (PDF trang 28–29):** phần chi phúc lợi trực tiếp cho người lao động (đám hiếu hỷ, nghỉ mát, hỗ trợ khám chữa bệnh, học tập, lễ tết, bảo hiểm sức khỏe, bảo hiểm tự nguyện khác…) "vượt quá 01 tháng lương bình quân thực tế thực hiện trong năm tính thuế".
+  - **Khoản 8 điểm a (PDF trang 33):** tiền lương, tiền công đã hạch toán vào chi phí "nhưng thực tế không chi trả hoặc không có chứng từ thanh toán theo quy định của pháp luật".
+  - **Khoản 8 điểm b:** tiền lương, tiền công, tiền thưởng "không được ghi cụ thể điều kiện được hưởng và mức được hưởng" tại một trong các hồ sơ: hợp đồng lao động; thỏa ước lao động tập thể; quy chế tài chính; quy chế thưởng.
+  - **Khoản 8 điểm c (PDF trang 34):** tiền lương phải trả nhưng đến hết thời hạn nộp hồ sơ quyết toán thuế năm thực tế chưa chi (trừ quỹ dự phòng tiền lương tối đa 17% quỹ lương, không làm DN lỗ).
+  - **Khoản 8 điểm đ:** "Tiền lương, tiền công của chủ doanh nghiệp tư nhân, chủ công ty trách nhiệm hữu hạn một thành viên do một cá nhân làm chủ; thù lao trả cho các sáng lập viên, thành viên của hội đồng thành viên, hội đồng quản trị mà những người này không trực tiếp tham gia điều hành sản xuất, kinh doanh".
+  - **Khoản 8 (điểm đ thứ hai, OCR ghi trùng ký hiệu):** "Phần chi trang phục bằng hiện vật cho người lao động không có hóa đơn, chứng từ. Phần chi trang phục bằng tiền cho người lao động vượt quá 05 triệu đồng/người/năm."
+  - **Khoản 9 (PDF trang 36):** chi trả lãi tiền vay tương ứng phần vốn điều lệ còn thiếu theo tiến độ góp vốn (công thức ở điểm b1, b2). Khoản 10: lãi vay của đối tượng không phải tổ chức tín dụng vượt mức Bộ luật Dân sự.
+  - **Khoản 12:** thuế GTGT đầu vào đã được khấu trừ hoặc hoàn.
+  - **Khoản 14 (PDF trang 37–38):** tiền điện, nước theo hợp đồng do chủ nhà cho thuê địa điểm ký trực tiếp với bên cung cấp, nếu DN không có đủ chứng từ: a) trả thẳng cho bên cung cấp thì cần hóa đơn điện, nước và hợp đồng thuê địa điểm; b) trả cho chủ nhà thì cần chứng từ thanh toán phù hợp số điện, nước thực tế tiêu thụ và hợp đồng thuê.
+  - **Khoản 17 (PDF trang 39):** "Chi tài trợ, chi ủng hộ địa phương, chi ủng hộ các đoàn thể, tổ chức xã hội, chi từ thiện, trừ chi ủng hộ, tài trợ quy định tại điểm đ khoản 2 Điều 9".
+  - **Khoản 22:** khoản chi không tương ứng với doanh thu tính thuế (trừ một số trường hợp).
+- **Kết luận cho người dùng chính:**
+  1. Chủ công ty TNHH một thành viên do một cá nhân làm chủ (và chủ DN tư nhân) tự trả lương cho mình: khoản lương đó **không được trừ** khi tính thuế TNDN. Lưu ý điều này khác với nghĩa vụ BHXH (NC-022: người quản lý vẫn phải đóng BHXH dù có hay không hưởng lương). Phần BHXH DN đóng cho chủ có được trừ hay không: chưa thấy câu trả lời trực tiếp trong Điều 10; ghi todo.
+  2. Tiền phạt hành chính và tiền chậm nộp thuế: không được trừ.
+  3. Lương nhân viên chỉ được trừ khi ghi rõ mức, điều kiện trong HĐLĐ hoặc quy chế, và đã thực trả có chứng từ (lương từ 5 triệu trở lên mỗi lần trả: cần chuyển khoản theo NC-024 — "các khoản thanh toán khác từng lần có giá trị từ 05 triệu đồng trở lên"; ghi là cách hiểu khi áp cho tiền lương).
+  4. Phúc lợi cho nhân viên: tổng không quá 1 tháng lương bình quân/năm. Trang phục bằng tiền: không quá 5 triệu/người/năm.
+  5. DN thuê nhà làm văn phòng, điện nước đứng tên chủ nhà: giữ hợp đồng thuê và chứng từ thanh toán theo số thực tế.
+  6. Từ thiện, tài trợ thông thường: không được trừ.
+- **Đề xuất sửa (Biên tập):**
+  - `so-ke-toan.json`: thêm mục ghi chú "Khoản chi không được tính vào chi phí khi tính thuế TNDN" liệt kê 6 ý trên (ngắn gọn). Trong `expense_groups`, cân nhắc tách nhóm: "Tiền phạt, tiền chậm nộp" và "Từ thiện, tài trợ" với ghi chú "không được trừ khi tính thuế"; nhóm "Lương, tiền công" thêm ghi chú "lương của chủ công ty TNHH một thành viên (chủ là cá nhân) không được trừ". Nếu việc thêm nhóm cần đổi cấu trúc (`in_result` đang chỉ là lãi lỗ tạm tính, không phải thu nhập tính thuế) thì ghi "Cần chủ dự án quyết": có thêm cờ "được trừ khi tính thuế" hay không.
+  - Mục "Giám đốc không nhận lương" (NC-022) và các bước TNDN: thêm câu "Nếu chủ công ty TNHH một thành viên tự trả lương cho mình, khoản lương này không được tính vào chi phí khi tính thuế TNDN."
+  - `legal_basis`: Nghị định 320/2025/NĐ-CP Điều 10 khoản 1, 2, 4 điểm d, 8 điểm a, b, c, đ (hai điểm đ), 9, 10, 12, 14, 17, 22; URL https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; `verified_against_original: true`. Todo: "BHXH DN đóng cho chủ công ty TNHH một thành viên có được trừ không: chưa xác minh"; "áp ngưỡng 5 triệu cho tiền lương: cách hiểu".
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
