@@ -1095,6 +1095,33 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Đọc Thông tư 89/2026 Điều 19 khoản 5 và Phụ lục I mục 4, 6 (OCR trang 61–110 và 201–206): ghi NC-028.
 - Tra Nghị định 181/2025 Điều 21 khoản 2 và Nghị định 252/2026: không có thủ tục, mẫu đăng ký tự nguyện khấu trừ. Còn mở.
 
+### NC-029 — Đăng ký phương pháp tính thuế GTGT: DN đăng ký thuế cùng đăng ký doanh nghiệp (một cửa liên thông); thay đổi thông tin đăng ký thuế thì làm cùng thủ tục thay đổi nội dung đăng ký doanh nghiệp (Thông tư 90/2026 Điều 7 khoản 1, Điều 9 khoản 1 điểm a)
+
+- **Trạng thái:** đã xác minh một phần. Chưa tìm thấy văn bản nói DN chọn phương pháp ở ô nào trên hồ sơ đăng ký doanh nghiệp, và hạn đăng ký tự nguyện khấu trừ.
+- **Liên quan:** NC-021 (bổ sung), NC-028; todo "Mẫu và thời hạn đăng ký tự nguyện khấu trừ: chưa xác minh" ở `tu-0-den-1.json` và hai guide khai GTGT; `guides/dang-ky-thay-doi-doanh-nghiep.json`.
+- **Phát hiện:**
+  - **Thông tư 90/2026/TT-BTC (Quy định về đăng ký thuế; ban hành 30/06/2026; bản PDF 196 trang, OCR):**
+    - Điều 7 khoản 1 (trang 11–12): "Địa điểm nộp và hồ sơ đăng ký thuế lần đầu đối với doanh nghiệp, hợp tác xã… đăng ký thuế cùng với đăng ký kinh doanh theo cơ chế một cửa liên thông là địa điểm nộp và hồ sơ đăng ký doanh nghiệp… theo quy định của pháp luật về đăng ký kinh doanh."
+    - Điều 9 khoản 1 điểm a (trang 17): "Người nộp thuế đăng ký thuế cùng với đăng ký kinh doanh theo cơ chế một cửa liên thông khi có thay đổi thông tin đăng ký thuế thì thực hiện thông báo thay đổi thông tin đăng ký thuế cùng với việc thay đổi nội dung đăng ký doanh nghiệp…". Điểm b: mẫu 08-MST nộp thẳng cho cơ quan thuế chỉ dành cho các tổ chức ở khoản 2 Điều 4, không phải DN đăng ký qua một cửa.
+    - Mẫu 01-ĐKT (trang 86–91) có chỉ tiêu 15 "Phương pháp tính thuế GTGT" với 4 ô: Khấu trừ; Trực tiếp trên GTGT; Trực tiếp trên doanh số; Không phải nộp thuế GTGT. Nhưng mẫu này ghi "Dùng cho tổ chức thuộc trường hợp cấp mã số thuế 10 chữ số" đăng ký trực tiếp với cơ quan thuế (Điều 7 khoản 2), không dùng cho DN đăng ký qua một cửa.
+  - **Đã tra, không thấy thủ tục đăng ký tự nguyện khấu trừ:**
+    - Nghị định 181/2025/NĐ-CP Điều 21 khoản 2: chỉ liệt kê ai được tự nguyện, không nói mẫu, hạn.
+    - Thông tư 69/2025/TT-BTC (hướng dẫn Luật GTGT và Nghị định 181/2025; hiệu lực 01/07/2025; https://vanban.chinhphu.vn/?pageid=27160&docid=214417&classid=1): đọc toàn văn 21 trang (OCR), không có quy định về đăng ký phương pháp.
+    - Thông tư 89/2026/TT-BTC Phụ lục I mục 4 (NC-028): không có mẫu đăng ký phương pháp.
+- **Kết luận ngắn (cách hiểu, chưa có câu chữ trực tiếp):**
+  1. Với DN, phương pháp tính thuế GTGT là một thông tin đăng ký thuế. DN khai nó trong hồ sơ đăng ký doanh nghiệp khi thành lập.
+  2. Muốn đổi (ví dụ đăng ký tự nguyện khấu trừ sau khi thành lập), DN thông báo thay đổi thông tin đăng ký thuế qua thủ tục thay đổi nội dung đăng ký doanh nghiệp, không nộp 08-MST cho cơ quan thuế.
+  3. Chưa kiểm: mẫu giấy đề nghị đăng ký doanh nghiệp có ô chọn phương pháp tính thuế GTGT không (biểu mẫu đăng ký doanh nghiệp do Bộ Tài chính ban hành, chưa đọc). Chưa thấy hạn đăng ký.
+- **Nguồn:** Thông tư 90/2026/TT-BTC Điều 7 khoản 1, khoản 2; Điều 9 khoản 1 điểm a, b; mẫu 01-ĐKT chỉ tiêu 15; https://vanban.chinhphu.vn/?pageid=27160&docid=218839&classid=1 (PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/90-btc.signed.pdf). Thông tư 69/2025/TT-BTC (như trên). Nghị định 181/2025/NĐ-CP Điều 21 khoản 2. Ngày tra 2026-11-14.
+- **Đề xuất sửa (Biên tập):**
+  - Chưa đổi nội dung hiển thị. Chỉ thay todo "Mẫu và thời hạn đăng ký tự nguyện khấu trừ: chưa xác minh" bằng: "DN đăng ký thuế cùng đăng ký doanh nghiệp; thay đổi thông tin đăng ký thuế làm cùng thủ tục thay đổi nội dung đăng ký doanh nghiệp (Thông tư 90/2026 Điều 7 khoản 1, Điều 9 khoản 1 điểm a). Chưa xác minh ô chọn phương pháp GTGT trên giấy đề nghị đăng ký doanh nghiệp và hạn đăng ký tự nguyện khấu trừ (NC-029)."
+  - `legal-framework.json`: nếu có mục Thông tư 86/2024/TT-BTC (đăng ký thuế), thêm todo "Thông tư 90/2026/TT-BTC (ban hành 30/06/2026) quy định về đăng ký thuế; chưa đối chiếu ngày hiệu lực và việc thay thế Thông tư 86/2024".
+
+### Vòng 38 (2026-11-14, 22:18 UTC)
+
+- Rà commit Biên tập `c802ca0` (NC-028): thêm câu 01/GTGT – 04/GTGT vào hai guide GTGT, 03/TNDN – 04/TNDN vào guide TNDN; status giữ draft. Đúng đề xuất, không thấy lỗi.
+- Tra thủ tục đăng ký tự nguyện khấu trừ: Nghị định 181/2025, Thông tư 69/2025, Thông tư 89/2026, Thông tư 90/2026. Ghi NC-029 (xác minh một phần).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
