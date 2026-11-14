@@ -895,6 +895,41 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
   - Lịch "Hàng tháng" (`bat-dau.json`) và mục BHXH nhân viên: thêm dòng "Bảo hiểm tai nạn lao động – bệnh nghề nghiệp: DN đóng 0,5% (một số DN đủ điều kiện được 0,3%)". Tổng: "DN 21,5%, nhân viên 10,5% tiền lương làm căn cứ đóng BHXH." `legal_basis`: Nghị định 58/2020/NĐ-CP Điều 4 khoản 1 điểm a, b; URL https://vanban.chinhphu.vn/?pageid=27160&docid=200108&classid=1; `verified_against_original: true`. Thêm todo: "Nghị định 58/2020 dẫn chiếu Luật BHXH 58/2014; chưa thấy văn bản thay thế (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động chưa đọc."
   - Không áp dụng phần 0,5% này cho giám đốc không nhận lương (Điều 4 khoản 1 tính trên quỹ lương của người lao động ở các điểm được liệt kê; người quản lý không lương tự đóng, NC-022). Ghi todo nếu muốn chắc chắn.
 
+### Ghi chú vòng 31 (2026-11-14, 08:17 UTC)
+
+- Đã rà commit `3c59184` (bổ sung 3 NC-023): thêm TNLĐ-BNN 0,5%, tổng DN 21,5%. Đúng đề xuất.
+- Vòng này làm NC-024 theo mục 1 README (sổ kế toán): khoản chi nào cần hóa đơn, chứng từ, thanh toán không dùng tiền mặt để được trừ khi tính TNDN và được khấu trừ thuế GTGT đầu vào. `so-ke-toan.json` dòng 267 đang có todo đúng câu hỏi này.
+
+### NC-024 — Chi phí được trừ (TNDN) và khấu trừ thuế GTGT đầu vào: phải có hóa đơn, chứng từ; mua từ 5 triệu đồng trở lên (đã gồm GTGT) phải có chứng từ thanh toán không dùng tiền mặt (Nghị định 320/2025 Điều 9; Luật Thuế GTGT 48/2024 Điều 14; Nghị định 181/2025 Điều 26)
+
+- Trạng thái: đã xác minh
+- Liên quan: `so-ke-toan.json` (nhóm chi `expense_groups`; todo dòng 267 "khoản chi nào phải có hóa đơn, chứng từ, và điều kiện thanh toán không dùng tiền mặt"); `tu-0-den-1.json` todo dòng 458 ("Xác minh quy định về thanh toán không dùng tiền mặt"); sổ S1–S4, S07, S08 (NC-009).
+- Nguồn:
+  - Nghị định 320/2025/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/12/320-ndcp.signed.pdf (bản quét, đã OCR). Mở lại 2026-11-14.
+  - Luật Thuế GTGT 48/2024/QH15 — https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/01/luat48.pdf (có lớp chữ).
+  - Nghị định 181/2025/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/181nd.signed.pdf (bản quét, đã OCR). Đã kiểm ở NC-021: Nghị định 359/2025 và 144/2026 không sửa Điều 26 (144/2026 sửa điểm g khoản 2 Điều 26 — xem lưu ý dưới).
+- Phát hiện:
+  - **Nghị định 320/2025, Điều 9 khoản 1 (PDF trang 21–23):** trừ các khoản ở Điều 10, DN được trừ khoản chi nếu đủ cả ba điều kiện:
+    - a) "Khoản chi thực tế phát sinh liên quan đến hoạt động sản xuất, kinh doanh của doanh nghiệp";
+    - b) "Khoản chi có đủ hoá đơn, chứng từ theo quy định của pháp luật." Riêng mua nông, lâm, thủy sản của người tự sản xuất bán ra; hàng thủ công; phế liệu của người thu nhặt; đồ dùng, tài sản của hộ gia đình, cá nhân; hàng hóa, dịch vụ của cá nhân, hộ kinh doanh có doanh thu dưới ngưỡng chịu GTGT: phải có chứng từ chi trả tiền và "Bảng kê thu mua hàng hóa, dịch vụ do người đại diện theo pháp luật hoặc người được ủy quyền của doanh nghiệp ký"; mua trong ngày của từng hộ, cá nhân từ 5 triệu trở lên phải thanh toán không dùng tiền mặt;
+    - c) "Khoản chi có chứng từ thanh toán không dùng tiền mặt đối với trường hợp mua hàng hoá, dịch vụ và các khoản thanh toán khác từng lần có giá trị từ 05 triệu đồng trở lên."
+    - Điểm c1: mua của một người bán nhiều lần trong cùng một ngày, mỗi lần dưới 5 triệu nhưng tổng từ 5 triệu trở lên, chỉ được trừ khi có chứng từ thanh toán không dùng tiền mặt.
+    - Điểm c2: nhân viên được ủy quyền mua hộ, tự thanh toán không dùng tiền mặt rồi DN hoàn lại: được trừ nếu có hóa đơn, chứng từ và quy chế hoặc quyết định của DN cho phép.
+    - Điểm c3: mua từ 5 triệu chưa thanh toán tại thời điểm ghi chi phí thì vẫn được trừ; khi thanh toán mà không có chứng từ không dùng tiền mặt thì phải điều chỉnh giảm chi phí vào kỳ thanh toán.
+  - **Luật Thuế GTGT 48/2024, Điều 14 khoản 2 (Công báo trang 91):** điều kiện khấu trừ thuế GTGT đầu vào: "a) Có hóa đơn giá trị gia tăng mua hàng hóa, dịch vụ…; b) Có chứng từ thanh toán không dùng tiền mặt đối với hàng hóa, dịch vụ mua vào, trừ một số trường hợp đặc thù theo quy định của Chính phủ".
+  - **Nghị định 181/2025, Điều 26 (PDF trang 32–33):** "Cơ sở kinh doanh phải có chứng từ thanh toán không dùng tiền mặt đối với hàng hóa, dịch vụ mua vào (bao gồm cả hàng hóa nhập khẩu) từ 05 triệu đồng trở lên đã bao gồm thuế giá trị gia tăng." Khoản 1: chứng từ thanh toán không dùng tiền mặt theo Nghị định 52/2024/NĐ-CP, "trừ các chứng từ bên mua nộp tiền mặt vào tài khoản của bên bán". Khoản 2: các trường hợp đặc thù (bù trừ công nợ, thanh toán qua bên thứ ba…) phải có hợp đồng, biên bản bù trừ.
+- **Kết luận:**
+  1. Ngưỡng là **5 triệu đồng trở lên** (đã gồm thuế GTGT), áp dụng cho cả chi phí được trừ TNDN và khấu trừ GTGT đầu vào. Không còn mốc 20 triệu như quy định cũ.
+  2. Nộp tiền mặt vào tài khoản người bán **không** được coi là thanh toán không dùng tiền mặt (khấu trừ GTGT).
+  3. Chia nhỏ hóa đơn mua của cùng người bán trong cùng ngày để né ngưỡng không có tác dụng (điểm c1).
+  4. Mua của cá nhân, hộ kinh doanh nhỏ không có hóa đơn: dùng Bảng kê thu mua + chứng từ chi tiền.
+- **Đề xuất sửa (Biên tập):**
+  - `so-ke-toan.json`: thêm vào `notes`/`how_to_use`: "Muốn khoản chi được tính vào chi phí khi tính thuế TNDN: (1) chi cho việc kinh doanh; (2) có hóa đơn, chứng từ; (3) từ 5 triệu đồng trở lên (kể cả thuế GTGT) thì phải chuyển khoản hoặc thanh toán không dùng tiền mặt — nộp tiền mặt vào tài khoản người bán không tính. Mua của cùng người bán nhiều lần trong ngày, tổng từ 5 triệu, cũng phải chuyển khoản. Mua của người bán nhỏ không có hóa đơn: lập Bảng kê thu mua, có chữ ký người đại diện công ty."
+  - Gợi ý cho sổ Excel (theo hướng README "sổ thực tế, linh hoạt"): thêm cột "Có hóa đơn?" và cảnh báo khi dòng chi từ 5.000.000 đồng trở lên ghi quỹ "Tiền mặt" (có thể bị loại khỏi chi phí và không được khấu trừ GTGT). Đây là tính năng nhỏ trong sổ; nếu cần đổi cấu trúc thì ghi "Cần chủ dự án quyết".
+  - `tu-0-den-1.json` todo dòng 458: thay bằng kết luận trên. `legal_basis`: Nghị định 320/2025/NĐ-CP Điều 9 khoản 1 điểm a, b, c (c1, c2, c3); Luật Thuế GTGT 48/2024/QH15 Điều 14 khoản 2; Nghị định 181/2025/NĐ-CP Điều 26 câu dẫn, khoản 1, 2; URL như trên; `verified_against_original: true`.
+  - Lưu ý: Nghị định 144/2026 có sửa điểm g khoản 2 Điều 26 Nghị định 181/2025 (một trường hợp đặc thù). Chưa đọc điểm này; không ảnh hưởng ngưỡng 5 triệu ở câu dẫn Điều 26.
+  - Chưa đọc Điều 10 Nghị định 320/2025 (các khoản chi không được trừ) — vòng sau.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
