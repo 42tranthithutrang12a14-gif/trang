@@ -1062,6 +1062,39 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - **Kết luận:** Luật 141/2025 không ảnh hưởng thuế suất 15/17/20% hay phương pháp tính theo % doanh thu. Các luật sửa đổi còn lại (116, 122/127, 133, 143/2025) có tên là luật chuyên ngành khác (danh sách "Luật sửa đổi" trên vanban.chinhphu.vn); nhiều khả năng cũng chỉ sửa điều khoản ưu đãi hoặc miễn thuế riêng. Chưa kiểm chứng; giữ todo ngắn ở mục thuế suất TNDN: "Luật 67/2025 đã được sửa bởi 116, 122/127, 133, 141, 143/2025/QH15; đã đối chiếu 141/2025 (không sửa Điều 10, 11); các luật còn lại chưa đối chiếu."
 - **Đề xuất sửa (Biên tập):** chỉ cập nhật todo như trên ở `legal-framework.json` mục Luật Thuế TNDN và `tam-nop-thue-tndn.json`. Không đổi nội dung.
 
+### NC-028 — Mẫu tờ khai: GTGT trực tiếp trên doanh thu dùng mẫu 04/GTGT; TNDN theo tỷ lệ % doanh thu dùng mẫu 04/TNDN (khai và quyết toán); TNDN doanh thu – chi phí quyết toán bằng mẫu 03/TNDN (Thông tư 89/2026 Điều 19 khoản 5, Phụ lục I mục 4, 6)
+
+- **Trạng thái:** đã xác minh (mẫu tờ khai). Chưa xác minh: mẫu và hạn đăng ký tự nguyện phương pháp khấu trừ.
+- **Liên quan:** NC-012 (câu hỏi vòng 14 của Biên tập: dùng mẫu tờ khai nào); NC-021 (câu hỏi vòng 23: mẫu tờ khai GTGT theo phương pháp trực tiếp); hai guide khai GTGT; `guides/tam-nop-thue-tndn.json`; mục "Cần chủ dự án quyết" về guide GTGT trực tiếp.
+- **Phát hiện (văn bản gốc, bản PDF trên datafiles.chinhphu.vn, OCR):**
+  - **Điều 19 khoản 5 điểm a (trang 40):** "Hồ sơ khai thuế giá trị gia tăng đối với phương pháp khấu trừ thuế, hồ sơ khai thuế giá trị gia tăng theo phương pháp tính trực tiếp trên giá trị gia tăng, hồ sơ khai thuế giá trị gia tăng tính theo phương pháp tính trực tiếp theo doanh thu theo quy định tại điểm 4 Phụ lục I ban hành kèm theo Thông tư này".
+  - **Phụ lục I mục 4 (PDF trang 202–204):**
+    - 4.1: phương pháp khấu trừ: mẫu 01/GTGT (hoạt động sản xuất kinh doanh), kèm các phụ lục 01-2, 01-3, 01-6, 01-7, 01-8/GTGT nếu có; 05/GTGT (xây dựng, chuyển nhượng bất động sản ngoại tỉnh); 02/GTGT (dự án đầu tư được hoàn thuế).
+    - 4.2: trực tiếp trên giá trị gia tăng: mẫu 03/GTGT (chỉ cho mua bán, chế tác vàng bạc, đá quý).
+    - 4.3: "Hồ sơ khai thuế GTGT theo phương pháp trực tiếp trên doanh thu": mẫu **04/GTGT** "Tờ khai thuế giá trị gia tăng (Áp dụng đối với người nộp thuế tính thuế theo phương pháp trực tiếp trên doanh thu)".
+    - 4.4: thay đổi kỳ tính thuế: mẫu 01/ĐK-TĐKTT, văn bản đề nghị đổi từ tháng sang quý (khớp NC-014).
+  - **Phụ lục I mục 6 (PDF trang 204–206), thuế TNDN:**
+    - 6.1 điểm a: hoạt động không thường xuyên: mẫu **04/TNDN** "Tờ khai thuế TNDN (Áp dụng đối với phương pháp tỷ lệ trên doanh thu)".
+    - 6.2 điểm a: quyết toán khi áp dụng phương pháp tỷ lệ trên doanh thu: mẫu **04/TNDN**; kèm "Báo cáo tài chính năm (trừ trường hợp không phải lập báo cáo tài chính)".
+    - 6.2 điểm b: quyết toán theo phương pháp doanh thu – chi phí: mẫu **03/TNDN**, kèm phụ lục 03-2/TNDN (chuyển lỗ), 03-3A, 03-3C/TNDN (ưu đãi) nếu có.
+  - Trong mục 4 Phụ lục I không có mẫu đăng ký tự nguyện phương pháp khấu trừ. Tôi chưa đọc phần hồ sơ đăng ký thuế; chưa biết đăng ký bằng mẫu nào, hạn nào.
+- **Kết luận ngắn:**
+  1. DN tính GTGT trực tiếp trên doanh thu (doanh thu dưới 1 tỷ, không đăng ký khấu trừ; NC-021) khai bằng mẫu 04/GTGT, không dùng 01/GTGT.
+  2. Kỳ khai (tháng hay quý) theo Điều 19 khoản 1 như mọi người nộp thuế GTGT (NC-014). Cách hiểu: Điều 19 khoản 1 không tách riêng phương pháp trực tiếp.
+  3. DN nộp TNDN theo tỷ lệ % doanh thu quyết toán năm bằng mẫu 04/TNDN; DN theo doanh thu – chi phí quyết toán bằng mẫu 03/TNDN.
+- **Nguồn:** Thông tư 89/2026/TT-BTC, Điều 19 khoản 5 điểm a; Phụ lục I mục 4 (4.1–4.4), mục 6 (6.1 điểm a, 6.2 điểm a, b). Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218974 (bản PDF 839 trang). Ngày tra 2026-11-14.
+- **Đề xuất sửa (Biên tập):**
+  - Hai guide khai GTGT (`khai-thue-gtgt-theo-quy.json`, `khai-thue-gtgt-theo-thang.json`): ở chỗ nói mẫu 01/GTGT, thêm một câu: "Mẫu 01/GTGT dành cho công ty tính thuế theo phương pháp khấu trừ. Công ty tính trực tiếp trên doanh thu dùng mẫu 04/GTGT." `legal_basis` thêm: Thông tư 89/2026/TT-BTC Điều 19 khoản 5 điểm a; Phụ lục I mục 4.1, 4.3; URL như trên; `verified_against_original: true`.
+  - `guides/tam-nop-thue-tndn.json` hoặc mục quyết toán TNDN: thêm "Quyết toán TNDN năm: tính theo doanh thu – chi phí dùng mẫu 03/TNDN; tính theo tỷ lệ % trên doanh thu dùng mẫu 04/TNDN (Thông tư 89/2026 Phụ lục I mục 6.2)". Bỏ todo hỏi mẫu tờ khai (NC-012) nếu có.
+  - Giữ todo "Mẫu và thời hạn đăng ký tự nguyện khấu trừ: chưa xác minh".
+  - Nếu chủ dự án đồng ý làm guide "Khai thuế GTGT theo phương pháp trực tiếp", mẫu tờ khai là 04/GTGT; nội dung từng chỉ tiêu trên mẫu tôi chưa đọc.
+
+### Vòng 37 (2026-11-14, 20:18 UTC)
+
+- Rà commit Biên tập `530d589` (NC-010 bổ sung): chỉ đổi câu todo ở 4 file, đúng đề xuất. Không thấy lỗi.
+- Đọc Thông tư 89/2026 Điều 19 khoản 5 và Phụ lục I mục 4, 6 (OCR trang 61–110 và 201–206): ghi NC-028.
+- Tra Nghị định 181/2025 Điều 21 khoản 2 và Nghị định 252/2026: không có thủ tục, mẫu đăng ký tự nguyện khấu trừ. Còn mở.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
