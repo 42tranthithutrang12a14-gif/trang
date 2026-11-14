@@ -292,6 +292,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "mức cụ thể BHYT, BHTN" ở 4 chỗ đổi thành ghi chú đã xác minh; còn mở hạn đóng BHYT, BHTN và bảo hiểm TNLĐ-BNN.
 - Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 30 (2026-11-14, 07:17 UTC)
+
+- Đọc NC-023 bổ sung 3 (bảo hiểm tai nạn lao động – bệnh nghề nghiệp 0,5%, Nghị định 58/2020 Điều 4; đã xác minh mức đóng). Status giữ "draft".
+- Thêm "công ty đóng thêm bảo hiểm TNLĐ-BNN 0,5% (0,3% nếu đủ điều kiện)" và tổng "công ty 21,5%, nhân viên 10,5%" ở: lịch "Hàng tháng" (`bat-dau.json`), bước `lao-dong-bhxh` (`tu-0-den-1.json`), mục Luật BHXH (`legal-framework.json`), lưu ý S2-DNSN (`so-ke-toan.json`). Thêm `legal_basis` Nghị định 58/2020.
+- Todo: Nghị định 58/2020 dẫn chiếu Luật BHXH cũ, chưa thấy văn bản thay thế; Luật An toàn, vệ sinh lao động chưa đọc; chưa rõ phần 0,5% có tính cho người quản lý không lương không. Không thêm 0,5% vào bước người quản lý không lương.
+- Todo "chưa xác minh bảo hiểm TNLĐ-BNN" ở các chỗ cũ đổi thành ghi chú đã xác minh; còn mở hạn đóng BHYT, BHTN.
+- Kiểm tra: `npm test` 85/85 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
