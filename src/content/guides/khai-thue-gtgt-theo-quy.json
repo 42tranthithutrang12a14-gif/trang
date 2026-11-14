@@ -1,0 +1,49 @@
+{
+  "slug": "khai-thue-gtgt-theo-quy",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Nộp tờ khai thuế GTGT theo quý",
+  "category": "thue",
+  "summary": "Mỗi quý, công ty tính thuế GTGT theo phương pháp khấu trừ và khai theo quý phải lập và nộp tờ khai thuế GTGT (mẫu 01/GTGT) qua mạng chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo.",
+  "related_rules": ["VAT_QUARTERLY_RETURN"],
+  "body_sections": [
+    {
+      "heading": "Ai phải nộp tờ khai quý?",
+      "content": "Hướng dẫn này dành cho công ty tính thuế GTGT theo phương pháp khấu trừ (doanh thu năm từ 1 tỷ đồng trở lên, hoặc tự chọn khấu trừ). Công ty doanh thu dưới 1 tỷ mặc định tính trực tiếp trên doanh thu; sổ tay chưa có hướng dẫn riêng cho cách này (Luật Thuế GTGT 48/2024/QH15 Điều 11 khoản 2, Điều 12 khoản 2).\n\nMặc định, thuế GTGT khai theo tháng. Công ty được chọn khai theo quý nếu:\n• Tổng doanh thu bán hàng hóa, dịch vụ năm trước từ 50 tỷ đồng trở xuống (cộng doanh thu trên các tờ khai GTGT trong năm dương lịch), hoặc\n• Mới bắt đầu kinh doanh.\n\nChọn rồi thì giữ cả năm dương lịch. Đang khai tháng, muốn chuyển sang quý: gửi Văn bản đề nghị thay đổi kỳ tính thuế (mẫu 01/ĐK-TĐKTTT) cho cơ quan thuế chậm nhất ngày 31/01 của năm bắt đầu khai quý.\n\nDoanh thu năm trước trên 50 tỷ đồng: khai tháng. Công ty mới, năm đầu doanh thu trên 50 tỷ: khai tháng từ năm sau.\n\nCăn cứ: Thông tư 89/2026/TT-BTC Điều 19 khoản 1."
+    },
+    {
+      "heading": "Hạn nộp",
+      "content": "Hạn nộp tờ khai và tiền thuế (Nghị định 252/2026/NĐ-CP Điều 10 khoản 3; Luật Quản lý thuế 108/2025/QH15 Điều 14 khoản 1 điểm a):\n• Quý I (tháng 1–3): chậm nhất ngày 30/4\n• Quý II (tháng 4–6): chậm nhất ngày 31/7\n• Quý III (tháng 7–9): chậm nhất ngày 31/10\n• Quý IV (tháng 10–12): chậm nhất ngày 31/01 năm sau\n\nNếu ngày hạn trùng ngày nghỉ/lễ, hạn được dời sang ngày làm việc tiếp theo."
+    },
+    {
+      "heading": "Các bước thực hiện",
+      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử eTax:\n   → https://thuedientu.gdt.gov.vn\n\n2. Vào mục Khai thuế → Khai thuế GTGT → Chọn mẫu 01/GTGT\n\n3. Chọn kỳ khai báo (ví dụ: Quý III/2026)\n\n4. Điền số liệu từ sổ sách kế toán:\n   - Doanh thu chịu thuế trong quý\n   - Thuế GTGT đầu ra (từ hóa đơn bán hàng)\n   - Thuế GTGT đầu vào được khấu trừ (từ hóa đơn mua hàng)\n   - Số thuế phải nộp = Đầu ra − Đầu vào\n\n5. Ký điện tử bằng chữ ký số và gửi\n\n6. Tải xác nhận nộp tờ khai và lưu lại\n\n7. Nếu có số thuế phải nộp, nộp tiền qua tài khoản ngân hàng liên kết hoặc nộp tại kho bạc"
+    },
+    {
+      "heading": "Mức phạt nếu chậm nộp hoặc không nộp",
+      "content": "Phạt nộp tờ khai muộn (mức cho công ty; Nghị định 125/2020/NĐ-CP Điều 13, sửa bởi Nghị định 310/2025/NĐ-CP, hiệu lực 16/01/2026):\n• Muộn 1–5 ngày, có tình tiết giảm nhẹ: cảnh cáo\n• Muộn 1–30 ngày: 2–5 triệu đồng\n• Muộn 31–60 ngày: 5–8 triệu đồng\n• Muộn 61–90 ngày: 8–15 triệu đồng\n• Muộn trên 90 ngày, hoặc không nộp, mà tờ khai không có số thuế phải nộp: 8–15 triệu đồng, và vẫn phải nộp tờ khai\n• Muộn trên 90 ngày, có số thuế phải nộp, đã tự nộp đủ thuế và tiền chậm nộp trước khi bị kiểm tra hoặc lập biên bản: 15–25 triệu đồng\n\nNộp tờ khai muộn làm nộp thuế muộn thì còn phải nộp tiền chậm nộp.\n\nCác mức khác (chưa xác minh):\n• Chậm nộp tiền thuế: tiền chậm nộp 0,03%/ngày tính trên số tiền chậm nộp\n• Không nộp tờ khai: có thể bị cưỡng chế và phong tỏa tài khoản"
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần kế toán viên xác minh link chính thức):\n• Luật Quản lý thuế số 38/2019/QH14\n• Thông tư 80/2021/TT-BTC hướng dẫn Luật Quản lý thuế\n• Luật Thuế GTGT số 13/2008/QH12 và các sửa đổi\n\nTra cứu văn bản pháp luật chính thức:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn (Cơ sở dữ liệu quốc gia về pháp luật)"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Khai và nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Cục Thuế (hỗ trợ): https://gdt.gov.vn\n• Hỗ trợ kỹ thuật eTax: 1900 3584"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Ngày 2026-11-13 (NC-021, đã đối chiếu toàn văn Luật Thuế GTGT 48/2024/QH15 Điều 10–12 và Luật 149/2025/QH15): thêm câu đầu nói rõ guide chỉ cho phương pháp khấu trừ, ngưỡng 1 tỷ. Chưa có guide cho phương pháp trực tiếp (xem \"Cần chủ dự án quyết\" trong bien-tap.md). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+    "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
+    "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): sửa mục \"Ai phải nộp tờ khai quý?\": khai quý là quyền lựa chọn, ngưỡng \"từ 50 tỷ đồng trở xuống\" (không phải \"dưới 50 tỷ\"), DN mới được chọn quý, chọn thì giữ cả năm, mẫu 01/ĐK-TĐKTTT trước 31/01 (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+        "Xác nhận mức phạt chậm nộp theo Nghị định hiện hành",
+    "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
+    "Kiểm tra link eTax còn hoạt động không",
+    "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế GTGT 13/2008/QH12 có thể đã được thay bằng Luật Thuế GTGT số 48/2024/QH15 (từ 1/7/2025); Luật Quản lý thuế 38/2019/QH14 có thể đã có luật thay thế (năm 2025). Kiểm tra cả Thông tư 80/2021/TT-BTC. Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế GTGT 48/2024/QH15, hiệu lực 01/07/2025; sửa bởi Luật 90/2025/QH15, 149/2025/QH15, 09/2026/QH16. Nghị định hướng dẫn 181/2025/NĐ-CP, sửa bởi 359/2025/NĐ-CP và 144/2026/NĐ-CP. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+    "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn quý là ngày cuối cùng của tháng đầu quý tiếp theo (Điều 10 khoản 3); hạn nộp tiền thuế là ngày cuối cùng của hạn nộp hồ sơ khai (Luật 108/2025 Điều 14 khoản 1 điểm a). Đổi \"nộp trước ngày\" thành \"chậm nhất ngày\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+    "Ngày 2026-11-13 (NC-018, đã đối chiếu toàn văn Nghị định 125/2020/NĐ-CP Điều 7, 13 và Nghị định 310/2025/NĐ-CP Điều 1 khoản 10, Điều 4): thay dòng \"chậm nộp tờ khai: 2–5 triệu\" bằng các khung theo số ngày chậm (Điều 13 khoản 1–5). Các dòng 0,03%/ngày, 20%, cưỡng chế chưa xác minh, đã gom dưới \"Các mức khác\". Guide không có trường legal_basis. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+    "Ngày 2026-11-13 (NC-018 bổ sung, đã đối chiếu toàn văn): Nghị định 102/2021/NĐ-CP và 291/2026/NĐ-CP không sửa Điều 13 Nghị định 125/2020. Các khung phạt chậm nộp tờ khai là mức hiện hành theo các văn bản đã đọc. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=204477&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025."
+  ],
+  "updated_at": "2026-10-23"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "so-sach-ke-toan",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Mở và ghi sổ kế toán",
+  "category": "ke-toan",
+  "summary": "Mọi doanh nghiệp phải thực hiện công việc kế toán và mở sổ kế toán ngay từ khi thành lập. Doanh nghiệp siêu nhỏ có thể áp dụng chế độ kế toán đơn giản hóa theo Thông tư 132/2018/TT-BTC.",
+  "related_rules": ["RISK_NO_BOOKKEEPING"],
+  "body_sections": [
+    {
+      "heading": "Tại sao phải ghi sổ kế toán?",
+      "content": "Theo Luật Kế toán 2015, mọi doanh nghiệp có trách nhiệm:\n• Ghi chép, phản ánh đầy đủ nghiệp vụ kinh tế phát sinh\n• Lập và nộp báo cáo tài chính hàng năm\n• Lưu trữ chứng từ, sổ sách tối thiểu 10 năm\n\nSổ sách kế toán còn là cơ sở để:\n• Tính số thuế GTGT, thuế TNDN phải nộp\n• Đối chiếu khi cơ quan thuế kiểm tra\n• Xác định lợi nhuận, chia cổ tức"
+    },
+    {
+      "heading": "Chế độ kế toán cho doanh nghiệp siêu nhỏ",
+      "content": "Công ty là doanh nghiệp siêu nhỏ khi đạt cả hai điều kiện (Nghị định 80/2021/NĐ-CP Điều 5 khoản 1):\n• Lao động có đóng BHXH bình quân năm không quá 10 người.\n• Doanh thu năm không quá 10 tỷ đồng (thương mại, dịch vụ) hoặc 3 tỷ đồng (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ đồng.\nLĩnh vực xác định theo ngành nghề kinh doanh chính đã đăng ký. Công ty mới, chưa có doanh thu: xét theo tổng nguồn vốn.\n\nDoanh nghiệp siêu nhỏ được áp dụng:\n\nThông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ:\n• Hệ thống tài khoản đơn giản hơn (ít tài khoản hơn)\n• Báo cáo tài chính gồm Báo cáo tình hình tài chính (B01-DNSN) và Báo cáo kết quả hoạt động kinh doanh (B02-DNSN), kèm 2 phụ biểu\n\nCó thể ghi sổ bằng Excel (đơn giản) hoặc phần mềm kế toán."
+    },
+    {
+      "heading": "Ai làm kế toán?",
+      "content": "Sổ tay này hướng dẫn chủ doanh nghiệp tự làm kế toán. Có 3 cách:\n\n1. Tự làm (cách sổ tay hướng dẫn):\n   → Ghi sổ bằng bảng tính theo mẫu hoặc phần mềm kế toán đơn giản\n   → Làm theo các hướng dẫn từng bước trong sổ tay\n   → Trước khi bắt đầu: kiểm tra mình có đủ điều kiện làm kế toán cho công ty không (xem lưu ý cuối mục)\n\n2. Thuê dịch vụ kế toán ngoài (để tham khảo):\n   → Khi không đủ điều kiện tự làm, hoặc muốn nhờ kiểm tra báo cáo tài chính cuối năm\n   → Chi phí: 1–5 triệu đồng/tháng tùy phức tạp\n\n3. Tuyển nhân viên kế toán (để tham khảo):\n   → Khi có nhiều nghiệp vụ phát sinh\n   → Chi phí: lương nhân viên + BHXH\n\n⚠️ Điều kiện để làm kế toán:\n• Giám đốc DN siêu nhỏ không có vốn nhà nước được làm kế toán cho công ty mình (Luật Kế toán Điều 52 khoản 4; Nghị định 174/2016/NĐ-CP Điều 19 khoản 3).\n• Người làm kế toán phải có trình độ chuyên môn kế toán: bằng trung cấp trở lên ngành tài chính, kế toán, kiểm toán, hoặc chứng chỉ kế toán viên, kiểm toán viên (Luật Kế toán Điều 51 khoản 1; Nghị định 174/2016/NĐ-CP Điều 18 khoản 5).\n• DN siêu nhỏ không bắt buộc có kế toán trưởng, được bố trí người phụ trách kế toán. Người này cần thêm chứng chỉ bồi dưỡng kế toán trưởng và 2–3 năm làm kế toán (Nghị định 174/2016/NĐ-CP Điều 20, Điều 21).\n• Chưa đủ điều kiện thì thuê dịch vụ kế toán cho phần phụ trách kế toán (Nghị định 174/2016/NĐ-CP Điều 22; Thông tư 132/2018/TT-BTC Điều 8). Bạn vẫn tự lập, giữ chứng từ và ghi chép hằng ngày.\n• Thông tư 132/2018/TT-BTC Điều 8 cho DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu \"tự tổ chức thực hiện công tác kế toán\". Chưa rõ câu này có bỏ điều kiện trình độ không. Hãy hỏi cơ quan thuế quản lý hoặc một kế toán để xác nhận: hiểu sai thì sổ sách, báo cáo có thể không hợp lệ."
+    },
+    {
+      "heading": "Các sổ kế toán cần mở",
+      "content": "Theo Thông tư 132/2018/TT-BTC, sổ phải mở tùy cách nộp thuế TNDN (Điều 3):\n\n• Nộp thuế TNDN theo tỷ lệ % trên doanh thu (doanh thu năm không quá 3 tỷ, không xác định được chi phí): 4 sổ S1-DNSN doanh thu, S2-DNSN lương và bảo hiểm, S3-DNSN vật liệu, hàng hóa, S4-DNSN nghĩa vụ thuế (Điều 17 khoản 1).\n• Nộp thuế TNDN trên thu nhập tính thuế: Sổ Nhật ký – Sổ Cái (S01-DNSN) và các sổ chi tiết S02-DNSN đến S10-DNSN, ghi Nợ/Có theo tài khoản (Điều 11 khoản 1).\n\nKhông có \"sổ quỹ tiền mặt\" riêng trong danh mục. Có thể dùng phần mềm kế toán để lập các sổ này. File sổ thu chi ở trang Công cụ có sẵn 4 trang mẫu S1–S4."
+    },
+    {
+      "heading": "Phần mềm kế toán phổ biến",
+      "content": "Phần mềm kế toán phù hợp doanh nghiệp siêu nhỏ:\n\n• MISA SME: https://www.misa.vn (phổ biến nhất tại VN)\n• Fast Accounting: https://fast.com.vn\n• Bravo: https://bravo.com.vn\n• KiotViet (bán lẻ): https://kiotviet.vn\n• Sổ Đỏ (đơn giản nhất): https://sodo.vn\n\nNếu chỉ vài giao dịch/tháng, Excel + mẫu sổ sách từ Bộ Tài chính cũng đủ."
+    },
+    {
+      "heading": "Báo cáo tài chính hàng năm",
+      "content": "Doanh nghiệp siêu nhỏ nộp thuế TNDN trên thu nhập tính thuế phải lập báo cáo tài chính (BCTC) năm (Thông tư 132/2018/TT-BTC Điều 13 khoản 1):\n1. Báo cáo tình hình tài chính (mẫu B01-DNSN)\n2. Báo cáo kết quả hoạt động kinh doanh (mẫu B02-DNSN)\nKèm phụ biểu: Bảng cân đối tài khoản (F01-DNSN) và Báo cáo tình hình thực hiện nghĩa vụ với ngân sách nhà nước (F02-DNSN).\n\nHạn nộp: chậm nhất 90 ngày kể từ ngày kết thúc năm tài chính. Năm tài chính theo năm dương lịch: 31/3, năm nhuận 30/3. Gửi cho cả cơ quan thuế quản lý trực tiếp và cơ quan đăng ký kinh doanh, đồng thời lưu tại công ty (Điều 14 khoản 2).\n\nDN nộp thuế TNDN theo tỷ lệ % trên doanh thu không bắt buộc lập BCTC để nộp cho cơ quan thuế; vẫn làm các báo cáo theo pháp luật thuế (Điều 18).\n\nLưu trữ: chứng từ dùng ghi sổ, sổ kế toán, BCTC ít nhất 10 năm; chứng từ không dùng trực tiếp để ghi sổ ít nhất 5 năm; tính từ ngày kết thúc năm kế toán (Nghị định 174/2016/NĐ-CP Điều 12, 13, 15)."
+    },
+    {
+      "heading": "Mức phạt nếu không ghi sổ kế toán",
+      "content": "• Không mở sổ kế toán: phạt 10.000.000 – 20.000.000 đồng\n• Không lập BCTC đúng hạn: phạt 5.000.000 – 10.000.000 đồng\n• Ghi sổ sai, không đúng thực tế: phạt theo mức độ vi phạm\n• Không lưu trữ chứng từ đủ 10 năm: phạt hành chính\n\n⚠️ Mức phạt cần kế toán viên xác minh theo Nghị định hiện hành."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Luật Kế toán số 88/2015/QH13\n• Thông tư 132/2018/TT-BTC — Chế độ kế toán doanh nghiệp siêu nhỏ\n• Thông tư 133/2016/TT-BTC — Chế độ kế toán doanh nghiệp nhỏ và vừa\n• Nghị định 41/2018/NĐ-CP về xử phạt vi phạm kế toán\n• Nghị định 132/2026/NĐ-CP sửa đổi Nghị định 41/2018/NĐ-CP (hiệu lực 21/05/2026)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Nộp BCTC và quyết toán thuế: https://thuedientu.gdt.gov.vn\n• Mẫu sổ sách kế toán (Bộ Tài chính): https://mof.gov.vn\n• Tra cứu văn bản kế toán: https://vbpl.moj.gov.vn\n• Cục Quản lý, giám sát Kế toán, Kiểm toán: https://mof.gov.vn/webcenter/portal/vclvckt"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): viết lại mục \"Báo cáo tài chính hàng năm\": tên mẫu B01, B02, F01, F02; hạn 90 ngày (năm nhuận 30/3); gửi cả cơ quan thuế và cơ quan đăng ký kinh doanh (bỏ \"tùy địa phương\"); DN nộp theo % doanh thu không bắt buộc; thời hạn lưu trữ 5 và 10 năm. Bỏ \"Bản thuyết minh\" (không có trong danh mục). Chưa viết cách nộp qua mạng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+    "Xác nhận Thông tư 132/2018 còn hiệu lực hay đã có văn bản thay thế",
+    "Ngày 2026-11-13 (NC-016, đã đối chiếu toàn văn Nghị định 80/2021/NĐ-CP Điều 5–10): sửa tiêu chí ở mục \"Chế độ kế toán cho doanh nghiệp siêu nhỏ\". Cùng vòng, sửa mục \"Các sổ kế toán cần mở\" theo NC-009 (Thông tư 132/2018 Điều 3, 11, 17): bỏ danh sách cũ (nhật ký chung, sổ cái, sổ quỹ) không khớp văn bản. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+    "Xác nhận mức phạt không ghi sổ theo Nghị định 41/2018 hay văn bản thay thế. Cập nhật NC-002: Nghị định 41/2018/NĐ-CP đã được sửa bởi Nghị định 132/2026/NĐ-CP, ban hành 06/04/2026, hiệu lực 21/05/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217618&classid=1",
+    "Xác nhận người phụ trách kế toán có cần chứng chỉ hay không theo quy định mới nhất. Cập nhật NC-001: Luật Kế toán 88/2015/QH13 đã được sửa bởi Luật 56/2024/QH15 (hiệu lực 01/01/2025). Có Thông tư 101/2026/TT-BTC về chứng chỉ bồi dưỡng kế toán trưởng (hiệu lực 01/01/2027). Khi xác minh phải đọc cả hai, cùng Nghị định 174/2016/NĐ-CP. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212484&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218950&classid=1",
+    "Điền legal_basis với số điều khoản cụ thể và link chính thức",
+    "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Summary và 3 mục nội dung đang dẫn Thông tư 132/2018. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
+    "Kiểm tra Thông tư 133/2016/TT-BTC còn hiệu lực không.",
+    "Giá dịch vụ kế toán \"1–5 triệu đồng/tháng\": nguồn thứ cấp ghi 300.000–1.000.000đ/tháng. Cần nguồn trung lập hoặc bỏ con số.",
+    "Ngày 2026-10-28 đã viết lại mục \"Ai làm kế toán?\" theo định hướng tự làm kế toán (xem AGENTS.md); giữ nguyên câu ⚠️ về chứng chỉ và con số chi phí.",
+    "Ngày 2026-11-12 (NC-001, đã đối chiếu toàn văn): thay câu ⚠️ \"Người phụ trách kế toán bắt buộc phải có chứng chỉ hành nghề hoặc bằng kế toán\" bằng điều kiện có điều, khoản. Nguồn: Luật Kế toán 88/2015/QH13 https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1; Nghị định 174/2016/NĐ-CP https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1; Thông tư 132/2018/TT-BTC https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1. Guide chưa có trường legal_basis nên căn cứ ghi trong nội dung.",
+    "Điểm còn mở sau NC-001 (2026-11-12): (1) Nghị định 174/2016 Điều 20 khoản 2 điểm b ghi DN siêu nhỏ \"được bố trí phụ trách kế toán\"; cách hiểu là phải có phụ trách kế toán hoặc thuê dịch vụ, chưa có văn bản hướng dẫn trực tiếp. (2) Thông tư 132/2018 Điều 8 khoản 1 câu 2: DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu \"có thể tự tổ chức thực hiện công tác kế toán\"; chưa rõ có bỏ điều kiện trình độ không. Rủi ro cao, cần kế toán hoặc luật sư cho ý kiến. (3) Chưa đọc Thông tư 101/2026/TT-BTC (chứng chỉ bồi dưỡng kế toán trưởng, hiệu lực 01/01/2027). (4) Chưa tìm thấy văn bản sửa Nghị định 174/2016. (5) Tiêu chí DN siêu nhỏ (Nghị định 80/2021/NĐ-CP) chưa đọc. Luật 56/2024/QH15 không sửa khoản 1 Điều 51, Điều 52, Điều 54 Luật Kế toán (theo NC-001)."
+  ],
+  "updated_at": "2026-10-28"
+}

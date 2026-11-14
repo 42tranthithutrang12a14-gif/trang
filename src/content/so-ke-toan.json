@@ -1,0 +1,369 @@
+{
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "updated_at": "2026-11-12",
+  "title": "Sổ thu chi hằng ngày",
+  "summary": "File Excel để ghi tiền vào, tiền ra mỗi ngày. File tự tính tồn quỹ, tổng hợp theo tháng và lãi lỗ tạm tính.",
+  "file_name": "so-thu-chi-dn-sieu-nho.xlsx",
+  "notice": "Sổ này giúp ghi thu chi hằng ngày, chưa phải sổ kế toán theo mẫu. Theo Thông tư 132/2018/TT-BTC, DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu phải mở 4 sổ: S1 doanh thu, S2 lương và bảo hiểm, S3 hàng tồn kho, S4 nghĩa vụ thuế. Cách nộp thuế này chỉ dành cho DN có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập (Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b). DN tính thuế TNDN trên thu nhập tính thuế phải dùng Sổ Nhật ký – Sổ Cái (S01-DNSN) và các sổ chi tiết S02–S10.",
+  "how_to_use": [
+    "Mở trang \"Thiết lập\". Gõ tên công ty, mã số thuế, năm ghi sổ, số tiền mặt và tiền ngân hàng đang có.",
+    "Xem danh mục nhóm thu, nhóm chi ở trang \"Thiết lập\". Đổi tên hoặc thêm nhóm cho hợp với việc kinh doanh của bạn.",
+    "Mỗi lần có tiền vào hoặc tiền ra, mở trang \"Nhật ký thu chi\" và ghi một dòng: ngày, nội dung, nhóm, số tiền, quỹ.",
+    "Có hóa đơn thì gõ thêm số hóa đơn và tiền thuế GTGT ghi trên hóa đơn.",
+    "Cuối ngày, so cột \"Tồn tiền mặt\" với tiền thật trong két. So cột \"Tồn ngân hàng\" với số dư tài khoản.",
+    "Cuối tháng, mở trang \"Tổng hợp\" để xem tiền vào, tiền ra, lãi lỗ tạm tính và thuế GTGT của tháng.",
+    "Nếu công ty nộp thuế TNDN theo tỷ lệ % trên doanh thu: ghi thêm 4 trang S1-DNSN đến S4-DNSN theo hóa đơn, bảng lương, phiếu nhập xuất kho và giấy nộp thuế. 4 trang này có đúng cột theo mẫu, nhưng chưa tự lấy số từ Nhật ký thu chi.",
+    "Mỗi năm dùng một file mới. Số tồn cuối năm cũ là số đầu năm của file mới."
+  ],
+  "notes": [
+    "Mỗi dòng chỉ ghi Tiền vào hoặc Tiền ra, không ghi cả hai.",
+    "Chuyển tiền giữa quỹ tiền mặt và ngân hàng: ghi 2 dòng. Một dòng tiền ra ở nơi chuyển, một dòng tiền vào ở nơi nhận.",
+    "Tiền thuế GTGT: gõ đúng số ghi trên hóa đơn. Không có hóa đơn thì để trống.",
+    "Ô chuyển màu đỏ nhạt là dòng còn thiếu ngày, nhóm hoặc quỹ. Điền đủ thì hết đỏ.",
+    "Lãi lỗ tạm tính là số theo dõi nội bộ, chưa phải lợi nhuận tính thuế.",
+    "Sổ thu chi ghi khi tiền vào, tiền ra. Sổ S1-DNSN ghi doanh thu khi bán hàng, cung cấp dịch vụ, kể cả khi khách chưa trả tiền. Vì vậy hai sổ có thể chênh nhau.",
+    "Nhà nước sẽ cung cấp miễn phí cho DN siêu nhỏ một nền tảng số, trong đó có phần mềm kế toán gắn với hóa đơn điện tử và chữ ký số (Nghị định 20/2026/NĐ-CP Điều 10). Chưa có tên nền tảng và thời điểm cung cấp.",
+    "Sổ S2-DNSN: trên tiền lương làm căn cứ đóng, công ty đóng BHXH 17%, BHYT 3%, BHTN 1%; người lao động đóng BHXH 8%, BHYT 1,5%, BHTN 1% (Luật BHXH 41/2024/QH15 Điều 33, 34; Nghị định 188/2025/NĐ-CP Điều 6; Nghị định 374/2025/NĐ-CP Điều 4). Công ty đóng thêm bảo hiểm tai nạn lao động – bệnh nghề nghiệp 0,5% (Nghị định 58/2020/NĐ-CP Điều 4). Tổng: công ty 21,5%, người lao động 10,5%.",
+    "Muốn khoản chi được tính vào chi phí khi tính thuế TNDN: chi cho việc kinh doanh, có hóa đơn, chứng từ; từ 5 triệu đồng trở lên (kể cả thuế GTGT) thì phải chuyển khoản hoặc thanh toán không dùng tiền mặt. Nộp tiền mặt vào tài khoản người bán không tính là chuyển khoản. Mua của cùng người bán nhiều lần trong một ngày, tổng từ 5 triệu, cũng phải chuyển khoản. Cùng điều kiện này áp dụng để được khấu trừ thuế GTGT đầu vào. Mua của người bán nhỏ không có hóa đơn: lập Bảng kê thu mua, có chữ ký người đại diện công ty.",
+    "Dòng chi từ 5.000.000 đồng trở lên mà ghi quỹ \"Tiền mặt\" sẽ tô màu cam: khoản này có thể không được tính vào chi phí và không được khấu trừ thuế GTGT.",
+    "Khoản chi không được tính vào chi phí khi tính thuế TNDN (dù vẫn là tiền ra): tiền phạt hành chính và tiền chậm nộp thuế; lương của chủ doanh nghiệp tư nhân, chủ công ty TNHH một thành viên do một cá nhân làm chủ; lương nhân viên không ghi rõ mức, điều kiện trong hợp đồng lao động hoặc quy chế, hoặc không thực trả có chứng từ; phúc lợi cho nhân viên vượt 1 tháng lương bình quân/năm; trang phục bằng tiền vượt 5 triệu đồng/người/năm; từ thiện, tài trợ thông thường; tiền điện, nước đứng tên chủ nhà mà không có hợp đồng thuê và chứng từ theo số thực tế (Nghị định 320/2025/NĐ-CP Điều 10). Lãi lỗ tạm tính trong sổ chưa loại các khoản này.",
+    "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
+  ],
+  "sheets": [
+    { "name": "Hướng dẫn", "desc": "Cách dùng, chú giải màu và ví dụ cách ghi." },
+    { "name": "Thiết lập", "desc": "Tên công ty, năm ghi sổ, tiền đầu năm và danh mục nhóm thu, chi. Bạn sửa được danh mục." },
+    { "name": "Nhật ký thu chi", "desc": "Nơi ghi hằng ngày. Mỗi khoản tiền vào hoặc ra là một dòng. Tồn quỹ tự tính." },
+    { "name": "Tổng hợp", "desc": "Tự tính theo từng tháng: tiền vào, tiền ra, tồn quỹ, lãi lỗ tạm tính, thuế GTGT, chi tiết từng nhóm." },
+    { "name": "S1-DNSN Doanh thu", "desc": "Mẫu S1-DNSN: sổ chi tiết doanh thu bán hàng hóa, dịch vụ. Ghi theo từng hóa đơn bán ra." },
+    { "name": "S2-DNSN Lương", "desc": "Mẫu S2-DNSN: theo dõi tiền lương và các khoản BHXH, BHYT, BHTN. Dùng khi có người lao động." },
+    { "name": "S3-DNSN Hàng tồn kho", "desc": "Mẫu S3-DNSN: theo dõi nhập, xuất, tồn từng loại vật liệu, dụng cụ, hàng hóa. Mỗi mặt hàng một bảng." },
+    { "name": "S4-DNSN Thuế", "desc": "Mẫu S4-DNSN: theo dõi số thuế phải nộp và đã nộp vào ngân sách." },
+    { "name": "Thuế TNDN theo % DT", "desc": "Tính thuế TNDN theo tỷ lệ % trên doanh thu, cho DN doanh thu năm không quá 3 tỷ và không xác định được chi phí. Gõ doanh thu từng nhóm ngành, file tự nhân tỷ lệ." }
+  ],
+  "income_groups": [
+    { "name": "Bán hàng, cung cấp dịch vụ", "in_result": true, "example": "Tiền khách trả khi mua hàng, dùng dịch vụ" },
+    { "name": "Thu khác", "in_result": true, "example": "Lãi tiền gửi, bán đồ cũ, tiền được bồi thường" },
+    { "name": "Chủ sở hữu góp vốn", "in_result": false, "example": "Tiền chủ sở hữu, thành viên góp vào công ty" },
+    { "name": "Tiền đi vay", "in_result": false, "example": "Nhận tiền vay ngân hàng, vay cá nhân" },
+    { "name": "Nhận tiền chuyển nội bộ", "in_result": false, "example": "Dòng nhận khi rút tiền ngân hàng về quỹ, hoặc nộp tiền mặt vào ngân hàng" }
+  ],
+  "expense_groups": [
+    { "name": "Mua hàng hóa, nguyên vật liệu", "in_result": true, "example": "Hàng để bán lại, nguyên liệu để làm ra sản phẩm" },
+    { "name": "Lương, tiền công", "in_result": true, "example": "Lương nhân viên, tiền thuê người làm theo việc. Lương của chủ công ty TNHH một thành viên (chủ là cá nhân) không được trừ khi tính thuế TNDN" },
+    { "name": "Bảo hiểm cho người lao động", "in_result": true, "example": "Phần công ty đóng bảo hiểm xã hội, y tế, thất nghiệp" },
+    { "name": "Thuê mặt bằng, văn phòng", "in_result": true, "example": "Tiền thuê cửa hàng, kho, văn phòng" },
+    { "name": "Điện, nước, internet, điện thoại", "in_result": true, "example": "Hóa đơn điện, nước, cước mạng, cước điện thoại" },
+    { "name": "Vận chuyển, giao hàng", "in_result": true, "example": "Phí ship, xăng xe, thuê xe chở hàng" },
+    { "name": "Quảng cáo, tiếp thị", "in_result": true, "example": "Chạy quảng cáo, in tờ rơi, làm biển hiệu" },
+    { "name": "Công cụ, thiết bị, đồ dùng", "in_result": true, "example": "Máy tính, bàn ghế, dụng cụ làm việc" },
+    { "name": "Văn phòng phẩm, in ấn", "in_result": true, "example": "Giấy, mực in, sổ, bút" },
+    { "name": "Phí ngân hàng", "in_result": true, "example": "Phí chuyển khoản, phí quản lý tài khoản" },
+    { "name": "Dịch vụ thuê ngoài", "in_result": true, "example": "Phần mềm, chữ ký số, sửa chữa, dịch vụ kế toán" },
+    { "name": "Phí, lệ phí", "in_result": true, "example": "Lệ phí làm thủ tục, phí công chứng" },
+    { "name": "Trả lãi vay", "in_result": true, "example": "Tiền lãi trả cho khoản vay" },
+    { "name": "Nộp thuế", "in_result": false, "example": "Nộp thuế GTGT, thuế TNDN vào ngân sách" },
+    { "name": "Trả nợ gốc vay", "in_result": false, "example": "Trả tiền gốc của khoản vay" },
+    { "name": "Chủ sở hữu rút vốn, chia lợi nhuận", "in_result": false, "example": "Tiền chủ sở hữu rút ra, chia lãi cho thành viên" },
+    { "name": "Chuyển tiền nội bộ đi", "in_result": false, "example": "Dòng chuyển đi khi rút tiền ngân hàng về quỹ, hoặc nộp tiền mặt vào ngân hàng" },
+    { "name": "Tiền phạt, tiền chậm nộp", "in_result": true, "example": "Phạt vi phạm hành chính, tiền chậm nộp thuế. Không được trừ khi tính thuế TNDN" },
+    { "name": "Từ thiện, tài trợ", "in_result": true, "example": "Ủng hộ, tài trợ, từ thiện. Thường không được trừ khi tính thuế TNDN" },
+    { "name": "Chi khác", "in_result": true, "example": "Khoản chi chưa xếp được vào nhóm nào" }
+  ],
+  "spare_income_rows": 3,
+  "spare_expense_rows": 6,
+  "examples": [
+    { "day": 5, "month": 1, "doc": "PT001", "content": "Chủ sở hữu góp vốn", "group": "Chủ sở hữu góp vốn", "money_in": 50000000, "money_out": null, "vat": null, "fund": "Ngân hàng", "invoice": "", "partner": "Nguyễn Văn A", "note": "" },
+    { "day": 6, "month": 1, "doc": "PC001", "content": "Mua hàng về bán", "group": "Mua hàng hóa, nguyên vật liệu", "money_in": null, "money_out": 11000000, "vat": 1000000, "fund": "Ngân hàng", "invoice": "0000123", "partner": "Công ty B", "note": "" },
+    { "day": 7, "month": 1, "doc": "PT002", "content": "Bán hàng cho khách lẻ", "group": "Bán hàng, cung cấp dịch vụ", "money_in": 3300000, "money_out": null, "vat": 300000, "fund": "Tiền mặt", "invoice": "0000001", "partner": "Khách lẻ", "note": "" },
+    { "day": 10, "month": 1, "doc": "PC002", "content": "Trả tiền thuê cửa hàng tháng 1", "group": "Thuê mặt bằng, văn phòng", "money_in": null, "money_out": 5000000, "vat": null, "fund": "Tiền mặt", "invoice": "", "partner": "Chủ nhà", "note": "Chưa nhận hóa đơn" },
+    { "day": 12, "month": 1, "doc": "", "content": "Rút tiền ngân hàng về quỹ", "group": "Chuyển tiền nội bộ đi", "money_in": null, "money_out": 10000000, "vat": null, "fund": "Ngân hàng", "invoice": "", "partner": "", "note": "Dòng chuyển đi" },
+    { "day": 12, "month": 1, "doc": "", "content": "Rút tiền ngân hàng về quỹ", "group": "Nhận tiền chuyển nội bộ", "money_in": 10000000, "money_out": null, "vat": null, "fund": "Tiền mặt", "invoice": "", "partner": "", "note": "Dòng nhận" }
+  ],
+  "forms": [
+    {
+      "code": "S1-DNSN",
+      "sheet": "S1-DNSN Doanh thu",
+      "title": "SỔ CHI TIẾT DOANH THU BÁN HÀNG HÓA, DỊCH VỤ",
+      "subtitle": "",
+      "balances": false,
+      "columns": [
+        { "label": "Ngày, tháng ghi sổ", "kind": "date" },
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Kinh doanh hàng hóa", "group": "Doanh thu", "kind": "money", "total": true },
+        { "label": "Kinh doanh dịch vụ", "group": "Doanh thu", "kind": "money", "total": true },
+        { "label": "Hoạt động khác", "group": "Doanh thu", "kind": "money", "total": true },
+        { "label": "Ghi chú", "kind": "text" }
+      ]
+    },
+    {
+      "code": "S2-DNSN",
+      "sheet": "S2-DNSN Lương",
+      "title": "SỔ THEO DÕI TÌNH HÌNH THANH TOÁN TIỀN LƯƠNG VÀ CÁC KHOẢN NỘP THEO LƯƠNG CỦA NGƯỜI LAO ĐỘNG",
+      "subtitle": "",
+      "balances": true,
+      "columns": [
+        { "label": "Ngày, tháng ghi sổ", "kind": "date" },
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Số phải trả", "group": "Tiền lương và thu nhập của người lao động", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "Tiền lương và thu nhập của người lao động", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "Tiền lương và thu nhập của người lao động", "kind": "money", "total": false },
+        { "label": "Số phải trả", "group": "BHXH", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "BHXH", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "BHXH", "kind": "money", "total": false },
+        { "label": "Số phải trả", "group": "BHYT", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "BHYT", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "BHYT", "kind": "money", "total": false },
+        { "label": "Số phải trả", "group": "BHTN", "kind": "money", "total": true },
+        { "label": "Số đã trả", "group": "BHTN", "kind": "money", "total": true },
+        { "label": "Số còn phải trả", "group": "BHTN", "kind": "money", "total": false }
+      ]
+    },
+    {
+      "code": "S3-DNSN",
+      "sheet": "S3-DNSN Hàng tồn kho",
+      "title": "SỔ CHI TIẾT VẬT LIỆU, DỤNG CỤ, SẢN PHẨM, HÀNG HÓA",
+      "subtitle": "Tên vật liệu, dụng cụ, sản phẩm, hàng hóa: ……………………",
+      "balances": false,
+      "columns": [
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Nhập", "kind": "money", "total": true },
+        { "label": "Xuất", "kind": "money", "total": true },
+        { "label": "Tồn", "kind": "money", "total": false },
+        { "label": "Ghi chú", "kind": "text" }
+      ]
+    },
+    {
+      "code": "S4-DNSN",
+      "sheet": "S4-DNSN Thuế",
+      "title": "SỔ THEO DÕI TÌNH HÌNH THỰC HIỆN NGHĨA VỤ VỚI NGÂN SÁCH NHÀ NƯỚC",
+      "subtitle": "",
+      "balances": true,
+      "columns": [
+        { "label": "Số hiệu", "group": "Chứng từ", "kind": "text" },
+        { "label": "Ngày, tháng", "group": "Chứng từ", "kind": "date" },
+        { "label": "Diễn giải", "kind": "text" },
+        { "label": "Số thuế phải nộp", "kind": "money", "total": true },
+        { "label": "Số thuế đã nộp", "kind": "money", "total": true },
+        { "label": "Ghi chú", "kind": "text" }
+      ]
+    }
+  ],
+  "form_issue_line": "(Ban hành kèm theo Thông tư số 132/2018/TT-BTC ngày 28/12/2018 của Bộ Tài chính)",
+  "form_rows": 200,
+  "legal_basis": [
+    {
+      "doc_type": "Thông tư",
+      "doc_number": "132/2018/TT-BTC",
+      "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+      "issuer": "Bộ Tài chính",
+      "issued_date": "2018-12-28",
+      "effective_date": "2019-02-15",
+      "article": "Điều 3 khoản 1, 2, 3, 4; Điều 11 khoản 1; Điều 17 khoản 1, 3; Phụ lục 3; Phụ lục 4",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-12",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "67/2025/QH15",
+      "title": "Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Quốc hội",
+      "issued_date": "2025-06-14",
+      "effective_date": "2025-10-01",
+      "article": "Điều 11 khoản 2 điểm b; Điều 19 khoản 1",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-12",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "320/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-15",
+      "effective_date": "2025-12-15",
+      "article": "Điều 11 khoản 4; Điều 12 khoản 4 điểm a, b, c, d, đ; Điều 24 khoản 1",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-12",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "20/2026/NĐ-CP",
+      "title": "Nghị định quy định chi tiết Nghị quyết 198/2025/QH15",
+      "issuer": "Chính phủ",
+      "issued_date": "2026-01-15",
+      "effective_date": "2026-01-15",
+      "article": "Điều 10",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-13",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "41/2024/QH15",
+      "title": "Luật Bảo hiểm xã hội",
+      "issuer": "Quốc hội",
+      "issued_date": "2024-06-29",
+      "effective_date": "2025-07-01",
+      "article": "Điều 33 khoản 1; Điều 34 khoản 1",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "188/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm y tế",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-07-01",
+      "effective_date": "2025-08-15",
+      "article": "Điều 6 khoản 1 điểm a, b",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "374/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Việc làm về bảo hiểm thất nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-31",
+      "effective_date": "2026-01-01",
+      "article": "Điều 4 khoản 1, 2; Điều 5",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "58/2020/NĐ-CP",
+      "title": "Nghị định quy định mức đóng bảo hiểm xã hội bắt buộc vào Quỹ bảo hiểm tai nạn lao động, bệnh nghề nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2020-05-27",
+      "effective_date": "2020-07-15",
+      "article": "Điều 4 khoản 1 điểm a, b",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=200108&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "320/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-15",
+      "effective_date": "2025-12-15",
+      "article": "Điều 9 khoản 1 điểm a, b, c (c1, c2, c3)",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Luật",
+      "doc_number": "48/2024/QH15",
+      "title": "Luật Thuế giá trị gia tăng",
+      "issuer": "Quốc hội",
+      "issued_date": "2024-11-26",
+      "effective_date": "2025-07-01",
+      "article": "Điều 14 khoản 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "181/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Thuế giá trị gia tăng",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-07-01",
+      "effective_date": "2025-07-01",
+      "article": "Điều 26 câu dẫn, khoản 1, 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "320/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-12-15",
+      "effective_date": "2025-12-15",
+      "article": "Điều 10 khoản 1, 2, 4 điểm d, 8 điểm a, b, c, đ, 9, 10, 12, 14, 17, 22",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-14",
+      "snapshot_path": ""
+    }
+  ],
+  "todo_for_reviewer": [
+    "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Ngày 2026-11-12 (NC-009) đã đối chiếu danh mục sổ và cột với Thông tư 132/2018/TT-BTC (Điều 3, 11, 17, Phụ lục 3, 4): sửa notice, thêm 4 trang S1-DNSN đến S4-DNSN để trống, đúng cột theo mẫu. Cột của S3 theo mô tả NC-009 (nhập, xuất, tồn); chưa rõ mẫu có tách số lượng, thành tiền không.",
+    "Còn làm: cho S1-DNSN, S4-DNSN lấy số từ Nhật ký. Cần trước: (1) phương pháp ghi từng cột S1–S4 (Phụ lục 4 mục 2), ví dụ S1 ghi doanh thu có hay chưa có thuế GTGT; (2) cách ghi doanh thu bán chịu trong Nhật ký thu chi (sổ hiện ghi theo tiền). Chưa làm sổ Chương II (S01-DNSN Nhật ký – Sổ Cái, S02–S10): cần ghi Nợ/Có theo tài khoản.",
+    "Ngày 2026-11-12 (NC-010): Chương III (4 sổ S1–S4) vẫn có cơ sở. Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b cho tính thuế theo tỷ lệ % trên doanh thu với DN có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập. Tỷ lệ % do Chính phủ quy định, chưa đọc nghị định. Thông tư 132/2018 còn hiệu lực không: chưa thấy văn bản thay thế (NC-002). Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
+    "Cột \"Tính vào lãi, lỗ?\" của từng nhóm là mặc định tạm. Cần xác minh cách xếp: thuế đã nộp, mua thiết bị giá trị lớn (tài sản cố định, khấu hao), tiền đặt cọc, lương chủ sở hữu.",
+    "Lãi lỗ tạm tính lấy số chưa gồm thuế GTGT. Cần xác minh cách tính cho DN tính thuế GTGT theo phương pháp trực tiếp.",
+    "Ngày 2026-11-14 (NC-024, đã đối chiếu toàn văn Nghị định 320/2025 Điều 9, Luật Thuế GTGT 48/2024 Điều 14, Nghị định 181/2025 Điều 26): thêm lưu ý điều kiện chi phí được trừ, ngưỡng 5 triệu, và tô màu cam dòng chi tiền mặt từ 5 triệu. Chưa đọc Điều 10 Nghị định 320/2025 (khoản chi không được trừ) và điểm g khoản 2 Điều 26 Nghị định 181/2025 đã sửa bởi Nghị định 144/2026.",
+    "Xác minh thời hạn lưu sổ, chứng từ và việc sổ lập trên máy tính có phải in, ký không.",
+    "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm trang \"Thuế TNDN theo % DT\" với 6 tỷ lệ theo Điều 12 khoản 4. Chưa nối với S1-DNSN: S1 chia doanh thu thành hàng hóa, dịch vụ, khác, không khớp nhóm tỷ lệ. Chưa rõ kỳ kê khai (quý hay năm) của cách tính này. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+    "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): thêm lưu ý phần mềm kế toán miễn phí theo Nghị định 20/2026 Điều 10. Khi Bộ Tài chính công bố nền tảng thì thêm tên và link chính thức. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1",
+    "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): thêm lưu ý tỷ lệ BHXH cho sổ S2-DNSN. Chưa điền tỷ lệ BHYT, BHTN. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+    "Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): cập nhật lưu ý tỷ lệ BHYT, BHTN cho sổ S2-DNSN. Bảo hiểm tai nạn lao động – bệnh nghề nghiệp chưa xác minh.",
+    "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN vào lưu ý S2-DNSN. Nghị định 58/2020/NĐ-CP dẫn chiếu Luật BHXH 58/2014 (đã được thay bởi Luật 41/2024 từ 01/07/2025); chưa thấy văn bản thay thế trên vanban.chinhphu.vn (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động 84/2015 chưa đọc. Chưa xác minh phần 0,5% có tính cho người quản lý không lương không.",
+    "Ngày 2026-11-14 (NC-025, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10): thêm lưu ý khoản chi không được trừ; thêm 2 nhóm chi \"Tiền phạt, tiền chậm nộp\" và \"Từ thiện, tài trợ\"; ghi chú nhóm lương. Cột \"Tính vào lãi, lỗ?\" vẫn là lãi lỗ tạm tính, chưa phải thu nhập tính thuế; có thêm cờ \"được trừ khi tính thuế\" hay không: chờ chủ dự án quyết. Chưa xác minh: phần BHXH công ty đóng cho chủ công ty TNHH một thành viên có được trừ khi tính thuế TNDN không. Áp ngưỡng 5 triệu chuyển khoản cho tiền lương là cách hiểu (\"các khoản thanh toán khác từng lần\")."
+  ],
+  "cit_rate_sheet": {
+    "sheet": "Thuế TNDN theo % DT",
+    "title": "TÍNH THUẾ TNDN THEO TỶ LỆ % TRÊN DOANH THU",
+    "intro": [
+      "Chỉ dùng khi công ty có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập (Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b; Nghị định 320/2025/NĐ-CP Điều 12 khoản 4).",
+      "Công ty có tổng doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN (Nghị định 141/2026/NĐ-CP). Khi đó không cần trang này.",
+      "Gõ doanh thu bán hàng hóa, dịch vụ của từng nhóm ngành vào cột nền vàng. Cột thuế tự tính."
+    ],
+    "rates": [
+      {
+        "group": "Phân phối, cung cấp hàng hóa",
+        "rate": 0.003
+      },
+      {
+        "group": "Sản xuất, vận tải, dịch vụ có gắn với hàng hóa, xây dựng có bao thầu nguyên vật liệu",
+        "rate": 0.012
+      },
+      {
+        "group": "Dịch vụ (kể cả lãi tiền gửi, lãi tiền cho vay), xây dựng không bao thầu nguyên vật liệu",
+        "rate": 0.015
+      },
+      {
+        "group": "Cho thuê tài sản, đại lý bảo hiểm, đại lý xổ số, đại lý bán hàng đa cấp",
+        "rate": 0.04
+      },
+      {
+        "group": "Sản phẩm, dịch vụ nội dung thông tin số về giải trí, trò chơi điện tử, phim số, ảnh số, nhạc số, quảng cáo số",
+        "rate": 0.04
+      },
+      {
+        "group": "Hoạt động khác",
+        "rate": 0.005
+      }
+    ],
+    "source": "Tỷ lệ theo Nghị định 320/2025/NĐ-CP Điều 12 khoản 4 điểm a–đ."
+  }
+}

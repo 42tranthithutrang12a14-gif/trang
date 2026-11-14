@@ -1,0 +1,66 @@
+{
+  "slug": "tam-nop-thue-tndn",
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH",
+  "title": "Tạm nộp thuế thu nhập doanh nghiệp theo quý",
+  "category": "thue",
+  "summary": "Từ năm 2026, công ty có tổng doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN. Công ty còn lại: mỗi quý tự ước tính và tạm nộp thuế TNDN (không cần nộp tờ khai), hạn nộp chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo. Cuối năm quyết toán và nộp phần còn thiếu.",
+  "related_rules": ["CIT_PROVISIONAL"],
+  "body_sections": [
+    {
+      "heading": "Trước khi tạm nộp: kiểm tra có được miễn thuế không",
+      "content": "Từ năm 2026, công ty có tổng doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN.\n\n• Doanh thu để xét gồm: tiền bán hàng, cung cấp dịch vụ (trừ các khoản giảm trừ doanh thu), doanh thu hoạt động tài chính và thu nhập khác, theo tờ khai quyết toán TNDN năm trước.\n• Năm trước hoạt động chưa đủ 12 tháng: lấy doanh thu thực tế chia số tháng hoạt động, nhân 12. Tháng thành lập tính đủ tháng.\n• Công ty mới thành lập, dự kiến doanh thu cả năm không quá 1 tỷ đồng: không phải tạm nộp TNDN. Nếu cuối năm doanh thu thực tế vượt 1 tỷ: kê khai, quyết toán bình thường, không bị tính tiền chậm nộp.\n• Công ty con, công ty có quan hệ liên kết có thể không được miễn.\n\nCăn cứ: Luật 09/2026/QH16 Điều 3; Nghị định 141/2026/NĐ-CP Điều 2 (khoản 15 Điều 4 Nghị định 320/2025/NĐ-CP), Điều 3.\n\nCông ty được miễn thuế vẫn phải nộp tờ khai quyết toán TNDN năm, hạn 31/3 năm sau (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). Các mục dưới dành cho công ty phải nộp thuế."
+    },
+    {
+      "heading": "Công ty mới thành lập: tạm nộp theo doanh thu dự kiến",
+      "content": "Năm đầu chưa có doanh thu năm trước. Bạn tự dự kiến tổng doanh thu cả năm, rồi chọn:\n• Không quá 1 tỷ đồng: không phải tạm nộp (xem mục trên).\n• Không quá 3 tỷ đồng: tạm nộp theo thuế suất 15%.\n• Trên 3 tỷ đến 50 tỷ đồng: tạm nộp theo thuế suất 17%.\n\nNếu cuối năm doanh thu thực tế cao hơn dự kiến và số đã tạm nộp bị thiếu: nộp bổ sung phần thiếu và tiền chậm nộp. Riêng trường hợp dự kiến không quá 1 tỷ thì không tính tiền chậm nộp.\n\nDoanh thu để xét giống mục trên: bán hàng, dịch vụ (trừ giảm trừ doanh thu), doanh thu tài chính và thu nhập khác. Thuế suất 15%, 17% không áp dụng cho công ty con, công ty liên kết mà công ty liên kết không đủ điều kiện.\n\nCăn cứ: Nghị định 320/2025/NĐ-CP Điều 11 khoản 2, 3, 4."
+    },
+    {
+      "heading": "Tạm nộp là gì?",
+      "content": "Tạm nộp thuế TNDN là việc doanh nghiệp tự ước tính lợi nhuận trong quý, tính số thuế tương ứng và nộp trước — không cần nộp tờ khai riêng cho từng quý.\n\nCuối năm tài chính, doanh nghiệp làm quyết toán thuế TNDN (tờ khai năm), xác định số thuế chính thức và nộp thêm (hoặc được hoàn) phần chênh lệch."
+    },
+    {
+      "heading": "Hạn nộp",
+      "content": "Hạn tạm nộp thuế TNDN từng quý (chậm nhất là ngày cuối cùng của tháng đầu quý tiếp theo):\n• Quý I: 30/4\n• Quý II: 31/7\n• Quý III: 31/10\n• Quý IV: 31/01 năm sau\n\nHạn quyết toán năm: chậm nhất là ngày cuối cùng của tháng thứ 3 kể từ khi kết thúc năm tài chính. Năm tài chính theo năm dương lịch: 31/3 năm sau.\n\nTổng số đã tạm nộp của 4 quý phải đạt ít nhất 80% số thuế phải nộp theo quyết toán năm. Thiếu thì bị tính tiền chậm nộp trên phần thiếu, từ ngày sau hạn tạm nộp quý IV.\n\nCăn cứ: Nghị định 252/2026/NĐ-CP Điều 10 khoản 5 điểm a, Điều 24 khoản 2, 3."
+    },
+    {
+      "heading": "Cách tính số thuế tạm nộp",
+      "content": "Số thuế tạm nộp = Lợi nhuận ước tính trong quý × Thuế suất TNDN\n\nThuế suất theo tổng doanh thu năm trước (Luật Thuế TNDN 67/2025/QH15 Điều 10; Nghị định 320/2025/NĐ-CP Điều 11; áp dụng từ kỳ tính thuế năm 2025). Doanh thu để xét như mục đầu:\n• 15% nếu không quá 3 tỷ đồng\n• 17% nếu trên 3 tỷ đến 50 tỷ đồng\n• 20% với các trường hợp còn lại\n\nTừ năm 2026, công ty có tổng doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN (xem mục đầu).\n\nVí dụ: năm trước doanh thu 2 tỷ đồng. Quý II ước tính lợi nhuận 100 triệu đồng\n→ Số thuế tạm nộp = 100 triệu × 15% = 15 triệu đồng\n\nLưu ý: Đây là ước tính — số chính thức sẽ xác định khi quyết toán năm."
+    },
+    {
+      "heading": "Cách nộp tiền thuế",
+      "content": "Không cần nộp tờ khai — chỉ cần nộp tiền:\n\n1. Đăng nhập eTax: https://thuedientu.gdt.gov.vn\n2. Vào mục Nộp thuế → Nộp tạm thuế TNDN\n3. Điền số tiền, kỳ nộp (ví dụ: Quý II/2026)\n4. Chọn phương thức nộp (ngân hàng liên kết hoặc tạo giấy nộp tiền)\n5. Thực hiện giao dịch và lưu biên lai\n\nHoặc nộp trực tiếp tại Kho bạc Nhà nước hoặc qua tài khoản ngân hàng liên kết."
+    },
+    {
+      "heading": "Quyết toán thuế TNDN cuối năm",
+      "content": "Cuối năm, doanh nghiệp phải nộp tờ khai quyết toán (mẫu 03/TNDN) qua eTax:\n• Xác định doanh thu, chi phí, lợi nhuận thực tế cả năm\n• Tính số thuế TNDN chính thức\n• Nộp thêm nếu số tạm nộp 4 quý < số phải nộp\n• Được hoàn hoặc bù trừ nếu tạm nộp nhiều hơn\n\nHạn nộp tờ khai quyết toán: 31/3 năm tiếp theo."
+    },
+    {
+      "heading": "Mức phạt",
+      "content": "• Tạm nộp 4 quý thấp hơn 80% số thuế quyết toán năm: tính tiền chậm nộp trên phần thiếu (Nghị định 252/2026/NĐ-CP Điều 24 khoản 3)\n• Không tạm nộp các quý: bị tính lãi chậm nộp 0,03%/ngày\n• Khai quyết toán sai: phạt 20% số thuế khai thiếu\n\n⚠️ Hai mức còn lại (0,03%/ngày, 20%) chưa xác minh."
+    },
+    {
+      "heading": "Căn cứ pháp lý",
+      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Thuế TNDN số 67/2025/QH15 (áp dụng từ kỳ tính thuế năm 2025) và các luật sửa đổi, bổ sung\n• Luật Quản lý thuế số 38/2019/QH14\n• Nghị định 320/2025/NĐ-CP hướng dẫn Luật Thuế TNDN (áp dụng từ kỳ tính thuế năm 2025)\n• Nghị định 141/2026/NĐ-CP (miễn thuế khi doanh thu năm từ 1 tỷ đồng trở xuống)\n• Thông tư 96/2015/TT-BTC (hướng dẫn luật cũ, cần kiểm tra còn áp dụng phần nào)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+    },
+    {
+      "heading": "Cổng và công cụ cần dùng",
+      "content": "• Nộp thuế điện tử: https://thuedientu.gdt.gov.vn\n• Tra cứu mã số thuế: https://tracuunnt.gdt.gov.vn\n• Cục Thuế: https://gdt.gov.vn\n• Hỗ trợ: 1900 3584"
+    }
+  ],
+  "todo_for_reviewer": [
+    "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): thay câu \"cách hiểu\" bằng: DN được miễn vẫn phải quyết toán TNDN năm (Điều 21 khoản 1 điểm c.1; không có ngoại lệ cho DN được miễn). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+    "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): sửa hạn tạm nộp quý (30/4, 31/7, 31/10, 31/01), hạn quyết toán (ngày cuối tháng thứ 3), ngưỡng 80% (bỏ 75%), câu về công ty được miễn vẫn nộp quyết toán (cách hiểu theo Điều 11). Hạn \"31/12 nếu năm tài chính không theo năm dương lịch\" đã bỏ vì sai. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+    "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): thêm mục \"Công ty mới thành lập\" (Điều 11 khoản 4 điểm b, c), ghi căn cứ doanh thu ở mục thuế suất, cập nhật danh sách văn bản. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+    "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
+            "Ngày 2026-11-12 (NC-010, đã đối chiếu toàn văn): sửa thuế suất từ \"20% cho DN siêu nhỏ\" thành 15% / 17% / 20% theo Luật Thuế TNDN 67/2025/QH15 Điều 10 khoản 1, 2, 3; sửa ví dụ sang 15%; thêm câu miễn thuế theo Luật 09/2026/QH16 Điều 3; đổi danh sách văn bản sang Luật 67/2025. Guide không có trường legal_basis. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
+        "Điền legal_basis với số điều khoản cụ thể và link vbpl.moj.gov.vn",
+    "Gợi ý của trợ lý AI (chưa xác minh): Luật Thuế TNDN 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025). Kiểm tra cả Thông tư 96/2015/TT-BTC và Luật Quản lý thuế 38/2019/QH14. Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1. Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+    "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã thêm mục đầu \"Trước khi tạm nộp\", sửa summary. Guide không có trường legal_basis nên căn cứ ghi trong nội dung.",
+    "Còn mở sau NC-011 (2026-11-12): (1) Đã trả lời ở NC-014 (2026-11-13): DN được miễn vẫn phải quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
+    "Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
+    "Chưa rõ cách xác định doanh thu năm trước cho DN mới thành lập (năm đầu chưa có kỳ tính thuế trước). Luật 67/2025 Điều 10 giao Chính phủ quy định; chưa đọc nghị định.",
+    "Gợi ý của trợ lý AI (chưa xác minh): \"Tổng cục Thuế\" có thể đã đổi thành \"Cục Thuế\" từ 3/2025."
+  ],
+  "updated_at": "2026-10-23"
+}

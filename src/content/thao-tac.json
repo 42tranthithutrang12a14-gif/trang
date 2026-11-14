@@ -1,0 +1,112 @@
+{
+  "updated_at": "2026-11-12",
+  "todo_for_reviewer": [
+    "Khung do trợ lý AI dựng ngày 2026-11-12. Các bước viết theo hiểu biết chung, CHƯA đối chiếu giao diện thật của từng cổng. Agent Nghiên cứu đối chiếu tài liệu hướng dẫn sử dụng chính thức và chụp ảnh các trang công khai.",
+    "Ảnh đặt trong public/thao-tac/<slug>/, trường image là đường dẫn bắt đầu bằng /thao-tac/, kèm image_width và image_height. Không vẽ giao diện giả.",
+    "Trường source ghi nguồn của bước: tài liệu hướng dẫn chính thức (tên, số trang, số hình) hoặc ảnh tự chụp kèm ngày chụp."
+  ],
+  "guides": [
+    {
+      "slug": "tra-trung-ten-doanh-nghiep",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Tra cứu tên công ty có bị trùng không",
+      "summary": "Kiểm tra tên công ty dự định đã có ai dùng chưa, trước khi nộp hồ sơ.",
+      "portal": { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" },
+      "need_login": false,
+      "prepare": ["Máy tính hoặc điện thoại có mạng", "2–3 phương án tên tiếng Việt"],
+      "steps": [
+        { "action": "Mở trình duyệt, gõ dangkykinhdoanh.gov.vn rồi nhấn Enter.", "detail": "Đây là Cổng thông tin quốc gia về đăng ký doanh nghiệp." },
+        { "action": "Tìm ô tra cứu thông tin doanh nghiệp trên trang chủ.", "detail": "Ô này dùng để tìm doanh nghiệp theo tên hoặc mã số." },
+        { "action": "Gõ phần tên riêng dự định vào ô tra cứu.", "detail": "Ví dụ tên dự định là \"Công ty TNHH Hoa Mai\" thì gõ \"Hoa Mai\"." },
+        { "action": "Bấm nút tìm kiếm.", "detail": "Nếu cổng yêu cầu nhập mã xác nhận thì gõ đúng các ký tự hiện trên màn hình." },
+        { "action": "Đọc danh sách kết quả.", "detail": "Có công ty trùng hoặc gần giống tên dự định thì chọn phương án tên khác." }
+      ],
+      "related_steps": ["dat-ten"],
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Đối chiếu vị trí ô tra cứu, nhãn nút và bước nhập mã xác nhận trên giao diện thật.",
+        "Chụp ảnh màn hình từng bước (trang công khai, không cần đăng nhập).",
+        "Xác minh thế nào là tên \"trùng\" hoặc \"gây nhầm lẫn\" theo Luật Doanh nghiệp."
+      ]
+    },
+    {
+      "slug": "tao-tai-khoan-dang-ky-doanh-nghiep",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Tạo tài khoản để nộp hồ sơ đăng ký doanh nghiệp trên mạng",
+      "summary": "Tạo tài khoản trên cổng đăng ký doanh nghiệp, dùng để nộp hồ sơ thành lập và theo dõi kết quả.",
+      "portal": { "label": "Cổng thông tin quốc gia về đăng ký doanh nghiệp", "url": "https://dangkykinhdoanh.gov.vn" },
+      "need_login": false,
+      "prepare": ["Email và số điện thoại của người nộp hồ sơ", "CCCD", "Ứng dụng VNeID hoặc chữ ký số, nếu cổng yêu cầu"],
+      "steps": [
+        { "action": "Vào dangkykinhdoanh.gov.vn." },
+        { "action": "Tìm nút đăng ký tài khoản hoặc đăng nhập trên trang chủ." },
+        { "action": "Chọn cách xác thực mà cổng yêu cầu.", "detail": "Cổng có thể yêu cầu tài khoản định danh điện tử VNeID hoặc chữ ký số." },
+        { "action": "Điền thông tin theo mẫu trên màn hình rồi gửi." },
+        { "action": "Ghi tên đăng nhập và mật khẩu vào nơi an toàn." }
+      ],
+      "related_steps": ["tai-khoan-nop-ho-so"],
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Xác minh cách đăng ký, xác thực hiện hành (VNeID, chữ ký số) theo tài liệu hướng dẫn chính thức của cổng.",
+        "Chụp ảnh các màn hình công khai."
+      ]
+    },
+    {
+      "slug": "dang-ky-tai-khoan-thue-dien-tu",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Đăng ký tài khoản thuế điện tử cho doanh nghiệp",
+      "summary": "Tài khoản này dùng để nộp tờ khai thuế và nộp tiền thuế trên mạng.",
+      "portal": { "label": "Thuế điện tử", "url": "https://thuedientu.gdt.gov.vn" },
+      "need_login": false,
+      "prepare": [
+        "Mã số thuế của công ty (chính là mã số doanh nghiệp)",
+        "Chữ ký số: USB token cắm vào máy, hoặc chữ ký số từ xa",
+        "Phần mềm ký số của nhà cung cấp đã cài trên máy",
+        "Email của công ty"
+      ],
+      "steps": [
+        { "action": "Vào thuedientu.gdt.gov.vn." },
+        { "action": "Chọn mục dành cho doanh nghiệp." },
+        { "action": "Chọn đăng ký tài khoản." },
+        { "action": "Nhập mã số thuế và mã xác nhận, rồi bấm tiếp tục." },
+        { "action": "Điền thông tin theo màn hình, chọn chứng thư số và ký." },
+        { "action": "Mở email để nhận mật khẩu. Đăng nhập lần đầu và đổi mật khẩu." }
+      ],
+      "related_steps": ["thue-dien-tu"],
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Đối chiếu tên các mục, nút với giao diện thật hoặc tài liệu hướng dẫn sử dụng chính thức của cơ quan thuế.",
+        "Xác minh trình duyệt và phần mềm ký số cần cài.",
+        "thuedientu.gdt.gov.vn chưa có trong danh sách mạng được mở của môi trường agent; cần chủ dự án mở nếu muốn chụp ảnh."
+      ]
+    },
+    {
+      "slug": "dang-ky-hoa-don-dien-tu",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "title": "Đăng ký sử dụng hóa đơn điện tử",
+      "summary": "Đăng ký để được lập hóa đơn điện tử khi bán hàng.",
+      "portal": { "label": "Cổng hóa đơn điện tử", "url": "https://hoadondientu.gdt.gov.vn" },
+      "need_login": true,
+      "prepare": ["Tài khoản thuế điện tử của doanh nghiệp", "Chữ ký số", "Thông tin công ty: mã số thuế, địa chỉ, email"],
+      "steps": [
+        { "action": "Vào hoadondientu.gdt.gov.vn." },
+        { "action": "Đăng nhập bằng tài khoản của doanh nghiệp." },
+        { "action": "Tìm mục đăng ký sử dụng hóa đơn điện tử và tạo tờ khai mới." },
+        { "action": "Chọn loại hóa đơn và hình thức hóa đơn có mã của cơ quan thuế." },
+        { "action": "Kiểm tra thông tin, ký bằng chữ ký số rồi gửi." },
+        { "action": "Chờ thông báo chấp nhận của cơ quan thuế trên cổng hoặc qua email." }
+      ],
+      "related_steps": ["hoa-don-dien-tu"],
+      "legal_basis": [],
+      "todo_for_reviewer": [
+        "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1 Kiểm tra tờ khai đăng ký hóa đơn điện tử có đổi mẫu theo Nghị định 254/2026 và Thông tư 91/2026 không.",
+        "Đối chiếu tên mục, nút với giao diện thật hoặc tài liệu hướng dẫn chính thức.",
+        "hoadondientu.gdt.gov.vn chưa có trong danh sách mạng được mở của môi trường agent; cần chủ dự án mở nếu muốn chụp ảnh."
+      ]
+    }
+  ]
+}

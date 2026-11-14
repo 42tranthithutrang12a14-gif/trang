@@ -1,0 +1,443 @@
+{
+  "status": "draft",
+  "sample_notice": "MẪU – CHƯA XÁC MINH. Cần kế toán viên có chứng chỉ hành nghề xác minh trước khi sử dụng làm căn cứ pháp lý.",
+  "updated_at": "2026-10-27",
+  "categories": [
+    {
+      "id": "thanh-lap",
+      "label": "Thành lập & đăng ký doanh nghiệp",
+      "icon": "🏢",
+      "laws": [
+        {
+          "name": "Luật Doanh nghiệp 2020",
+          "number": "59/2020/QH14",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/01/2021",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=152071",
+          "congbao_url": "https://congbao.chinhphu.vn/noi-dung-van-ban-so-59-2020-qh14-28588",
+          "key_points": [
+            "Thời hạn góp vốn điều lệ: 90 ngày từ ngày cấp Giấy chứng nhận ĐKDN (Điều 47, 113)",
+            "Đăng ký, thông báo thay đổi: trong 10 ngày kể từ ngày có thay đổi (Điều 30 khoản 2, Điều 31 khoản 2)",
+            "Người đại diện pháp luật phải cư trú tại Việt Nam; nếu xuất cảnh dài ngày phải uỷ quyền (Điều 12)"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận số điều khoản 47/113/30/12 còn đúng theo phiên bản hiện hành",
+            "Bổ sung thêm nghĩa vụ cốt lõi khác với DNSN",
+            "Xác minh link vbpl.moj.gov.vn",
+            "Ngày 2026-11-13 (NC-017, đã đối chiếu toàn văn Luật Doanh nghiệp 59/2020/QH14 Điều 30, 31 và Luật 76/2025/QH15): thời hạn là \"10 ngày kể từ ngày có thay đổi\" (ngày lịch, không có chữ \"làm việc\"); 3 ngày làm việc là thời hạn cơ quan đăng ký xử lý hồ sơ. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1 Đã sửa key point.",
+            "Cập nhật NC-005: Luật 76/2025/QH15 sửa đổi, bổ sung một số điều của Luật Doanh nghiệp, ban hành 17/06/2025, hiệu lực 01/07/2025 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Kiểm tra Điều 30–32 (thời hạn đăng ký thay đổi, \"10 ngày\" hay \"10 ngày làm việc\") và tên cơ quan đăng ký kinh doanh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1",
+            "Cập nhật NC-008: ngày hiệu lực 01/01/2021 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1"
+          ]
+        },
+        {
+          "name": "Nghị định về đăng ký doanh nghiệp",
+          "number": "01/2021/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "04/01/2021",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=152072",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Hướng dẫn thủ tục đăng ký thành lập, thay đổi và giải thể doanh nghiệp",
+            "Quy trình nộp hồ sơ trực tuyến tại dangkykinhdoanh.gov.vn"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận NĐ 01/2021 chưa bị thay thế bởi nghị định mới hơn",
+            "Bổ sung điều khoản cụ thể về phí, thời gian xử lý",
+            "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp (từ 1/7/2025). Cập nhật NC-005: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp, hiệu lực 01/07/2025; sửa bởi Nghị định 296/2026/NĐ-CP (hiệu lực 23/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay hẳn Nghị định 01/2021/NĐ-CP không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214334&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218986&classid=1",
+            "Cập nhật NC-008: ngày hiệu lực 04/01/2021 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=202344&classid=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thue-gtgt",
+      "label": "Thuế Giá trị gia tăng (GTGT)",
+      "icon": "🧾",
+      "laws": [
+        {
+          "name": "Luật Thuế giá trị gia tăng",
+          "number": "13/2008/QH12 (sửa đổi bổ sung)",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/01/2009",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=14785",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Thuế suất phổ thông: 10% (một số hàng hóa dịch vụ thiết yếu: 5%, miễn thuế: 0%)",
+            "Khai thuế theo tháng: mặc định; bắt buộc khi doanh thu năm trước trên 50 tỷ đồng (Thông tư 89/2026/TT-BTC Điều 19 khoản 1)",
+            "Khai thuế theo quý: được chọn nếu doanh thu năm trước từ 50 tỷ đồng trở xuống hoặc mới bắt đầu kinh doanh (Thông tư 89/2026/TT-BTC Điều 19 khoản 1)"
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): ngưỡng 50 tỷ đã đối chiếu (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "Xác nhận thuế suất 8% (giảm thuế tạm thời) còn hiệu lực hay đã hết",
+            "Bổ sung điều kiện hoàn thuế GTGT nếu phù hợp với DNSN",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật 13/2008/QH12 có thể đã được thay bằng Luật Thuế GTGT số 48/2024/QH15 (từ 1/7/2025). Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế GTGT 48/2024/QH15, hiệu lực 01/07/2025; sửa bởi Luật 90/2025/QH15, 149/2025/QH15, 09/2026/QH16. Nghị định hướng dẫn 181/2025/NĐ-CP, sửa bởi 359/2025/NĐ-CP và 144/2026/NĐ-CP. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1"
+          ]
+        },
+        {
+          "name": "Thông tư hướng dẫn Luật Quản lý thuế về khai thuế, nộp thuế",
+          "number": "80/2021/TT-BTC",
+          "issued_by": "Bộ Tài chính",
+          "effective_from": "01/01/2022",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=153481",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Hạn nộp tờ khai GTGT tháng: ngày 20 của tháng tiếp theo",
+            "Hạn nộp tờ khai GTGT quý: ngày cuối cùng của tháng đầu quý tiếp theo (Nghị định 252/2026/NĐ-CP Điều 10 khoản 3)",
+            "Nộp qua hệ thống eTax: https://thuedientu.gdt.gov.vn"
+          ],
+          "todo_for_reviewer": [
+            "Kiểm tra có văn bản gia hạn nào hiện hành không",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật Quản lý thuế 38/2019/QH14 mà thông tư này hướng dẫn có thể đã có luật thay thế (năm 2025). Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+            "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): từ 01/07/2026 áp dụng Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP. Hạn tháng ngày 20 (Điều 10 khoản 2), hạn quý ngày cuối cùng của tháng đầu quý sau (Điều 10 khoản 3). Thông tư 80/2021 hướng dẫn luật cũ; chưa tra Thông tư 89/2026. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thue-tndn",
+      "label": "Thuế Thu nhập doanh nghiệp (TNDN)",
+      "icon": "💰",
+      "laws": [
+        {
+          "name": "Luật Thuế thu nhập doanh nghiệp",
+          "number": "67/2025/QH15",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/10/2025",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Thuế suất 20%; 15% nếu tổng doanh thu năm trước không quá 3 tỷ đồng; 17% nếu trên 3 tỷ đến 50 tỷ đồng (Điều 10 khoản 1, 2, 3)",
+            "Áp dụng từ kỳ tính thuế năm 2025 (Điều 19 khoản 1)",
+            "Tạm nộp thuế TNDN theo quý: ngày cuối cùng của tháng đầu quý tiếp theo; 4 quý ít nhất 80% số thuế quyết toán (Nghị định 252/2026/NĐ-CP Điều 24)"
+          ],
+          "todo_for_reviewer": [
+            "Bổ sung quy định về quyết toán TNDN năm",
+            "Gợi ý của trợ lý AI (chưa xác minh): Luật 14/2008/QH12 có thể đã được thay bằng Luật Thuế TNDN số 67/2025/QH15 (từ 1/10/2025). Cập nhật NC-004: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Thuế TNDN 67/2025/QH15, hiệu lực 01/10/2025; sửa bởi Luật 09/2026/QH16 (hiệu lực 24/04/2026). Có Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP về giảm thuế TNDN; chưa biết DN siêu nhỏ có thuộc diện giảm không. Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+            "Ngày 2026-11-12 (NC-010, đã đối chiếu toàn văn): đổi number từ \"14/2008/QH12 (sửa đổi bổ sung)\" thành \"67/2025/QH15\", effective_from 01/10/2025 (Điều 19 khoản 1), url sang trang vanban.chinhphu.vn; sửa 2 ý thuế suất trong key_points theo Điều 10. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1",
+            "Luật 09/2026/QH16 Điều 3 (hiệu lực 01/01/2026, đã đối chiếu toàn văn theo NC-010) bổ sung khoản 14a Điều 4 Luật Thuế TNDN: DN có tổng doanh thu năm từ mức Chính phủ quy định trở xuống được miễn thuế TNDN. Mức doanh thu này chưa xác minh (có thể ở nghị định hướng dẫn); không ghi con số khi chưa có nguồn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+            "Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 122/2025, 133/2025, 141/2025, 143/2025/QH15 (theo phần mở đầu Luật 09/2026). Chưa đọc các luật này; chưa biết có sửa Điều 10, 11 không (NC-010).",
+            "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): sửa ý tạm nộp quý theo Điều 24 khoản 1, 2, 3. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1"
+          ]
+        },
+        {
+          "name": "Nghị định quy định chi tiết Luật Thuế TNDN",
+          "number": "320/2025/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "15/12/2025",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Doanh thu xét thuế suất 15%, 17%: doanh thu bán hàng, dịch vụ (trừ giảm trừ), doanh thu tài chính, thu nhập khác của năm trước liền kề (Điều 11 khoản 4)",
+            "Công ty mới thành lập tạm nộp theo doanh thu dự kiến; nộp thiếu thì nộp bù và tiền chậm nộp (Điều 11 khoản 4 điểm b)",
+            "DN doanh thu năm không quá 3 tỷ, không xác định được chi phí: nộp theo % doanh thu, 0,3% đến 4% tùy ngành (Điều 12 khoản 4)",
+            "Miễn thuế khi doanh thu năm từ 1 tỷ đồng trở xuống: khoản 15 Điều 4, do Nghị định 141/2026/NĐ-CP bổ sung, hiệu lực 01/01/2026"
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): mục mới do agent Biên tập thêm. Hiệu lực: Điều 24 khoản 1 ghi \"có hiệu lực thi hành kể từ ngày ký ban hành và áp dụng từ kỳ tính thuế thu nhập doanh nghiệp năm 2025\"; ngày ký 15/12/2025 theo trang thông tin. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+            "Chưa tra Thông tư hướng dẫn Nghị định 320/2025 (nếu có)."
+          ]
+        },
+        {
+          "name": "Thông tư hướng dẫn thuế TNDN",
+          "number": "96/2015/TT-BTC",
+          "issued_by": "Bộ Tài chính",
+          "effective_from": "06/08/2015",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=89283",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Hướng dẫn chi tiết về doanh thu, chi phí được trừ khi tính thuế TNDN",
+            "Quyết toán thuế TNDN năm: hạn 31/03 năm tiếp theo"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận TT 96/2015 còn hiệu lực hay đã có thông tư thay thế",
+            "Bổ sung chi phí được trừ phổ biến với DNSN (thuê nhà, điện nước, điện thoại)",
+            "Cập nhật NC-008: ngày hiệu lực 06/08/2015 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=180650&classid=1",
+            "Ngày 2026-11-12 (NC-012, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 11, 12, 24): văn bản hướng dẫn Luật 67/2025 hiện là Nghị định 320/2025/NĐ-CP (hiệu lực từ ngày ký 15/12/2025, áp dụng từ kỳ tính thuế 2025). Thông tư 96/2015 hướng dẫn luật cũ; chưa tra Thông tư hướng dẫn mới. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1"
+          ]
+        },
+        {
+          "name": "Thông tư hướng dẫn Luật Quản lý thuế (khai thuế, quyết toán)",
+          "number": "89/2026/TT-BTC",
+          "issued_by": "Bộ Tài chính",
+          "effective_from": "01/07/2026",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Công ty trả lương khai thuế TNCN đã khấu trừ theo quý và quyết toán năm, kể cả khi không khấu trừ (Điều 22 khoản 1 điểm a); quý không khấu trừ thì không nộp tờ khai quý, trừ quý cuối năm trong một số trường hợp (Nghị định 252/2026/NĐ-CP Điều 11 khoản 6)",
+            "Khai GTGT theo quý: được chọn nếu doanh thu năm trước từ 50 tỷ đồng trở xuống hoặc mới kinh doanh (Điều 19 khoản 1)",
+            "Khai quyết toán TNDN năm, không có ngoại lệ cho DN được miễn thuế (Điều 21 khoản 1 điểm c.1)"
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-14 (NC-026, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 22 và Nghị định 252/2026/NĐ-CP Điều 9, 10, 11): mục mới do agent Biên tập thêm (gộp kết quả NC-014, NC-026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+            "Chưa xác minh: biểu thuế TNCN lũy tiến, mức giảm trừ gia cảnh, khấu trừ 10% cho lao động thời vụ (Luật Thuế TNCN, sửa bởi Luật 09/2026). Không ghi các con số này."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thue-mon-bai",
+      "label": "Lệ phí môn bài (đã bỏ từ 2026)",
+      "icon": "📋",
+      "laws": [
+        {
+          "name": "Nghị định về lệ phí môn bài",
+          "number": "139/2016/NĐ-CP (sửa đổi bởi 22/2020/NĐ-CP)",
+          "issued_by": "Chính phủ",
+          "effective_from": "01/01/2017",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=118694",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7)",
+            "Mục này chỉ giữ để tra cứu nghĩa vụ các năm trước 2026. Mức phí, hạn nộp cũ chưa xác minh nên không ghi ở đây."
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-13 (NC-015, đã đối chiếu toàn văn): chấm dứt thu, nộp lệ phí môn bài từ 01/01/2026 (Nghị quyết 198/2025/QH15 Điều 10 khoản 7). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=213695&classid=1 Đã đổi tên nhóm, thay key_points (bỏ các ý mức phí 2–3 triệu, miễn năm đầu, hạn 30/01 khỏi nghĩa vụ hiện hành).",
+            "Cập nhật NC-008: ngày hiệu lực 01/01/2017 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=186624&classid=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ke-toan",
+      "label": "Kế toán",
+      "icon": "📒",
+      "laws": [
+        {
+          "name": "Luật Kế toán",
+          "number": "88/2015/QH13",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/01/2017",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=90561",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Mọi DN phải mở sổ kế toán từ ngày thành lập (Điều 8)",
+            "Lưu trữ: chứng từ dùng ghi sổ, sổ kế toán, báo cáo tài chính ít nhất 10 năm; chứng từ không dùng trực tiếp ghi sổ ít nhất 5 năm (Nghị định 174/2016/NĐ-CP Điều 12, 13)",
+            "Báo cáo tài chính năm của DN siêu nhỏ: nộp chậm nhất 90 ngày sau khi hết năm tài chính cho cơ quan thuế và cơ quan đăng ký kinh doanh; DN nộp TNDN theo % doanh thu không bắt buộc (Thông tư 132/2018/TT-BTC Điều 14, 18)"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận số điều 8, 40 còn đúng",
+            "Bổ sung quy định về người phụ trách kế toán (chứng chỉ hành nghề)",
+            "Cập nhật NC-008: ngày hiệu lực 01/01/2017 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1",
+            "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): sửa 2 ý lưu trữ, báo cáo tài chính (bỏ \"Điều 40\" chưa đối chiếu, bỏ hạn 31/03 cố định). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1"
+          ]
+        },
+        {
+          "name": "Chế độ kế toán doanh nghiệp siêu nhỏ",
+          "number": "TT 132/2018/TT-BTC",
+          "issued_by": "Bộ Tài chính",
+          "effective_from": "15/02/2019",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=139173",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Áp dụng cho DN siêu nhỏ: lao động đóng BHXH bình quân năm không quá 10 người, và doanh thu năm không quá 10 tỷ (thương mại, dịch vụ) hoặc 3 tỷ (nông, lâm, thủy sản; công nghiệp, xây dựng), hoặc tổng nguồn vốn không quá 3 tỷ (Nghị định 80/2021/NĐ-CP Điều 5 khoản 1)",
+            "Hệ thống tài khoản đơn giản hóa so với chế độ chuẩn",
+            "Báo cáo tài chính gồm: Báo cáo tình hình tài chính (B01-DNSN), Báo cáo kết quả hoạt động kinh doanh (B02-DNSN); phụ biểu: Bảng cân đối tài khoản (F01-DNSN), Báo cáo tình hình thực hiện nghĩa vụ với NSNN (F02-DNSN) (Điều 13 khoản 1)",
+            "Được ghi sổ bằng Excel hoặc phần mềm kế toán"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận TT 132/2018 còn hiệu lực hay đã có thông tư thay thế",
+            "Ngày 2026-11-13 (NC-016, đã đối chiếu toàn văn Nghị định 80/2021/NĐ-CP Điều 5–10): sửa key point tiêu chí DN siêu nhỏ (thêm nhánh nông, lâm, thủy sản, công nghiệp, xây dựng; nhánh tổng nguồn vốn; lao động là lao động đóng BHXH bình quân năm). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1",
+            "Bổ sung danh sách sổ kế toán bắt buộc tối thiểu",
+            "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
+            "Cập nhật NC-008: ngày hiệu lực 15/02/2019 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+            "Ngày 2026-11-13 (NC-019, đã đối chiếu toàn văn Thông tư 132/2018/TT-BTC Điều 13, 14, 18 và Nghị định 174/2016/NĐ-CP Điều 12, 13, 15): sửa ý danh mục báo cáo tài chính theo Điều 13 khoản 1. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoa-don",
+      "label": "Hóa đơn điện tử",
+      "icon": "🖨️",
+      "laws": [
+        {
+          "name": "Nghị định về hóa đơn điện tử, chứng từ điện tử",
+          "number": "254/2026/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "01/07/2026",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Thay Nghị định 123/2020/NĐ-CP từ 01/07/2026 (Điều 43)",
+            "Doanh nghiệp bán hàng, cung cấp dịch vụ dùng hóa đơn điện tử: có mã của cơ quan thuế là mặc định; một số lĩnh vực, điều kiện được dùng không mã; bán lẻ trực tiếp người tiêu dùng dùng hóa đơn từ máy tính tiền (Điều 6 khoản 1)",
+            "Lập hóa đơn khi chuyển giao hàng hoặc hoàn thành dịch vụ, không phân biệt đã thu tiền hay chưa (Điều 9)",
+            "Miễn phí dịch vụ 12 tháng chỉ cho DN nhỏ và vừa ở địa bàn khó khăn, đặc biệt khó khăn (Điều 11 khoản 1)",
+            "DNSN thường dùng hóa đơn có mã: đăng ký và xuất qua https://hoadondientu.gdt.gov.vn"
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): đổi mục từ Nghị định 123/2020 (hiệu lực 01/07/2022) sang Nghị định 254/2026 (01/07/2026), url sang trang vanban.chinhphu.vn, viết lại key_points có điều, khoản. Ý \"lưu trữ 10 năm\" đã bỏ khỏi đây, xem mục Luật Kế toán (NC-019). Ý cổng hoadondientu.gdt.gov.vn chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+            "Xác nhận thời hạn lưu trữ 10 năm",
+            "Bổ sung quy trình đăng ký HĐĐT lần đầu cho DN mới",
+            "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1"
+          ]
+        },
+        {
+          "name": "Thông tư hướng dẫn về hóa đơn điện tử",
+          "number": "78/2021/TT-BTC",
+          "issued_by": "Bộ Tài chính",
+          "effective_from": "01/07/2022",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=153397",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Hướng dẫn chi tiết đăng ký, sử dụng và hủy HĐĐT",
+            "Cổng tra cứu hóa đơn: https://tracuuhoadon.gdt.gov.vn"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận TT 78/2021 còn hiệu lực hay đã có văn bản thay thế",
+            "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Thông tư 32/2025/TT-BTC (từ 1/6/2025).",
+            "Cập nhật NC-008: ngày hiệu lực 01/07/2022 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=204200&classid=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chu-ky-so",
+      "label": "Chữ ký số & giao dịch điện tử",
+      "icon": "🔐",
+      "laws": [
+        {
+          "name": "Nghị định về chữ ký số và dịch vụ chứng thực chữ ký số",
+          "number": "130/2018/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "15/11/2018",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=136680",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Bắt buộc dùng chữ ký số khi nộp hồ sơ thuế điện tử, BHXH điện tử, đăng ký kinh doanh điện tử",
+            "Hai loại phổ biến: USB Token (lưu tại thiết bị) và Remote Signing (lưu trên cloud)",
+            "Nhà cung cấp được cấp phép: VNPT-CA, Viettel-CA, FPT-CA, BKAV-CA"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận NĐ 130/2018 còn hiệu lực hay đã bị thay thế bởi nghị định mới",
+            "Xác nhận danh sách nhà cung cấp chữ ký số được cấp phép hiện tại",
+            "Bổ sung thời hạn hiệu lực chứng thư số điển hình (1–3 năm)",
+            "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy, hiệu lực 10/04/2025; Nghị định 130/2018/NĐ-CP từng được sửa bởi Nghị định 48/2024/NĐ-CP. Chưa đọc điều khoản thay thế. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1",
+            "Ngày 2026-11-12 đã sửa effective_from từ \"25/09/2018\" thành \"15/11/2018\" theo trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11; cổng ghi ban hành 27/09/2018, hiệu lực 15/11/2018), theo quyết định của chủ dự án ngày 2026-11-12 (NC-008). Chưa đọc toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1"
+          ]
+        },
+        {
+          "name": "Luật Giao dịch điện tử",
+          "number": "20/2023/QH15",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/07/2024",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=160100",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Công nhận giá trị pháp lý của giao dịch điện tử, hợp đồng điện tử",
+            "Chữ ký điện tử có giá trị pháp lý tương đương chữ ký tay khi đáp ứng điều kiện"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận Luật GDĐT 20/2023 đã có hiệu lực từ 01/07/2024 chưa. Cập nhật NC-007: cổng vanban.chinhphu.vn (ngày tra 2026-11-11) ghi Luật Giao dịch điện tử 20/2023/QH15 hiệu lực 01/07/2024; có Luật 20/2026/QH16 sửa đổi, hiệu lực 01/03/2027. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=219488&classid=1",
+            "Bổ sung các điểm thay đổi quan trọng so với luật cũ",
+            "Ngày 2026-11-12 đã sửa number từ \"51/2005/QH11 (thay thế bởi 20/2023/QH15)\" thành \"20/2023/QH15\", cho khớp ngày hiệu lực 01/07/2024 đã ghi. Căn cứ: trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11) và quyết định của chủ dự án ngày 2026-11-12. Link url (vbpl ItemID=160100) chưa kiểm tra có đúng luật 20/2023 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1",
+            "Cập nhật NC-008: ngày hiệu lực 01/07/2024 khớp trang thông tin của Luật 20/2023/QH15 trên vanban.chinhphu.vn (ngày tra 2026-11-11). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=208421&classid=1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lao-dong-bhxh",
+      "label": "Lao động & Bảo hiểm xã hội",
+      "icon": "👥",
+      "laws": [
+        {
+          "name": "Bộ luật Lao động",
+          "number": "45/2019/QH14",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/01/2021",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=148556",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Hợp đồng lao động từ 1 tháng trở lên phải ký bằng văn bản",
+            "Thời gian thử việc tối đa: 180 ngày (quản lý cấp cao), 60 ngày (chuyên môn kỹ thuật), 30 ngày (khác)",
+            "Nghỉ phép năm: tối thiểu 12 ngày/năm với điều kiện làm đủ 12 tháng"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận thời gian thử việc theo điều khoản cụ thể BLLĐ 2019",
+            "Bổ sung quy định về lương tối thiểu vùng hiện hành",
+            "Bổ sung quy định về làm thêm giờ và phụ cấp",
+            "Cập nhật NC-008: ngày hiệu lực 01/01/2021 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=198540&classid=1"
+          ]
+        },
+        {
+          "name": "Luật Bảo hiểm xã hội",
+          "number": "41/2024/QH15",
+          "issued_by": "Quốc hội",
+          "effective_from": "01/07/2025",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Người làm việc theo hợp đồng lao động từ đủ 1 tháng phải tham gia BHXH bắt buộc (Điều 2 khoản 1 điểm a)",
+            "Từ 01/07/2025, người quản lý doanh nghiệp phải tham gia BHXH bắt buộc kể cả khi không hưởng lương; tự chọn lương làm căn cứ đóng từ mức tham chiếu đến 20 lần, đóng 25% (Điều 2 khoản 1 điểm n; Điều 31 khoản 1 điểm d; Điều 33 khoản 4)",
+            "Đăng ký trong 30 ngày kể từ ngày thuộc đối tượng (Điều 28 khoản 1)",
+            "Tỷ lệ đóng BHXH: công ty 17% (3% + 14%), người lao động 8%; hạn đóng hằng tháng là ngày cuối cùng của tháng tiếp theo (Điều 32 khoản 1, Điều 33 khoản 1, Điều 34 khoản 1, 4)",
+            "BHYT 4,5% tiền lương làm căn cứ đóng BHXH (công ty 3%, người lao động 1,5%; Nghị định 188/2025/NĐ-CP Điều 6); BHTN 1% mỗi bên (Nghị định 374/2025/NĐ-CP Điều 4). Bảo hiểm tai nạn lao động – bệnh nghề nghiệp: công ty 0,5% (0,3% nếu đủ điều kiện; Nghị định 58/2020/NĐ-CP Điều 4). Tổng: công ty 21,5%, người lao động 10,5%",
+            "Cổng tra cứu và kê khai: https://baohiemxahoi.gov.vn"
+          ],
+          "todo_for_reviewer": [
+            "Ngày 2026-11-13 (NC-022, đã đối chiếu toàn văn Luật Bảo hiểm xã hội 41/2024/QH15): đổi number từ 58/2014/QH13 sang 41/2024/QH15, effective_from 01/07/2025 (Điều 141 khoản 1), url sang trang vanban.chinhphu.vn; viết lại key_points. Bỏ ý \"tổng ~32%\" và \"hạn đóng ngày cuối tháng\" chưa có nguồn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "Ngày 2026-11-13 (NC-022 bổ sung, đã đối chiếu toàn văn): người quản lý doanh nghiệp theo Luật Doanh nghiệp 59/2020 Điều 4 khoản 24 (Luật 76/2025 không sửa khoản này theo bản quét đã đọc); mức tham chiếu bằng mức lương cơ sở (Luật BHXH Điều 141 khoản 13), từ 01/07/2026 là 2.530.000 đồng/tháng (Nghị định 161/2026 Điều 3 khoản 2). Còn chưa xác minh: Nghị định 158/2025/NĐ-CP; BHYT, BHTN của người quản lý không lương. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218107&classid=1",
+            "Ngày 2026-11-14 (NC-023, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 32–34): thêm tỷ lệ BHXH và hạn đóng vào key_points. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+            "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): thêm ý BHYT, BHTN. Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): BHYT 4,5% tiền lương làm căn cứ đóng BHXH (DN 2/3, người lao động 1/3); BHTN 1% mỗi bên. Bảo hiểm TNLĐ-BNN: DN đóng 0,5% (0,3% nếu đủ điều kiện) theo Nghị định 58/2020/NĐ-CP Điều 4 (NC-023 bổ sung 3). Còn chưa xác minh: hạn đóng BHYT, BHTN của DN. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
+            "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN vào key_points. Nghị định 58/2020/NĐ-CP dẫn chiếu Luật BHXH 58/2014 (đã được thay bởi Luật 41/2024 từ 01/07/2025); chưa thấy văn bản thay thế trên vanban.chinhphu.vn (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động 84/2015 chưa đọc. Chưa xác minh phần 0,5% có tính cho người quản lý không lương không."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xu-phat",
+      "label": "Xử phạt vi phạm hành chính",
+      "icon": "⚠️",
+      "laws": [
+        {
+          "name": "Nghị định xử phạt vi phạm hành chính về thuế, hóa đơn",
+          "number": "125/2020/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "05/12/2020",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=152596",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Nộp tờ khai muộn (mức cho tổ chức): 1–30 ngày 2–5 triệu; 31–60 ngày 5–8 triệu; 61–90 ngày 8–15 triệu (Điều 13 khoản 2, 3, 4)",
+            "Muộn trên 90 ngày hoặc không nộp, không có số thuế phải nộp: 8–15 triệu, buộc nộp tờ khai; muộn trên 90 ngày có số thuế, đã tự nộp đủ trước khi bị kiểm tra: 15–25 triệu (Điều 13 khoản 4, 5, sửa bởi Nghị định 310/2025/NĐ-CP, hiệu lực 16/01/2026)",
+            "Vi phạm về hóa đơn điện tử: phạt 4–8 triệu đồng"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận NĐ 125/2020 còn hiệu lực hay đã sửa đổi. Cập nhật NC-003: Nghị định 125/2020/NĐ-CP đã có các văn bản sửa đổi: 102/2021/NĐ-CP, 310/2025/NĐ-CP, 291/2026/NĐ-CP (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
+            "Xác nhận mức phạt cụ thể cho từng loại vi phạm",
+            "Bổ sung phạt chậm nộp tiền thuế (0.03%/ngày)",
+            "Ngày 2026-11-13 (NC-018, đã đối chiếu toàn văn Nghị định 125/2020/NĐ-CP Điều 7, 13 và Nghị định 310/2025/NĐ-CP Điều 1 khoản 10, Điều 4): sửa 2 ý phạt khai thuế chậm, không khai thuế. Ý cũ \"Không khai thuế: phạt 10–25 triệu\" không khớp Điều 13. Nghị định 310/2025 hiệu lực 16/01/2026 theo Điều 4 khoản 1 (trang thông tin ghi \"16-01-2025\" là gõ nhầm năm). Ý \"hóa đơn điện tử 4–8 triệu\" chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+            "Cập nhật NC-008: ngày hiệu lực 05/12/2020 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1",
+            "Ngày 2026-11-13 (NC-018 bổ sung, đã đối chiếu toàn văn): Nghị định 102/2021/NĐ-CP và 291/2026/NĐ-CP không sửa Điều 13 Nghị định 125/2020. Các khung phạt chậm nộp tờ khai là mức hiện hành theo các văn bản đã đọc. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=204477&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1"
+          ]
+        },
+        {
+          "name": "Nghị định xử phạt vi phạm về đăng ký doanh nghiệp",
+          "number": "122/2021/NĐ-CP",
+          "issued_by": "Chính phủ",
+          "effective_from": "01/01/2022",
+          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=153680",
+          "congbao_url": "https://congbao.chinhphu.vn",
+          "key_points": [
+            "Không đăng ký thay đổi thông tin DN đúng hạn: phạt 10–20 triệu đồng",
+            "Không góp đủ vốn điều lệ và không đăng ký giảm vốn: phạt hành chính",
+            "Kê khai không trung thực trong hồ sơ đăng ký: phạt cao hơn, có thể thu hồi Giấy phép"
+          ],
+          "todo_for_reviewer": [
+            "Xác nhận NĐ 122/2021 còn hiệu lực hay đã sửa đổi",
+            "Xác nhận mức phạt cụ thể cho từng hành vi",
+            "Bổ sung phạt vi phạm kế toán (NĐ 41/2018 hoặc văn bản thay thế). Cập nhật NC-002: Nghị định 41/2018/NĐ-CP đã được sửa bởi Nghị định 132/2026/NĐ-CP, ban hành 06/04/2026, hiệu lực 21/05/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217618&classid=1",
+            "Cập nhật NC-008: ngày hiệu lực 01/01/2022 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=204874&classid=1"
+          ]
+        }
+      ]
+    }
+  ],
+  "todo_for_reviewer": [
+    "Xem xét bổ sung thêm: Thuế nhà thầu (nếu thuê nước ngoài). Thuế TNCN đã thêm ở mục Thông tư 89/2026/TT-BTC (NC-026, 2026-11-14); biểu thuế, giảm trừ gia cảnh chưa xác minh.",
+    "Xem xét bổ sung: Luật Hỗ trợ DNNVV 2017 (số 04/2017/QH14) — ưu đãi cho DNSN. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật 04/2017/QH14 (hiệu lực 01/01/2018) và Nghị định 80/2021/NĐ-CP hướng dẫn (hiệu lực 15/10/2021). Cần đọc tiêu chí xác định DN siêu nhỏ khi mở được toàn văn. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=190283&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1",
+    "Xem xét bổ sung: Quy định về tài khoản ngân hàng doanh nghiệp",
+    "Kiểm tra toàn bộ link vbpl.moj.gov.vn — một số ItemID có thể không chính xác",
+    "Xác nhận ngày effective_from và tình trạng hiệu lực của tất cả văn bản",
+    "Các ItemID vbpl.moj.gov.vn và link congbao của Luật Doanh nghiệp 2020 được điền khi soạn mẫu, chưa ai mở kiểm tra. Không dùng làm căn cứ khi chưa kiểm tra."
+  ]
+}

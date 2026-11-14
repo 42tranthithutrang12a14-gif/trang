@@ -1,0 +1,197 @@
+[
+  {
+    "code": "VAT_QUARTERLY_RETURN",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Nộp tờ khai thuế GTGT theo quý",
+    "summary_plain": "Mỗi quý, công ty kê khai thuế GTGT phát sinh trong quý và nộp qua mạng.",
+    "why_plain": "Vì công ty bạn tính thuế GTGT theo phương pháp khấu trừ và khai theo quý.",
+    "applies_if": {
+      "all": [
+        { "field": "vat_method", "op": "eq", "value": "khau_tru" },
+        { "field": "vat_period", "op": "eq", "value": "quy" }
+      ]
+    },
+    "schedule": {
+      "type": "quarterly",
+      "offset_months": 1,
+      "due_day": "last",
+      "shift_rule": "next_working_day",
+      "first_period": "containing_founding"
+    },
+    "how_to_steps": [],
+    "penalty_plain": "",
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "252/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 10 khoản 3",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "108/2025/QH15",
+        "title": "Luật Quản lý thuế",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-12-10",
+        "effective_date": "2026-07-01",
+        "article": "Điều 14 khoản 1 điểm a",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      }
+    ],
+    "guide_slug": "khai-thue-gtgt-theo-quy",
+    "severity": "high",
+    "effective_from": "2026-01-01",
+    "effective_to": null,
+    "version": 1,
+    "todo_for_reviewer": [
+      "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn quý là ngày cuối cùng của tháng đầu quý tiếp theo, khớp due_day \"last\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+      "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
+      "Viết các bước làm và mức phạt",
+      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "VAT_MONTHLY_RETURN",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Nộp tờ khai thuế GTGT theo tháng",
+    "summary_plain": "Mỗi tháng, công ty kê khai thuế GTGT phát sinh trong tháng và nộp qua mạng.",
+    "why_plain": "Vì công ty bạn tính thuế GTGT theo phương pháp khấu trừ và khai theo tháng.",
+    "applies_if": {
+      "all": [
+        { "field": "vat_method", "op": "eq", "value": "khau_tru" },
+        { "field": "vat_period", "op": "eq", "value": "thang" }
+      ]
+    },
+    "schedule": {
+      "type": "monthly",
+      "offset_months": 1,
+      "due_day": 20,
+      "shift_rule": "next_working_day",
+      "first_period": "containing_founding"
+    },
+    "how_to_steps": [],
+    "penalty_plain": "",
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "252/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 10 khoản 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "108/2025/QH15",
+        "title": "Luật Quản lý thuế",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-12-10",
+        "effective_date": "2026-07-01",
+        "article": "Điều 14 khoản 1 điểm a",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      }
+    ],
+    "guide_slug": "khai-thue-gtgt-theo-thang",
+    "severity": "high",
+    "effective_from": "2026-01-01",
+    "effective_to": null,
+    "version": 1,
+    "todo_for_reviewer": [
+      "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tháng là ngày 20 tháng sau, khớp due_day 20. Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+      "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
+      "Viết các bước làm và mức phạt",
+      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "CIT_PROVISIONAL",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "title": "Tạm nộp thuế thu nhập doanh nghiệp theo quý",
+    "summary_plain": "Mỗi quý, công ty tạm nộp thuế TNDN ước tính của quý đó. Công ty có doanh thu năm trước từ 1 tỷ đồng trở xuống được miễn thuế TNDN. Công ty mới, dự kiến doanh thu cả năm không quá 1 tỷ đồng: không phải tạm nộp.",
+    "why_plain": "Doanh nghiệp phải tạm nộp thuế TNDN hằng quý dựa trên ước tính thu nhập.",
+    "applies_if": { "field": "company_type", "op": "is_set" },
+    "schedule": {
+      "type": "quarterly",
+      "offset_months": 1,
+      "due_day": "last",
+      "shift_rule": "next_working_day",
+      "first_period": "containing_founding"
+    },
+    "how_to_steps": [],
+    "penalty_plain": "",
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "252/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 24 khoản 1, 2, 3",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "141/2026/NĐ-CP",
+        "title": "Nghị định sửa đổi, bổ sung Nghị định 68/2026/NĐ-CP và Nghị định 320/2025/NĐ-CP",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-04-29",
+        "effective_date": "2026-01-01",
+        "article": "Điều 2 (khoản 15 Điều 4 Nghị định 320/2025/NĐ-CP, điểm a, b, c, d); Điều 3; Điều 4 khoản 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "09/2026/QH16",
+        "title": "Luật sửa đổi, bổ sung Luật Thuế TNCN, Luật Thuế GTGT, Luật Thuế TNDN và Luật Thuế TTĐB",
+        "issuer": "Quốc hội",
+        "issued_date": "2026-04-24",
+        "effective_date": "2026-04-24",
+        "article": "Điều 3 (khoản 14a Điều 4 Luật Thuế TNDN); Điều 5 khoản 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218095&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      }
+    ],
+    "guide_slug": "tam-nop-thue-tndn",
+    "severity": "high",
+    "effective_from": "2026-01-01",
+    "effective_to": null,
+    "version": 1,
+    "todo_for_reviewer": [
+      "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tạm nộp là ngày cuối cùng của tháng đầu quý tiếp theo (Điều 24 khoản 2); đổi due_day từ 30 sang \"last\"; 4 quý ít nhất 80% (khoản 3). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+      "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã thêm vào summary_plain, điền legal_basis. applies_if chưa có điều kiện doanh thu (engine chưa có trường doanh thu), nên nghĩa vụ vẫn hiện với mọi công ty.",
+      "Còn mở sau NC-011 (2026-11-12): (1) Đã trả lời ở NC-014 (2026-11-13): DN được miễn vẫn phải quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
+      "Viết các bước và mức phạt khi tạm nộp thiếu",
+      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Thuế TNDN số 14/2008/QH12 (sửa đổi), Điều 17; Thông tư 96/2015/TT-BTC; link vbpl.moj.gov.vn chính thức"
+    ]
+  }
+]
