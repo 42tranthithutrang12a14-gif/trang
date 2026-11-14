@@ -37,7 +37,7 @@
     },
     {
       "heading": "Quyết toán thuế TNDN cuối năm",
-      "content": "Cuối năm, doanh nghiệp phải nộp tờ khai quyết toán (mẫu 03/TNDN) qua eTax:\n• Xác định doanh thu, chi phí, lợi nhuận thực tế cả năm\n• Tính số thuế TNDN chính thức\n• Nộp thêm nếu số tạm nộp 4 quý < số phải nộp\n• Được hoàn hoặc bù trừ nếu tạm nộp nhiều hơn\n\nHạn nộp tờ khai quyết toán: 31/3 năm tiếp theo."
+      "content": "Cuối năm, doanh nghiệp phải nộp tờ khai quyết toán qua eTax:\n• Tính theo doanh thu – chi phí: dùng mẫu 03/TNDN\n• Tính theo tỷ lệ % trên doanh thu: dùng mẫu 04/TNDN\n• Xác định doanh thu, chi phí, lợi nhuận thực tế cả năm\n• Tính số thuế TNDN chính thức\n• Nộp thêm nếu số tạm nộp 4 quý < số phải nộp\n• Được hoàn hoặc bù trừ nếu tạm nộp nhiều hơn\n\nHạn nộp tờ khai quyết toán: 31/3 năm tiếp theo."
     },
     {
       "heading": "Mức phạt",
@@ -53,6 +53,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-14 (NC-028, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Phụ lục I mục 6.2 điểm a, b; https://vanban.chinhphu.vn/?pageid=27160&docid=218974): quyết toán theo doanh thu – chi phí dùng mẫu 03/TNDN (kèm phụ lục 03-2, 03-3A, 03-3C/TNDN nếu có); theo tỷ lệ % trên doanh thu dùng mẫu 04/TNDN, kèm báo cáo tài chính năm (trừ trường hợp không phải lập).",
     "Ngày 2026-11-14 (NC-027, đã đối chiếu toàn văn Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP): thêm mục \"Năm 2026, 2027: giảm 30% thuế TNDN\" kèm ví dụ giả định. Chưa xác minh: cách xử lý số TNDN đã tạm nộp các quý năm 2026 trước ngày 29/10/2026 (Nghị định 398/2026 không nói rõ). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=219330&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=220138&classid=1",
     "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): thay câu \"cách hiểu\" bằng: DN được miễn vẫn phải quyết toán TNDN năm (Điều 21 khoản 1 điểm c.1; không có ngoại lệ cho DN được miễn). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
     "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): sửa hạn tạm nộp quý (30/4, 31/7, 31/10, 31/01), hạn quyết toán (ngày cuối tháng thứ 3), ngưỡng 80% (bỏ 75%), câu về công ty được miễn vẫn nộp quyết toán (cách hiểu theo Điều 11). Hạn \"31/12 nếu năm tài chính không theo năm dương lịch\" đã bỏ vì sai. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",

@@ -17,7 +17,7 @@
     },
     {
       "heading": "Các bước thực hiện",
-      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử eTax:\n   → https://thuedientu.gdt.gov.vn\n\n2. Vào mục Khai thuế → Khai thuế GTGT → Chọn mẫu 01/GTGT\n\n3. Chọn kỳ khai báo (ví dụ: Quý III/2026)\n\n4. Điền số liệu từ sổ sách kế toán:\n   - Doanh thu chịu thuế trong quý\n   - Thuế GTGT đầu ra (từ hóa đơn bán hàng)\n   - Thuế GTGT đầu vào được khấu trừ (từ hóa đơn mua hàng)\n   - Số thuế phải nộp = Đầu ra − Đầu vào\n\n5. Ký điện tử bằng chữ ký số và gửi\n\n6. Tải xác nhận nộp tờ khai và lưu lại\n\n7. Nếu có số thuế phải nộp, nộp tiền qua tài khoản ngân hàng liên kết hoặc nộp tại kho bạc"
+      "content": "1. Đăng nhập vào Cổng dịch vụ thuế điện tử eTax:\n   → https://thuedientu.gdt.gov.vn\n\n2. Vào mục Khai thuế → Khai thuế GTGT → Chọn mẫu 01/GTGT\n   Mẫu 01/GTGT dành cho công ty tính thuế theo phương pháp khấu trừ. Công ty tính trực tiếp trên doanh thu dùng mẫu 04/GTGT.\n\n3. Chọn kỳ khai báo (ví dụ: Quý III/2026)\n\n4. Điền số liệu từ sổ sách kế toán:\n   - Doanh thu chịu thuế trong quý\n   - Thuế GTGT đầu ra (từ hóa đơn bán hàng)\n   - Thuế GTGT đầu vào được khấu trừ (từ hóa đơn mua hàng)\n   - Số thuế phải nộp = Đầu ra − Đầu vào\n\n5. Ký điện tử bằng chữ ký số và gửi\n\n6. Tải xác nhận nộp tờ khai và lưu lại\n\n7. Nếu có số thuế phải nộp, nộp tiền qua tài khoản ngân hàng liên kết hoặc nộp tại kho bạc"
     },
     {
       "heading": "Mức phạt nếu chậm nộp hoặc không nộp",
@@ -33,6 +33,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-14 (NC-028, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 19 khoản 5 điểm a; Phụ lục I mục 4.1, 4.3; https://vanban.chinhphu.vn/?pageid=27160&docid=218974): thêm câu phân biệt mẫu 01/GTGT (phương pháp khấu trừ) và 04/GTGT (trực tiếp trên doanh thu). Mẫu và thời hạn đăng ký tự nguyện phương pháp khấu trừ: chưa xác minh.",
     "Ngày 2026-11-13 (NC-021, đã đối chiếu toàn văn Luật Thuế GTGT 48/2024/QH15 Điều 10–12 và Luật 149/2025/QH15): thêm câu đầu nói rõ guide chỉ cho phương pháp khấu trừ, ngưỡng 1 tỷ. Chưa có guide cho phương pháp trực tiếp (xem \"Cần chủ dự án quyết\" trong bien-tap.md). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
     "Cập nhật NC-004: Nghị định 245/2026/NĐ-CP gia hạn thời hạn nộp thuế GTGT, TNDN, TNCN và tiền thuê đất trong năm 2026, ban hành và hiệu lực 27/06/2026 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11). Chưa đọc toàn văn, chưa biết đối tượng và thời gian gia hạn. Kiểm tra các hạn nộp năm 2026 trong guide. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1",
     "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): sửa mục \"Ai phải nộp tờ khai quý?\": khai quý là quyền lựa chọn, ngưỡng \"từ 50 tỷ đồng trở xuống\" (không phải \"dưới 50 tỷ\"), DN mới được chọn quý, chọn thì giữ cả năm, mẫu 01/ĐK-TĐKTTT trước 31/01 (Điều 19 khoản 1 điểm a, b.1, b.2). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",

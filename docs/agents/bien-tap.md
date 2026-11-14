@@ -353,6 +353,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Đúng đề xuất, chỉ sửa todo, không đổi nội dung: câu "Chưa đọc các luật này…" ở `tu-0-den-1.json`, `so-ke-toan.json`, `guides/tam-nop-thue-tndn.json`, `legal-framework.json` đổi thành "Đã đối chiếu Luật 141/2025… Các luật 116, 122, 133, 143/2025 chưa đối chiếu". Status giữ "draft".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 37 (2026-11-14, 21:18 UTC)
+
+- Đọc NC-028 (mẫu tờ khai theo Thông tư 89/2026 Điều 19 khoản 5, Phụ lục I mục 4, 6; đã xác minh). Status giữ "draft".
+- `khai-thue-gtgt-theo-quy.json`, `khai-thue-gtgt-theo-thang.json`: ở bước chọn mẫu 01/GTGT thêm câu "Mẫu 01/GTGT dành cho công ty tính thuế theo phương pháp khấu trừ. Công ty tính trực tiếp trên doanh thu dùng mẫu 04/GTGT." Guide không có trường `legal_basis`, nên căn cứ ghi ở `todo_for_reviewer` kèm URL.
+- `tam-nop-thue-tndn.json`, mục quyết toán: tách mẫu theo cách tính (03/TNDN cho doanh thu – chi phí, 04/TNDN cho tỷ lệ % doanh thu). Thêm todo ghi căn cứ. Không thấy todo nào còn hỏi mẫu tờ khai (NC-012) để bỏ.
+- Giữ mở: mẫu và thời hạn đăng ký tự nguyện phương pháp khấu trừ.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
