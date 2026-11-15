@@ -1355,6 +1355,30 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `b321c62` (NC-034): điền hạn BHYT, BHTN ở lịch "Hàng tháng", thêm câu 14 ngày không lương, `legal_basis`, bỏ todo cũ. Đúng đề xuất, không thấy lỗi.
 - Tìm mẫu bản cam kết TNCN trong toàn bộ danh mục mẫu của Thông tư 89/2026: không có. Ghi NC-030 (bổ sung).
 
+### NC-009 (bổ sung) — Thông tư 132/2018 (chế độ kế toán DN siêu nhỏ): chưa thấy văn bản sửa đổi, thay thế trên vanban.chinhphu.vn; cổng có ghi tình trạng hiệu lực (vbpq.mof.gov.vn) không mở được
+
+- **Trạng thái:** đã tra, không phát hiện văn bản thay thế. Không mở được cổng có tình trạng hiệu lực. Không kết luận chắc chắn "còn hiệu lực".
+- **Liên quan:** NC-009, NC-019; toàn bộ phần sổ S1–S4 và S01–S10 (`so-ke-toan.json`, `guides/so-sach-ke-toan.json`); ưu tiên 1 của README.
+- **Đã tra (ngày 2026-11-15):**
+  - Trang văn bản Thông tư 132/2018/TT-BTC (https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1): ban hành 28/12/2018, hiệu lực 15/02/2019. Trang không có mục "tình trạng hiệu lực" hay "văn bản sửa đổi".
+  - Ô tìm kiếm vanban.chinhphu.vn (chỉ tìm trong trích yếu), lọc Thông tư Bộ Tài chính:
+    - "chế độ kế toán": văn bản mới nhất về chế độ kế toán DN là Thông tư 132/2018 (DN siêu nhỏ), 133/2016 (DN nhỏ và vừa), 200/2014 (DN). Năm 2026 chỉ có Thông tư 119/2026 (kế toán vay, trả nợ của Chính phủ), không liên quan.
+    - "doanh nghiệp siêu nhỏ": chỉ có Thông tư 132/2018.
+    - "Thông tư số 132/2018", "chế độ kế toán doanh nghiệp", "kế toán doanh nghiệp nhỏ và vừa" (lọc văn bản 2024–2026): không có kết quả.
+  - `vbpq.mof.gov.vn`: lỗi "Connection reset" (như các vòng 1–8). Chưa mở được để xem tình trạng hiệu lực.
+- **Hạn chế:** ô tìm kiếm chỉ khớp trích yếu. Một văn bản sửa Thông tư 132/2018 mà trích yếu không chứa các cụm trên sẽ không hiện ra.
+- **Kết luận ngắn:**
+  1. Chưa thấy văn bản nào trên cổng Chính phủ sửa hoặc thay Thông tư 132/2018. Nội dung sổ S1–S4, S01–S10 hiện dựa trên văn bản này vẫn giữ.
+  2. Không ghi "còn hiệu lực" như một điều đã xác minh.
+- **Nguồn:** https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1; kết quả tìm kiếm trên https://vanban.chinhphu.vn/he-thong-van-ban?classid=1&mode=1. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):** không đổi nội dung. Ở todo của mục Thông tư 132/2018 (`legal-framework.json`, `so-ke-toan.json`), thêm: "Ngày 2026-11-15: chưa thấy văn bản sửa đổi, thay thế trên vanban.chinhphu.vn (tìm theo trích yếu); chưa xác minh được tình trạng hiệu lực trên cổng Bộ Tài chính (NC-009 bổ sung)."
+- **Cần chủ dự án (nếu muốn chắc chắn):** mở lại mạng tới `vbpq.mof.gov.vn` (hiện bị ngắt kết nối), hoặc chấp nhận kết quả tìm kiếm trên vanban.chinhphu.vn là đủ.
+
+### Vòng 47 (2026-11-15, 16:17 UTC)
+
+- Rà commit Biên tập `eb98d11` (NC-030 bổ sung): chỉ sửa todo ở 5 chỗ, đúng đề xuất. Không thấy lỗi.
+- Kiểm Thông tư 132/2018 có bị sửa, thay không: ghi NC-009 (bổ sung). `vbpq.mof.gov.vn` vẫn không mở được.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
