@@ -1412,6 +1412,32 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `b342382` (NC-009 bổ sung): thêm todo có ngày cho mục Thông tư 132/2018. Đúng đề xuất, không thấy lỗi.
 - Đọc Nghị định 293/2025 và 399/2026 (lương tối thiểu vùng), Luật BHXH Điều 31: ghi NC-035.
 
+### NC-036 — Tiền lương đóng BHXH của nhân viên gồm: mức lương theo thang, bảng lương ghi trong hợp đồng + phụ cấp lương + khoản bổ sung trả thường xuyên, ổn định; không gồm khoản phụ thuộc năng suất, chất lượng công việc (Nghị định 158/2025 Điều 7 khoản 1)
+
+- **Trạng thái:** đã xác minh. Nghị định 158/2025 không đặt sàn riêng bằng lương tối thiểu vùng; cách hiểu ở NC-035 giữ nguyên là cách hiểu.
+- **Liên quan:** NC-035 (sàn tiền lương đóng BHXH), NC-023; ghi chú S2-DNSN (`so-ke-toan.json` dòng ~27); bước BHXH nhân viên (`tu-0-den-1.json` ~dòng 956).
+- **Phát hiện (Nghị định 158/2025/NĐ-CP, quy định chi tiết Luật BHXH về BHXH bắt buộc; ban hành 25/06/2025, hiệu lực 01/07/2025; PDF 52 trang, bản quét, đã OCR trang 1–24):**
+  - **Điều 7 khoản 1:** tiền lương đóng BHXH theo điểm b khoản 1 Điều 31 Luật BHXH "là tiền lương tháng, bao gồm mức lương theo công việc hoặc chức danh, phụ cấp lương và các khoản bổ sung khác, trong đó:"
+    - a) mức lương theo tháng của công việc, chức danh "theo thang lương, bảng lương do người sử dụng lao động xây dựng theo quy định tại Điều 93 của Bộ luật Lao động được thỏa thuận trong hợp đồng lao động";
+    - b) phụ cấp lương bù đắp điều kiện lao động, tính chất phức tạp, điều kiện sinh hoạt, mức độ thu hút lao động, được thỏa thuận trong hợp đồng; "không bao gồm khoản phụ cấp lương phụ thuộc hoặc biến động theo năng suất lao động, quá trình làm việc và chất lượng thực hiện công việc";
+    - c) khoản bổ sung khác có mức tiền cụ thể, thỏa thuận trong hợp đồng, "trả thường xuyên, ổn định trong mỗi kỳ trả lương"; không gồm khoản phụ thuộc năng suất, chất lượng công việc.
+  - **Điều 7 khoản 2:** người làm không trọn thời gian (điểm l khoản 1 Điều 2 Luật BHXH): tiền lương tính trong tháng theo hợp đồng; lương giờ × số giờ, lương ngày × số ngày, lương tuần × số tuần làm việc trong tháng.
+  - **Điều 7 khoản 5:** lương bằng ngoại tệ thì đổi ra đồng theo tỷ giá bình quân mua chuyển khoản của 4 ngân hàng thương mại có vốn Nhà nước, ngày 02/01 (6 tháng đầu năm) và 01/07 (6 tháng cuối năm).
+  - Điều 7 không nhắc lương tối thiểu vùng. Sàn duy nhất được nhắc là "tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc thấp nhất quy định tại điểm đ khoản 1 Điều 31" (mức tham chiếu), ở khoản 3 cho người hoạt động không chuyên trách cấp xã.
+- **Kết luận ngắn:**
+  1. Khi lập sổ lương S2, tiền lương đóng BHXH = lương theo hợp đồng + phụ cấp ghi trong hợp đồng + khoản bổ sung cố định trả mỗi kỳ. Thưởng theo năng suất, doanh số, chất lượng không tính.
+  2. Văn bản không đặt sàn tiền lương đóng BHXH bằng lương tối thiểu vùng. Lương theo hợp đồng của người làm đủ giờ đã không được dưới lương tối thiểu vùng (NC-035), nên trên thực tế mức đóng không thấp hơn. Đây vẫn là cách hiểu.
+- **Nguồn:** Nghị định 158/2025/NĐ-CP Điều 7 khoản 1 điểm a, b, c; khoản 2, 3, 5. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=214189&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/6/158-ndcp.signed.pdf. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Ghi chú S2-DNSN (`so-ke-toan.json`) và bước BHXH nhân viên (`tu-0-den-1.json`): thêm "Tiền lương làm căn cứ đóng = mức lương ghi trong hợp đồng + phụ cấp ghi trong hợp đồng + khoản bổ sung cố định trả mỗi kỳ. Không tính thưởng theo năng suất, doanh số." `legal_basis`: Nghị định 158/2025/NĐ-CP Điều 7 khoản 1; URL docid 214189; `verified_against_original: true`.
+  - `legal-framework.json` mục BHXH: thay todo "Nghị định 158/2025… chưa đọc toàn văn" bằng "Đã đối chiếu Nghị định 158/2025 Điều 7 (NC-036)".
+  - Todo NC-035 về sàn đóng BHXH: sửa thành "Nghị định 158/2025 không đặt sàn bằng lương tối thiểu vùng; mức đóng không dưới lương tối thiểu vùng là cách hiểu (NC-036)".
+
+### Vòng 49 (2026-11-15, 20:18 UTC)
+
+- Rà commit Biên tập `3b8ad0c` (NC-035): thêm mức lương tối thiểu vùng 2026 và 2027 vào mục Bộ luật Lao động, bước tuyển nhân viên, ghi chú sổ, có `legal_basis` và todo. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 158/2025 Điều 7: ghi NC-036.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
