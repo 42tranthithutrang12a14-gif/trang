@@ -447,6 +447,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo còn mở: danh mục địa bàn vùng (Phụ lục Nghị định 399/2026), sàn lương đóng BHXH (Nghị định 158/2025), gỡ mức 2026 sau 31/12/2026. Tên (title) hai nghị định trong `legal_basis` là tên mô tả.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 49 (2026-11-15, 21:18 UTC)
+
+- Đọc NC-036 (tiền lương đóng BHXH của nhân viên; Nghị định 158/2025 Điều 7 khoản 1; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json` bước `lao-dong-bhxh`: thêm câu "Tiền lương làm căn cứ đóng BHXH = lương ghi trong hợp đồng + phụ cấp ghi trong hợp đồng + khoản bổ sung cố định trả mỗi kỳ. Không tính thưởng theo năng suất, doanh số." Thêm `legal_basis` Nghị định 158/2025 và todo.
+- `so-ke-toan.json`: thêm câu trên vào `notes` (cạnh ghi chú lương tối thiểu vùng); thêm `legal_basis` và todo.
+- Todo cũ: "Sàn tiền lương đóng BHXH… chưa đọc Nghị định 158/2025" (3 chỗ) đổi thành "không đặt sàn bằng lương tối thiểu vùng; là cách hiểu". "Còn chưa xác minh: Nghị định 158/2025; BHYT, BHTN của người quản lý không lương" (4 chỗ) đổi thành đã đối chiếu (NC-036, NC-023 bổ sung).
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
