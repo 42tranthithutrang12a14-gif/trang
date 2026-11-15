@@ -1243,6 +1243,42 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `977efad` (NC-030): thêm đoạn khấu trừ 10% từ 5 triệu đồng/lần, cam kết, danh sách cuối năm; `legal_basis` Nghị định 253/2026; cập nhật todo. Đúng đề xuất, không thấy lỗi.
 - Đọc Nghị định 245/2026 (gia hạn nộp thuế 2026): ghi NC-031.
 
+### NC-032 — Mẫu khai thuế TNCN từ tiền lương (05/KK-TNCN quý; 05/QTT-TNCN quyết toán, kèm 05-1, 05-2, 05-3/BK-QTT-TNCN; 08/UQ-QTT-TNCN ủy quyền); người phụ thuộc có thu nhập bình quân tháng không quá 3 triệu đồng (Thông tư 89/2026 Phụ lục I mục 7.1; Thông tư 87/2026 Điều 3, 4)
+
+- **Trạng thái:** đã xác minh. Chưa tìm thấy: số mẫu bản cam kết tạm không khấu trừ (NC-030).
+- **Liên quan:** NC-026, NC-026 (bổ sung), NC-030; trang "Tính thuế TNCN" (`so-ke-toan.json`); bước "Thuế TNCN của nhân viên" (`tu-0-den-1.json`); dòng TNCN ở `bat-dau.json`.
+- **Phát hiện:**
+  - **Thông tư 89/2026/TT-BTC Phụ lục I mục 7.1 (PDF trang 207–208, OCR) — khai thuế TNCN từ tiền lương, tiền công (dẫn khoản 1 Điều 22):**
+    - a.1) Tổ chức trả thu nhập khai theo quý: mẫu **05/KK-TNCN** "Tờ khai thuế thu nhập cá nhân (Áp dụng đối với tổ chức, cá nhân trả các khoản thu nhập từ tiền lương, tiền công)"; phụ lục 05-1/PBT-KK-TNCN (khi khai tập trung).
+    - a.2) Quyết toán: mẫu **05/QTT-TNCN**; kèm **05-1/BK-QTT-TNCN** (cá nhân tính thuế theo biểu lũy tiến), **05-2/BK-QTT-TNCN** (cá nhân tính theo thuế suất toàn phần, tức nhóm khấu trừ 10% ở NC-030), **05-3/BK-QTT-TNCN** (người phụ thuộc giảm trừ gia cảnh).
+    - b) Cá nhân ủy quyền quyết toán cho công ty: **08/UQ-QTT-TNCN** "Giấy ủy quyền quyết toán thuế thu nhập cá nhân".
+    - Danh mục mẫu trong mục 7 không có mẫu "bản cam kết" của cá nhân chưa đến mức chịu thuế.
+  - **Thông tư 87/2026/TT-BTC (quy định chi tiết Luật Thuế TNCN và Nghị định 253/2026; ban hành 30/06/2026, hiệu lực 01/07/2026; PDF 6 trang, OCR; con số "03 triệu" đã OCR lại ở 400 dpi):**
+    - **Điều 3 khoản 1:** "Mức thu nhập bình quân tháng trong năm từ tất cả các nguồn thu nhập của người phụ thuộc… không vượt quá 03 triệu đồng."
+    - **Điều 3 khoản 2:** người nộp thuế tự chịu trách nhiệm xác định và kê khai đúng thu nhập của người phụ thuộc.
+    - **Điều 4:** hồ sơ chứng minh người phụ thuộc: con (giấy khai sinh, thẻ căn cước nếu có; con đi học thêm thẻ sinh viên hoặc xác nhận của trường), vợ/chồng (thẻ căn cước, giấy chứng nhận kết hôn), cha mẹ (thẻ căn cước, giấy khai sinh của người nộp thuế…), người khác phải nuôi dưỡng; người không có khả năng lao động thêm giấy tờ suy giảm khả năng lao động từ 81%.
+    - **Điều 6 khoản 1:** nội dung về tiền lương, tiền công áp dụng từ kỳ tính thuế năm 2026. Khoản 2: thay thế Thông tư 111/2013/TT-BTC.
+    - Thông tư 87/2026 chỉ có 6 điều; không có mẫu bản cam kết.
+- **Kết luận ngắn:**
+  1. Công ty trả lương khai thuế TNCN quý bằng mẫu 05/KK-TNCN, quyết toán năm bằng mẫu 05/QTT-TNCN. Người làm ngắn hạn bị khấu trừ 10% kê ở phụ lục 05-2/BK-QTT-TNCN.
+  2. Nhân viên muốn công ty quyết toán thay thì ký mẫu 08/UQ-QTT-TNCN.
+  3. Chỉ được giảm trừ cho người phụ thuộc có thu nhập bình quân tháng không quá 3 triệu đồng. Giấy tờ chứng minh do nhân viên nộp cho công ty.
+  4. Số mẫu bản cam kết (NC-030): vẫn chưa tìm thấy trong Thông tư 89/2026 Phụ lục I mục 7 và Thông tư 87/2026.
+- **Nguồn:**
+  - Thông tư 89/2026/TT-BTC Phụ lục I mục 7.1 điểm a.1, a.2, b; https://vanban.chinhphu.vn/?pageid=27160&docid=218974.
+  - Thông tư 87/2026/TT-BTC Điều 3 khoản 1, 2; Điều 4; Điều 6 khoản 1, 2; https://vanban.chinhphu.vn/?pageid=27160&docid=218772&classid=1 (PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/87-btc.signed.pdf).
+  - Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Bước "Thuế TNCN của nhân viên" (`tu-0-den-1.json`) hoặc dòng TNCN ở `bat-dau.json`: thêm tên mẫu: "Khai quý: mẫu 05/KK-TNCN. Quyết toán năm: mẫu 05/QTT-TNCN. Nhân viên ủy quyền công ty quyết toán thay: mẫu 08/UQ-QTT-TNCN." `legal_basis`: Thông tư 89/2026/TT-BTC Phụ lục I mục 7.1; `verified_against_original: true`.
+  - Trang "Tính thuế TNCN" (`so-ke-toan.json`), phần ghi chú về người phụ thuộc: thêm "Chỉ tính người phụ thuộc có thu nhập bình quân tháng không quá 3 triệu đồng. Nhân viên nộp giấy tờ chứng minh (ví dụ giấy khai sinh của con) cho công ty." `legal_basis`: Thông tư 87/2026/TT-BTC Điều 3 khoản 1, Điều 4; URL docid 218772; `verified_against_original: true`.
+  - Lưu ý quy tắc 9 trong `AGENTS.md`: chỉ hướng dẫn công ty tự lưu giấy tờ; sổ không có ô nhập số căn cước hay thông tin giấy tờ của người phụ thuộc.
+  - Giữ todo "Mẫu bản cam kết và mẫu danh sách cuối năm: chưa xác minh số mẫu (NC-030)".
+
+### Vòng 43 (2026-11-15, 08:17 UTC)
+
+- Rà commit Biên tập `9dd1e40` (NC-031): thêm ghi chú gia hạn năm 2026 vào mục "Hạn nộp" của 3 guide, có ngày hết hiệu lực. Đúng đề xuất, không thấy lỗi.
+- Tìm mẫu bản cam kết (NC-030): đọc Thông tư 89/2026 Phụ lục I mục 7–19 (PDF trang 207–245) và Thông tư 87/2026. Chưa thấy. Ghi NC-032 với các mẫu khai TNCN tiền lương và mức thu nhập người phụ thuộc.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
