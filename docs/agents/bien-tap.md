@@ -391,6 +391,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo: thay "Chưa xác minh: khấu trừ với lao động thời vụ" ở `tu-0-den-1.json`, `so-ke-toan.json`. Ở `bat-dau.json` (2 chỗ) và `legal-framework.json`, todo cũ còn ghi biểu thuế, giảm trừ "chưa xác minh" dù NC-026 bổ sung đã xác minh; sửa luôn. Còn mở: số mẫu bản cam kết và danh sách cuối năm.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 42 (2026-11-15, 07:18 UTC)
+
+- Đọc NC-031 (gia hạn nộp thuế năm 2026; Nghị định 245/2026; đã xác minh). Status giữ "draft".
+- Ba guide (`khai-thue-gtgt-theo-thang.json`, `khai-thue-gtgt-theo-quy.json`, `tam-nop-thue-tndn.json`): thêm ghi chú "Riêng năm 2026" cuối mục "Hạn nộp". Mỗi guide ghi đúng kỳ của mình: GTGT tháng 5/2026 hạn 20/11/2026, tháng 6–9/2026 hạn 21/12/2026; GTGT quý III và TNDN tạm nộp quý III hạn 30/12/2026. Kèm: tờ khai vẫn nộp đúng hạn, gửi văn bản sau 02/11/2026 không được gia hạn, TNCN khấu trừ của nhân viên không được gia hạn, hết hiệu lực sau 30/12/2026. Không ghi kỳ quý II (hạn 02/11/2026 đã qua).
+- Todo "Cập nhật NC-004: Nghị định 245/2026… Chưa đọc toàn văn" ở ba guide: thay bằng căn cứ đã đối chiếu và nhắc gỡ ghi chú sau 30/12/2026. Guide không có trường `legal_basis`.
+- Lịch nghĩa vụ không đổi (app không biết DN đã gửi văn bản đề nghị hay chưa).
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
