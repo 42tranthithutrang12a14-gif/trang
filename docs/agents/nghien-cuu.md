@@ -1214,6 +1214,35 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Đọc Nghị định 253/2026 Điều 50, 69, 70: ghi NC-030.
 - Ghi chú để tra sau: Nghị định 245/2026/NĐ-CP (27/06/2026) gia hạn nộp thuế GTGT, TNDN, TNCN, tiền thuê đất năm 2026 (https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1). Chưa đọc; có thể ảnh hưởng hạn nộp trong lịch nghĩa vụ.
 
+### NC-031 — Gia hạn nộp thuế năm 2026 (Nghị định 245/2026): DN siêu nhỏ được gia hạn thuế GTGT và TNDN tạm nộp quý II, III năm 2026 nếu đã gửi văn bản đề nghị chậm nhất 02/11/2026; quý III nộp chậm nhất 30/12/2026; vẫn khai đúng hạn
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-004; todo "Cập nhật NC-004: Nghị định 245/2026… Chưa đọc toàn văn" ở `guides/khai-thue-gtgt-theo-thang.json`, `guides/khai-thue-gtgt-theo-quy.json`, `guides/tam-nop-thue-tndn.json`; lịch nghĩa vụ (`obligation_rules.json`).
+- **Phát hiện (văn bản gốc: Nghị định 245/2026/NĐ-CP; ban hành và hiệu lực 27/06/2026; PDF 11 trang, bản quét, đã OCR; trang 2 OCR lại ở 400 dpi để chắc các ngày):**
+  - **Điều 1 khoản 2:** đối tượng gồm (a) DN, tổ chức, hộ, cá nhân kinh doanh trong các ngành ở Phụ lục I; và (b) "Doanh nghiệp nhỏ và siêu nhỏ được xác định theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa năm 2017 và Nghị định số 80/2021/NĐ-CP…", có phát sinh thuế GTGT, TNDN hoặc tiền thuê đất của các kỳ được gia hạn. DN siêu nhỏ được gia hạn mà không cần thuộc ngành ở Phụ lục I.
+  - **Điều 2 khoản 1 (thuế GTGT, tối đa 5 tháng):** kỳ tháng 5/2026 nộp chậm nhất 20/11/2026; tháng 6, 7, 8, 9/2026 chậm nhất 21/12/2026; quý II/2026 chậm nhất 02/11/2026; quý III/2026 chậm nhất 30/12/2026. Không áp dụng cho thuế GTGT khâu nhập khẩu.
+  - **Điều 2 khoản 1 đoạn 2:** gia hạn thuế TNCN chỉ dành cho hộ kinh doanh, cá nhân kinh doanh. Thuế TNCN công ty khấu trừ của nhân viên không được gia hạn.
+  - **Điều 2 khoản 2 (thuế TNDN tạm nộp):** quý II/2026 (3 tháng) chậm nhất 02/11/2026; quý III/2026 (2 tháng) chậm nhất 30/12/2026.
+  - **Điều 3 khoản 1:** vẫn khai, nộp tờ khai GTGT, TNCN đúng hạn; chỉ chưa phải nộp tiền thuế của các kỳ được gia hạn.
+  - **Điều 3 khoản 2:** gửi "Văn bản đề nghị gia hạn nộp thuế và tiền thuê đất" (mẫu ở Phụ lục II) một lần cho cả các kỳ, cùng lúc nộp tờ khai tháng hoặc quý. Không gửi cùng tờ khai thì chậm nhất 02/11/2026. **Khoản 3:** gửi sau 02/11/2026 thì không được gia hạn. **Khoản 5:** cơ quan thuế không gửi thông báo chấp nhận.
+  - **Điều 4:** không tính tiền chậm nộp trong thời gian được gia hạn.
+  - **Điều 5 khoản 1:** hiệu lực từ ngày ký đến hết 30/12/2026; sau đó hạn nộp trở lại theo pháp luật quản lý thuế. **Khoản 2:** đã nộp trước ngày Nghị định có hiệu lực thì không điều chỉnh lại.
+- **Kết luận ngắn (tại ngày tra 15/11/2026):**
+  1. Hạn gửi văn bản đề nghị gia hạn (02/11/2026) đã qua. DN chưa gửi thì không còn được gia hạn.
+  2. DN siêu nhỏ đã gửi: thuế GTGT và TNDN tạm nộp quý III/2026 nộp chậm nhất 30/12/2026 (thay vì 31/10/2026). Khai GTGT tháng 9/2026 trở về trước: tiền thuế nộp chậm nhất 21/12/2026.
+  3. Văn bản hết hiệu lực sau 30/12/2026. Từ quý IV/2026 trở đi, hạn nộp như thường.
+  4. Thuế TNCN khấu trừ của nhân viên không được gia hạn.
+- **Nguồn:** Nghị định 245/2026/NĐ-CP, Điều 1 khoản 2 điểm b; Điều 2 khoản 1, 2; Điều 3 khoản 1, 2, 3, 5; Điều 4; Điều 5 khoản 1, 2. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/6/245-ndcp.signed.pdf. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Ba guide (`khai-thue-gtgt-theo-thang.json`, `khai-thue-gtgt-theo-quy.json`, `tam-nop-thue-tndn.json`): thêm một ghi chú ngắn, có ngày hết hiệu lực: "Năm 2026: DN nhỏ và siêu nhỏ đã gửi Văn bản đề nghị gia hạn trước ngày 02/11/2026 được nộp thuế GTGT và thuế TNDN tạm nộp quý III/2026 chậm nhất ngày 30/12/2026. Tờ khai vẫn nộp đúng hạn. Gửi sau ngày 02/11/2026 thì không được gia hạn. Thuế TNCN khấu trừ của nhân viên không được gia hạn. Quy định này hết hiệu lực sau ngày 30/12/2026." `legal_basis`: Nghị định 245/2026/NĐ-CP Điều 1 khoản 2 điểm b, Điều 2 khoản 1, 2, Điều 3 khoản 1–3, Điều 5 khoản 1; URL docid 218598; `verified_against_original: true`.
+  - Thay todo "Cập nhật NC-004: … Chưa đọc toàn văn…" bằng "Đã đối chiếu Nghị định 245/2026 (NC-031). Gỡ ghi chú gia hạn sau 30/12/2026."
+  - Lịch nghĩa vụ: không đổi engine; việc gia hạn phụ thuộc DN đã gửi văn bản đề nghị hay chưa, app không biết.
+
+### Vòng 42 (2026-11-15, 06:18 UTC)
+
+- Rà commit Biên tập `977efad` (NC-030): thêm đoạn khấu trừ 10% từ 5 triệu đồng/lần, cam kết, danh sách cuối năm; `legal_basis` Nghị định 253/2026; cập nhật todo. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 245/2026 (gia hạn nộp thuế 2026): ghi NC-031.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
