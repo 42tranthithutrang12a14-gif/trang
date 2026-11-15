@@ -431,6 +431,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Ghi nhận cho trang thao tác (sau này): mẫu 05/KK-TNCN ở PDF trang 307, 05/QTT-TNCN trang 312, 08/UQ-QTT-TNCN trang 376 của Thông tư 89/2026.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 47 (2026-11-15, 17:18 UTC)
+
+- Đọc NC-009 (bổ sung): chưa thấy văn bản sửa đổi, thay thế Thông tư 132/2018 trên vanban.chinhphu.vn; vbpq.mof.gov.vn vẫn không mở được. Không kết luận "còn hiệu lực".
+- Đúng đề xuất, không đổi nội dung. Thêm todo ghi kết quả tra ngày 2026-11-15 vào mục Thông tư 132/2018 ở `legal-framework.json` và vào `so-ke-toan.json`. Status giữ "draft".
+- Việc mở mạng tới vbpq.mof.gov.vn đã nằm trong mục "Cần chủ dự án quyết" của agent Nghiên cứu; không ghi trùng.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
