@@ -28,6 +28,7 @@
     "Muốn khoản chi được tính vào chi phí khi tính thuế TNDN: chi cho việc kinh doanh, có hóa đơn, chứng từ; từ 5 triệu đồng trở lên (kể cả thuế GTGT) thì phải chuyển khoản hoặc thanh toán không dùng tiền mặt. Nộp tiền mặt vào tài khoản người bán không tính là chuyển khoản. Mua của cùng người bán nhiều lần trong một ngày, tổng từ 5 triệu, cũng phải chuyển khoản. Cùng điều kiện này áp dụng để được khấu trừ thuế GTGT đầu vào. Mua của người bán nhỏ không có hóa đơn: lập Bảng kê thu mua, có chữ ký người đại diện công ty.",
     "Dòng chi từ 5.000.000 đồng trở lên mà ghi quỹ \"Tiền mặt\" sẽ tô màu cam: khoản này có thể không được tính vào chi phí và không được khấu trừ thuế GTGT.",
     "Khoản chi không được tính vào chi phí khi tính thuế TNDN (dù vẫn là tiền ra): tiền phạt hành chính và tiền chậm nộp thuế; lương của chủ doanh nghiệp tư nhân, chủ công ty TNHH một thành viên do một cá nhân làm chủ; lương nhân viên không ghi rõ mức, điều kiện trong hợp đồng lao động hoặc quy chế, hoặc không thực trả có chứng từ; phúc lợi cho nhân viên vượt 1 tháng lương bình quân/năm; trang phục bằng tiền vượt 5 triệu đồng/người/năm; từ thiện, tài trợ thông thường; tiền điện, nước đứng tên chủ nhà mà không có hợp đồng thuê và chứng từ theo số thực tế (Nghị định 320/2025/NĐ-CP Điều 10). Lãi lỗ tạm tính trong sổ chưa loại các khoản này.",
+    "Lương trả cho người làm đủ giờ không thấp hơn lương tối thiểu vùng nơi công ty hoạt động. Năm 2026: Vùng I 5.310.000, Vùng II 4.730.000, Vùng III 4.140.000, Vùng IV 3.700.000 đồng/tháng. Từ 01/01/2027: Vùng I 5.700.000, Vùng II 5.080.000, Vùng III 4.450.000, Vùng IV 4.040.000 đồng/tháng. (Nghị định 293/2025/NĐ-CP, Nghị định 399/2026/NĐ-CP).",
     "Sổ ghi được 3.000 dòng. Các số trong ví dụ là số giả định, chỉ để minh họa cách ghi."
   ],
   "sheets": [
@@ -159,6 +160,32 @@
   "form_issue_line": "(Ban hành kèm theo Thông tư số 132/2018/TT-BTC ngày 28/12/2018 của Bộ Tài chính)",
   "form_rows": 200,
   "legal_basis": [
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "293/2025/NĐ-CP",
+      "title": "Nghị định quy định mức lương tối thiểu đối với người lao động làm việc theo hợp đồng lao động",
+      "issuer": "Chính phủ",
+      "issued_date": "2025-11-10",
+      "effective_date": "2026-01-01",
+      "article": "Điều 3 khoản 1; Điều 5 khoản 1, 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=215832&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-15",
+      "snapshot_path": ""
+    },
+    {
+      "doc_type": "Nghị định",
+      "doc_number": "399/2026/NĐ-CP",
+      "title": "Nghị định quy định mức lương tối thiểu đối với người lao động làm việc theo hợp đồng lao động",
+      "issuer": "Chính phủ",
+      "issued_date": "2026-11-02",
+      "effective_date": "2027-01-01",
+      "article": "Điều 3; Điều 4 khoản 1, 3; Điều 5 khoản 1, 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=220166&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-15",
+      "snapshot_path": ""
+    },
     {
       "doc_type": "Thông tư",
       "doc_number": "87/2026/TT-BTC",
@@ -395,6 +422,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-15 (NC-035, đã đối chiếu toàn văn Nghị định 293/2025/NĐ-CP Điều 3 khoản 1, Điều 5 và Nghị định 399/2026/NĐ-CP Điều 3, 4, 5): thêm lương tối thiểu vùng. Danh mục địa bàn vùng I–IV: xem Phụ lục Nghị định 399/2026, chưa trích. Sàn tiền lương đóng BHXH của nhân viên: chưa đọc Nghị định 158/2025. Gỡ mức năm 2026 sau 31/12/2026.",
     "Ngày 2026-11-15: chưa thấy văn bản sửa đổi, thay thế Thông tư 132/2018/TT-BTC trên vanban.chinhphu.vn (tìm theo trích yếu); chưa xác minh được tình trạng hiệu lực trên cổng Bộ Tài chính, vbpq.mof.gov.vn không mở được (NC-009 bổ sung).",
     "Ngày 2026-11-15 (NC-033, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10 khoản 4 mở đầu, điểm d, đ; khoản 8 điểm đ): bảo hiểm bắt buộc công ty đóng cho người lao động trong mức luật định được trừ, chỉ phần vượt bị loại; cờ in_result của nhóm \"Bảo hiểm cho người lao động\" giữ true. Chưa xác minh: bảo hiểm công ty đóng cho chủ DNTN, chủ công ty TNHH một thành viên do cá nhân làm chủ có được trừ khi tính thuế TNDN không (Nghị định 320/2025 không nói rõ). Rủi ro cao; nếu chủ dự án đồng ý, thêm câu khuyên hỏi cơ quan thuế quản lý hoặc kế toán trước khi tính khoản này vào chi phí.",
     "Ngày 2026-11-15 (NC-032, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Phụ lục I mục 7.1 điểm a.1, a.2, b và Thông tư 87/2026/TT-BTC Điều 3 khoản 1, Điều 4): thêm tên mẫu 05/KK-TNCN, 05/QTT-TNCN; điều kiện thu nhập người phụ thuộc không quá 3 triệu đồng/tháng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974 và https://vanban.chinhphu.vn/?pageid=27160&docid=218772&classid=1",

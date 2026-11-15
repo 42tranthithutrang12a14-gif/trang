@@ -438,6 +438,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Việc mở mạng tới vbpq.mof.gov.vn đã nằm trong mục "Cần chủ dự án quyết" của agent Nghiên cứu; không ghi trùng.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 48 (2026-11-15, 19:18 UTC)
+
+- Đọc NC-035 (lương tối thiểu vùng 2026 theo Nghị định 293/2025; từ 01/01/2027 theo Nghị định 399/2026; đã xác minh). Status giữ "draft".
+- `legal-framework.json` mục Bộ luật Lao động: thêm `key_points` mức lương tối thiểu vùng 2026 và 2027; thay todo "Bổ sung quy định về lương tối thiểu vùng hiện hành" bằng todo có nguồn.
+- `tu-0-den-1.json` bước `lao-dong-bhxh`: thêm câu lương không thấp hơn lương tối thiểu vùng, kèm hai mức, nhắc rà hợp đồng trước 01/01/2027. Thêm `legal_basis` hai nghị định.
+- `so-ke-toan.json`: sổ S2-DNSN không có trường ghi chú riêng, nên thêm vào `notes`; thêm `legal_basis` và todo.
+- Todo còn mở: danh mục địa bàn vùng (Phụ lục Nghị định 399/2026), sàn lương đóng BHXH (Nghị định 158/2025), gỡ mức 2026 sau 31/12/2026. Tên (title) hai nghị định trong `legal_basis` là tên mô tả.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
