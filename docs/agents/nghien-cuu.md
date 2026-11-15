@@ -1438,6 +1438,30 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `3b8ad0c` (NC-035): thêm mức lương tối thiểu vùng 2026 và 2027 vào mục Bộ luật Lao động, bước tuyển nhân viên, ghi chú sổ, có `legal_basis` và todo. Đúng đề xuất, không thấy lỗi.
 - Đọc Nghị định 158/2025 Điều 7: ghi NC-036.
 
+### NC-023 (bổ sung 4) — Bảo hiểm tai nạn lao động – bệnh nghề nghiệp: áp dụng cho nhân viên có HĐLĐ từ đủ 1 tháng, người quản lý có hưởng lương, người làm không trọn thời gian; không áp dụng cho người quản lý không hưởng lương. DN đóng tối đa 1% (mức cụ thể 0,5% theo Nghị định 58/2020, chưa thấy văn bản thay)
+
+- **Trạng thái:** đã xác minh (đối tượng, mức trần theo luật). Mức 0,5% / 0,3% giữ theo Nghị định 58/2020; chưa thấy nghị định thay thế.
+- **Liên quan:** NC-023 (bổ sung 3), NC-022; lịch "Hàng tháng" (`bat-dau.json`), bước BHXH (`tu-0-den-1.json`), ghi chú S2-DNSN, todo "Nghị định 58/2020 dẫn chiếu Luật BHXH cũ".
+- **Phát hiện:**
+  - **Luật An toàn, vệ sinh lao động 84/2015/QH13** (ban hành 25/06/2015, hiệu lực 01/07/2016; https://vanban.chinhphu.vn/?pageid=27160&docid=180606&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2015/07/84.signed.pdf, bản quét, OCR trang 32–33):
+    - Điều 44 khoản 1: "Người sử dụng lao động hằng tháng đóng tối đa 1% trên quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội của người lao động quy định tại Điều 43 của Luật này vào Quỹ bảo hiểm tai nạn lao động, bệnh nghề nghiệp." Khoản 3: Chính phủ quy định chi tiết mức đóng.
+  - **Luật BHXH 41/2024/QH15 Điều 139 khoản 1 điểm b** (Công báo số 987+988, trang 87–88; có lớp chữ): sửa khoản 1 Điều 43 Luật An toàn, vệ sinh lao động: đối tượng là "người lao động tham gia bảo hiểm xã hội bắt buộc theo quy định tại các điểm a, b, c, d, đ, e, i và l khoản 1 Điều 2 và người sử dụng lao động quy định tại khoản 3 Điều 2 của Luật Bảo hiểm xã hội". Hiệu lực 01/07/2025 (Điều 140 khoản 1).
+  - **Luật BHXH 41/2024 Điều 2 khoản 1:** điểm a: người làm việc theo HĐLĐ từ đủ 01 tháng; điểm i: người quản lý doanh nghiệp… "có hưởng tiền lương"; điểm l: người ở điểm a làm không trọn thời gian, lương tháng bằng hoặc cao hơn mức thấp nhất làm căn cứ đóng; điểm n: người quản lý doanh nghiệp… "không hưởng tiền lương" (không có trong danh sách của Điều 43 mới).
+  - **Tìm văn bản thay Nghị định 58/2020** (vanban.chinhphu.vn, ngày 2026-11-15; tìm "tai nạn lao động", "bảo hiểm tai nạn", "An toàn, vệ sinh lao động"): chỉ thấy Nghị định 58/2020 (mức đóng), 88/2020 (bảo hiểm TNLĐ-BNN bắt buộc), 143/2024 (bảo hiểm tai nạn lao động tự nguyện cho người không có HĐLĐ), Thông tư 28/2021 và 25/2025/TT-BNV (chế độ hưởng), 27/2026/TT-BNV (danh mục công việc nghiêm ngặt về an toàn). Không có nghị định mới về mức đóng.
+- **Kết luận ngắn:**
+  1. Công ty đóng bảo hiểm TNLĐ-BNN cho: nhân viên có HĐLĐ từ đủ 1 tháng, giám đốc hoặc người quản lý có nhận lương, người làm không trọn thời gian đủ mức lương. Không đóng cho giám đốc không nhận lương. (Điều này xác nhận đề xuất ở NC-023 bổ sung 3.)
+  2. Luật cho mức tối đa 1%. Mức cụ thể vẫn là 0,5% (hoặc 0,3% nếu đủ điều kiện) theo Nghị định 58/2020; chưa thấy văn bản thay.
+  3. Nghị định 58/2020 dẫn số điểm của Luật BHXH cũ. Từ 01/07/2025, đối tượng xác định theo Điều 43 mới (Luật 41/2024 Điều 139). Mức đóng không đổi.
+- **Nguồn:** Luật An toàn, vệ sinh lao động 84/2015/QH13 Điều 43, 44; Luật BHXH 41/2024/QH15 Điều 2 khoản 1 điểm a, i, l, n; Điều 139 khoản 1 điểm b; Điều 140 khoản 1; Nghị định 58/2020/NĐ-CP Điều 4 khoản 1 (NC-023 bổ sung 3). Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Ở dòng bảo hiểm TNLĐ-BNN (lịch "Hàng tháng", bước BHXH, ghi chú S2): thêm "Đóng cho nhân viên có hợp đồng lao động từ đủ 1 tháng và giám đốc có nhận lương. Không đóng cho giám đốc không nhận lương." `legal_basis` thêm: Luật An toàn, vệ sinh lao động 84/2015/QH13 Điều 44 khoản 1; Luật BHXH 41/2024/QH15 Điều 139 khoản 1 điểm b (sửa Điều 43); URL như trên; `verified_against_original: true`.
+  - Thay todo "Nghị định 58/2020 dẫn chiếu Luật BHXH cũ…" bằng "Đối tượng theo Điều 43 Luật An toàn, vệ sinh lao động (sửa bởi Luật 41/2024 Điều 139). Chưa thấy nghị định thay Nghị định 58/2020 tại ngày 2026-11-15 (NC-023 bổ sung 4)."
+
+### Vòng 50 (2026-11-15, 22:18 UTC)
+
+- Rà commit Biên tập `ac764cd` (NC-036): thêm câu "được tính, không được tính" vào tiền lương đóng BHXH, `legal_basis` Nghị định 158/2025, sửa todo. Đúng đề xuất, không thấy lỗi.
+- Đọc Luật An toàn, vệ sinh lao động Điều 43, 44 và Luật BHXH 41/2024 Điều 2, 139; tìm văn bản thay Nghị định 58/2020: ghi NC-023 (bổ sung 4).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
