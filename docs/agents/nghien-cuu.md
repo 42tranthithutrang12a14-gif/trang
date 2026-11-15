@@ -1279,6 +1279,33 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `9dd1e40` (NC-031): thêm ghi chú gia hạn năm 2026 vào mục "Hạn nộp" của 3 guide, có ngày hết hiệu lực. Đúng đề xuất, không thấy lỗi.
 - Tìm mẫu bản cam kết (NC-030): đọc Thông tư 89/2026 Phụ lục I mục 7–19 (PDF trang 207–245) và Thông tư 87/2026. Chưa thấy. Ghi NC-032 với các mẫu khai TNCN tiền lương và mức thu nhập người phụ thuộc.
 
+### NC-033 — Bảo hiểm bắt buộc công ty đóng cho người lao động được tính vào chi phí được trừ, chỉ phần vượt mức luật định mới bị loại; chưa có câu chữ riêng cho bảo hiểm của chủ công ty TNHH một thành viên (Nghị định 320/2025 Điều 10 khoản 4 điểm đ, khoản 8 điểm đ)
+
+- **Trạng thái:** đã xác minh (bảo hiểm cho người lao động). Không có câu chữ trực tiếp: phần bảo hiểm công ty đóng cho chủ DNTN, chủ công ty TNHH một thành viên do một cá nhân làm chủ.
+- **Liên quan:** NC-024, NC-025; NC-022, NC-023; nhóm chi "Bảo hiểm cho người lao động" (`so-ke-toan.json` dòng ~55, `in_result: true`); mục "Cần chủ dự án quyết" về cờ "Được trừ khi tính thuế TNDN".
+- **Phát hiện (Nghị định 320/2025/NĐ-CP, bản OCR đã có; trang 28–29, 33–34):**
+  - **Điều 10 khoản 4** mở đầu: "Phần chi vượt mức quy định đối với các khoản chi sau:".
+  - **Khoản 4 điểm đ** (đoạn cuối câu đầu): "Phần vượt mức quy định của pháp luật về bảo hiểm xã hội, về bảo hiểm y tế để trích nộp các quỹ có tính chất an sinh xã hội (bảo hiểm xã hội, bảo hiểm hưu trí bổ sung bắt buộc), Quỹ bảo hiểm y tế và Quỹ bảo hiểm thất nghiệp cho người lao động". Nghĩa là: phần bảo hiểm bắt buộc trong mức luật định thì không bị loại.
+  - Cùng điểm đ: phần chi vượt 05 triệu đồng/tháng/người cho bảo hiểm hưu trí bổ sung, hưu trí tự nguyện, nhân thọ cho người lao động thì không được trừ. Điểm đ1: phải ghi điều kiện, mức hưởng trong hợp đồng lao động, thỏa ước hoặc quy chế. Điểm đ2: không được trừ các khoản này nếu DN chưa đóng đủ bảo hiểm bắt buộc (kể cả đang nợ).
+  - **Khoản 4 điểm d:** bảo hiểm tai nạn bắt buộc theo luật chuyên ngành không tính vào nhóm phúc lợi (giới hạn 1 tháng lương).
+  - **Khoản 8 điểm đ:** không được trừ "Tiền lương, tiền công của chủ doanh nghiệp tư nhân, chủ công ty trách nhiệm hữu hạn một thành viên do một cá nhân làm chủ; thù lao trả cho các sáng lập viên, thành viên của hội đồng thành viên, hội đồng quản trị mà những người này không trực tiếp tham gia điều hành sản xuất, kinh doanh". Khoản này không nhắc tiền bảo hiểm.
+- **Kết luận ngắn:**
+  1. Phần công ty đóng BHXH, BHYT, BHTN, bảo hiểm tai nạn lao động – bệnh nghề nghiệp cho người lao động, đúng tỷ lệ luật định (NC-023), được tính vào chi phí được trừ. Cờ `in_result: true` của nhóm "Bảo hiểm cho người lao động" là đúng.
+  2. Đóng trên mức lương cao hơn mức luật cho phép thì phần vượt bị loại.
+  3. Bảo hiểm của chủ công ty TNHH một thành viên (do một cá nhân làm chủ) hoặc chủ DNTN: Nghị định không nói rõ. Hai điểm cần lưu ý:
+     - Người quản lý không hưởng lương tự đóng 25% BHXH và BHYT (NC-022, NC-023); đây là nghĩa vụ của cá nhân. Nếu công ty trả thay thì có rủi ro bị coi là không liên quan đến hoạt động kinh doanh.
+     - Lương của chủ không được trừ (khoản 8 điểm đ). Phần bảo hiểm tính trên lương đó có được trừ không: chưa có văn bản. Ghi vào todo, không đoán.
+- **Nguồn:** Nghị định 320/2025/NĐ-CP Điều 10 khoản 4 (mở đầu, điểm d, điểm đ, đ1, đ2), khoản 8 điểm đ. Trang văn bản như NC-012, NC-025. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Nhóm "Bảo hiểm cho người lao động" (`so-ke-toan.json`): thêm vào `example` hoặc ghi chú: "Chỉ tính phần công ty đóng đúng tỷ lệ luật định. Không ghi vào đây tiền bảo hiểm của giám đốc không nhận lương (người đó tự đóng)." `legal_basis`: Nghị định 320/2025/NĐ-CP Điều 10 khoản 4 điểm đ; `verified_against_original: true`.
+  - Thêm todo: "Bảo hiểm công ty đóng cho chủ DNTN, chủ công ty TNHH một thành viên do cá nhân làm chủ có được trừ khi tính thuế TNDN không: Nghị định 320/2025 không nói rõ (NC-033)."
+  - Đây là điểm rủi ro cao. Nếu chủ dự án muốn, có thể ghi một câu ngắn trong sổ: "Trường hợp chủ công ty tự trả lương và đóng bảo hiểm cho mình, nên hỏi cơ quan thuế quản lý hoặc kế toán trước khi tính vào chi phí, vì văn bản chưa nói rõ."
+
+### Vòng 44 (2026-11-15, 10:18 UTC)
+
+- Rà commit Biên tập `01ca314` (NC-032): thêm mẫu 05/KK-TNCN, 05/QTT-TNCN, 08/UQ-QTT-TNCN và mức 3 triệu cho người phụ thuộc; không thêm ô giấy tờ tùy thân. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 320/2025 Điều 10 khoản 4, 8 về bảo hiểm: ghi NC-033.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
