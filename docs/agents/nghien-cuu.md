@@ -1306,6 +1306,36 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `01ca314` (NC-032): thêm mẫu 05/KK-TNCN, 05/QTT-TNCN, 08/UQ-QTT-TNCN và mức 3 triệu cho người phụ thuộc; không thêm ô giấy tờ tùy thân. Đúng đề xuất, không thấy lỗi.
 - Đọc Nghị định 320/2025 Điều 10 khoản 4, 8 về bảo hiểm: ghi NC-033.
 
+### NC-034 — Hạn đóng BHYT, BHTN của công ty: cùng hạn với BHXH, chậm nhất ngày cuối cùng của tháng tiếp theo (Luật BHYT Điều 15 khoản 8, sửa bởi Luật 51/2024; Luật Việc làm 74/2025 Điều 33 khoản 2, 3)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-023, NC-023 (bổ sung), NC-023 (bổ sung 2); todo "hạn đóng BHYT, BHTN: chưa xác minh" ở lịch "Hàng tháng" (`bat-dau.json`), bước BHXH (`tu-0-den-1.json`), `legal-framework.json`.
+- **Phát hiện:**
+  - **Luật 51/2024/QH15 sửa Luật BHYT, Điều 1 khoản 13 điểm b (Công báo số 1523+1524, trang 13; có lớp chữ):** bổ sung khoản 8 Điều 15 Luật BHYT: "8. Thời hạn đóng bảo hiểm y tế chậm nhất đối với người sử dụng lao động được quy định như sau: a) Ngày cuối cùng của tháng tiếp theo đối với phương thức đóng hằng tháng; b) Ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng đối với phương thức đóng 03 tháng hoặc 06 tháng một lần."
+  - Cùng điểm b, khoản 7 mới Điều 15: người quản lý DN không hưởng lương (điểm b khoản 1 Điều 12) tự đóng đủ phần BHYT của mình, trực tiếp cho cơ quan BHXH hoặc qua DN, hằng tháng, 3 tháng hoặc 6 tháng một lần.
+  - Điều 1 khoản 13 điểm a (khoản 2 mới Điều 15): DN nông, lâm, ngư, diêm nghiệp trả lương theo sản phẩm, khoán được đóng hằng tháng, 3 hoặc 6 tháng một lần.
+  - **Luật Việc làm 74/2025/QH15 (PDF trang 15–16, OCR):**
+    - Điều 33 khoản 2: "Hằng tháng, người sử dụng lao động đóng bảo hiểm thất nghiệp theo mức quy định tại điểm b khoản 1 Điều này và trích tiền lương của từng người lao động theo mức quy định tại điểm a khoản 1 Điều này để đóng cùng một lúc vào Quỹ bảo hiểm thất nghiệp." Trường hợp nông, lâm, ngư, diêm nghiệp trả lương theo sản phẩm, khoán: đóng hằng tháng, 3 hoặc 6 tháng; "Thời hạn đóng chậm nhất là ngày cuối cùng của tháng tiếp theo ngay sau chu kỳ đóng."
+    - Điều 33 khoản 3: "Thời điểm đóng bảo hiểm thất nghiệp của người sử dụng lao động và người lao động là thời điểm đóng bảo hiểm xã hội bắt buộc." Hạn BHXH là ngày cuối cùng của tháng tiếp theo (Luật BHXH 41/2024 Điều 34 khoản 4; NC-023).
+    - Điều 33 khoản 4: "Người lao động không hưởng tiền lương từ 14 ngày làm việc trở lên trong tháng thì không phải đóng bảo hiểm thất nghiệp của tháng đó."
+- **Kết luận ngắn:**
+  1. Công ty đóng BHXH, BHYT, BHTN cùng một lúc mỗi tháng. Hạn chậm nhất là ngày cuối cùng của tháng tiếp theo. Ví dụ: tiền lương tháng 3 thì đóng chậm nhất ngày 30/4.
+  2. Nhân viên nghỉ không lương từ 14 ngày làm việc trở lên trong tháng thì tháng đó không đóng BHTN.
+  3. Giám đốc không nhận lương tự đóng BHYT (NC-023 bổ sung), có thể đóng qua công ty, hằng tháng hoặc 3, 6 tháng một lần.
+- **Nguồn:**
+  - Luật 51/2024/QH15 Điều 1 khoản 13 điểm a, b (khoản 2, 7, 8 Điều 15 Luật BHYT); https://vanban.chinhphu.vn/?pageid=27160&docid=212479&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/01/luat51.pdf.
+  - Luật Việc làm 74/2025/QH15 Điều 33 khoản 2, 3, 4; https://vanban.chinhphu.vn/?pageid=27160&docid=214560&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/74qh15.signed.pdf.
+  - Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Lịch "Hàng tháng" (`bat-dau.json`) dòng BHYT, BHTN: hạn "Cùng lúc với BHXH: chậm nhất ngày cuối cùng của tháng tiếp theo". Thêm câu "Nhân viên nghỉ không lương từ 14 ngày làm việc trở lên trong tháng thì tháng đó không đóng BHTN." `legal_basis`: Luật BHYT Điều 15 khoản 8 điểm a (sửa bởi Luật 51/2024/QH15 Điều 1 khoản 13 điểm b); Luật Việc làm 74/2025/QH15 Điều 33 khoản 2, 3, 4; URL như trên; `verified_against_original: true`.
+  - Nếu `obligation_rules.json` có dòng BHYT/BHTN riêng: hạn giống dòng BHXH. Không đổi cấu trúc engine.
+  - Bỏ todo "hạn đóng BHYT, BHTN: chưa xác minh".
+
+### Vòng 45 (2026-11-15, 12:18 UTC)
+
+- Rà commit Biên tập `2b0072f` (NC-033): sửa `example` nhóm "Bảo hiểm cho người lao động", thêm điểm đ vào `legal_basis`, ghi câu hỏi bảo hiểm của chủ cho chủ dự án. Đúng đề xuất, không thấy lỗi.
+- Kiểm Bảng kê thu mua (đã có ở NC-024). Đọc Luật 51/2024 (Điều 15 Luật BHYT) và Luật Việc làm Điều 33: ghi NC-034.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
