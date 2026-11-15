@@ -1152,6 +1152,39 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `26e60de` (NC-029): chỉ đổi câu todo ở 3 file, đúng đề xuất. Không thấy lỗi.
 - Đọc biểu mẫu đăng ký doanh nghiệp (Thông tư 68/2025, Thông tư 121/2026): ghi NC-029 (bổ sung).
 
+### NC-010 (bổ sung 2) — Bốn luật còn lại sửa Luật Thuế TNDN 67/2025 (116, 127, 133, 143/2025) không sửa Điều 10 (thuế suất 15/17/20%) hay Điều 11 (tính theo % doanh thu); chỉ sửa điều về thu nhập miễn thuế và ưu đãi. Số đúng là Luật 127/2025, không phải 122/2025
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-010, NC-010 (bổ sung); todo "Các luật 116, 122, 133, 143/2025 chưa đối chiếu" ở `tu-0-den-1.json`, `so-ke-toan.json`, `guides/tam-nop-thue-tndn.json`, `legal-framework.json`.
+- **Phát hiện (văn bản gốc, PDF trên datafiles.chinhphu.vn; 116, 127, 133 là bản quét, đã OCR; 143 có lớp chữ):**
+  - **Luật 116/2025/QH15 (Luật An ninh mạng; docid 216499):** Điều 43 khoản 9: "Thay thế cụm từ 'an toàn thông tin mạng' bằng cụm từ 'an ninh mạng' tại điểm b khoản 2 Điều 12 của Luật Thuế thu nhập doanh nghiệp số 67/2025/QH15…". Chỉ đổi chữ. Hiệu lực 01/07/2026 (Điều 44 khoản 1).
+  - **Luật 127/2025/QH15 (Luật Thi hành án hình sự; docid 216548):** Điều 178 sửa khoản 6 Điều 4 (thu nhập miễn thuế): "6. Thu nhập từ hoạt động giáo dục nghề nghiệp, đào tạo nghề nghiệp dành riêng cho người dân tộc thiểu số, người khuyết tật, trẻ em có hoàn cảnh đặc biệt, đối tượng tệ nạn xã hội; hoạt động tổ chức lao động, hướng nghiệp, dạy nghề cho phạm nhân." Hiệu lực 01/07/2026 (Điều 179 khoản 1).
+  - **Luật 133/2025/QH15 (Luật Công nghệ cao; docid 216530):** khoản 7 của điều sửa các luật liên quan (ngay trước Điều 26; OCR không đọc được số điều) sửa Luật Thuế TNDN:
+    - điểm a, e khoản 2 Điều 12; thêm điểm e1, e2;
+    - thêm khoản 1a Điều 13 (10% trong 25 năm cho doanh nghiệp công nghệ chiến lược, công nghệ cao nhóm 1); thêm điểm d khoản 4 Điều 13; sửa khoản 7 Điều 13;
+    - sửa điểm a khoản 1, khoản 4 Điều 14; thêm khoản 1a Điều 20.
+    - Hiệu lực 01/07/2026 (Điều 26 khoản 1).
+  - **Luật 143/2025/QH15 (Luật Đầu tư; docid 216524):** Điều 50 khoản 2 sửa điểm h khoản 2 Điều 12 (dự án ưu đãi và hỗ trợ đầu tư đặc biệt). Câu dẫn ghi Luật 67/2025 "đã được sửa đổi, bổ sung một số điều theo Luật số 116/2025/QH15, Luật số 127/2025/QH15, Luật số 133/2025/QH15 và Luật số 141/2025/QH15". Hiệu lực 01/03/2026 (Điều 51 khoản 1).
+  - **Luật 122/2025/QH15** là Luật Thương mại điện tử (docid 216503). Tôi đã OCR toàn bộ 28 trang: không nhắc Luật Thuế TNDN. Câu "122/2025" trong ghi chú cũ (lấy từ phần mở đầu Luật 09/2026, OCR) có thể do đọc nhầm; số đúng theo Luật 143/2025 là 127/2025.
+- **Kết luận ngắn:**
+  1. Cả năm luật sửa Luật 67/2025 (116, 127, 133, 141, 143/2025) đều không sửa Điều 10 hay Điều 11. Thuế suất 15/17/20% và cách tính theo % doanh thu (NC-010) giữ nguyên.
+  2. Các sửa đổi chỉ chạm thu nhập miễn thuế (Điều 4) và ưu đãi cho công nghệ cao, công nghệ chiến lược, dự án đặc biệt (Điều 12, 13, 14, 20). DN siêu nhỏ thông thường không bị ảnh hưởng.
+- **Nguồn:**
+  - Luật 116/2025/QH15 Điều 43 khoản 9, Điều 44 khoản 1: https://vanban.chinhphu.vn/?pageid=27160&docid=216499&classid=1
+  - Luật 127/2025/QH15 Điều 178, Điều 179 khoản 1: https://vanban.chinhphu.vn/?pageid=27160&docid=216548&classid=1
+  - Luật 133/2025/QH15 (khoản 7 điều sửa luật liên quan), Điều 26 khoản 1: https://vanban.chinhphu.vn/?pageid=27160&docid=216530&classid=1
+  - Luật 143/2025/QH15 Điều 50 khoản 2, Điều 51 khoản 1: https://vanban.chinhphu.vn/?pageid=27160&docid=216524&classid=1
+  - Luật 122/2025/QH15: https://vanban.chinhphu.vn/?pageid=27160&docid=216503&classid=1
+  - Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Ở 4 file có todo NC-010 (`tu-0-den-1.json`, `so-ke-toan.json`, `guides/tam-nop-thue-tndn.json`, `legal-framework.json`): thay câu "Các luật 116, 122, 133, 143/2025 chưa đối chiếu" bằng: "Đã đối chiếu cả 5 luật sửa đổi (116, 127, 133, 141, 143/2025/QH15): không sửa Điều 10, 11; chỉ sửa thu nhập miễn thuế và ưu đãi (NC-010 bổ sung 2)." Sửa luôn số "122/2025" thành "127/2025" trong danh sách luật sửa đổi.
+  - Không đổi nội dung hiển thị. Có thể bỏ todo NC-010 về luật sửa đổi khỏi mục thuế suất.
+
+### Vòng 40 (2026-11-15, 02:17 UTC)
+
+- Rà commit Biên tập `d8d14b0` (NC-029 bổ sung): thêm câu chọn ô "Khấu trừ" trên giấy đề nghị đăng ký DN, câu đổi phương pháp qua Mẫu số 12, `legal_basis` Thông tư 68/2025 và 121/2026. Đúng đề xuất, không thấy lỗi.
+- Tìm và đọc 5 luật sửa Luật Thuế TNDN: ghi NC-010 (bổ sung 2). Đóng điểm còn mở về luật sửa đổi.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
