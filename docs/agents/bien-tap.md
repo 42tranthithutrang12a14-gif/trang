@@ -455,6 +455,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo cũ: "Sàn tiền lương đóng BHXH… chưa đọc Nghị định 158/2025" (3 chỗ) đổi thành "không đặt sàn bằng lương tối thiểu vùng; là cách hiểu". "Còn chưa xác minh: Nghị định 158/2025; BHYT, BHTN của người quản lý không lương" (4 chỗ) đổi thành đã đối chiếu (NC-036, NC-023 bổ sung).
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 50 (2026-11-15, 23:18 UTC)
+
+- Đọc NC-023 (bổ sung 4): bảo hiểm TNLĐ-BNN đóng cho nhân viên có HĐLĐ từ đủ 1 tháng, người quản lý có hưởng lương, người làm không trọn thời gian; không đóng cho người quản lý không hưởng lương. Trần 1% (Luật An toàn, vệ sinh lao động 84/2015 Điều 44; Điều 43 sửa bởi Luật 41/2024 Điều 139). Mức 0,5% / 0,3% giữ theo Nghị định 58/2020. Status giữ "draft".
+- Thêm câu "Đóng cho nhân viên có hợp đồng lao động từ đủ 1 tháng và giám đốc có nhận lương. Không đóng cho giám đốc không nhận lương." vào dòng TNLĐ-BNN ở `bat-dau.json` (lịch "Hàng tháng"), `tu-0-den-1.json` (bước `lao-dong-bhxh`), `so-ke-toan.json` (ghi chú S2), `legal-framework.json` (mục BHXH).
+- Thêm `legal_basis` Luật 84/2015/QH13 Điều 44 khoản 1 ở ba file đầu (sau mục Nghị định 58/2020).
+- Todo "Nghị định 58/2020 dẫn chiếu Luật BHXH 58/2014… chưa xác minh phần 0,5% có tính cho người quản lý không lương không" (4 chỗ): thay bằng ghi chú đối tượng theo Điều 43 mới, chưa thấy nghị định thay Nghị định 58/2020.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
