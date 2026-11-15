@@ -52,7 +52,7 @@
   "expense_groups": [
     { "name": "Mua hàng hóa, nguyên vật liệu", "in_result": true, "example": "Hàng để bán lại, nguyên liệu để làm ra sản phẩm" },
     { "name": "Lương, tiền công", "in_result": true, "example": "Lương nhân viên, tiền thuê người làm theo việc. Lương của chủ công ty TNHH một thành viên (chủ là cá nhân) không được trừ khi tính thuế TNDN" },
-    { "name": "Bảo hiểm cho người lao động", "in_result": true, "example": "Phần công ty đóng bảo hiểm xã hội, y tế, thất nghiệp" },
+    { "name": "Bảo hiểm cho người lao động", "in_result": true, "example": "Phần công ty đóng bảo hiểm xã hội, y tế, thất nghiệp, tai nạn lao động cho người lao động, đúng tỷ lệ luật định. Không ghi vào đây bảo hiểm của giám đốc không nhận lương (người đó tự đóng)" },
     { "name": "Thuê mặt bằng, văn phòng", "in_result": true, "example": "Tiền thuê cửa hàng, kho, văn phòng" },
     { "name": "Điện, nước, internet, điện thoại", "in_result": true, "example": "Hóa đơn điện, nước, cước mạng, cước điện thoại" },
     { "name": "Vận chuyển, giao hàng", "in_result": true, "example": "Phí ship, xăng xe, thuê xe chở hàng" },
@@ -335,7 +335,7 @@
       "issuer": "Chính phủ",
       "issued_date": "2025-12-15",
       "effective_date": "2025-12-15",
-      "article": "Điều 10 khoản 1, 2, 4 điểm d, 8 điểm a, b, c, đ, 9, 10, 12, 14, 17, 22",
+      "article": "Điều 10 khoản 1, 2, 4 điểm d, đ, 8 điểm a, b, c, đ, 9, 10, 12, 14, 17, 22",
       "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
       "verified_against_original": true,
       "checked_at": "2026-11-14",
@@ -395,6 +395,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-15 (NC-033, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10 khoản 4 mở đầu, điểm d, đ; khoản 8 điểm đ): bảo hiểm bắt buộc công ty đóng cho người lao động trong mức luật định được trừ, chỉ phần vượt bị loại; cờ in_result của nhóm \"Bảo hiểm cho người lao động\" giữ true. Chưa xác minh: bảo hiểm công ty đóng cho chủ DNTN, chủ công ty TNHH một thành viên do cá nhân làm chủ có được trừ khi tính thuế TNDN không (Nghị định 320/2025 không nói rõ). Rủi ro cao; nếu chủ dự án đồng ý, thêm câu khuyên hỏi cơ quan thuế quản lý hoặc kế toán trước khi tính khoản này vào chi phí.",
     "Ngày 2026-11-15 (NC-032, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Phụ lục I mục 7.1 điểm a.1, a.2, b và Thông tư 87/2026/TT-BTC Điều 3 khoản 1, Điều 4): thêm tên mẫu 05/KK-TNCN, 05/QTT-TNCN; điều kiện thu nhập người phụ thuộc không quá 3 triệu đồng/tháng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974 và https://vanban.chinhphu.vn/?pageid=27160&docid=218772&classid=1",
     "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Ngày 2026-11-12 (NC-009) đã đối chiếu danh mục sổ và cột với Thông tư 132/2018/TT-BTC (Điều 3, 11, 17, Phụ lục 3, 4): sửa notice, thêm 4 trang S1-DNSN đến S4-DNSN để trống, đúng cột theo mẫu. Cột của S3 theo mô tả NC-009 (nhập, xuất, tồn); chưa rõ mẫu có tách số lượng, thành tiền không.",
     "Còn làm: cho S1-DNSN, S4-DNSN lấy số từ Nhật ký. Cần trước: (1) phương pháp ghi từng cột S1–S4 (Phụ lục 4 mục 2), ví dụ S1 ghi doanh thu có hay chưa có thuế GTGT; (2) cách ghi doanh thu bán chịu trong Nhật ký thu chi (sổ hiện ghi theo tiền). Chưa làm sổ Chương II (S01-DNSN Nhật ký – Sổ Cái, S02–S10): cần ghi Nợ/Có theo tài khoản.",

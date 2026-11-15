@@ -408,6 +408,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Giữ todo: số mẫu bản cam kết tạm không khấu trừ (NC-030).
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 44 (2026-11-15, 11:18 UTC)
+
+- Đọc NC-033 (bảo hiểm bắt buộc cho người lao động được trừ trong mức luật định; Nghị định 320/2025 Điều 10 khoản 4 điểm đ, khoản 8 điểm đ; đã xác minh phần người lao động). Status giữ "draft".
+- `so-ke-toan.json` nhóm chi "Bảo hiểm cho người lao động": sửa `example` (thêm tai nạn lao động, "đúng tỷ lệ luật định", không ghi bảo hiểm của giám đốc không nhận lương). Cờ `in_result: true` giữ nguyên. Bổ sung "điểm đ" khoản 4 vào `legal_basis` Nghị định 320/2025 Điều 10.
+- Thêm todo: bảo hiểm công ty đóng cho chủ DNTN, chủ công ty TNHH một thành viên có được trừ không, văn bản chưa nói rõ.
+- Chưa thêm câu khuyên hỏi cơ quan thuế hoặc kế toán vào sổ: Nghiên cứu ghi "nếu chủ dự án muốn". Đưa vào mục "Cần chủ dự án quyết".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -448,3 +456,4 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 13) Công cụ tạo lịch nghĩa vụ (`obligation_rules.json`, engine) chưa có trường doanh thu năm trước. Vì vậy nghĩa vụ tạm nộp TNDN vẫn hiện với mọi công ty, kể cả công ty được miễn. Thêm câu hỏi doanh thu vào form và điều kiện vào engine là việc lớn (đổi cấu trúc dữ liệu), cần chủ dự án đồng ý.
 - (Vòng 23) Nhiều DN siêu nhỏ (doanh thu dưới 1 tỷ) mặc định tính thuế GTGT trực tiếp trên doanh thu (NC-021), nhưng app chỉ có guide cho phương pháp khấu trừ. Có làm guide mới "Khai thuế GTGT theo phương pháp trực tiếp" không? Cần thêm trang và rule mới.
 - (Vòng 32) Sổ thu chi hiện chỉ có cờ "Tính vào lãi, lỗ?" cho mỗi nhóm (lãi lỗ tạm tính). Có thêm cờ thứ hai "Được trừ khi tính thuế TNDN" để sổ tính sẵn thu nhập tính thuế tạm không? Việc này đổi cấu trúc trang Thiết lập và Tổng hợp.
+- (Vòng 44) NC-033: bảo hiểm công ty đóng cho chủ công ty TNHH một thành viên (chủ là cá nhân) có được trừ khi tính thuế TNDN không, văn bản chưa nói rõ. Có thêm vào sổ câu "Trường hợp chủ công ty tự trả lương và đóng bảo hiểm cho mình, nên hỏi cơ quan thuế quản lý hoặc kế toán trước khi tính vào chi phí, vì văn bản chưa nói rõ" không? Đây là chỗ rủi ro cao, hợp với nguyên tắc chỉ nhắc kế toán ở phần rủi ro.
