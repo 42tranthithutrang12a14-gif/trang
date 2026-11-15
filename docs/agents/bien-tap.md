@@ -424,6 +424,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "Còn chưa xác minh: hạn đóng BHYT, BHTN của DN" ở `bat-dau.json`, `tu-0-den-1.json` (2 chỗ), `legal-framework.json`: thay bằng ghi chú đã đối chiếu. `obligation_rules.json` không có dòng BHYT, BHTN riêng nên không đổi.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 46 (2026-11-15, 15:18 UTC)
+
+- Đọc NC-030 (bổ sung): không có mẫu bản cam kết trong Thông tư 89/2026 (Phụ lục I, III, IV) và Thông tư 87/2026. Nghiên cứu không đoán số mẫu.
+- Đúng đề xuất, không đổi nội dung hiển thị. Todo "Mẫu bản cam kết… chưa xác minh" ở `bat-dau.json` (2 chỗ), `legal-framework.json`, `tu-0-den-1.json`, `so-ke-toan.json`: đổi thành câu mới (không có trong hai thông tư; hỏi cơ quan thuế hoặc xem văn bản hướng dẫn mới). Ở hai file có nhắc "mẫu danh sách cuối năm", giữ ý này là chưa xác minh. Status giữ "draft".
+- Ghi nhận cho trang thao tác (sau này): mẫu 05/KK-TNCN ở PDF trang 307, 05/QTT-TNCN trang 312, 08/UQ-QTT-TNCN trang 376 của Thông tư 89/2026.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
