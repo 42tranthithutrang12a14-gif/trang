@@ -160,6 +160,19 @@
   "form_rows": 200,
   "legal_basis": [
     {
+      "doc_type": "Nghị định",
+      "doc_number": "253/2026/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Thuế thu nhập cá nhân",
+      "issuer": "Chính phủ",
+      "issued_date": "2026-06-30",
+      "effective_date": "2026-07-01",
+      "article": "Điều 50 khoản 2",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218684&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-15",
+      "snapshot_path": ""
+    },
+    {
       "doc_type": "Thông tư",
       "doc_number": "132/2018/TT-BTC",
       "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
@@ -382,7 +395,7 @@
     "Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): cập nhật lưu ý tỷ lệ BHYT, BHTN cho sổ S2-DNSN. Bảo hiểm tai nạn lao động – bệnh nghề nghiệp chưa xác minh.",
     "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN vào lưu ý S2-DNSN. Nghị định 58/2020/NĐ-CP dẫn chiếu Luật BHXH 58/2014 (đã được thay bởi Luật 41/2024 từ 01/07/2025); chưa thấy văn bản thay thế trên vanban.chinhphu.vn (tra ngày 2026-11-14); Luật An toàn, vệ sinh lao động 84/2015 chưa đọc. Chưa xác minh phần 0,5% có tính cho người quản lý không lương không.",
     "Ngày 2026-11-14 (NC-025, đã đối chiếu toàn văn Nghị định 320/2025/NĐ-CP Điều 10): thêm lưu ý khoản chi không được trừ; thêm 2 nhóm chi \"Tiền phạt, tiền chậm nộp\" và \"Từ thiện, tài trợ\"; ghi chú nhóm lương. Cột \"Tính vào lãi, lỗ?\" vẫn là lãi lỗ tạm tính, chưa phải thu nhập tính thuế; có thêm cờ \"được trừ khi tính thuế\" hay không: chờ chủ dự án quyết. Chưa xác minh: phần BHXH công ty đóng cho chủ công ty TNHH một thành viên có được trừ khi tính thuế TNDN không. Áp ngưỡng 5 triệu chuyển khoản cho tiền lương là cách hiểu (\"các khoản thanh toán khác từng lần\").",
-    "Ngày 2026-11-14 (NC-026 bổ sung, đã đối chiếu toàn văn Luật Thuế TNCN 109/2025/QH15 Điều 8–10, 21, 29 và Nghị quyết 110/2025/UBTVQH15): thêm trang \"Tính thuế TNCN\" (giảm trừ, biểu thuế 5 bậc). Nghị quyết 43/2026/QH16 chỉ giảm TNCN từ kinh doanh, không áp dụng cho tiền lương (NC-027). Chưa xác minh: khấu trừ với lao động thời vụ, không ký HĐLĐ (Nghị định 253/2026, Thông tư 87/2026).",
+    "Ngày 2026-11-14 (NC-026 bổ sung, đã đối chiếu toàn văn Luật Thuế TNCN 109/2025/QH15 Điều 8–10, 21, 29 và Nghị quyết 110/2025/UBTVQH15): thêm trang \"Tính thuế TNCN\" (giảm trừ, biểu thuế 5 bậc). Nghị quyết 43/2026/QH16 chỉ giảm TNCN từ kinh doanh, không áp dụng cho tiền lương (NC-027). Ngày 2026-11-15 (NC-030, đã đối chiếu toàn văn Nghị định 253/2026/NĐ-CP Điều 50 khoản 2): thêm cách khấu trừ 10% cho người không ký HĐLĐ hoặc ký dưới 3 tháng. Mẫu bản cam kết và mẫu danh sách cuối năm: chưa xác minh số mẫu (NC-030).",
     "Ngày 2026-11-14 (NC-027, đã đối chiếu toàn văn Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP): sửa ghi chú trang Tính thuế TNCN; thêm ghi chú giảm 30% ở trang thuế TNDN theo % doanh thu. Chưa xác minh: cách xử lý số TNDN đã tạm nộp các quý năm 2026 trước ngày 29/10/2026 (Nghị định 398/2026 không nói rõ)."
   ],
   "cit_rate_sheet": {
@@ -428,7 +441,7 @@
     "intro": [
       "Dành cho nhân viên cư trú có hợp đồng lao động, từ kỳ tính thuế năm 2026 (Luật Thuế TNCN 109/2025/QH15 Điều 8, 9, 10).",
       "Thu nhập tính thuế = lương chịu thuế − bảo hiểm bắt buộc nhân viên đóng − giảm trừ bản thân − giảm trừ người phụ thuộc. Thuế tính lũy tiến từng phần theo biểu dưới.",
-      "Nghị quyết 43/2026/QH16 chỉ giảm 30% thuế TNCN từ kinh doanh, không áp dụng cho tiền lương. Lao động thời vụ, không ký hợp đồng: cách khấu trừ khác, chưa có trong sổ tay."
+      "Nghị quyết 43/2026/QH16 chỉ giảm 30% thuế TNCN từ kinh doanh, không áp dụng cho tiền lương. Người làm không ký hợp đồng lao động, hoặc ký dưới 3 tháng: mỗi lần trả từ 5 triệu đồng trở lên thì khấu trừ 10% trên số tiền trả, trước khi trả. Trả dưới 5 triệu/lần thì chỉ khấu trừ khi người đó yêu cầu. Người đó có thể làm bản cam kết thu nhập cả năm chưa đến mức chịu thuế để công ty tạm không khấu trừ. Cuối năm công ty vẫn phải báo danh sách cho cơ quan thuế. Bảng này tính theo biểu lũy tiến, không dùng cho trường hợp đó."
     ],
     "self_deduction": 15500000,
     "dependant_deduction": 6200000,

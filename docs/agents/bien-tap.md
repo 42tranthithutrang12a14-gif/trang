@@ -383,6 +383,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Đúng đề xuất, không đổi nội dung hiển thị. Ở `tu-0-den-1.json`, `so-ke-toan.json`, `guides/tam-nop-thue-tndn.json`, `legal-framework.json`: sửa "122/2025" thành "127/2025", thay câu "các luật … chưa đối chiếu" bằng "Đã đối chiếu cả 5 luật sửa đổi: không sửa Điều 10, 11". Giữ câu này trong todo làm dấu vết, chưa xóa. Status giữ "draft".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 41 (2026-11-15, 05:18 UTC)
+
+- Đọc NC-030 (khấu trừ 10% cho người không ký HĐLĐ hoặc ký dưới 3 tháng khi trả từ 5 triệu đồng/lần; Nghị định 253/2026 Điều 50 khoản 2; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json` bước `thue-tncn-nhan-vien`: thêm đoạn khấu trừ 10%, dưới 5 triệu chỉ khấu trừ khi người đó yêu cầu, bản cam kết, báo danh sách cuối năm. Thêm `legal_basis` Nghị định 253/2026.
+- `so-ke-toan.json` trang "Tính thuế TNCN": thay câu "cách khấu trừ khác, chưa có trong sổ tay" bằng đoạn trên, kèm "Bảng này tính theo biểu lũy tiến, không dùng cho trường hợp đó." Thêm `legal_basis`.
+- Todo: thay "Chưa xác minh: khấu trừ với lao động thời vụ" ở `tu-0-den-1.json`, `so-ke-toan.json`. Ở `bat-dau.json` (2 chỗ) và `legal-framework.json`, todo cũ còn ghi biểu thuế, giảm trừ "chưa xác minh" dù NC-026 bổ sung đã xác minh; sửa luôn. Còn mở: số mẫu bản cam kết và danh sách cuối năm.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
