@@ -416,6 +416,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Chưa thêm câu khuyên hỏi cơ quan thuế hoặc kế toán vào sổ: Nghiên cứu ghi "nếu chủ dự án muốn". Đưa vào mục "Cần chủ dự án quyết".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 45 (2026-11-15, 13:18 UTC)
+
+- Đọc NC-034 (hạn đóng BHYT, BHTN cùng hạn BHXH: ngày cuối cùng của tháng tiếp theo; Luật BHYT Điều 15 khoản 8 sửa bởi Luật 51/2024; Luật Việc làm 74/2025 Điều 33 khoản 2, 3, 4; đã xác minh). Status giữ "draft".
+- `bat-dau.json` lịch "Hàng tháng", dòng BHYT, BHTN: hạn "Chưa xác minh" đổi thành "Cùng lúc với BHXH: ngày cuối cùng của tháng tiếp theo"; thêm câu nghỉ không lương từ 14 ngày làm việc thì không đóng BHTN. Bổ sung điều khoản vào `legal_basis` (Luật 51/2024: Điều 15 khoản 8 điểm a; Luật 74/2025: Điều 33 khoản 3, 4).
+- `tu-0-den-1.json` bước đăng ký BHXH cho người lao động: thêm "BHYT, BHTN đóng cùng lúc và cùng hạn với BHXH"; câu 14 ngày nay ghi "BHXH và BHTN". Bổ sung điều khoản vào `legal_basis` của bước này.
+- Todo "Còn chưa xác minh: hạn đóng BHYT, BHTN của DN" ở `bat-dau.json`, `tu-0-den-1.json` (2 chỗ), `legal-framework.json`: thay bằng ghi chú đã đối chiếu. `obligation_rules.json` không có dòng BHYT, BHTN riêng nên không đổi.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
