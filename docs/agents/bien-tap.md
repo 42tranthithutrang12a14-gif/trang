@@ -377,6 +377,12 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Sự cố trong vòng: lần sửa đầu chèn chuỗi chưa escape làm hỏng JSON, test và build báo lỗi; đã sửa trước khi commit.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 40 (2026-11-15, 03:18 UTC)
+
+- Đọc NC-010 (bổ sung 2): cả 5 luật sửa Luật Thuế TNDN 67/2025 (116, 127, 133, 141, 143/2025) không sửa Điều 10, 11. Số đúng là 127/2025, không phải 122/2025.
+- Đúng đề xuất, không đổi nội dung hiển thị. Ở `tu-0-den-1.json`, `so-ke-toan.json`, `guides/tam-nop-thue-tndn.json`, `legal-framework.json`: sửa "122/2025" thành "127/2025", thay câu "các luật … chưa đối chiếu" bằng "Đã đối chiếu cả 5 luật sửa đổi: không sửa Điều 10, 11". Giữ câu này trong todo làm dấu vết, chưa xóa. Status giữ "draft".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
