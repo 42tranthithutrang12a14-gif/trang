@@ -1185,6 +1185,35 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `d8d14b0` (NC-029 bổ sung): thêm câu chọn ô "Khấu trừ" trên giấy đề nghị đăng ký DN, câu đổi phương pháp qua Mẫu số 12, `legal_basis` Thông tư 68/2025 và 121/2026. Đúng đề xuất, không thấy lỗi.
 - Tìm và đọc 5 luật sửa Luật Thuế TNDN: ghi NC-010 (bổ sung 2). Đóng điểm còn mở về luật sửa đổi.
 
+### NC-030 — Trả tiền công cho người không ký hợp đồng lao động hoặc ký dưới 3 tháng: khấu trừ 10% khi trả từ 5 triệu đồng/lần trở lên; dưới 5 triệu thì chỉ khấu trừ khi người đó yêu cầu; được cam kết tạm không khấu trừ (Nghị định 253/2026 Điều 50 khoản 2)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-026, NC-026 (bổ sung); todo "Khấu trừ với lao động thời vụ, không ký HĐLĐ: chưa xác minh" ở `so-ke-toan.json` (trang Tính thuế TNCN), `tu-0-den-1.json` (bước Thuế TNCN của nhân viên), `legal-framework.json` (mục Luật Thuế TNCN).
+- **Phát hiện (văn bản gốc: Nghị định 253/2026/NĐ-CP quy định chi tiết Luật Thuế TNCN; ban hành 30/06/2026; PDF 61 trang, bản quét, đã OCR; con số "05 triệu" đã OCR lại ở 400 dpi để chắc chắn):**
+  - **Điều 50 khoản 1:** tổ chức trả thu nhập khấu trừ theo thu nhập tính thuế tháng và Biểu thuế lũy tiến từng phần (Điều 9 Luật Thuế TNCN), trừ các trường hợp ở khoản 2, 3.
+  - **Điều 50 khoản 2 đoạn 1:** "Tổ chức, cá nhân trả tiền lương, tiền công, tiền thù lao, tiền chi khác cho cá nhân cư trú không ký hợp đồng hoặc ký hợp đồng lao động dưới 03 tháng (bao gồm cả trường hợp trả tiền lương, thu nhập khác cho người lao động đã chấm dứt hợp đồng lao động) mà mức chi trả thu nhập từ 05 triệu đồng/lần trở lên thì phải khấu trừ thuế và nộp số thuế đã khấu trừ của cá nhân theo tỷ lệ 10% trên thu nhập trước khi trả thu nhập cho cá nhân. Trường hợp mức chi trả thu nhập dưới 05 triệu đồng/lần thì tổ chức, cá nhân trả thu nhập được khấu trừ thuế theo tỷ lệ 10% khi cá nhân có yêu cầu."
+  - **Đoạn 2–3:** cá nhân chỉ có thu nhập loại này, ước tính tổng thu nhập chịu thuế sau giảm trừ gia cảnh chưa đến mức phải nộp, thì làm cam kết (mẫu theo văn bản hướng dẫn quản lý thuế) gửi tổ chức trả thu nhập để tạm chưa khấu trừ. Cuối năm, tổ chức trả thu nhập vẫn phải tổng hợp danh sách, thu nhập của những người này và nộp cho cơ quan thuế.
+  - **Đoạn 4:** người ký hợp đồng lao động từ 03 tháng trở lên: khấu trừ theo biểu lũy tiến (khoản 1).
+  - **Điều 69 khoản 1 điểm a:** quy định về thu nhập từ tiền lương, tiền công của cá nhân cư trú áp dụng từ kỳ tính thuế năm 2026. Khoản 2: thay thế Nghị định 65/2013/NĐ-CP.
+  - **Điều 70 khoản 2:** đã khai, nộp thuế tiền lương năm 2026 trước 01/07/2026 theo quy định cũ thì không nộp lại tờ khai tháng, quý; điều chỉnh khi quyết toán năm 2026.
+- **Kết luận ngắn:**
+  1. Mốc khấu trừ 10% cho người không ký hợp đồng hoặc ký dưới 3 tháng là **từ 5 triệu đồng/lần** (quy định cũ là 2 triệu; nếu app hoặc ghi chú nào ghi 2 triệu là lỗi thời).
+  2. Trả dưới 5 triệu/lần: không bắt buộc khấu trừ, trừ khi người nhận yêu cầu.
+  3. Người nhận có thể làm cam kết thu nhập cả năm chưa đến mức chịu thuế; khi đó công ty tạm không khấu trừ, nhưng cuối năm vẫn phải báo danh sách cho cơ quan thuế.
+  4. Mẫu cam kết và mẫu danh sách nằm trong văn bản hướng dẫn quản lý thuế (Thông tư 89/2026 hoặc Thông tư 87/2026); tôi chưa tìm số mẫu.
+- **Nguồn:** Nghị định 253/2026/NĐ-CP, Điều 50 khoản 1, 2; Điều 69 khoản 1 điểm a, khoản 2; Điều 70 khoản 2. Trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=218684&classid=1 (ban hành 30/06/2026, hiệu lực 01/07/2026); PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/253m-ndcp.signed.pdf. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - Trang "Tính thuế TNCN" (`so-ke-toan.json`) và bước "Thuế TNCN của nhân viên" (`tu-0-den-1.json`): thêm một đoạn: "Người làm không ký hợp đồng lao động, hoặc ký dưới 3 tháng: mỗi lần trả từ 5 triệu đồng trở lên thì khấu trừ 10% trên số tiền trả, trước khi trả. Trả dưới 5 triệu/lần thì chỉ khấu trừ khi người đó yêu cầu. Người đó có thể làm bản cam kết thu nhập cả năm chưa đến mức chịu thuế để công ty tạm không khấu trừ; cuối năm công ty vẫn phải báo danh sách cho cơ quan thuế." `legal_basis`: Nghị định 253/2026/NĐ-CP Điều 50 khoản 2; URL docid 218684; `verified_against_original: true`.
+  - Thay todo "Khấu trừ với lao động thời vụ, không ký HĐLĐ: chưa xác minh" bằng "Mẫu bản cam kết và mẫu danh sách cuối năm: chưa xác minh số mẫu (NC-030)".
+  - `legal-framework.json` mục Luật Thuế TNCN: bỏ phần "khấu trừ 10% cho lao động thời vụ" khỏi câu "Chưa xác minh…", hoặc thêm một mục Nghị định 253/2026/NĐ-CP (`number` "253/2026/NĐ-CP", `effective_from` "2026-07-01", theo metadata trang văn bản).
+  - Nếu sổ có công cụ tính khấu trừ, không áp biểu lũy tiến cho trường hợp này.
+
+### Vòng 41 (2026-11-15, 04:18 UTC)
+
+- Rà commit Biên tập `3d5f2a4` (NC-010 bổ sung 2): đổi 122/2025 thành 127/2025 và cập nhật todo ở 4 file. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 253/2026 Điều 50, 69, 70: ghi NC-030.
+- Ghi chú để tra sau: Nghị định 245/2026/NĐ-CP (27/06/2026) gia hạn nộp thuế GTGT, TNDN, TNCN, tiền thuê đất năm 2026 (https://vanban.chinhphu.vn/?pageid=27160&docid=218598&classid=1). Chưa đọc; có thể ảnh hưởng hạn nộp trong lịch nghĩa vụ.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
