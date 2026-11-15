@@ -1122,6 +1122,36 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `c802ca0` (NC-028): thêm câu 01/GTGT – 04/GTGT vào hai guide GTGT, 03/TNDN – 04/TNDN vào guide TNDN; status giữ draft. Đúng đề xuất, không thấy lỗi.
 - Tra thủ tục đăng ký tự nguyện khấu trừ: Nghị định 181/2025, Thông tư 69/2025, Thông tư 89/2026, Thông tư 90/2026. Ghi NC-029 (xác minh một phần).
 
+### NC-029 (bổ sung) — Giấy đề nghị đăng ký doanh nghiệp có ô "Phương pháp tính thuế GTGT" (4 lựa chọn) khi thành lập; muốn đổi sau đó thì chọn lại ở phần "Thông báo thay đổi thông tin đăng ký thuế" của Mẫu số 12 (Thông tư 68/2025, sửa bởi Thông tư 121/2026)
+
+- **Trạng thái:** đã xác minh (ô chọn trên biểu mẫu). Chưa xác minh: hạn đăng ký tự nguyện khấu trừ.
+- **Liên quan:** NC-029, NC-021 (bổ sung); `tu-0-den-1.json` bước `phuong-phap-thue-gtgt`; `guides/dang-ky-thay-doi-doanh-nghiep.json`; hai guide khai GTGT.
+- **Phát hiện (văn bản gốc, PDF trên datafiles.chinhphu.vn, OCR):**
+  - **Thông tư 68/2025/TT-BTC** (ban hành biểu mẫu đăng ký doanh nghiệp; ban hành và hiệu lực 01/07/2025):
+    - Mẫu số 1–5 là Giấy đề nghị đăng ký doanh nghiệp: DNTN, TNHH một thành viên, TNHH hai thành viên trở lên, cổ phần, hợp danh. Mỗi mẫu có phần "Thông tin đăng ký thuế". Trong đó có chỉ tiêu "Phương pháp tính thuế GTGT (chọn 1 trong 4 phương pháp)": Khấu trừ; Trực tiếp trên GTGT; Trực tiếp trên doanh số; Không phải nộp thuế GTGT. Số chỉ tiêu: 6.9 (Mẫu 1), 10.9 (Mẫu 2), 9.9 (Mẫu 3), 11.9 (Mẫu 4), 8.9 (Mẫu 5).
+    - Chú thích của chỉ tiêu này: "Chỉ kê khai trong trường hợp thành lập mới. Doanh nghiệp căn cứ vào quy định của pháp luật về thuế giá trị gia tăng và dự kiến hoạt động kinh doanh của doanh nghiệp để xác định 01 trong 04 phương pháp tính thuế giá trị gia tăng tại chỉ tiêu này, trừ trường hợp doanh nghiệp mua bán, chế tác vàng, bạc, đá quý có thể chọn thêm phương pháp trực tiếp trên GTGT…".
+    - Mẫu số 12 (Giấy đề nghị đăng ký thay đổi nội dung đăng ký doanh nghiệp / thông báo thay đổi; PDF trang 57–69): có phần "THÔNG BÁO THAY ĐỔI THÔNG TIN ĐĂNG KÝ THUẾ". Phần này cũng có chỉ tiêu "Phương pháp tính thuế GTGT (chọn 1 trong 4 phương pháp)", đứng sau chỉ tiêu 7 "Tổng số lao động". Chú thích ở đây không có câu "Chỉ kê khai trong trường hợp thành lập mới".
+  - **Thông tư 121/2026/TT-BTC** (sửa Thông tư 68/2025; cổng ghi ban hành và hiệu lực 21/08/2026; https://vanban.chinhphu.vn/?pageid=27160&docid=219269&classid=1):
+    - Điều 1 khoản 1: thay Mẫu số 1, 2, 3, 4, 5, 10, 12, 27, 30. Khoản 2: bãi bỏ Mẫu số 11.
+    - Các mẫu thay thế vẫn giữ chỉ tiêu "Phương pháp tính thuế GTGT" (4 ô), cùng số chỉ tiêu và chú thích như trên (OCR trang 10, 20, 29, 39, 46, 62).
+- **Kết luận ngắn:**
+  1. Khi thành lập, công ty chọn phương pháp tính thuế GTGT ngay trên giấy đề nghị đăng ký doanh nghiệp. Công ty mới muốn khấu trừ (ví dụ có thuê địa điểm, mua tài sản; NC-021 bổ sung) thì đánh dấu ô "Khấu trừ".
+  2. Muốn đổi phương pháp sau khi đã có giấy chứng nhận, công ty nộp Mẫu số 12, ở phần thông báo thay đổi thông tin đăng ký thuế, cho cơ quan đăng ký kinh doanh. Việc này khớp với Thông tư 90/2026 Điều 9 khoản 1 điểm a (NC-029).
+  3. Chưa thấy văn bản nêu hạn đăng ký tự nguyện khấu trừ. Lưu ý: phương pháp được giữ 2 năm (Nghị định 181/2025 Điều 21, NC-021 bổ sung). Vì vậy đổi giữa chừng có thể không được chấp nhận. Chưa có câu chữ trực tiếp, ghi vào todo.
+- **Nguồn:**
+  - Thông tư 68/2025/TT-BTC, Phụ lục I, Mẫu số 1–5 (chỉ tiêu "Phương pháp tính thuế GTGT" và chú thích), Mẫu số 12 (phần thông báo thay đổi thông tin đăng ký thuế). https://vanban.chinhphu.vn/?pageid=27160&docid=214411&classid=1 (PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/68-btc.pdf).
+  - Thông tư 121/2026/TT-BTC Điều 1 khoản 1, 2; các mẫu thay thế. PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/8/121-btc.signed.pdf.
+  - Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - `tu-0-den-1.json` bước `phuong-phap-thue-gtgt`, thêm vào `how`: "Phương pháp tính thuế GTGT được chọn ngay trên giấy đề nghị đăng ký doanh nghiệp (mục Thông tin đăng ký thuế, ô 'Phương pháp tính thuế GTGT'). Muốn tính theo khấu trừ ngay từ đầu thì đánh dấu ô 'Khấu trừ'." `legal_basis` thêm: Thông tư 68/2025/TT-BTC Phụ lục I Mẫu số 1–5, được thay bởi Thông tư 121/2026/TT-BTC Điều 1 khoản 1; URL docid 214411 và 219269 như trên; `verified_against_original: true`.
+  - `guides/dang-ky-thay-doi-doanh-nghiep.json`: nếu có danh sách việc thường gặp, thêm "Đổi phương pháp tính thuế GTGT: khai ở phần Thông báo thay đổi thông tin đăng ký thuế của Mẫu số 12". `legal_basis`: Thông tư 68/2025 Mẫu số 12 (thay bởi Thông tư 121/2026); Thông tư 90/2026 Điều 9 khoản 1 điểm a.
+  - Thay todo NC-029 bằng: "Chưa xác minh hạn đăng ký tự nguyện khấu trừ, và việc đổi phương pháp trong thời gian giữ ổn định 2 năm (Nghị định 181/2025 Điều 21)."
+
+### Vòng 39 (2026-11-15, 00:18 UTC)
+
+- Rà commit Biên tập `26e60de` (NC-029): chỉ đổi câu todo ở 3 file, đúng đề xuất. Không thấy lỗi.
+- Đọc biểu mẫu đăng ký doanh nghiệp (Thông tư 68/2025, Thông tư 121/2026): ghi NC-029 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
