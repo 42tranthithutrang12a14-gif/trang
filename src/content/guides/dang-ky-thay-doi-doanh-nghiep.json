@@ -9,7 +9,7 @@
   "body_sections": [
     {
       "heading": "Những thay đổi nào phải đăng ký?",
-      "content": "Theo Luật Doanh nghiệp 2020, doanh nghiệp phải đăng ký khi thay đổi:\n\n✅ Bắt buộc đăng ký:\n• Tên công ty\n• Địa chỉ trụ sở chính\n• Người đại diện theo pháp luật\n• Vốn điều lệ (tăng hoặc giảm)\n• Ngành nghề kinh doanh (thêm hoặc bớt)\n• Thành viên/cổ đông sáng lập (công ty cổ phần)\n• Thay đổi loại hình doanh nghiệp\n\n⚠️ Danh sách đầy đủ cần kế toán viên xác minh theo Luật DN hiện hành."
+      "content": "Theo Luật Doanh nghiệp 2020, doanh nghiệp phải đăng ký khi thay đổi:\n\n✅ Bắt buộc đăng ký:\n• Tên công ty\n• Địa chỉ trụ sở chính\n• Người đại diện theo pháp luật\n• Vốn điều lệ (tăng hoặc giảm)\n• Ngành nghề kinh doanh (thêm hoặc bớt)\n• Thành viên/cổ đông sáng lập (công ty cổ phần)\n• Thay đổi loại hình doanh nghiệp\n\nMuốn đổi phương pháp tính thuế GTGT: khai ở phần \"Thông báo thay đổi thông tin đăng ký thuế\" của Mẫu số 12, nộp cho cơ quan đăng ký kinh doanh. Không nộp riêng cho cơ quan thuế.\n\n⚠️ Danh sách đầy đủ cần kế toán viên xác minh theo Luật DN hiện hành."
     },
     {
       "heading": "Thời hạn đăng ký",
@@ -41,6 +41,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-15 (NC-029 bổ sung, đã đối chiếu toàn văn Thông tư 68/2025/TT-BTC Phụ lục I Mẫu số 12, thay bởi Thông tư 121/2026/TT-BTC Điều 1 khoản 1; Thông tư 90/2026/TT-BTC Điều 9 khoản 1 điểm a): thêm câu đổi phương pháp tính thuế GTGT qua Mẫu số 12. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214411&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=219269&classid=1, https://vanban.chinhphu.vn/?pageid=27160&docid=218839&classid=1. Chưa xác minh: đổi trong thời gian giữ ổn định 2 năm có được không.",
     "Cập nhật NC-005: Luật 76/2025/QH15 sửa đổi, bổ sung một số điều của Luật Doanh nghiệp, ban hành 17/06/2025, hiệu lực 01/07/2025 (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Kiểm tra Điều 30–32 (thời hạn đăng ký thay đổi, \"10 ngày\" hay \"10 ngày làm việc\") và tên cơ quan đăng ký kinh doanh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1",
     "Ngày 2026-11-13 (NC-017, đã đối chiếu toàn văn Luật Doanh nghiệp 59/2020/QH14 Điều 30, 31 và Luật 76/2025/QH15): thời hạn là \"10 ngày kể từ ngày có thay đổi\" (ngày lịch, không có chữ \"làm việc\"); 3 ngày làm việc là thời hạn cơ quan đăng ký xử lý hồ sơ. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1 Đã sửa summary (bỏ \"thường là\", mốc là ngày có thay đổi) và mục \"Thời hạn đăng ký\" (bỏ \"10 ngày làm việc\", bỏ dòng chuyển nhượng cổ phần chưa có nguồn). Guide không có trường legal_basis.",
     "Xác nhận danh sách đầy đủ các loại thay đổi phải đăng ký",

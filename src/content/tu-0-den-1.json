@@ -562,7 +562,8 @@
             "Doanh thu để xét lấy trên tờ khai GTGT từ tháng 11 năm trước đến tháng 10 năm nay (khai quý: quý 4 năm trước đến quý 3 năm nay). Phương pháp đã áp dụng được giữ 2 năm liên tục.",
             "Công ty mới thành lập có thuê địa điểm kinh doanh, hoặc mua sắm, nhận góp vốn bằng tài sản, máy móc, công cụ, được đăng ký tự nguyện tính theo phương pháp khấu trừ ngay từ đầu. Không đăng ký và doanh thu ước tính cả năm dưới 1 tỷ thì tính trực tiếp trong 2 năm.",
             "Chưa chắc thì gọi tổng đài hỗ trợ của cơ quan thuế để hỏi.",
-            "Nếu phải đăng ký thì nộp mẫu đăng ký qua tài khoản thuế điện tử.",
+            "Phương pháp tính thuế GTGT được chọn ngay trên giấy đề nghị đăng ký doanh nghiệp (mục Thông tin đăng ký thuế, ô \"Phương pháp tính thuế GTGT\"). Muốn tính theo khấu trừ ngay từ đầu thì đánh dấu ô \"Khấu trừ\".",
+            "Muốn đổi phương pháp sau khi đã có giấy chứng nhận: khai ở phần \"Thông báo thay đổi thông tin đăng ký thuế\" của Mẫu số 12, nộp cho cơ quan đăng ký kinh doanh.",
             "Ghi lại kỳ khai thuế: theo tháng hay theo quý."
           ],
           "links": [],
@@ -605,10 +606,36 @@
               "verified_against_original": true,
               "checked_at": "2026-11-13",
               "snapshot_path": ""
+            },
+            {
+              "doc_type": "Thông tư",
+              "doc_number": "68/2025/TT-BTC",
+              "title": "Thông tư ban hành biểu mẫu sử dụng trong đăng ký doanh nghiệp",
+              "issuer": "Bộ Tài chính",
+              "issued_date": "2025-07-01",
+              "effective_date": "2025-07-01",
+              "article": "Phụ lục I, Mẫu số 1–5 (chỉ tiêu \"Phương pháp tính thuế GTGT\"), Mẫu số 12 (phần thông báo thay đổi thông tin đăng ký thuế)",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214411&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-15",
+              "snapshot_path": ""
+            },
+            {
+              "doc_type": "Thông tư",
+              "doc_number": "121/2026/TT-BTC",
+              "title": "Thông tư sửa đổi, bổ sung Thông tư 68/2025/TT-BTC",
+              "issuer": "Bộ Tài chính",
+              "issued_date": "2026-08-21",
+              "effective_date": "2026-08-21",
+              "article": "Điều 1 khoản 1 (thay Mẫu số 1–5, 12; vẫn giữ chỉ tiêu \"Phương pháp tính thuế GTGT\")",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=219269&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-15",
+              "snapshot_path": ""
             }
           ],
           "todo_for_reviewer": [
-            "Ngày 2026-11-13 (NC-021 bổ sung, đã đối chiếu toàn văn Nghị định 181/2025/NĐ-CP Điều 21; Nghị định 359/2025 và 144/2026 không sửa Điều 21): thêm cách xác định doanh thu, thời gian giữ 2 năm, trường hợp DN mới được tự nguyện khấu trừ; điền legal_basis. Còn mở: DN đăng ký thuế cùng đăng ký doanh nghiệp; thay đổi thông tin đăng ký thuế làm cùng thủ tục thay đổi nội dung đăng ký doanh nghiệp (Thông tư 90/2026 Điều 7 khoản 1, Điều 9 khoản 1 điểm a; https://vanban.chinhphu.vn/?pageid=27160&docid=218839&classid=1). Chưa xác minh ô chọn phương pháp GTGT trên giấy đề nghị đăng ký doanh nghiệp và hạn đăng ký tự nguyện khấu trừ (NC-029). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
+            "Ngày 2026-11-13 (NC-021 bổ sung, đã đối chiếu toàn văn Nghị định 181/2025/NĐ-CP Điều 21; Nghị định 359/2025 và 144/2026 không sửa Điều 21): thêm cách xác định doanh thu, thời gian giữ 2 năm, trường hợp DN mới được tự nguyện khấu trừ; điền legal_basis. Còn mở: DN đăng ký thuế cùng đăng ký doanh nghiệp; thay đổi thông tin đăng ký thuế làm cùng thủ tục thay đổi nội dung đăng ký doanh nghiệp (Thông tư 90/2026 Điều 7 khoản 1, Điều 9 khoản 1 điểm a; https://vanban.chinhphu.vn/?pageid=27160&docid=218839&classid=1). Ô \"Phương pháp tính thuế GTGT\" có trên giấy đề nghị đăng ký doanh nghiệp (Mẫu số 1–5) và Mẫu số 12 (Thông tư 68/2025, thay bởi Thông tư 121/2026; NC-029 bổ sung). Chưa xác minh hạn đăng ký tự nguyện khấu trừ, và việc đổi phương pháp trong thời gian giữ ổn định 2 năm (Nghị định 181/2025 Điều 21). Tên (title) của Thông tư 68/2025 và 121/2026 trong legal_basis là tên mô tả, cần thay bằng trích yếu chính thức. Đã bỏ câu cũ \"nộp mẫu đăng ký qua tài khoản thuế điện tử\" vì DN đăng ký qua cơ quan đăng ký kinh doanh (Thông tư 90/2026 Điều 9 khoản 1 điểm a). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214336&classid=1",
             "Xác minh tiêu chí khai theo tháng hay theo quý cho DN mới.",
             "Ngày 2026-11-13 (NC-021, đã đối chiếu toàn văn Luật Thuế GTGT 48/2024/QH15 Điều 10–12 và Luật 149/2025/QH15): thêm tiêu chí ngưỡng 1 tỷ và tỷ lệ % (Điều 11 khoản 2, Điều 12 khoản 2); điền legal_basis. Chưa đọc: Nghị định 181/2025 (sửa bởi 359/2025, 144/2026) về cách tính doanh thu hằng năm, thủ tục đăng ký tự nguyện khấu trừ, cách xác định cho DN mới; Luật 90/2025/QH15. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
             "Điền legal_basis với số điều, khoản cụ thể và link chính thức."

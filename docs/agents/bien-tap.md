@@ -368,6 +368,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `legal-framework.json` không có mục Thông tư 86/2024 nên không thêm todo ở đó.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 39 (2026-11-15, 01:18 UTC)
+
+- Đọc NC-029 (bổ sung): ô "Phương pháp tính thuế GTGT" có trên giấy đề nghị đăng ký doanh nghiệp (Mẫu số 1–5) và Mẫu số 12 (Thông tư 68/2025, thay bởi Thông tư 121/2026; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json` bước `phuong-phap-thue-gtgt`: thay câu cũ "nộp mẫu đăng ký qua tài khoản thuế điện tử" (sai với NC-029: DN đăng ký qua cơ quan đăng ký kinh doanh) bằng hai câu: chọn ô khi thành lập; muốn đổi thì khai ở Mẫu số 12. Thêm `legal_basis` Thông tư 68/2025 và 121/2026. Tên (title) hai thông tư là tên mô tả, ghi vào todo để thay bằng trích yếu chính thức.
+- `guides/dang-ky-thay-doi-doanh-nghiep.json`: thêm câu đổi phương pháp tính thuế GTGT qua Mẫu số 12; thêm todo có nguồn.
+- Todo NC-029 ở `tu-0-den-1.json` và hai guide khai GTGT: đổi thành "Chưa xác minh hạn đăng ký tự nguyện khấu trừ, và việc đổi phương pháp trong thời gian giữ ổn định 2 năm".
+- Sự cố trong vòng: lần sửa đầu chèn chuỗi chưa escape làm hỏng JSON, test và build báo lỗi; đã sửa trước khi commit.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
