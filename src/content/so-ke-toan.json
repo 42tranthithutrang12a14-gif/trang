@@ -160,6 +160,19 @@
   "form_rows": 200,
   "legal_basis": [
     {
+      "doc_type": "Thông tư",
+      "doc_number": "87/2026/TT-BTC",
+      "title": "Thông tư quy định chi tiết Luật Thuế thu nhập cá nhân và Nghị định 253/2026/NĐ-CP",
+      "issuer": "Bộ Tài chính",
+      "issued_date": "2026-06-30",
+      "effective_date": "2026-07-01",
+      "article": "Điều 3 khoản 1, 2; Điều 4",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218772&classid=1",
+      "verified_against_original": true,
+      "checked_at": "2026-11-15",
+      "snapshot_path": ""
+    },
+    {
       "doc_type": "Nghị định",
       "doc_number": "253/2026/NĐ-CP",
       "title": "Nghị định quy định chi tiết một số điều của Luật Thuế thu nhập cá nhân",
@@ -382,6 +395,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-15 (NC-032, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Phụ lục I mục 7.1 điểm a.1, a.2, b và Thông tư 87/2026/TT-BTC Điều 3 khoản 1, Điều 4): thêm tên mẫu 05/KK-TNCN, 05/QTT-TNCN; điều kiện thu nhập người phụ thuộc không quá 3 triệu đồng/tháng. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974 và https://vanban.chinhphu.vn/?pageid=27160&docid=218772&classid=1",
     "File do trợ lý AI thiết kế ngày 2026-11-12 theo cách ghi sổ thu chi thông dụng. Ngày 2026-11-12 (NC-009) đã đối chiếu danh mục sổ và cột với Thông tư 132/2018/TT-BTC (Điều 3, 11, 17, Phụ lục 3, 4): sửa notice, thêm 4 trang S1-DNSN đến S4-DNSN để trống, đúng cột theo mẫu. Cột của S3 theo mô tả NC-009 (nhập, xuất, tồn); chưa rõ mẫu có tách số lượng, thành tiền không.",
     "Còn làm: cho S1-DNSN, S4-DNSN lấy số từ Nhật ký. Cần trước: (1) phương pháp ghi từng cột S1–S4 (Phụ lục 4 mục 2), ví dụ S1 ghi doanh thu có hay chưa có thuế GTGT; (2) cách ghi doanh thu bán chịu trong Nhật ký thu chi (sổ hiện ghi theo tiền). Chưa làm sổ Chương II (S01-DNSN Nhật ký – Sổ Cái, S02–S10): cần ghi Nợ/Có theo tài khoản.",
     "Ngày 2026-11-12 (NC-010): Chương III (4 sổ S1–S4) vẫn có cơ sở. Luật Thuế TNDN 67/2025/QH15 Điều 11 khoản 2 điểm b cho tính thuế theo tỷ lệ % trên doanh thu với DN có tổng doanh thu năm không quá 3 tỷ đồng và không xác định được chi phí, thu nhập. Tỷ lệ % do Chính phủ quy định, chưa đọc nghị định. Thông tư 132/2018 còn hiệu lực không: chưa thấy văn bản thay thế (NC-002). Luật 67/2025/QH15 đã được sửa bởi các Luật 116/2025, 127/2025, 133/2025, 141/2025, 143/2025/QH15. Đã đối chiếu cả 5 luật sửa đổi: không sửa Điều 10, 11; chỉ sửa thu nhập miễn thuế và ưu đãi (NC-010 bổ sung 2).",
@@ -441,6 +455,7 @@
     "intro": [
       "Dành cho nhân viên cư trú có hợp đồng lao động, từ kỳ tính thuế năm 2026 (Luật Thuế TNCN 109/2025/QH15 Điều 8, 9, 10).",
       "Thu nhập tính thuế = lương chịu thuế − bảo hiểm bắt buộc nhân viên đóng − giảm trừ bản thân − giảm trừ người phụ thuộc. Thuế tính lũy tiến từng phần theo biểu dưới.",
+      "Chỉ tính người phụ thuộc có thu nhập bình quân tháng không quá 3 triệu đồng. Nhân viên nộp giấy tờ chứng minh (ví dụ giấy khai sinh của con) cho công ty. Công ty tự lưu giấy tờ này.",
       "Nghị quyết 43/2026/QH16 chỉ giảm 30% thuế TNCN từ kinh doanh, không áp dụng cho tiền lương. Người làm không ký hợp đồng lao động, hoặc ký dưới 3 tháng: mỗi lần trả từ 5 triệu đồng trở lên thì khấu trừ 10% trên số tiền trả, trước khi trả. Trả dưới 5 triệu/lần thì chỉ khấu trừ khi người đó yêu cầu. Người đó có thể làm bản cam kết thu nhập cả năm chưa đến mức chịu thuế để công ty tạm không khấu trừ. Cuối năm công ty vẫn phải báo danh sách cho cơ quan thuế. Bảng này tính theo biểu lũy tiến, không dùng cho trường hợp đó."
     ],
     "self_deduction": 15500000,

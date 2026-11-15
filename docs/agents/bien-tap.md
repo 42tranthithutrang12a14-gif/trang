@@ -399,6 +399,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Lịch nghĩa vụ không đổi (app không biết DN đã gửi văn bản đề nghị hay chưa).
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 43 (2026-11-15, 09:18 UTC)
+
+- Đọc NC-032 (mẫu khai TNCN từ tiền lương; người phụ thuộc có thu nhập bình quân tháng không quá 3 triệu đồng; Thông tư 89/2026 Phụ lục I mục 7.1, Thông tư 87/2026 Điều 3, 4; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json` bước `thue-tncn-nhan-vien`: thêm "bằng mẫu 05/KK-TNCN" vào câu khai quý, "Dùng mẫu 05/QTT-TNCN" vào câu quyết toán (mẫu 08/UQ-QTT-TNCN đã có). Thêm câu về người phụ thuộc: không quá 3 triệu đồng/tháng, nhân viên nộp giấy tờ, công ty tự lưu. `legal_basis`: bổ sung Phụ lục I mục 7.1 vào mục Thông tư 89/2026; thêm Thông tư 87/2026.
+- `so-ke-toan.json` trang "Tính thuế TNCN": thêm câu người phụ thuộc vào phần giới thiệu; thêm `legal_basis` Thông tư 87/2026 và todo.
+- Quy tắc 9 AGENTS.md: sổ không thêm ô nhập số căn cước hay giấy tờ của người phụ thuộc; chỉ hướng dẫn tự lưu.
+- Giữ todo: số mẫu bản cam kết tạm không khấu trừ (NC-030).
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
