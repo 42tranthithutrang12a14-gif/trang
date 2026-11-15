@@ -1336,6 +1336,25 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `2b0072f` (NC-033): sửa `example` nhóm "Bảo hiểm cho người lao động", thêm điểm đ vào `legal_basis`, ghi câu hỏi bảo hiểm của chủ cho chủ dự án. Đúng đề xuất, không thấy lỗi.
 - Kiểm Bảng kê thu mua (đã có ở NC-024). Đọc Luật 51/2024 (Điều 15 Luật BHYT) và Luật Việc làm Điều 33: ghi NC-034.
 
+### NC-030 (bổ sung) — Không tìm thấy mẫu "bản cam kết" của cá nhân chưa đến mức chịu thuế trong toàn bộ các danh mục mẫu của Thông tư 89/2026 và trong Thông tư 87/2026
+
+- **Trạng thái:** không tìm thấy (đã tra kỹ; không đoán số mẫu).
+- **Liên quan:** NC-030, NC-032; todo "Mẫu bản cam kết và mẫu danh sách cuối năm: chưa xác minh số mẫu (NC-030)".
+- **Đã tra (Thông tư 89/2026/TT-BTC, PDF 839 trang, OCR):**
+  - Cấu trúc phụ lục: Phụ lục I, danh mục hồ sơ khai thuế (PDF trang 202–232), tiếp theo là các mẫu tờ khai (trang 233–516); Phụ lục II, cách khai bổ sung hồ sơ khai thuế (từ trang 517); Phụ lục III, danh mục mẫu biểu thủ tục quản lý thuế (từ trang 521); Phụ lục IV, danh mục mẫu biểu của cơ quan thuế (từ trang 673).
+  - Đã đọc danh mục Phụ lục I (trang 202–232), Phụ lục III (trang 521–534) và đầu Phụ lục IV. Tôi cũng dò dòng đầu của mọi trang 233–672. Không có mẫu "cam kết" cho cá nhân có thu nhập chưa đến mức chịu thuế.
+  - Thông tư 87/2026/TT-BTC (6 điều): không có mẫu.
+  - Nghị định 253/2026 Điều 50 khoản 2 chỉ ghi bản cam kết "theo mẫu ban hành kèm theo văn bản hướng dẫn về quản lý thuế".
+- **Ghi thêm cho trang thao tác (ưu tiên 2):** mẫu 05/KK-TNCN ở PDF trang 307, mẫu 05/QTT-TNCN ở trang 312, mẫu 08/UQ-QTT-TNCN ở trang 376 của Thông tư 89/2026.
+- **Kết luận ngắn:** chưa có số mẫu để ghi vào app. Nội dung hiện tại ("làm bản cam kết") đủ dùng; không thêm số mẫu.
+- **Nguồn:** Thông tư 89/2026/TT-BTC (https://vanban.chinhphu.vn/?pageid=27160&docid=218974), Phụ lục I, III, IV; Thông tư 87/2026/TT-BTC (docid 218772); Nghị định 253/2026/NĐ-CP Điều 50 khoản 2. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):** giữ todo, sửa thành: "Mẫu bản cam kết: không có trong Thông tư 89/2026 (Phụ lục I, III, IV) và Thông tư 87/2026; hỏi cơ quan thuế hoặc xem văn bản hướng dẫn mới (NC-030 bổ sung)." Không đổi nội dung hiển thị.
+
+### Vòng 46 (2026-11-15, 14:17 UTC)
+
+- Rà commit Biên tập `b321c62` (NC-034): điền hạn BHYT, BHTN ở lịch "Hàng tháng", thêm câu 14 ngày không lương, `legal_basis`, bỏ todo cũ. Đúng đề xuất, không thấy lỗi.
+- Tìm mẫu bản cam kết TNCN trong toàn bộ danh mục mẫu của Thông tư 89/2026: không có. Ghi NC-030 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
