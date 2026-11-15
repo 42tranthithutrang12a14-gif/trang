@@ -1379,6 +1379,39 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `eb98d11` (NC-030 bổ sung): chỉ sửa todo ở 5 chỗ, đúng đề xuất. Không thấy lỗi.
 - Kiểm Thông tư 132/2018 có bị sửa, thay không: ghi NC-009 (bổ sung). `vbpq.mof.gov.vn` vẫn không mở được.
 
+### NC-035 — Lương tối thiểu vùng: năm 2026 là 5.310.000 / 4.730.000 / 4.140.000 / 3.700.000 đồng/tháng (Nghị định 293/2025); từ 01/01/2027 là 5.700.000 / 5.080.000 / 4.450.000 / 4.040.000 đồng/tháng (Nghị định 399/2026)
+
+- **Trạng thái:** đã xác minh (mức lương tối thiểu, hiệu lực). Cách hiểu, chưa có câu chữ trực tiếp: liên hệ giữa lương tối thiểu vùng và tiền lương đóng BHXH của nhân viên.
+- **Liên quan:** todo "Bổ sung quy định về lương tối thiểu vùng hiện hành" ở mục Bộ luật Lao động (`legal-framework.json` ~dòng 358); sổ S2-DNSN (lương); NC-022, NC-023.
+- **Phát hiện:**
+  - **Nghị định 293/2025/NĐ-CP** (ban hành 10/11/2025, hiệu lực 01/01/2026; https://vanban.chinhphu.vn/?pageid=27160&docid=215832&classid=1; PDF bản quét, OCR lại bảng ở 450 dpi):
+    - Điều 3 khoản 1, lương tối thiểu tháng / giờ: Vùng I 5.310.000 đồng / 25.500 đồng; Vùng II 4.730.000 / 22.700; Vùng III 4.140.000 / 20.000; Vùng IV 3.700.000 / 17.800.
+    - Điều 5 khoản 1: hiệu lực từ 01/01/2026; khoản 2: Nghị định 74/2024/NĐ-CP hết hiệu lực.
+  - **Nghị định 399/2026/NĐ-CP** (ban hành 02/11/2026, hiệu lực 01/01/2027; https://vanban.chinhphu.vn/?pageid=27160&docid=220166&classid=1; PDF có lớp chữ):
+    - Điều 3 khoản 1: Vùng I 5.700.000 đồng/tháng, 27.400 đồng/giờ; Vùng II 5.080.000 / 24.400; Vùng III 4.450.000 / 21.400; Vùng IV 4.040.000 / 19.400.
+    - Điều 3 khoản 2, 3: danh mục địa bàn ở Phụ lục. Áp dụng theo nơi người sử dụng lao động hoạt động; chi nhánh ở địa bàn nào theo địa bàn đó; địa bàn mới gộp từ nhiều nơi thì lấy mức cao nhất.
+    - Điều 4 khoản 1: lương tối thiểu tháng là mức thấp nhất trả cho người làm đủ giờ bình thường trong tháng và hoàn thành công việc. Khoản 3: trả theo tuần, ngày, sản phẩm, khoán thì quy đổi ra tháng hoặc giờ, không được thấp hơn mức tối thiểu.
+    - Điều 5 khoản 1: hiệu lực 01/01/2027; khoản 2: Nghị định 293/2025 hết hiệu lực từ ngày đó.
+  - **Luật BHXH 41/2024 Điều 31 khoản 1** (bản có lớp chữ):
+    - Điểm b: nhân viên do DN quyết định lương thì tiền lương đóng BHXH là tiền lương tháng (mức lương theo công việc, chức danh, phụ cấp, khoản bổ sung trả thường xuyên).
+    - Điểm đ: tiền lương đóng BHXH bắt buộc "thấp nhất bằng mức tham chiếu và cao nhất bằng 20 lần mức tham chiếu".
+- **Kết luận ngắn:**
+  1. Năm 2026, lương trả cho nhân viên làm đủ giờ không được thấp hơn: Vùng I 5.310.000, Vùng II 4.730.000, Vùng III 4.140.000, Vùng IV 3.700.000 đồng/tháng.
+  2. Từ 01/01/2027: Vùng I 5.700.000, Vùng II 5.080.000, Vùng III 4.450.000, Vùng IV 4.040.000 đồng/tháng. DN nên rà lại hợp đồng lao động trước 01/01/2027 (Điều 5 khoản 3).
+  3. Cách hiểu: tiền lương đóng BHXH của nhân viên là tiền lương tháng theo hợp đồng (Điều 31 khoản 1 điểm b). Lương đó không được dưới lương tối thiểu vùng, nên trên thực tế mức đóng của nhân viên làm đủ giờ không thấp hơn lương tối thiểu vùng. Luật chỉ ghi sàn là mức tham chiếu (điểm đ). Chưa đọc nghị định hướng dẫn Luật BHXH (Nghị định 158/2025) để xem có quy định sàn riêng không.
+  4. Muốn biết địa bàn thuộc vùng nào, xem Phụ lục của Nghị định 399/2026 (chưa trích, vì danh mục dài).
+- **Nguồn:** Nghị định 293/2025/NĐ-CP Điều 3 khoản 1, Điều 5 khoản 1, 2; Nghị định 399/2026/NĐ-CP Điều 3, Điều 4 khoản 1, 3, Điều 5 khoản 1–3; Luật BHXH 41/2024/QH15 Điều 31 khoản 1 điểm b, đ. Ngày tra 2026-11-15.
+- **Đề xuất sửa (Biên tập):**
+  - `legal-framework.json`, mục Bộ luật Lao động: thay todo "Bổ sung quy định về lương tối thiểu vùng hiện hành" bằng một `key_points`: "Lương tối thiểu vùng năm 2026: Vùng I 5.310.000, Vùng II 4.730.000, Vùng III 4.140.000, Vùng IV 3.700.000 đồng/tháng (Nghị định 293/2025/NĐ-CP). Từ 01/01/2027: 5.700.000 / 5.080.000 / 4.450.000 / 4.040.000 đồng/tháng (Nghị định 399/2026/NĐ-CP)." Có thể thêm hai mục văn bản riêng với `number`, `effective_from` theo metadata trên.
+  - Bước tuyển nhân viên hoặc BHXH (`tu-0-den-1.json`) và ghi chú S2-DNSN (`so-ke-toan.json`): thêm "Lương trả cho người làm đủ giờ không thấp hơn lương tối thiểu vùng nơi công ty hoạt động." `legal_basis`: Nghị định 399/2026/NĐ-CP Điều 3, 4 (và 293/2025 cho năm 2026); `verified_against_original: true`.
+  - Todo: "Danh mục địa bàn vùng I–IV: xem Phụ lục Nghị định 399/2026; chưa trích. Sàn tiền lương đóng BHXH của nhân viên: chưa đọc Nghị định 158/2025 (NC-035)."
+  - Ghi chú gỡ mức năm 2026 sau 31/12/2026.
+
+### Vòng 48 (2026-11-15, 18:17 UTC)
+
+- Rà commit Biên tập `b342382` (NC-009 bổ sung): thêm todo có ngày cho mục Thông tư 132/2018. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 293/2025 và 399/2026 (lương tối thiểu vùng), Luật BHXH Điều 31: ghi NC-035.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
