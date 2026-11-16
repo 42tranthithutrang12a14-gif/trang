@@ -1622,6 +1622,39 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `fd99467` (NC-039): thay Nghị định 130/2018, Thông tư 19/2021 trong guide chữ ký số; đổi mục `legal-framework.json` sang Nghị định 23/2025 với URL vanban.chinhphu.vn. Đúng đề xuất, không thấy lỗi.
 - Đọc Thông tư 89/2026 Điều 8, 10 và Nghị định 254/2026 Điều 8 khoản 9, Phụ lục mục 6, 7: ghi NC-039 (bổ sung).
 
+### NC-040 — Rà nguồn cũ còn hiển thị: Thông tư 96/2015 và 78/2014 (TNDN) bị thay bởi Thông tư 20/2026 (áp dụng từ kỳ tính thuế 2025); Thông tư 32/2025 (hóa đơn) hết hiệu lực từ 01/07/2026, thay bởi Thông tư 91/2026; ba guide và `legal-framework.json` còn dẫn Luật QLT 38/2019, Thông tư 80/2021, 96/2015, 78/2021
+
+- **Trạng thái:** đã xác minh (Thông tư 20/2026 Điều 10; Thông tư 91/2026 Điều 25). Chưa xác minh: Thông tư 78/2021 có bị Thông tư 32/2025 thay không (chưa đọc Thông tư 32/2025).
+- **Liên quan:** ưu tiên 5 (lỗi thời), các nguồn đã xác minh ở NC-013 (Luật QLT 108/2025), NC-039 (Thông tư 80/2021 bị bãi bỏ).
+- **Rà nội dung (ngày 2026-11-16; script quét `src/content/**/*.json`, bỏ qua `todo_for_reviewer`):** các chỗ hiển thị còn dẫn văn bản cũ, chưa ghi là đã thay:
+  - `guides/khai-thue-gtgt-theo-quy.json` mục căn cứ (`body_sections[4]`): "Luật Quản lý thuế số 38/2019/QH14", "Thông tư 80/2021/TT-BTC hướng dẫn Luật Quản lý thuế".
+  - `guides/khai-thue-gtgt-theo-thang.json` mục căn cứ (`body_sections[4]`): "Luật Quản lý thuế số 38/2019/QH14 — Điều 44 (thời hạn khai thuế)", "Thông tư 80/2021/TT-BTC".
+  - `guides/tam-nop-thue-tndn.json` mục căn cứ (`body_sections[9]`): "Luật Quản lý thuế số 38/2019/QH14", "Thông tư 96/2015/TT-BTC (hướng dẫn luật cũ, cần kiểm tra…)".
+  - `legal-framework.json`: mục `number` "80/2021/TT-BTC" (categories[1]), "96/2015/TT-BTC" (categories[2]), "78/2021/TT-BTC" (categories[5]).
+  - (Các chỗ đã ghi rõ "thay Nghị định 123/2020", "Thông tư 19/2021 đã bị bãi bỏ" là đúng, không cần sửa. "Nghị định 80/2021/NĐ-CP" là tiêu chí DN nhỏ và vừa, còn dùng, không nhầm với Thông tư 80/2021.)
+- **Phát hiện:**
+  - **Thông tư 20/2026/TT-BTC** quy định chi tiết Luật Thuế TNDN và Nghị định 320/2025 (ban hành và hiệu lực 12/03/2026; https://vanban.chinhphu.vn/?pageid=27160&docid=217191&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/3/20-btc.pdf, 22 trang, bản quét, OCR trang 16–22):
+    - Điều 10 khoản 1: "hiệu lực thi hành từ ngày 12 tháng 3 năm 2026 và áp dụng kể từ kỳ tính thuế năm 2025".
+    - Khoản 2: hồ sơ, điều kiện cho kỳ tính thuế 2025 mà Thông tư 96/2015 đã quy định cụ thể thì vẫn theo Thông tư 96/2015 cho năm 2025.
+    - Khoản 3: quy định về chứng từ thanh toán không dùng tiền mặt áp dụng từ ngày Nghị định 320/2025 có hiệu lực.
+    - Khoản 6: "Thông tư này thay thế: a) Thông tư số 78/2014/TT-BTC…; b) Thông tư số 96/2015/TT-BTC…".
+  - **Thông tư 91/2026/TT-BTC Điều 25** (PDF trang 32–33, OCR): khoản 1: hiệu lực 01/07/2026; khoản 2: Thông tư 32/2025/TT-BTC (hướng dẫn Luật QLT 2019, Nghị định 123/2020, Nghị định 70/2025 về hóa đơn) hết hiệu lực từ ngày đó. Khoản 3: Phụ lục I–IV bắt buộc, Phụ lục V tham khảo.
+- **Kết luận ngắn:**
+  1. Hướng dẫn thuế TNDN hiện hành là Thông tư 20/2026/TT-BTC (áp dụng từ kỳ tính thuế 2025). Thông tư 96/2015 và 78/2014 đã bị thay; riêng hồ sơ năm 2025 còn theo 96/2015 ở một số điểm.
+  2. Hướng dẫn hóa đơn hiện hành là Thông tư 91/2026/TT-BTC (từ 01/07/2026). Thông tư 78/2021 (mục trong `legal-framework.json`) gần như chắc đã không còn áp dụng, nhưng tôi chưa đọc văn bản trực tiếp thay nó (Thông tư 32/2025).
+  3. Hướng dẫn quản lý thuế hiện hành: Luật 108/2025, Nghị định 252/2026, Thông tư 89/2026 (NC-013, NC-039).
+- **Nguồn:** Thông tư 20/2026/TT-BTC Điều 10 khoản 1, 2, 3, 6; Thông tư 91/2026/TT-BTC Điều 25 khoản 1, 2, 3; Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g, h (NC-039). Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - Hai guide khai GTGT, mục căn cứ: thay "Luật Quản lý thuế số 38/2019/QH14 (— Điều 44)" bằng "Luật Quản lý thuế số 108/2025/QH15 (từ 01/07/2026)"; thay "Thông tư 80/2021/TT-BTC" bằng "Nghị định 252/2026/NĐ-CP Điều 10 (hạn khai) và Thông tư 89/2026/TT-BTC Điều 19 (khai thuế GTGT)". Bỏ cụm "cần kế toán viên xác minh link chính thức".
+  - `guides/tam-nop-thue-tndn.json` mục căn cứ: thay Luật QLT 38/2019 bằng 108/2025; thay "Thông tư 96/2015/TT-BTC (…cần kiểm tra…)" bằng "Thông tư 20/2026/TT-BTC hướng dẫn Luật Thuế TNDN (áp dụng từ kỳ tính thuế 2025; thay Thông tư 78/2014 và 96/2015)".
+  - `legal-framework.json`: đổi mục 80/2021/TT-BTC thành Thông tư 89/2026/TT-BTC (`effective_from` 01/07/2026, URL docid 218974); đổi mục 96/2015/TT-BTC thành Thông tư 20/2026/TT-BTC (`effective_from` 12/03/2026, URL docid 217191); mục 78/2021/TT-BTC: đổi thành Thông tư 91/2026/TT-BTC (`effective_from` 01/07/2026, URL docid 219006) và thêm todo "Thông tư 78/2021 có bị Thông tư 32/2025 thay không: chưa đọc".
+  - `legal_basis` tương ứng: các điều trên, `verified_against_original: true`.
+
+### Vòng 56 (2026-11-16, 10:18 UTC)
+
+- Rà commit Biên tập `1c41d7f` (NC-039 bổ sung): sửa `summary` và mục "Tại sao phải có chữ ký số?" của guide chữ ký số, có nguồn. Đúng đề xuất, không thấy lỗi.
+- Quét toàn bộ nội dung tìm nguồn đã hết hiệu lực; đọc Thông tư 20/2026 Điều 10 và Thông tư 91/2026 Điều 25: ghi NC-040.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
