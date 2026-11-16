@@ -20,7 +20,7 @@
       "first_period": "containing_founding"
     },
     "how_to_steps": [],
-    "penalty_plain": "",
+    "penalty_plain": "Nộp tờ khai muộn: bị phạt theo số ngày trễ, từ cảnh cáo đến 15–25 triệu đồng. Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp.",
     "legal_basis": [
       {
         "doc_type": "Nghị định",
@@ -29,7 +29,7 @@
         "issuer": "Chính phủ",
         "issued_date": "2026-06-30",
         "effective_date": "2026-07-01",
-        "article": "Điều 10 khoản 3",
+        "article": "Điều 10 khoản 3; Điều 26 khoản 1 điểm a",
         "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
         "verified_against_original": true,
         "checked_at": "2026-11-12",
@@ -42,10 +42,36 @@
         "issuer": "Quốc hội",
         "issued_date": "2025-12-10",
         "effective_date": "2026-07-01",
-        "article": "Điều 14 khoản 1 điểm a",
+        "article": "Điều 14 khoản 1 điểm a; Điều 16 khoản 2, 3",
         "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
         "verified_against_original": true,
         "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "125/2020/NĐ-CP",
+        "title": "Nghị định quy định xử phạt vi phạm hành chính về thuế, hóa đơn",
+        "issuer": "Chính phủ",
+        "issued_date": "2020-10-19",
+        "effective_date": "2020-12-05",
+        "article": "Điều 13 khoản 1, 2, 3, 4, 6; Điều 7 khoản 4 điểm a",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "310/2025/NĐ-CP",
+        "title": "Nghị định sửa đổi, bổ sung Nghị định 125/2020/NĐ-CP",
+        "issuer": "Chính phủ",
+        "issued_date": "2025-12-02",
+        "effective_date": "2026-01-16",
+        "article": "Điều 1 khoản 10 (khoản 5, điểm a khoản 6 Điều 13 Nghị định 125/2020); Điều 4 khoản 1",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
         "snapshot_path": ""
       }
     ],
@@ -55,10 +81,10 @@
     "effective_to": null,
     "version": 1,
     "todo_for_reviewer": [
+      "Ngày 2026-11-16 (NC-041, đã đối chiếu toàn văn Luật Quản lý thuế 108/2025/QH15 Điều 16 khoản 2, 3 và Nghị định 252/2026/NĐ-CP Điều 26 khoản 1 điểm a): điền penalty_plain, bổ sung legal_basis. Bỏ todo cũ \"Điền legal_basis… ví dụ Luật QLT 38/2019, Thông tư 80/2021\" vì legal_basis đã điền và các văn bản đó đã hết hiệu lực.",
       "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn quý là ngày cuối cùng của tháng đầu quý tiếp theo, khớp due_day \"last\". Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
-      "Viết các bước làm và mức phạt",
-      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
+      "Viết các bước làm và mức phạt"
     ]
   },
   {
@@ -82,7 +108,7 @@
       "first_period": "containing_founding"
     },
     "how_to_steps": [],
-    "penalty_plain": "",
+    "penalty_plain": "Nộp tờ khai muộn: bị phạt theo số ngày trễ, từ cảnh cáo đến 15–25 triệu đồng. Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp.",
     "legal_basis": [
       {
         "doc_type": "Nghị định",
@@ -91,7 +117,7 @@
         "issuer": "Chính phủ",
         "issued_date": "2026-06-30",
         "effective_date": "2026-07-01",
-        "article": "Điều 10 khoản 2",
+        "article": "Điều 10 khoản 2; Điều 26 khoản 1 điểm a",
         "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
         "verified_against_original": true,
         "checked_at": "2026-11-12",
@@ -104,10 +130,36 @@
         "issuer": "Quốc hội",
         "issued_date": "2025-12-10",
         "effective_date": "2026-07-01",
-        "article": "Điều 14 khoản 1 điểm a",
+        "article": "Điều 14 khoản 1 điểm a; Điều 16 khoản 2, 3",
         "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
         "verified_against_original": true,
         "checked_at": "2026-11-12",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "125/2020/NĐ-CP",
+        "title": "Nghị định quy định xử phạt vi phạm hành chính về thuế, hóa đơn",
+        "issuer": "Chính phủ",
+        "issued_date": "2020-10-19",
+        "effective_date": "2020-12-05",
+        "article": "Điều 13 khoản 1, 2, 3, 4, 6; Điều 7 khoản 4 điểm a",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=201364&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "310/2025/NĐ-CP",
+        "title": "Nghị định sửa đổi, bổ sung Nghị định 125/2020/NĐ-CP",
+        "issuer": "Chính phủ",
+        "issued_date": "2025-12-02",
+        "effective_date": "2026-01-16",
+        "article": "Điều 1 khoản 10 (khoản 5, điểm a khoản 6 Điều 13 Nghị định 125/2020); Điều 4 khoản 1",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
         "snapshot_path": ""
       }
     ],
@@ -117,10 +169,10 @@
     "effective_to": null,
     "version": 1,
     "todo_for_reviewer": [
+      "Ngày 2026-11-16 (NC-041, đã đối chiếu toàn văn Luật Quản lý thuế 108/2025/QH15 Điều 16 khoản 2, 3 và Nghị định 252/2026/NĐ-CP Điều 26 khoản 1 điểm a): điền penalty_plain, bổ sung legal_basis. Bỏ todo cũ \"Điền legal_basis… ví dụ Luật QLT 38/2019, Thông tư 80/2021\" vì legal_basis đã điền và các văn bản đó đã hết hiệu lực.",
       "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tháng là ngày 20 tháng sau, khớp due_day 20. Việc dời hạn khi trùng ngày nghỉ chưa xác minh. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Xác nhận có dời hạn khi trùng ngày nghỉ hay không",
-      "Viết các bước làm và mức phạt",
-      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Quản lý thuế số 38/2019/QH14, Điều 44; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn chính thức"
+      "Viết các bước làm và mức phạt"
     ]
   },
   {
@@ -139,7 +191,7 @@
       "first_period": "containing_founding"
     },
     "how_to_steps": [],
-    "penalty_plain": "",
+    "penalty_plain": "Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp.",
     "legal_basis": [
       {
         "doc_type": "Nghị định",
@@ -148,7 +200,7 @@
         "issuer": "Chính phủ",
         "issued_date": "2026-06-30",
         "effective_date": "2026-07-01",
-        "article": "Điều 24 khoản 1, 2, 3",
+        "article": "Điều 24 khoản 1, 2, 3; Điều 26 khoản 1 điểm a",
         "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
         "verified_against_original": true,
         "checked_at": "2026-11-12",
@@ -179,6 +231,19 @@
         "verified_against_original": true,
         "checked_at": "2026-11-12",
         "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "108/2025/QH15",
+        "title": "Luật Quản lý thuế",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-12-10",
+        "effective_date": "2026-07-01",
+        "article": "Điều 16 khoản 2, 3",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-16",
+        "snapshot_path": ""
       }
     ],
     "guide_slug": "tam-nop-thue-tndn",
@@ -187,11 +252,11 @@
     "effective_to": null,
     "version": 1,
     "todo_for_reviewer": [
+      "Ngày 2026-11-16 (NC-041, đã đối chiếu toàn văn Luật Quản lý thuế 108/2025/QH15 Điều 16 khoản 2, 3 và Nghị định 252/2026/NĐ-CP Điều 26 khoản 1 điểm a): điền penalty_plain, bổ sung legal_basis. Bỏ todo cũ \"Điền legal_basis… ví dụ Luật QLT 38/2019, Thông tư 80/2021\" vì legal_basis đã điền và các văn bản đó đã hết hiệu lực.",
       "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tạm nộp là ngày cuối cùng của tháng đầu quý tiếp theo (Điều 24 khoản 2); đổi due_day từ 30 sang \"last\"; 4 quý ít nhất 80% (khoản 3). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã thêm vào summary_plain, điền legal_basis. applies_if chưa có điều kiện doanh thu (engine chưa có trường doanh thu), nên nghĩa vụ vẫn hiện với mọi công ty.",
       "Còn mở sau NC-011 (2026-11-12): (1) Đã trả lời ở NC-014 (2026-11-13): DN được miễn vẫn phải quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
-      "Viết các bước và mức phạt khi tạm nộp thiếu",
-      "Điền legal_basis: { doc_type, doc_number, title, article, url } — ví dụ: Luật Thuế TNDN số 14/2008/QH12 (sửa đổi), Điều 17; Thông tư 96/2015/TT-BTC; link vbpl.moj.gov.vn chính thức"
+      "Viết các bước và mức phạt khi tạm nộp thiếu"
     ]
   }
 ]

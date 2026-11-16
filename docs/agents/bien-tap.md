@@ -519,6 +519,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Đúng đề xuất, chỉ sửa todo, không đổi nội dung hiển thị: mục Thông tư 91/2026 trong `legal-framework.json`; todo gợi ý AI trong `guides/hoa-don-dien-tu.json` (ghi thêm kết quả xác minh và nguồn). Status giữ "draft".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 58 (2026-11-16, 15:21 UTC)
+
+- Đọc NC-041 (tiền chậm nộp 0,03%/ngày, tính liên tục, DN tự tính và nộp; Luật QLT 108/2025 Điều 16 khoản 2, 3; Nghị định 252/2026 Điều 26 khoản 1; đã xác minh). Status giữ "draft".
+- Hai guide khai GTGT, mục mức phạt: thay câu "còn phải nộp tiền chậm nộp" bằng câu 0,03%/ngày, tính cả ngày nghỉ, tự tính và nộp, kèm căn cứ và ví dụ giả định (10 triệu, 30 ngày → 90.000 đồng). Bỏ dòng 0,03% khỏi phần "chưa xác minh".
+- `guides/tam-nop-thue-tndn.json`: dòng "Không tạm nộp các quý: bị tính lãi chậm nộp 0,03%/ngày" đổi thành dòng tiền chậm nộp có căn cứ; cảnh báo chỉ còn "Mức 20% chưa xác minh".
+- `rules/obligation_rules.json` (VAT quý, VAT tháng, tạm nộp TNDN): điền `penalty_plain`; bổ sung điều khoản vào `legal_basis` (Luật 108/2025 Điều 16; Nghị định 252/2026 Điều 26); thêm Nghị định 125/2020 và 310/2025 cho hai rule GTGT (chép từ mục đã xác minh trong `bat-dau.json`). Rule TNDN chỉ ghi phần tiền chậm nộp. Bỏ todo cũ "Điền legal_basis… ví dụ Luật QLT 38/2019, Thông tư 80/2021".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
