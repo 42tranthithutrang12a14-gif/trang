@@ -1594,6 +1594,34 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `10a44b8` (NC-038): viết lại mục đăng ký hóa đơn điện tử theo Thông tư 91/2026; giữ tên phần mềm làm ví dụ không xếp hạng, chờ chủ dự án. Đúng đề xuất, không thấy lỗi.
 - Rà guide chữ ký số: đọc Nghị định 23/2025 Điều 46, 47 và Thông tư 89/2026 Điều 99: ghi NC-039.
 
+### NC-039 (bổ sung) — Khai thuế điện tử: cần tài khoản định danh điện tử và chữ ký số, hoặc hình thức xác nhận điện tử khác (mã xác thực, sinh trắc học) nếu hệ thống cho phép; hóa đơn điện tử của DN phải có chữ ký số của DN, trừ hóa đơn từ máy tính tiền (Thông tư 89/2026 Điều 8, 10; Nghị định 254/2026 Điều 8 khoản 9, Phụ lục mục 6)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-039 (điểm còn mở "điều khoản bắt buộc dùng chữ ký số khi khai thuế"); `guides/chu-ky-so.json` (`summary` "Doanh nghiệp bắt buộc phải có chữ ký số hợp lệ để nộp tờ khai thuế…", mục "Tại sao phải có chữ ký số?").
+- **Phát hiện:**
+  - **Thông tư 89/2026/TT-BTC (PDF trang 11–12, 15; OCR):**
+    - Điều 8 khoản 1: người nộp thuế giao dịch thuế điện tử phải: "a) Có tài khoản giao dịch thuế điện tử là tài khoản định danh điện tử theo quy định của pháp luật về định danh và xác thực điện tử hoặc tài khoản giao dịch thuế điện tử do Hệ thống thông tin quản lý thuế cấp đối với các trường hợp không bắt buộc hoặc không thuộc đối tượng được cấp tài khoản định danh điện tử…; b) Có khả năng truy cập và sử dụng mạng Internet; c) Có chữ ký điện tử theo quy định tại Điều 10 Thông tư này, trừ trường hợp được áp dụng các hình thức xác nhận điện tử khác."
+    - Điều 10 khoản 1: xác nhận người ký bằng một trong các hình thức: a) chữ ký điện tử (chữ ký số công cộng, chữ ký số chuyên dùng công vụ); b) "mã xác thực giao dịch điện tử, xác nhận bằng sinh trắc học và xác nhận bằng các phương tiện điện tử khác". Đăng ký theo hướng dẫn của chủ quản hệ thống.
+    - Điều 10 khoản 2 điểm a: người nộp thuế dùng chữ ký điện tử đã đăng ký để ký hồ sơ gửi cơ quan thuế, "trừ trường hợp được sử dụng các hình thức xác nhận điện tử khác tại điểm b khoản 1 Điều này theo hướng dẫn của chủ quản hệ thống thông tin". Điểm b: đại lý thuế ký bằng chữ ký điện tử của đại lý.
+  - **Nghị định 254/2026/NĐ-CP (OCR):**
+    - Phụ lục mục 6 (PDF trang 52): "Trường hợp người bán là doanh nghiệp, tổ chức thì chữ ký số của người bán trên hóa đơn là chữ ký số của doanh nghiệp, tổ chức". Hóa đơn không nhất thiết có chữ ký số theo mục 9 Phụ lục. Mục 7: ký số và gửi cơ quan thuế chậm nhất ngày làm việc tiếp theo kể từ khi lập hóa đơn.
+    - Điều 8 khoản 9 (PDF trang 16): hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế "b) Không bắt buộc có chữ ký số".
+- **Kết luận ngắn:**
+  1. Khai thuế điện tử: DN cần tài khoản giao dịch thuế điện tử (tài khoản định danh điện tử) và chữ ký số. Văn bản cho phép thay chữ ký số bằng mã xác thực, sinh trắc học nếu hệ thống của cơ quan thuế hướng dẫn. Câu "bắt buộc phải có chữ ký số để nộp tờ khai" là quá tuyệt đối; nên viết "thường cần chữ ký số".
+  2. Hóa đơn điện tử: DN bán hàng phải ký số trên hóa đơn bằng chữ ký số của DN, trừ hóa đơn từ máy tính tiền. Đây là lý do chính DN vẫn cần chữ ký số.
+  3. Chưa kiểm: chủ quản hệ thống (Cục Thuế) đã cho DN dùng hình thức xác nhận khác thay chữ ký số chưa. Đây là hướng dẫn kỹ thuật, không phải văn bản quy phạm.
+- **Nguồn:** Thông tư 89/2026/TT-BTC Điều 8 khoản 1 điểm a, b, c; Điều 10 khoản 1, khoản 2 điểm a, b (docid 218974). Nghị định 254/2026/NĐ-CP Điều 8 khoản 9 điểm b; Phụ lục mục 6, 7 (docid 218689). Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - `guides/chu-ky-so.json` `summary`: "Doanh nghiệp cần chữ ký số để ký hóa đơn điện tử. Khi khai thuế qua mạng, thường cũng dùng chữ ký số (hoặc hình thức xác nhận khác nếu hệ thống của cơ quan thuế cho phép). Chữ ký số có thời hạn, phải gia hạn trước khi hết."
+  - Mục "Tại sao phải có chữ ký số?": dòng hóa đơn: "Ký hóa đơn điện tử bằng chữ ký số của công ty (trừ hóa đơn từ máy tính tiền)". Dòng khai thuế: "Ký tờ khai thuế điện tử (cần tài khoản giao dịch thuế điện tử là tài khoản định danh điện tử)". Bỏ câu "Không có chữ ký số, doanh nghiệp không thể thực hiện nghĩa vụ thuế".
+  - `legal_basis` thêm: Thông tư 89/2026/TT-BTC Điều 8 khoản 1, Điều 10 khoản 1, 2; Nghị định 254/2026/NĐ-CP Điều 8 khoản 9, Phụ lục mục 6; `verified_against_original: true`.
+  - Thay todo "điều khoản bắt buộc dùng chữ ký số…" bằng "Đã xác minh (NC-039 bổ sung). Chưa kiểm hướng dẫn kỹ thuật của Cục Thuế về hình thức xác nhận thay chữ ký số."
+
+### Vòng 55 (2026-11-16, 08:20 UTC)
+
+- Rà commit Biên tập `fd99467` (NC-039): thay Nghị định 130/2018, Thông tư 19/2021 trong guide chữ ký số; đổi mục `legal-framework.json` sang Nghị định 23/2025 với URL vanban.chinhphu.vn. Đúng đề xuất, không thấy lỗi.
+- Đọc Thông tư 89/2026 Điều 8, 10 và Nghị định 254/2026 Điều 8 khoản 9, Phụ lục mục 6, 7: ghi NC-039 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
