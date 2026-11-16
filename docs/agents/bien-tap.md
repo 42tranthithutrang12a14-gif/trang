@@ -550,6 +550,19 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo NC-042 ở hai file: đổi thành phạt BHXH, BHTN đã xác minh; phạt BHYT chưa xác minh; mức trần chưa ghi vào app. `legal-framework.json` không có mục Nghị định 12/2022 nên không đổi.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 62 (2026-11-16, 23:18 UTC)
+
+- Đọc NC-044 (đối chiếu việc định kỳ trang /lo-trinh; kiểm kê bắt buộc cuối năm theo Luật Kế toán 88/2015 Điều 40; thiếu các việc có hạn luật định). Status giữ "draft".
+- `lo-trinh.json`, sửa 4 việc có sẵn:
+  - `ghi-so-hang-ngay`: thêm lập hóa đơn mỗi lần bán, thời hạn lưu chứng từ 10/5 năm, quy tắc 5 triệu. Điền `legal_basis` (Nghị định 254/2026, 174/2016, 320/2025, Luật 48/2024).
+  - `doi-chieu-hang-tuan`: thêm "cách làm tốt, không bắt buộc; bắt buộc kiểm kê cuối năm". `legal_basis` Luật Kế toán Điều 40.
+  - `xem-tong-hop-hang-thang`: thêm câu doanh thu theo ngày lập hóa đơn.
+  - `khai-thue-theo-ky`: viết lại với hạn GTGT tháng/quý, mẫu 01/GTGT – 04/GTGT, số lấy từ hóa đơn, tiền chậm nộp 0,03%/ngày. Điền `legal_basis`; bỏ todo dẫn NC-003.
+- Thêm 3 việc định kỳ (giữ số lượng ít): `dong-bao-hiem-hang-thang`, `thue-theo-quy` (tạm nộp TNDN, khai 05/KK-TNCN), `viec-cuoi-nam` (kiểm kê, báo cáo tài chính 90 ngày, quyết toán TNDN và TNCN). Mỗi việc có `status: "draft"`, `sample_notice`, `legal_basis` chép từ các mục đã xác minh trong repo (đổi `article` cho đúng điều đang dẫn).
+- Không thêm việc "lập hóa đơn mỗi lần bán" riêng; gộp vào việc hằng ngày.
+- Định dạng file giữ như cũ (script kiểm tra bộ định dạng tái tạo đúng phần cũ trước khi ghi).
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

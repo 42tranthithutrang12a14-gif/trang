@@ -40,12 +40,68 @@
       "how": [
         "Mở file sổ thu chi.",
         "Mỗi khoản ghi một dòng: ngày, nội dung, nhóm, số tiền, quỹ.",
-        "Cất hóa đơn, chứng từ của ngày vào một chỗ. Chụp ảnh lưu thêm một bản."
+        "Cất hóa đơn, chứng từ của ngày vào một chỗ. Chụp ảnh lưu thêm một bản.",
+        "Mỗi lần bán hàng: lập hóa đơn điện tử.",
+        "Lưu chứng từ dùng để ghi sổ ít nhất 10 năm; chứng từ không dùng ghi sổ trực tiếp ít nhất 5 năm.",
+        "Khoản chi từ 5 triệu đồng: chuyển khoản, đừng trả tiền mặt, để được tính vào chi phí và khấu trừ thuế GTGT."
       ],
       "tool": { "label": "Tải sổ thu chi (Excel)", "href": "/cong-cu#so-thu-chi" },
-      "legal_basis": [],
+      "legal_basis": [
+        {
+          "doc_type": "Nghị định",
+          "doc_number": "254/2026/NĐ-CP",
+          "title": "Nghị định quy định chi tiết Luật Quản lý thuế về hóa đơn điện tử, chứng từ điện tử",
+          "issuer": "Chính phủ",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 9 khoản 1, 2, 3",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-13",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Nghị định",
+          "doc_number": "174/2016/NĐ-CP",
+          "title": "Nghị định quy định chi tiết một số điều của Luật Kế toán",
+          "issuer": "Chính phủ",
+          "issued_date": "2016-12-30",
+          "effective_date": "2017-01-01",
+          "article": "Điều 12; Điều 13 khoản 1, 2, 4; Điều 15 khoản 1",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=187897&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-13",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Nghị định",
+          "doc_number": "320/2025/NĐ-CP",
+          "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp",
+          "issuer": "Chính phủ",
+          "issued_date": "2025-12-15",
+          "effective_date": "2025-12-15",
+          "article": "Điều 9 khoản 1 điểm a, b, c (c1, c2, c3)",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216219&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-14",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Luật",
+          "doc_number": "48/2024/QH15",
+          "title": "Luật Thuế giá trị gia tăng",
+          "issuer": "Quốc hội",
+          "issued_date": "2024-11-26",
+          "effective_date": "2025-07-01",
+          "article": "Điều 14 khoản 2",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-14",
+          "snapshot_path": ""
+        }
+      ],
       "todo_for_reviewer": [
-        "Xác minh yêu cầu về chứng từ kế toán và thời hạn lưu chứng từ.",
+        "Ngày 2026-11-16 (NC-044): thêm lập hóa đơn mỗi lần bán (NC-020), thời hạn lưu chứng từ (NC-019), quy tắc 5 triệu (NC-024); điền legal_basis từ các mục đã xác minh.",
         "Sổ thu chi là sổ theo dõi nội bộ, chưa đối chiếu mẫu sổ theo quy định (xem so-ke-toan.json)."
       ]
     },
@@ -58,10 +114,25 @@
       "how": [
         "Đếm tiền mặt trong két. So với cột \"Tồn tiền mặt\" trong sổ.",
         "Mở ứng dụng ngân hàng. So số dư với cột \"Tồn ngân hàng\".",
-        "Nếu lệch: tìm khoản chưa ghi và ghi bổ sung."
+        "Nếu lệch: tìm khoản chưa ghi và ghi bổ sung.",
+        "Đây là cách làm tốt, không bắt buộc. Bắt buộc: kiểm kê cuối năm (xem việc cuối năm)."
       ],
-      "legal_basis": [],
-      "todo_for_reviewer": ["Đây là cách làm thông dụng, không phải quy định. Xác minh có quy định về kiểm kê quỹ áp dụng cho DN siêu nhỏ không."]
+      "legal_basis": [
+        {
+          "doc_type": "Luật",
+          "doc_number": "88/2015/QH13",
+          "title": "Luật Kế toán",
+          "issuer": "Quốc hội",
+          "issued_date": "2015-11-20",
+          "effective_date": "2017-01-01",
+          "article": "Điều 40 khoản 2 điểm a, khoản 3",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-16",
+          "snapshot_path": ""
+        }
+      ],
+      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): Luật Kế toán 88/2015/QH13 Điều 40 bắt buộc kiểm kê cuối kỳ kế toán năm; Thông tư 132/2018 không đặt tần suất kiểm kê quỹ. Chưa kiểm Luật 56/2024 có sửa Điều 40 không."]
     },
     {
       "id": "xem-tong-hop-hang-thang",
@@ -72,10 +143,14 @@
       "how": [
         "Mở trang \"Tổng hợp\" trong file sổ.",
         "Xem 4 ô kiểm tra ở đầu trang. Cả 4 ô phải bằng 0.",
-        "Xem tiền vào, tiền ra, lãi lỗ tạm tính và thuế GTGT của tháng."
+        "Xem tiền vào, tiền ra, lãi lỗ tạm tính và thuế GTGT của tháng.",
+        "Doanh thu tính thuế ghi theo ngày lập hóa đơn, không theo ngày thu tiền. Số trong sổ thu chi chỉ để đối chiếu."
       ],
       "legal_basis": [],
-      "todo_for_reviewer": ["Lãi lỗ tạm tính là số nội bộ. Xác minh cách dùng số này khi lập tờ khai và báo cáo tài chính."]
+      "todo_for_reviewer": [
+        "Ngày 2026-11-16 (NC-044): thêm câu doanh thu theo thời điểm lập hóa đơn (Nghị định 254/2026 Điều 9; NC-020).",
+        "Lãi lỗ tạm tính là số nội bộ. Xác minh cách dùng số này khi lập tờ khai và báo cáo tài chính."
+      ]
     },
     {
       "id": "khai-thue-theo-ky",
@@ -84,17 +159,194 @@
       "when": "Theo kỳ thuế",
       "title": "Khai và nộp thuế đúng hạn",
       "how": [
-        "Xem công ty bạn khai thuế theo tháng hay theo quý, và hạn nộp của kỳ này.",
-        "Dùng số ở trang \"Tổng hợp\" để đối chiếu khi lập tờ khai.",
-        "Nộp tờ khai và tiền thuế qua thuế điện tử, trước hạn."
+        "Xem công ty bạn khai thuế GTGT theo tháng hay theo quý. Theo tháng: hạn ngày 20 tháng sau. Theo quý: hạn ngày cuối cùng của tháng đầu quý sau.",
+        "Tờ khai GTGT: mẫu 01/GTGT nếu tính khấu trừ, mẫu 04/GTGT nếu tính trực tiếp trên doanh thu.",
+        "Số trên tờ khai lấy từ hóa đơn. Dùng số ở trang \"Tổng hợp\" để đối chiếu.",
+        "Nộp tờ khai và tiền thuế qua thuế điện tử, trước hạn. Nộp tiền muộn: cộng 0,03% mỗi ngày."
       ],
       "tool": { "label": "Xem việc theo năm và lịch hạn nộp", "href": "/bat-dau" },
-      "legal_basis": [],
-      "todo_for_reviewer": [
-        "Xác minh kỳ khai thuế và hạn nộp theo Luật Quản lý thuế đang có hiệu lực (xem NC-003 trong docs/agents/nghien-cuu.md).",
-        "Xác minh số liệu nào trong sổ thu chi dùng được cho tờ khai thuế GTGT, và số nào phải lấy từ hóa đơn.",
-        "Điền legal_basis với số điều, khoản cụ thể và link chính thức."
-      ]
+      "legal_basis": [
+        {
+          "doc_type": "Nghị định",
+          "doc_number": "252/2026/NĐ-CP",
+          "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+          "issuer": "Chính phủ",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 10 khoản 2, 3",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-12",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Thông tư",
+          "doc_number": "89/2026/TT-BTC",
+          "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+          "issuer": "Bộ Tài chính",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 19 khoản 1 điểm a, khoản 5 điểm a; Phụ lục I mục 4.1, 4.3",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-13",
+          "snapshot_path": ""
+        }
+      ],
+      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): điền kỳ khai, hạn nộp (NC-013, NC-014), mẫu tờ khai (NC-028), tiền chậm nộp (NC-041), legal_basis. Bỏ todo cũ dẫn NC-003."]
+    },
+    {
+      "id": "dong-bao-hiem-hang-thang",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Mỗi tháng (nếu có nhân viên)",
+      "title": "Đóng bảo hiểm cho nhân viên",
+      "how": [
+        "Đóng BHXH, BHYT, BHTN, bảo hiểm tai nạn lao động cùng một lúc.",
+        "Hạn chậm nhất: ngày cuối cùng của tháng sau. Ví dụ lương tháng 3 đóng chậm nhất 30/4.",
+        "Đóng muộn: phải đóng đủ và nộp thêm 0,03% mỗi ngày."
+      ],
+      "tool": { "label": "Xem việc theo năm và lịch hạn nộp", "href": "/bat-dau" },
+      "legal_basis": [
+        {
+          "doc_type": "Luật",
+          "doc_number": "41/2024/QH15",
+          "title": "Luật Bảo hiểm xã hội",
+          "issuer": "Quốc hội",
+          "issued_date": "2024-06-29",
+          "effective_date": "2025-07-01",
+          "article": "Điều 34 khoản 4; Điều 40 khoản 1",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-14",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Luật",
+          "doc_number": "51/2024/QH15",
+          "title": "Luật sửa đổi, bổ sung một số điều của Luật Bảo hiểm y tế",
+          "issuer": "Quốc hội",
+          "issued_date": "2024-11-27",
+          "effective_date": "2025-07-01",
+          "article": "Điều 15 khoản 8 điểm a (Luật Bảo hiểm y tế đã sửa)",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212479&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-14",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Luật",
+          "doc_number": "74/2025/QH15",
+          "title": "Luật Việc làm",
+          "issuer": "Quốc hội",
+          "issued_date": "2025-06-16",
+          "effective_date": "2026-01-01",
+          "article": "Điều 33 khoản 2, 3",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214560&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-14",
+          "snapshot_path": ""
+        }
+      ],
+      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): việc mới theo NC-044 (NC-023, NC-034, NC-042)."]
+    },
+    {
+      "id": "thue-theo-quy",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Mỗi quý",
+      "title": "Tạm nộp thuế TNDN, khai thuế TNCN",
+      "how": [
+        "Tạm nộp thuế TNDN của quý. Hạn: ngày cuối cùng của tháng đầu quý sau.",
+        "Tổng 4 quý tạm nộp phải đạt ít nhất 80% số thuế cả năm.",
+        "Có khấu trừ thuế TNCN của nhân viên trong quý thì nộp tờ khai mẫu 05/KK-TNCN, cùng hạn."
+      ],
+      "tool": { "label": "Xem việc theo năm và lịch hạn nộp", "href": "/bat-dau" },
+      "legal_basis": [
+        {
+          "doc_type": "Nghị định",
+          "doc_number": "252/2026/NĐ-CP",
+          "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+          "issuer": "Chính phủ",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 24 khoản 2, khoản 3 điểm a, b",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-12",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Thông tư",
+          "doc_number": "89/2026/TT-BTC",
+          "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+          "issuer": "Bộ Tài chính",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 22 khoản 1 điểm a (a.1, a.2.1, a.3.1, a.4), điểm b; Phụ lục I mục 7.1 điểm a.1, a.2, b",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-14",
+          "snapshot_path": ""
+        }
+      ],
+      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): việc mới theo NC-044 (NC-013, NC-026, NC-032, NC-041 bổ sung). Công ty được miễn thuế TNDN thì không phải tạm nộp; engine chưa xét điều kiện doanh thu (xem Cần chủ dự án quyết)."]
+    },
+    {
+      "id": "viec-cuoi-nam",
+      "status": "draft",
+      "sample_notice": "MẪU – CHƯA XÁC MINH",
+      "when": "Cuối năm và quý I năm sau",
+      "title": "Kiểm kê, quyết toán, báo cáo tài chính",
+      "how": [
+        "Ngày cuối năm: kiểm kê tiền, hàng tồn, tài sản. Lập biên bản kết quả kiểm kê. Chênh lệch thì ghi sổ trước khi lập báo cáo tài chính.",
+        "Trong 90 ngày sau năm: nộp báo cáo tài chính (công ty tính thuế TNDN theo % doanh thu không bắt buộc).",
+        "Chậm nhất ngày cuối cùng của tháng thứ 3 năm sau: quyết toán thuế TNDN (mẫu 03/TNDN hoặc 04/TNDN), kể cả khi được miễn thuế.",
+        "Có trả lương trong năm: quyết toán thuế TNCN (mẫu 05/QTT-TNCN), cùng hạn."
+      ],
+      "tool": { "label": "Xem việc theo năm và lịch hạn nộp", "href": "/bat-dau" },
+      "legal_basis": [
+        {
+          "doc_type": "Luật",
+          "doc_number": "88/2015/QH13",
+          "title": "Luật Kế toán",
+          "issuer": "Quốc hội",
+          "issued_date": "2015-11-20",
+          "effective_date": "2017-01-01",
+          "article": "Điều 40 khoản 2 điểm a, khoản 3",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=183198&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-16",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Thông tư",
+          "doc_number": "132/2018/TT-BTC",
+          "title": "Thông tư hướng dẫn chế độ kế toán cho doanh nghiệp siêu nhỏ",
+          "issuer": "Bộ Tài chính",
+          "issued_date": "2018-12-28",
+          "effective_date": "2019-02-15",
+          "article": "Điều 13 khoản 1; Điều 14 khoản 2; Điều 18 khoản 1, 4",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=196286&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-13",
+          "snapshot_path": ""
+        },
+        {
+          "doc_type": "Thông tư",
+          "doc_number": "89/2026/TT-BTC",
+          "title": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP",
+          "issuer": "Bộ Tài chính",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 21 khoản 1 điểm c.1; Phụ lục I mục 6.2 điểm a, b; mục 7.1 điểm a.2",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-13",
+          "snapshot_path": ""
+        }
+      ],
+      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): việc mới theo NC-044 (Luật Kế toán Điều 40; NC-013, NC-014, NC-019, NC-028, NC-032)."]
     },
     {
       "id": "kham-dinh-ky",
