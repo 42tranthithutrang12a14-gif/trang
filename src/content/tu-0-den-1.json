@@ -970,6 +970,7 @@
             "Đóng BHXH hằng tháng: công ty 17% (3% ốm đau, thai sản + 14% hưu trí, tử tuất), người lao động 8% (công ty khấu trừ từ lương) trên tiền lương làm căn cứ đóng. Hạn chậm nhất là ngày cuối cùng của tháng tiếp theo (lương tháng 3 đóng chậm nhất 30/4).",
             "Tiền lương làm căn cứ đóng BHXH = mức lương ghi trong hợp đồng + phụ cấp ghi trong hợp đồng + khoản bổ sung cố định trả mỗi kỳ. Không tính thưởng theo năng suất, doanh số.",
             "Đóng muộn: phải đóng đủ và nộp thêm 0,03% mỗi ngày trên số tiền chậm đóng. Đăng ký người lao động trễ quá 60 ngày sau hạn 30 ngày, hoặc khai lương đóng thấp hơn lương trong hợp đồng, bị coi là trốn đóng và có thể bị xử lý hình sự. Không chắc mức lương đóng thì hỏi cơ quan BHXH nơi công ty đóng.",
+            "Mức phạt (công ty, dưới 10 người): đóng muộn 24–30% số tiền chậm đóng; khai lương đóng thấp hơn hợp đồng 36–40% số tiền trốn đóng; chưa đăng ký BHXH cho nhân viên 10–24 triệu đồng. Cộng thêm 0,03% mỗi ngày và phải đóng đủ.",
             "Tháng nào người lao động không hưởng lương từ 14 ngày làm việc trở lên thì không phải đóng BHXH và BHTN tháng đó.",
             "BHYT: 4,5% tiền lương làm căn cứ đóng BHXH, công ty đóng 3%, nhân viên 1,5%. BHTN: mỗi bên 1%; đăng ký cùng lúc với BHXH. BHYT, BHTN đóng cùng lúc và cùng hạn với BHXH. Công ty đóng thêm bảo hiểm tai nạn lao động – bệnh nghề nghiệp 0,5% (một số công ty đủ điều kiện được 0,3%). Đóng cho nhân viên có hợp đồng lao động từ đủ 1 tháng và giám đốc có nhận lương. Không đóng cho giám đốc không nhận lương. Tổng: công ty 21,5%, nhân viên 10,5% tiền lương làm căn cứ đóng. Nhân viên đang làm hợp đồng thử việc không thuộc diện BHTN."
           ],
@@ -1119,10 +1120,23 @@
               "verified_against_original": true,
               "checked_at": "2026-11-15",
               "snapshot_path": ""
+            },
+            {
+              "doc_type": "Nghị định",
+              "doc_number": "283/2026/NĐ-CP",
+              "title": "Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực lao động, bảo hiểm xã hội, người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng",
+              "issuer": "Chính phủ",
+              "issued_date": "2026-07-15",
+              "effective_date": "2026-09-10",
+              "article": "Điều 7 khoản 1, 2; Điều 43 khoản 1–4; Điều 44 khoản 1–3; Điều 45 khoản 2, 3; Điều 66 khoản 1, 4",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218871&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-16",
+              "snapshot_path": ""
             }
           ],
           "todo_for_reviewer": [
-            "Ngày 2026-11-16 (NC-042, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 38, 39 khoản 1, 40 khoản 1–3, 41 khoản 1–2 và Luật 51/2024/QH15 Điều 1 khoản 33, 34): thêm hậu quả chậm đóng, trốn đóng BHXH, BHYT, BHTN (0,03%/ngày). Mức phạt tiền về BHXH, BHYT, BHTN: chưa xác minh nghị định xử phạt hiện hành (NC-042).",
+            "Ngày 2026-11-16 (NC-042, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 38, 39 khoản 1, 40 khoản 1–3, 41 khoản 1–2 và Luật 51/2024/QH15 Điều 1 khoản 33, 34): thêm hậu quả chậm đóng, trốn đóng BHXH, BHYT, BHTN (0,03%/ngày). Phạt tiền BHXH, BHTN: đã xác minh theo Nghị định 283/2026/NĐ-CP (hiệu lực 10/09/2026, thay Nghị định 12/2022; NC-043). Phạt tiền BHYT: chưa xác minh. Mức trần 75 triệu ghi trong điều là của cá nhân; với công ty gấp 2 theo Điều 7 khoản 1, chưa ghi vào app.",
             "Ngày 2026-11-15 (NC-036, đã đối chiếu toàn văn Nghị định 158/2025/NĐ-CP Điều 7 khoản 1): thêm cách xác định tiền lương làm căn cứ đóng BHXH. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214189&classid=1",
             "Ngày 2026-11-15 (NC-035, đã đối chiếu toàn văn Nghị định 293/2025/NĐ-CP Điều 3 khoản 1, Điều 5 và Nghị định 399/2026/NĐ-CP Điều 3, 4, 5): thêm lương tối thiểu vùng. Danh mục địa bàn vùng I–IV: xem Phụ lục Nghị định 399/2026, chưa trích. Sàn tiền lương đóng BHXH: Nghị định 158/2025 không đặt sàn bằng lương tối thiểu vùng; mức đóng không dưới lương tối thiểu vùng là cách hiểu (NC-036). Gỡ mức năm 2026 sau 31/12/2026.",
           "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN và tổng 21,5%. Đối tượng bảo hiểm TNLĐ-BNN theo Điều 43 Luật An toàn, vệ sinh lao động 84/2015 (sửa bởi Luật 41/2024 Điều 139 khoản 1 điểm b): có người quản lý hưởng lương, không có người quản lý không hưởng lương; mức trần 1% (Điều 44 khoản 1). Chưa thấy nghị định thay Nghị định 58/2020 tại ngày 2026-11-15 (NC-023 bổ sung 4).",

@@ -542,6 +542,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo: mức phạt tiền về BHXH, BHYT, BHTN chưa xác minh.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 61 (2026-11-16, 21:18 UTC)
+
+- Đọc NC-043 (phạt tiền chậm đóng, trốn đóng BHXH, BHTN theo Nghị định 283/2026, hiệu lực 10/09/2026, thay Nghị định 12/2022; mức trong điều là của cá nhân, công ty gấp 2; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json` bước `lao-dong-bhxh`: thêm câu mức phạt cho công ty dưới 10 người (đóng muộn 24–30%; khai lương thấp 36–40%; chưa đăng ký 10–24 triệu; cộng 0,03%/ngày). Thêm `legal_basis` Nghị định 283/2026.
+- `bat-dau.json` lịch "Hàng tháng", dòng BHXH: thêm "Phạt công ty đóng muộn: 24–30% số tiền chậm đóng". Thêm `legal_basis`.
+- Todo NC-042 ở hai file: đổi thành phạt BHXH, BHTN đã xác minh; phạt BHYT chưa xác minh; mức trần chưa ghi vào app. `legal-framework.json` không có mục Nghị định 12/2022 nên không đổi.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
