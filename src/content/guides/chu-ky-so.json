@@ -25,11 +25,11 @@
     },
     {
       "heading": "Mức phạt nếu không có chữ ký số",
-      "content": "• Không nộp được tờ khai thuế đúng hạn → bị phạt chậm nộp tờ khai\n• Không xuất được hóa đơn điện tử hợp lệ → hóa đơn không có giá trị pháp lý\n\n⚠️ Mức phạt cụ thể cần kế toán viên xác minh."
+      "content": "• Không nộp được tờ khai thuế đúng hạn → bị phạt chậm nộp tờ khai (xem mức phạt trong hướng dẫn khai thuế GTGT)\n• Không lập được hóa đơn điện tử đúng thời điểm → bị phạt về hóa đơn (xem hướng dẫn hóa đơn điện tử)"
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh):\n• Nghị định 130/2018/NĐ-CP về chữ ký số và dịch vụ chứng thực chữ ký số\n• Thông tư 19/2021/TT-BTC về đăng ký và sử dụng chữ ký số trong khai thuế\n• Nghị định 254/2026/NĐ-CP về hóa đơn điện tử (hiệu lực 01/07/2026, thay Nghị định 123/2020/NĐ-CP)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+      "content": "Các văn bản pháp lý liên quan:\n• Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy (từ 10/04/2025, thay Nghị định 130/2018/NĐ-CP)\n• Thông tư 89/2026/TT-BTC về khai thuế, gồm giao dịch điện tử về thuế (từ 01/07/2026; Thông tư 19/2021/TT-BTC đã bị bãi bỏ)\n• Nghị định 254/2026/NĐ-CP về hóa đơn điện tử (hiệu lực 01/07/2026, thay Nghị định 123/2020/NĐ-CP)\n\nTra cứu văn bản:\n→ https://vanban.chinhphu.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
@@ -41,10 +41,9 @@
     "Xác nhận danh sách nhà cung cấp CA được Bộ TT&TT cấp phép còn hiệu lực",
     "Kiểm tra link mic.gov.vn còn đúng trang danh sách CA không",
     "Điền legal_basis với số điều khoản cụ thể và link chính thức",
-    "Gợi ý của trợ lý AI (chưa xác minh): Nghị định 130/2018/NĐ-CP có thể đã được thay bằng Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy. Cập nhật NC-007: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy, hiệu lực 10/04/2025; Nghị định 130/2018/NĐ-CP từng được sửa bởi Nghị định 48/2024/NĐ-CP. Chưa đọc điều khoản thay thế. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=194913&classid=1",
+    "Ngày 2026-11-16 (NC-039, đã đối chiếu toàn văn Nghị định 23/2025/NĐ-CP Điều 46 khoản 1, 2 và Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g, h, i): Nghị định 130/2018/NĐ-CP hết hiệu lực từ 10/04/2025, thay bởi Nghị định 23/2025/NĐ-CP; Thông tư 19/2021/TT-BTC và 80/2021/TT-BTC bị bãi bỏ từ 01/07/2026. Chưa xác minh: điều khoản bắt buộc dùng chữ ký số khi khai thuế theo Luật QLT 108/2025, Thông tư 89/2026; danh sách nhà cung cấp dịch vụ tin cậy. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
     "Gợi ý của trợ lý AI (chưa xác minh): Bộ Thông tin và Truyền thông đã hợp nhất vào Bộ Khoa học và Công nghệ từ 3/2025. Tên cơ quan cấp phép và link mic.gov.vn có thể đã cũ.",
-    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
-    "Kiểm tra Thông tư 19/2021/TT-BTC còn hiệu lực không."
+    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1"
   ],
   "updated_at": "2026-10-23"
 }

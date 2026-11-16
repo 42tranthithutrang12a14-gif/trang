@@ -489,6 +489,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Đưa vào "Cần chủ dự án quyết": giữ hay bỏ tên phần mềm thương mại.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 54 (2026-11-16, 07:20 UTC)
+
+- Đọc NC-039 (Nghị định 130/2018 hết hiệu lực từ 10/04/2025, thay bởi Nghị định 23/2025; Thông tư 19/2021 và 80/2021 bị bãi bỏ từ 01/07/2026 theo Thông tư 89/2026 Điều 99; đã xác minh). Status giữ "draft".
+- `guides/chu-ky-so.json`: mục "Căn cứ pháp lý" thay Nghị định 130/2018 bằng Nghị định 23/2025, Thông tư 19/2021 bằng Thông tư 89/2026; bỏ "(cần xác minh)" và link vbpl.moj.gov.vn (không mở được), thay bằng vanban.chinhphu.vn. Mục mức phạt: bỏ "cần kế toán viên xác minh", dẫn sang mức phạt chậm nộp tờ khai và phạt về hóa đơn ở các guide đã xác minh. Thay hai todo NC-007 (130/2018, 19/2021) bằng ghi chú đã đối chiếu. Guide không có trường `legal_basis`.
+- `legal-framework.json`: mục Nghị định 130/2018 đổi sang Nghị định 23/2025/NĐ-CP (tên, số, hiệu lực 10/04/2025, URL vanban.chinhphu.vn). `key_points` giữ nguyên, ghi todo là chưa đối chiếu với nghị định mới.
+- `tu-0-den-1.json`: thay todo gợi ý AI về Nghị định 130/2018 bằng ghi chú đã đối chiếu.
+- Còn mở: điều khoản bắt buộc dùng chữ ký số khi khai thuế; danh sách nhà cung cấp dịch vụ tin cậy.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
