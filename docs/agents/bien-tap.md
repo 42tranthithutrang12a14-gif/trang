@@ -505,6 +505,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo NC-039 ở `chu-ky-so.json`, `tu-0-den-1.json`, `legal-framework.json`: bỏ ý "điều khoản bắt buộc dùng chữ ký số khi khai thuế" (đã xác minh); còn "danh sách nhà cung cấp dịch vụ tin cậy".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 56 (2026-11-16, 11:18 UTC)
+
+- Đọc NC-040 (nguồn cũ còn hiển thị; Thông tư 20/2026 thay 78/2014, 96/2015 từ kỳ tính thuế 2025; Thông tư 91/2026 thay 32/2025 từ 01/07/2026; đã xác minh). Status giữ "draft".
+- Hai guide khai GTGT, mục "Căn cứ pháp lý": thay Luật QLT 38/2019 bằng 108/2025; Thông tư 80/2021 bằng Nghị định 252/2026 Điều 10 và Thông tư 89/2026 Điều 19; Luật Thuế GTGT 13/2008 bằng 48/2024 (sửa bởi 149/2025, đã xác minh ở NC-021). Bỏ "cần kế toán viên xác minh link chính thức"; link vbpl.moj.gov.vn đổi sang vanban.chinhphu.vn.
+- `guides/tam-nop-thue-tndn.json` mục căn cứ: thay Luật QLT 38/2019 bằng 108/2025; Thông tư 96/2015 bằng Thông tư 20/2026.
+- `legal-framework.json`: ba mục 80/2021, 96/2015, 78/2021 đổi sang Thông tư 89/2026, 20/2026, 91/2026 (tên, số, hiệu lực, URL vanban.chinhphu.vn). `key_points` giữ nguyên, ghi todo. Tên ba thông tư là tên mô tả theo trích yếu trong NC, cần đối chiếu trích yếu chính thức. Todo còn mở: Thông tư 78/2021 có bị Thông tư 32/2025 thay không.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

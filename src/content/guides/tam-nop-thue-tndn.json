@@ -45,7 +45,7 @@
     },
     {
       "heading": "Căn cứ pháp lý",
-      "content": "Các văn bản pháp lý liên quan (cần xác minh link chính thức):\n• Luật Thuế TNDN số 67/2025/QH15 (áp dụng từ kỳ tính thuế năm 2025) và các luật sửa đổi, bổ sung\n• Luật Quản lý thuế số 38/2019/QH14\n• Nghị định 320/2025/NĐ-CP hướng dẫn Luật Thuế TNDN (áp dụng từ kỳ tính thuế năm 2025)\n• Nghị định 141/2026/NĐ-CP (miễn thuế khi doanh thu năm từ 1 tỷ đồng trở xuống)\n• Thông tư 96/2015/TT-BTC (hướng dẫn luật cũ, cần kiểm tra còn áp dụng phần nào)\n\nTra cứu văn bản:\n→ https://vbpl.moj.gov.vn\n→ https://congbao.chinhphu.vn"
+      "content": "Các văn bản pháp lý liên quan:\n• Luật Thuế TNDN số 67/2025/QH15 (áp dụng từ kỳ tính thuế năm 2025) và các luật sửa đổi, bổ sung\n• Luật Quản lý thuế số 108/2025/QH15 (từ 01/07/2026)\n• Nghị định 320/2025/NĐ-CP hướng dẫn Luật Thuế TNDN (áp dụng từ kỳ tính thuế năm 2025)\n• Nghị định 141/2026/NĐ-CP (miễn thuế khi doanh thu năm từ 1 tỷ đồng trở xuống)\n• Thông tư 20/2026/TT-BTC hướng dẫn Luật Thuế TNDN (áp dụng từ kỳ tính thuế 2025; thay Thông tư 78/2014 và 96/2015)\n\nTra cứu văn bản:\n→ https://vanban.chinhphu.vn\n→ https://congbao.chinhphu.vn"
     },
     {
       "heading": "Cổng và công cụ cần dùng",
@@ -53,6 +53,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-16 (NC-040): mục căn cứ thay Luật QLT 38/2019 bằng 108/2025, Thông tư 96/2015 bằng Thông tư 20/2026 (Điều 10 khoản 6 thay Thông tư 78/2014, 96/2015; riêng một số hồ sơ năm 2025 còn theo 96/2015, khoản 2). Nguồn: Thông tư 20/2026/TT-BTC Điều 10 (https://vanban.chinhphu.vn/?pageid=27160&docid=217191&classid=1); Thông tư 91/2026/TT-BTC Điều 25 (https://vanban.chinhphu.vn/?pageid=27160&docid=219006&classid=1); Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g, h (https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1).",
     "Ngày 2026-11-14 (NC-028, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Phụ lục I mục 6.2 điểm a, b; https://vanban.chinhphu.vn/?pageid=27160&docid=218974): quyết toán theo doanh thu – chi phí dùng mẫu 03/TNDN (kèm phụ lục 03-2, 03-3A, 03-3C/TNDN nếu có); theo tỷ lệ % trên doanh thu dùng mẫu 04/TNDN, kèm báo cáo tài chính năm (trừ trường hợp không phải lập).",
     "Ngày 2026-11-14 (NC-027, đã đối chiếu toàn văn Nghị quyết 43/2026/QH16 và Nghị định 398/2026/NĐ-CP): thêm mục \"Năm 2026, 2027: giảm 30% thuế TNDN\" kèm ví dụ giả định. Chưa xác minh: cách xử lý số TNDN đã tạm nộp các quý năm 2026 trước ngày 29/10/2026 (Nghị định 398/2026 không nói rõ). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=219330&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=220138&classid=1",
     "Ngày 2026-11-13 (NC-014, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC): thay câu \"cách hiểu\" bằng: DN được miễn vẫn phải quyết toán TNDN năm (Điều 21 khoản 1 điểm c.1; không có ngoại lệ cho DN được miễn). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",

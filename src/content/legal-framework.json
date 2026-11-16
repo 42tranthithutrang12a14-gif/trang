@@ -74,11 +74,11 @@
           ]
         },
         {
-          "name": "Thông tư hướng dẫn Luật Quản lý thuế về khai thuế, nộp thuế",
-          "number": "80/2021/TT-BTC",
+          "name": "Thông tư quy định chi tiết Luật Quản lý thuế và Nghị định 252/2026/NĐ-CP (khai thuế, nộp thuế)",
+          "number": "89/2026/TT-BTC",
           "issued_by": "Bộ Tài chính",
-          "effective_from": "01/01/2022",
-          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=153481",
+          "effective_from": "01/07/2026",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
             "Hạn nộp tờ khai GTGT tháng: ngày 20 của tháng tiếp theo",
@@ -86,6 +86,7 @@
             "Nộp qua hệ thống eTax: https://thuedientu.gdt.gov.vn"
           ],
           "todo_for_reviewer": [
+            "Ngày 2026-11-16 (NC-040): đổi mục này từ Thông tư 80/2021/TT-BTC (bị bãi bỏ từ 01/07/2026, Thông tư 89/2026 Điều 99 khoản 3 điểm h) sang Thông tư 89/2026/TT-BTC. Các key_points giữ từ bản cũ.",
             "Kiểm tra có văn bản gia hạn nào hiện hành không",
             "Gợi ý của trợ lý AI (chưa xác minh): Luật Quản lý thuế 38/2019/QH14 mà thông tư này hướng dẫn có thể đã có luật thay thế (năm 2025). Cập nhật NC-003: đã thấy trên vanban.chinhphu.vn (ngày tra 2026-11-11) Luật Quản lý thuế 108/2025/QH15, hiệu lực 01/07/2026, kèm Nghị định 252/2026/NĐ-CP và Thông tư 89/2026/TT-BTC (cùng hiệu lực 01/07/2026). Chưa đọc điều khoản thi hành nên chưa rõ có thay toàn bộ Luật 38/2019/QH14 không. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
             "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): từ 01/07/2026 áp dụng Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP. Hạn tháng ngày 20 (Điều 10 khoản 2), hạn quý ngày cuối cùng của tháng đầu quý sau (Điều 10 khoản 3). Thông tư 80/2021 hướng dẫn luật cũ; chưa tra Thông tư 89/2026. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1"
@@ -138,17 +139,18 @@
           ]
         },
         {
-          "name": "Thông tư hướng dẫn thuế TNDN",
-          "number": "96/2015/TT-BTC",
+          "name": "Thông tư quy định chi tiết Luật Thuế TNDN và Nghị định 320/2025/NĐ-CP",
+          "number": "20/2026/TT-BTC",
           "issued_by": "Bộ Tài chính",
-          "effective_from": "06/08/2015",
-          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=89283",
+          "effective_from": "12/03/2026",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=217191&classid=1",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
             "Hướng dẫn chi tiết về doanh thu, chi phí được trừ khi tính thuế TNDN",
             "Quyết toán thuế TNDN năm: hạn 31/03 năm tiếp theo"
           ],
           "todo_for_reviewer": [
+            "Ngày 2026-11-16 (NC-040, đã đối chiếu toàn văn Thông tư 20/2026/TT-BTC Điều 10 khoản 1, 2, 6): đổi mục này từ Thông tư 96/2015/TT-BTC sang Thông tư 20/2026/TT-BTC (hiệu lực 12/03/2026, áp dụng từ kỳ tính thuế 2025; thay Thông tư 78/2014 và 96/2015). Một số hồ sơ, điều kiện năm 2025 còn theo Thông tư 96/2015 (khoản 2). Các key_points giữ từ bản cũ; hạn quyết toán là ngày cuối cùng của tháng thứ 3 (NC-013).",
             "Xác nhận TT 96/2015 còn hiệu lực hay đã có thông tư thay thế",
             "Bổ sung chi phí được trừ phổ biến với DNSN (thuê nhà, điện nước, điện thoại)",
             "Cập nhật NC-008: ngày hiệu lực 06/08/2015 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=180650&classid=1",
@@ -273,17 +275,18 @@
           ]
         },
         {
-          "name": "Thông tư hướng dẫn về hóa đơn điện tử",
-          "number": "78/2021/TT-BTC",
+          "name": "Thông tư quy định Luật Quản lý thuế và Nghị định 254/2026/NĐ-CP về hóa đơn, chứng từ",
+          "number": "91/2026/TT-BTC",
           "issued_by": "Bộ Tài chính",
-          "effective_from": "01/07/2022",
-          "url": "https://vbpl.moj.gov.vn/tw/pages/vbpq-toanvan.aspx?ItemID=153397",
+          "effective_from": "01/07/2026",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=219006&classid=1",
           "congbao_url": "https://congbao.chinhphu.vn",
           "key_points": [
             "Hướng dẫn chi tiết đăng ký, sử dụng và hủy HĐĐT",
             "Cổng tra cứu hóa đơn: https://tracuuhoadon.gdt.gov.vn"
           ],
           "todo_for_reviewer": [
+            "Ngày 2026-11-16 (NC-040, đã đối chiếu toàn văn Thông tư 91/2026/TT-BTC Điều 25 khoản 1, 2): đổi mục này từ Thông tư 78/2021/TT-BTC sang Thông tư 91/2026/TT-BTC (hiệu lực 01/07/2026; Thông tư 32/2025/TT-BTC hết hiệu lực từ ngày đó). Thông tư 78/2021 có bị Thông tư 32/2025 thay không: chưa đọc. Các key_points giữ từ bản cũ.",
             "Xác nhận TT 78/2021 còn hiệu lực hay đã có văn bản thay thế",
             "Gợi ý của trợ lý AI (chưa xác minh): có thể đã được thay bằng Thông tư 32/2025/TT-BTC (từ 1/6/2025).",
             "Cập nhật NC-008: ngày hiệu lực 01/07/2022 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=204200&classid=1"
