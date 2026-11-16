@@ -1726,6 +1726,32 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `5a39384` (NC-041): điền `penalty_plain` 3 rule, thêm ví dụ 0,03%/ngày vào guide, bỏ todo cũ. Đúng đề xuất, không thấy lỗi.
 - Đọc Nghị định 252/2026 Điều 24 khoản 3: ghi NC-041 (bổ sung).
 
+### NC-042 — Chậm đóng BHXH, BHTN, BHYT: phải đóng đủ và nộp thêm 0,03%/ngày trên số chậm đóng; quá 60 ngày (sau khi bị đôn đốc) hoặc khai lương đóng thấp hơn quy định thì bị coi là trốn đóng (Luật BHXH 41/2024 Điều 38–41; Luật BHYT Điều 48a, 48b, 49 do Luật 51/2024 bổ sung)
+
+- **Trạng thái:** đã xác minh (khái niệm chậm đóng, trốn đóng, mức 0,03%/ngày). Chưa xác minh: mức phạt tiền hành chính (nghị định xử phạt lĩnh vực lao động, BHXH).
+- **Liên quan:** NC-023, NC-034, NC-036; lịch "Hàng tháng" (`bat-dau.json`, dòng BHXH, BHYT, BHTN), bước BHXH (`tu-0-den-1.json`).
+- **Phát hiện:**
+  - **Luật BHXH 41/2024/QH15** (Công báo số 987+988, trang 31–33; có lớp chữ):
+    - Điều 38: chậm đóng là chưa đóng hoặc đóng chưa đủ sau hạn đóng (Điều 34 khoản 4, NC-023); hoặc không đăng ký, đăng ký thiếu người phải tham gia trong 60 ngày kể từ hết hạn đăng ký (Điều 28 khoản 1: 30 ngày, NC-022).
+    - Điều 39 khoản 1: trốn đóng gồm: a, b) sau 60 ngày kể từ hết hạn đăng ký mà không đăng ký hoặc đăng ký thiếu người; c, d) "Đăng ký tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc thấp hơn quy định tại khoản 1 Điều 31"; đ, e) không đóng hoặc đóng thiếu "sau 60 ngày kể từ ngày đóng… chậm nhất… và đã được cơ quan có thẩm quyền đôn đốc".
+    - Điều 40 khoản 1: chậm đóng: "Bắt buộc đóng đủ số tiền chậm đóng; nộp số tiền bằng 0,03%/ngày tính trên số tiền bảo hiểm xã hội, bảo hiểm thất nghiệp chậm đóng và số ngày chậm đóng". Khoản 2: xử phạt vi phạm hành chính. Khoản 3: không xét khen thưởng.
+    - Điều 41 khoản 1, 2: trốn đóng: cũng 0,03%/ngày; xử phạt hành chính hoặc truy cứu trách nhiệm hình sự.
+  - **Luật 51/2024/QH15 sửa Luật BHYT, Điều 1 khoản 33, 34** (Công báo số 1523+1524, trang 24–25; có lớp chữ): bổ sung Điều 48a (chậm đóng BHYT), Điều 48b (trốn đóng BHYT: sau 60 ngày; khai lương đóng thấp hơn Điều 14); sửa Điều 49 khoản 2 điểm a: chậm đóng phải "đóng đủ số tiền chậm đóng; nộp số tiền bằng 0,03%/ngày tính trên số tiền bảo hiểm y tế chậm đóng và số ngày chậm đóng"; khoản 3: trốn đóng cũng 0,03%/ngày, có thể bị truy cứu hình sự.
+- **Kết luận ngắn:**
+  1. Đóng BHXH, BHYT, BHTN sau hạn (ngày cuối cùng của tháng tiếp theo, NC-034): phải đóng đủ và nộp thêm 0,03% mỗi ngày trên số tiền chậm đóng.
+  2. Đăng ký người lao động trễ: hạn là 30 ngày; quá thêm 60 ngày nữa thì thành trốn đóng.
+  3. Khai tiền lương đóng bảo hiểm thấp hơn lương thực tế theo hợp đồng (NC-036) bị coi là trốn đóng, không chỉ chậm đóng.
+  4. Đây là rủi ro cao (có thể bị xử lý hình sự khi trốn đóng). Nên nhắc người dùng hỏi cơ quan BHXH khi không chắc mức lương đóng.
+- **Nguồn:** Luật BHXH 41/2024/QH15 Điều 38, 39 khoản 1, 40 khoản 1–3, 41 khoản 1–2 (https://vanban.chinhphu.vn/?pageid=27160&docid=211199&classid=1); Luật 51/2024/QH15 Điều 1 khoản 33, 34 (Điều 48a, 48b, 49 Luật BHYT) (https://vanban.chinhphu.vn/?pageid=27160&docid=212479&classid=1). Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - Lịch "Hàng tháng" dòng BHXH, BHYT, BHTN và bước BHXH: thêm "Đóng muộn: phải đóng đủ và nộp thêm 0,03% mỗi ngày trên số tiền chậm đóng. Đăng ký người lao động quá hạn 30 ngày thêm 60 ngày, hoặc khai lương đóng thấp hơn lương trong hợp đồng, bị coi là trốn đóng và có thể bị xử lý hình sự." `legal_basis`: Luật BHXH 41/2024/QH15 Điều 38–41; Luật BHYT Điều 48a, 48b, 49 (bổ sung, sửa bởi Luật 51/2024/QH15 Điều 1 khoản 33, 34); `verified_against_original: true`.
+  - Todo: "Mức phạt tiền về BHXH, BHYT, BHTN: chưa xác minh nghị định xử phạt hiện hành (NC-042)."
+
+### Vòng 60 (2026-11-16, 18:18 UTC)
+
+- Rà commit Biên tập `a837cac` (NC-041 bổ sung): thêm ví dụ tạm nộp thiếu dưới 80% vào guide TNDN và `penalty_plain`. Đúng đề xuất, không thấy lỗi.
+- Đọc Luật BHXH 41/2024 Điều 38–41 và Luật 51/2024 (Điều 48a, 48b, 49 Luật BHYT): ghi NC-042.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
