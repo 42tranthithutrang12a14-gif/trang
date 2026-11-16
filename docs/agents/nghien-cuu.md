@@ -1672,6 +1672,36 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `3c9c073` (NC-040): thay nguồn ở 3 guide; đổi 3 mục `legal-framework.json` sang Thông tư 89/2026, 20/2026, 91/2026. Đúng đề xuất, không thấy lỗi.
 - Tìm Thông tư 32/2025 (ô tìm kiếm bị quá thời gian; dò theo dải docid), đọc Điều 12: ghi NC-040 (bổ sung).
 
+### NC-041 — Tiền chậm nộp thuế: 0,03%/ngày trên số tiền thuế nộp chậm, tính liên tục từ ngày sau hạn nộp đến ngày trước ngày nộp; DN tự tính và nộp (Luật Quản lý thuế 108/2025 Điều 16 khoản 2, 3; Nghị định 252/2026 Điều 26 khoản 1)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** `rules/obligation_rules.json` (3 rule: VAT_QUARTERLY_RETURN, VAT tháng, tạm nộp TNDN) có `penalty_plain` còn trống và todo cũ "Điền legal_basis… ví dụ Luật QLT 38/2019, Thông tư 80/2021" dù `legal_basis` đã điền; các guide có câu "còn phải nộp tiền chậm nộp" (NC-018).
+- **Phát hiện:**
+  - **Luật Quản lý thuế 108/2025/QH15 Điều 16** "Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác" (PDF trang 17–18, OCR):
+    - Khoản 2 điểm a: "Mức tính tiền chậm nộp bằng 0,03%/ngày tính trên số tiền thuế, khoản thu khác chậm nộp do cơ quan thuế quản lý thu…". Điểm b: thời gian tính do Chính phủ quy định.
+    - Khoản 3: "Người nộp thuế tự xác định số tiền chậm nộp… và nộp vào ngân sách nhà nước theo quy định. Sau 30 ngày kể từ ngày người nộp thuế nộp tiền thuế… nhưng người nộp thuế chưa xác định số tiền chậm nộp thì cơ quan quản lý thuế xác định số tiền chậm nộp và thông báo cho người nộp thuế."
+    - Khoản 4: sau 30 ngày kể từ hết hạn nộp mà chưa nộp, cơ quan thuế thông báo số tiền thuế nợ và số ngày chậm nộp.
+    - Khoản 5: miễn tiền chậm nộp nếu bất khả kháng (khoản 21 Điều 4).
+    - Khoản 6: Chính phủ có thể điều chỉnh mức 0,03%/ngày theo từng thời kỳ.
+  - **Nghị định 252/2026/NĐ-CP Điều 26 khoản 1 điểm a** (PDF trang 49–50, OCR): "Thời gian tính tiền chậm nộp được tính liên tục kể từ ngày tiếp theo liền kề của ngày cuối cùng của thời hạn nộp thuế… hoặc của thời hạn gia hạn nộp… đến ngày liền kề trước ngày số tiền nợ thuế… được nộp vào ngân sách nhà nước."
+  - **Khoản 2:** thanh tra, kiểm tra phát hiện tăng số thuế sau quyết toán: tính chậm nộp từ ngày sau hạn nộp hồ sơ quyết toán.
+- **Kết luận ngắn:**
+  1. Nộp thuế muộn: mỗi ngày trễ thêm 0,03% số tiền thuế (ví dụ số giả định: 10 triệu đồng trễ 30 ngày → 10.000.000 × 0,03% × 30 = 90.000 đồng). Tính cả ngày nghỉ, vì "tính liên tục".
+  2. Công ty tự tính và nộp tiền chậm nộp cùng tiền thuế. Đây là khoản riêng, cộng thêm vào tiền phạt chậm nộp tờ khai (NC-018) nếu có.
+  3. Tiền chậm nộp không được tính vào chi phí được trừ khi tính thuế TNDN (NC-025).
+  4. Trong thời gian được gia hạn (NC-031), không tính tiền chậm nộp.
+- **Nguồn:** Luật Quản lý thuế 108/2025/QH15 Điều 16 khoản 2, 3, 4, 5, 6 (docid 216541); Nghị định 252/2026/NĐ-CP Điều 26 khoản 1 điểm a, khoản 2 (docid 218690). Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - `rules/obligation_rules.json`, cả 3 rule, điền `penalty_plain`: "Nộp tờ khai muộn: bị phạt theo số ngày trễ (từ cảnh cáo đến 15–25 triệu đồng). Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp." `legal_basis` thêm: Luật Quản lý thuế 108/2025/QH15 Điều 16 khoản 2, 3; Nghị định 252/2026/NĐ-CP Điều 26 khoản 1; Nghị định 125/2020/NĐ-CP Điều 13 (sửa bởi Nghị định 310/2025) như NC-018; `verified_against_original: true`.
+  - Riêng rule tạm nộp TNDN: chỉ ghi phần tiền chậm nộp (tạm nộp không có tờ khai quý). Việc tạm nộp thiếu dưới 80% bị tính chậm nộp phần chênh lệch: chưa trích câu chữ ở vòng này (NC-013 chỉ ghi mức 80%); giữ todo.
+  - Xóa todo cũ "Điền legal_basis… ví dụ: Luật Quản lý thuế số 38/2019/QH14…; Thông tư 80/2021/TT-BTC; link vbpl.moj.gov.vn" ở 3 rule (dòng ~61, 123, 194), vì `legal_basis` đã điền và các văn bản ví dụ đã hết hiệu lực.
+  - Guide khai GTGT, tạm nộp TNDN: chỗ ghi "còn phải nộp tiền chậm nộp" thêm "(0,03% mỗi ngày trên số thuế nộp chậm)".
+
+### Vòng 58 (2026-11-16, 14:22 UTC)
+
+- Rà commit Biên tập `871ff59` (NC-040 bổ sung): chỉ sửa todo ở `legal-framework.json` và guide hóa đơn. Đúng đề xuất, không thấy lỗi.
+- Rà `obligation_rules.json`: `penalty_plain` trống, todo cũ dẫn văn bản hết hiệu lực. Đọc Luật QLT 108/2025 Điều 16 và Nghị định 252/2026 Điều 26: ghi NC-041.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
