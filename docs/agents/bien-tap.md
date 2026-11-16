@@ -463,6 +463,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "Nghị định 58/2020 dẫn chiếu Luật BHXH 58/2014… chưa xác minh phần 0,5% có tính cho người quản lý không lương không" (4 chỗ): thay bằng ghi chú đối tượng theo Điều 43 mới, chưa thấy nghị định thay Nghị định 58/2020.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 51 (2026-11-16, 01:18 UTC)
+
+- Đọc NC-037 (phạt không lập, lập muộn hóa đơn; Nghị định 125/2020 Điều 24 khoản 2, 3, 6 sửa bởi Nghị định 310/2025; đã xác minh). Status giữ "draft".
+- `guides/hoa-don-dien-tu.json` mục "Mức phạt nếu không dùng hóa đơn điện tử": bỏ mức cũ "10.000.000 – 20.000.000 đồng" (sai). Thay bằng: không lập 1–2 triệu/1 hóa đơn, tới 60–80 triệu, buộc lập; lập muộn 0,5–1,5 triệu, tới 50–70 triệu; nhiều hóa đơn trong một lần kiểm tra phạt một lần; mức cho công ty; người mua không cho tên vẫn lập, ghi "Bán cho người tiêu dùng". Bỏ dòng "cần kế toán viên xác minh". Giữ dòng hóa đơn giấy, ghi vào todo là chưa xác minh.
+- Todo: bỏ "mức phạt không lập hóa đơn" khỏi câu "Chưa xác minh" cũ; thêm todo có nguồn và ghi chú Nghị định 125/2020 dẫn Luật QLT cũ.
+- `risk_rules.json`: rule `e_invoice` nói về việc chưa dùng hóa đơn điện tử, không phải không lập hóa đơn; không đổi.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

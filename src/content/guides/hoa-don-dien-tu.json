@@ -29,7 +29,7 @@
     },
     {
       "heading": "Mức phạt nếu không dùng hóa đơn điện tử",
-      "content": "• Không lập hóa đơn khi bán hàng: phạt 10.000.000 – 20.000.000 đồng\n• Dùng hóa đơn giấy sau thời hạn bắt buộc chuyển đổi: hóa đơn không có giá trị pháp lý, chi phí mua hàng không được khấu trừ thuế GTGT đầu vào\n\n⚠️ Mức phạt cụ thể cần kế toán viên xác minh theo Nghị định hiện hành."
+      "content": "• Không lập hóa đơn khi bán hàng: phạt 1–2 triệu đồng với 1 hóa đơn. Nhiều hóa đơn thì cao hơn, tới 60–80 triệu đồng (từ 50 hóa đơn). Công ty còn bị buộc lập hóa đơn.\n• Lập hóa đơn muộn: phạt 0,5–1,5 triệu đồng với 1 hóa đơn, tới 50–70 triệu đồng (từ 100 hóa đơn).\n• Nhiều hóa đơn vi phạm bị phát hiện trong cùng một lần kiểm tra: phạt một lần, tính theo tổng số hóa đơn.\n• Đây là mức phạt cho công ty (Nghị định 125/2020/NĐ-CP Điều 24, sửa bởi Nghị định 310/2025/NĐ-CP).\n• Người mua không cho tên, mã số thuế: vẫn lập hóa đơn, ghi \"Bán cho người tiêu dùng\". Khi công ty mua hàng, hóa đơn ghi \"Bán cho người tiêu dùng\" không dùng được để tính chi phí.\n• Dùng hóa đơn giấy sau thời hạn bắt buộc chuyển đổi: hóa đơn không có giá trị pháp lý, chi phí mua hàng không được khấu trừ thuế GTGT đầu vào"
     },
     {
       "heading": "Căn cứ pháp lý",
@@ -41,7 +41,8 @@
     }
   ],
   "todo_for_reviewer": [
-    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): sửa summary, mục \"Hóa đơn điện tử là gì?\", đổi mục loại hóa đơn thành 3 loại (Điều 6 khoản 1), bỏ \"miễn phí cổng kết nối thuế\" thay bằng điều kiện miễn phí 12 tháng (Điều 11), thêm mục \"Khi nào phải lập hóa đơn\" (Điều 9), đổi \"Tổng cục Thuế\" thành \"Cục Thuế\", thay Nghị định 123/2020 trong căn cứ. Chưa xác minh: mức phạt không lập hóa đơn (Nghị định 125/2020 Điều 24 đã sửa), Thông tư 91/2026, thời gian cơ quan thuế duyệt đăng ký. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+    "Ngày 2026-11-16 (NC-037, đã đối chiếu toàn văn Nghị định 310/2025/NĐ-CP Điều 1 khoản 14 (khoản 2, 3, 6 Điều 24 Nghị định 125/2020) và phần sửa khoản 3 Điều 6; Nghị định 125/2020/NĐ-CP Điều 7 khoản 4 điểm a; Nghị định 254/2026/NĐ-CP Phụ lục mục 4 điểm b; https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1): sửa mục mức phạt. Mức cũ \"10–20 triệu\" sai, đã bỏ. Đã bỏ dòng \"cần kế toán viên xác minh\". Còn chưa xác minh: ý hóa đơn giấy sau thời hạn chuyển đổi (giữ từ bản cũ). Nghị định 125/2020 dẫn Luật Quản lý thuế 38/2019; chưa thấy nghị định xử phạt mới theo Luật 108/2025 (NC-037).",
+    "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): sửa summary, mục \"Hóa đơn điện tử là gì?\", đổi mục loại hóa đơn thành 3 loại (Điều 6 khoản 1), bỏ \"miễn phí cổng kết nối thuế\" thay bằng điều kiện miễn phí 12 tháng (Điều 11), thêm mục \"Khi nào phải lập hóa đơn\" (Điều 9), đổi \"Tổng cục Thuế\" thành \"Cục Thuế\", thay Nghị định 123/2020 trong căn cứ. Chưa xác minh: Thông tư 91/2026, thời gian cơ quan thuế duyệt đăng ký. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
     "Xác nhận mức phạt theo Nghị định 125/2020 còn đang có hiệu lực không. Cập nhật NC-003: Nghị định 125/2020/NĐ-CP đã có các văn bản sửa đổi: 102/2021/NĐ-CP, 310/2025/NĐ-CP, 291/2026/NĐ-CP (thấy trên vanban.chinhphu.vn, ngày tra 2026-11-11, chưa đọc toàn văn). Xác minh mức phạt theo bản đã sửa. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1",
     "Kiểm tra các link cổng HĐ ĐT còn hoạt động không",
     "Điền legal_basis với số điều khoản cụ thể",
