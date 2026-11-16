@@ -498,6 +498,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Còn mở: điều khoản bắt buộc dùng chữ ký số khi khai thuế; danh sách nhà cung cấp dịch vụ tin cậy.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 55 (2026-11-16, 09:18 UTC)
+
+- Đọc NC-039 (bổ sung): khai thuế điện tử cần tài khoản định danh điện tử và chữ ký số, hoặc hình thức xác nhận khác nếu hệ thống cho phép; hóa đơn của DN phải có chữ ký số của DN, trừ hóa đơn từ máy tính tiền (Thông tư 89/2026 Điều 8, 10; Nghị định 254/2026 Điều 8 khoản 9, Phụ lục mục 6; đã xác minh). Status giữ "draft".
+- `guides/chu-ky-so.json`: sửa `summary` (bỏ "bắt buộc… để nộp tờ khai"; nêu hóa đơn là lý do chính). Mục "Tại sao phải có chữ ký số?": viết lại dòng hóa đơn và dòng khai thuế, ghi căn cứ cuối mục; bỏ câu "Không có chữ ký số, doanh nghiệp không thể thực hiện nghĩa vụ thuế". Hai dòng đăng ký doanh nghiệp, văn bản hành chính giữ nguyên, ghi todo là chưa xác minh.
+- Todo NC-039 ở `chu-ky-so.json`, `tu-0-den-1.json`, `legal-framework.json`: bỏ ý "điều khoản bắt buộc dùng chữ ký số khi khai thuế" (đã xác minh); còn "danh sách nhà cung cấp dịch vụ tin cậy".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

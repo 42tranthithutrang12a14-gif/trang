@@ -4,12 +4,12 @@
   "sample_notice": "MẪU – CHƯA XÁC MINH",
   "title": "Đăng ký và sử dụng chữ ký số",
   "category": "thue",
-  "summary": "Doanh nghiệp bắt buộc phải có chữ ký số hợp lệ để nộp tờ khai thuế, nộp hồ sơ qua mạng và ký hóa đơn điện tử. Chữ ký số có thời hạn và phải gia hạn trước khi hết.",
+  "summary": "Doanh nghiệp cần chữ ký số để ký hóa đơn điện tử. Khi khai thuế qua mạng, thường cũng dùng chữ ký số (hoặc hình thức xác nhận khác nếu hệ thống của cơ quan thuế cho phép). Chữ ký số có thời hạn, phải gia hạn trước khi hết.",
   "related_rules": ["RISK_NO_DIGITAL_SIGNATURE"],
   "body_sections": [
     {
       "heading": "Tại sao phải có chữ ký số?",
-      "content": "Chữ ký số là bắt buộc để:\n• Ký và nộp tờ khai thuế điện tử qua eTax\n• Ký hóa đơn điện tử khi xuất hóa đơn cho khách hàng\n• Nộp hồ sơ thay đổi đăng ký doanh nghiệp trực tuyến\n• Ký các văn bản hành chính điện tử với cơ quan nhà nước\n\nKhông có chữ ký số, doanh nghiệp không thể thực hiện nghĩa vụ thuế và kê khai qua mạng."
+      "content": "Công ty cần chữ ký số để:\n• Ký hóa đơn điện tử bằng chữ ký số của công ty (trừ hóa đơn từ máy tính tiền)\n• Ký tờ khai thuế điện tử. Cần thêm tài khoản giao dịch thuế điện tử (tài khoản định danh điện tử). Nếu hệ thống của cơ quan thuế cho phép, có thể xác nhận bằng mã xác thực hoặc sinh trắc học thay chữ ký số\n• Nộp hồ sơ thay đổi đăng ký doanh nghiệp trực tuyến\n• Ký các văn bản hành chính điện tử với cơ quan nhà nước\n\n(Thông tư 89/2026/TT-BTC Điều 8 khoản 1, Điều 10; Nghị định 254/2026/NĐ-CP Điều 8 khoản 9, Phụ lục mục 6.)"
     },
     {
       "heading": "Các loại chữ ký số phổ biến",
@@ -37,11 +37,12 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-16 (NC-039 bổ sung, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Điều 8 khoản 1 điểm a, b, c; Điều 10 khoản 1, khoản 2 điểm a, b và Nghị định 254/2026/NĐ-CP Điều 8 khoản 9 điểm b; Phụ lục mục 6, 7): sửa summary và mục \"Tại sao phải có chữ ký số?\"; bỏ câu \"Không có chữ ký số, doanh nghiệp không thể thực hiện nghĩa vụ thuế\". Chưa xác minh: hướng dẫn kỹ thuật của Cục Thuế về hình thức xác nhận thay chữ ký số; hai dòng đăng ký doanh nghiệp và văn bản hành chính giữ từ bản cũ. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
     "Xác nhận văn bản pháp lý bắt buộc dùng chữ ký số khi nộp thuế hiện hành",
     "Xác nhận danh sách nhà cung cấp CA được Bộ TT&TT cấp phép còn hiệu lực",
     "Kiểm tra link mic.gov.vn còn đúng trang danh sách CA không",
     "Điền legal_basis với số điều khoản cụ thể và link chính thức",
-    "Ngày 2026-11-16 (NC-039, đã đối chiếu toàn văn Nghị định 23/2025/NĐ-CP Điều 46 khoản 1, 2 và Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g, h, i): Nghị định 130/2018/NĐ-CP hết hiệu lực từ 10/04/2025, thay bởi Nghị định 23/2025/NĐ-CP; Thông tư 19/2021/TT-BTC và 80/2021/TT-BTC bị bãi bỏ từ 01/07/2026. Chưa xác minh: điều khoản bắt buộc dùng chữ ký số khi khai thuế theo Luật QLT 108/2025, Thông tư 89/2026; danh sách nhà cung cấp dịch vụ tin cậy. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
+    "Ngày 2026-11-16 (NC-039, đã đối chiếu toàn văn Nghị định 23/2025/NĐ-CP Điều 46 khoản 1, 2 và Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g, h, i): Nghị định 130/2018/NĐ-CP hết hiệu lực từ 10/04/2025, thay bởi Nghị định 23/2025/NĐ-CP; Thông tư 19/2021/TT-BTC và 80/2021/TT-BTC bị bãi bỏ từ 01/07/2026. Chưa xác minh: danh sách nhà cung cấp dịch vụ tin cậy. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1",
     "Gợi ý của trợ lý AI (chưa xác minh): Bộ Thông tin và Truyền thông đã hợp nhất vào Bộ Khoa học và Công nghệ từ 3/2025. Tên cơ quan cấp phép và link mic.gov.vn có thể đã cũ.",
     "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): Nghị định 254/2026/NĐ-CP hiệu lực 01/07/2026; từ ngày đó Nghị định 123/2020/NĐ-CP, Điều 1 Nghị định 41/2022/NĐ-CP và Nghị định 70/2025/NĐ-CP hết hiệu lực (Điều 43). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1"
   ],
