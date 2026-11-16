@@ -1702,6 +1702,30 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `871ff59` (NC-040 bổ sung): chỉ sửa todo ở `legal-framework.json` và guide hóa đơn. Đúng đề xuất, không thấy lỗi.
 - Rà `obligation_rules.json`: `penalty_plain` trống, todo cũ dẫn văn bản hết hiệu lực. Đọc Luật QLT 108/2025 Điều 16 và Nghị định 252/2026 Điều 26: ghi NC-041.
 
+### NC-041 (bổ sung) — Tạm nộp TNDN 4 quý thấp hơn 80% số thuế quyết toán: phải nộp tiền chậm nộp trên phần nộp thiếu, tính từ ngày sau hạn tạm nộp quý 4 (Nghị định 252/2026 Điều 24 khoản 3 điểm b)
+
+- **Trạng thái:** đã xác minh. Đóng điểm còn mở của NC-041.
+- **Liên quan:** NC-013 (mức 80%), NC-041; rule tạm nộp TNDN trong `rules/obligation_rules.json` (`penalty_plain` hiện chỉ ghi 0,03%/ngày), `guides/tam-nop-thue-tndn.json`.
+- **Phát hiện (Nghị định 252/2026/NĐ-CP Điều 24 "Tạm nộp thuế, khoản thu khác theo quý", PDF trang 47–48, OCR):**
+  - Khoản 2: "Thời hạn tạm nộp quý chậm nhất là ngày cuối cùng của tháng đầu của quý tiếp theo quý phát sinh nghĩa vụ thuế" (khớp NC-013).
+  - Khoản 3 điểm a: người nộp thuế tự xác định số tạm nộp hằng quý, "nhưng tổng số thuế… đã tạm nộp của 04 quý không được thấp hơn 80% số thuế… phải nộp theo quyết toán năm".
+  - Khoản 3 điểm b: "Trường hợp người nộp thuế nộp thiếu so với số thuế… phải tạm nộp 04 quý theo quy định tại điểm a khoản này thì phải nộp tiền chậm nộp tính trên số thuế… nộp thiếu kể từ ngày tiếp theo liền kề của ngày cuối cùng của thời hạn tạm nộp quý 04 đến ngày liền kề trước của ngày số tiền còn thiếu được nộp vào ngân sách nhà nước, bao gồm trường hợp người nộp thuế kê khai bổ sung".
+  - Khoản 3 điểm c: thanh tra, kiểm tra phát hiện tăng số phải nộp sau quyết toán: theo khoản 2 Điều 26 (NC-041).
+- **Kết luận ngắn:**
+  1. Cách hiểu đúng chữ: "số phải tạm nộp 4 quý" là 80% số thuế quyết toán năm. Nếu tổng 4 quý đã tạm nộp thấp hơn mức này, phần thiếu (so với 80%) bị tính 0,03%/ngày, từ ngày sau hạn tạm nộp quý 4 (thường từ 01/02 năm sau) đến ngày nộp.
+  2. Ví dụ (số giả định): thuế TNDN cả năm 100 triệu; phải tạm nộp ít nhất 80 triệu; đã tạm nộp 60 triệu → thiếu 20 triệu, bị tính chậm nộp trên 20 triệu từ 01/02 đến ngày nộp.
+  3. Văn bản không nói rõ phần 20% còn lại (từ 80% đến 100%) có bị tính chậm nộp không nếu nộp trước hạn quyết toán. Không ghi điều này.
+- **Nguồn:** Nghị định 252/2026/NĐ-CP Điều 24 khoản 2, khoản 3 điểm a, b, c (https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1). Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - Rule tạm nộp TNDN, `penalty_plain`: "Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp. Tổng 4 quý tạm nộp phải đạt ít nhất 80% số thuế cả năm; thiếu thì phần thiếu bị tính 0,03%/ngày từ ngày sau hạn tạm nộp quý 4." `legal_basis` thêm: Nghị định 252/2026/NĐ-CP Điều 24 khoản 3 điểm a, b; `verified_against_original: true`.
+  - `guides/tam-nop-thue-tndn.json`: thêm ví dụ trên (ghi rõ "số giả định").
+  - Bỏ todo "Viết các bước và mức phạt khi tạm nộp thiếu" phần mức phạt.
+
+### Vòng 59 (2026-11-16, 16:19 UTC)
+
+- Rà commit Biên tập `5a39384` (NC-041): điền `penalty_plain` 3 rule, thêm ví dụ 0,03%/ngày vào guide, bỏ todo cũ. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 252/2026 Điều 24 khoản 3: ghi NC-041 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
