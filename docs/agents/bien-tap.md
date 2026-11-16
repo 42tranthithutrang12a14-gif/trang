@@ -513,6 +513,12 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `legal-framework.json`: ba mục 80/2021, 96/2015, 78/2021 đổi sang Thông tư 89/2026, 20/2026, 91/2026 (tên, số, hiệu lực, URL vanban.chinhphu.vn). `key_points` giữ nguyên, ghi todo. Tên ba thông tư là tên mô tả theo trích yếu trong NC, cần đối chiếu trích yếu chính thức. Todo còn mở: Thông tư 78/2021 có bị Thông tư 32/2025 thay không.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 57 (2026-11-16, 13:25 UTC)
+
+- Đọc NC-040 (bổ sung): Thông tư 78/2021 bị Thông tư 32/2025 thay từ 01/06/2025; Thông tư 32/2025 hết hiệu lực từ 01/07/2026 (đã xác minh). Việc đổi mục `legal-framework.json` sang Thông tư 91/2026 ở vòng 56 là đúng.
+- Đúng đề xuất, chỉ sửa todo, không đổi nội dung hiển thị: mục Thông tư 91/2026 trong `legal-framework.json`; todo gợi ý AI trong `guides/hoa-don-dien-tu.json` (ghi thêm kết quả xác minh và nguồn). Status giữ "draft".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
