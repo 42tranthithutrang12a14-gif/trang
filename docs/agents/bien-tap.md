@@ -534,6 +534,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `rules/obligation_rules.json` rule `CIT_PROVISIONAL`: bổ sung câu 80% vào `penalty_plain`. `legal_basis` đã có Nghị định 252/2026 Điều 24 khoản 3. Todo "Viết các bước và mức phạt…" thu lại còn phần các bước.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 60 (2026-11-16, 19:18 UTC)
+
+- Đọc NC-042 (chậm đóng BHXH, BHYT, BHTN: đóng đủ và nộp thêm 0,03%/ngày; quá 60 ngày sau đôn đốc hoặc khai lương đóng thấp hơn quy định là trốn đóng; Luật BHXH 41/2024 Điều 38–41; Luật BHYT Điều 48a, 48b, 49 do Luật 51/2024 bổ sung; đã xác minh). Status giữ "draft".
+- `tu-0-den-1.json` bước `lao-dong-bhxh`: thêm câu đóng muộn 0,03%/ngày; đăng ký trễ hoặc khai lương thấp là trốn đóng, có thể bị xử lý hình sự; không chắc mức lương đóng thì hỏi cơ quan BHXH (rủi ro cao, theo NC-042). Bổ sung điều khoản vào `legal_basis` Luật 41/2024 và 51/2024.
+- `bat-dau.json` lịch "Hàng tháng", dòng BHXH: thêm "Đóng muộn: nộp thêm 0,03% mỗi ngày trên số chậm đóng (áp dụng cả BHYT, BHTN)". Bổ sung điều khoản vào `legal_basis`.
+- Todo: mức phạt tiền về BHXH, BHYT, BHTN chưa xác minh.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
