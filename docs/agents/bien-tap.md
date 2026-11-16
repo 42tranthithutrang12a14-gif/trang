@@ -471,6 +471,16 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `risk_rules.json`: rule `e_invoice` nói về việc chưa dùng hóa đơn điện tử, không phải không lập hóa đơn; không đổi.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 52 (2026-11-16, 03:18 UTC)
+
+- Đọc NC-037 (bổ sung): Nghị định 125/2020 vẫn được áp dụng; Nghị định 291/2026 (căn cứ Luật QLT 108/2025) vẫn sửa nó. `guides/hoa-don-dien-tu.json`: thay todo "chưa thấy nghị định xử phạt mới" bằng câu đề xuất. Không đổi nội dung hiển thị.
+- Đọc NC-001 (bổ sung): từ 01/07/2026, đại lý thuế có ít nhất một người có chứng chỉ kế toán viên được làm dịch vụ kế toán cho DN siêu nhỏ (Luật QLT 108/2025 Điều 51, bổ sung Điều 70a Luật Kế toán; đã xác minh).
+  - `tu-0-den-1.json` bước `ke-toan`: thêm câu "Có thể thuê công ty dịch vụ kế toán, hoặc đại lý thuế có người có chứng chỉ kế toán viên (từ 01/07/2026)." Thêm `legal_basis` Luật 108/2025 Điều 51 (ngày ban hành 2025-12-10 lấy theo các mục đã có trong repo) và todo.
+  - `guides/so-sach-ke-toan.json`: thêm câu tương tự kèm căn cứ; thêm todo.
+  - Không chạm định hướng "tự làm trọn vẹn" (vẫn chờ chủ dự án quyết).
+- Status giữ "draft".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.

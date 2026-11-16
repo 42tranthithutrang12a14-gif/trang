@@ -697,7 +697,7 @@
             "Chọn chế độ kế toán áp dụng cho doanh nghiệp siêu nhỏ.",
             "Chọn cách ghi sổ: bảng tính theo mẫu hoặc phần mềm kế toán.",
             "Mở sổ kế toán. Ghi mọi khoản thu, chi và lưu mọi hóa đơn, chứng từ từ ngày đầu.",
-            "Nếu điều (2) hoặc (3) chưa đạt: thuê dịch vụ kế toán cho phần phụ trách kế toán. Bạn vẫn tự lập, giữ chứng từ và ghi chép hằng ngày."
+            "Nếu điều (2) hoặc (3) chưa đạt: thuê dịch vụ kế toán cho phần phụ trách kế toán. Bạn vẫn tự lập, giữ chứng từ và ghi chép hằng ngày. Có thể thuê công ty dịch vụ kế toán, hoặc đại lý thuế có người có chứng chỉ kế toán viên (từ 01/07/2026)."
           ],
           "links": [],
           "legal_basis": [
@@ -739,9 +739,23 @@
               "verified_against_original": true,
               "checked_at": "2026-11-12",
               "snapshot_path": ""
+            },
+            {
+              "doc_type": "Luật",
+              "doc_number": "108/2025/QH15",
+              "title": "Luật Quản lý thuế",
+              "issuer": "Quốc hội",
+              "issued_date": "2025-12-10",
+              "effective_date": "2026-07-01",
+              "article": "Điều 51 (bổ sung Điều 70a Luật Kế toán 88/2015/QH13); Điều 52 khoản 1",
+              "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1",
+              "verified_against_original": true,
+              "checked_at": "2026-11-16",
+              "snapshot_path": ""
             }
           ],
           "todo_for_reviewer": [
+            "Ngày 2026-11-16 (NC-001 bổ sung, đã đối chiếu toàn văn Luật Quản lý thuế 108/2025/QH15 Điều 51, 52 khoản 1): thêm lựa chọn thuê đại lý thuế có người có chứng chỉ kế toán viên (Điều 70a Luật Kế toán).",
             "Theo báo chí (chưa xác minh): Thông tư 58/2026/TT-BTC thay Thông tư 132/2018/TT-BTC từ 1/7/2026. Cần mở văn bản gốc. Cập nhật NC-002: ngày tra 2026-11-11, chưa tìm thấy Thông tư 58/2026/TT-BTC trên vanban.chinhphu.vn. Ô tìm kiếm của cổng chỉ khớp trích yếu, nên chưa kết luận là không có.",
             "Ngày 2026-11-12 (NC-001, đã đối chiếu toàn văn): đã viết lại bước kiểm tra điều kiện và bước thuê dịch vụ, điền legal_basis (Luật Kế toán, Nghị định 174/2016/NĐ-CP, Thông tư 132/2018/TT-BTC). legal_basis chỉ phủ phần điều kiện làm kế toán, chưa phủ chế độ kế toán và mốc mở sổ.",
             "Điểm còn mở sau NC-001 (2026-11-12): (1) Nghị định 174/2016 Điều 20 khoản 2 điểm b ghi DN siêu nhỏ \"được bố trí phụ trách kế toán\"; cách hiểu là phải có phụ trách kế toán hoặc thuê dịch vụ, chưa có văn bản hướng dẫn trực tiếp. (2) Thông tư 132/2018 Điều 8 khoản 1 câu 2: DN siêu nhỏ nộp thuế TNDN theo tỷ lệ % trên doanh thu \"có thể tự tổ chức thực hiện công tác kế toán\"; chưa rõ có bỏ điều kiện trình độ không. Rủi ro cao, cần kế toán hoặc luật sư cho ý kiến. (3) Chưa đọc Thông tư 101/2026/TT-BTC (chứng chỉ bồi dưỡng kế toán trưởng, hiệu lực 01/01/2027). (4) Chưa tìm thấy văn bản sửa Nghị định 174/2016. (5) Tiêu chí DN siêu nhỏ (Nghị định 80/2021/NĐ-CP) chưa đọc. Luật 56/2024/QH15 không sửa khoản 1 Điều 51, Điều 52, Điều 54 Luật Kế toán (theo NC-001).",
