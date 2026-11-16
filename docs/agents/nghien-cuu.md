@@ -1462,6 +1462,46 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `ac764cd` (NC-036): thêm câu "được tính, không được tính" vào tiền lương đóng BHXH, `legal_basis` Nghị định 158/2025, sửa todo. Đúng đề xuất, không thấy lỗi.
 - Đọc Luật An toàn, vệ sinh lao động Điều 43, 44 và Luật BHXH 41/2024 Điều 2, 139; tìm văn bản thay Nghị định 58/2020: ghi NC-023 (bổ sung 4).
 
+### NC-037 — Phạt về hóa đơn khi bán hàng: không lập hóa đơn 1–2 triệu đồng (1 số hóa đơn) đến 60–80 triệu (từ 50 số); lập sai thời điểm 0,5–1,5 triệu (1 số) đến 50–70 triệu (từ 100 số); buộc lập hóa đơn (Nghị định 125/2020 Điều 24 khoản 2, 3, 6, sửa bởi Nghị định 310/2025)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-020 (điểm còn mở "mức phạt không lập hóa đơn"), NC-018; `guides/hoa-don-dien-tu.json`; `rules/risk_rules.json`.
+- **Phát hiện (Nghị định 310/2025/NĐ-CP Điều 1 khoản 14, PDF trang 9–11, bản OCR đã có; hiệu lực 16/01/2026 theo NC-018):**
+  - **Khoản 2 Điều 24 mới, lập hóa đơn không đúng thời điểm khi bán hàng hóa, cung cấp dịch vụ:**
+    - 01 số hóa đơn: phạt 500.000–1.500.000 đồng (điểm b);
+    - 02 đến dưới 10 số: 2–5 triệu (điểm c);
+    - 10 đến dưới 20 số: 5–15 triệu (điểm d);
+    - 20 đến dưới 50 số: 15–30 triệu (điểm đ);
+    - 50 đến dưới 100 số: 30–50 triệu (điểm e);
+    - từ 100 số: 50–70 triệu (điểm g).
+    - Hàng khuyến mại, quảng cáo, hàng mẫu, cho biếu tặng, tiêu dùng nội bộ: 01 số hóa đơn thì cảnh cáo (điểm a); mức tiền thấp hơn tương ứng.
+  - **Khoản 3 Điều 24 mới, không lập hóa đơn khi bán hàng hóa, cung cấp dịch vụ:**
+    - 01 số hóa đơn: 1–2 triệu (điểm b);
+    - 02 đến dưới 10 số: 2–10 triệu (điểm c);
+    - 10 đến dưới 20 số: 10–30 triệu (điểm d);
+    - 20 đến dưới 50 số: 30–50 triệu (điểm đ);
+    - từ 50 số: 60–80 triệu (điểm e).
+    - Hàng khuyến mại, cho biếu tặng, tiêu dùng nội bộ: 01 số thì cảnh cáo (điểm a).
+  - **Khoản 6 Điều 24 mới:** biện pháp khắc phục: "Buộc lập hóa đơn theo quy định đối với hành vi quy định tại khoản 3, điểm d khoản 4 Điều này."
+  - **Nghị định 310/2025 Điều 1 (sửa Điều 6 khoản 3 điểm đ, e Nghị định 125/2020; trang 3):** nhiều hành vi lập sai thời điểm hoặc không lập hóa đơn trong cùng một lần kiểm tra thì chỉ bị phạt về một hành vi, theo tổng số hóa đơn.
+  - **Mức phạt là cho tổ chức:** Điều 7 khoản 4 điểm a Nghị định 125/2020 (NC-018): mức ở Chương III (hóa đơn) là mức áp dụng với tổ chức. Cá nhân bằng 1/2.
+  - **Nghị định 254/2026 (hóa đơn) Phụ lục, mục 4 điểm b (PDF trang 49):** người mua là người tiêu dùng không cung cấp tên, địa chỉ, số định danh thì hóa đơn ghi "Bán cho người tiêu dùng". Hóa đơn này "không có giá trị để tổ chức kinh tế… sử dụng vào mục đích hạch toán chi phí hoặc quyết toán thuế". Không thấy quy định cho phép gộp các khoản bán lẻ nhỏ thành một hóa đơn cuối ngày (chỉ có trường hợp đặc thù như thẻ trả trước viễn thông, cơ sở khám chữa bệnh).
+- **Kết luận ngắn:**
+  1. Mỗi lần bán hàng hoặc cung cấp dịch vụ đều phải lập hóa đơn, kể cả khi người mua không lấy (ghi "Bán cho người tiêu dùng"). Quên lập 1 hóa đơn: phạt 1–2 triệu đồng và buộc lập lại; lập muộn 1 hóa đơn: phạt 0,5–1,5 triệu.
+  2. Phạt tăng theo số hóa đơn vi phạm, tối đa 80 triệu đồng (không lập) hoặc 70 triệu (sai thời điểm).
+  3. Khi mua hàng, công ty phải yêu cầu hóa đơn ghi tên, mã số thuế của công ty. Hóa đơn "Bán cho người tiêu dùng" không dùng được để tính chi phí (khớp NC-024).
+  4. Còn mở: Nghị định 125/2020 dẫn Luật Quản lý thuế 38/2019; từ 01/07/2026 áp dụng Luật 108/2025. Chưa thấy nghị định xử phạt mới thay Nghị định 125/2020 (NC-018 đã kiểm Nghị định 291/2026, không sửa các điều này). Giữ todo.
+- **Nguồn:** Nghị định 310/2025/NĐ-CP Điều 1 khoản 14 (khoản 2, 3, 6 Điều 24 Nghị định 125/2020) và phần sửa khoản 3 Điều 6; Nghị định 125/2020/NĐ-CP Điều 7 khoản 4 điểm a; Nghị định 254/2026/NĐ-CP Phụ lục mục 4 điểm b. Trang văn bản Nghị định 310/2025: https://vanban.chinhphu.vn/?pageid=27160&docid=216102&classid=1. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - `guides/hoa-don-dien-tu.json`: thêm mục ngắn "Nếu quên hoặc lập muộn hóa đơn": "Không lập hóa đơn khi bán hàng: phạt 1–2 triệu đồng với 1 hóa đơn, cao hơn nếu nhiều hóa đơn (tới 60–80 triệu), và buộc lập hóa đơn. Lập hóa đơn muộn: phạt 0,5–1,5 triệu đồng với 1 hóa đơn (tới 50–70 triệu). Đây là mức phạt cho công ty." Và: "Người mua không cho tên, mã số thuế: vẫn lập hóa đơn, ghi 'Bán cho người tiêu dùng'." `legal_basis`: Nghị định 125/2020/NĐ-CP Điều 24 khoản 2, 3, 6 (sửa bởi Nghị định 310/2025/NĐ-CP Điều 1 khoản 14), Điều 7 khoản 4 điểm a; Nghị định 254/2026/NĐ-CP Phụ lục mục 4 điểm b; `verified_against_original: true`.
+  - `rules/risk_rules.json`: nếu có rule "không xuất hóa đơn", cập nhật mức phạt và nguồn như trên.
+  - Bỏ todo NC-020 "mức phạt không lập hóa đơn: chưa đọc". Thêm todo: "Nghị định 125/2020 dẫn Luật QLT 38/2019; chưa thấy nghị định xử phạt mới theo Luật 108/2025 (NC-037)."
+
+### Vòng 51 (2026-11-16, 00:17 UTC)
+
+- Rà commit Biên tập `88aa966` (NC-023 bổ sung 4): thêm đối tượng đóng bảo hiểm TNLĐ-BNN vào 4 dòng bảo hiểm, `legal_basis`, sửa todo. Đúng đề xuất, không thấy lỗi.
+- Đọc Nghị định 310/2025 Điều 1 khoản 14 (phạt về hóa đơn) và Nghị định 254/2026 Phụ lục mục 4: ghi NC-037.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
