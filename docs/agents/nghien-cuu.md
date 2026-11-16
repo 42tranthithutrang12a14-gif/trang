@@ -1655,6 +1655,23 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `1c41d7f` (NC-039 bổ sung): sửa `summary` và mục "Tại sao phải có chữ ký số?" của guide chữ ký số, có nguồn. Đúng đề xuất, không thấy lỗi.
 - Quét toàn bộ nội dung tìm nguồn đã hết hiệu lực; đọc Thông tư 20/2026 Điều 10 và Thông tư 91/2026 Điều 25: ghi NC-040.
 
+### NC-040 (bổ sung) — Chuỗi thay thế hướng dẫn hóa đơn: Thông tư 78/2021 → Thông tư 32/2025 (từ 01/06/2025) → Thông tư 91/2026 (từ 01/07/2026)
+
+- **Trạng thái:** đã xác minh. Đóng điểm còn mở của NC-040.
+- **Liên quan:** NC-040; mục Thông tư 91/2026/TT-BTC trong `legal-framework.json` (đổi từ 78/2021 ở commit `3c9c073`), todo "Thông tư 78/2021 có bị Thông tư 32/2025 thay không: chưa đọc".
+- **Phát hiện:**
+  - **Thông tư 32/2025/TT-BTC** "Hướng dẫn thực hiện một số điều của Luật Quản lý thuế ngày 13 tháng 6 năm 2019, Nghị định số 123/2020/NĐ-CP…" (ban hành 31/05/2025, hiệu lực 01/06/2025; https://vanban.chinhphu.vn/?pageid=27160&docid=213855&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/6/32-btc.pdf, 49 trang, bản quét, OCR trang 12–18):
+    - Điều 12 khoản 1: "Thông tư này có hiệu lực thi hành kể từ ngày 01 tháng 6 năm 2025 và thay thế Thông tư số 78/2021/TT-BTC ngày 17 tháng 9 năm 2021 hướng dẫn thực hiện một số điều của Luật Quản lý thuế…, Nghị định số 123/2020/NĐ-CP… quy định về hóa đơn, chứng từ."
+  - **Thông tư 91/2026/TT-BTC Điều 25 khoản 2** (NC-040): Thông tư 32/2025 hết hiệu lực từ 01/07/2026.
+- **Kết luận ngắn:** Thông tư 78/2021 hết hiệu lực từ 01/06/2025 (thay bởi Thông tư 32/2025). Thông tư 32/2025 hết hiệu lực từ 01/07/2026 (thay bởi Thông tư 91/2026). Việc đổi mục `legal-framework.json` sang Thông tư 91/2026 là đúng.
+- **Nguồn:** Thông tư 32/2025/TT-BTC Điều 12 khoản 1; Thông tư 91/2026/TT-BTC Điều 25 khoản 2. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):** ở mục Thông tư 91/2026/TT-BTC (`legal-framework.json`), thay todo "Thông tư 78/2021 có bị Thông tư 32/2025 thay không: chưa đọc" bằng "Đã xác minh: Thông tư 78/2021 bị Thông tư 32/2025 thay từ 01/06/2025 (Điều 12 khoản 1); Thông tư 32/2025 hết hiệu lực từ 01/07/2026 (Thông tư 91/2026 Điều 25 khoản 2) (NC-040 bổ sung)." Nếu guide hóa đơn còn nhắc Thông tư 78/2021 trong todo, sửa tương tự.
+
+### Vòng 57 (2026-11-16, 12:20 UTC)
+
+- Rà commit Biên tập `3c9c073` (NC-040): thay nguồn ở 3 guide; đổi 3 mục `legal-framework.json` sang Thông tư 89/2026, 20/2026, 91/2026. Đúng đề xuất, không thấy lỗi.
+- Tìm Thông tư 32/2025 (ô tìm kiếm bị quá thời gian; dò theo dải docid), đọc Điều 12: ghi NC-040 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
