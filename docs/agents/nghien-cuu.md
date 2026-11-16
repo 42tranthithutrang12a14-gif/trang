@@ -1752,6 +1752,39 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `a837cac` (NC-041 bổ sung): thêm ví dụ tạm nộp thiếu dưới 80% vào guide TNDN và `penalty_plain`. Đúng đề xuất, không thấy lỗi.
 - Đọc Luật BHXH 41/2024 Điều 38–41 và Luật 51/2024 (Điều 48a, 48b, 49 Luật BHYT): ghi NC-042.
 
+### NC-043 — Phạt tiền về chậm đóng, trốn đóng BHXH, BHTN: từ 10/09/2026 theo Nghị định 283/2026 (thay Nghị định 12/2022); chậm đóng 12–15% số tiền chậm đóng, trốn đóng (kể cả khai lương đóng thấp) 18–20%; mức trong điều là của cá nhân, công ty bị phạt gấp 2 lần
+
+- **Trạng thái:** đã xác minh (BHXH, BHTN). Chưa xác minh: phạt tiền về BHYT (có thể ở nghị định xử phạt lĩnh vực y tế).
+- **Liên quan:** NC-042 (todo "Mức phạt tiền về BHXH, BHYT, BHTN: chưa xác minh"); lịch "Hàng tháng" (`bat-dau.json`), bước BHXH (`tu-0-den-1.json`).
+- **Phát hiện (Nghị định 283/2026/NĐ-CP "Quy định xử phạt vi phạm hành chính trong lĩnh vực lao động, bảo hiểm xã hội, người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng"; ban hành 15/07/2026; https://vanban.chinhphu.vn/?pageid=27160&docid=218871&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/283-ndcp.signed.pdf, 100 trang, bản quét, OCR):**
+  - **Điều 66 khoản 1:** hiệu lực từ 10/09/2026. **Khoản 4:** Nghị định 12/2022/NĐ-CP hết hiệu lực từ ngày đó.
+  - **Điều 7 khoản 1:** mức phạt tiền ở Chương II, III, IV "là mức phạt đối với cá nhân", trừ một số khoản liệt kê (không có Điều 43, 44, 45, 46); "Mức phạt tiền đối với tổ chức bằng 02 lần mức phạt tiền đối với cá nhân". Khoản 2 điểm b: doanh nghiệp bị phạt gấp 02 lần.
+  - **Điều 43 (chậm đóng BHXH bắt buộc):**
+    - Khoản 1: cảnh cáo nếu số tiền vi phạm dưới 400.000 đồng.
+    - Khoản 2: không đăng ký hoặc đăng ký thiếu người trong 60 ngày sau hạn đăng ký (Điều 28 khoản 1 Luật BHXH): dưới 10 người 5–10 triệu đồng; 10 đến dưới 50 người 10–15 triệu; … (đến 60–75 triệu từ 1.000 người).
+    - Khoản 3: chưa đóng hoặc đóng thiếu sau hạn đóng: "Phạt tiền từ 12% đến 15% tổng số tiền chậm đóng… nhưng tối đa không quá 75.000.000 đồng".
+    - Khoản 4: buộc đăng ký, đóng đủ và nộp 0,03%/ngày (khớp NC-042).
+  - **Điều 44 (trốn đóng BHXH bắt buộc):**
+    - Khoản 1: không đăng ký hoặc đăng ký thiếu người sau 60 ngày: dưới 10 người 6–12 triệu; 10 đến dưới 50 người 12–20 triệu; … (đến 70–75 triệu).
+    - Khoản 2: "Phạt tiền từ 18% đến 20% tổng số tiền trốn đóng… nhưng tối đa không quá 75.000.000 đồng" khi: a) "Đăng ký tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc thấp hơn quy định tại khoản 1 Điều 31"; b) không đóng hoặc đóng thiếu sau 60 ngày và đã bị đôn đốc, chưa đến mức hình sự.
+    - Khoản 3: buộc đóng đủ và nộp 0,03%/ngày.
+  - **Điều 45 (chậm đóng BHTN):** khoản 2: đăng ký thiếu người, dưới 10 người 0,5–2,5 triệu…; khoản 3: 12–15% số tiền chậm đóng, tối đa 75 triệu. **Điều 46:** trốn đóng BHTN (chưa trích chi tiết).
+- **Kết luận ngắn (DN siêu nhỏ, dưới 10 người; mức cho công ty = 2 lần mức trong điều):**
+  1. Đóng BHXH muộn: phạt 24–30% số tiền chậm đóng (12–15% × 2), cộng 0,03%/ngày, và phải đóng đủ.
+  2. Khai lương đóng BHXH thấp hơn lương theo hợp đồng: phạt 36–40% số tiền trốn đóng (18–20% × 2), cộng 0,03%/ngày.
+  3. Không đăng ký BHXH cho nhân viên: trong 60 ngày sau hạn 10–20 triệu đồng; quá 60 ngày (trốn đóng) 12–24 triệu đồng.
+  4. Mức trần trong điều là 75 triệu (cá nhân); với công ty là gấp 2. Tôi ghi theo Điều 7 khoản 1; cần đọc kỹ thêm nếu dùng mức trần.
+- **Nguồn:** Nghị định 283/2026/NĐ-CP Điều 7 khoản 1, 2; Điều 43 khoản 1–4; Điều 44 khoản 1–3; Điều 45 khoản 2, 3; Điều 66 khoản 1, 4. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - Bước BHXH và lịch "Hàng tháng": thêm "Mức phạt (công ty): đóng muộn 24–30% số tiền chậm đóng; khai lương đóng thấp hơn hợp đồng 36–40% số tiền trốn đóng; chưa đăng ký BHXH cho nhân viên 10–24 triệu đồng (dưới 10 người). Cộng thêm 0,03% mỗi ngày và phải đóng đủ." `legal_basis`: Nghị định 283/2026/NĐ-CP Điều 7 khoản 1, 2; Điều 43, 44, 45; URL docid 218871; `verified_against_original: true`.
+  - `legal-framework.json`: nếu có mục Nghị định 12/2022, đổi sang Nghị định 283/2026 (`effective_from` 10/09/2026).
+  - Thay todo NC-042 bằng "Phạt tiền BHXH, BHTN: đã xác minh (NC-043). Phạt tiền BHYT: chưa xác minh."
+
+### Vòng 61 (2026-11-16, 20:17 UTC)
+
+- Rà commit Biên tập `41edd97` (NC-042): thêm hậu quả chậm đóng, trốn đóng vào bước BHXH và lịch, có lời khuyên hỏi cơ quan BHXH. Đúng đề xuất, không thấy lỗi.
+- Tìm và đọc Nghị định 283/2026 (OCR 100 trang) Điều 7, 43–46, 66: ghi NC-043.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
