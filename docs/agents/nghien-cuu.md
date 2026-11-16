@@ -1530,6 +1530,40 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `144a761` (NC-037): thay con số phạt sai cũ (10–20 triệu) trong guide hóa đơn, thêm mục "Nếu quên hoặc lập muộn hóa đơn" và câu "Bán cho người tiêu dùng". Đúng đề xuất, không thấy lỗi. Rule rủi ro không có mức phạt hóa đơn, không cần sửa.
 - Đọc Nghị định 291/2026 và Luật QLT 108/2025 Điều 51–53: ghi NC-037 (bổ sung) và NC-001 (bổ sung).
 
+### NC-038 — Đăng ký dùng hóa đơn điện tử từ 01/07/2026: DN đăng ký qua tổ chức cung cấp dịch vụ hóa đơn điện tử (mẫu 01/ĐKTĐ-HĐĐT); chỉ trường hợp được miễn phí hóa đơn có mã mới đăng ký thẳng trên hệ thống của cơ quan thuế; hệ thống đối chiếu sinh trắc học, chấp nhận chậm nhất ngày làm việc tiếp theo (Thông tư 91/2026 Điều 6)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-020 (điểm còn mở "Thông tư 91/2026"); `guides/hoa-don-dien-tu.json` mục "Cách đăng ký sử dụng hóa đơn điện tử" (dòng ~24); ưu tiên 2 (guide thao tác).
+- **Phát hiện (Thông tư 91/2026/TT-BTC, quy định Luật QLT và Nghị định 254/2026 về hóa đơn, chứng từ; ban hành 30/06/2026, hiệu lực 01/07/2026; https://vanban.chinhphu.vn/?pageid=27160&docid=219006&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/91-btc.signed.pdf, 97 trang, bản quét, OCR trang 1–30):**
+  - **Điều 6 khoản 1 đoạn 1:** tổ chức kinh tế, hộ, cá nhân kinh doanh "đăng ký, thay đổi nội dung đăng ký sử dụng hóa đơn điện tử… thông qua tổ chức cung cấp dịch vụ hóa đơn điện tử".
+  - **Đoạn 2:** "Trường hợp sử dụng hóa đơn điện tử có mã của cơ quan thuế được miễn phí dịch vụ" thì có thể đăng ký qua Hệ thống thông tin quản lý thuế, hoặc qua tổ chức được Cục Thuế ủy thác cung cấp dịch vụ miễn phí. (Diện miễn phí: DN nhỏ và vừa ở địa bàn khó khăn, đặc biệt khó khăn, 12 tháng; Nghị định 254/2026 Điều 11, NC-020.)
+  - **Đoạn 3:** DN kết nối gửi dữ liệu trực tiếp đến cơ quan thuế thì đăng ký qua Hệ thống thông tin quản lý thuế hoặc Cổng Dịch vụ công Quốc gia.
+  - **Đoạn 5–6:** nội dung đăng ký theo **Mẫu số 01/ĐKTĐ-HĐĐT** Phụ lục II. Hệ thống gửi thông báo tiếp nhận/không tiếp nhận (Mẫu 01/TB-TNĐT) qua thư điện tử đã đăng ký.
+  - **Khoản 2 điểm a:** trong 01 ngày làm việc, hệ thống tự đối chiếu thông tin của người đại diện theo pháp luật (cả sinh trắc học) với dữ liệu đăng ký doanh nghiệp, đăng ký thuế và Cơ sở dữ liệu quốc gia về dân cư. Không khớp: gửi thông báo không chấp nhận, nêu trường không khớp. Khớp: gửi yêu cầu xác nhận qua thư điện tử, số điện thoại của người đại diện theo pháp luật; người nộp thuế phải xác nhận trong ngày hoặc chậm nhất ngày làm việc tiếp theo, quá hạn thì bị không chấp nhận (Mẫu 01/TB-ĐKĐT).
+  - **Khoản 2 điểm b:** xác nhận đúng hạn và không thuộc diện rủi ro thì "chậm nhất ngày làm việc tiếp theo, cơ quan thuế ban hành Thông báo chấp nhận đăng ký sử dụng hóa đơn điện tử".
+  - **Khoản 2 điểm c:** người đại diện đang đứng tên DN khác đang ngừng, tạm ngừng chưa xong nghĩa vụ, hoặc DN có vi phạm, rủi ro cao (Điều 7): cơ quan thuế yêu cầu giải trình, bổ sung (Mẫu 01/TB-BSTT-NNT) hoặc xác minh tại địa chỉ.
+- **Kết luận ngắn:**
+  1. DN bình thường đăng ký hóa đơn điện tử qua một tổ chức cung cấp dịch vụ hóa đơn điện tử (ký hợp đồng với họ), khai mẫu 01/ĐKTĐ-HĐĐT. Không còn đăng ký thẳng trên cổng của cơ quan thuế, trừ diện được miễn phí hoặc tự kết nối trực tiếp.
+  2. Sau khi gửi, người đại diện theo pháp luật phải xác nhận qua thư điện tử hoặc điện thoại trong ngày hoặc ngày làm việc tiếp theo, nếu không sẽ bị từ chối.
+  3. Không thuộc diện rủi ro thì được chấp nhận chậm nhất ngày làm việc tiếp theo (không phải "1–3 ngày").
+- **Nguồn:** Thông tư 91/2026/TT-BTC Điều 6 khoản 1, khoản 2 điểm a, b, c. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - `guides/hoa-don-dien-tu.json` mục "Cách đăng ký sử dụng hóa đơn điện tử": thay "Phương án 1 — Đăng ký qua Cổng hóa đơn điện tử của Cục Thuế" bằng:
+    "1. Chọn một tổ chức cung cấp dịch vụ hóa đơn điện tử, ký hợp đồng.
+    2. Khai Tờ khai đăng ký sử dụng hóa đơn điện tử (mẫu 01/ĐKTĐ-HĐĐT) qua phần mềm của tổ chức đó, chọn loại hóa đơn (có mã của cơ quan thuế).
+    3. Người đại diện theo pháp luật xác nhận qua thư điện tử hoặc điện thoại trong ngày, chậm nhất ngày làm việc tiếp theo.
+    4. Cơ quan thuế gửi thông báo chấp nhận chậm nhất ngày làm việc tiếp theo.
+    5. Bắt đầu lập hóa đơn.
+    Riêng DN nhỏ và vừa ở địa bàn khó khăn được dùng hóa đơn có mã miễn phí 12 tháng: có thể đăng ký trên hệ thống của cơ quan thuế."
+    `legal_basis`: Thông tư 91/2026/TT-BTC Điều 6 khoản 1, 2; URL docid 219006; `verified_against_original: true`.
+  - Các tên phần mềm thương mại ở "Phương án 2": cân nhắc bỏ hoặc ghi là ví dụ, không xếp hạng (tránh như quảng cáo). Không phải nội dung pháp lý; để chủ dự án quyết.
+  - Bỏ todo NC-020 "Thông tư 91/2026: chưa đọc".
+
+### Vòng 53 (2026-11-16, 04:17 UTC)
+
+- Rà commit Biên tập `88d1f60` (NC-001, NC-037 bổ sung): thêm lựa chọn thuê đại lý thuế làm dịch vụ kế toán, `legal_basis` Điều 70a; cập nhật todo guide hóa đơn. Đúng đề xuất, không thấy lỗi.
+- Đọc Thông tư 91/2026 Điều 6: ghi NC-038. Phát hiện guide hóa đơn còn hướng dẫn đăng ký thẳng trên cổng cơ quan thuế cho mọi DN.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
