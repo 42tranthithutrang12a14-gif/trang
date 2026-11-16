@@ -1785,6 +1785,42 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `41edd97` (NC-042): thêm hậu quả chậm đóng, trốn đóng vào bước BHXH và lịch, có lời khuyên hỏi cơ quan BHXH. Đúng đề xuất, không thấy lỗi.
 - Tìm và đọc Nghị định 283/2026 (OCR 100 trang) Điều 7, 43–46, 66: ghi NC-043.
 
+### NC-044 — Trang /lo-trinh: đối chiếu 5 việc định kỳ của giai đoạn "đang kinh doanh" với văn bản đã xác minh; kiểm kê bắt buộc là cuối năm (Luật Kế toán Điều 40), đếm quỹ hằng tuần chỉ là cách làm tốt; thiếu 6 việc định kỳ có hạn luật định
+
+- **Trạng thái:** đã xác minh (Luật Kế toán 88/2015 Điều 40; các điểm khác dẫn lại NC đã xác minh). Chưa kiểm: Luật 56/2024 có sửa Điều 40 không.
+- **Liên quan:** ưu tiên 4; `src/content/lo-trinh.json` (`routines`, todo "Agent Nghiên cứu: đối chiếu việc định kỳ với hướng dẫn chính thức (kỳ khai thuế, hạn nộp, lưu chứng từ)").
+- **Phát hiện mới:**
+  - **Luật Kế toán 88/2015/QH13 Điều 40** (bản quét, OCR trang 19): khoản 1: kiểm kê là "cân, đong, đo, đếm số lượng; xác nhận và đánh giá chất lượng, giá trị của tài sản, nguồn vốn… để kiểm tra, đối chiếu với số liệu trong sổ kế toán". Khoản 2: phải kiểm kê "a) Cuối kỳ kế toán năm"; khi chia, tách, giải thể…; khi chuyển đổi loại hình; khi hỏa hoạn, lũ lụt, thiệt hại bất thường; khi đánh giá lại tài sản theo quyết định nhà nước. Khoản 3: lập báo cáo tổng hợp kết quả kiểm kê; chênh lệch phải xác định nguyên nhân, ghi vào sổ trước khi lập báo cáo tài chính.
+  - Thông tư 132/2018 có bút toán cho "tiền thừa, thiếu phát hiện khi kiểm kê" (OCR trang 24, 26), không đặt tần suất kiểm kê quỹ.
+- **Đối chiếu từng việc định kỳ:**
+  1. `ghi-so-hang-ngay`: đúng hướng. Bổ sung căn cứ: chứng từ dùng ghi sổ lưu tối thiểu 10 năm, chứng từ không dùng ghi sổ trực tiếp 5 năm (Nghị định 174/2016 Điều 12, 13; NC-019). Chi phí muốn được trừ phải có hóa đơn, chứng từ; từ 5 triệu đồng phải chuyển khoản (NC-024). Mua của người không có hóa đơn: Bảng kê thu mua (NC-024).
+  2. `doi-chieu-hang-tuan`: là cách làm tốt, không phải quy định. Quy định bắt buộc: kiểm kê cuối năm (Điều 40 khoản 2 điểm a) và lập báo cáo kết quả kiểm kê (khoản 3). Nên thêm việc "Kiểm kê cuối năm".
+  3. `xem-tong-hop-hang-thang`: số nội bộ. Lưu ý doanh thu ghi theo thời điểm lập hóa đơn, không theo lúc thu tiền (Nghị định 254/2026 Điều 9; NC-020).
+  4. `khai-thue-theo-ky`: điền được căn cứ:
+     - GTGT tháng: ngày 20 tháng sau; GTGT quý: ngày cuối tháng đầu quý sau (Nghị định 252/2026 Điều 10; NC-013). Điều kiện khai quý (NC-014).
+     - Mẫu 01/GTGT (khấu trừ) hoặc 04/GTGT (trực tiếp) (NC-028).
+     - Nộp muộn: phạt theo NC-018; tiền chậm nộp 0,03%/ngày (NC-041).
+     - Câu "Dùng số ở trang Tổng hợp để đối chiếu khi lập tờ khai": hợp lý nếu chỉ để đối chiếu; số trên tờ khai lấy từ hóa đơn (NC-020, NC-028).
+  5. `kham-dinh-ky`: công cụ nội bộ, không cần căn cứ.
+- **Việc định kỳ có hạn luật định mà trang chưa có (đã xác minh ở các NC):**
+  - Mỗi lần bán hàng: lập hóa đơn điện tử (Nghị định 254/2026 Điều 9; phạt NC-037).
+  - Hằng tháng (nếu có nhân viên): đóng BHXH, BHYT, BHTN, bảo hiểm TNLĐ-BNN, chậm nhất ngày cuối tháng sau (NC-023, NC-034); chậm đóng NC-042, NC-043.
+  - Hằng quý: tạm nộp TNDN, chậm nhất ngày cuối tháng đầu quý sau; 4 quý ít nhất 80% (NC-013, NC-041 bổ sung). Khai thuế TNCN đã khấu trừ (mẫu 05/KK-TNCN) nếu có khấu trừ (NC-026, NC-032).
+  - Hằng năm, chậm nhất ngày cuối tháng thứ 3 sau năm (31/3): quyết toán TNDN (mẫu 03/TNDN hoặc 04/TNDN; kể cả DN được miễn) và quyết toán TNCN (mẫu 05/QTT-TNCN, nếu có trả lương) (NC-013, NC-014, NC-026, NC-028, NC-032).
+  - Hằng năm, trong 90 ngày sau năm: nộp báo cáo tài chính cho cơ quan thuế và cơ quan đăng ký kinh doanh (DN tính TNDN theo % doanh thu không bắt buộc) (NC-019).
+  - Cuối năm: kiểm kê tài sản, tiền, hàng tồn; lập báo cáo kết quả kiểm kê (Luật Kế toán Điều 40).
+- **Nguồn:** Luật Kế toán 88/2015/QH13 Điều 40 khoản 1–3 (https://vanban.chinhphu.vn, docid như NC-001); các NC dẫn ở trên. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - `lo-trinh.json`, routine `doi-chieu-hang-tuan`: giữ, thêm câu "Đây là cách làm tốt, không bắt buộc. Bắt buộc: kiểm kê cuối năm." `legal_basis`: Luật Kế toán 88/2015/QH13 Điều 40 khoản 2 điểm a, khoản 3; `verified_against_original: true`.
+  - Routine `ghi-so-hang-ngay`: thêm thời hạn lưu chứng từ và quy tắc 5 triệu (dẫn NC-019, NC-024); điền `legal_basis`.
+  - Routine `khai-thue-theo-ky`: điền `legal_basis` (Nghị định 252/2026 Điều 10; Thông tư 89/2026 Điều 19 khoản 5, Phụ lục I mục 4); bỏ todo dẫn "NC-003".
+  - Thêm các routine còn thiếu ở danh sách trên (theo quyết định của Biên tập về số lượng). Mỗi routine giữ `status: "draft"`, `sample_notice`, dẫn đúng các NC.
+
+### Vòng 62 (2026-11-16, 22:17 UTC)
+
+- Rà commit Biên tập `ea514e9` (NC-043): thêm mức phạt BHXH, BHTN cho công ty vào bước BHXH và lịch, có `legal_basis`. Đúng đề xuất, không thấy lỗi.
+- Rà trang /lo-trinh (ưu tiên 4); đọc Luật Kế toán Điều 40: ghi NC-044.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
