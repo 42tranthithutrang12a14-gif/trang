@@ -1564,6 +1564,36 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `88d1f60` (NC-001, NC-037 bổ sung): thêm lựa chọn thuê đại lý thuế làm dịch vụ kế toán, `legal_basis` Điều 70a; cập nhật todo guide hóa đơn. Đúng đề xuất, không thấy lỗi.
 - Đọc Thông tư 91/2026 Điều 6: ghi NC-038. Phát hiện guide hóa đơn còn hướng dẫn đăng ký thẳng trên cổng cơ quan thuế cho mọi DN.
 
+### NC-039 — Căn cứ của guide chữ ký số đã cũ: Nghị định 130/2018 hết hiệu lực từ 10/04/2025 (thay bởi Nghị định 23/2025); Thông tư 19/2021 (giao dịch điện tử về thuế) và Thông tư 80/2021 bị bãi bỏ từ 01/07/2026 (Thông tư 89/2026 Điều 99)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** `guides/chu-ky-so.json` mục "Căn cứ pháp lý" và các todo NC-007 ("Nghị định 130/2018 có thể đã được thay bằng Nghị định 23/2025", "Kiểm tra Thông tư 19/2021 còn hiệu lực không"); `legal-framework.json` các mục dẫn Thông tư 80/2021 (đã có ghi chú ở NC-013).
+- **Phát hiện:**
+  - **Nghị định 23/2025/NĐ-CP** "Quy định về chữ ký điện tử và dịch vụ tin cậy" (ban hành 21/02/2025; căn cứ Luật Giao dịch điện tử 20/2023; https://vanban.chinhphu.vn/?pageid=27160&docid=212829&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/02/23-cp.signed.pdf, 52 trang, bản quét, OCR trang 1–2, 30–52):
+    - Điều 46 khoản 1: "Nghị định này có hiệu lực thi hành từ ngày 10 tháng 4 năm 2025."
+    - Điều 46 khoản 2: "Nghị định số 130/2018/NĐ-CP… về chữ ký số và dịch vụ chứng thực chữ ký số và Nghị định số 48/2024/NĐ-CP… sửa đổi, bổ sung… hết hiệu lực kể từ ngày Nghị định này có hiệu lực thi hành, trừ trường hợp quy định tại Điều 47".
+    - Điều 47 khoản 5: chứng thư số cấp theo giấy phép cũ được cấp 01 lần, thời hạn tối đa 05 năm và không quá thời hạn còn lại của giấy phép. Khoản 4, 6: nhà cung cấp và phần mềm ký số có 02 năm (đến 10/04/2027) để nâng cấp theo quy định mới.
+  - **Thông tư 89/2026/TT-BTC Điều 99** (PDF trang 197–198, OCR):
+    - Khoản 1: hiệu lực 01/07/2026.
+    - Khoản 3 điểm g: bãi bỏ "Thông tư số 19/2021/TT-BTC ngày 18 tháng 3 năm 2021… hướng dẫn giao dịch điện tử trong lĩnh vực thuế và Thông tư số 46/2024/TT-BTC… sửa đổi, bổ sung…".
+    - Khoản 3 điểm h, i: bãi bỏ Thông tư 80/2021/TT-BTC và Thông tư 94/2025/TT-BTC (sửa Thông tư 80/2021).
+    - Khoản 2: áp dụng toàn bộ giao dịch điện tử về thuế theo lộ trình của cơ quan thuế (khoản 4 Điều 52 Luật QLT: hoàn thành trước 01/01/2027; NC-037 bổ sung).
+- **Kết luận ngắn:**
+  1. Văn bản hiện hành về chữ ký số là Nghị định 23/2025/NĐ-CP (từ 10/04/2025) theo Luật Giao dịch điện tử 20/2023. Nghị định 130/2018 đã hết hiệu lực.
+  2. Hướng dẫn giao dịch điện tử về thuế (Thông tư 19/2021) và hướng dẫn Luật QLT cũ (Thông tư 80/2021) đã bị bãi bỏ từ 01/07/2026; nội dung khai thuế điện tử hiện nằm trong Thông tư 89/2026.
+  3. Chưa kiểm câu "bắt buộc có chữ ký số để nộp tờ khai" theo văn bản mới (Luật QLT 108/2025, Thông tư 89/2026). Giữ todo.
+- **Nguồn:** Nghị định 23/2025/NĐ-CP Điều 46 khoản 1, 2; Điều 47 khoản 4, 5, 6; Thông tư 89/2026/TT-BTC Điều 99 khoản 1, 2, khoản 3 điểm g, h, i. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):**
+  - `guides/chu-ky-so.json` mục "Căn cứ pháp lý": thay "Nghị định 130/2018/NĐ-CP" bằng "Nghị định 23/2025/NĐ-CP về chữ ký điện tử và dịch vụ tin cậy (từ 10/04/2025, thay Nghị định 130/2018/NĐ-CP)"; thay "Thông tư 19/2021/TT-BTC" bằng "Thông tư 89/2026/TT-BTC (từ 01/07/2026; Thông tư 19/2021/TT-BTC đã bị bãi bỏ)". Bỏ hai link vbpl.moj.gov.vn (không mở được, NC-002) hoặc thay bằng link vanban.chinhphu.vn.
+  - `legal_basis` (hiện trống theo todo "Điền legal_basis"): Nghị định 23/2025/NĐ-CP Điều 46 khoản 1, 2 (URL docid 212829); Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g (URL docid 218974); `verified_against_original: true` cho đúng các điều này.
+  - Thay hai todo NC-007 về Nghị định 130/2018 và Thông tư 19/2021 bằng: "Đã xác minh (NC-039). Chưa xác minh: điều khoản bắt buộc dùng chữ ký số khi khai thuế theo Luật QLT 108/2025, Thông tư 89/2026; danh sách nhà cung cấp dịch vụ tin cậy."
+  - Mục "Mức phạt nếu không có chữ ký số": có thể dẫn sang mức phạt chậm nộp tờ khai (NC-018) và phạt về hóa đơn (NC-037) thay cho câu "cần kế toán viên xác minh".
+
+### Vòng 54 (2026-11-16, 06:17 UTC)
+
+- Rà commit Biên tập `10a44b8` (NC-038): viết lại mục đăng ký hóa đơn điện tử theo Thông tư 91/2026; giữ tên phần mềm làm ví dụ không xếp hạng, chờ chủ dự án. Đúng đề xuất, không thấy lỗi.
+- Rà guide chữ ký số: đọc Nghị định 23/2025 Điều 46, 47 và Thông tư 89/2026 Điều 99: ghi NC-039.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
