@@ -1502,6 +1502,34 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `88aa966` (NC-023 bổ sung 4): thêm đối tượng đóng bảo hiểm TNLĐ-BNN vào 4 dòng bảo hiểm, `legal_basis`, sửa todo. Đúng đề xuất, không thấy lỗi.
 - Đọc Nghị định 310/2025 Điều 1 khoản 14 (phạt về hóa đơn) và Nghị định 254/2026 Phụ lục mục 4: ghi NC-037.
 
+### NC-037 (bổ sung) — Nghị định 125/2020 (xử phạt thuế, hóa đơn) vẫn đang được áp dụng sau khi Luật Quản lý thuế 108/2025 có hiệu lực: Nghị định 291/2026 lấy Luật 108/2025 làm căn cứ để sửa nó; chưa có nghị định thay thế
+
+- **Trạng thái:** đã xác minh (Nghị định 291/2026 sửa Nghị định 125/2020 với căn cứ Luật 108/2025; không có nghị định thay thế trên vanban.chinhphu.vn). Luật 108/2025 không có câu chữ riêng về hiệu lực của nghị định xử phạt cũ.
+- **Liên quan:** NC-018, NC-037; todo "Nghị định 125/2020 dẫn Luật QLT 38/2019; chưa thấy nghị định xử phạt mới theo Luật 108/2025".
+- **Phát hiện:**
+  - **Nghị định 291/2026/NĐ-CP** (21/07/2026, hiệu lực từ ngày ký; PDF 3 trang, OCR): phần căn cứ: "Căn cứ Luật Xử lý vi phạm hành chính số 15/2012/QH13 được sửa đổi, bổ sung bởi Luật số 67/2020/QH14 và Luật số 88/2025/QH15; Căn cứ Luật Quản lý thuế số 108/2025/QH15". Tên: sửa đổi Nghị định 125/2020 "được sửa đổi, bổ sung bởi Nghị định số 102/2021/NĐ-CP… và Nghị định số 310/2025/NĐ-CP". Nội dung chỉ sửa điểm đ khoản 3 Điều 5, thêm Mục 3 và Điều 19a (phạt về cung cấp thông tin phục vụ trao đổi thông tin thuế quốc tế), thêm cụm "Điều 19a" vào một số điều. Không sửa Điều 13 hay Điều 24 (khớp NC-018).
+  - **Tìm kiếm trên vanban.chinhphu.vn** (ngày 2026-11-16; "xử phạt vi phạm hành chính về thuế", "vi phạm hành chính về thuế, hóa đơn"; nghị định 2024–2026): chỉ có Nghị định 291/2026 và 310/2025, đều là văn bản sửa Nghị định 125/2020.
+  - **Luật Quản lý thuế 108/2025/QH15 Điều 52, 53** (PDF trang 64–65, OCR): khoản 3 Điều 52: Luật 38/2019 hết hiệu lực từ 01/07/2026, trừ khoản 1, 3 Điều 53. Khoản 5: Chính phủ quy định chi tiết. Điều 53 chỉ chuyển tiếp về miễn giảm thuế trước 01/07/2026, tiền thuế nợ, các cuộc kiểm tra đang làm. Không có câu riêng về nghị định xử phạt.
+- **Kết luận ngắn:** sau 01/07/2026, Chính phủ vẫn sửa và dùng Nghị định 125/2020 (bản đã sửa bởi 102/2021, 310/2025, 291/2026). Các mức phạt chậm nộp tờ khai (NC-018) và phạt về hóa đơn (NC-037) vẫn là mức hiện hành.
+- **Nguồn:** Nghị định 291/2026/NĐ-CP phần căn cứ, Điều 1–4 (https://vanban.chinhphu.vn/?pageid=27160&docid=218956&classid=1); Luật Quản lý thuế 108/2025/QH15 Điều 52 khoản 1, 3, 5; Điều 53 (https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1). Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):** thay todo "Nghị định 125/2020 dẫn Luật QLT 38/2019; chưa thấy nghị định xử phạt mới theo Luật 108/2025" bằng "Nghị định 291/2026 (căn cứ Luật QLT 108/2025) vẫn sửa Nghị định 125/2020; chưa có nghị định thay thế tại ngày 2026-11-16 (NC-037 bổ sung)." Không đổi nội dung hiển thị.
+
+### NC-001 (bổ sung) — Từ 01/07/2026, đại lý thuế (tổ chức kinh doanh dịch vụ làm thủ tục về thuế) được cung cấp dịch vụ kế toán cho DN siêu nhỏ nếu có ít nhất một người có chứng chỉ kế toán viên (Luật Quản lý thuế 108/2025 Điều 51, bổ sung Điều 70a Luật Kế toán)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** NC-001 (DN siêu nhỏ chưa đủ điều kiện tự làm kế toán thì thuê dịch vụ kế toán); mục "Cần chủ dự án quyết" về định hướng "tự làm trọn vẹn"; các chỗ trong app nói "thuê dịch vụ kế toán" (`tu-0-den-1.json`, `bat-dau.json`, `so-ke-toan.json`).
+- **Phát hiện (Luật Quản lý thuế 108/2025/QH15, PDF trang 64, OCR):**
+  - **Điều 51:** "Bổ sung Điều 70a vào sau Điều 70 của Luật Kế toán số 88/2015/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 38/2019/QH14 và Luật số 56/2024/QH15… "Điều 70a. Cung cấp dịch vụ kế toán của tổ chức kinh doanh dịch vụ làm thủ tục về thuế. Tổ chức kinh doanh dịch vụ làm thủ tục về thuế được cung cấp dịch vụ kế toán cho doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh khi có ít nhất một người có chứng chỉ kế toán viên."
+  - **Điều 52 khoản 1:** Luật có hiệu lực từ 01/07/2026 (Điều 51 không thuộc ngoại lệ ở khoản 2).
+- **Kết luận ngắn:** DN siêu nhỏ chưa có người đủ điều kiện làm kế toán hoặc phụ trách kế toán (NC-001) có thêm một lựa chọn: thuê đại lý thuế làm dịch vụ kế toán, nếu đại lý đó có ít nhất một người có chứng chỉ kế toán viên. Trước đây chỉ có doanh nghiệp dịch vụ kế toán, hộ kinh doanh dịch vụ kế toán.
+- **Nguồn:** Luật Quản lý thuế 108/2025/QH15 Điều 51, Điều 52 khoản 1; https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1. Ngày tra 2026-11-16.
+- **Đề xuất sửa (Biên tập):** ở các chỗ nói "thuê dịch vụ kế toán" cho DN siêu nhỏ chưa đủ điều kiện (theo NC-001), thêm: "Có thể thuê công ty dịch vụ kế toán, hoặc đại lý thuế có người có chứng chỉ kế toán viên (từ 01/07/2026)." `legal_basis`: Luật Kế toán 88/2015/QH13 Điều 70a (bổ sung bởi Luật Quản lý thuế 108/2025/QH15 Điều 51); URL như trên; `verified_against_original: true`.
+
+### Vòng 52 (2026-11-16, 02:18 UTC)
+
+- Rà commit Biên tập `144a761` (NC-037): thay con số phạt sai cũ (10–20 triệu) trong guide hóa đơn, thêm mục "Nếu quên hoặc lập muộn hóa đơn" và câu "Bán cho người tiêu dùng". Đúng đề xuất, không thấy lỗi. Rule rủi ro không có mức phạt hóa đơn, không cần sửa.
+- Đọc Nghị định 291/2026 và Luật QLT 108/2025 Điều 51–53: ghi NC-037 (bổ sung) và NC-001 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
