@@ -481,6 +481,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Status giữ "draft".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 53 (2026-11-16, 05:18 UTC)
+
+- Đọc NC-038 (đăng ký hóa đơn điện tử qua tổ chức cung cấp dịch vụ, mẫu 01/ĐKTĐ-HĐĐT, chấp nhận chậm nhất ngày làm việc tiếp theo; Thông tư 91/2026 Điều 6; đã xác minh). Status giữ "draft".
+- `guides/hoa-don-dien-tu.json` mục "Cách đăng ký sử dụng hóa đơn điện tử": viết lại theo đề xuất (5 bước; ngoại lệ diện miễn phí). Bỏ "Phương án 1 — Cổng hóa đơn điện tử" và "thường 1–3 ngày làm việc". Danh sách MISA, VNPT, FPT giữ lại, ghi "Ví dụ… không xếp hạng, có thu phí". Không ghi URL hệ thống của cơ quan thuế cho diện miễn phí vì chưa xác minh.
+- Todo NC-020 "Chưa xác minh: Thông tư 91/2026…" đổi thành đã đối chiếu; thêm todo có nguồn.
+- Đưa vào "Cần chủ dự án quyết": giữ hay bỏ tên phần mềm thương mại.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
@@ -522,3 +530,4 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - (Vòng 23) Nhiều DN siêu nhỏ (doanh thu dưới 1 tỷ) mặc định tính thuế GTGT trực tiếp trên doanh thu (NC-021), nhưng app chỉ có guide cho phương pháp khấu trừ. Có làm guide mới "Khai thuế GTGT theo phương pháp trực tiếp" không? Cần thêm trang và rule mới.
 - (Vòng 32) Sổ thu chi hiện chỉ có cờ "Tính vào lãi, lỗ?" cho mỗi nhóm (lãi lỗ tạm tính). Có thêm cờ thứ hai "Được trừ khi tính thuế TNDN" để sổ tính sẵn thu nhập tính thuế tạm không? Việc này đổi cấu trúc trang Thiết lập và Tổng hợp.
 - (Vòng 44) NC-033: bảo hiểm công ty đóng cho chủ công ty TNHH một thành viên (chủ là cá nhân) có được trừ khi tính thuế TNDN không, văn bản chưa nói rõ. Có thêm vào sổ câu "Trường hợp chủ công ty tự trả lương và đóng bảo hiểm cho mình, nên hỏi cơ quan thuế quản lý hoặc kế toán trước khi tính vào chi phí, vì văn bản chưa nói rõ" không? Đây là chỗ rủi ro cao, hợp với nguyên tắc chỉ nhắc kế toán ở phần rủi ro.
+- (Vòng 53) NC-038: guide hóa đơn điện tử đang nêu tên MISA Invoice, VNPT Invoice, FPT Invoice làm ví dụ tổ chức cung cấp dịch vụ (không xếp hạng). Giữ, bỏ, hay thay bằng đường dẫn tới danh sách tổ chức do cơ quan thuế công bố?
