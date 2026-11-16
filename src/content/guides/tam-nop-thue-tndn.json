@@ -41,7 +41,7 @@
     },
     {
       "heading": "Mức phạt",
-      "content": "• Tạm nộp 4 quý thấp hơn 80% số thuế quyết toán năm: tính tiền chậm nộp trên phần thiếu (Nghị định 252/2026/NĐ-CP Điều 24 khoản 3)\n• Tiền chậm nộp: 0,03% mỗi ngày trên số thuế nộp chậm, tính cả ngày nghỉ; công ty tự tính và nộp (Luật Quản lý thuế 108/2025/QH15 Điều 16; Nghị định 252/2026/NĐ-CP Điều 26)\n• Khai quyết toán sai: phạt 20% số thuế khai thiếu\n\n⚠️ Mức 20% chưa xác minh."
+      "content": "• Tạm nộp 4 quý thấp hơn 80% số thuế quyết toán năm: phần thiếu so với mức 80% bị tính tiền chậm nộp, từ ngày sau hạn tạm nộp quý 4 (31/01 năm sau) đến ngày nộp (Nghị định 252/2026/NĐ-CP Điều 24 khoản 3 điểm b). Ví dụ (số giả định): thuế cả năm 100 triệu đồng, phải tạm nộp ít nhất 80 triệu, đã tạm nộp 60 triệu → phần thiếu 20 triệu bị tính tiền chậm nộp\n• Tiền chậm nộp: 0,03% mỗi ngày trên số thuế nộp chậm, tính cả ngày nghỉ; công ty tự tính và nộp (Luật Quản lý thuế 108/2025/QH15 Điều 16; Nghị định 252/2026/NĐ-CP Điều 26)\n• Khai quyết toán sai: phạt 20% số thuế khai thiếu\n\n⚠️ Mức 20% chưa xác minh."
     },
     {
       "heading": "Căn cứ pháp lý",
@@ -53,6 +53,7 @@
     }
   ],
   "todo_for_reviewer": [
+    "Ngày 2026-11-16 (NC-041 bổ sung, đã đối chiếu toàn văn Nghị định 252/2026/NĐ-CP Điều 24 khoản 2, khoản 3 điểm a, b, c): ghi rõ phần thiếu so với 80% bị tính chậm nộp từ ngày sau hạn tạm nộp quý 4, kèm ví dụ giả định. Văn bản không nói rõ phần từ 80% đến 100% có bị tính chậm nộp không nếu nộp trước hạn quyết toán; không ghi.",
     "Ngày 2026-11-16 (NC-041, đã đối chiếu toàn văn Luật Quản lý thuế 108/2025/QH15 Điều 16 khoản 2–6 và Nghị định 252/2026/NĐ-CP Điều 26 khoản 1 điểm a, khoản 2): tiền chậm nộp 0,03%/ngày chuyển lên phần đã xác minh, thêm ví dụ giả định. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=216541&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
     "Ngày 2026-11-16 (NC-040): mục căn cứ thay Luật QLT 38/2019 bằng 108/2025, Thông tư 96/2015 bằng Thông tư 20/2026 (Điều 10 khoản 6 thay Thông tư 78/2014, 96/2015; riêng một số hồ sơ năm 2025 còn theo 96/2015, khoản 2). Nguồn: Thông tư 20/2026/TT-BTC Điều 10 (https://vanban.chinhphu.vn/?pageid=27160&docid=217191&classid=1); Thông tư 91/2026/TT-BTC Điều 25 (https://vanban.chinhphu.vn/?pageid=27160&docid=219006&classid=1); Thông tư 89/2026/TT-BTC Điều 99 khoản 3 điểm g, h (https://vanban.chinhphu.vn/?pageid=27160&docid=218974&classid=1).",
     "Ngày 2026-11-14 (NC-028, đã đối chiếu toàn văn Thông tư 89/2026/TT-BTC Phụ lục I mục 6.2 điểm a, b; https://vanban.chinhphu.vn/?pageid=27160&docid=218974): quyết toán theo doanh thu – chi phí dùng mẫu 03/TNDN (kèm phụ lục 03-2, 03-3A, 03-3C/TNDN nếu có); theo tỷ lệ % trên doanh thu dùng mẫu 04/TNDN, kèm báo cáo tài chính năm (trừ trường hợp không phải lập).",

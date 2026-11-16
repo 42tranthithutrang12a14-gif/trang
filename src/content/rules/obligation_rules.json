@@ -191,7 +191,7 @@
       "first_period": "containing_founding"
     },
     "how_to_steps": [],
-    "penalty_plain": "Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp.",
+    "penalty_plain": "Nộp tiền thuế muộn: mỗi ngày trễ cộng thêm 0,03% số thuế chậm nộp, công ty tự tính và nộp. Tổng 4 quý tạm nộp phải đạt ít nhất 80% số thuế cả năm; thiếu thì phần thiếu bị tính 0,03%/ngày từ ngày sau hạn tạm nộp quý 4.",
     "legal_basis": [
       {
         "doc_type": "Nghị định",
@@ -256,7 +256,7 @@
       "Ngày 2026-11-12 (NC-013, đã đối chiếu toàn văn Luật 108/2025/QH15 và Nghị định 252/2026/NĐ-CP): hạn tạm nộp là ngày cuối cùng của tháng đầu quý tiếp theo (Điều 24 khoản 2); đổi due_day từ 30 sang \"last\"; 4 quý ít nhất 80% (khoản 3). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
       "Ngày 2026-11-12 (NC-011, đã đối chiếu toàn văn): mức miễn thuế TNDN là tổng doanh thu năm trước từ 1 tỷ đồng trở xuống (Nghị định 141/2026/NĐ-CP Điều 2, hiệu lực 01/01/2026). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=217960&classid=1 Đã thêm vào summary_plain, điền legal_basis. applies_if chưa có điều kiện doanh thu (engine chưa có trường doanh thu), nên nghĩa vụ vẫn hiện với mọi công ty.",
       "Còn mở sau NC-011 (2026-11-12): (1) Đã trả lời ở NC-014 (2026-11-13): DN được miễn vẫn phải quyết toán TNDN năm (Thông tư 89/2026/TT-BTC Điều 21 khoản 1 điểm c.1). (2) DN cũ có doanh thu năm trước từ 1 tỷ trở xuống không phải tạm nộp quý: chỉ là cách hiểu từ Điều 4 khoản 2 Nghị định 141/2026, chưa thấy câu nói thẳng. (3) Điểm d (công ty con, công ty liên kết) có chỗ OCR mờ; đối chiếu lại bản gốc nếu dùng chi tiết.",
-      "Viết các bước và mức phạt khi tạm nộp thiếu"
+      "Viết các bước khi tạm nộp thiếu. Mức tính chậm nộp phần thiếu dưới 80% đã ghi ở penalty_plain (NC-041 bổ sung, Nghị định 252/2026/NĐ-CP Điều 24 khoản 3 điểm b)."
     ]
   }
 ]

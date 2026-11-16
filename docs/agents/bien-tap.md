@@ -527,6 +527,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `rules/obligation_rules.json` (VAT quý, VAT tháng, tạm nộp TNDN): điền `penalty_plain`; bổ sung điều khoản vào `legal_basis` (Luật 108/2025 Điều 16; Nghị định 252/2026 Điều 26); thêm Nghị định 125/2020 và 310/2025 cho hai rule GTGT (chép từ mục đã xác minh trong `bat-dau.json`). Rule TNDN chỉ ghi phần tiền chậm nộp. Bỏ todo cũ "Điền legal_basis… ví dụ Luật QLT 38/2019, Thông tư 80/2021".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 59 (2026-11-16, 17:18 UTC)
+
+- Đọc NC-041 (bổ sung): tạm nộp 4 quý thấp hơn 80% số thuế quyết toán thì phần thiếu bị tính chậm nộp từ ngày sau hạn tạm nộp quý 4 (Nghị định 252/2026 Điều 24 khoản 3 điểm b; đã xác minh). Status giữ "draft".
+- `guides/tam-nop-thue-tndn.json` mục "Mức phạt": dòng 80% ghi rõ phần thiếu so với 80%, mốc tính từ ngày sau hạn quý 4 (31/01 năm sau), kèm ví dụ giả định 100 / 80 / 60 → thiếu 20 triệu. Không ghi phần 80–100% (văn bản không nói rõ). Thêm todo.
+- `rules/obligation_rules.json` rule `CIT_PROVISIONAL`: bổ sung câu 80% vào `penalty_plain`. `legal_basis` đã có Nghị định 252/2026 Điều 24 khoản 3. Todo "Viết các bước và mức phạt…" thu lại còn phần các bước.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
