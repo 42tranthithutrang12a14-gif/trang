@@ -1821,6 +1821,26 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `ea514e9` (NC-043): thêm mức phạt BHXH, BHTN cho công ty vào bước BHXH và lịch, có `legal_basis`. Đúng đề xuất, không thấy lỗi.
 - Rà trang /lo-trinh (ưu tiên 4); đọc Luật Kế toán Điều 40: ghi NC-044.
 
+### NC-044 (bổ sung) — Luật 56/2024 không sửa Điều 40 Luật Kế toán (kiểm kê); Điều 40 vẫn nguyên văn bản gốc 2015
+
+- **Trạng thái:** đã xác minh. Đóng điểm còn mở của NC-044.
+- **Liên quan:** NC-044; routine `viec-cuoi-nam` trong `lo-trinh.json` (`legal_basis` Luật Kế toán 88/2015/QH13 Điều 40).
+- **Phát hiện (Luật 56/2024/QH15, Công báo số 1523+1524, có lớp chữ):**
+  - Điều 2 "Sửa đổi, bổ sung một số điều của Luật Kế toán" gồm 9 khoản: sửa khoản 1 Điều 3; khoản 3 Điều 7; khoản 1 Điều 11; khoản 4 Điều 12; tên và khoản 4 Điều 19; khoản 1 Điều 29; khoản 2 Điều 51; một số điểm, khoản Điều 71; bãi bỏ điểm d khoản 1 Điều 16. Không có Điều 40.
+  - Chỗ "khoản 3 Điều 40" khác trong Luật 56/2024 thuộc phần sửa Luật Quản lý, sử dụng tài sản công, không liên quan.
+  - Luật Quản lý thuế 108/2025 chỉ thêm Điều 70a vào Luật Kế toán (NC-001 bổ sung).
+- **Kết luận ngắn:** Điều 40 Luật Kế toán (kiểm kê cuối năm, lập báo cáo kết quả kiểm kê) còn nguyên như năm 2015.
+- **Rà commit Biên tập `fe2b46c` (NC-044):** nội dung 3 routine mới khớp các NC. Hai điểm nhỏ:
+  1. Routine `viec-cuoi-nam` ghi "Lập biên bản kết quả kiểm kê". Điều 40 khoản 3 dùng chữ "báo cáo tổng hợp kết quả kiểm kê". Đề xuất đổi thành "Lập báo cáo tổng hợp kết quả kiểm kê".
+  2. Cùng routine: hạn quyết toán "ngày cuối cùng của tháng thứ 3" chưa có nguồn hạn trong `legal_basis`. Đề xuất thêm Nghị định 252/2026/NĐ-CP Điều 10 (hạn nộp hồ sơ quyết toán năm, NC-013).
+- **Nguồn:** Luật 56/2024/QH15 Điều 2 khoản 1–9 (https://vanban.chinhphu.vn, docid như NC-001); Luật Kế toán 88/2015/QH13 Điều 40 (NC-044). Ngày tra 2026-11-17.
+- **Đề xuất sửa (Biên tập):** hai điểm nhỏ ở trên; ghi chú trong todo routine `viec-cuoi-nam`: "Luật 56/2024 không sửa Điều 40 (NC-044 bổ sung)".
+
+### Vòng 63 (2026-11-17, 00:17 UTC)
+
+- Rà commit Biên tập `fe2b46c` (NC-044): điền `legal_basis` cho các routine cũ, thêm 3 routine (bảo hiểm hằng tháng, thuế theo quý, việc cuối năm). Đúng đề xuất; hai điểm chữ nhỏ ghi ở NC-044 (bổ sung).
+- Kiểm Luật 56/2024 Điều 2: không sửa Điều 40 Luật Kế toán.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
