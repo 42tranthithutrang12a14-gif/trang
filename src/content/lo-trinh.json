@@ -299,7 +299,7 @@
       "when": "Cuối năm và quý I năm sau",
       "title": "Kiểm kê, quyết toán, báo cáo tài chính",
       "how": [
-        "Ngày cuối năm: kiểm kê tiền, hàng tồn, tài sản. Lập biên bản kết quả kiểm kê. Chênh lệch thì ghi sổ trước khi lập báo cáo tài chính.",
+        "Ngày cuối năm: kiểm kê tiền, hàng tồn, tài sản. Lập báo cáo tổng hợp kết quả kiểm kê. Chênh lệch thì ghi sổ trước khi lập báo cáo tài chính.",
         "Trong 90 ngày sau năm: nộp báo cáo tài chính (công ty tính thuế TNDN theo % doanh thu không bắt buộc).",
         "Chậm nhất ngày cuối cùng của tháng thứ 3 năm sau: quyết toán thuế TNDN (mẫu 03/TNDN hoặc 04/TNDN), kể cả khi được miễn thuế.",
         "Có trả lương trong năm: quyết toán thuế TNCN (mẫu 05/QTT-TNCN), cùng hạn."
@@ -344,9 +344,22 @@
           "verified_against_original": true,
           "checked_at": "2026-11-13",
           "snapshot_path": ""
+        },
+        {
+          "doc_type": "Nghị định",
+          "doc_number": "252/2026/NĐ-CP",
+          "title": "Nghị định quy định chi tiết và hướng dẫn thi hành Luật Quản lý thuế",
+          "issuer": "Chính phủ",
+          "issued_date": "2026-06-30",
+          "effective_date": "2026-07-01",
+          "article": "Điều 10 khoản 5 điểm a",
+          "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218690&classid=1",
+          "verified_against_original": true,
+          "checked_at": "2026-11-12",
+          "snapshot_path": ""
         }
       ],
-      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): việc mới theo NC-044 (Luật Kế toán Điều 40; NC-013, NC-014, NC-019, NC-028, NC-032)."]
+      "todo_for_reviewer": ["Ngày 2026-11-16 (NC-044): việc mới theo NC-044 (Luật Kế toán Điều 40; NC-013, NC-014, NC-019, NC-028, NC-032). Ngày 2026-11-17 (NC-044 bổ sung): Luật 56/2024 không sửa Điều 40; đổi \"biên bản\" thành \"báo cáo tổng hợp kết quả kiểm kê\" theo khoản 3; thêm Nghị định 252/2026 Điều 10 khoản 5 điểm a (hạn quyết toán, NC-013) vào legal_basis."]
     },
     {
       "id": "kham-dinh-ky",

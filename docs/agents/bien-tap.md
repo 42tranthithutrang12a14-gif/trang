@@ -563,6 +563,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Định dạng file giữ như cũ (script kiểm tra bộ định dạng tái tạo đúng phần cũ trước khi ghi).
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 63 (2026-11-17, 01:18 UTC)
+
+- Đọc NC-044 (bổ sung): Luật 56/2024 không sửa Điều 40 Luật Kế toán (đã xác minh). Hai điểm chữ nhỏ ở routine `viec-cuoi-nam` (`lo-trinh.json`):
+  - "Lập biên bản kết quả kiểm kê" đổi thành "Lập báo cáo tổng hợp kết quả kiểm kê" (Điều 40 khoản 3).
+  - Thêm `legal_basis` Nghị định 252/2026/NĐ-CP Điều 10 khoản 5 điểm a (hạn quyết toán năm, NC-013), chép từ mục đã xác minh trong `bat-dau.json`.
+  - Todo ghi Luật 56/2024 không sửa Điều 40.
+- Status giữ "draft".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
