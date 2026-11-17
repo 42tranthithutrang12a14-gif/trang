@@ -1841,6 +1841,35 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `fe2b46c` (NC-044): điền `legal_basis` cho các routine cũ, thêm 3 routine (bảo hiểm hằng tháng, thuế theo quý, việc cuối năm). Đúng đề xuất; hai điểm chữ nhỏ ghi ở NC-044 (bổ sung).
 - Kiểm Luật 56/2024 Điều 2: không sửa Điều 40 Luật Kế toán.
 
+### NC-043 (bổ sung) — Phạt tiền về BHYT: từ 15/05/2026 theo Nghị định 90/2026 (thay Nghị định 117/2020); phạt theo bậc số tiền vi phạm, không theo %; mức trong điều là của cá nhân, công ty gấp 2
+
+- **Trạng thái:** đã xác minh. Đóng điểm còn mở của NC-043.
+- **Liên quan:** NC-042, NC-043; bước BHXH (`tu-0-den-1.json`), lịch "Hàng tháng" (`bat-dau.json`), routine `dong-bao-hiem-hang-thang` (`lo-trinh.json`).
+- **Phát hiện (Nghị định 90/2026/NĐ-CP "Quy định xử phạt vi phạm hành chính trong lĩnh vực y tế"; ban hành 30/03/2026; https://vanban.chinhphu.vn/?pageid=27160&docid=217386&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/4/90-ndcp.signed.pdf, 156 trang, bản quét, OCR):**
+  - **Điều 115 khoản 1:** hiệu lực 15/05/2026. **Khoản 2 điểm a:** Nghị định 117/2020/NĐ-CP hết hiệu lực.
+  - **Điều 4 khoản 5:** mức phạt ở Chương II "là mức phạt tiền đối với cá nhân… mức phạt tiền đối với tổ chức bằng 02 lần mức phạt tiền đối với cá nhân".
+  - **Điều 81 (chậm đóng BHYT):**
+    - Khoản 1: không lập danh sách hoặc lập thiếu người tham gia BHYT trong 60 ngày sau hạn: dưới 10 người 1–2 triệu đồng; 10 đến dưới 50 người 2–4 triệu; … (đến 25–35 triệu từ 1.000 người).
+    - Khoản 2: chưa đóng hoặc đóng thiếu sau hạn (khoản 8 Điều 15 Luật BHYT): theo số tiền vi phạm: dưới 5 triệu đồng phạt 0,5–1 triệu; 5 đến dưới 10 triệu phạt 1–2 triệu; 10 đến dưới 20 triệu phạt 2–3 triệu; 20 đến dưới 40 triệu phạt 3–5 triệu; … từ 160 triệu phạt 25–35 triệu.
+    - Khoản 3 điểm a: buộc hoàn trả số tiền người tham gia bị thiệt hại (nếu có). (Các điểm khắc phục khác chưa trích.)
+  - **Điều 82 (trốn đóng BHYT chưa đến mức hình sự):**
+    - Khoản 2: không lập danh sách hoặc lập thiếu sau 60 ngày: dưới 10 người 2–4 triệu; 10 đến dưới 50 người 4–7 triệu; …
+    - Khoản 3: "đăng ký tiền lương làm căn cứ đóng bảo hiểm y tế thấp hơn tiền lương quy định tại Điều 14 của Luật Bảo hiểm y tế" hoặc không đóng, đóng thiếu sau 60 ngày đã bị đôn đốc: dưới 5 triệu phạt 1–2 triệu; 5 đến dưới 10 triệu phạt 2–3 triệu; 10 đến dưới 20 triệu phạt 3–5 triệu; … từ 160 triệu phạt 35–45 triệu.
+- **Kết luận ngắn (DN siêu nhỏ, dưới 10 người; mức cho công ty = 2 lần mức trong điều):**
+  1. Đóng BHYT muộn, số tiền dưới 5 triệu đồng: phạt công ty 1–2 triệu; 5–10 triệu: 2–4 triệu. Cộng 0,03%/ngày (NC-042) và phải đóng đủ.
+  2. Khai lương đóng BHYT thấp hơn quy định, số tiền dưới 5 triệu: phạt công ty 2–4 triệu; 5–10 triệu: 4–6 triệu.
+  3. Chưa lập danh sách tham gia BHYT cho nhân viên: trong 60 ngày sau hạn 2–4 triệu; quá 60 ngày 4–8 triệu.
+  4. BHYT phạt theo bậc số tiền, khác BHXH, BHTN phạt theo % (NC-043). Phạt BHXH thường nặng hơn nhiều.
+- **Nguồn:** Nghị định 90/2026/NĐ-CP Điều 4 khoản 5; Điều 81 khoản 1, 2, 3 điểm a; Điều 82 khoản 2, 3; Điều 115 khoản 1, khoản 2 điểm a. Ngày tra 2026-11-17.
+- **Đề xuất sửa (Biên tập):**
+  - Bước BHXH và lịch "Hàng tháng", chỗ mức phạt: thêm "BHYT đóng muộn: công ty bị phạt theo số tiền chậm đóng, ví dụ dưới 5 triệu đồng phạt 1–2 triệu, 5–10 triệu phạt 2–4 triệu." `legal_basis`: Nghị định 90/2026/NĐ-CP Điều 4 khoản 5, Điều 81, 82; URL docid 217386; `verified_against_original: true`.
+  - Thay todo "Phạt tiền BHYT: chưa xác minh" bằng "Đã xác minh (NC-043 bổ sung)".
+
+### Vòng 64 (2026-11-17, 02:18 UTC)
+
+- Rà commit Biên tập `4c0875e` (NC-044 bổ sung): đổi chữ thành "báo cáo tổng hợp kết quả kiểm kê", thêm Nghị định 252/2026 Điều 10 khoản 5 điểm a làm nguồn hạn quyết toán. Đúng đề xuất, không thấy lỗi.
+- Tìm và đọc Nghị định 90/2026 (OCR 156 trang) Điều 4, 81, 82, 115: ghi NC-043 (bổ sung).
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
