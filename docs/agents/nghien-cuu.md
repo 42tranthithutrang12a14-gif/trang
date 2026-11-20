@@ -1870,6 +1870,32 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `4c0875e` (NC-044 bổ sung): đổi chữ thành "báo cáo tổng hợp kết quả kiểm kê", thêm Nghị định 252/2026 Điều 10 khoản 5 điểm a làm nguồn hạn quyết toán. Đúng đề xuất, không thấy lỗi.
 - Tìm và đọc Nghị định 90/2026 (OCR 156 trang) Điều 4, 81, 82, 115: ghi NC-043 (bổ sung).
 
+### NC-043 (bổ sung 2) — Mức trần phạt tiền với công ty về BHXH, BHTN, BHYT là 150 triệu đồng (gấp 2 lần trần 75 triệu của cá nhân; Luật Xử lý vi phạm hành chính Điều 24 khoản 1 điểm d, khoản 2)
+
+- **Trạng thái:** đã xác minh. Đóng điểm còn mở ở NC-043 kết luận 4 ("cần đọc kỹ thêm nếu dùng mức trần").
+- **Liên quan:** NC-043 và NC-043 bổ sung (Nghị định 283/2026, Nghị định 90/2026); bước BHXH (`tu-0-den-1.json`), lịch "Hàng tháng" (`bat-dau.json`).
+- **Phát hiện:**
+  - **Luật Xử lý vi phạm hành chính 15/2012/QH13, Điều 24** (toàn văn trên trang văn bản): khoản 1: "Mức phạt tiền tối đa trong các lĩnh vực quản lý nhà nước đối với cá nhân được quy định như sau: …". **Khoản 2:** "Mức phạt tiền tối đa trong lĩnh vực quản lý nhà nước quy định tại khoản 1 Điều này đối với tổ chức bằng 02 lần mức phạt tiền đối với cá nhân." Điều 23 khoản 1: phạt tiền từ 50.000 đến 1 tỷ đồng với cá nhân, từ 100.000 đến 2 tỷ đồng với tổ chức.
+  - **Luật 67/2020/QH14, Điều 1 khoản 10 điểm a** (bản quét, OCR trang 5): sửa khoản 1 Điều 24. Điểm d: "Phạt tiền đến 75.000.000 đồng: … lao động; … bảo hiểm y tế; bảo hiểm xã hội; bảo hiểm thất nghiệp; …". Điểm b của khoản 10 chỉ sửa khoản 3 (thuế, đo lường…). Không sửa khoản 2.
+  - **Luật 88/2025/QH15, Điều 1 khoản 3** (bản quét, OCR trang 2–3): sửa điểm a, đ, i khoản 1 và khoản 3 Điều 24. Không sửa điểm d khoản 1 và khoản 2.
+  - **Nghị định 283/2026, Điều 7 khoản 1:** mức trong Nghị định là của cá nhân, tổ chức gấp 2 lần (đã ghi ở NC-043). Các khoản 43.3, 44.2, 45.3, 46.2 ghi "tối đa không quá 75.000.000 đồng" (mức cá nhân). Điều 3 khoản 3 điểm a dẫn Luật Xử lý vi phạm hành chính "được sửa đổi, bổ sung bởi Luật số 67/2020/QH14 và Luật số 88/2025/QH15".
+  - **Điều 46 Nghị định 283/2026 (trốn đóng BHTN, OCR trang 62):** khoản 1 điểm a: không đăng ký hoặc đăng ký thiếu người BHTN sau 60 ngày, dưới 10 người 1–5 triệu đồng; khoản 2: 18–20% số tiền trốn đóng, tối đa 75 triệu (cá nhân); điểm a: đăng ký lương đóng BHTN thấp hơn quy định.
+- **Kết luận ngắn (công ty, dưới 10 người):**
+  1. Trần mỗi hành vi chậm đóng, trốn đóng BHXH, BHTN (và BHYT, cùng nhóm 75 triệu) với công ty là **150 triệu đồng**.
+  2. Phạt BHTN cho công ty: đóng muộn 24–30% số tiền chậm đóng; khai lương đóng thấp 36–40% số tiền trốn đóng; chưa đăng ký BHTN cho nhân viên quá 60 ngày 2–10 triệu đồng.
+  3. Thời hiệu xử phạt về BHXH: 01 năm (Nghị định 283/2026 Điều 3 khoản 4 điểm a).
+- **Nguồn:** Luật 15/2012/QH13 Điều 23 khoản 1, Điều 24 khoản 1, 2 — https://vanban.chinhphu.vn/?pageid=27160&docid=163070&classid=1. Luật 67/2020/QH14 Điều 1 khoản 10 — https://vanban.chinhphu.vn/?pageid=27160&docid=202608&classid=1 (PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2021/02/67.signed.pdf). Luật 88/2025/QH15 Điều 1 khoản 3 — https://vanban.chinhphu.vn/?pageid=27160&docid=214591&classid=1 (PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/88qh.signed.pdf). Nghị định 283/2026/NĐ-CP Điều 3 khoản 3, 4; Điều 7 khoản 1; Điều 46 khoản 1, 2 — docid 218871. Ngày tra 2026-11-20.
+- **Đề xuất sửa (Biên tập):**
+  - Nếu bước BHXH có nói mức phạt: có thể thêm "Mức phạt tối đa cho công ty với mỗi hành vi là 150 triệu đồng." `legal_basis` thêm: Luật Xử lý vi phạm hành chính 15/2012/QH13 Điều 24 khoản 1 điểm d (sửa bởi Luật 67/2020/QH14), khoản 2; URL docid 163070, 202608; `verified_against_original: true`.
+  - Nếu có câu phạt BHTN: dùng số ở kết luận 2 (Điều 45, 46 Nghị định 283/2026; Điều 7 khoản 1).
+  - Không bắt buộc. Không phải sửa số đã có.
+
+### Vòng 65 (2026-11-20, 22:17 UTC)
+
+- Không có commit mới của Biên tập từ `b40b5ab`.
+- Rà lại hạn đăng ký tự nguyện phương pháp khấu trừ GTGT: đã đọc Nghị định 181/2025 Điều 21 (bản OCR), Thông tư 69/2025, 89/2026, 90/2026, 68/2025, 424/2026. Không có hạn riêng. Vẫn mở; không tra thêm cho đến khi có văn bản mới.
+- Đóng điểm mức trần phạt công ty trong NC-043: đọc Luật Xử lý vi phạm hành chính 15/2012 Điều 24, Luật 67/2020, Luật 88/2025. Ghi NC-043 bổ sung 2.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
