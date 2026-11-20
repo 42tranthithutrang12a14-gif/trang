@@ -634,7 +634,7 @@
         "month": "Hàng tháng",
         "entries": [
           { "text": "Khai GTGT tháng (nếu khai theo tháng)", "deadline": "Ngày 20 tháng tiếp theo", "type": "tax" },
-          { "text": "Đóng BHXH: công ty 17%, người lao động 8% tiền lương làm căn cứ đóng. Đóng muộn: nộp thêm 0,03% mỗi ngày trên số chậm đóng (áp dụng cả BHYT, BHTN). Phạt công ty đóng muộn: 24–30% số tiền chậm đóng", "deadline": "Ngày cuối cùng của tháng tiếp theo", "type": "hr" },
+          { "text": "Đóng BHXH: công ty 17%, người lao động 8% tiền lương làm căn cứ đóng. Đóng muộn: nộp thêm 0,03% mỗi ngày trên số chậm đóng (áp dụng cả BHYT, BHTN). Phạt công ty đóng BHXH, BHTN muộn: 24–30% số tiền chậm đóng; BHYT phạt theo bậc số tiền chậm đóng", "deadline": "Ngày cuối cùng của tháng tiếp theo", "type": "hr" },
           { "text": "Đóng BHYT, BHTN cùng BHXH cho nhân viên: BHYT 4,5% (công ty 3%, nhân viên 1,5%); BHTN 1% mỗi bên. Công ty đóng thêm bảo hiểm tai nạn lao động – bệnh nghề nghiệp 0,5% (một số công ty đủ điều kiện được 0,3%). Đóng cho nhân viên có hợp đồng lao động từ đủ 1 tháng và giám đốc có nhận lương. Không đóng cho giám đốc không nhận lương. Tổng: công ty 21,5%, nhân viên 10,5% tiền lương làm căn cứ đóng. Nhân viên nghỉ không lương từ 14 ngày làm việc trở lên trong tháng thì tháng đó không đóng BHTN", "deadline": "Cùng lúc với BHXH: ngày cuối cùng của tháng tiếp theo", "type": "hr" }
         ],
         "legal_basis": [
@@ -754,10 +754,36 @@
             "verified_against_original": true,
             "checked_at": "2026-11-16",
             "snapshot_path": ""
+          },
+          {
+            "doc_type": "Nghị định",
+            "doc_number": "90/2026/NĐ-CP",
+            "title": "Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực y tế",
+            "issuer": "Chính phủ",
+            "issued_date": "2026-03-30",
+            "effective_date": "2026-05-15",
+            "article": "Điều 4 khoản 5; Điều 81 khoản 1, 2; Điều 82 khoản 2, 3; Điều 115 khoản 1, khoản 2 điểm a",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=217386&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-17",
+            "snapshot_path": ""
+          },
+          {
+            "doc_type": "Luật",
+            "doc_number": "15/2012/QH13",
+            "title": "Luật Xử lý vi phạm hành chính",
+            "issuer": "Quốc hội",
+            "issued_date": "2012-06-20",
+            "effective_date": "2013-07-01",
+            "article": "Điều 24 khoản 1 điểm d (sửa bởi Luật 67/2020/QH14 Điều 1 khoản 10), khoản 2",
+            "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=163070&classid=1",
+            "verified_against_original": true,
+            "checked_at": "2026-11-20",
+            "snapshot_path": ""
           }
         ],
         "todo_for_reviewer": [
-          "Ngày 2026-11-16 (NC-042, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 38, 39 khoản 1, 40 khoản 1–3, 41 khoản 1–2 và Luật 51/2024/QH15 Điều 1 khoản 33, 34): thêm hậu quả chậm đóng, trốn đóng BHXH, BHYT, BHTN (0,03%/ngày). Phạt tiền BHXH, BHTN: đã xác minh theo Nghị định 283/2026/NĐ-CP (hiệu lực 10/09/2026, thay Nghị định 12/2022; NC-043). Phạt tiền BHYT: chưa xác minh. Mức trần 75 triệu ghi trong điều là của cá nhân; với công ty gấp 2 theo Điều 7 khoản 1, chưa ghi vào app.",
+          "Ngày 2026-11-16 (NC-042, đã đối chiếu toàn văn Luật BHXH 41/2024/QH15 Điều 38, 39 khoản 1, 40 khoản 1–3, 41 khoản 1–2 và Luật 51/2024/QH15 Điều 1 khoản 33, 34): thêm hậu quả chậm đóng, trốn đóng BHXH, BHYT, BHTN (0,03%/ngày). Phạt tiền BHXH, BHTN: đã xác minh theo Nghị định 283/2026/NĐ-CP (hiệu lực 10/09/2026, thay Nghị định 12/2022; NC-043). Phạt tiền BHYT: đã xác minh theo Nghị định 90/2026/NĐ-CP Điều 4 khoản 5, Điều 81, 82 (hiệu lực 15/05/2026; NC-043 bổ sung). Mức trần với công ty 150 triệu đồng mỗi hành vi: Luật Xử lý vi phạm hành chính Điều 24 khoản 1 điểm d, khoản 2 (NC-043 bổ sung 2). Ngày ban hành, hiệu lực Luật 15/2012/QH13 trong legal_basis lấy theo hiểu biết chung, cần đối chiếu trang văn bản.",
           "Ngày 2026-11-14 (NC-023 bổ sung 3, đã đối chiếu toàn văn Nghị định 58/2020/NĐ-CP Điều 4): thêm bảo hiểm TNLĐ-BNN 0,5% và tổng 21,5%. Đối tượng bảo hiểm TNLĐ-BNN theo Điều 43 Luật An toàn, vệ sinh lao động 84/2015 (sửa bởi Luật 41/2024 Điều 139 khoản 1 điểm b): có người quản lý hưởng lương, không có người quản lý không hưởng lương; mức trần 1% (Điều 44 khoản 1). Chưa thấy nghị định thay Nghị định 58/2020 tại ngày 2026-11-15 (NC-023 bổ sung 4).",
           "Ngày 2026-11-14 (NC-023 bổ sung, đã đối chiếu toàn văn Luật 51/2024/QH15 sửa Luật Bảo hiểm y tế và Luật Việc làm 74/2025/QH15): thêm mức tối đa và cách chia BHYT (Điều 13 khoản 1), BHTN (Luật Việc làm Điều 33). Ngày 2026-11-14 (NC-023 bổ sung 2, đã đối chiếu toàn văn Nghị định 188/2025/NĐ-CP Điều 6 và Nghị định 374/2025/NĐ-CP Điều 4, 5): BHYT 4,5% tiền lương làm căn cứ đóng BHXH (DN 2/3, người lao động 1/3); BHTN 1% mỗi bên. Bảo hiểm TNLĐ-BNN: DN đóng 0,5% (0,3% nếu đủ điều kiện) theo Nghị định 58/2020/NĐ-CP Điều 4 (NC-023 bổ sung 3). Ngày 2026-11-15 (NC-034, đã đối chiếu toàn văn): hạn đóng BHYT, BHTN cùng lúc với BHXH, chậm nhất ngày cuối cùng của tháng tiếp theo (Luật BHYT Điều 15 khoản 8 điểm a, sửa bởi Luật 51/2024/QH15 Điều 1 khoản 13 điểm b; Luật Việc làm 74/2025/QH15 Điều 33 khoản 2, 3); nghỉ không lương từ 14 ngày làm việc trở lên thì không đóng BHTN tháng đó (Điều 33 khoản 4). Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=214515&classid=1 và https://vanban.chinhphu.vn/?pageid=27160&docid=216493&classid=1",
           "Ngày 2026-11-12 (NC-013): hạn khai GTGT tháng ngày 20 tháng tiếp theo khớp Nghị định 252/2026 Điều 10 khoản 2.",

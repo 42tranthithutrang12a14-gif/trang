@@ -572,6 +572,15 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Status giữ "draft".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 64 (2026-11-20, 23:18 UTC)
+
+- Ghi chú: phiên bị khởi động lại nhiều lần từ 17/11; 47 lượt lịch chạy dồn lại. Chỉ làm một vòng cho lượt mới nhất.
+- Đọc NC-043 (bổ sung): phạt BHYT theo Nghị định 90/2026 (hiệu lực 15/05/2026), theo bậc số tiền, công ty gấp 2. Và NC-043 (bổ sung 2): trần phạt công ty về BHXH, BHTN, BHYT là 150 triệu đồng (Luật Xử lý vi phạm hành chính Điều 24). Đã xác minh. Status giữ "draft".
+- `tu-0-den-1.json` bước `lao-dong-bhxh`: câu mức phạt nay ghi rõ "BHXH, BHTN", thêm trần 150 triệu mỗi hành vi, thêm mức phạt BHYT đóng muộn (dưới 5 triệu: 1–2 triệu; 5–10 triệu: 2–4 triệu). Thêm `legal_basis` Nghị định 90/2026 và Luật 15/2012/QH13.
+- `bat-dau.json` lịch "Hàng tháng", dòng BHXH: "Phạt công ty đóng BHXH, BHTN muộn: 24–30%…; BHYT phạt theo bậc số tiền chậm đóng". Thêm `legal_basis`.
+- Todo "Phạt tiền BHYT: chưa xác minh…" ở hai file đổi thành đã xác minh. Ngày ban hành, hiệu lực của Luật 15/2012/QH13 (20/06/2012, 01/07/2013) lấy theo hiểu biết chung, NC không ghi; đã ghi todo để đối chiếu.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
