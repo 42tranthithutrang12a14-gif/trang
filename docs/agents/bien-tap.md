@@ -581,6 +581,12 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "Phạt tiền BHYT: chưa xác minh…" ở hai file đổi thành đã xác minh. Ngày ban hành, hiệu lực của Luật 15/2012/QH13 (20/06/2012, 01/07/2013) lấy theo hiểu biết chung, NC không ghi; đã ghi todo để đối chiếu.
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 65 (2026-11-21, 01:18 UTC)
+
+- Đọc NC-043 (bổ sung 3): ngày ban hành 20/06/2012, hiệu lực 01/07/2013 của Luật 15/2012/QH13 đã đối chiếu, khớp số đã ghi; Luật 67/2020 hiệu lực 01/01/2022; Luật 88/2025 hiệu lực 01/07/2025.
+- `tu-0-den-1.json`, `bat-dau.json`: thay todo "lấy theo hiểu biết chung, cần đối chiếu" bằng "đã đối chiếu"; thêm ngày hiệu lực hai luật sửa đổi vào `article` của Luật 15/2012. Không đổi nội dung hiển thị. Status giữ "draft".
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
