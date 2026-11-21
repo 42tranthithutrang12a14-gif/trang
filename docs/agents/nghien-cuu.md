@@ -1914,6 +1914,35 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `e715015` (NC-043 bổ sung và bổ sung 2): thêm phạt BHYT theo bậc và trần 150 triệu vào bước `lao-dong-bhxh` và lịch "Hàng tháng". Số khớp NC (BHYT dưới 5 triệu: 1–2 triệu; 5–10 triệu: 2–4 triệu; trần 150 triệu). `legal_basis` Nghị định 90/2026 và Luật 15/2012 đúng điều, khoản. Không thấy lỗi.
 - Trả lời todo về ngày của Luật 15/2012: đã đối chiếu trang văn bản; thêm ngày của Luật 67/2020, 88/2025. Ghi NC-043 bổ sung 3.
 
+### NC-045 — Tra địa bàn thuộc vùng lương tối thiểu nào (từ 01/01/2027): Phụ lục Nghị định 399/2026 xếp theo 34 tỉnh, thành; mỗi tỉnh liệt kê tên xã, phường của vùng cao hơn, còn lại thuộc vùng thấp nhất của tỉnh
+
+- **Trạng thái:** đã xác minh (Phụ lục Nghị định 399/2026, PDF có lớp chữ, đọc đủ 10 trang). Chưa đọc: Phụ lục Nghị định 293/2025 (áp dụng năm 2026).
+- **Liên quan:** NC-035 kết luận 4 ("xem Phụ lục … chưa trích"); todo "Danh mục địa bàn vùng I–IV: xem Phụ lục…" ở `legal-framework.json`, `so-ke-toan.json`, `tu-0-den-1.json`.
+- **Phát hiện (Nghị định 399/2026/NĐ-CP; trang văn bản https://vanban.chinhphu.vn/?pageid=27160&docid=220166&classid=1; Phụ lục là file đính kèm thứ hai https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/11/399_2026_nd-cp_02112026_7-signed.pdf):**
+  - Tên: "Phụ lục DANH MỤC ĐỊA BÀN ÁP DỤNG MỨC LƯƠNG TỐI THIỂU TỪ NGÀY 01 THÁNG 01 NĂM 2027".
+  - Xếp theo 34 tỉnh, thành (đánh số 1–34). Mỗi tỉnh: dòng "Vùng …, gồm các phường … và các xã …" liệt kê tên xã, phường mới (sau sắp xếp đơn vị hành chính, không còn cấp huyện); dòng cuối "Vùng …, gồm các xã, phường còn lại".
+  - Ví dụ: "1. Thành phố Hà Nội – Vùng I, gồm các phường Hoàn Kiếm, Cửa Nam, Ba Đình, … và các xã Thanh Trì, Đại Thanh, … – Vùng II, gồm các xã, phường còn lại." "28. Thành phố Hồ Chí Minh – Vùng I, gồm các phường Sài Gòn, Tân Định, Bến Thành, … – Vùng II, gồm các xã, phường còn lại." "2. Tỉnh Cao Bằng – Vùng III, gồm các phường Thục Phán, Nùng Trí Cao, Tân Giang. – Vùng IV, gồm các xã, phường còn lại."
+  - Vùng "còn lại" của từng tỉnh (tôi tổng hợp từ Phụ lục):
+    - Vùng II: Hà Nội, Hải Phòng, TP Hồ Chí Minh.
+    - Vùng III: Quảng Ninh ("các xã, phường và đặc khu còn lại"), Hưng Yên.
+    - Vùng IV: 29 tỉnh, thành còn lại.
+  - Có Vùng I: Hà Nội, Quảng Ninh, Hải Phòng, Đồng Nai, TP Hồ Chí Minh, Tây Ninh.
+  - Điều 3 khoản 3 (đã trích ở NC-035): áp dụng theo nơi DN hoạt động; chi nhánh theo nơi chi nhánh; địa bàn gộp từ nhiều nơi khác vùng thì lấy mức cao nhất.
+- **Kết luận ngắn — cách tự tra (3 bước):**
+  1. Mở Phụ lục Nghị định 399/2026 trên vanban.chinhphu.vn (file đính kèm thứ hai).
+  2. Tìm tỉnh, thành nơi công ty hoạt động; dò tên xã, phường của trụ sở trong các dòng "Vùng …, gồm các phường … và các xã …".
+  3. Không thấy tên trong các dòng đó thì công ty thuộc vùng ghi ở dòng "các xã, phường còn lại".
+- **Nguồn:** Nghị định 399/2026/NĐ-CP, Phụ lục (mục 1–34), Điều 3 khoản 2, 3. Ngày tra 2026-11-21.
+- **Đề xuất sửa (Biên tập):**
+  - Ba file có todo "Danh mục địa bàn vùng I–IV: xem Phụ lục…": thay bằng một câu hướng dẫn: "Muốn biết công ty thuộc vùng nào: mở Phụ lục Nghị định 399/2026, tìm tỉnh, thành nơi công ty hoạt động, dò tên xã, phường. Không có tên trong danh sách thì thuộc vùng ghi ở dòng 'các xã, phường còn lại'." `legal_basis`: Nghị định 399/2026/NĐ-CP Điều 3 khoản 2, 3 và Phụ lục; URL docid 220166; `verified_against_original: true`.
+  - Giữ todo cho năm 2026: "Danh mục địa bàn năm 2026 (Phụ lục Nghị định 293/2025): chưa đối chiếu."
+  - Không chép cả danh mục vào app (dài, dễ sai khi đổi địa giới); chỉ dẫn link.
+
+### Vòng 67 (2026-11-21, 02:18 UTC)
+
+- Rà commit Biên tập `b903b53` (NC-043 bổ sung 3): đổi todo thành "đã đối chiếu", thêm ngày hiệu lực Luật 67/2020, 88/2025 vào `article`. Đúng đề xuất.
+- Đọc Phụ lục Nghị định 399/2026 (danh mục địa bàn vùng lương tối thiểu từ 2027): ghi NC-045, đóng NC-035 kết luận 4 cho năm 2027.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
