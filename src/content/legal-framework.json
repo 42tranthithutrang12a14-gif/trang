@@ -355,11 +355,12 @@
             "Hợp đồng lao động từ 1 tháng trở lên phải ký bằng văn bản",
             "Thời gian thử việc tối đa: 180 ngày (quản lý cấp cao), 60 ngày (chuyên môn kỹ thuật), 30 ngày (khác)",
             "Nghỉ phép năm: tối thiểu 12 ngày/năm với điều kiện làm đủ 12 tháng",
-            "Lương tối thiểu vùng năm 2026: Vùng I 5.310.000, Vùng II 4.730.000, Vùng III 4.140.000, Vùng IV 3.700.000 đồng/tháng (Nghị định 293/2025/NĐ-CP). Từ 01/01/2027: 5.700.000 / 5.080.000 / 4.450.000 / 4.040.000 đồng/tháng (Nghị định 399/2026/NĐ-CP)."
+            "Lương tối thiểu vùng năm 2026: Vùng I 5.310.000, Vùng II 4.730.000, Vùng III 4.140.000, Vùng IV 3.700.000 đồng/tháng (Nghị định 293/2025/NĐ-CP). Từ 01/01/2027: 5.700.000 / 5.080.000 / 4.450.000 / 4.040.000 đồng/tháng (Nghị định 399/2026/NĐ-CP).",
+            "Muốn biết công ty thuộc vùng nào: mở Phụ lục Nghị định 399/2026 trên vanban.chinhphu.vn, tìm tỉnh, thành nơi công ty hoạt động, dò tên xã, phường. Không có tên trong danh sách thì thuộc vùng ghi ở dòng \"các xã, phường còn lại\". Chi nhánh tính theo nơi chi nhánh hoạt động."
           ],
           "todo_for_reviewer": [
             "Xác nhận thời gian thử việc theo điều khoản cụ thể BLLĐ 2019",
-            "Ngày 2026-11-15 (NC-035, đã đối chiếu toàn văn Nghị định 293/2025/NĐ-CP Điều 3 khoản 1, Điều 5 và Nghị định 399/2026/NĐ-CP Điều 3, 4, 5): thêm lương tối thiểu vùng. Danh mục địa bàn vùng I–IV: xem Phụ lục Nghị định 399/2026, chưa trích. Sàn tiền lương đóng BHXH: Nghị định 158/2025 không đặt sàn bằng lương tối thiểu vùng; mức đóng không dưới lương tối thiểu vùng là cách hiểu (NC-036). Gỡ mức năm 2026 sau 31/12/2026.",
+            "Ngày 2026-11-15 (NC-035, đã đối chiếu toàn văn Nghị định 293/2025/NĐ-CP Điều 3 khoản 1, Điều 5 và Nghị định 399/2026/NĐ-CP Điều 3, 4, 5): thêm lương tối thiểu vùng. Cách tra vùng theo Phụ lục Nghị định 399/2026 (34 tỉnh, thành; dòng \"các xã, phường còn lại\") đã đối chiếu, thêm câu hướng dẫn, không chép danh mục (NC-045). Danh mục địa bàn năm 2026 (Phụ lục Nghị định 293/2025): chưa đối chiếu. Sàn tiền lương đóng BHXH: Nghị định 158/2025 không đặt sàn bằng lương tối thiểu vùng; mức đóng không dưới lương tối thiểu vùng là cách hiểu (NC-036). Gỡ mức năm 2026 sau 31/12/2026.",
             "Bổ sung quy định về làm thêm giờ và phụ cấp",
             "Cập nhật NC-008: ngày hiệu lực 01/01/2021 khớp trang thông tin vanban.chinhphu.vn (ngày tra 2026-11-11). Khớp ngày không có nghĩa văn bản còn hiệu lực; xem các ghi chú NC khác. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=198540&classid=1"
           ]

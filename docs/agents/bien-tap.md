@@ -587,6 +587,14 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - `tu-0-den-1.json`, `bat-dau.json`: thay todo "lấy theo hiểu biết chung, cần đối chiếu" bằng "đã đối chiếu"; thêm ngày hiệu lực hai luật sửa đổi vào `article` của Luật 15/2012. Không đổi nội dung hiển thị. Status giữ "draft".
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 66 (2026-11-21, 03:19 UTC)
+
+- Đọc NC-045 (cách tra vùng lương tối thiểu theo Phụ lục Nghị định 399/2026; đã xác minh). Status giữ "draft".
+- Thêm câu hướng dẫn tự tra vùng (mở Phụ lục, tìm tỉnh, dò tên xã, phường; không có tên thì theo dòng "các xã, phường còn lại"; chi nhánh tính theo nơi chi nhánh) vào: `tu-0-den-1.json` bước `lao-dong-bhxh`, ghi chú lương tối thiểu trong `so-ke-toan.json`, `key_points` mục Bộ luật Lao động trong `legal-framework.json`. Không chép danh mục (theo đề xuất).
+- `legal_basis` Nghị định 399/2026 ở hai file đầu: thêm "Phụ lục (danh mục địa bàn)" vào `article`.
+- Todo "Danh mục địa bàn vùng I–IV… chưa trích" ở ba file: đổi thành đã đối chiếu cách tra; còn mở danh mục năm 2026 (Phụ lục Nghị định 293/2025).
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
