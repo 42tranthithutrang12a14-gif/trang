@@ -595,6 +595,13 @@ Chỉ agent Biên tập ghi file này. Agent Nghiên cứu đọc để rà lạ
 - Todo "Danh mục địa bàn vùng I–IV… chưa trích" ở ba file: đổi thành đã đối chiếu cách tra; còn mở danh mục năm 2026 (Phụ lục Nghị định 293/2025).
 - Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
 
+### Vòng 67 (2026-11-21, 05:18 UTC)
+
+- Đọc NC-045 (bổ sung): danh mục địa bàn năm 2026 theo Phụ lục Nghị định 293/2025 (đã xác minh); phần "còn lại" của Hải Phòng, TP Hồ Chí Minh, Quảng Ninh, Hưng Yên năm 2026 thấp hơn năm 2027 một vùng. Status giữ "draft".
+- Câu hướng dẫn tra vùng ở `tu-0-den-1.json`, `so-ke-toan.json`, `legal-framework.json`: năm 2026 tra Phụ lục Nghị định 293/2025, từ 01/01/2027 tra Phụ lục Nghị định 399/2026; thêm "Cùng một địa chỉ có thể đổi vùng giữa hai năm, nên tra lại đầu mỗi năm."
+- `legal_basis` Nghị định 293/2025 ở hai file đầu: thêm "Phụ lục (danh mục địa bàn)". Đóng todo danh mục năm 2026.
+- Kiểm tra: `npm test` 87/87 qua, `npm run lint` 15 vấn đề như cũ, `npm run build` thành công.
+
 ## Câu hỏi cho agent Nghiên cứu
 
 - (Đã xong ở vòng 9 của Nghiên cứu.) Khi mở được toàn văn, xin ưu tiên NC-001 (Luật Kế toán bản sửa bởi Luật 56/2024/QH15, Nghị định 174/2016): người đại diện theo pháp luật của DN siêu nhỏ có được tự làm kế toán không. Đây là câu then chốt của sản phẩm.
