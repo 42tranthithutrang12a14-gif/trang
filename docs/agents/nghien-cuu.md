@@ -1943,6 +1943,37 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `b903b53` (NC-043 bổ sung 3): đổi todo thành "đã đối chiếu", thêm ngày hiệu lực Luật 67/2020, 88/2025 vào `article`. Đúng đề xuất.
 - Đọc Phụ lục Nghị định 399/2026 (danh mục địa bàn vùng lương tối thiểu từ 2027): ghi NC-045, đóng NC-035 kết luận 4 cho năm 2027.
 
+### NC-045 (bổ sung) — Danh mục địa bàn năm 2026 (Phụ lục Nghị định 293/2025): cùng cách xếp 34 tỉnh, thành; phần "còn lại" của Hải Phòng, TP Hồ Chí Minh, Quảng Ninh, Hưng Yên năm 2026 thấp hơn năm 2027 một vùng
+
+- **Trạng thái:** đã xác minh. Đóng todo "Danh mục địa bàn năm 2026 (Phụ lục Nghị định 293/2025): chưa đối chiếu".
+- **Liên quan:** NC-035, NC-045; todo ở `legal-framework.json`, `so-ke-toan.json`, `tu-0-den-1.json` (commit `e763e66`).
+- **Phát hiện (Nghị định 293/2025/NĐ-CP; https://vanban.chinhphu.vn/?pageid=27160&docid=215832&classid=1; PDF https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/11/293-cp.signed.pdf, 14 trang, bản quét; Phụ lục ở trang 5–14; OCR 250 và 450 dpi, rồi xem trực tiếp ảnh các dòng "Vùng …" vì OCR hay đọc nhầm I/II/III):**
+  - Tên: "Phụ lục DANH MỤC ĐỊA BÀN ÁP DỤNG MỨC LƯƠNG TỐI THIỂU TỪ NGÀY 01 THÁNG 01 NĂM 2026". Xếp theo 34 tỉnh, thành, liệt kê tên xã, phường mới; dòng cuối mỗi tỉnh "Vùng …, gồm các xã, phường còn lại" (có nơi ghi "các xã, phường và đặc khu còn lại").
+  - Đã xem ảnh: Hà Nội "Vùng II, gồm các xã, phường còn lại". Hải Phòng (trang 8, ngay trước "14. Tỉnh Hưng Yên"): "Vùng III, gồm các xã, phường còn lại". TP Hồ Chí Minh (trang 13, ngay trước "29. Tỉnh Tây Ninh"): "Vùng III, gồm các xã, phường và đặc khu còn lại". Quảng Ninh: có Vùng I, II, III; "Vùng IV, gồm các xã, phường và đặc khu còn lại". Hưng Yên: Vùng II, III; "Vùng IV, gồm các xã, phường còn lại".
+  - Có Vùng I năm 2026: Hà Nội, Quảng Ninh, Hải Phòng, Đồng Nai, TP Hồ Chí Minh, Tây Ninh (giống năm 2027).
+  - So với Phụ lục Nghị định 399/2026 (NC-045, bản có lớp chữ), phần "còn lại" thay đổi:
+
+    | Tỉnh, thành | 2026 (NĐ 293/2025) | Từ 2027 (NĐ 399/2026) |
+    |---|---|---|
+    | Hải Phòng | Vùng III | Vùng II |
+    | TP Hồ Chí Minh | Vùng III | Vùng II |
+    | Quảng Ninh | Vùng IV | Vùng III |
+    | Hưng Yên | Vùng IV | Vùng III |
+
+    Các tỉnh khác: tôi chưa so từng xã, phường giữa hai Phụ lục.
+- **Kết luận ngắn:**
+  1. Cách tra năm 2026 giống năm 2027, nhưng dùng Phụ lục Nghị định 293/2025.
+  2. Cùng một địa chỉ có thể đổi vùng từ 01/01/2027. Ví dụ: xã, phường thuộc phần "còn lại" của TP Hồ Chí Minh hay Hải Phòng là Vùng III năm 2026, Vùng II từ 2027. Đầu mỗi năm nên tra lại.
+- **Nguồn:** Nghị định 293/2025/NĐ-CP, Phụ lục (mục 1, 10, 13, 14, 28), PDF trang 5–14; Nghị định 399/2026/NĐ-CP, Phụ lục (như NC-045). Ngày tra 2026-11-21.
+- **Đề xuất sửa (Biên tập):**
+  - Câu hướng dẫn tra vùng ở 3 file: đổi thành "Năm 2026 tra Phụ lục Nghị định 293/2025; từ 01/01/2027 tra Phụ lục Nghị định 399/2026. Cùng một địa chỉ có thể đổi vùng giữa hai năm, nên tra lại đầu mỗi năm." `legal_basis` Nghị định 293/2025: thêm "Phụ lục (danh mục địa bàn)" vào `article`.
+  - Đóng todo "Danh mục địa bàn năm 2026 … chưa đối chiếu".
+
+### Vòng 68 (2026-11-21, 04:17 UTC)
+
+- Rà commit Biên tập `e763e66` (NC-045): thêm câu tự tra vùng vào 3 file, thêm "Phụ lục" vào `article`. Đúng đề xuất. Câu "chi nhánh tính theo nơi chi nhánh hoạt động" khớp Điều 3 khoản 3 Nghị định 399/2026.
+- Đọc Phụ lục Nghị định 293/2025 (bản quét, xem ảnh trực tiếp các dòng vùng): ghi NC-045 bổ sung.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
