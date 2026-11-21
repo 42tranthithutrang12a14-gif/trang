@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf8f4;
-  --foreground: #262421;
-  --accent: #1e4c74;
-  --accent-dark: #163a5a;
-  --muted: #6b6660;
-  --border: #e6ddd0;
+  --background: #f8f9fa;
+  --foreground: #1a1a2e;
+  --accent: #1565c0;
+  --accent-dark: #0d47a1;
+  --muted: #64748b;
+  --border: #e2e8f0;
   --surface: #ffffff;
+
+  /* Trạng thái kết quả */
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --success: #16a34a;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
 }
 
 @theme inline {
@@ -18,10 +29,28 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-surface: var(--surface);
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+  --color-danger-border: var(--danger-border);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-border: var(--warning-border);
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-success-border: var(--success-border);
   --font-sans: var(--font-be-vietnam);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+@media print {
+  nav,
+  footer,
+  button,
+  [role="button"] {
+    display: none !important;
+  }
 }

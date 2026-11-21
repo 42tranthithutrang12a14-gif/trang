@@ -1,0 +1,138 @@
+[
+  {
+    "code": "RISK_CHANGES_NOT_REGISTERED",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": {
+      "all": [
+        { "field": "recent_changes", "op": "eq", "value": "co" },
+        { "field": "changes_registered", "op": "eq", "value": "chua" }
+      ]
+    },
+    "title": "Có thay đổi nhưng chưa đăng ký với cơ quan đăng ký kinh doanh",
+    "ok_title": "Các thay đổi gần đây đã được đăng ký",
+    "explain_plain": "Luật Doanh nghiệp yêu cầu đăng ký hoặc thông báo thay đổi trong 10 ngày kể từ ngày có thay đổi. Quá hạn là vi phạm.",
+    "fix_steps": [],
+    "legal_basis": [
+      {
+        "doc_type": "Luật",
+        "doc_number": "59/2020/QH14",
+        "title": "Luật Doanh nghiệp",
+        "issuer": "Quốc hội",
+        "issued_date": "2020-06-17",
+        "effective_date": "2021-01-01",
+        "article": "Điều 30 khoản 1, 2, 3, 4 điểm a; Điều 31 khoản 1, 2",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      },
+      {
+        "doc_type": "Luật",
+        "doc_number": "76/2025/QH15",
+        "title": "Luật sửa đổi, bổ sung một số điều của Luật Doanh nghiệp",
+        "issuer": "Quốc hội",
+        "issued_date": "2025-06-17",
+        "effective_date": "2025-07-01",
+        "article": "Điều 1 khoản 13 (sửa khoản 1 Điều 31 Luật Doanh nghiệp)",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214562&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      }
+    ],
+    "guide_slug": "dang-ky-thay-doi-doanh-nghiep",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Ngày 2026-11-13 (NC-017, đã đối chiếu toàn văn Luật Doanh nghiệp 59/2020/QH14 Điều 30, 31 và Luật 76/2025/QH15): thời hạn là \"10 ngày kể từ ngày có thay đổi\" (ngày lịch, không có chữ \"làm việc\"); 3 ngày làm việc là thời hạn cơ quan đăng ký xử lý hồ sơ. Nguồn: https://vanban.chinhphu.vn/?pageid=27160&docid=200447&classid=1 Đã điền legal_basis, viết explain_plain, đổi \"Phòng Đăng ký kinh doanh\" thành \"cơ quan đăng ký kinh doanh\" (NC-006). Mức phạt chưa xác minh nên không ghi."
+    ]
+  },
+  {
+    "code": "RISK_NO_DIGITAL_SIGNATURE",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": { "field": "digital_signature", "op": "eq", "value": "khong" },
+    "title": "Chưa có chữ ký số hoặc chữ ký số đã hết hạn",
+    "ok_title": "Chữ ký số còn hạn",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "chu-ky-so",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về bắt buộc dùng chữ ký số khi nộp thuế. Lưu ý (NC-020): Nghị định 123/2020 hết hiệu lực từ 01/07/2026, thay bằng Nghị định 254/2026/NĐ-CP; xem thêm Nghị định 23/2025/NĐ-CP (NC-007)."
+    ]
+  },
+  {
+    "code": "RISK_NO_E_INVOICE",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": { "field": "e_invoice", "op": "eq", "value": "khong" },
+    "title": "Chưa đăng ký và sử dụng hóa đơn điện tử",
+    "ok_title": "Đã sử dụng hóa đơn điện tử",
+    "explain_plain": "Doanh nghiệp bán hàng, cung cấp dịch vụ phải dùng hóa đơn điện tử (Nghị định 254/2026/NĐ-CP, từ 01/07/2026).",
+    "fix_steps": [],
+    "legal_basis": [
+      {
+        "doc_type": "Nghị định",
+        "doc_number": "254/2026/NĐ-CP",
+        "title": "Nghị định quy định chi tiết Luật Quản lý thuế về hóa đơn điện tử, chứng từ điện tử",
+        "issuer": "Chính phủ",
+        "issued_date": "2026-06-30",
+        "effective_date": "2026-07-01",
+        "article": "Điều 6 khoản 1; Điều 43",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218689&classid=1",
+        "verified_against_original": true,
+        "checked_at": "2026-11-13",
+        "snapshot_path": ""
+      }
+    ],
+    "guide_slug": "hoa-don-dien-tu",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Ngày 2026-11-13 (NC-020, đã đối chiếu toàn văn Nghị định 254/2026/NĐ-CP): điền legal_basis, viết explain_plain. Mức phạt chưa xác minh nên không ghi."
+    ]
+  },
+  {
+    "code": "RISK_CAPITAL_NOT_PAID",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "yellow",
+    "trigger": { "field": "capital_paid", "op": "eq", "value": "chua_du" },
+    "title": "Chưa góp đủ vốn điều lệ đã đăng ký",
+    "ok_title": "Đã góp đủ vốn điều lệ",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "gop-von-dieu-le",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về thời hạn góp vốn — ví dụ: Luật Doanh nghiệp 2020, Điều 47 (TNHH) hoặc Điều 113 (Cổ phần); link vbpl.moj.gov.vn chính thức"
+    ]
+  },
+  {
+    "code": "RISK_NO_BOOKKEEPING",
+    "status": "draft",
+    "sample_notice": "MẪU – CHƯA XÁC MINH",
+    "level": "red",
+    "trigger": {
+      "any": [
+        { "field": "bookkeeper", "op": "eq", "value": "chua_co_ai" },
+        { "field": "books_medium", "op": "eq", "value": "khong_co" }
+      ]
+    },
+    "title": "Chưa có người ghi sổ kế toán hoặc chưa có sổ sách",
+    "ok_title": "Đã có sổ sách kế toán",
+    "explain_plain": "",
+    "fix_steps": [],
+    "legal_basis": [],
+    "guide_slug": "so-sach-ke-toan",
+    "todo_for_reviewer": [
+      "Viết explain_plain và fix_steps",
+      "Điền legal_basis về nghĩa vụ ghi sổ kế toán — ví dụ: Luật Kế toán 2015, Điều 8; Thông tư 133/2016/TT-BTC (DNSN); link vbpl.moj.gov.vn chính thức"
+    ]
+  }
+]
