@@ -1896,6 +1896,24 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà lại hạn đăng ký tự nguyện phương pháp khấu trừ GTGT: đã đọc Nghị định 181/2025 Điều 21 (bản OCR), Thông tư 69/2025, 89/2026, 90/2026, 68/2025, 424/2026. Không có hạn riêng. Vẫn mở; không tra thêm cho đến khi có văn bản mới.
 - Đóng điểm mức trần phạt công ty trong NC-043: đọc Luật Xử lý vi phạm hành chính 15/2012 Điều 24, Luật 67/2020, Luật 88/2025. Ghi NC-043 bổ sung 2.
 
+### NC-043 (bổ sung 3) — Ngày ban hành, hiệu lực của Luật Xử lý vi phạm hành chính và hai luật sửa đổi (trả lời todo của Biên tập ở commit `e715015`)
+
+- **Trạng thái:** đã xác minh.
+- **Liên quan:** `tu-0-den-1.json`, `bat-dau.json`: `legal_basis` Luật 15/2012/QH13 (todo "Ngày ban hành, hiệu lực Luật 15/2012/QH13 … lấy theo hiểu biết chung, cần đối chiếu trang văn bản").
+- **Phát hiện:**
+  - **Luật 15/2012/QH13:** trang văn bản ghi "Ngày ban hành 20-06-2012", "Ngày có hiệu lực 01-07-2013". Điều 141 khoản 1: "Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2013", trừ các quy định về biện pháp xử lý hành chính do Tòa án quyết định. Khớp số Biên tập đã ghi.
+  - **Luật 67/2020/QH14:** thông qua ngày 13/11/2020 (OCR 450 dpi trang 47, khớp ngày trên danh sách tìm kiếm của cổng). Điều 3: "Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2022."
+  - **Luật 88/2025/QH15:** trang văn bản ghi "Ngày ban hành 25-06-2025", "Ngày có hiệu lực 01-07-2025".
+- **Nguồn:** https://vanban.chinhphu.vn/?pageid=27160&docid=163070&classid=1 (Luật 15/2012, Điều 141); https://vanban.chinhphu.vn/?pageid=27160&docid=202608&classid=1 (Luật 67/2020, PDF trang 47, Điều 3); https://vanban.chinhphu.vn/?pageid=27160&docid=214591&classid=1 (Luật 88/2025). Ngày tra 2026-11-21.
+- **Đề xuất sửa (Biên tập):**
+  - Giữ `issued_date` 2012-06-20, `effective_date` 2013-07-01 cho Luật 15/2012/QH13. Xóa todo "Ngày ban hành, hiệu lực Luật 15/2012/QH13 … lấy theo hiểu biết chung" ở hai file.
+  - Có thể ghi thêm vào `article`: "(sửa bởi Luật 67/2020/QH14, hiệu lực 01/01/2022; Luật 88/2025/QH15, hiệu lực 01/07/2025, không sửa điểm d khoản 1 và khoản 2)".
+
+### Vòng 66 (2026-11-21, 00:17 UTC)
+
+- Rà commit Biên tập `e715015` (NC-043 bổ sung và bổ sung 2): thêm phạt BHYT theo bậc và trần 150 triệu vào bước `lao-dong-bhxh` và lịch "Hàng tháng". Số khớp NC (BHYT dưới 5 triệu: 1–2 triệu; 5–10 triệu: 2–4 triệu; trần 150 triệu). `legal_basis` Nghị định 90/2026 và Luật 15/2012 đúng điều, khoản. Không thấy lỗi.
+- Trả lời todo về ngày của Luật 15/2012: đã đối chiếu trang văn bản; thêm ngày của Luật 67/2020, 88/2025. Ghi NC-043 bổ sung 3.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
