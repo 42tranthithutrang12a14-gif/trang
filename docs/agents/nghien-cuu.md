@@ -1974,6 +1974,27 @@ Chỉ agent Nghiên cứu ghi file này. Agent Biên tập đọc để làm.
 - Rà commit Biên tập `e763e66` (NC-045): thêm câu tự tra vùng vào 3 file, thêm "Phụ lục" vào `article`. Đúng đề xuất. Câu "chi nhánh tính theo nơi chi nhánh hoạt động" khớp Điều 3 khoản 3 Nghị định 399/2026.
 - Đọc Phụ lục Nghị định 293/2025 (bản quét, xem ảnh trực tiếp các dòng vùng): ghi NC-045 bổ sung.
 
+### NC-046 — Miễn TNDN 3 năm: "DN siêu nhỏ, nhỏ, vừa" xác định theo Luật Hỗ trợ DNNVV và văn bản hướng dẫn (Nghị định 20/2026 Điều 3 khoản 2), tức tiêu chí Nghị định 80/2021 Điều 5 đã xác minh ở NC-016; chưa thấy văn bản sửa Nghị định 80/2021
+
+- **Trạng thái:** đã xác minh (dẫn chiếu). Tìm văn bản sửa đổi: chỉ tìm theo trích yếu trên vanban.chinhphu.vn, không thấy.
+- **Liên quan:** `tu-0-den-1.json` bước `mien-tndn-dn-moi`, todo "Tiêu chí doanh nghiệp nhỏ và vừa, siêu nhỏ (Nghị định 80/2021/NĐ-CP) chưa đọc toàn văn. Điểm b2 (điều kiện người đại diện, người góp vốn) nên đối chiếu lại bản gốc…"; NC-015, NC-016.
+- **Phát hiện:**
+  - **Nghị định 20/2026/NĐ-CP, Điều 3 khoản 2** (bản quét đã OCR ở NC-015, trang 1): "Doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, doanh nghiệp vừa được xác định theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn." Điều 1: Nghị định hướng dẫn Điều 7; khoản 1, 2 Điều 8; khoản 1–5, 8 Điều 10 … Nghị quyết 198/2025/QH15.
+  - Phần cuối Nghị định 20/2026 (chú thích mẫu) ghi: "Theo Luật Hỗ trợ doanh nghiệp nhỏ và vừa; Nghị định số 80/2021/NĐ-CP ngày 26/8/2021 … hoặc văn bản sửa đổi, bổ sung, thay thế".
+  - Tiêu chí ở Nghị định 80/2021 Điều 5–9 đã đối chiếu toàn văn ở NC-016 (lao động đóng BHXH bình quân năm ≤ 10 người; doanh thu ≤ 3 tỷ hoặc ≤ 10 tỷ tùy lĩnh vực, hoặc tổng nguồn vốn ≤ 3 tỷ).
+  - Điều kiện loại trừ về người đại diện theo pháp luật, thành viên hợp danh, người góp vốn nhiều nhất (điểm b2 trong todo) nằm ở Nghị định 20/2026 Điều 7 khoản 3, không ở Nghị định 80/2021; đã đối chiếu ở NC-015.
+  - Tìm trên vanban.chinhphu.vn ngày 2026-11-21 (theo trích yếu): "doanh nghiệp nhỏ và vừa", "Hỗ trợ doanh nghiệp", "Nghị định số 80/2021". Văn bản sau 2021 liên quan Nghị định 80/2021 chỉ có Thông tư 06/2022/TT-BKHĐT (hướng dẫn, docid 205807) và Thông tư 52/2023/TT-BTC (kinh phí, docid 208469). Không thấy nghị định sửa, thay Nghị định 80/2021, cũng không thấy luật sửa Luật 04/2017/QH14. Giới hạn: ô tìm kiếm chỉ dò trích yếu; một luật hay nghị định khác có thể sửa vài điều mà trích yếu không nêu.
+- **Kết luận ngắn:** Để biết có được miễn TNDN 3 năm không, công ty tự xác định mình là DN siêu nhỏ, nhỏ hay vừa theo Nghị định 80/2021 Điều 5 (NC-016), rồi đối chiếu các điều kiện loại trừ ở Nghị định 20/2026 Điều 7 khoản 3 (NC-015).
+- **Nguồn:** Nghị định 20/2026/NĐ-CP Điều 1, Điều 3 khoản 2 — https://vanban.chinhphu.vn/?pageid=27160&docid=216660&classid=1. Nghị định 80/2021/NĐ-CP — https://vanban.chinhphu.vn/?pageid=27160&docid=203941&classid=1. Ngày tra 2026-11-21.
+- **Đề xuất sửa (Biên tập):**
+  - Bước `mien-tndn-dn-moi`, `who`: có thể thêm "(xác định theo Nghị định 80/2021: lao động đóng BHXH bình quân năm không quá 10 người, và doanh thu năm không quá 10 tỷ với thương mại, dịch vụ hoặc 3 tỷ với nông, lâm, thủy sản, công nghiệp, xây dựng, hoặc tổng nguồn vốn không quá 3 tỷ)". `legal_basis` thêm: Nghị định 20/2026/NĐ-CP Điều 3 khoản 2; Nghị định 80/2021/NĐ-CP Điều 5 khoản 1, Điều 6–9; URL như trên; `verified_against_original: true`.
+  - Thay todo "Tiêu chí … (Nghị định 80/2021/NĐ-CP) chưa đọc toàn văn. Điểm b2 …" bằng "Tiêu chí DN siêu nhỏ: đã đối chiếu Nghị định 80/2021 Điều 5–9 (NC-016), dẫn chiếu từ Nghị định 20/2026 Điều 3 khoản 2 (NC-046). Điều kiện loại trừ: Nghị định 20/2026 Điều 7 khoản 3 (NC-015). Chưa thấy văn bản sửa Nghị định 80/2021 (tìm theo trích yếu)."
+
+### Vòng 69 (2026-11-21, 06:17 UTC)
+
+- Rà commit Biên tập `000ccdb` (NC-045 bổ sung): câu tra vùng ghi theo năm (2026: Nghị định 293/2025; từ 2027: Nghị định 399/2026), thêm "Phụ lục" vào `article`, đóng todo. Đúng đề xuất.
+- Rà các todo còn mở trong `src/content`. Chọn todo tiêu chí DN siêu nhỏ ở bước miễn TNDN 3 năm: ghi NC-046.
+
 ## Cần chủ dự án quyết
 
 - Mạng của môi trường "trang" chặn các máy chủ chứa toàn văn PDF: `datafiles.chinhphu.vn` (PDF của vanban.chinhphu.vn), `congbaocdn.chinhphu.vn` và `g7.cdnchinhphu.vn` (PDF của Công báo). Không có các máy chủ này thì agent Nghiên cứu không trích được điều, khoản, nên không mục nào lên được "đã xác minh". Đề xuất: thêm ba tên miền này vào danh sách cho phép của môi trường. Chúng chỉ là nơi lưu file của hai cổng đã có trong `official_sources.json`; URL dẫn nguồn trong nội dung vẫn dùng trang vanban.chinhphu.vn hoặc congbao.chinhphu.vn.
